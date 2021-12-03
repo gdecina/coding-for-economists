@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -99,55 +101,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -159,37 +124,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -201,22 +193,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -228,17 +220,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -250,12 +247,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -267,46 +269,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -318,7 +291,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -525,11 +559,19 @@
 <h2>Tools similar to those found in an R workflow<a class="headerlink" href="#tools-similar-to-those-found-in-an-r-workflow" title="Permalink to this headline">¶</a></h2>
 <p>If you are coming from R, you’re likely familiar with <strong>dplyr</strong> for data analysis and <strong>ggplot2</strong> for plotting. There are Python equivalents that have very similar syntax to these that you can use to help you to become productive quickly in Python–though these libraries are not so popular in Python. Here are the Python equivalents to those R libraries:</p>
 <ul class="simple">
-<li><p><strong>dplyr</strong>: the most similar Python version of this library is <a class="reference external" href="https://plydata.readthedocs.io/en/stable/index.html"><strong>plydata</strong></a> (which has almost identical syntax to <strong>dplyr</strong>), while the most popular Python library that performs similar functions is <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/index.html"><strong>pandas</strong></a>. I tend to recommend people learn <strong>pandas</strong> for data analysis in Python because it is comprehensive and ubiquitous. It also has unrivaled documentation.</p></li>
-<li><p>More <strong>dplyr</strong>: <a class="reference external" href="https://github.com/kieferk/dfply"><strong>dfplyr</strong></a> is another attempt to replicate the syntax of <strong>dplyr</strong>. <a class="reference external" href="https://siuba.readthedocs.io/en/latest/"><strong>siuba</strong></a> is a port of dplyr, tidyr, and other R libraries for data analysis. <a class="reference external" href="https://ericmjl.github.io/pyjanitor/index.html"><strong>pyjanitor</strong></a> builds a range of extra features on top of <strong>pandas</strong>. Two of the things it adds are likely to make anyone coming from <strong>dplyr</strong> feel a bit more at home: better support for method chaining and some functions with the same names as the ones in <strong>dplyr</strong> and which do the same things.</p></li>
+<li><p><strong>dplyr</strong>: This book recommends learning at least some <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/index.html"><strong>pandas</strong></a> for data analysis in Python because it is a package that is comprehensive and ubiquitous, and it’s the most popular Python library that performs similar functions to <strong>dplyr</strong>. <strong>pandas</strong> also has unrivaled documentation. However, if you want something closer to <strong>dplyr</strong> in terms of philosophy and syntax, there are a host of options available to you:</p>
+<ul>
+<li><p>a Python package that is very similar to <strong>dplyr</strong> is <a class="reference external" href="https://plydata.readthedocs.io/en/stable/index.html"><strong>plydata</strong></a>. It is created to be consistent with visualisation package <strong>plotnine</strong> (featured below).</p></li>
+<li><p>another library that gets close to <strong>dplylr</strong> is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Because it uses a consistent framework for data piping under the hood called <a class="reference external" href="https://github.com/pwwang/pipda"><strong>pipda</strong></a>, <strong>datar</strong> seems highly extensible too. It also integrates with <strong>plotnine</strong> for visualisation.</p></li>
+<li><p><a class="reference external" href="https://tidypolars.readthedocs.io/"><strong>tidypolars</strong></a> combines the syntax of <strong>dplyr</strong> with the best-in-class speed of Python package <a class="reference external" href="https://www.pola.rs/"><strong>polars</strong></a></p></li>
+<li><p><a class="reference external" href="https://siuba.readthedocs.io/en/latest/"><strong>siuba</strong></a> is a port of dplyr, tidyr, and other R libraries for data analysis.</p></li>
+<li><p><a class="reference external" href="https://github.com/kieferk/dfply"><strong>dfplyr</strong></a> is another attempt to replicate the syntax of <strong>dplyr</strong>, but it doesn’t seem to be maintained.</p></li>
+<li><p><a class="reference external" href="https://pyjanitor-devs.github.io/pyjanitor/"><strong>pyjanitor</strong></a> builds a range of extra features on top of <strong>pandas</strong>. Two of the things it adds are likely to make anyone coming from <strong>dplyr</strong> feel a bit more at home: better support for method chaining and some functions with the same names as the ones in <strong>dplyr</strong> and which do the same things.</p></li>
+</ul>
+</li>
 <li><p><strong>ggplot2</strong>: the most similar Python version of this library is <a class="reference external" href="https://plotnine.readthedocs.io/en/stable/index.html"><strong>plotnine</strong></a>, while the most popular Python library that performs similar functions is a combination of <a class="reference external" href="https://matplotlib.org/"><strong>matplolib</strong></a> and <a class="reference external" href="https://seaborn.pydata.org/"><strong>seaborn</strong></a>, which builds on <strong>matplotlib</strong>. I think either those two together or <strong>plotnine</strong> are good choices, though <strong>plotnine</strong>’s documentation is not (yet) as good and it’s certainly not as widely used. (It’s gaining popularity though.)</p></li>
 <li><p><strong>data.table</strong>: if you use this library instead of <strong>dplyr</strong>, have no fear as there’s an almost identical library in Python called <a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a>. It’s not nearly as popular in Python as <strong>data.table</strong> is in R, but it’s a very high quality library.</p></li>
-<li><p><strong>here</strong>: Lots of people switching from R to Python ask what the equivalent of the <code class="docutils literal notranslate"><span class="pre">here()</span></code> function is. The “best practice” answer is that you shouldn’t need one! It’s good practice to have your Visual Studio Code (or other IDE) console and interactive Python window automatically start <em>within</em> the directory of your project; that is, you should always be “here” automatically. In Visual Studio Code, you can ensure that the interactive window starts in the root directory of your project by setting “Jupyter: Notebook File Root” to “<span class="math notranslate nohighlight">\({workspaceFolder}&quot; in the Settings menu. For the integrated command line, change &quot;Terminal › Integrated: Cwd&quot; to &quot;\)</span>{workspaceFolder}” too. If you still need a replacement for <code class="docutils literal notranslate"><span class="pre">here</span></code>, then the <a class="reference external" href="https://github.com/chendaniely/pyprojroot">pyprojroot</a> package has you covered.</p></li>
+<li><p><strong>here</strong>: Lots of people switching from R to Python ask what the equivalent of the <code class="docutils literal notranslate"><span class="pre">here()</span></code> function is. The “best practice” answer is that you shouldn’t need one! It’s good practice to have your Visual Studio Code (or other IDE) console and interactive Python window automatically start <em>within</em> the directory of your project; that is, you should always be “here” automatically. In Visual Studio Code, you can ensure that the interactive window starts in the root directory of your project by setting “Jupyter: Notebook File Root” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” in the Settings menu. For the integrated command line, change “Terminal › Integrated: Cwd” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” too. If you still need a replacement for <code class="docutils literal notranslate"><span class="pre">here</span></code>, then the <a class="reference external" href="https://github.com/chendaniely/pyprojroot">pyprojroot</a> package has you covered.</p></li>
 </ul>
 </div>
 <div class="section" id="need-a-specific-library-that-s-in-r-but-not-in-python">
@@ -819,16 +861,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "codeforecon"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "codeforecon",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'codeforecon'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

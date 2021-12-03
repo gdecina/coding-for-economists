@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12. Reading and Writing Files &#8212; Coding for Economists</title>
+    <title>Reading and Writing Files &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +55,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-read-and-write.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="13. Extracting Data" href="data-extraction.html" />
-    <link rel="prev" title="11. Exploratory Data Analysis" href="data-exploratory-analysis.html" />
+    <link rel="next" title="Getting Data" href="data-extraction.html" />
+    <link rel="prev" title="Exploratory Data Analysis" href="data-exploratory-analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,55 +99,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -157,37 +122,64 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -199,22 +191,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -226,17 +218,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -248,12 +245,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -265,46 +267,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -316,7 +289,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -467,36 +501,36 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-in-data-from-a-file">
-   12.1. Reading in data from a file
+   Reading in data from a file
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reading-data-from-lots-of-files">
-     12.1.1. Reading data from lots of files
+     Reading data from lots of files
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#writing-data-to-file">
-   12.2. Writing data to file
+   Writing data to file
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#formats">
-     12.2.1. Formats
+     Formats
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-and-writing-text-tex-md-and-other-text-editor-friendly-file-formats">
-   12.3. Reading and writing text, tex, md, and other text-editor friendly file formats
+   Reading and writing text, tex, md, and other text-editor friendly file formats
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review">
-   12.4. Review
+   Review
   </a>
  </li>
 </ul>
@@ -511,7 +545,7 @@
               <div>
                 
   <div class="section" id="reading-and-writing-files">
-<h1><span class="section-number">12. </span>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h1>
+<h1>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, you’ll learn about reading and writing data.</p>
 <p>This chapter uses the <strong>pandas</strong> package. If you’re running this code, you may need to install these packages using, for example, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. (If you’re not sure what a command line or terminal is, take a quick look at the basics of coding chapter.)</p>
 <p><img alt="From the pandas documentation" src="https://pandas.pydata.org/pandas-docs/stable/_images/02_io_readwrite.svg" /></p>
@@ -534,7 +568,7 @@
 </div>
 </div>
 <div class="section" id="reading-in-data-from-a-file">
-<h2><span class="section-number">12.1. </span>Reading in data from a file<a class="headerlink" href="#reading-in-data-from-a-file" title="Permalink to this headline">¶</a></h2>
+<h2>Reading in data from a file<a class="headerlink" href="#reading-in-data-from-a-file" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for reading in data is usually very similar and of the form <code class="docutils literal notranslate"><span class="pre">pd.read_</span></code> and then the format e.g. <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_stata('statafile.dta')</span></code> for Stata. And here’s a typical example of reading a csv file</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -551,7 +585,7 @@
 </div>
 <p><strong>pathlib</strong> takes care of paths on different operating systems: it doesn’t mind you using forward slashes, even on Windows, because it will translate the relative path you have entered into whatever the local operating system needs. There are introductory videos to <strong>pathlib</strong> and its use available <a class="reference external" href="https://calmcode.io/pathlib/do-not-hardcode.html">here</a>.</p>
 <div class="section" id="reading-data-from-lots-of-files">
-<h3><span class="section-number">12.1.1. </span>Reading data from lots of files<a class="headerlink" href="#reading-data-from-lots-of-files" title="Permalink to this headline">¶</a></h3>
+<h3>Reading data from lots of files<a class="headerlink" href="#reading-data-from-lots-of-files" title="Permalink to this headline">¶</a></h3>
 <p>Quite often, you have a case where you need to read in data from many files at once. There are two tools that will help with this: glob and concatenate.</p>
 <p>Imagine you have a directory full of files with names like ‘Jan-2001-data.csv’, ‘Feb-2001-data.csv’, and so on. The <code class="docutils literal notranslate"><span class="pre">glob</span></code> command can help you grab the names of all of these files. Imagine your files are in ‘research/data’, then you would use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;research/data&quot;</span><span class="p">)</span>
@@ -566,11 +600,11 @@
 </div>
 </div>
 <div class="section" id="writing-data-to-file">
-<h2><span class="section-number">12.2. </span>Writing data to file<a class="headerlink" href="#writing-data-to-file" title="Permalink to this headline">¶</a></h2>
+<h2>Writing data to file<a class="headerlink" href="#writing-data-to-file" title="Permalink to this headline">¶</a></h2>
 <p>The syntax for writing to a file is also very consistent, taking the form <code class="docutils literal notranslate"><span class="pre">df.to_*</span></code> where <code class="docutils literal notranslate"><span class="pre">*</span></code> might be <code class="docutils literal notranslate"><span class="pre">csv</span></code>, <code class="docutils literal notranslate"><span class="pre">stata</span></code>, or a number of output formats (you can even output to your computer’s clipboard!).</p>
 <p>In general, you <em>do</em> need to specify the file extension though, i.e. when saving data you should specify <code class="docutils literal notranslate"><span class="pre">df.to_csv('dataout.csv')</span></code> rather than <code class="docutils literal notranslate"><span class="pre">df.to_csv('dataout')</span></code>. As with reading in, there are plenty of options for how to output data, and you can find more on outputs in the <strong>pandas</strong> <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/io.html">documentation</a>.</p>
 <div class="section" id="formats">
-<h3><span class="section-number">12.2.1. </span>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">¶</a></h3>
+<h3>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">¶</a></h3>
 <p>You may wonder what file format to use in your work. Note that data formats differ in whether they are text based (csv, JSON) or binary (encoded and compressed, like Python’s pickle format). The former tend to be more easy to use with a range of tools, while the latter are usually faster to read/write and take up less space on disk.</p>
 <p>There’s a lot to be said for plain old csv because it’s interoperable between so many different software tools. I highly recommend it for your final results, if they will be shared. Its only trouble is that it’s not very efficiency with space, and it’s not ‘intelligent’ about column datatypes. If you want a format for intermediate data within a project, I tend to recommend parquet, which scales well to big data (it is very efficient with disk space) and has excellent read and write speeds. Feather is interoperable between Python and R and may also be a good choice. Depending on the structure of your data, you may find JSON a good option too.</p>
 <p>If you’re interested in how effective the different data formats are, there blog posts that address this question <a class="reference external" href="https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d">here</a> and <a class="reference external" href="https://ursalabs.org/blog/2019-10-columnar-perf/">here</a>.</p>
@@ -578,7 +612,7 @@
 </div>
 </div>
 <div class="section" id="reading-and-writing-text-tex-md-and-other-text-editor-friendly-file-formats">
-<h2><span class="section-number">12.3. </span>Reading and writing text, tex, md, and other text-editor friendly file formats<a class="headerlink" href="#reading-and-writing-text-tex-md-and-other-text-editor-friendly-file-formats" title="Permalink to this headline">¶</a></h2>
+<h2>Reading and writing text, tex, md, and other text-editor friendly file formats<a class="headerlink" href="#reading-and-writing-text-tex-md-and-other-text-editor-friendly-file-formats" title="Permalink to this headline">¶</a></h2>
 <p>It’s frequently the case that you’ll want to write an individual table, chunk of text, or other content that can be opened with a text editor to file. <strong>pandas</strong> has some convenience functions for this (there was a short example in the data analysis quickstart). Let’s say we had a table:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,8 +713,8 @@
 </div>
 </div>
 <div class="section" id="review">
-<h2><span class="section-number">12.4. </span>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
-<p>If you know how to read in data and text from file(s), the internet, and APIs, and write out to file too, then you’ve mastered the content of this chapter!</p>
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>If you know how to read in data and text from file(s), and write out to file too, then you’ve mastered the content of this chapter!</p>
 </div>
 </div>
 
@@ -693,16 +727,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "codeforecon"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "codeforecon",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'codeforecon'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -718,7 +752,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">11. </span>Exploratory Data Analysis</p>
+                <p class="prevnext-title">Exploratory Data Analysis</p>
             </div>
         </a>
     </div>
@@ -726,7 +760,7 @@
         <a class="right-next" href="data-extraction.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">13. </span>Extracting Data</p>
+                <p class="prevnext-title">Getting Data</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -8,9 +8,9 @@ jupytext:
     format_version: '0.8'
     jupytext_version: 1.5.0
 kernelspec:
-  display_name: 'Python 3.8.6 64-bit (''codeforecon'': conda)'
+  display_name: 'Python 3.8.12 64-bit (''codeforecon'': conda)'
   language: python
-  name: codeforecon
+  name: python3
 ---
 
 # Coming from Excel
@@ -21,7 +21,7 @@ The biggest difference between a fully-fledged programming language, such as Pyt
 
 The three main packages (extensions of the basic Python programming language) that cover Excel's functionality are **pandas**, which is for panel data analysis (such as spreadsheets). For some Excel functions, **numpy**, which provides tools for working with numbers, and **matplotlib**, which creates charts, will be necessary.
 
-In this chapter, we'll focus on how to go from Excel to Python by *replacing* Excel. The situation where you want to work with Excel from Python (eg by populating a spreadsheet with data, formulae, and charts) will be covered in another chapter on automation.
+In this chapter, we'll focus on how to go from Excel to Python by *replacing* Excel. The situation where you want to work with Excel from Python (eg by populating a spreadsheet with data, formulae, and charts) will be covered in another chapter on automation. There is a more in-depth walkthrough of replacing Excel with Python [here](https://towardsdatascience.com/a-complete-yet-simple-guide-to-move-from-excel-to-python-d664e5683039).
 
 ## Excel <==> Python
 

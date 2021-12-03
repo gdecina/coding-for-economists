@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Reproducible Analysis &#8212; Coding for Economists</title>
+    <title>Reproducible Analysis &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +55,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-rap.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Data Analysis Quickstart" href="data-analysis-quickstart.html" />
-    <link rel="prev" title="7. The Command Line" href="wrkflow-command-line.html" />
+    <link rel="next" title="Intro to Geo-Spatial Analysis" href="geo-intro.html" />
+    <link rel="prev" title="The Command Line" href="wrkflow-command-line.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,55 +99,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -157,37 +122,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -199,22 +191,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -226,17 +218,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -248,12 +245,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -265,46 +267,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -316,7 +289,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -469,81 +503,81 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   8.1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-modular-code">
-   8.2. Using Modular Code
+   Using Modular Code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-structure">
-   8.3. Project Structure
+   Project Structure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reproducible-analytical-pipelines">
-   8.4. Reproducible Analytical Pipelines
+   Reproducible Analytical Pipelines
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#directed-acyclic-graphs">
-     8.4.1. Directed Acyclic Graphs
+     Directed Acyclic Graphs
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#scripting-reproducible-analytical-pipelines">
-     8.4.2. Scripting Reproducible Analytical Pipelines
+     Scripting Reproducible Analytical Pipelines
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#make-for-reproducible-analytical-pipelines">
-     8.4.3. Make for Reproducible Analytical Pipelines
+     Make for Reproducible Analytical Pipelines
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#snakemake-for-reproducible-analytical-pipelines">
-     8.4.4. Snakemake for Reproducible Analytical Pipelines
+     Snakemake for Reproducible Analytical Pipelines
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ploomber-for-reproducible-analytical-pipelines">
-     8.4.5. Ploomber for Reproducible Analytical Pipelines
+     Ploomber for Reproducible Analytical Pipelines
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reproducible-python-environments">
-   8.5. Reproducible Python Environments
+   Reproducible Python Environments
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reproducible-environments-with-poetry">
-     8.5.1. Reproducible Environments with Poetry
+     Reproducible Environments with Poetry
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#semi-reproducible-environments-with-anaconda">
-     8.5.2. Semi-reproducible Environments with Anaconda
+     Semi-reproducible Environments with Anaconda
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reproducible-computational-environments">
-   8.6. Reproducible Computational Environments
+   Reproducible Computational Environments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#saving-your-analysis-for-prosperity">
-   8.7. Saving Your Analysis For Prosperity
+   Saving Your Analysis For Prosperity
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bringing-it-all-together">
-   8.8. Bringing It All Together
+   Bringing It All Together
   </a>
  </li>
 </ul>
@@ -558,9 +592,9 @@
               <div>
                 
   <div class="section" id="reproducible-analysis">
-<span id="wrkflow-rap"></span><h1><span class="section-number">8. </span>Reproducible Analysis<a class="headerlink" href="#reproducible-analysis" title="Permalink to this headline">¶</a></h1>
+<span id="wrkflow-rap"></span><h1>Reproducible Analysis<a class="headerlink" href="#reproducible-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2><span class="section-number">8.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This chapter will tell you about reproducible analysis and what are sometimes called “reproducible analytical pipelines”, also known as RAPs. This chapter has benefitted from the “<a class="reference external" href="https://best-practice-and-impact.github.io/qa-of-code-guidance">Quality Assurance of Code for Analysis and Research</a>” book produced by the Best Practice and Impact division of the Office for National Statistics and “The Turing Way”, a <a class="reference external" href="https://the-turing-way.netlify.app">guide to reproducibility</a> produced by the Alan Turing Institute.</p>
 <p>Reproducibility can mean a lot of things to a lot of different people in a lot of different contexts. Here, we’re going to think about the reproducibility of analysis performed by code. That excludes external validity and although it might include robust coding practices, it doesn’t include robustness checks.</p>
 <p>It does include Reproducible Analytical Pipelines (RAPs), which are automated analytical processes. At their best, RAPs use elements of software engineering best practice to ensure that analysis is reproducible.</p>
@@ -577,9 +611,11 @@
 <li><p>operating system is reproducible (as specified in a Docker file or by using repo2docker)</p></li>
 </ul>
 <p><em>A lot of the value to be had in reproducible code can be achieved by just the first five</em>. Nailing all but the last one is a high standard and probably the right spot in the trade-off between effort and reproducibility for a lot of projects. If you get this far, you’re doing a really great job. Doing all of these is the gold standard.</p>
+<p>Reproducibility isn’t just about ensuring your results reproduce, though that’s obviously the main reason to do it. It’s also about saving you time and effort. This image, from biological psychiatry researcher Daniel Quintana’s <a class="reference external" href="http://dx.doi.org/10.17605/OSF.IO/DZTVQ">talk</a> <em>Five things about open and reproducible science that every early career researcher should know</em>, sums it up nicely:</p>
+<p><img alt="Time taken with and without reproducibility" src="https://github.com/aeturrell/coding-for-economists/raw/main/img/reproducibiity_relocates_time.png" /></p>
 </div>
 <div class="section" id="using-modular-code">
-<h2><span class="section-number">8.2. </span>Using Modular Code<a class="headerlink" href="#using-modular-code" title="Permalink to this headline">¶</a></h2>
+<h2>Using Modular Code<a class="headerlink" href="#using-modular-code" title="Permalink to this headline">¶</a></h2>
 <p>(You may have already met this idea before as the DRY, or “don’t repeat yourself”, concept).</p>
 <p>How you structure your code can itself aid reproducibility. Let’s imagine you have a situation where you want to perform two similar analytical tasks in which the only thing that changes are the inputs and outputs. Let’s say, for example, that you want to perform a particular set of operations, perhaps the following:</p>
 <blockquote>
@@ -717,7 +753,7 @@ The score is 3.29
 </div>
 </div>
 <div class="section" id="project-structure">
-<h2><span class="section-number">8.3. </span>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
 <p>The first principle to guide you should be that <strong>each project lives in its own folder</strong>. Everything for that project will appear somewhere under the top level directory. Do not mix projects in the same folder directory.</p>
 <p>A typical project structure might look like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>📁 project
@@ -749,19 +785,19 @@ The score is 3.29
 <p>The next folder is “src”, which is short for “source code”, and it’s where your code scripts (.py files) or possibly Jupyter Notebooks (.ipynb files) live. These are nicely separate into the functions they perform: cleaning the data, performing the analysis, and summarising the analysis into figures and tables (also known as floats). The other script, “<a class="reference external" href="http://utilities.py">utilities.py</a>”, might be imported as module that all of the other scripts can use.</p>
 <p>The results from running the first two scripts are in the “results” folder. First we have a file that saves the results from the intermediate step of the cleaning the data (courtesy of running “data_cleaning.py”), then we have the results from “<a class="reference external" href="http://analysis.py">analysis.py</a>”, the derived data. Derived data might be, for example, the final tabular dataset that you use for a regression.</p>
 <p>Next up is outputs, which is split into “latex” and “floats”.</p>
-<p>Latex is a typesetting language that is used for writing reports, slides, journal articles, and more. Importantly for coding and replicability, it can be automated (in a way that, say, Word can’t be). Another option here would be markdown, which can also be exported to a wide variety of output formats. The text in a Latex report has to be written, we can’t automate that (yet), but the figures and tables that are generated by the “generate_plots_and_tables.py” script can be automatically inserted. The same goes for slides written in a variant of Latex called Beamer. You can find more information on the process of automating reports and outputs in the chapter on <span class="xref std std-ref">wrkflow-automating-outputs</span>.</p>
+<p>Latex is a typesetting language that is used for writing reports, slides, journal articles, and more. Importantly for coding and replicability, it can be automated (in a way that, say, Word can’t be). Another option here would be markdown, which can also be exported to a wide variety of output formats. The text in a Latex report has to be written, we can’t automate that (yet), but the figures and tables that are generated by the “generate_plots_and_tables.py” script can be automatically inserted. The same goes for slides written in a variant of Latex called Beamer. You can find more information on the process of automating research outputs in the chapter on <a class="reference internal" href="auto-research-outputs.html#auto-research-outputs"><span class="std std-ref">Automating Research Outputs</span></a>.</p>
 <p>Floats means, here at least, tables and figures. These also live in the outputs directory, and are put there by the “generate_plots_and_tables.py” script.</p>
 <p>So that’s the structure. There is another important principle here, which follows on from the first: <strong>you should be able to dispose of the results, figures, and tables (ie delete them), without worrying</strong>. If you are working on a project and deleting any outputs that are generated by code scripts would scupper everything, then your project is not reproducible. (This is another reason why you should always keep an “untouched” version of the raw data.) If it’s feasible to do so time-wise, it is good practice to delete and regenerate your outputs regularly to test that your project is indeed reproducible.</p>
 <p>There are, of course, many variations on this example project structure. You can find “cookiecutter” templates out there that will help you structure your own project (some involve answering some questions about what you need, and what you’d like to call project, and so on), or just get inspiration. Some good templates to check out that can help you structure your project are the UK Government data science, <a class="reference external" href="https://github.com/ukgovdatascience/govcookiecutter">govcookiecutter</a> and this comprehensive Python data science project template known as <a class="reference external" href="http://drivendata.github.io/cookiecutter-data-science/">cookiecutter-data-science</a>. For advanced users looking to build Python packages that others can install, the <a class="reference external" href="https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/">hypermodern Python cookiecutter</a> is packed full of amazing features and comes highly recommended.</p>
-<p>Another important principle of good project structure is to use relative filepaths; you can read more about those in the Chapter on <a class="reference internal" href="wrkflow-best-practice.html#wrkflow-best-practice"><span class="std std-ref">Tips for Better Coding</span></a>.</p>
+<p>Another important principle of good project structure is to use relative filepaths; you can read more about those in the Chapter on <a class="reference internal" href="code-best-practice.html#code-best-practice"><span class="std std-ref">Tips for Better Coding</span></a>.</p>
 </div>
 <div class="section" id="reproducible-analytical-pipelines">
-<h2><span class="section-number">8.4. </span>Reproducible Analytical Pipelines<a class="headerlink" href="#reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h2>
+<h2>Reproducible Analytical Pipelines<a class="headerlink" href="#reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h2>
 <p>We’ve seen how functions and modules can aid the reproducibility of logic. We’ve seen the kind of folder and file structure that can aid reproducibility of projects too. But the <em>order</em> of operations matters as well! Pipelines organise your analysis in a series of steps that, when executed, perform the same series of operations in the same order. If you arrange your code in a reproducible analytical pipelines, you will know that you can send your code to someone else and, when they run it, the same steps will be executed in the same order.</p>
 <p>In this section, we’ll look at the concept in general as well as some tools that can aid you in creating reproducible analytical pipelines.</p>
 <p>The first principle of RAPs may be a surprise: you shouldn’t use the interactive console interactively (eg by jamming, re-running lines, etc, as you go). A RAP should be able to go from start to finish with zero human interaction during execution, and produce consistent results at the end. This is different to when you’re still developing a project, and the interactive console is super useful because you’re trying things out. But RAP is for prosperity and needs to work without your intervention!</p>
 <div class="section" id="directed-acyclic-graphs">
-<h3><span class="section-number">8.4.1. </span>Directed Acyclic Graphs<a class="headerlink" href="#directed-acyclic-graphs" title="Permalink to this headline">¶</a></h3>
+<h3>Directed Acyclic Graphs<a class="headerlink" href="#directed-acyclic-graphs" title="Permalink to this headline">¶</a></h3>
 <p>Directed acyclic graphs pop up in lots of contexts. Here, in a RAP context, we’re talking about them because the execution order of your code and scripts should form a directed acyclic graph (DAG). The word “graph” here can be confusing: it’s referring to the formal notion of a graph from the branch of mathematics called graph theory, which is the study of pairwise relations between objects. A graph in this context is made up of vertices (also called nodes or points) that are connected by edges (also called links or lines). A DAG is a directed graph with no directed cycles (closed loops). It consists of vertices and edges with each edge directed from one vertex to another, such that following the directions will never form a closed loop. To summarise: “directed” means that edges between nodes have a direction and you can only traverse the graph in that direction (often shown by arrows in diagrams) and “acyclic”: means there are no cycles so that, for example, a node A can’t depend on a node B when B depends on A.</p>
 <p>The point is that the set of operations that are performed when following a DAG proceeds like water flowing through a series of rapids: one step after another, with no looping back.</p>
 <p>This is all a bit abstract and so it’s a lot easier to just take a look at a visualisation of one. We’ll use the example from the previous section boiled down to only the code scripts (.py files).</p>
@@ -774,10 +810,10 @@ The score is 3.29
 <p>If you are running this code yourself and want to run the code that creates the diagram above, you should be aware that the diagram above has a dependency on a non-Python library called graphviz that you will need to install separately (in <em>addition</em> to the Python library called graphviz, which can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code>). On Mac, you can use homebrew to run <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">graphviz</span></code> on the command line. <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">graphviz</span></code> works on some flavours of Linux. You can download Windows installers and find more information about this <a class="reference external" href="https://www.graphviz.org/download/">here</a>.</p>
 </div>
 <p>Here we see the execution order. utilities is the antecedent of every step because it is imported by all three of the other scripts. The rest of the DAG is: data cleaning, analysis, and, finally, generate plots and tables. Fancier DAGs might also show the input data, processed data, results, and outputs on the diagram too.</p>
-<p>Why is turning your project into a DAG important? Because, to be able to reproduce what you did, you must be able to clear define what the steps were that took raw data at the start and output the finished product at the end.</p>
+<p>Why is turning your project into a DAG important? Because, to be able to reproduce what you did, you must be able to clearly define what the steps were that took raw data at the start and output the finished product at the end.</p>
 </div>
 <div class="section" id="scripting-reproducible-analytical-pipelines">
-<h3><span class="section-number">8.4.2. </span>Scripting Reproducible Analytical Pipelines<a class="headerlink" href="#scripting-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+<h3>Scripting Reproducible Analytical Pipelines<a class="headerlink" href="#scripting-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
 <p>There’s still a manual step in the above logic. Even with the raw data and the folder structure, someone needs to come along and remember to run the (right) three scripts in the right order. But there’s no need to leave running the scripts in the right order to chance.</p>
 <p>There are a few options to automate the execution order of the scripts. One is to write all the scripts as modules with a main script, “<a class="reference external" href="http://main.py">main.py</a>”, that runs everything else. The contents of <a class="reference external" href="http://main.py">main.py</a> might look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; main.py: Master script for project &quot;project&quot;.</span>
@@ -797,7 +833,7 @@ The score is 3.29
 <p>You can see an example project that uses the script method <a class="reference external" href="https://github.com/aeturrell/cookie-cutter-research-project">here</a>.</p>
 </div>
 <div class="section" id="make-for-reproducible-analytical-pipelines">
-<h3><span class="section-number">8.4.3. </span>Make for Reproducible Analytical Pipelines<a class="headerlink" href="#make-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+<h3>Make for Reproducible Analytical Pipelines<a class="headerlink" href="#make-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
 <p>Make is a command line tool (to learn more about what the command line is, check out <a class="reference internal" href="wrkflow-command-line.html#wrkflow-command-line"><span class="std std-ref">The Command Line</span></a>) that helps with automating the execution of a series of processes—exactly what we need in a RAP. Make does its magic via a command line script. Honestly, it’s pretty fussy and complicated, which perhaps explains why it’s not more popular, but it’s well worth considering as one option for gold-plated reproducible analytical pipelines.</p>
 <p>It’s worth saying up front that Make has little time for pipelines that produce more than one output per input dataset + script combination. This can be puzzling initially, but it’s actually probably good practice to have one output per unique combination of inputs. The place where it makes less sense, perhaps, is if you have one script that produces all of your figures and tables.</p>
 <p>Make is not a Python library, so you’ll need to download and install it separately. The installation instructions are different on different operating systems: you can find information on how to install Make <a class="reference external" href="https://www.gnu.org/software/make/">here</a>. On Mac, if you use homebrew, the command to install it is <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">make</span></code>. Similar commands exist for Linux. In Windows, you can use the <a class="reference external" href="https://chocolatey.org/">chocolatey</a> package manager and then <code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">make</span></code> or work in the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>.</p>
@@ -848,7 +884,7 @@ clean:
 <p>One of the less nice features of Make is that it’s quite complex, and it doesn’t play that nicely with Windows. There is a lot extra that you can do with it, and with the complexity of your makefile, that goes beyond what we saw in the simple example above—though, as noted, the <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/make/make-examples.html">Turing’s tutorial</a> is a great place to start.</p>
 </div>
 <div class="section" id="snakemake-for-reproducible-analytical-pipelines">
-<h3><span class="section-number">8.4.4. </span>Snakemake for Reproducible Analytical Pipelines<a class="headerlink" href="#snakemake-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+<h3>Snakemake for Reproducible Analytical Pipelines<a class="headerlink" href="#snakemake-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://snakemake.readthedocs.io/en/stable/index.html">Snakemake</a> is a popular tool that shares a lot of similarities with Make but, instead of a Makefile, you write instructions in an arguably simpler format, yaml. Despite being very much geared around the Python ecosystem (and especially biological and genetic applications), it—like Make—can be used to automate any command that you would issue in your terminal.</p>
 <p>Here’s an example (from biology) of a simple <strong>snakemake</strong> file, which would be saved as “Snakefile”:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rule bwa_map:
@@ -867,7 +903,7 @@ clean:
 <p>This is just a very short introduction to Snakemake—you can find more information in the <a class="reference external" href="https://snakemake.readthedocs.io">documentation</a>.</p>
 </div>
 <div class="section" id="ploomber-for-reproducible-analytical-pipelines">
-<h3><span class="section-number">8.4.5. </span>Ploomber for Reproducible Analytical Pipelines<a class="headerlink" href="#ploomber-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+<h3>Ploomber for Reproducible Analytical Pipelines<a class="headerlink" href="#ploomber-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
 <p>If you’ve just read the previous section on Make, you’re probably thinking “argh, why does this have to be so complicated!”. Well, happily, there are tools that aim to make defining a reproducible analytical pipeline <em>far</em> easier. <a class="reference external" href="https://ploomber.readthedocs.io/">Ploomber</a> is one such tool that we’ll look at in this section. It supports Python and R.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -883,16 +919,18 @@ clean:
 </div>
 </div>
 <div class="section" id="reproducible-python-environments">
-<h2><span class="section-number">8.5. </span>Reproducible Python Environments<a class="headerlink" href="#reproducible-python-environments" title="Permalink to this headline">¶</a></h2>
+<h2>Reproducible Python Environments<a class="headerlink" href="#reproducible-python-environments" title="Permalink to this headline">¶</a></h2>
 <p>So, you’ve created your project’s code in a modular way, you’ve used a sensible structure for your files, <em>and</em> you’ve set everything up as a reproducible analytical pipeline (or RAP). But now imagine a scenario where your computer breaks, and you need buy a new one, load it up, and try to run the code, or perhaps your colleague or co-author wants to run the code. What do you do!?</p>
 <p>For code to be truly reproducible, you, your colleagues, and your co-authors (and possibly reviewers too) need to be able to do reproduce the exact set of packages and version of programming languages that you used to generate your results.</p>
 <p>Here we hit upon another important principle of reproducible analysis: <em>you should use a clean, dedicated Python environment and set of packages for each project that you do.</em> This means that only packages that are necessary for your RAP need be installed and included, and makes it easier to isolate what others will need to re-run that project’s scripts.</p>
 <p>Fortunately, Python makes this possible because it allows <em>virtual environments</em>: that is, you do not need to just have one, monolithic installation of Python on your computer but, instead, have many apparently different versions, each one dedicated to a particular project. And you can do it without the pain of actually installing many different versions of Python.</p>
-<p>It may be easier to illustrate with an example. Let’s say you’re using Python 3.8, statsmodels, and pandas for one project, project A. And, for project B, you’re using Python 3.8 with numpy and scikit-learn. Best practice would be to have two separate virtual Python environments: environment A, with everything needed for project A, and environment B, with everything needed for project B. This way, when you “hand over” project A to a colleague, what they need is clear—and even specified as <em>part</em> of the documents contained within the project. Better still, you can specify the version of Python too.</p>
-<p>There are two ways one could create reproducible Python environments that we’re going to look at in this section: poetry and Anaconda. <em>You are strongly recommended to use Poetry for full reproducibility</em>. Anaconda environments can get you most, but not all, of the way there and are an excellent back-up option.</p>
+<p>Actually, for many years, this was quite complicated, so much so that it inspired the XKCD comic below! But although there are still unfortunately many tools for reproducing Python environments, the tools and situation are much better than they once were.</p>
+<p><img alt="" src="https://imgs.xkcd.com/comics/python_environment.png" /></p>
+<p>It may be easier to illustrate creating Python environments with an example. Let’s say you’re using Python 3.8, statsmodels, and pandas for one project, project A. And, for project B, you’re using Python 3.8 with numpy and scikit-learn. Best practice would be to have two separate virtual Python environments: environment A, with everything needed for project A, and environment B, with everything needed for project B. This way, when you “hand over” project A to a colleague, what they need is clear—and even specified as <em>part</em> of the documents contained within the project. Better still, you can specify the version of Python too.</p>
+<p>There are two ways one could create reproducible Python environments that we’re going to look at in this section: poetry and Anaconda. <em>Poetry is recommended for full reproducibility but you may find Anaconda to be more convenient on Windows</em>. Anaconda can get you most, but not all, of the way to reproducible  Python environments and are an excellent back-up option if you don’t want to use poetry.</p>
 <p>Before we get into the details though, a word of warning: even if you install the same packages and the same version of a programming language, you may still get differences on different operating systems (or other differences in computers, like hardware). This will be explored later on in this chapter.</p>
 <div class="section" id="reproducible-environments-with-poetry">
-<h3><span class="section-number">8.5.1. </span>Reproducible Environments with Poetry<a class="headerlink" href="#reproducible-environments-with-poetry" title="Permalink to this headline">¶</a></h3>
+<h3>Reproducible Environments with Poetry<a class="headerlink" href="#reproducible-environments-with-poetry" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://python-poetry.org/">Poetry</a> is a relatively new but really quite amazing command line tool that performs several important tasks:</p>
 <ul class="simple">
 <li><p>automatically creates virtual environments on a per project basis</p></li>
@@ -921,33 +959,33 @@ typeguard = &quot;2.12.1&quot;
 <p>Although poetry is geared towards developers who are creating Python packages, it’s fast becoming the best go-to option for reproducible Python environments. When using poetry for reproducible research, you’re likely to want to pin to specific versions of all packages.</p>
 </div>
 <div class="section" id="semi-reproducible-environments-with-anaconda">
-<h3><span class="section-number">8.5.2. </span>Semi-reproducible Environments with Anaconda<a class="headerlink" href="#semi-reproducible-environments-with-anaconda" title="Permalink to this headline">¶</a></h3>
+<h3>Semi-reproducible Environments with Anaconda<a class="headerlink" href="#semi-reproducible-environments-with-anaconda" title="Permalink to this headline">¶</a></h3>
 <p>Anaconda is a package and environment manager that supports Python and R. It’s very much geared toward data science, and has been around for a while. (This book uses it for its reproducible environment.)</p>
 <p>Note that Anaconda provides pre-built package binaries. This is especially useful on some systems where compiling packages is a nuisance (yes, it’s Windows being difficult again). For this reason, and some others to do with guarantees around package quality, Anaconda is a popular choice for corporate coding setups.</p>
 <p>However, that doesn’t mean it’s a good choice. It has some serious failings when it comes to reproducibility, which we’ll get to.</p>
 <p>Before we talk about reproducibility, we’re going to look at creating conda environments from a file. While creating environments from a file isn’t sufficient alone for reproducibility, it is necessary, and it’s useful to know about in any case.</p>
 <p><strong>Anaconda and Python environments</strong></p>
 <p>This section outlines a really powerful and useful feature of Anaconda that doesn’t quite get us to full reproducibility.</p>
-<p>Anaconda has an option for creating environments from a file. It uses an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file to do this. A yaml file is just a good old text file with the extension <code class="docutils literal notranslate"><span class="pre">.yml</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.txt</span></code> and a certain layout of items (human-readable). You can open and edit yaml files in Visual Studio Code. Here’s the contents of a simple <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file; the packages are pinned here, but you don’t have to do this (you can just have <code class="docutils literal notranslate"><span class="pre">pandas</span></code> instead of <code class="docutils literal notranslate"><span class="pre">pandas=1.3.3</span></code> and conda will install the latest version):</p>
+<p>Anaconda has an option for creating environments from a file. It uses an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file to do this. A yaml file is just a good old text file with the extension <code class="docutils literal notranslate"><span class="pre">.yml</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.txt</span></code> and a certain layout of items (human-readable). You can open and edit yaml files in Visual Studio Code. Here’s the contents of a simple <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file; the packages can be pinned down just as the version of Python is (for example <code class="docutils literal notranslate"><span class="pre">pandas=1.3.3</span></code> instead of <code class="docutils literal notranslate"><span class="pre">pandas</span></code>) but the code below just installs the latest compatible version:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>name: codeforecon
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.8
-  - pip=21.2.4
-  - pandas=1.3.3
+  - pip
+  - pandas
   - pip:
-    - plotnine=0.8.0
+    - plotnine
 </pre></div>
 </div>
-<p>There’s quite a bit going on here so let’s break it down. First, the version of Python. This is pinned to 3.8 by the line <code class="docutils literal notranslate"><span class="pre">python=3.8</span></code>. Second, the “channels” are where packages can be picked up from. The “defaults” channel provides the usual conda ones. “conda-forge” is a community-led effort that holds a superset of other packages and, by including it, you’re saying you’re happy for packages to come via this route too. Then the “dependencies” section lists the actual dependencies. These are what you’d get alternatively by running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas=1.3.3</span></code>, etc., on the command line (assuming you had already installed Anaconda and put it on your computer’s PATH).</p>
-<p>There are so many python packages out there that not all of them are available via conda or conda-forge, and sometimes the packages available on these channels are not the latest versions. So we also include <code class="docutils literal notranslate"><span class="pre">pip</span></code> as a dependency and then go on to say “install some dependencies via <code class="docutils literal notranslate"><span class="pre">pip</span></code>”, that is install these as if a person had typed <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename=version</span></code> on the command line. Remember, pip installing a package pulls it down from PyPI, which is the biggest and most widely used Python package store.</p>
+<p>There’s quite a bit going on here so let’s break it down. First, the version of Python. This is pinned to 3.8 by the line <code class="docutils literal notranslate"><span class="pre">python=3.8</span></code>. Second, the “channels” are where packages can be picked up from. The “defaults” channel provides the usual conda ones. “conda-forge” is a community-led effort that holds a superset of other packages and, by including it, you’re saying you’re happy for packages to come via this route too. Then the “dependencies” section lists the actual dependencies. These are what you’d get alternatively by running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code>, etc., on the command line (assuming you had already installed Anaconda and put it on your computer’s PATH).</p>
+<p>There are so many python packages out there that not all of them are available via conda or conda-forge, and sometimes the packages available on these channels are not the latest versions. So we also include <code class="docutils literal notranslate"><span class="pre">pip</span></code> as a dependency and then go on to say “install some dependencies via <code class="docutils literal notranslate"><span class="pre">pip</span></code>”, that is install these as if a person had typed <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on the command line. Remember, pip installing a package pulls it down from PyPI, which is the biggest and most widely used Python package store.</p>
 <p>Once you have your <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file, you can install it on the command line with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
 </pre></div>
 </div>
-<p>It can take some time to create a new environment as Anaconda tries to resolve all possible clashes and dependencies in the packages you asked for (it takes longer the more packages you have). To use your newly created environment, it’s</p>
+<p>It can take some time to create a new environment as Anaconda tries to resolve all possible clashes and dependencies in the packages you asked for; it takes longer the more packages you have. (As an example of an environment file that takes a really long time to solve, look no further than the one used to create this book! The book uses many packages, all with their own dependencies and constraints, to finding a set of versions that can work together is time-consuming.) To use your newly created environment, it’s</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate codeforecon
 </pre></div>
 </div>
@@ -955,36 +993,28 @@ dependencies:
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>codeforecon<span class="o">)</span> your-computer:your-folder your-name$
 </pre></div>
 </div>
-<p>on the command line, if you’re using bash, though this book recommends zsh. Now, every time you run a command, it will be in this Python environment. You can deactivate the environment with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code> to go back to the base environment or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">other-environment</span></code> (with the name of a different existing environment) to switch.</p>
+<p>on the command line, if you’re using the bash terminal, though this book recommends the zsh terminal. Now, every time you run a command, it will be in this Python environment. You can deactivate the environment with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code> to go back to the base environment or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">other-environment</span></code> (with the name of a different existing environment) to switch.</p>
 <p><strong>Semi-reproducible Anaconda Python environments</strong></p>
-<p>Now, having delved into how Anaconda environments work, let’s think about how to make them reproducible. What we did above, pinning the version of <em>Python</em> and the packages is not going to cut the mustard. Conda environment.yml files are very useful for defining desired environments but there are times, as here, when we want to be able to <em>exactly</em> reproduce an environment—including the dependencies of the dependencies.</p>
-<p>Just as with poetry, we’re going to end up with a main file listing the packages and a lock file with all the dependencies.</p>
-<p>First, we’ll want to export our current environment to a file. Doing this from the command line, rather than writing the file out, ensures we capture what we have rather than just what we think we have! The command to create an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env <span class="nb">export</span> --from-history -f environment.yml
-</pre></div>
-</div>
-<p>Unfortunately, this does <em>not</em> track anything install with pip though!! That’s a big failing of this approach. The other reason why it’s not sufficient for reproducibility is that it doesn’t track dependencies; for that we need something else.</p>
-<p>To close the final mile, we need an extra tool called <a class="reference external" href="https://github.com/conda-incubator/conda-lock">conda-lock</a>. If you’re already using a conda environment with a particular set of packages, you can send those packages to lock files using</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda-lock -f environment.yml -p osx-64 -p linux-64
-</pre></div>
-</div>
-<p>to create lockfiles for Mac OSX and Linux from your environment file. Conda packages are different on different hardware, so a different lockfile is needed for each operating system.</p>
-<p>There’s a big drawback to doing this with Anaconda versus Poetry, and it’s that while conda-lock takes care of anything you installed with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>, it doesn’t add anything to the “lock” file for the dependencies of packages that you installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>. There’s no good way around this, and you just have to hope that the pip dependencies are the ones you got the first time you used the environment.</p>
+<p>Now, having delved into how Anaconda environments work, let’s think about how to make them reproducible. What we did above, pinning the version of <em>Python</em> but not the packages is not going to cut the mustard. Conda environment.yml files are very useful for defining desired environments but there are times, as here, when we want to be able to <em>exactly</em> reproduce an environment—including the dependencies of the dependencies.</p>
+<p>Unfortunately there’s just no good way to do this with Anaconda currently. Although it’s possible to completely and automatically lock down the versions of packages installed in the first part of the environment.yml file, ie those that can be conda installed, it is not currently possible to automatically lock down the packages that are installed by pip. There are some nuances to that story, but the important point is it’s just too painful and complicated to create perfectly reproducible environments using conda &amp; pip together right now (and, really, you want a solution that can cover both given conda doesn’t cover all Python packages).</p>
+<p>So what do semi-reproducible Anaconda Python environments look like? They look just like what we saw above; manually creating a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> with the version of Python pinned and the names of both conda and pip packages listed but without their versions. Then, to install this, it’s <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>.</p>
 </div>
 </div>
 <div class="section" id="reproducible-computational-environments">
-<h2><span class="section-number">8.6. </span>Reproducible Computational Environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h2>
+<h2>Reproducible Computational Environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h2>
 <p>“But it works on my computer!” Ever heard that? The tools in the previous section are fantastic for reproducibility but only up to a point. The hard truth is that code packages prepared for different operating systems can have differences, most often if the package contains C or other compiled language code.</p>
+<p><img alt="" src="https://external-preview.redd.it/aR6WdUcsrEgld5xUlglgKX_0sC_NlryCPTXIHk5qdu8.jpg?auto=webp&amp;s=5fe64dd318eec71711d87805d43def2765dd83cd" /></p>
 <p>For example, because it’s hard to compile code on the fly in Windows, there are pre-compiled versions of popular packages available, either through Anaconda or just on the <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">websites of enthusiasts</a>. The way Windows compiles code is different to Mac, which is different to Linux, and so on.</p>
 <p>So to be <em>really</em> sure that your project will run exactly the same on another system, you must not only reproduce the packages and their dependencies but also the computational environment they were run in.</p>
 <p>By far the most popular tool for creating virtual operating systems that you can then work in is called <a class="reference external" href="https://www.docker.com/">Docker</a>. Docker containers are a “standard unit” of software that packages up code and all its dependencies so a project runs the same regardless of what your computing environment looks like. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries (eg the operating system) and settings. Docker essentially puts a mini standardised operating system on top of whichever one you’re using.</p>
 <p>To run Docker, you will need to <a class="reference external" href="https://www.docker.com/products/docker-desktop">install it</a> but be warned—it’s quite demanding on your system when it’s running.</p>
 <p>Docker images are defined by “dockerfiles” and, as we’ve seen in the rest of this chapter, this is going to mean a plain text file with some weird formatting! Once a dockerfile is written it can then be built into an image (a time-consuming process), and finally run on your computer.</p>
+<p>You can find lots more information about Docker on the internet, including this <a class="reference external" href="https://testdriven.io/blog/docker-best-practices">popular article</a> on best practices with Docker for Python developers—although you should be aware that it is written with production-grade software in mind, not RAP.</p>
 <p>How do you create a docker file (the text based version of your repo)? There are two main options; the former is easier but the latter comes with more guarantees about long-term reproducibility.</p>
 <p><strong>repo2docker</strong></p>
 <p>You can create a dockerfile automatically from a github repository using the <a class="reference external" href="https://github.com/jupyterhub/repo2docker">repo2docker</a> tool. repo2docker is used to create interactive repos in the supremely wonderful <a class="reference external" href="https://mybinder.org/">Binder</a> project, which you can use to run code from this book (it’s under the rocketship icon at the top of the page).</p>
 <p>repo2docker will look at a repository (which could be GitHub, GitLab, Zenodo, Figshare, Dataverse installations, a Git repository or a local file directory) and build a Docker container image in which the code can be executed. The image build process is based on the configuration files found in the repository.</p>
-<p>Lots of different configuration files are supported by repo2docker. Anaconda’s <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> are, and it’s recommended that you export your working environment using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">--from-history</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code> to build an image using this technology (this will also pick up any pip files). Another standard option is including a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you can create from pip via <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span> <span class="pre">&gt;</span> <span class="pre">requirements.txt</span></code>. You may find that doing it from Anaconda is more reliable. There’s an open issue in repo2docker to support poetry pyproject.toml and poetry.lock files too.</p>
+<p>Lots of different configuration files are supported by repo2docker. Anaconda’s <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> are, and it’s recommended that you export your working environment using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">--from-history</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code> to build an image using this technology (but note that this will not pick up any packages installed using pip). Another standard option is including a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, which you can create from pip via <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span> <span class="pre">&gt;</span> <span class="pre">requirements.txt</span></code>.There’s an open issue in repo2docker to support poetry pyproject.toml and poetry.lock files too.</p>
 <p><strong>Create your own Dockerfile</strong></p>
 <p>Another option is to create a Dockerfile specific to your project. Here’s a simple example of a Dockerfile that loads a particular version of Python on a particular version of a Linux operating system:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Load the Debian Linux operating system with a specific version of Python installed
@@ -1097,7 +1127,7 @@ RUN poetry run make
 </pre></div>
 </div>
 <p>There’s a lot going on here but mostly it’s about getting a fixed version of Python and the Debian flavour of Linux operating system, installing Latex, ensuring running <code class="docutils literal notranslate"><span class="pre">python</span></code> on the command line picks up the version of Python we want, installing poetry (for reproducible Python package environments), using poetry to add specific versions of packakes by installing what’s in the pyproject.toml file and poetry.lock file (neither of these are shown, but are assumed to be in the directory that is copied into the Docker container, and should have versions pinned), copying all of the contents of the current directory into the Docker container, and finally executing the DAG via poetry and make.</p>
-<p>If you’d like to try this for yourself and execute the DAG, the instructions are: install Docker, git clone this repo, and then</p>
+<p>If you’d like to try is for yourself and execute the DAG, the instructions are: install Docker, git clone this repo, and then</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">repro</span> <span class="pre">.</span></code> to build an image from the Dockerfile</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-t</span> <span class="pre">-d</span> <span class="pre">--name</span> <span class="pre">repro_run</span> <span class="pre">repro</span></code> to run the image</p></li>
@@ -1116,18 +1146,33 @@ RUN poetry run make
 </div>
 </div>
 <div class="section" id="saving-your-analysis-for-prosperity">
-<h2><span class="section-number">8.7. </span>Saving Your Analysis For Prosperity<a class="headerlink" href="#saving-your-analysis-for-prosperity" title="Permalink to this headline">¶</a></h2>
+<h2>Saving Your Analysis For Prosperity<a class="headerlink" href="#saving-your-analysis-for-prosperity" title="Permalink to this headline">¶</a></h2>
 <p>True reproducible analysis should be findable and accessible, as well as interoperable and re-usable (these are the FAIR principles for data, but they pretty much work for analysis too). So how can you make what you’ve done findable and accessible to others?</p>
 <p>Before we try to answer that, it’s worth noting that, for an analysis that’s to be preserved in perpetuity, you really want to freeze it in time. So although github and gitlab are great to sharing dynamically changing content, they’re not as good for long-term preservation. Or, at the very least, you need clear version labels that are used to say what version of the code was used to produce a particular analysis.</p>
-<p>There are some fantastic options out there for preserving your code base (and therefore your reproducible project) while also making it findable and accessible. <a class="reference external" href="https://zenodo.org/">Zenodo</a> Zenodo accepts both code and data (up to 50GB at the time of writing), and gives each repo a DOI, or Digital Object Identifier, a “perma-link” that will always take users to that repository regardless of other website changes. Importantly, different versions are supported and clearly labelled.</p>
+<p>There are some fantastic options out there for preserving your code base (and therefore your reproducible project) while also making it findable and accessible. <a class="reference external" href="https://zenodo.org/">Zenodo</a> accepts both code and data (up to 50GB at the time of writing), and gives each repo a DOI, or Digital Object Identifier, a “perma-link” that will always take users to that repository regardless of other website changes. Importantly, different versions are supported and clearly labelled.</p>
 <p>You can also now integrate a github repo and Zenodo; instructions are available in <a class="reference external" href="https://the-turing-way.netlify.app/communication/citable/citable-cite.html#cm-citable-cite-software">The Turing Way</a>.</p>
 <p>You can also integrate Zenodo, a github repo, and Binder too: so that people coming to your analysis on Zenodo can, with a single click, create a fully interactive version of your analysis on Binder! See this <a class="reference external" href="https://blog.jupyter.org/binder-with-zenodo-af68ed6648a6">blog post</a> for details, and you may want to read the section above on repo2docker too.</p>
 <p><a class="reference external" href="https://figshare.com/">Figshare</a> is a similar service to Zenodo.</p>
 </div>
 <div class="section" id="bringing-it-all-together">
-<h2><span class="section-number">8.8. </span>Bringing It All Together<a class="headerlink" href="#bringing-it-all-together" title="Permalink to this headline">¶</a></h2>
+<h2>Bringing It All Together<a class="headerlink" href="#bringing-it-all-together" title="Permalink to this headline">¶</a></h2>
 <p>Reproducible analysis is a bit more tricky than you thought, eh? But, as noted at the start, you can derive a lot the value by doing only some of the steps. Although it’s also worth thinking about reproducible analysis <em>right from the start of a project</em> so that it’s not really painful to lever it back in at the end. In research especially, because you’re exploring as you go, this can be hard work and you may have to “refactor” your code multiple times. Favouring simplicity over complexity can make it all go a lot more smoothly.</p>
-<p>We’ve looked at numerous tools throughout this chapter, especially for reproducibility for the steps at the start from automatic execution of your RAP onwards. It’s worth suggesting a default set of tools which this book recommends as: Make for automatic execution of RAPs; poetry for capturing Python, package, and package dependency versions; and manually creating a dedicated Dockerfile like the one shown for reproducing the OS. Some of these tools are not very friendly to beginners, so an easier recommended combination would be: a “<a class="reference external" href="http://main.py">main.py</a>” script for executing your RAP (remembering that Python scripts can execute terminal commands too); Anaconda’s <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">--from-history</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code> for saving your Python environment and packages in a file; and repo2docker (or just use the online service from BinderHub) for creating a Dockerfile.</p>
+<p>We’ve looked at numerous tools throughout this chapter, especially for reproducibility for the steps at the start from automatic execution of your RAP onwards. It’s worth suggesting a default set of tools which this book recommends as:</p>
+<p><strong>Recipe 1 for complete reproducible analytical pipelines</strong></p>
+<ol class="simple">
+<li><p>modular code in scripts</p></li>
+<li><p>Make for automatic execution of scripts and other tools according to a directed acyclic graph</p></li>
+<li><p>poetry for capturing the versions of Python, packages, and the dependencies of packages</p></li>
+<li><p>manually creating a dedicated Dockerfile to reproduce an operating system</p></li>
+</ol>
+<p>Some of these tools are not very friendly to beginners, and sometimes poetry can be less convenient for installing package dependencies that are not Python packages than <code class="docutils literal notranslate"><span class="pre">conda</span></code> (especially on Windows), so an alternative that goes a long way toward reproducibility is:</p>
+<p><strong>Recipe 2 for reproducible analytical pipelines</strong></p>
+<ol class="simple">
+<li><p>modular code in scripts</p></li>
+<li><p>A “<a class="reference external" href="http://main.py">main.py</a>” script for automatic execution of scripts and other tools according to a directed acyclic graph (Python scripts can execute terminal commands too)</p></li>
+<li><p>A manually written <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file for specifying the names (but not versions) of packages and the version of Python (for an example, see <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/b4ad9ad978bcc2b0718155b42296088c8d90c548/codeforecon.yml">here</a>)</p></li>
+<li><p>creating a dedicated Dockerfile to reproduce an operating system, either manually or using repo2docker</p></li>
+</ol>
 <p>In both cases, using a service like Zenodo to freeze your project in time, create a citation, create a DOI, and make your project findable is recommended.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1138,10 +1183,10 @@ RUN poetry run make
 <li><p>unit testing (covered in brief in the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">Advanced Coding</span></a>)</p></li>
 <li><p>error handling (covered in brief in the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">Advanced Coding</span></a>)</p></li>
 <li><p>documentation of functions (covered extremely briefly in <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Basics of Coding</span></a>)</p></li>
-<li><p>using a code style such as <a class="reference external" href="https://black.readthedocs.io/">black</a> (more info in the Chapter on <a class="reference internal" href="wrkflow-advcd-best-practice.html#advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
+<li><p>using a code style such as <a class="reference external" href="https://black.readthedocs.io/">black</a> (more info in the Chapter on <a class="reference internal" href="code-advcd-best-practice.html#code-advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
 <li><p>consider using <a class="reference external" href="http://mypy-lang.org/">typing</a> and <a class="reference external" href="https://typeguard.readthedocs.io/">typeguarding</a>, at least for some code</p></li>
 <li><p>input data validation (see the Chapter on <a class="reference internal" href="data-advanced.html#advanced-data"><span class="std std-ref">Advanced Data</span></a>)</p></li>
-<li><p>logging (see the Chapter on <a class="reference internal" href="wrkflow-advcd-best-practice.html#advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
+<li><p>logging (see the Chapter on <a class="reference internal" href="code-advcd-best-practice.html#code-advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
 <li><p>pre-commit hooks</p></li>
 <li><p>continuous integration</p></li>
 </ul>
@@ -1182,15 +1227,15 @@ RUN poetry run make
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">7. </span>The Command Line</p>
+                <p class="prevnext-title">The Command Line</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="data-analysis-quickstart.html" title="next page">
+        <a class="right-next" href="geo-intro.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">9. </span>Data Analysis Quickstart</p>
+                <p class="prevnext-title">Intro to Geo-Spatial Analysis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

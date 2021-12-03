@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>31. Automating Research Outputs &#8212; Coding for Economists</title>
+    <title>Automating Research Outputs &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,8 +57,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/auto-research-outputs.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Coming from Stata" href="coming-from-stata.html" />
-    <link rel="prev" title="30. Intro to Mathematics with Code" href="maths-maths-coding.html" />
+    <link rel="next" title="Automating Reports" href="auto-reports.html" />
+    <link rel="prev" title="Forecasting Exercises" href="time-fcasts-env.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -99,55 +101,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -159,37 +124,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -201,22 +193,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -228,17 +220,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -250,12 +247,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -267,46 +269,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -318,7 +291,68 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -469,34 +503,34 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#including-research-outputs-in-latex-documents-and-slides">
-   31.1. Including research outputs in LaTeX documents and slides
+   Including research outputs in LaTeX documents and slides
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#figures">
-     31.1.1. Figures
+     Figures
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tables">
-     31.1.2. Tables
+     Tables
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exporting-papers-and-slides-to-other-document-types">
-   31.2. Exporting papers and slides to other document types
+   Exporting papers and slides to other document types
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#converting-documents">
-     31.2.1. Converting Documents
+     Converting Documents
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#converting-slides">
-     31.2.2. Converting Slides
+     Converting Slides
     </a>
    </li>
   </ul>
@@ -513,23 +547,24 @@
               <div>
                 
   <div class="section" id="automating-research-outputs">
-<h1><span class="section-number">31. </span>Automating Research Outputs<a class="headerlink" href="#automating-research-outputs" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter, you’ll learn how to automate the inclusion of figures and tables in research outputs including PDFs, Word documents, slides, and more. Much of what you’ll see in this chapter applies to a wide range of coding languages.</p>
+<span id="auto-research-outputs"></span><h1>Automating Research Outputs<a class="headerlink" href="#automating-research-outputs" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, you’ll learn how to automate the inclusion of figures and tables in LaTeX-derived research outputs including PDFs and slides——plus how to convert those outputs to Microsoft Word documents and more. Much of what you’ll see in this chapter applies to a wide range of coding languages.</p>
+<p>This chapter has some similarities with the next chapter, on <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a>. But this chapter puts the LaTeX typesetting language front and centre, because it’s the <em>de facto</em> standard for preparing <em>research outputs</em> (most journals have a LaTeX template for submission, for example), and it gives you full control over every aspect of how your outputs look. However, if you don’t already know LaTeX, there is a steep-ish learning curve and—if you’re just looking to create some automated reports using code and text rather than write pre-prints, working papers, journal articles, or academic-talk style slide decks—the next chapter on <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a> is going to be a better and easier fit for you.</p>
 <p>Automating the inclusion of figures and tables in your research outputs has many benefits:</p>
 <ul class="simple">
 <li><p>once configured, it’s clearly <em>easier</em> than manual updates</p></li>
 <li><p>your paper can update at the touch of a button</p></li>
-<li><p>it helps with creating a <em>reproducible analytical pipeline</em></p></li>
+<li><p>it helps with creating a <em>reproducible analytical pipeline</em> (for more on these, see the <a class="reference internal" href="wrkflow-rap.html#wrkflow-rap"><span class="std std-ref">Reproducible Analysis</span></a> chapter).</p></li>
 <li><p>it enforces structure on your project</p></li>
 <li><p>automation is complementary to other good practices such as version control</p></li>
 </ul>
 <p>Let’s now turn to the how.</p>
 <div class="section" id="including-research-outputs-in-latex-documents-and-slides">
-<h2><span class="section-number">31.1. </span>Including research outputs in LaTeX documents and slides<a class="headerlink" href="#including-research-outputs-in-latex-documents-and-slides" title="Permalink to this headline">¶</a></h2>
+<h2>Including research outputs in LaTeX documents and slides<a class="headerlink" href="#including-research-outputs-in-latex-documents-and-slides" title="Permalink to this headline">¶</a></h2>
 <p>Let’s say you’re writing a paper, using <span class="math notranslate nohighlight">\(\LaTeX\)</span>, or a presentation, using <span class="math notranslate nohighlight">\(\LaTeX\)</span> and beamer. (Perhaps you’d like the final document or presentation to be in Word, Powerpoint-that’s okay too, and we’ll come to it shortly, but let’s assume you’re <em>writing</em> it in <span class="math notranslate nohighlight">\(\LaTeX\)</span>.)</p>
 <p>Including code outputs is pretty simple, but is slightly different for figures and tables (the two main outputs you might include).</p>
 <div class="section" id="figures">
-<h3><span class="section-number">31.1.1. </span>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
+<h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
 <p>For figures, the <span class="math notranslate nohighlight">\(\LaTeX\)</span> <strong>graphicx</strong> package is your friend as it allows you to set a directory where your figures live, for example <code class="docutils literal notranslate"><span class="pre">outputs/figures</span></code>, which would be set like this at the top of the document:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
 <span class="k">\graphicspath</span><span class="nb">{{</span>outputs/figures/<span class="nb">}}</span>
@@ -562,7 +597,7 @@
 <p>The important line here is <code class="docutils literal notranslate"><span class="pre">plt.savefig(&quot;outputs/figures/chart.pdf&quot;)</span></code> because it says to save the figure in the ‘figures’ directory. When you re-run your code, the chart ends up in the right place. When you re-compile your <span class="math notranslate nohighlight">\(\LaTeX\)</span> document or presentation, it can pick the chart up from the right place.</p>
 </div>
 <div class="section" id="tables">
-<h3><span class="section-number">31.1.2. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Now let’s imagine you’ve created a table of descriptive statistics such as the one below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -690,12 +725,12 @@
 </div>
 </div>
 <div class="section" id="exporting-papers-and-slides-to-other-document-types">
-<h2><span class="section-number">31.2. </span>Exporting papers and slides to other document types<a class="headerlink" href="#exporting-papers-and-slides-to-other-document-types" title="Permalink to this headline">¶</a></h2>
+<h2>Exporting papers and slides to other document types<a class="headerlink" href="#exporting-papers-and-slides-to-other-document-types" title="Permalink to this headline">¶</a></h2>
 <p>When including your research outputs automatically, you may not want your <em>final</em> output to be a PDF (the standard output for <span class="math notranslate nohighlight">\(\LaTeX\)</span>), but to be one of a range of other document types. That’s perfectly possible, and you can choose from a really wide range of output types, although input types will be limited to formats that can use file paths such as <span class="math notranslate nohighlight">\(\LaTeX\)</span> and markdown.</p>
 <p>To perform the magic conversion to other document types (and often <em>between</em> types), we’ll use the command line tool <a class="reference external" href="https://pandoc.org/"><strong>pandoc</strong></a>, which is absolutely brilliant. It can translate <span class="math notranslate nohighlight">\(\LaTeX\)</span> papers and beamer presentations into a whole variety of other formats, including Microsoft Word’s .docx, OpenOffice’s .ODT, Microsoft Powerpoint’s .pptx, HTML, plain text, markdown, and more. It can also write from any of those formats (and more) in one direction <em>to</em> PDF, Microsoft Powerpoint, and <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer.</p>
 <p>To use <a class="reference external" href="https://pandoc.org/"><strong>pandoc</strong></a>, first install it following the <a class="reference external" href="https://pandoc.org/installing.html">instructions</a> on the website.</p>
 <div class="section" id="converting-documents">
-<h3><span class="section-number">31.2.1. </span>Converting Documents<a class="headerlink" href="#converting-documents" title="Permalink to this headline">¶</a></h3>
+<h3>Converting Documents<a class="headerlink" href="#converting-documents" title="Permalink to this headline">¶</a></h3>
 <p>To convert documents, the general syntax for <strong>pandoc</strong> looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc mydoc.tex -o mydoc.docx
 </pre></div>
@@ -747,7 +782,7 @@ More text
 </ul>
 </div>
 <div class="section" id="converting-slides">
-<h3><span class="section-number">31.2.2. </span>Converting Slides<a class="headerlink" href="#converting-slides" title="Permalink to this headline">¶</a></h3>
+<h3>Converting Slides<a class="headerlink" href="#converting-slides" title="Permalink to this headline">¶</a></h3>
 <p>Beamer slides can be converted in much the same way that documents can. Popular output formats for slides include PDF, HTML (via dzslides, slidy, or revealjs), and .pptx (powerpoint).</p>
 <p>For example, to create revealjs slides,</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc -f latex -t revealjs -s --self-contained -o presentation.html presentation.tex --mathjax
@@ -819,16 +854,16 @@ Slide with an equation
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "codeforecon"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "codeforecon",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'codeforecon'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -840,19 +875,19 @@ Slide with an equation
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="maths-maths-coding.html" title="previous page">
+        <a class="left-prev" href="time-fcasts-env.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">30. </span>Intro to Mathematics with Code</p>
+                <p class="prevnext-title">Forecasting Exercises</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="coming-from-stata.html" title="next page">
+        <a class="right-next" href="auto-reports.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Coming from Stata</p>
+                <p class="prevnext-title">Automating Reports</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

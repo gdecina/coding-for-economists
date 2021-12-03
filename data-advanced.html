@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15. Advanced Data &#8212; Coding for Economists</title>
+    <title>Advanced Data &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +55,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-advanced.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="16. Intro to Data Visualisation" href="vis-intro.html" />
-    <link rel="prev" title="14. Sharing Data" href="data-sharing.html" />
+    <link rel="next" title="Options for Writing Code" href="code-where.html" />
+    <link rel="prev" title="Sharing Data" href="data-sharing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,55 +99,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -157,37 +122,64 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -199,22 +191,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -226,17 +218,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -248,12 +245,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -265,46 +267,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -316,7 +289,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -469,63 +503,63 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   15.1. Introduction
+   Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
-     15.1.1. Imports
+     Imports
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-validation">
-   15.2. Data Validation
+   Data Validation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pandera">
-     15.2.1. Pandera
+     Pandera
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#dataframe-style-checks">
-       15.2.1.1. Dataframe style checks
+       Dataframe style checks
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#data-checks-as-a-class">
-       15.2.1.2. Data checks as a class
+       Data checks as a class
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#data-checks-for-pipelines">
-       15.2.1.3. Data checks for pipelines
+       Data checks for pipelines
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#great-expectations">
-     15.2.2. Great Expectations
+     Great Expectations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pydantic">
-     15.2.3. Pydantic
+     Pydantic
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cerberus">
-     15.2.4. Cerberus
+     Cerberus
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-orchestration">
-   15.3. Data orchestration
+   Data Orchestration
   </a>
  </li>
 </ul>
@@ -540,12 +574,16 @@
               <div>
                 
   <div class="section" id="advanced-data">
-<span id="id1"></span><h1><span class="section-number">15. </span>Advanced Data<a class="headerlink" href="#advanced-data" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Advanced Data<a class="headerlink" href="#advanced-data" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re just starting to code, you can safely skip this chapter.</p>
+</div>
 <div class="section" id="introduction">
-<h2><span class="section-number">15.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this chapter, you’ll learn about advanced methods for working with data.</p>
 <div class="section" id="imports">
-<h3><span class="section-number">15.1.1. </span>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <p>First we need to import the classic packages we almost always need:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -572,15 +610,15 @@
 </div>
 </div>
 <div class="section" id="data-validation">
-<h2><span class="section-number">15.2. </span>Data Validation<a class="headerlink" href="#data-validation" title="Permalink to this headline">¶</a></h2>
+<h2>Data Validation<a class="headerlink" href="#data-validation" title="Permalink to this headline">¶</a></h2>
 <p>When working with data, it’s useful to have a way to validate that what you’re getting is what you <em>think</em> you’re getting. And so various data validation methods have appeared that will fail loudly and proudly when your data are not as expected. Although most useful in a situation where data are being regularly updated, for example when producing a monthly index, these tools can also be useful if you want to be extra careful with your data in a research paper, if you are scaling up from a sample to a bigger dataset, or if you are updating an existing project.</p>
 <p>Of course, the most minimal way to do some validation is to ensure that your dataframe has its columns cast as the right data types from the start, and this is good practice in general. That’s about <em>data type</em>, but these tools go beyond that and deal with values <em>within</em> a data type. So rather than just saying it’s an integer, a data validation library might say that a column must be an integer between 0 and 100.</p>
 <p>The normal way that data validation libraries are used is that you specify some expectations you have of the dataset that will be flagged if and when they fail. Let’s see some of the tools that are available that do this. As ever, this chapter has benefitted enormously from the documentation of the featured packages.</p>
 <div class="section" id="pandera">
-<h3><span class="section-number">15.2.1. </span>Pandera<a class="headerlink" href="#pandera" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://pandera.readthedocs.io/en/stable/index.html"><strong>Pandera</strong></a> <span id="id2">[<a class="reference internal" href="zreferences.html#id5">2</a>]</span> has tight integration with <strong>pandas</strong> (as the name suggests). There are several different ways to specify data validation checks.</p>
+<h3>Pandera<a class="headerlink" href="#pandera" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://pandera.readthedocs.io/en/stable/index.html"><strong>Pandera</strong></a> <span id="id2">[<a class="reference internal" href="zreferences.html#id5">1</a>]</span> has tight integration with <strong>pandas</strong> (as the name suggests). There are several different ways to specify data validation checks.</p>
 <div class="section" id="dataframe-style-checks">
-<h4><span class="section-number">15.2.1.1. </span>Dataframe style checks<a class="headerlink" href="#dataframe-style-checks" title="Permalink to this headline">¶</a></h4>
+<h4>Dataframe style checks<a class="headerlink" href="#dataframe-style-checks" title="Permalink to this headline">¶</a></h4>
 <p>It’s easiest to show how it works with an example. We’ll first create some data that we’d like to validate.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -735,7 +773,7 @@ failure cases:
 <p>You can also pass hypothesis tests into a schema as a check; there’s a nice <a class="reference external" href="https://pandera.readthedocs.io/en/stable/hypothesis.html">example of using a two-sample t-test</a> in the documentation.</p>
 </div>
 <div class="section" id="data-checks-as-a-class">
-<h4><span class="section-number">15.2.1.2. </span>Data checks as a class<a class="headerlink" href="#data-checks-as-a-class" title="Permalink to this headline">¶</a></h4>
+<h4>Data checks as a class<a class="headerlink" href="#data-checks-as-a-class" title="Permalink to this headline">¶</a></h4>
 <p>The ‘dataframe’ style of checks is not the only way to specify a schema. If you’re au fait with classes, you can also specify checks that way. Here’s the same example in that form:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -891,7 +929,7 @@ failure cases:
 </div>
 </div>
 <div class="section" id="data-checks-for-pipelines">
-<h4><span class="section-number">15.2.1.3. </span>Data checks for pipelines<a class="headerlink" href="#data-checks-for-pipelines" title="Permalink to this headline">¶</a></h4>
+<h4>Data checks for pipelines<a class="headerlink" href="#data-checks-for-pipelines" title="Permalink to this headline">¶</a></h4>
 <p>You can also specify the validations as function decorators that check the data as it <em>enters</em> (<code class="docutils literal notranslate"><span class="pre">check_input</span></code>) or <em>exits</em> (<code class="docutils literal notranslate"><span class="pre">check_output</span></code>) a function (or both, with <code class="docutils literal notranslate"><span class="pre">check_io</span></code>). This could be really useful as part of a larger pipeline of data processes. Here’s an example (of a dataframe that passes the input checks):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -985,7 +1023,7 @@ failure cases:
 </div>
 </div>
 <div class="section" id="great-expectations">
-<h3><span class="section-number">15.2.2. </span>Great Expectations<a class="headerlink" href="#great-expectations" title="Permalink to this headline">¶</a></h3>
+<h3>Great Expectations<a class="headerlink" href="#great-expectations" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://greatexpectations.io/"><strong>Great Expectations</strong></a> is another data validation library. It’s really geared toward to production (and can integrate well with some other production tools). I wouldn’t necessarily recommend it if you’re doing a research project but it’s got some amazing features that just mean it made it into this chapter–namely that it doesn’t just validate data, but it documents and profiles it too.</p>
 <p>Their philosophy is that ‘Expectations’, the checks or assertions about data, are unit tests for your data (don’t worry if you’re not familiar with unit tests-they are checks for your code!). Once you have run your expectations, the library can create data documentation and data quality reports from them. The data documentation is quite an amazing feature, providing a navigable HTML report of your dataset.</p>
 <p>Using <strong>Great Expectations</strong> is a bit different from <strong>pandera</strong> as it replaces your dataframe with a <strong>Great Expectations</strong> <code class="docutils literal notranslate"><span class="pre">PandasDataset</span></code> that looks and feels just like a regular pandas dataframe but has extra methods related to data validation. To convert a regular pandas dataframe, you wrap it with <code class="docutils literal notranslate"><span class="pre">ge.from_pandas</span></code>.</p>
@@ -1075,13 +1113,13 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: true,
   &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
-  &quot;success&quot;: true,
   &quot;result&quot;: {
     &quot;observed_value&quot;: &quot;int64&quot;
   }
@@ -1098,13 +1136,13 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: false,
   &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
-  &quot;success&quot;: false,
   &quot;result&quot;: {
     &quot;observed_value&quot;: 0.6,
     &quot;element_count&quot;: 5,
@@ -1131,13 +1169,13 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: true,
   &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
-  &quot;success&quot;: true,
   &quot;result&quot;: {
     &quot;element_count&quot;: 5,
     &quot;missing_count&quot;: 0,
@@ -1158,7 +1196,7 @@ failure cases:
 <p>Having a bunch of JSON thrown at you is hardly a pleasant experience, and running a few commands solely in a notebook (which is how this was generated) is not really the way that <strong>Great Expectations</strong> is intended to be used. Instead, it is designed to be used via several commands in the terminal that set up folders and files that will track the expectations you create and produce nice HTML reports on your data and whether it passed your tests or not. There is a <a class="reference external" href="https://docs.greatexpectations.io/en/latest/guides/tutorials/getting_started.html">full tutorial</a> available on the website.</p>
 </div>
 <div class="section" id="pydantic">
-<h3><span class="section-number">15.2.3. </span>Pydantic<a class="headerlink" href="#pydantic" title="Permalink to this headline">¶</a></h3>
+<h3>Pydantic<a class="headerlink" href="#pydantic" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://pydantic-docs.helpmanual.io/"><strong>Pydantic</strong></a> has some of the same features as <strong>pandera</strong> but it piggybacks on the ability of Python 3.5+ to have ‘typed’ variables (if you’re not sure what that is, it’s a way to declare a variable has a particular data type from inception) and it is really focused around the validation of objects (created from classes) rather than dataframes.</p>
 <p>Here’s an example of a Pydantic schema that also implements a class:</p>
 <div class="cell docutils container">
@@ -1219,7 +1257,7 @@ failure cases:
 <p>We get a loud failure, a <code class="docutils literal notranslate"><span class="pre">ValidationError</span></code>, and a short report about what went wrong.</p>
 </div>
 <div class="section" id="cerberus">
-<h3><span class="section-number">15.2.4. </span>Cerberus<a class="headerlink" href="#cerberus" title="Permalink to this headline">¶</a></h3>
+<h3>Cerberus<a class="headerlink" href="#cerberus" title="Permalink to this headline">¶</a></h3>
 <p>Our final stop on this tour of data validation is <a class="reference external" href="https://docs.python-cerberus.org/en/stable/"><strong>Cerberus</strong></a>. It is designed to be a simple and lightweight data validation functionality. In this case, the schema is specified as a JSON file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1262,7 +1300,7 @@ failure cases:
 </div>
 </div>
 <div class="section" id="data-orchestration">
-<h2><span class="section-number">15.3. </span>Data orchestration<a class="headerlink" href="#data-orchestration" title="Permalink to this headline">¶</a></h2>
+<h2>Data Orchestration<a class="headerlink" href="#data-orchestration" title="Permalink to this headline">¶</a></h2>
 <p>Data orchestration is the automation of data-driven processes from end-to-end, including preparing data, making decisions based on that data, and taking actions based on those decisions. Think of a data pipeline in which you extract data (perhaps from files), transform it somehow, and load it into where you want to put it (downstream in your research process, or perhaps into an app).</p>
 <p>There are some truly amazing tools out there to help you do this on a production scale. Perhaps the best known and most suited for production are AirBnB’s <a class="reference external" href="http://airflow.incubator.apache.org/"><strong>Airflow</strong></a> and Spotify’s <a class="reference external" href="https://github.com/spotify/luigi"><strong>Luigi</strong></a>. Airflow in particular is widely used in the tech industry, and doesn’t just schedule data processes in Python: it can run processes in pretty much whatever you like. Both of these tools try to solve the ‘plumbing’ associated with long-running batch processes on data: chaining tasks, automating them, dealing with failures, and scheduling. Both Luigi and Airflow have fancy interfaces to show you what’s going on with your tasks.</p>
 <p>Data orchestration tools typically have a directed acyclic graph, a DAG, at the heart of how tasks are strung together. This defines how different tasks depend on each other in order, with one task following from the previous one (or perhaps following from multiple previous tasks). It’s an automation dream.</p>
@@ -1320,52 +1358,118 @@ failure cases:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - PIPELINE_START - Started execution of pipeline &quot;hello_pipeline&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - ENGINE_EVENT - Executing steps in process (pid: 71660)
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - ENGINE_EVENT - Starting initialization of resources [io_manager].
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - ENGINE_EVENT - Finished initialization of resources [io_manager].
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - get_name - LOGS_CAPTURED - Started capturing logs for solid: get_name.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - get_name - STEP_START - Started execution of step &quot;get_name&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - get_name - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - get_name - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - get_name - STEP_SUCCESS - Finished execution of step &quot;get_name&quot; in 3.71ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - LOGS_CAPTURED - Started capturing logs for solid: hello.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - STEP_START - Started execution of step &quot;hello&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - LOADED_INPUT - Loaded input &quot;name&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;get_name&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - STEP_INPUT - Got input &quot;name&quot; of type &quot;String&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - hello - STEP_SUCCESS - Finished execution of step &quot;hello&quot; in 3.34ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - LOGS_CAPTURED - Started capturing logs for solid: all_upper.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - STEP_START - Started execution of step &quot;all_upper&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - all_upper - STEP_SUCCESS - Finished execution of step &quot;all_upper&quot; in 3.94ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - LOGS_CAPTURED - Started capturing logs for solid: leading_caps.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - STEP_START - Started execution of step &quot;leading_caps&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading_caps - STEP_SUCCESS - Finished execution of step &quot;leading_caps&quot; in 4.41ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - LOGS_CAPTURED - Started capturing logs for solid: upper.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - STEP_START - Started execution of step &quot;upper&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;all_upper&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - upper - STEP_SUCCESS - Finished execution of step &quot;upper&quot; in 4.69ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - LOGS_CAPTURED - Started capturing logs for solid: leading.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - STEP_START - Started execution of step &quot;leading&quot;.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;leading_caps&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - leading - STEP_SUCCESS - Finished execution of step &quot;leading&quot; in 4.9ms.
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - ENGINE_EVENT - Finished steps in process (pid: 71660) in 92ms
-2021-10-01 16:42:41 - dagster - DEBUG - hello_pipeline - 45d5154f-efcd-4f10-9264-1022bad29db4 - 71660 - PIPELINE_SUCCESS - Finished execution of pipeline &quot;hello_pipeline&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - PIPELINE_START - Started execution of pipeline &quot;hello_pipeline&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - ENGINE_EVENT - Executing steps in process (pid: 47233)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_START - Started execution of step &quot;get_name.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_SUCCESS - Finished execution of step &quot;get_name.compute&quot; in 1.83ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_START - Started execution of step &quot;hello.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input name in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_INPUT - Got input &quot;name&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_SUCCESS - Finished execution of step &quot;hello.compute&quot; in 1.77ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_START - Started execution of step &quot;all_upper.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_SUCCESS - Finished execution of step &quot;all_upper.compute&quot; in 1.73ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_START - Started execution of step &quot;leading_caps.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_SUCCESS - Finished execution of step &quot;leading_caps.compute&quot; in 1.69ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_START - Started execution of step &quot;upper.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase_to_display in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_SUCCESS - Finished execution of step &quot;upper.compute&quot; in 2.03ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_START - Started execution of step &quot;leading.compute&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase_to_display in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_SUCCESS - Finished execution of step &quot;leading.compute&quot; in 1.77ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - ENGINE_EVENT - Finished steps in process (pid: 47233) in 27ms
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - PIPELINE_SUCCESS - Finished execution of pipeline &quot;hello_pipeline&quot;.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HELLO, DAGSTER!
@@ -1424,15 +1528,15 @@ Hello, Dagster!
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">14. </span>Sharing Data</p>
+                <p class="prevnext-title">Sharing Data</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="vis-intro.html" title="next page">
+        <a class="right-next" href="code-where.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">16. </span>Intro to Data Visualisation</p>
+                <p class="prevnext-title">Options for Writing Code</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

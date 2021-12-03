@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. The Command Line &#8212; Coding for Economists</title>
+    <title>The Command Line &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,8 +57,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-command-line.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. Reproducible Analysis" href="wrkflow-rap.html" />
-    <link rel="prev" title="6. Tools for Better Coding" href="wrkflow-advcd-best-practice.html" />
+    <link rel="next" title="Reproducible Analysis" href="wrkflow-rap.html" />
+    <link rel="prev" title="Markdown" href="wrkflow-markdown.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -99,55 +101,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -159,37 +124,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -201,22 +193,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -228,17 +220,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -250,12 +247,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -267,46 +269,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -318,7 +291,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -469,49 +503,49 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-the-command-line">
-   7.1. What is the command line?
+   What is the command line?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-is-the-command-line-useful">
-   7.2. Why is the command line useful?
+   Why is the command line useful?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-command-line">
-   7.3. Using the command line
+   Using the command line
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#navigating-directories">
-     7.3.1. Navigating directories
+     Navigating directories
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-python-on-the-command-line">
-   7.4. Using Python on the command line
+   Using Python on the command line
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#useful-commands-for-the-terminal">
-   7.5. Useful commands for the terminal
+   Useful commands for the terminal
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scripting">
-   7.6. Scripting
+   Scripting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#useful-command-line-tools">
-   7.7. Useful command line tools
+   Useful command line tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review">
-   7.8. Review
+   Review
   </a>
  </li>
 </ul>
@@ -526,17 +560,17 @@
               <div>
                 
   <div class="section" id="the-command-line">
-<span id="wrkflow-command-line"></span><h1><span class="section-number">7. </span>The Command Line<a class="headerlink" href="#the-command-line" title="Permalink to this headline">¶</a></h1>
+<span id="wrkflow-command-line"></span><h1>The Command Line<a class="headerlink" href="#the-command-line" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, you’ll meet the <em>command line</em> and learn how to use it. Beyond a few key commands like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;packagename&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">&lt;environmentname&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>, you don’t strictly need to know how to use the command line to follow the rest of this book. However, even a tiny bit of knowledge of the command line goes a long way in coding and will serve you well.</p>
 <p>To try out any of the commands in this chapter on your machine, you can select ‘New Terminal’ from the menu bar in Visual Studio Code (Mac and Linux), use the Windows Subsystem for Linux or git bash (Windows), or use a free <a class="reference external" href="https://cocalc.com/doc/terminal.html">online terminal</a>.</p>
 <p>This chapter has benefited from numerous sources, including absolutely excellent notes by <a class="reference external" href="https://grantmcdermott.com/">Grant McDermott</a>, Melanie Walsh’s <a class="reference external" href="https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html">Introduction to Cultural Analytics &amp; Python</a>, <a class="reference external" href="https://ericmjl.github.io/data-science-bootstrap-notes/">Data Science Bootstrap</a>, <a class="reference external" href="https://calmcode.io/">calmcode.io</a>, and <a class="reference external" href="https://merely-useful.tech/py-rse/">Research Software Engineering with Python</a>. A promising resource that, at the time of writing, was still being compiled is <a class="reference external" href="https://www.datascienceatthecommandline.com/2e/">Data Science at the Command Line</a>.</p>
 <div class="section" id="what-is-the-command-line">
-<h2><span class="section-number">7.1. </span>What is the command line?<a class="headerlink" href="#what-is-the-command-line" title="Permalink to this headline">¶</a></h2>
+<h2>What is the command line?<a class="headerlink" href="#what-is-the-command-line" title="Permalink to this headline">¶</a></h2>
 <p>The command line is a way to directly issue text-based commands to a computer one line at a time (as distinct from a graphical user interface, or GUI, that you navigate with a mouse). It goes under many names: shell, bash, terminal, CLI, and command line. These are actually different things but most people tend to use them to mean the same thing most of the time. The <em>shell</em> is the part of an operating system that you interact with but mostly people use shell to mean the command line. <em>bash</em> is the programming language that is used in the command line; it’s actually a synonym for ‘Born Again SHell’. The <em>terminal</em> is sometimes used to refer to the command line on Macs. Finally, a <em>CLI</em> is just an acronym for command line interface, and is often used in the context of an application; for example, pip has a command line interface because you run it on the command line to install packages (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code>).</p>
 <p>It’s worth mentioning that there’s a big difference between the command line on UNIX based systems (MacOS and Linux), and on Windows systems. Here, we’ll only address the UNIX version. There is a command line on Windows but it’s not widely used for coding. If you’re on a Windows machine, you can access a UNIX command line using the Windows Subsystem for Linux.</p>
 </div>
 <div class="section" id="why-is-the-command-line-useful">
-<h2><span class="section-number">7.2. </span>Why is the command line useful?<a class="headerlink" href="#why-is-the-command-line-useful" title="Permalink to this headline">¶</a></h2>
+<h2>Why is the command line useful?<a class="headerlink" href="#why-is-the-command-line-useful" title="Permalink to this headline">¶</a></h2>
 <p>The command line has many uses. Graphical user interfaces are, generally, a bit easier to use <em>but</em> they’re not very repeatable or scalable. Because the command line uses text-based instructions and can be programmed, it is both repeatable and scalable; properties that are very useful for research and analysis.</p>
 <p>The broad reasons you might use the command line to issue instructions include:</p>
 <ul class="simple">
@@ -556,7 +590,7 @@
 </ul>
 </div>
 <div class="section" id="using-the-command-line">
-<h2><span class="section-number">7.3. </span>Using the command line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">¶</a></h2>
+<h2>Using the command line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">¶</a></h2>
 <p>Bash is often the default command line shell on UNIX but zsh has gained popularity and is now the default for Mac. If you’re wondering what to use then I recommend zsh (Z Shell) from <a class="reference external" href="https://ohmyz.sh/">oh-my-zsh</a>.</p>
 <p>To open up the command line within Visual Studio Code, you can use the <kbd>⌃</kbd> + <kbd>`</kbd> keyboard shortcut (on Mac) or <kbd>ctrl</kbd> + <kbd>`</kbd> (Windows/Linux), or click “View &gt; Terminal”.</p>
 <p>You should now see something like this</p>
@@ -590,7 +624,7 @@
 clear to clear your terminal.</p></li>
 </ul>
 <div class="section" id="navigating-directories">
-<h3><span class="section-number">7.3.1. </span>Navigating directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">¶</a></h3>
+<h3>Navigating directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">¶</a></h3>
 <p>While we’re on navigating, it’s useful to understand <em>where</em> in the computer you are when you open the command line. If you open a terminal pane within VS Code, you will start (by default at least) within the same folder as your project. Starting a terminal instance outside of VS Code will get you a terminal in a root directory for your computer; for example, on a Mac, opening a new terminal window starts you in <code class="docutils literal notranslate"><span class="pre">/Users/yourusername/</span></code>.</p>
 <p>To find out “where” you are when you open a terminal, you can use the <code class="docutils literal notranslate"><span class="pre">pwd</span></code> command, which stands for “print working directory”.</p>
 <p>The table below shows some useful commands for moving around your computer using the command line. Note that <code class="docutils literal notranslate"><span class="pre">cd</span></code> accepts a location <em>relative</em> to your current directory.</p>
@@ -624,7 +658,7 @@ clear to clear your terminal.</p></li>
 </div>
 </div>
 <div class="section" id="using-python-on-the-command-line">
-<h2><span class="section-number">7.4. </span>Using Python on the command line<a class="headerlink" href="#using-python-on-the-command-line" title="Permalink to this headline">¶</a></h2>
+<h2>Using Python on the command line<a class="headerlink" href="#using-python-on-the-command-line" title="Permalink to this headline">¶</a></h2>
 <p>There are several ways in which the command line is useful for Python (and these ways are applicable to other languages too).</p>
 <p>Of course, packages are installed at the command line, for example to install Jupyter Lab (for running notebooks), the command is</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupyterlab
@@ -650,7 +684,7 @@ clear to clear your terminal.</p></li>
 </div>
 </div>
 <div class="section" id="useful-commands-for-the-terminal">
-<h2><span class="section-number">7.5. </span>Useful commands for the terminal<a class="headerlink" href="#useful-commands-for-the-terminal" title="Permalink to this headline">¶</a></h2>
+<h2>Useful commands for the terminal<a class="headerlink" href="#useful-commands-for-the-terminal" title="Permalink to this headline">¶</a></h2>
 <p>Now we’ll see some useful commands for the terminal.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -775,7 +809,7 @@ clear to clear your terminal.</p></li>
 <p>would create the files a.csv, a.txt, b.csv, b.txt, c.csv, and c.txt.</p>
 </div>
 <div class="section" id="scripting">
-<h2><span class="section-number">7.6. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h2>
+<h2>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h2>
 <p>For tasks that will be repeated, it’s more reproducible and reliable to put your terminal commands into a script than executing them from memory each time—not to mention a lot easier! Because the command line has its own language, we can create scripts that execute commands. There are some differences between bash and zsh but we’ll try and keep the guidelines general.</p>
 <p>Create a script called <code class="docutils literal notranslate"><span class="pre">hello_world.sh</span></code>. Inside it, write:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -812,7 +846,7 @@ Running program hello_world.sh with <span class="m">0</span> arguments
 <p>You can find more of these special variables <a class="reference external" href="https://tldp.org/LDP/abs/html/special-chars.html">here</a>.</p>
 </div>
 <div class="section" id="useful-command-line-tools">
-<h2><span class="section-number">7.7. </span>Useful command line tools<a class="headerlink" href="#useful-command-line-tools" title="Permalink to this headline">¶</a></h2>
+<h2>Useful command line tools<a class="headerlink" href="#useful-command-line-tools" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://pandoc.org/"><strong>pandoc</strong></a> is absolutely brilliant: if you need to convert files containing text from one format to another, it really is a swiss-army knife. There isn’t space here to list the ridiculous number of documents it can convert between, but, importantly, it can translate back and forth between all of the following: markdown, <span class="math notranslate nohighlight">\(\LaTeX\)</span>, Microsoft Word’s docx, OpenOffice’s ODT, HTML, and Jupyter Notebook.</p>
 <p>It can also write from any of those formats (and more) in one direction <em>to</em> PDF, Microsoft Powerpoint, and <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer.</p>
 <p>To use <strong>pandoc</strong>, install it following the instructions on the website and then call it like this:</p>
@@ -870,7 +904,7 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
 <p>For more on the command line, see <a class="reference external" href="https://github.com/jlevy/the-art-of-command-line">The Art of the Command Line</a>.</p>
 </div>
 <div class="section" id="review">
-<h2><span class="section-number">7.8. </span>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
 <p>This brief introduction to the command line, should have made you feel comfortable with: opening terminal windows; using built-in commands to change directories, rename files, and list files; using Python on the command line; scripting terminal commands; and using installed command line tools such as <strong>pandoc</strong>.</p>
 </div>
 </div>
@@ -884,16 +918,16 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "codeforecon"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "codeforecon",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'codeforecon'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -905,11 +939,11 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wrkflow-advcd-best-practice.html" title="previous page">
+        <a class="left-prev" href="wrkflow-markdown.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">6. </span>Tools for Better Coding</p>
+                <p class="prevnext-title">Markdown</p>
             </div>
         </a>
     </div>
@@ -917,7 +951,7 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
         <a class="right-next" href="wrkflow-rap.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">8. </span>Reproducible Analysis</p>
+                <p class="prevnext-title">Reproducible Analysis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown &#8212; Coding for Economists</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-markdown.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Command Line" href="wrkflow-command-line.html" />
+    <link rel="prev" title="The Automated Office" href="auto-office.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smith_lovelace.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Coding for Economists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting Started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-preliminaries.html">
+   Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-basics.html">
+   Basics of Coding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-analysis-quickstart.html">
+   Data Analysis Quickstart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-intro.html">
+   Working with Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-read-and-write.html">
+   Reading and Writing Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data Visualisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-intro.html">
+   Intro to Data Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-common-plots.html">
+   Common Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-narrative.html">
+   Narrative Data Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-animation.html">
+   Animation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Econometrics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-probability-random.html">
+   Probability and Random Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-statistics.html">
+   Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-regression.html">
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Time
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-intro.html">
+   Introduction to Time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-series.html">
+   Time Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-fcasts-env.html">
+   Forecasting Exercises
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Automation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coming from ...
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="coming-from-stata.html">
+   Coming from Stata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coming-from-matlab.html">
+   Coming from Matlab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coming-from-r.html">
+   Coming from R
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coming-from-excel.html">
+   Coming from Excel
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Elsewhere
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="_sources/wrkflow-markdown.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/wrkflow-markdown.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fwrkflow-markdown.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/wrkflow-markdown.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-markdown">
+   Introduction to Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-markdown-syntax">
+   The Markdown Syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     Headings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phylum">
+     Phylum
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#class">
+       Class
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#order">
+         Order
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#family">
+           Family
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-line-syntax">
+     In-Line Syntax
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-block-syntax">
+     Text Block Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-markdown-resources">
+   Other Markdown Resources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="markdown">
+<span id="wrkflow-markdown"></span><h1>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, you’ll meet the lightweight markup language called <em>Markdown</em> that is very popular for lots of coding-related applications. For example, markdown is used to display the documentation for software packages and in the text cells of Jupyter Notebooks. Even this chapter is written in markdown!</p>
+<p>This book recommends <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> as a markdown editor. It can also render markdown files that are open; you’ll need to install the <strong>Markdown All in One</strong> and <strong>Markdown Preview Enhanced</strong> extensions and then either right-click within a markdown file (extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>) and choose <em>Markdown Preview Enhanced: Open Preview to the Side</em>.</p>
+<p>If you’re not using Visual Studio Code, you can experiment with Markdown in the text cells of Jupyter Notebooks in JupyterLab, in the text cells of Google Colab notebooks, or online via <a class="reference external" href="https://dillinger.io/">Dillinger</a>, an online live-coding markdown environment.</p>
+<div class="section" id="introduction-to-markdown">
+<h2>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">¶</a></h2>
+<p>Markdown is different from What-You-See-Is-What-You-Get document preparation software such as Microsoft Word because the <em>input</em> (a form of plain text) looks different from the rendered <em>output</em>. In Word, you click buttons to achieve the same formatting. When writing markdown, you specify the formatting elements of your documents with instructions that are, more or less, like code. If you’re familiar with how raw HTML and rendered HTML look, it’s a similar idea (and HTML is itself a markup language).</p>
+<p>Markdown was created to be as readable as possible, even when you are writing it. It’s also very simple, with few commands to remember: the idea is that you should focus on writing text rather than formatting.</p>
+<p>The standard extension for files that only contain markdown is <code class="docutils literal notranslate"><span class="pre">.md</span></code>, but you may also see <code class="docutils literal notranslate"><span class="pre">.qmd</span></code> in the context of markdown with executable code chunks. And you can find markdown in the cells of Jupyter notebooks (file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) too.</p>
+<p>There are plenty of situations where you may wish to use markdown:</p>
+<ul class="simple">
+<li><p>repositories for software or research paper replications</p></li>
+<li><p>to create websites, reports, and slides; see <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a> for more on this</p></li>
+<li><p>in the text cells of Jupyter Notebooks; see <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Options for Writing Code</span></a> for more on this</p></li>
+<li><p>as a base format that tools like <strong>pandoc</strong> and <strong>Quarto</strong> can turn into other document types</p></li>
+<li><p>to write books about coding for economists!</p></li>
+</ul>
+<p>Some of the advantages of markdown are:</p>
+<ul class="simple">
+<li><p>Markdown files can be opened using by any plain text editor</p></li>
+<li><p>Markdown is operating system independent</p></li>
+<li><p>Markdown is very readable, even when not being rendered</p></li>
+<li><p>Many websites support markdown syntax, eg Github (called Github-flavoured markdown) and Reddit.</p></li>
+</ul>
+<p>The rest of this chapter will cover most of the markdown syntax.</p>
+</div>
+<div class="section" id="the-markdown-syntax">
+<h2>The Markdown Syntax<a class="headerlink" href="#the-markdown-syntax" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="headings">
+<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<p>Let’s run through the basics of markdown. For example, a single hash (<code class="docutils literal notranslate"><span class="pre">#</span></code>) denotes the title of a document, like so:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Heading</span>
+</pre></div>
+</div>
+<p>The next level of sub-heading can be specified by two hashes, like this:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## Sub-heading</span>
+</pre></div>
+</div>
+<p>Each next level heading gets successively smaller, for example:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">### Phylum</span>
+
+<span class="gu">#### Class</span>
+
+<span class="gu">##### Order</span>
+
+<span class="gu">###### Family</span>
+</pre></div>
+</div>
+<p>becomes</p>
+</div>
+<div class="section" id="phylum">
+<h3>Phylum<a class="headerlink" href="#phylum" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="class">
+<h4>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="order">
+<h5>Order<a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="family">
+<h6>Family<a class="headerlink" href="#family" title="Permalink to this headline">¶</a></h6>
+<p>If you’re using Visual Studio Code, and you’re on the explorer panel, you can see the outline (the structure of headings and sub-headings) of your markdown document under the ‘outline’ drop down.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="in-line-syntax">
+<h3>In-Line Syntax<a class="headerlink" href="#in-line-syntax" title="Permalink to this headline">¶</a></h3>
+<p>Here are some other common syntax features that you’ll need:</p>
+<ul class="simple">
+<li><p>to create <em>italic</em> text, it’s <code class="docutils literal notranslate"><span class="pre">*one</span> <span class="pre">asterisk</span> <span class="pre">on</span> <span class="pre">either</span> <span class="pre">side</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">text*</span></code></p></li>
+<li><p><strong>bold</strong> text is produced from <code class="docutils literal notranslate"><span class="pre">**two</span> <span class="pre">asterisks**</span></code></p></li>
+<li><p><em><strong>bold italic</strong></em> is <code class="docutils literal notranslate"><span class="pre">***three</span> <span class="pre">asterisks***</span></code></p></li>
+<li><p>links are produced with square brackets for the text and parenthesis for the hyperlink, like this <code class="docutils literal notranslate"><span class="pre">[text](link)</span></code></p></li>
+<li><p>in-line code is shown by backticks, like this `code`</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~~strikethrough~~</span></code> looks like this ~~strikethrough~~</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^(superscript)</span></code> creates ^(superscript)</p></li>
+<li><p>Maths is supported in-line via enclosing dollar signs, eg <code class="docutils literal notranslate"><span class="pre">${\displaystyle</span> <span class="pre">ds^{2}=\left(1-{\frac</span> <span class="pre">{r_{\mathrm</span> <span class="pre">{s}</span> <span class="pre">}}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi</span> <span class="pre">^{2}}$</span></code>, which renders as <span class="math notranslate nohighlight">\({\displaystyle ds^{2}=\left(1-{\frac {r_{\mathrm {s} }}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi ^{2}}\)</span></p></li>
+<li><p>Unicode is supported, so you can write symbols like ∰, as are emoji; syntax like <code class="docutils literal notranslate"><span class="pre">:tada:</span></code> creates :tada:</p></li>
+</ul>
+</div>
+<div class="section" id="text-block-syntax">
+<h3>Text Block Syntax<a class="headerlink" href="#text-block-syntax" title="Permalink to this headline">¶</a></h3>
+<p>Quotes can be achieved by adding an arrow, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, to every line:</p>
+<blockquote>
+<div><p>Here is a quote!</p>
+</div></blockquote>
+<p>Unordered lists can be produced with either <code class="docutils literal notranslate"><span class="pre">-</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> on separate lines so that</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> first item
+<span class="k">-</span> second item
+<span class="k">-</span> third item
+</pre></div>
+</div>
+<p>becomes</p>
+<ul class="simple">
+<li><p>first item</p></li>
+<li><p>second item</p></li>
+<li><p>third item</p></li>
+</ul>
+<p>Ordered lists can be created by simply writing successive numbers on successive lines:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> first item
+<span class="k">2.</span> second item
+<span class="k">3.</span> third item
+</pre></div>
+</div>
+<p>becomes</p>
+<ol class="simple">
+<li><p>first item</p></li>
+<li><p>second item</p></li>
+<li><p>third item</p></li>
+</ol>
+<p>Both types of list can be subsetted so that</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> first item
+  <span class="k">-</span> sub-item
+    <span class="k">-</span> sub-sub-item
+<span class="k">-</span> second item
+</pre></div>
+</div>
+<p>becomes</p>
+<ul class="simple">
+<li><p>first item</p>
+<ul>
+<li><p>sub-item</p>
+<ul>
+<li><p>sub-sub-item</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>second item</p></li>
+</ul>
+<p>The basic syntax to create tables is</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| Cheese              | Country         | Cost per kg |
+|---------------------|-----------------|-------------|
+| Appleby&#39;s Cheshire  | UK              | £30         |
+| Edam                | Netherlands     | £8          |
+| Pélardon            | France          | £37         |
+</pre></div>
+</div>
+<p>which becomes</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Cheese</p></th>
+<th class="head"><p>Country</p></th>
+<th class="head"><p>Cost per kg</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Appleby’s Cheshire</p></td>
+<td><p>UK</p></td>
+<td><p>£30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Edam</p></td>
+<td><p>Netherlands</p></td>
+<td><p>£8</p></td>
+</tr>
+<tr class="row-even"><td><p>Pélardon</p></td>
+<td><p>France</p></td>
+<td><p>£37</p></td>
+</tr>
+</tbody>
+</table>
+<p>but you will rarely want to write these out yourself! In practice, it’s easiest to export a markdown file from a <strong>pandas</strong> dataframe using <code class="docutils literal notranslate"><span class="pre">df.to_markdown()</span></code> or use the handy website, <a class="reference external" href="https://www.tablesgenerator.com/markdown_tables">markdown table generator</a>.</p>
+<p>While inline code was rendered with backticks, you can render code blocks using three backticks and the name of the language like so:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]),</span>
+                  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p>which gets rendered as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]),</span>
+                  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Note that there is syntax highlighting of data types and reserved keywords. The syntax highlighting supports a wide range of languages. Also note that the syntax is quite similar to what’s used for code blocks that will be executed by <strong>quarto</strong> when using markdown for publishing automated reports (see <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a> for more on this).</p>
+<p>Display maths is rendered by double dollar signs, like so:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>$$
+{\displaystyle ds^{2}=\left(1-{\frac {r_{\mathrm {s} }}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi ^{2}}
+$$
+</pre></div>
+</div>
+<p>which renders as</p>
+<div class="math notranslate nohighlight">
+\[
+{\displaystyle ds^{2}=\left(1-{\frac {r_{\mathrm {s} }}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi ^{2}\,,}
+\]</div>
+<p>To insert images, use the structure <code class="docutils literal notranslate"><span class="pre">![alt-text](url</span> <span class="pre">or</span> <span class="pre">filepath)</span></code>, for example</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">Logo of coding for economists</span>](<span class="na">https://github.com/aeturrell/coding-for-economists/blob/main/smith_lovelace.png?raw=true</span>)
+</pre></div>
+</div>
+<p>produces</p>
+<p><img alt="Logo of coding for economists" src="https://github.com/aeturrell/coding-for-economists/blob/main/smith_lovelace.png?raw=true" /></p>
+<p>You can also produce task lists, for example:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">- [x]</span> Finish chapter 1
+<span class="k">- [ ]</span> Edit chapter 2
+<span class="k">- [ ]</span> Launch book :rocket:
+</pre></div>
+</div>
+<p>produces</p>
+<ul class="simple">
+<li><p>[x] Finish chapter 1</p></li>
+<li><p>[ ] Edit chapter 2</p></li>
+<li><p>[ ] Launch book :rocket:</p></li>
+</ul>
+<p>Footnotes can be be created using <code class="docutils literal notranslate"><span class="pre">[^1]</span></code> followed by <code class="docutils literal notranslate"><span class="pre">[^2]</span></code>, and so on, or by content related ones like <code class="docutils literal notranslate"><span class="pre">[^note]</span></code>. Here are these three being used: one example<a class="footnote-reference brackets" href="#id4" id="id1">1</a>, and another<a class="footnote-reference brackets" href="#id5" id="id2">2</a>, while the third is here<a class="footnote-reference brackets" href="#note" id="id3">3</a> and has a label instead of a number (that you can’t see when rendered). You’ll need to scroll right to the bottom of the page to see the info associated with these footnotes, but the syntax for filling in their info is:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nl">^1</span>]: <span class="na">First footnote.</span>
+[<span class="nl">^2</span>]: <span class="na">Every new line in a footnote should be prefixed with 2 spaces.  </span>
+  This allows you to have a footnote with multiple lines.
+[<span class="nl">^note</span>]: <span class="na">Named footnotes will still render with numbers instead of the text but allow easier identification and linking.</span>
+</pre></div>
+</div>
+<p>Finally, to insert a line-break use</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>***
+</pre></div>
+</div>
+<p>To produce:</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="other-markdown-resources">
+<h2>Other Markdown Resources<a class="headerlink" href="#other-markdown-resources" title="Permalink to this headline">¶</a></h2>
+<p>There are plenty of good markdown resources out there:</p>
+<ul class="simple">
+<li><p>the <a class="reference external" href="https://www.reddit.com/wiki/markdown">Reddit markdown guide</a></p></li>
+<li><p>the <a class="reference external" href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">github markdown guide</a></p></li>
+<li><p>this <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown cheatsheet</a></p></li>
+</ul>
+</div>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>Even this very brief introduction to markdown should have given you all of the syntax you will need day-to-day to write reports, Jupyter notebooks, documentation for software, slides, and more in markdown!</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>First footnote.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Every new line in a footnote should be prefixed with 2 spaces.<br />
+This allows you to have a footnote with multiple lines.</p>
+</dd>
+<dt class="label" id="note"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Named footnotes will still render with numbers instead of the text but allow easier identification and linking.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="auto-office.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">The Automated Office</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="wrkflow-command-line.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">The Command Line</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Arthur Turrell<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            This book is available under an MIT license.
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-189705534-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

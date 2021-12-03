@@ -8,7 +8,7 @@ Welcome to **coding for economists**, a guide for economists on what programming
 
 The book aims to give you the skills you need to code for economics, while also giving you bits and pieces of information about programming more generally that might be useful to you. It's suitable for complete beginners who have never written any code before. Some of the later chapters are suitable for people who have coded before too.
 
-Naturally, at times, I have made choices regarding what to include, what to omit, and what to recommend. I have given recommendations based on what will serve you best in the long-run. Very occasionally, like the Karate Kid painting Mr Miyagi's fence, you will wonder why such and such a thing is useful for coding in an economics context. But, also like the Karate Kid, you will find that you weren't *just* learning to paint a fence, you were becoming a karate (coding) master.
+Naturally, at times, we have made choices regarding what to include, what to omit, and what to recommend. We have given recommendations based on what will serve you best in the long-run. Very occasionally, like the Karate Kid painting Mr Miyagi's fence, you will wonder why such and such a thing is useful for coding in an economics context. But, also like the Karate Kid, you will find that you weren't *just* learning to paint a fence, you were becoming a karate (coding) master.
 
 ## What is coding?
 
@@ -30,15 +30,17 @@ You can read this book in any order depending on your experience. Check the sect
 
 ## Using the book interactively
 
-As well as reading the book, you can also run the code examples for yourself (this is a great way to learn). There are three ways to run code from the book:
+As well as reading the book, you can also run the code examples for yourself (this is a great way to learn). There are two ways to run code from the book:
 
-1. All pages that have code on can be downloaded to your desktop and run as *Jupyter Notebooks*. Click the download symbol in the top right hand corner of the page and select '.ipynb', which stands for 'ipython notebook'. You will need to install software on your computer to run Jupyter Notebooks (more on this below).
+1. All pages that have code on can be downloaded to your desktop and run as *Jupyter Notebooks*. Click the download symbol in the top right hand corner of the page and select '.ipynb', which stands for 'ipython notebook'. You will need to install software on your computer to run Jupyter Notebooks. This book recommends the Anaconda distribution of Python, which provides an installation of the Python language for your computer. To write and run code and notebooks, this book recommends [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial) (plus its Python extension). There's more on how to get started with Anaconda Python and Visual Studio Code together in the next chapter.
 
 2. Most pages that have code on can be run as a *Google Colab* notebook with a single click on `Colab`, found under the rocket button at the top of the page. If you need to install any extra packages in a Google Colab session, the syntax is `!pip install packagename` to install a library called 'packagename'. Colab notebooks are run in a browser window.
 
-3. Most pages that have code on can be run in an online *Binder* environment as a notebook with a single click on `Binder`, found under the rocket button at the top of the page. Binder notebooks are run in a browser window. Binder is a free way to run computational environments in the browser {cite}`jupyter2018binder`. **Note that Binder can take a few minutes to start, but will come with all the packages used in the book already installed.**
+To run all of the examples in the book, you may need to install additional packages too, depending on what you already have installed on your computer. The Chapter on {ref}`code-preliminaries` will cover how to install additional packages.
 
-If you are using option 1., you'll need a minimum of an installation of Python and an installation of the Jupyter Lab library (`pip install jupyterlab`). You can then either run `jupyter lab` on the command line (you can find out more about what a 'command line' is in the book!) and open the notebook file, or open the notebook with Visual Studio Code (you would then also need to install VS Code-there are instructions in the Preliminaries chapter.) To run all of the examples in the book, you may need to install additional packages too, depending on what you already have installed on your computer. The Preliminaries chapter will cover how to install additional packages.
+```{admonition} Exercise
+Try going to the {ref}`code-basics` chapter now and clicking on the rocketship symbol (🚀), then select "Colab". Try running the first few code cells.
+```
 
 Note that if you're on a secure network, you may find that options 2 and 3 don't work for you. However, as long as you can download and run files locally, option 1 should always work.
 
@@ -66,7 +68,7 @@ To cite this book, please use:
 ```
 @book{Turrell2021,
 title     = "Coding for Economists",
-author    = "Turrell, Arthur",
+author    = "Turrell, Arthur, and contributors",
 year      = 2021,
 publisher = "Online",
 url       = "https://aeturrell.github.io/coding-for-economists"

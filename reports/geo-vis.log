@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 559, in async_execute
+    await self.async_execute_cell(
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+df = df[df["LAD20CD"].str.contains("E09")]
+cv_df = pd.read_parquet(
+    "https://github.com/aeturrell/coding-for-economists/raw/main/data/geo/cv_ldn_deaths.parquet"
+)
+df = df.merge(cv_df, on=["LAD20CD", "LAD20NM"], how="inner")
+df.head()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m/var/folders/jv/1ydhmpn53q10752dykrrn2nm0000gq/T/ipykernel_47172/2964811822.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mdf[0m [0;34m=[0m [0mdf[0m[0;34m[[0m[0mdf[0m[0;34m[[0m[0;34m"LAD20CD"[0m[0;34m][0m[0;34m.[0m[0mstr[0m[0;34m.[0m[0mcontains[0m[0;34m([0m[0;34m"E09"[0m[0;34m)[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m cv_df = pd.read_parquet(
+[0m[1;32m      3[0m     [0;34m"https://github.com/aeturrell/coding-for-economists/raw/main/data/geo/cv_ldn_deaths.parquet"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m )
+[1;32m      5[0m [0mdf[0m [0;34m=[0m [0mdf[0m[0;34m.[0m[0mmerge[0m[0;34m([0m[0mcv_df[0m[0;34m,[0m [0mon[0m[0;34m=[0m[0;34m[[0m[0;34m"LAD20CD"[0m[0;34m,[0m [0;34m"LAD20NM"[0m[0;34m][0m[0;34m,[0m [0mhow[0m[0;34m=[0m[0;34m"inner"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas/io/parquet.py[0m in [0;36mread_parquet[0;34m(path, engine, columns, storage_options, use_nullable_dtypes, **kwargs)[0m
+[1;32m    491[0m     [0mDataFrame[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    492[0m     """
+[0;32m--> 493[0;31m     [0mimpl[0m [0;34m=[0m [0mget_engine[0m[0;34m([0m[0mengine[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    494[0m [0;34m[0m[0m
+[1;32m    495[0m     return impl.read(
+
+[0;32m~/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas/io/parquet.py[0m in [0;36mget_engine[0;34m(engine)[0m
+[1;32m     51[0m                 [0merror_msgs[0m [0;34m+=[0m [0;34m"\n - "[0m [0;34m+[0m [0mstr[0m[0;34m([0m[0merr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     52[0m [0;34m[0m[0m
+[0;32m---> 53[0;31m         raise ImportError(
+[0m[1;32m     54[0m             [0;34m"Unable to find a usable engine; "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     55[0m             [0;34m"tried using: 'pyarrow', 'fastparquet'.\n"[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mImportError[0m: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+

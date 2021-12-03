@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>27. Forecasting Exercises &#8212; Coding for Economists</title>
+    <title>Forecasting Exercises &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,8 +57,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/time-fcasts-env.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="28. Intro to Geo-Spatial Analysis" href="geo-intro.html" />
-    <link rel="prev" title="26. Time Series" href="time-series.html" />
+    <link rel="next" title="Automating Research Outputs" href="auto-research-outputs.html" />
+    <link rel="prev" title="Time Series" href="time-series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -99,55 +101,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -159,37 +124,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -201,22 +193,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -228,17 +220,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -250,12 +247,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -267,46 +269,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -318,7 +291,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -471,53 +505,53 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#two-period-forecast">
-   27.1. Two Period Forecast
+   Two Period Forecast
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#an-example-two-period-forecast">
-     27.1.1. An Example Two Period Forecast
+     An Example Two Period Forecast
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-a-lag">
-     27.1.2. Adding a Lag
+     Adding a Lag
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expanding-window">
-   27.2. Expanding Window
+   Expanding Window
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-likely-best-possible-expanding-window-forecast">
-     27.2.1. The Likely Best Possible Expanding Window Forecast
+     The Likely Best Possible Expanding Window Forecast
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rolling-window">
-   27.3. Rolling Window
+   Rolling Window
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-likely-best-possible-rolling-window-forecast">
-     27.3.1. The Likely Best Possible Rolling Window Forecast
+     The Likely Best Possible Rolling Window Forecast
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#transforms-of-series-in-forecasting-exercises">
-   27.4. Transforms of Series in Forecasting Exercises
+   Transforms of Series in Forecasting Exercises
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-vintage-and-the-real-time-information-flow">
-   27.5. Data Vintage and the Real-Time Information Flow
+   Data Vintage and the Real-Time Information Flow
   </a>
  </li>
 </ul>
@@ -532,7 +566,7 @@
               <div>
                 
   <div class="section" id="forecasting-exercises">
-<h1><span class="section-number">27. </span>Forecasting Exercises<a class="headerlink" href="#forecasting-exercises" title="Permalink to this headline">¶</a></h1>
+<h1>Forecasting Exercises<a class="headerlink" href="#forecasting-exercises" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, we’re going to do a tour of forecasting exercises: that is, the set of operations, like slicing up time, that you might need to do when performing a forecast. Although there will be some code in this chapter, we’re mostly laying the theoretical groundwork.</p>
 <p>Let’s start with some definitions. Features, or regressors, are labelled by <span class="math notranslate nohighlight">\(k = 0, \dots, K-1\)</span> and time by <span class="math notranslate nohighlight">\(t = 0, \dots, T-1\)</span>. Note that this means there are <span class="math notranslate nohighlight">\(T\)</span> time periods and <span class="math notranslate nohighlight">\(K\)</span> features. We’ll label different slices of time (or equivalently models trained on different data) by an index <span class="math notranslate nohighlight">\(\mu\)</span> beginning from <span class="math notranslate nohighlight">\(\mu=1\)</span>, and we’ll give these slices of time different labels: IS for in-sample and OS for out-of-sample. <span class="math notranslate nohighlight">\(f_\mu\)</span> is the model trained on the <span class="math notranslate nohighlight">\(\mu\)</span>th set of in-sample data. The target variable (the number we are trying to forecast) is <span class="math notranslate nohighlight">\(\left\{y_{t+h}\right\}_{t=0}^{t=T-1}\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the number of time steps ahead we wish to forecast. Let <span class="math notranslate nohighlight">\(\left\{x_{tk}\right\}_{t=0}^{t=T-1}\)</span> represent feature (or regressor) <span class="math notranslate nohighlight">\(k\)</span>. In general, a forecast implies <span class="math notranslate nohighlight">\(h&gt;0\)</span> (otherwise we’re doing a nowcast).</p>
 <p>Let’s first do some setup for the rest of the chapter. We’ll be using the <strong>numpy</strong>, <strong>pandas</strong>, <strong>matplotlib</strong>, and <strong>plotnine</strong> packages.</p>
@@ -567,7 +601,7 @@
 </div>
 </div>
 <div class="section" id="two-period-forecast">
-<h2><span class="section-number">27.1. </span>Two Period Forecast<a class="headerlink" href="#two-period-forecast" title="Permalink to this headline">¶</a></h2>
+<h2>Two Period Forecast<a class="headerlink" href="#two-period-forecast" title="Permalink to this headline">¶</a></h2>
 <p>The most simple forecast you can imagine is if we have two periods (each of which may be made up of more than one value of <span class="math notranslate nohighlight">\(t\)</span>). The important thing is that the <span class="math notranslate nohighlight">\(t\)</span> in the first, “in-sample” period do not overlap with the <span class="math notranslate nohighlight">\(t\)</span> in the second, “out-of-sample” period. That’s because we <em>only want to use information in the in-sample period to forecast the out-of-sample period</em>. There are some cases where you may want to “forecast” the in-sample period, but if you’re interested in the real-world performance of your forecast, this is the setup you need.</p>
 <p>In this world of a single in-sample period and a single out-of-sample period, <span class="math notranslate nohighlight">\(\mu=1\)</span>, and we could get drop that notation and just use IS and OS. But we’ll leave it in to make the contrast with what’s to come clearer.</p>
 <p>The exercise is to use a model, <span class="math notranslate nohighlight">\(f = f_{\mu=1}\)</span>, that is trained to predict <span class="math notranslate nohighlight">\(\{y_{t+h}, t:\mu_{\text{IS}}=1\}\)</span> using <span class="math notranslate nohighlight">\(\{x_{tk}, t:\mu_{\text{IS}}=1\}\)</span> so that it can do an out-of-sample forecast of <span class="math notranslate nohighlight">\(\{y_{t+h}, t:\mu_\text{OS}=1\}\)</span> using <span class="math notranslate nohighlight">\(\{x_{tk}, t:\mu_{\text{OS}}=1\}\)</span>. It’s actually easier to see it with a picture:</p>
@@ -855,7 +889,7 @@
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{y}_{t+h}\)</span> is the predicted value, equivalent to the object <code class="docutils literal notranslate"><span class="pre">y_t_plus_h_os</span></code> above.</p>
 <div class="section" id="an-example-two-period-forecast">
-<h3><span class="section-number">27.1.1. </span>An Example Two Period Forecast<a class="headerlink" href="#an-example-two-period-forecast" title="Permalink to this headline">¶</a></h3>
+<h3>An Example Two Period Forecast<a class="headerlink" href="#an-example-two-period-forecast" title="Permalink to this headline">¶</a></h3>
 <p>Let’s see an example of this with some numerical data. Our dataframe needs to have our features, <span class="math notranslate nohighlight">\(x\)</span>, and target, <span class="math notranslate nohighlight">\(y_{t+h}\)</span>, in.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1169,7 +1203,7 @@ The rmse for out-of-sample best predictions is 2.83
 <p>In this case - unsurprisingly given the big break in the trend of the time series - even though in-sample forecast is perfect, the <em>out-of-sample</em> forecast is terrible! If you ever have a situation where the OS RMSE is <em>lower</em> than the IS RMSE, it should ring alarm bells: it suggests something has gone wrong in the code.</p>
 </div>
 <div class="section" id="adding-a-lag">
-<h3><span class="section-number">27.1.2. </span>Adding a Lag<a class="headerlink" href="#adding-a-lag" title="Permalink to this headline">¶</a></h3>
+<h3>Adding a Lag<a class="headerlink" href="#adding-a-lag" title="Permalink to this headline">¶</a></h3>
 <p>Quite frequently, you’ll want to include lags in your forecast specification. Let’s see how to do that in this simple, two-period forecast example.</p>
 <p>Just as forecasting a variable at <span class="math notranslate nohighlight">\(t+h\)</span> means performing a <code class="docutils literal notranslate"><span class="pre">.shift(-h)</span></code> in order to bring the data together in the same row of a dataframe, so creating a feature (or regressor) that is a lag of another column will involve shifting the <em>other</em> way in time. So we’re going to use <code class="docutils literal notranslate"><span class="pre">.shift(lag)</span></code>. Let’s see it with some data:</p>
 <div class="cell docutils container">
@@ -1426,7 +1460,7 @@ The rmse for out-of-sample best predictions is 2.83
 </div>
 </div>
 <div class="section" id="expanding-window">
-<h2><span class="section-number">27.2. </span>Expanding Window<a class="headerlink" href="#expanding-window" title="Permalink to this headline">¶</a></h2>
+<h2>Expanding Window<a class="headerlink" href="#expanding-window" title="Permalink to this headline">¶</a></h2>
 <p>In an expanding window forecast exercise, multiple forecasts are made. In each, the in-sample period grows over time. Necessarily (given finite data), the out-of-sample period shrinks over time. The overall out-of-sample forecast is given by the unique union of the out-of-sample forecasts that are trained on the most information. To make this clear, let’s first define it mathematically and then with a diagram.</p>
 <p>We index the different forecasts (synoymous with different models <span class="math notranslate nohighlight">\(f_\mu\)</span>) by <span class="math notranslate nohighlight">\(\mu\)</span>. The starting size of the window will be <span class="math notranslate nohighlight">\(s + \alpha\)</span> where <span class="math notranslate nohighlight">\(s\)</span> is the step size and <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter that adjusts window size. For arbitrary <span class="math notranslate nohighlight">\(z_t\)</span>, the <span class="math notranslate nohighlight">\(\mu\)</span>th in-sample slice of time series data is:</p>
 <div class="math notranslate nohighlight">
@@ -1447,7 +1481,7 @@ O^e_{\mu}(\vec{z}) = \left\{z_t \right\}^{t=T-1}_{t=\mu\cdot s + \alpha}
 </div>
 <p>Note that in-sample and out-of-sample never overlap in time for the same value of <span class="math notranslate nohighlight">\(\mu\)</span>. This is important because it helps keep our out-of-sample period out-of-sample. We do not want a situation where we <em>think</em> we are performing an out-of-sample forecast but actually the model was trained on some of the supposedly out-of-sample data.</p>
 <div class="section" id="the-likely-best-possible-expanding-window-forecast">
-<h3><span class="section-number">27.2.1. </span>The Likely Best Possible Expanding Window Forecast<a class="headerlink" href="#the-likely-best-possible-expanding-window-forecast" title="Permalink to this headline">¶</a></h3>
+<h3>The Likely Best Possible Expanding Window Forecast<a class="headerlink" href="#the-likely-best-possible-expanding-window-forecast" title="Permalink to this headline">¶</a></h3>
 <p>When we are assessing the potential of a model, we want to know i) how it would perform in practice and ii) that we are testing the best version of it possible. To address both of these points, we need to make a choice from the possible out-of-sample predictions because we have several for the same value of <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(|\mu|\)</span> out-of-sample prediction models for <span class="math notranslate nohighlight">\(t=T-1\)</span></p></li>
@@ -1667,7 +1701,7 @@ O^e_{\mu}(\vec{z}) = \left\{z_t \right\}^{t=T-1}_{t=\mu\cdot s + \alpha}
 </div>
 </div>
 <div class="section" id="rolling-window">
-<h2><span class="section-number">27.3. </span>Rolling Window<a class="headerlink" href="#rolling-window" title="Permalink to this headline">¶</a></h2>
+<h2>Rolling Window<a class="headerlink" href="#rolling-window" title="Permalink to this headline">¶</a></h2>
 <p>In a rolling window forecast exercise, multiple forecasts are made. In each, the in-sample period <em>moves</em> (rather than grows) over time. Necessarily (given finite data), the out-of-sample period shrinks over time as the exercise progresses through different window configurations.</p>
 <p>We index the different forecasts (synoymous with different models <span class="math notranslate nohighlight">\(f_\mu\)</span>) by <span class="math notranslate nohighlight">\(\mu\)</span>. The starting size of the window will be <span class="math notranslate nohighlight">\(s + \alpha\)</span> where <span class="math notranslate nohighlight">\(s\)</span> is the step size and <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter that adjusts window size. For arbitrary <span class="math notranslate nohighlight">\(z_t\)</span>, the <span class="math notranslate nohighlight">\(\mu\)</span>th in-sample slice of time series data is:</p>
 <div class="math notranslate nohighlight">
@@ -1687,7 +1721,7 @@ O^r_{\mu}(\vec{z}) = \bigg\{ z_{t} \bigg\}_{t=\mu\cdot s+\alpha}^{t=T}
 </div>
 </div>
 <div class="section" id="the-likely-best-possible-rolling-window-forecast">
-<h3><span class="section-number">27.3.1. </span>The Likely Best Possible Rolling Window Forecast<a class="headerlink" href="#the-likely-best-possible-rolling-window-forecast" title="Permalink to this headline">¶</a></h3>
+<h3>The Likely Best Possible Rolling Window Forecast<a class="headerlink" href="#the-likely-best-possible-rolling-window-forecast" title="Permalink to this headline">¶</a></h3>
 <p>As with the expanding window, we want to know how models will perform in practice and that the best version of it is being assessed. To address both of these points, we need to make a choice from the possible out-of-sample predictions because we have several for the same value of <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(|\mu|\)</span> out-of-sample prediction models for <span class="math notranslate nohighlight">\(t=T-1\)</span></p></li>
@@ -1866,7 +1900,7 @@ O^r_{\mu}(\vec{z}) = \bigg\{ z_{t} \bigg\}_{t=\mu\cdot s+\alpha}^{t=T}
 </div>
 </div>
 <div class="section" id="transforms-of-series-in-forecasting-exercises">
-<h2><span class="section-number">27.4. </span>Transforms of Series in Forecasting Exercises<a class="headerlink" href="#transforms-of-series-in-forecasting-exercises" title="Permalink to this headline">¶</a></h2>
+<h2>Transforms of Series in Forecasting Exercises<a class="headerlink" href="#transforms-of-series-in-forecasting-exercises" title="Permalink to this headline">¶</a></h2>
 <p>In practice, you often <em>don’t</em> want to throw a time series straight into a forecast. This is for lots of reasons: stationarity, producing the best performing model, the ranges that certain models will accept, and so on. Instead you want to transform the data first using a general transform <span class="math notranslate nohighlight">\(T\colon X\to Z\)</span>. But when in a forecasting situation, extra care must be taken not to let information leak from the period that a model is <em>not</em> supposed to know about. For example, a forecast that is supposed to be out-of-sample, ie it is forecasting a time period <span class="math notranslate nohighlight">\(t''\)</span>, should not be able to see any information about <span class="math notranslate nohighlight">\(X_{t''}\)</span> or <span class="math notranslate nohighlight">\(y_{t''}\)</span>. Why is this a problem when doing transforms? Because many transforms of, say, a scalar <span class="math notranslate nohighlight">\(x_t\)</span> depend on <span class="math notranslate nohighlight">\(x_{t'}; \: t\neq t'\)</span>.</p>
 <p>First, let’s take an example of a common transform with no dependence on any other data: <span class="math notranslate nohighlight">\(T(x_t) = \ln(x_t)\)</span>. In this case we do not need to worry.</p>
 <p>Another example that’s quite common is <span class="math notranslate nohighlight">\(T(x_t) = \frac{x_t}{x_{t-1}}\)</span>. Again, this transform shouldn’t cause us much concern because it only depends on <em>past</em> information.</p>
@@ -1885,7 +1919,7 @@ T_{\mu}^e (\vec{x}) = T_{\mu}^e (\vec{x}; I_\mu^e(\vec{x})) = \frac{\vec{x} - \l
 <p>How do we apply this in code? That part’s easy: we can re-use the slice functions we made earlier, namely <code class="docutils literal notranslate"><span class="pre">in_sample_block_r</span></code> for in-sample rolling windows and <code class="docutils literal notranslate"><span class="pre">in_sample_block_e</span></code> for out-of-sample expanding windows. A more general way of avoiding data leakage, especially when there are many transformations, is to use <strong>scikit-learn</strong>’s <a class="reference external" href="https://scikit-learn.org/stable/modules/compose.html#pipeline">pipeline</a> functionality.</p>
 </div>
 <div class="section" id="data-vintage-and-the-real-time-information-flow">
-<h2><span class="section-number">27.5. </span>Data Vintage and the Real-Time Information Flow<a class="headerlink" href="#data-vintage-and-the-real-time-information-flow" title="Permalink to this headline">¶</a></h2>
+<h2>Data Vintage and the Real-Time Information Flow<a class="headerlink" href="#data-vintage-and-the-real-time-information-flow" title="Permalink to this headline">¶</a></h2>
 <p>There’s another complication if you want an accurate assessment of how good your forecast will be in the real world: some data, and especially economic data, are revised over time. But to give an <em>accurate</em> picture of how well your forecast approach would have done at the time, you need to use only the data that would have been available at the time the forecast was made: you need to use real-time data vintages. Typically, one only considers different vintages of regressors–but target variables change too and this is worth bearing in mind if you are using lags.</p>
 <p>A few labelling operations help us use everything defined so far in this chapter in the real-time data vintage case. We introduce an extra label for vintage, <span class="math notranslate nohighlight">\(\tau\)</span>, which says when the data were released. Features are now given by <span class="math notranslate nohighlight">\(x_{tk\tau}\)</span>. Assuming that vintages are improving over time, models will always be trained using the most up-to-date vintage available up to that time so that a forecast made at <span class="math notranslate nohighlight">\(t\)</span> uses the highest available value of <span class="math notranslate nohighlight">\(\tau\)</span> for which <span class="math notranslate nohighlight">\(\tau \leq t\)</span>, eg <span class="math notranslate nohighlight">\(\tau = \max{ \{ \tau' | \tau' \leq t \}}\)</span>.</p>
 </div>
@@ -1925,15 +1959,15 @@ T_{\mu}^e (\vec{x}) = T_{\mu}^e (\vec{x}; I_\mu^e(\vec{x})) = \frac{\vec{x} - \l
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">26. </span>Time Series</p>
+                <p class="prevnext-title">Time Series</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="geo-intro.html" title="next page">
+        <a class="right-next" href="auto-research-outputs.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">28. </span>Intro to Geo-Spatial Analysis</p>
+                <p class="prevnext-title">Automating Research Outputs</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

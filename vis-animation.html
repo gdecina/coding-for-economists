@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>19. Animation &#8212; Coding for Economists</title>
+    <title>Animation &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -55,8 +57,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-animation.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="20. Probability and Random Processes" href="econmt-probability-random.html" />
-    <link rel="prev" title="18. Narrative Data Visualisation" href="vis-narrative.html" />
+    <link rel="next" title="Probability and Random Processes" href="econmt-probability-random.html" />
+    <link rel="prev" title="Narrative Data Visualisation" href="vis-narrative.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -99,55 +101,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -159,37 +124,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -201,22 +193,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -228,17 +220,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -250,12 +247,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -267,46 +269,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -318,7 +291,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -471,12 +505,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-to-animate">
-   19.1. Plot To Animate
+   Plot To Animate
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-animations-using-the-gif-package">
-   19.2. Creating Animations Using the
+   Creating Animations Using the
    <strong>
     Gif
    </strong>
@@ -485,7 +519,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-animations-using-the-imagio-package">
-   19.3. Making Animations Using the
+   Making Animations Using the
    <strong>
     imagio
    </strong>
@@ -494,7 +528,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#see-also">
-   19.4. See Also
+   See Also
   </a>
  </li>
 </ul>
@@ -509,7 +543,7 @@
               <div>
                 
   <div class="section" id="animation">
-<h1><span class="section-number">19. </span>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h1>
+<h1>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h1>
 <p>Animations can be an effective way to show an extra dimension of your data, especially changes over time. Clearly, they’re not appropriate everywhere, eg in static media! For various reasons, they should be used sparingly, but-used rarely and with care-they can convey a message about data more effectively than a static chart ever would. Perhaps the most famous example of an animated chart is the legendary Hans Roslings’ <a class="reference external" href="https://youtu.be/jbkSRLYSojo?t=29">gapminder animation</a> covering 200 countries and 200 years of progress in income and health.</p>
 <p>The most common scenario for wanting to create an animation is sharing on social media (gifs are ubiquitous on the internet) or displaying an animation of some of your results during a talk. In both these cases, creating a gif is probably the best and safest option. ‘The best’ because although video files tend to be very large (and thus difficult to share), gifs can be turned into small files, with a bit of tweaking. ‘The safest’ because even though presentation software like Microsoft’s Powerpoint can crumble when trying to play an embedded video file, gifs usually work just fine. And while video formats differ across operating systems, all of them will play gifs (all you need to play a gif is a browser such as Safari or Chrome).  However, you can also create animations in other video formats, such as .mp4. The main downside of gifs is that they can produce quite jerky videos.</p>
 <p>There are several ways to produce animations in Python, which we’ll come to in a moment. First though, let’s import some of the general packages we’ll need:</p>
@@ -532,7 +566,7 @@
 </div>
 </div>
 <div class="section" id="plot-to-animate">
-<h2><span class="section-number">19.1. </span>Plot To Animate<a class="headerlink" href="#plot-to-animate" title="Permalink to this headline">¶</a></h2>
+<h2>Plot To Animate<a class="headerlink" href="#plot-to-animate" title="Permalink to this headline">¶</a></h2>
 <p>First, we need a plot to animate. And what better dataset than the gapminder data? “There is none!” I hear you shout at your computer. But hang on, perhaps we’d better see a simple demonstration of some of the principles we’ll be using first.</p>
 <p>A video is a sequence of static images stitched together and replayed quickly, like a flickbook cartoon. We will use the same trick, a series of static images played after one another, to create animated charts. But this means we need to create the series of static images.</p>
 <p>Let’s create individual images and index them with <span class="math notranslate nohighlight">\(i\)</span>. We want to move on to a new scene every time we increment <span class="math notranslate nohighlight">\(i\)</span>. We do this by creating a <em>function</em> that accepts <span class="math notranslate nohighlight">\(i\)</span> as a parameter and that modifies what is shown on the image. The below example shows how it can work: although the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> arrays are always defined, and an <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(y\)</span> line plot is always shown, the <code class="docutils literal notranslate"><span class="pre">ax.scatter</span></code> function is passed only the <span class="math notranslate nohighlight">\(i\)</span>th element of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> arrays. When we call <code class="docutils literal notranslate"><span class="pre">plot_scene</span></code> with different values of <span class="math notranslate nohighlight">\(i\)</span>, the scene updates to the next moment in time. In the example below, the bead moves along 1/20th of its journey between 0 and <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
@@ -815,7 +849,7 @@
 <p>We now have everything we need to create the individual scenes in our animation.</p>
 </div>
 <div class="section" id="creating-animations-using-the-gif-package">
-<h2><span class="section-number">19.2. </span>Creating Animations Using the <strong>Gif</strong> Package<a class="headerlink" href="#creating-animations-using-the-gif-package" title="Permalink to this headline">¶</a></h2>
+<h2>Creating Animations Using the <strong>Gif</strong> Package<a class="headerlink" href="#creating-animations-using-the-gif-package" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://github.com/maxhumber/gif"><strong>gif</strong></a> package is here to make it as easy as possible to create gifs from a series of plot images created using <strong>matplotlib</strong>, <strong>altair</strong>, or <strong>plotly</strong>. (In principle, this should also work for <strong>plotnine</strong> as it’s built on top of <strong>matplotlib</strong>). To install it, use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">gif</span></code> on the command line.</p>
 <p><strong>gif</strong> works by using function decorators (you can learn more about these in the advanced coding chapter). These ‘decorate’ existing functions using an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> symbol and change their behaviour. In this case, the decorator is <code class="docutils literal notranslate"><span class="pre">&#64;git.frame</span></code> and it tells <strong>gif</strong> to remember this function as one frame of a gif.</p>
 <p>Note that in the example below, we’ll make things a bit less high resolution and brief than we might optimally do, just to save on some file space.</p>
@@ -876,7 +910,7 @@
 </div>
 </div>
 <div class="section" id="making-animations-using-the-imagio-package">
-<h2><span class="section-number">19.3. </span>Making Animations Using the <strong>imagio</strong> Package<a class="headerlink" href="#making-animations-using-the-imagio-package" title="Permalink to this headline">¶</a></h2>
+<h2>Making Animations Using the <strong>imagio</strong> Package<a class="headerlink" href="#making-animations-using-the-imagio-package" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://imageio.readthedocs.io/en/stable/"><strong>imagio</strong></a> is an alternative package for making animations, and works in a slightly different way, with an intermediate step between creating the static images and weaving them into a video. However, it allows you to stitch together jpg files as well as png files.</p>
 <p>Let’s imagine that you have a folder for temporary files called ‘scratch’ and a directory for finished gifs called ‘img’. The code below gives an example of how you would use <strong>imageio</strong> to create 20 frames of a video and then weave them together into a .gif:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">imageio</span>
@@ -913,7 +947,7 @@
 <p><strong>imagio</strong> can also write to .mp4 files if needed, and has a host of other features not covered here.</p>
 </div>
 <div class="section" id="see-also">
-<h2><span class="section-number">19.4. </span>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
 <p>There are some excellent other tools out there. The command line tool <a class="reference external" href="https://www.ffmpeg.org/"><strong>ffmpeg</strong></a> is worth a look if you need fancier video options than are provided by the two tools we’ve met.</p>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/animation_api.html"><strong>Matplotlib</strong></a> has a built-in animation feature too, though historically it has been a bit more tricky to use than tools like <strong>imagio</strong> or <strong>gif</strong>.</p>
 <p><a class="reference external" href="https://ahlive.readthedocs.io/en/latest"><strong>ahlive</strong></a> is a really promising package that is still in early development. It integrates directly with <strong>pandas</strong> and has some easy-to-use features for making sophisticated looking animations in just a few lines of code.</p>
@@ -955,7 +989,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">18. </span>Narrative Data Visualisation</p>
+                <p class="prevnext-title">Narrative Data Visualisation</p>
             </div>
         </a>
     </div>
@@ -963,7 +997,7 @@
         <a class="right-next" href="econmt-probability-random.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">20. </span>Probability and Random Processes</p>
+                <p class="prevnext-title">Probability and Random Processes</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

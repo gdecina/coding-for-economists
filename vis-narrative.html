@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>18. Narrative Data Visualisation &#8212; Coding for Economists</title>
+    <title>Narrative Data Visualisation &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +55,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-narrative.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="19. Animation" href="vis-animation.html" />
-    <link rel="prev" title="17. Common Plots" href="vis-common-plots.html" />
+    <link rel="next" title="Animation" href="vis-animation.html" />
+    <link rel="prev" title="Common Plots" href="vis-common-plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,55 +99,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
-   1. Preliminaries
+   Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   2. Basics of Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   3. Advanced Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   4. Options for Writing Code
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-best-practice.html">
-   5. Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-advcd-best-practice.html">
-   6. Tools for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   7. The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   8. Reproducible Analysis
+   Basics of Coding
   </a>
  </li>
 </ul>
@@ -157,37 +122,64 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
-   9. Data Analysis Quickstart
+   Data Analysis Quickstart
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-intro.html">
-   10. Working with Data
+   Working with Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
-   11. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
-   12. Reading and Writing Files
+   Reading and Writing Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
-   13. Extracting Data
+   Getting Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-sharing.html">
-   14. Sharing Data
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-advanced.html">
-   15. Advanced Data
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Options for Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-best-practice.html">
+   Tips for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Tools for Better Coding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advanced.html">
+   Advanced Coding
   </a>
  </li>
 </ul>
@@ -199,22 +191,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
-   16. Intro to Data Visualisation
+   Intro to Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
-   17. Common Plots
+   Common Plots
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   18. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vis-animation.html">
-   19. Animation
+   Animation
   </a>
  </li>
 </ul>
@@ -226,17 +218,22 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-probability-random.html">
-   20. Probability and Random Processes
+   Probability and Random Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-statistics.html">
-   21. Statistics
+   Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="econmt-regression.html">
-   22. Regression
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
   </a>
  </li>
 </ul>
@@ -248,12 +245,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="text-intro.html">
-   23. Introduction to Text
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
-   24. Natural Language Processing
+   Natural Language Processing
   </a>
  </li>
 </ul>
@@ -265,46 +267,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="time-intro.html">
-   25. Introduction to Time
+   Introduction to Time
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-series.html">
-   26. Time Series
+   Time Series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="time-fcasts-env.html">
-   27. Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   28. Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   29. Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Mathematics with Code
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-maths-coding.html">
-   30. Intro to Mathematics with Code
+   Forecasting Exercises
   </a>
  </li>
 </ul>
@@ -316,7 +289,68 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="auto-research-outputs.html">
-   31. Automating Research Outputs
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-reports.html">
+   Automating Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-office.html">
+   The Automated Office
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Geospatial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-intro.html">
+   Intro to Geo-Spatial Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geo-vis.html">
+   Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics with Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maths-maths-coding.html">
+   Intro to Mathematics with Code
   </a>
  </li>
 </ul>
@@ -469,32 +503,32 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   18.1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   18.2. Narrative Data Visualisation
+   Narrative Data Visualisation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deciding-the-story">
-     18.2.1. Deciding the story
+     Deciding the story
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-plot-should-i-use">
-     18.2.2. What plot should I use?
+     What plot should I use?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#drawing-attention-to-enhance-narrative-visualisation">
-     18.2.3. Drawing Attention to Enhance Narrative Visualisation
+     Drawing Attention to Enhance Narrative Visualisation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-final-mile-in-narrative-visualisations">
-     18.2.4. The Final Mile in Narrative Visualisations
+     The Final Mile in Narrative Visualisations
     </a>
    </li>
   </ul>
@@ -511,10 +545,10 @@
               <div>
                 
   <div class="section" id="narrative-data-visualisation">
-<span id="vis-narrative"></span><h1><span class="section-number">18. </span>Narrative Data Visualisation<a class="headerlink" href="#narrative-data-visualisation" title="Permalink to this headline">¶</a></h1>
+<span id="vis-narrative"></span><h1>Narrative Data Visualisation<a class="headerlink" href="#narrative-data-visualisation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2><span class="section-number">18.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>In this chapter, we’ll examine the tricks and techniques of <em>narrative data visualisation</em>. This type of visualisation gets a lot more press than the others discussed in <span class="xref std std-ref">vis-intro</span>; literally, because journalists use it in their work. There are many books written on it too.</p>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter, we’ll examine the tricks and techniques of <em>narrative data visualisation</em>. This type of visualisation gets a lot more press than the others discussed in <a class="reference internal" href="vis-intro.html#vis-intro"><span class="std std-ref">Intro to Data Visualisation</span></a> ; literally, because journalists use it in their work. There are many books written on it too.</p>
 <p>For narrative visualisation, it’s particularly helpful to bear this quote in mind:</p>
 <blockquote>
 <div><p>The purpose of visualisation is insight, not pictures</p>
@@ -545,10 +579,10 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">18.2. </span>Narrative Data Visualisation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Narrative Data Visualisation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>As discussed, the name of the game here is to communicate a particular narrative. Let’s see what tricks we can use to help do this. The three stages of this are: deciding the story, deciding the chart, and creating a chart that helps deliver that narrative.</p>
 <div class="section" id="deciding-the-story">
-<h3><span class="section-number">18.2.1. </span>Deciding the story<a class="headerlink" href="#deciding-the-story" title="Permalink to this headline">¶</a></h3>
+<h3>Deciding the story<a class="headerlink" href="#deciding-the-story" title="Permalink to this headline">¶</a></h3>
 <p>We are only human, and a digestible narrative goes a lot further than lots of data with no thread running through. If you are doing narrative visualisation, you must first be clear about the story you want to tell and why it’s important. Let’s say you are making a visualisation on topic ‘Y’, then some reasons why ‘Y’ might be important that you may want to think about when creating your narrative are:</p>
 <ul class="simple">
 <li><p>Y matters: when Y rises or falls, people are hurt or helped.</p></li>
@@ -560,12 +594,12 @@
 <p>If you can identify why a story is important, you’re half way to designing a narrative visualisation that brings the story into focus. Later on, we’ll recreate a chart from the <em>Financial Times</em>. In that case, ‘Y’ is a high for air pollution in Beijing that hurts people (it’s also political because of efforts to tackle the problem). So, in this case, the creator of the narrative needs to convey that the pollution has hit a high (presumably relative to other points in time) and that this high is far above safe levels.</p>
 </div>
 <div class="section" id="what-plot-should-i-use">
-<h3><span class="section-number">18.2.2. </span>What plot should I use?<a class="headerlink" href="#what-plot-should-i-use" title="Permalink to this headline">¶</a></h3>
+<h3>What plot should I use?<a class="headerlink" href="#what-plot-should-i-use" title="Permalink to this headline">¶</a></h3>
 <p>Once you know what story you want to tell, you need the right kind of chart for the job. Resources like the <em>Financial Times</em>’ <a class="reference external" href="http://ft-interactive.github.io/visual-vocabulary/">visual vocabulary</a> are extremely useful here. You need to ask yourself what element you’re trying to highlight: a point in time, the size relative to other units cross-sectionally, the distribution either in numbers or spatially, the difference between groups, how something has changed, etc.? There are charts that can help with all of these and it’s well worth looking at the link to get a sense. You can find code for many of the plots that are featured in the <a class="reference internal" href="vis-common-plots.html#vis-common-plots"><span class="std std-ref">Common Plots</span></a> chapter.</p>
 </div>
 <div class="section" id="drawing-attention-to-enhance-narrative-visualisation">
-<h3><span class="section-number">18.2.3. </span>Drawing Attention to Enhance Narrative Visualisation<a class="headerlink" href="#drawing-attention-to-enhance-narrative-visualisation" title="Permalink to this headline">¶</a></h3>
-<p>According to data visualisation master Jon Schwabish’s book <em>Better Data Visusalizations</em> <span id="id2">[<a class="reference internal" href="zreferences.html#id17">6</a>]</span>, there are 15 ways to draw an audience’s attention in a chart:</p>
+<h3>Drawing Attention to Enhance Narrative Visualisation<a class="headerlink" href="#drawing-attention-to-enhance-narrative-visualisation" title="Permalink to this headline">¶</a></h3>
+<p>According to data visualisation master Jon Schwabish’s book <em>Better Data Visusalizations</em> <span id="id2">[<a class="reference internal" href="zreferences.html#id17">5</a>]</span>, there are 15 ways to draw an audience’s attention in a chart:</p>
 <ol class="simple">
 <li><p>Shape</p></li>
 <li><p>Enclosure</p></li>
@@ -588,7 +622,7 @@
 <p>But be warned: not all of these are equivalent! It’s much easier to perceive differences in length than it is differences in, say, volume. So if you want your audience to be able to make comparisons or quantitative assessments, you need to pick what techniques you use from this list carefully. Roughly in order of how easy they are to perceive quantitatively, the features are: one common axis, two axes, length, slope, angle, parts of whole, area, volume, saturation, and hue.</p>
 </div>
 <div class="section" id="the-final-mile-in-narrative-visualisations">
-<h3><span class="section-number">18.2.4. </span>The Final Mile in Narrative Visualisations<a class="headerlink" href="#the-final-mile-in-narrative-visualisations" title="Permalink to this headline">¶</a></h3>
+<h3>The Final Mile in Narrative Visualisations<a class="headerlink" href="#the-final-mile-in-narrative-visualisations" title="Permalink to this headline">¶</a></h3>
 <p>Good visualisation helps the viewer to grasp the narrative—rather than leaving them puzzling as to what the key message is. To that end, various adornments may be added to a plot to bring out the narrative. These adornments typically take the form of those we have seen already that draw the eye, but for a successful narrative visualisation they must come together to tell a story.</p>
 <p>We’ll also make use of some other tricks:</p>
 <ul class="simple">
@@ -928,7 +962,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/aet/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas/core/arraylike.py:364: RuntimeWarning: divide by zero encountered in log
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas/core/arraylike.py:364: RuntimeWarning: divide by zero encountered in log
   result = getattr(ufunc, method)(*inputs, **kwargs)
 </pre></div>
 </div>
@@ -973,7 +1007,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">17. </span>Common Plots</p>
+                <p class="prevnext-title">Common Plots</p>
             </div>
         </a>
     </div>
@@ -981,7 +1015,7 @@
         <a class="right-next" href="vis-animation.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">19. </span>Animation</p>
+                <p class="prevnext-title">Animation</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
