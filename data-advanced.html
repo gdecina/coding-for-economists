@@ -1113,16 +1113,16 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;result&quot;: {
+    &quot;observed_value&quot;: &quot;int64&quot;
+  },
   &quot;success&quot;: true,
-  &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
-  &quot;result&quot;: {
-    &quot;observed_value&quot;: &quot;int64&quot;
-  }
+  &quot;meta&quot;: {}
 }
 </pre></div>
 </div>
@@ -1136,19 +1136,19 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;success&quot;: false,
-  &quot;meta&quot;: {},
-  &quot;exception_info&quot;: {
-    &quot;raised_exception&quot;: false,
-    &quot;exception_traceback&quot;: null,
-    &quot;exception_message&quot;: null
-  },
   &quot;result&quot;: {
     &quot;observed_value&quot;: 0.6,
     &quot;element_count&quot;: 5,
     &quot;missing_count&quot;: null,
     &quot;missing_percent&quot;: null
-  }
+  },
+  &quot;success&quot;: false,
+  &quot;exception_info&quot;: {
+    &quot;raised_exception&quot;: false,
+    &quot;exception_traceback&quot;: null,
+    &quot;exception_message&quot;: null
+  },
+  &quot;meta&quot;: {}
 }
 </pre></div>
 </div>
@@ -1169,13 +1169,6 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;success&quot;: true,
-  &quot;meta&quot;: {},
-  &quot;exception_info&quot;: {
-    &quot;raised_exception&quot;: false,
-    &quot;exception_traceback&quot;: null,
-    &quot;exception_message&quot;: null
-  },
   &quot;result&quot;: {
     &quot;element_count&quot;: 5,
     &quot;missing_count&quot;: 0,
@@ -1187,7 +1180,14 @@ failure cases:
     &quot;partial_unexpected_list&quot;: [
       -20.4
     ]
-  }
+  },
+  &quot;success&quot;: true,
+  &quot;exception_info&quot;: {
+    &quot;raised_exception&quot;: false,
+    &quot;exception_traceback&quot;: null,
+    &quot;exception_message&quot;: null
+  },
+  &quot;meta&quot;: {}
 }
 </pre></div>
 </div>
@@ -1358,118 +1358,142 @@ failure cases:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - PIPELINE_START - Started execution of pipeline &quot;hello_pipeline&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - PIPELINE_START - Started execution of pipeline &quot;hello_pipeline&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - ENGINE_EVENT - Executing steps in process (pid: 47233)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Executing steps in process (pid: 27158)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_START - Started execution of step &quot;get_name.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Starting initialization of resources [io_manager].
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Finished initialization of resources [io_manager].
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - LOGS_CAPTURED - Started capturing logs for solid: get_name.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - get_name.compute - STEP_SUCCESS - Finished execution of step &quot;get_name.compute&quot; in 1.83ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_START - Started execution of step &quot;get_name&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_START - Started execution of step &quot;hello.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input name in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_INPUT - Got input &quot;name&quot; of type &quot;String&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_SUCCESS - Finished execution of step &quot;get_name&quot; in 2.33ms.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - LOGS_CAPTURED - Started capturing logs for solid: hello.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_START - Started execution of step &quot;hello&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - hello.compute - STEP_SUCCESS - Finished execution of step &quot;hello.compute&quot; in 1.77ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - LOADED_INPUT - Loaded input &quot;name&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;get_name&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_START - Started execution of step &quot;all_upper.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_INPUT - Got input &quot;name&quot; of type &quot;String&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_SUCCESS - Finished execution of step &quot;hello&quot; in 1.97ms.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - LOGS_CAPTURED - Started capturing logs for solid: all_upper.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - all_upper.compute - STEP_SUCCESS - Finished execution of step &quot;all_upper.compute&quot; in 1.73ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_START - Started execution of step &quot;all_upper&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_START - Started execution of step &quot;leading_caps.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_SUCCESS - Finished execution of step &quot;all_upper&quot; in 2.13ms.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading_caps.compute - STEP_SUCCESS - Finished execution of step &quot;leading_caps.compute&quot; in 1.69ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - LOGS_CAPTURED - Started capturing logs for solid: leading_caps.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_START - Started execution of step &quot;upper.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_START - Started execution of step &quot;leading_caps&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase_to_display in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - upper.compute - STEP_SUCCESS - Finished execution of step &quot;upper.compute&quot; in 2.03ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_SUCCESS - Finished execution of step &quot;leading_caps&quot; in 2.11ms.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_START - Started execution of step &quot;leading.compute&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - LOGS_CAPTURED - Started capturing logs for solid: upper.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - OBJECT_STORE_OPERATION - Retrieved intermediate object for input phrase_to_display in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_START - Started execution of step &quot;upper&quot;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;all_upper&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - OBJECT_STORE_OPERATION - Stored intermediate object for output result in memory object store using pickle.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - leading.compute - STEP_SUCCESS - Finished execution of step &quot;leading.compute&quot; in 1.77ms.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - ENGINE_EVENT - Finished steps in process (pid: 47233) in 27ms
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_SUCCESS - Finished execution of step &quot;upper&quot; in 2.15ms.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-12-03 18:12:01 - dagster - DEBUG - hello_pipeline - 1d6676e4-d3de-4447-949f-73f51cf14244 - 47233 - PIPELINE_SUCCESS - Finished execution of pipeline &quot;hello_pipeline&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - LOGS_CAPTURED - Started capturing logs for solid: leading.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_START - Started execution of step &quot;leading&quot;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;leading_caps&quot;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_SUCCESS - Finished execution of step &quot;leading&quot; in 2.13ms.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Finished steps in process (pid: 27158) in 49ms
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - PIPELINE_SUCCESS - Finished execution of pipeline &quot;hello_pipeline&quot;.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HELLO, DAGSTER!
