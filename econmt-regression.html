@@ -133,11 +133,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -145,6 +140,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -214,6 +214,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -246,23 +273,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -290,6 +322,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -312,28 +366,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -351,13 +383,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -1624,7 +1656,7 @@ np.log(hp)   -10.7642      1.224     -8.792      0.000     -13.265      -8.264
 </div>
 </div>
 </div>
-<p>Clearly, the first method will work for <code class="docutils literal notranslate"><span class="pre">arcsinh(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">log(x+1)</span></code>, but you can also pass both of these into the formula directly too. (For more on the pros and cons of arcsinh, see <span id="id2">[<a class="reference internal" href="zreferences.html#id6">8</a>]</span>.) Here it is with arcsinh:</p>
+<p>Clearly, the first method will work for <code class="docutils literal notranslate"><span class="pre">arcsinh(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">log(x+1)</span></code>, but you can also pass both of these into the formula directly too. (For more on the pros and cons of arcsinh, see <span id="id2">Bellemare and Wichman [<a class="reference internal" href="zreferences.html#id6">2020</a>]</span>.) Here it is with arcsinh:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;mpg ~ np.arcsinh(hp)&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mpg</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -1656,7 +1688,7 @@ y = \beta_0 + \beta_1 x_1 \cdot x_2
 y = \beta_0 + \beta_1 x_1^2
 \]</div>
 <p>i.e. the last term enters only after it is multiplied by itself.</p>
-<p>One note of warning: the interpretation of the effect of a variable is no longer as simple as was set out at the start of this chapter. To work out <em>what</em> the new interpretation is, the procedure is the same though: just take the derivative. In the case of the interaction model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> is now going to be a function of <span class="math notranslate nohighlight">\(x_2\)</span>. In the case of the polynomial model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> will be <span class="math notranslate nohighlight">\(2\beta_1 \cdot x_1\)</span>. For more on interaction terms, see <span id="id3">[<a class="reference internal" href="zreferences.html#id7">9</a>]</span>.</p>
+<p>One note of warning: the interpretation of the effect of a variable is no longer as simple as was set out at the start of this chapter. To work out <em>what</em> the new interpretation is, the procedure is the same though: just take the derivative. In the case of the interaction model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> is now going to be a function of <span class="math notranslate nohighlight">\(x_2\)</span>. In the case of the polynomial model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> will be <span class="math notranslate nohighlight">\(2\beta_1 \cdot x_1\)</span>. For more on interaction terms, see <span id="id3">Balli and Sørensen [<a class="reference internal" href="zreferences.html#id7">2013</a>]</span>.</p>
 <p>Alright, with all of that preamble out of the way, let’s see how we actual do some of this! Let’s try including a linear and squared term in the regression of <code class="docutils literal notranslate"><span class="pre">mpg</span></code> on <code class="docutils literal notranslate"><span class="pre">hp</span></code> making use of the numpy power function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3376,18 +3408,18 @@ strong multicollinearity or other numerical problems.
 <div class="section" id="specification-curve-analysis">
 <h2>Specification curve analysis<a class="headerlink" href="#specification-curve-analysis" title="Permalink to this headline">¶</a></h2>
 <p>When specifying a model, modellers have many options. These can be informed by field intelligence, priors, and even misguided attempts to find a significant result. Even with the best of intentions, research teams can reach entirely different conclusions using the same, or similar, data because of different choices made in preparing data or in modelling it.</p>
-<p>There’s formal evidence that researchers really do make different decisions; one study <span id="id4">[<a class="reference internal" href="zreferences.html#id8">10</a>]</span> gave the same research question - whether soccer referees are more likely to give red cards to dark-skin-toned players than to light-skin-toned players - to 29 different teams. From the abstract of that paper:</p>
+<p>There’s formal evidence that researchers really do make different decisions; one study <span id="id4">Silberzahn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id8">2018</a>]</span> gave the same research question - whether soccer referees are more likely to give red cards to dark-skin-toned players than to light-skin-toned players - to 29 different teams. From the abstract of that paper:</p>
 <blockquote>
 <div><p>Analytic approaches varied widely across the teams, and the estimated effect sizes ranged from 0.89 to 2.93 (Mdn = 1.31) in odds-ratio units. Twenty teams (69%) found a statistically significant positive effect, and 9 teams (31%) did not observe a significant relationship. Overall, the 29 different analyses used 21 unique combinations of covariates. Neither analysts’ prior beliefs about the effect of interest nor their level of expertise readily explained the variation in the outcomes of the analyses. Peer ratings of the quality of the analyses also did not account for the variability.</p>
 </div></blockquote>
 <p>So not only were different decisions made, there seems to be no clearly identifiable reason for them. There is usually scope for reasonable alternative model specifications when estimating coefficients, and those coefficients will vary with those specifications.</p>
-<p>Specification curve analysis <span id="id5">[<a class="reference internal" href="zreferences.html#id9">11</a>]</span> looks for a more exhaustive way of trying out alternative specifications. The three steps of specification curve analysis are:</p>
+<p>Specification curve analysis <span id="id5">Simonsohn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id9">2020</a>]</span> looks for a more exhaustive way of trying out alternative specifications. The three steps of specification curve analysis are:</p>
 <ol class="simple">
 <li><p>identifying the set of theoretically justified, statistically valid, and non-redundant analytic specifications;</p></li>
 <li><p>displaying alternative results graphically, allowing the identification of decisions producing different results; and</p></li>
 <li><p>conducting statistical tests to determine whether as a whole results are inconsistent with the null hypothesis.</p></li>
 </ol>
-<p>For a good example of specification curve analysis in action, see this recent Nature Human Behaviour paper <span id="id6">[<a class="reference internal" href="zreferences.html#id10">12</a>]</span> on the association between adolescent well-being and the use of digital technology.</p>
+<p>For a good example of specification curve analysis in action, see this recent Nature Human Behaviour paper <span id="id6">Orben and Przybylski [<a class="reference internal" href="zreferences.html#id10">2019</a>]</span> on the association between adolescent well-being and the use of digital technology.</p>
 <p>We’ll use the <a class="reference external" href="https://specification-curve.readthedocs.io/en/latest/readme.html"><strong>specification curve analysis</strong></a> package to do the first two, which you can install with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">specification_curve</span></code>. To demonstrate the full functionality, we’ll create a second, alternative ‘hp’ that is a transformed version of the original.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

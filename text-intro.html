@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Regular Expressions, aka regex" href="text-regex.html" />
-    <link rel="prev" title="Bayesian Inference" href="econmt-bayesian.html" />
+    <link rel="prev" title="Forecasting Exercises" href="time-fcasts-env.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -131,11 +131,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -143,6 +138,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -212,6 +212,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -244,23 +271,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Introduction to Text
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -288,6 +320,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -310,28 +364,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -349,13 +381,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -1117,7 +1149,7 @@ Here is an \n escaped new line
 <h3>Replacing characters with translate<a class="headerlink" href="#replacing-characters-with-translate" title="Permalink to this headline">¶</a></h3>
 <p>A character is an individual entry within a string, like the ‘l’ in ‘equilibrium’. You can always count the number of characters in a string variable called <code class="docutils literal notranslate"><span class="pre">var</span></code> by using <code class="docutils literal notranslate"><span class="pre">len(var)</span></code>. A very fast method for replacing individual characters in a string is <code class="docutils literal notranslate"><span class="pre">str.translate</span></code>.</p>
 <p>Replacing characters is extremely useful in certain situations, most commonly when you wish to remote all punctuation prior to doing other text analysis. You can use the built-in <code class="docutils literal notranslate"><span class="pre">string.punctuation</span></code> for this.</p>
-<p>Let’s see how to use it to remove all of the vowels from some text. With apologies to economist Lisa Cook, we’ll use the abstract from <span id="id1">[<a class="reference internal" href="zreferences.html#id16">18</a>]</span> as the text we’ll modify and we’ll first create a dictionary of translations of vowels to nothing, i.e. <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
+<p>Let’s see how to use it to remove all of the vowels from some text. With apologies to economist Lisa Cook, we’ll use the abstract from <span id="id1">Cook [<a class="reference internal" href="zreferences.html#id16">2011</a>]</span> as the text we’ll modify and we’ll first create a dictionary of translations of vowels to nothing, i.e. <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;Much recent work has focused on the influence of social capital on innovative outcomes. Little research has been done on disadvantaged groups who were often restricted from participation in social networks that provide information necessary for invention and innovation. Unique new data on African American inventors and patentees between 1843 and 1930 permit an empirical investigation of the relation between social capital and economic outcomes. I find that African Americans used both traditional, i.e., occupation-based, and nontraditional, i.e., civic, networks to maximize inventive output and that laws constraining social-capital formation are most negatively correlated with economically important inventive activity.&quot;</span>
@@ -1850,11 +1882,11 @@ Name: names, dtype: object
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="econmt-bayesian.html" title="previous page">
+        <a class="left-prev" href="time-fcasts-env.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Bayesian Inference</p>
+                <p class="prevnext-title">Forecasting Exercises</p>
             </div>
         </a>
     </div>

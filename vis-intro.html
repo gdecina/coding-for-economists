@@ -131,11 +131,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -143,6 +138,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -212,6 +212,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -244,23 +271,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -288,6 +320,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -310,28 +364,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -349,13 +381,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -648,11 +680,11 @@
 <img alt="_images/vis-intro_4_0.png" src="_images/vis-intro_4_0.png" />
 </div>
 </div>
-<p>Exploratory visualisation is usually quick and dirty, and flexible too. Some exploratory data viz can be automated, and some of the packages we saw in the chapter on <span class="xref std std-ref">exploratory-data-analysis</span> can do this. For an EDA package that’s explicitly built with visalisation in mind, check out <a class="reference external" href="https://github.com/fbdesignpro/sweetviz">SweetViz</a>. Beyond you and perhaps your co-authors/collaborators, not many other people should be seeing your exploratory visualisation.</p>
+<p>Exploratory visualisation is usually quick and dirty, and flexible too. Some exploratory data viz can be automated, and some of the packages we saw in the chapter on <a class="reference internal" href="data-exploratory-analysis.html#data-exploratory-analysis"><span class="std std-ref">Exploratory Data Analysis</span></a> can do this. For an EDA package that’s explicitly built with visalisation in mind, check out <a class="reference external" href="https://github.com/fbdesignpro/sweetviz">SweetViz</a>. Beyond you and perhaps your co-authors/collaborators, not many other people should be seeing your exploratory visualisation.</p>
 </div>
 <div class="section" id="scientific-visualisation">
 <h3>Scientific Visualisation<a class="headerlink" href="#scientific-visualisation" title="Permalink to this headline">¶</a></h3>
-<p>The second kind, scientific visualisation, is the prime cut of your exploratory visualisation. It’s the kind of plot you might include in a more technical paper, the picture that says a thousand words. I often think of the first image of a black hole <span id="id1">[<a class="reference internal" href="zreferences.html#id11">2</a>]</span> as a prime example of this. You can get away with having a high density of information in a scientific plot and, in short format journals, you may need to. The journal <em>Physical Review Letters</em>, which has an 8 page limit, has a classic of this genre in more or less every issue. Ensuring that important values can be accurately read from the plot is especially important in these kinds of charts. But they can also be the kind of plot that presents the killer results in a study; they might not be exciting to people who don’t look at charts for a living, but they might be exciting and, just as importantly, understandable by your peers.</p>
+<p>The second kind, scientific visualisation, is the prime cut of your exploratory visualisation. It’s the kind of plot you might include in a more technical paper, the picture that says a thousand words. I often think of the first image of a black hole <span id="id1">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11">2019</a>]</span> as a prime example of this. You can get away with having a high density of information in a scientific plot and, in short format journals, you may need to. The journal <em>Physical Review Letters</em>, which has an 8 page limit, has a classic of this genre in more or less every issue. Ensuring that important values can be accurately read from the plot is especially important in these kinds of charts. But they can also be the kind of plot that presents the killer results in a study; they might not be exciting to people who don’t look at charts for a living, but they might be exciting and, just as importantly, understandable by your peers.</p>
 </div>
 <div class="section" id="narrative-visualisation">
 <h3>Narrative Visualisation<a class="headerlink" href="#narrative-visualisation" title="Permalink to this headline">¶</a></h3>
@@ -688,7 +720,7 @@
 <div class="section" id="continuous-colour-scales">
 <h4>Continuous Colour Scales<a class="headerlink" href="#continuous-colour-scales" title="Permalink to this headline">¶</a></h4>
 <p>Continuously varying data need a sequential colour scale, but there are two types: <em>sequential</em> and <em>diverging</em></p>
-<p>For data that vary from low to high, you can use a sequential colourmap. Best practice is to use a sequential colourmap that is perceptually uniform. The authors of the Python package <strong>matplotlib</strong> <a class="reference external" href="https://bids.github.io/colormap/">developed</a> several perceptually uniform colourmaps that are now widely used, not just in Python, but in other languages and contexts too <span id="id2">[<a class="reference internal" href="zreferences.html#id18">3</a>]</span>. These are the ones built-in to <strong>matplotlib</strong>:</p>
+<p>For data that vary from low to high, you can use a sequential colourmap. Best practice is to use a sequential colourmap that is perceptually uniform. The authors of the Python package <strong>matplotlib</strong> <a class="reference external" href="https://bids.github.io/colormap/">developed</a> several perceptually uniform colourmaps that are now widely used, not just in Python, but in other languages and contexts too <span id="id2">[<a class="reference internal" href="zreferences.html#id18">Nuñez, Anderton, and Renslow, 2018</a>]</span>. These are the ones built-in to <strong>matplotlib</strong>:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/vis-intro_10_0.png" src="_images/vis-intro_10_0.png" />
@@ -720,7 +752,7 @@
 <div class="section" id="libraries-for-data-visualisation">
 <h2>Libraries for data visualisation<a class="headerlink" href="#libraries-for-data-visualisation" title="Permalink to this headline">¶</a></h2>
 <p>In the rest of this chapter, we’ll take a look at making visualisations with several of these libraries. But first, let’s introduce them.</p>
-<p>The most important and widely used data visualisation library in Python is <a class="reference external" href="https://matplotlib.org/"><strong>matplotlib</strong></a>. It was used to make the first image of a black hole <span id="id3">[<a class="reference internal" href="zreferences.html#id11">2</a>]</span> and to image the first empirical evidence of gravitational waves <span id="id4">[<a class="reference internal" href="zreferences.html#id12">4</a>]</span>. <strong>matplotlib</strong> is an imperative visualisation library: you specify each part of what you want individually to build up an entire picture. It’s perhaps the easiest to get started with and the most difficult to master. As well as making plots, it can also be used to make diagrams, animations, and 3D visualisations (which you should use sparingly, if at all).</p>
+<p>The most important and widely used data visualisation library in Python is <a class="reference external" href="https://matplotlib.org/"><strong>matplotlib</strong></a>. It was used to make the first image of a black hole <span id="id3">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11">2019</a>]</span> and to image the first empirical evidence of gravitational waves <span id="id4">Abbott <em>et al.</em> [<a class="reference internal" href="zreferences.html#id12">2016</a>]</span>. <strong>matplotlib</strong> is an imperative visualisation library: you specify each part of what you want individually to build up an entire picture. It’s perhaps the easiest to get started with and the most difficult to master. As well as making plots, it can also be used to make diagrams, animations, and 3D visualisations (which you should use sparingly, if at all).</p>
 <p><a class="reference external" href="https://seaborn.pydata.org/index.html"><strong>seaborn</strong></a> is a popular declarative library that builds on <strong>maplotlib</strong> and works especially well with data that are in a <em>tidy</em> format (one row per observation, one column per variable). I tend to use a mixture of <strong>seaborn</strong> and <strong>matplotlib</strong> in my work.</p>
 <p><a class="reference external" href="https://plotnine.readthedocs.io/en/latest/"><strong>plotnine</strong></a> is another declarative plotting library but, rather than having lots of different functions (eg ‘boxplot’, ‘violinplot’, ‘scatterplot’) as <strong>seaborn</strong> does, it adopts a <em>grammar of graphics</em> approach. What this means is that <em>all</em> visualisations begin with the same command, <code class="docutils literal notranslate"><span class="pre">ggplot</span></code>, and are combinations of layers that address different aspects of a plot, for example points or lines, scale, labels, and so on. It’ll be clearer when we come to an example.</p>
 <p><a class="reference external" href="https://altair-viz.github.io/"><strong>altair</strong></a> is yet another declarative plotting library for Python! It’s most suited to interactive graphics on the web, and produces really beautiful charts. Under the hood, it calls a javascript library named <strong>Vega-Lite</strong> that’s the sort of thing newspaper data visualisation units might use to make their infographics.</p>

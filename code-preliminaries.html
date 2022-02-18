@@ -131,11 +131,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -143,6 +138,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -212,6 +212,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -244,23 +271,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -288,6 +320,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -310,28 +364,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -349,13 +381,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -541,19 +573,26 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coding-on-your-work-computer">
-   Coding on your work computer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fine-tuning-your-integrated-development-environment">
-   Fine-tuning your integrated development environment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review">
    Review
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extras">
+   Extras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-on-your-work-computer">
+     Coding on your work computer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fine-tuning-visual-studio-code">
+     Fine-tuning Visual Studio Code
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -575,7 +614,7 @@
 <h3>Operating system<a class="headerlink" href="#operating-system" title="Permalink to this headline">¶</a></h3>
 <p>Almost all of the code you’ll see can be run on all three of the major operating systems: Windows, MacOS, and Linux, as well as in free online notebooks provided by Google (this service is called Google Colab).</p>
 <p>If you haven’t yet decided which operating system to use, this book recommends either Linux or MacOS because, in a very small number of cases, you’ll find it easier to run the most advanced code on them rather than on Windows. Don’t panic if you have Windows already though—most things will work just fine and it tends to be power users who run into this problem. (If you’re not familiar with Linux, it’s a free operating system that is also widely used for cloud services and, while it used to  have a reputation as being fearsomely difficult for beginners, some modern Linux distributions, such as Ubuntu, are pretty user-friendly.)</p>
-<p>If you have Windows and you want to use Linux or Mac but don’t want to shell out for a new computer, there are a couple of options. One is to use the <a class="reference external" href="https://pbpython.com/wsl-python.html"><em>Windows Subsystem for Linux</em></a>. It’s essentially a Linux operating system that installs alongside and integrates with your existing Windows operating system. This allows you to run code as if you were using Linux. You can get WSL <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">for free from Microsoft</a> (the fact that Microsoft has included this feature speaks to the demand for it). Another option is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a>, which gives cheap (but not free) access to a pre-built Linux machine in the cloud.</p>
+<p>If you have Windows and you want to use Linux or Mac but don’t want to shell out for a new computer, there are a couple of options. One is to use the <a class="reference external" href="https://pbpython.com/wsl-python.html"><em>Windows Subsystem for Linux</em></a>. It’s essentially a Linux operating system that installs alongside and integrates with your existing Windows operating system. This allows you to run code as if you were using Linux. You can get WSL <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">for free from Microsoft</a> (the fact that Microsoft has included this feature speaks to the demand for it). Another option is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a>, which gives cheap (but not free) access to a pre-built Linux machine in the cloud. A further option is <a class="reference external" href="https://www.gitpod.io/">Gitpod</a>, which is like Codespaces but has a generous free tier.</p>
 </div>
 <div class="section" id="choice-of-programming-language">
 <h3>Choice of Programming Language<a class="headerlink" href="#choice-of-programming-language" title="Permalink to this headline">¶</a></h3>
@@ -741,8 +780,25 @@
 </div>
 </div>
 </div>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>That’s it for the preliminaries! Well done if you made this far: starting is the hardest bit. There are some extra bits below for if you’re coding on a restricted work computer or you want to add all the bells and whistles to Visual Studio Code, but you can safely skip these if you just want to get on with some coding.</p>
+<p>So, if you have:</p>
+<ul class="simple">
+<li><p>✅ installed Python, using the Anaconda distribution of Python;</p></li>
+<li><p>✅ installed Visual Studio Code, and its Python extension;</p></li>
+<li><p>✅ written and saved ‘hello_world.py’ with <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World!')</span></code> in it;</p></li>
+<li><p>✅ run ‘hello_world.py’ both in the terminal and in the Visual Studio Code interactive window</p></li>
+<li><p>✅ run code in a Jupyter Notebook; and</p></li>
+<li><p>✅ installed packages in the terminal using both <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>, then</p></li>
+</ul>
+<p>you are ready to move on to the next chapter! :rocket:</p>
+</div>
+<div class="section" id="extras">
+<h2>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h2>
+<p>These can be safely skipped if you just want to get on with some coding.</p>
 <div class="section" id="coding-on-your-work-computer">
-<h2>Coding on your work computer<a class="headerlink" href="#coding-on-your-work-computer" title="Permalink to this headline">¶</a></h2>
+<h3>Coding on your work computer<a class="headerlink" href="#coding-on-your-work-computer" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re not planning to code at work, or your place of work allows you to install whatever programmes you like, you can safely skip this section.</p>
@@ -751,10 +807,11 @@
 <p>Organisations that are further along their coding and automation journey will likely provide you with access to cloud computing environments that support Visual Studio Code and Python, and you should speak to your IT department about what’s available. However, even if your organisation hasn’t invested in coding capabilities to the same extent, but does have locked down IT, there are some options for you!</p>
 <p>Let’s explore some options for coding platforms ‘in a box’ that do not require any installation, and can be accessed via the internet. Note that your IT department may still have blocked the URLs of the websites of these services, but you can always make a case for unblocking them until the same capabilities are available in-house.</p>
 <p><a class="reference external" href="https://research.google.com/colaboratory/">Google Colab</a> is a great way to start learning and trying out the exercises in this book remotely without having to install anything on your computer. Most pages in this book that have code on are just a click away from launching a Colab notebook—just click the <i class="fas fa-rocket"></i> at the top of a page with code on and select ‘Colab’. Google Colab is fantastic for trying things out, sharing tinkering with others, and generally having a first go at some coding, but it only supports notebooks.</p>
-<p>If you need the full power of Visual Studio Code, which supports scripts and notebooks, the easiest way is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a>. Codespaces provides cheap access to a ready-made Visual Studio Code development environment in your browser window. Many IT departments will use Github themselves, so you may find your organisation already has a subscription you can use. Another advantage of using a Github subscription is that you can use Github for version control too (if ‘version control’ is new to you, don’t worry—it’s just a way of efficiently working with files that have code in).</p>
+<p>If you need the full power of Visual Studio Code, which supports scripts and notebooks, the easiest way is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a> or <a class="reference external" href="https://www.gitpod.io/">Gitpod</a>. Codespaces provides cheap access to a ready-made Visual Studio Code development environment in your browser window. Gitpod is similar, but also has a free tier. Many IT departments will use Github themselves, so you may find your organisation already has a subscription to GitHub (and therefore Codespaces) can use. Another advantage of using a Github subscription is that you can use Github for version control too (if ‘version control’ is new to you, don’t worry—it’s just a way of efficiently working with files that have code in).</p>
+<p>Finally, if you’re just starting to learn and don’t need to save any data or code, or use any non-standard packages, you can run a limited instance of JupyterLab (an IDE) in your browser window using <em>JupyterLite</em>. This will be slower than regular Python because all of the computation is done by your browser (eg Google Chrome), as opposed to by your computer directly. And, also because of how this magic is put together, only some packages are available. To use it, head to the <a class="reference external" href="https://jupyterlite.readthedocs.io/en/latest/">JupyterLite website</a> and click on the link that says <em>Try it with JupyterLab!</em>. Once the page loads, select Pyolite Notebook. Note that if you have very high levels of security at your organisation, this website may be blocked from running.</p>
 </div>
-<div class="section" id="fine-tuning-your-integrated-development-environment">
-<h2>Fine-tuning your integrated development environment<a class="headerlink" href="#fine-tuning-your-integrated-development-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fine-tuning-visual-studio-code">
+<h3>Fine-tuning Visual Studio Code<a class="headerlink" href="#fine-tuning-visual-studio-code" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you just want to get on with some coding, you can skip this section.</p>
@@ -809,33 +866,7 @@
 <li><p><em>Docker</em> - makes it easy to build, manage, and deploy Docker containers from Visual Studio Code</p></li>
 </ul>
 <p>As well as adding extra extensions, you can customise the default settings of VS Code. As mentioned before, you’ll probably want to change the <code class="docutils literal notranslate"><span class="pre">jupyter.sendSelectionToInteractiveWindow</span></code> setting to True. The easiest way to do this is to go to Settings (the cog icon) and type in ‘Jupyter: Send Selection’, and you should see a tick box come up; make sure it’s ticked. Another useful one for coding is to change the ‘Editor: Render Whitespace’ setting, aka <code class="docutils literal notranslate"><span class="pre">editor.renderWhitespace</span></code> from ‘selection’ to ‘boundary’. This will now show any boundary whitespace, or more than one instance of whitespace contiguously, as a grey dot. This might seem odd but it’s really useful because the wrong amount of whitespace can create problems with code.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Go back to your <code class="docutils literal notranslate"><span class="pre">hello_world.py</span></code> script having installed the rainbow indent extension for Visual Studio Code. Modify the code to:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
 </div>
-<p>using four spaces for indentation. And then</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">char</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>What do you notice about the different levels of indentation?</p>
-</div>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
-<p>If you have:</p>
-<ul class="simple">
-<li><p>✅ installed Python, using the Anaconda distribution of Python;</p></li>
-<li><p>✅ installed Visual Studio Code, and its Python extension;</p></li>
-<li><p>✅ written and saved ‘hello_world.py’ with <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World!')</span></code> in it;</p></li>
-<li><p>✅ run ‘hello_world.py’ both in the terminal and in the Visual Studio Code interactive window; and</p></li>
-<li><p>✅ installed packages in the terminal using both <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>, then</p></li>
-</ul>
-<p>you are ready to move on to the next chapter!</p>
 </div>
 </div>
 

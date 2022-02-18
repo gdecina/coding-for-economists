@@ -57,8 +57,8 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-command-line.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reproducible Analysis" href="wrkflow-rap.html" />
-    <link rel="prev" title="Markdown" href="wrkflow-markdown.html" />
+    <link rel="next" title="Virtual Code Environments" href="wrkflow-environments.html" />
+    <link rel="prev" title="Animation" href="vis-animation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -133,11 +133,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -145,6 +140,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -214,6 +214,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -246,23 +273,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -290,6 +322,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -312,28 +366,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -351,13 +383,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -625,8 +657,7 @@
 <li><p><kbd>ctrl</kbd> + <kbd>e</kbd> moves the cursor to the end of the line.</p></li>
 <li><p><kbd>ctrl</kbd> + <kbd>k</kbd> to delete everything to the right of the cursor.</p></li>
 <li><p><kbd>ctrl</kbd> + <kbd>u</kbd> to delete everything to the left of the cursor.</p></li>
-<li><p><kbd>ctrl</kbd> + <kbd>r</kbd> to search through previously used commands
-clear to clear your terminal.</p></li>
+<li><p><kbd>ctrl</kbd> + <kbd>r</kbd> to search through previously used commands</p></li>
 </ul>
 <div class="section" id="navigating-directories">
 <h3>Navigating directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">¶</a></h3>
@@ -728,14 +759,14 @@ clear to clear your terminal.</p></li>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span> <span class="pre">&lt;filename&gt;</span></code></p></td>
 <td><p>Redirects output from screen to the end of <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code>, ie appends output rather than overwrites it</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">|</span> </code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">|</span></code></p></td>
 <td><p>The pipe symbol: uses output from one command as input into another. For example, <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">-n</span> <span class="pre">10</span> <span class="pre">data.csv</span> <span class="pre">|</span> <span class="pre">&gt;</span> <span class="pre">hello_world.txt</span></code> would write the first 10 lines of data.csv into a file called hello_world.txt</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">&lt;filename&gt;</span></code></p></td>
 <td><p>Print out the contents of a file in paginated form. Use <code class="docutils literal notranslate"><span class="pre">ctrl+v</span></code> and <code class="docutils literal notranslate"><span class="pre">Alt+v</span></code> (or <code class="docutils literal notranslate"><span class="pre">⌘+v</span></code> and <code class="docutils literal notranslate"><span class="pre">⌥+v</span></code> on Mac) to move up and down. Press <code class="docutils literal notranslate"><span class="pre">q</span></code> to quit.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-l</span></code></p></td>
-<td><p>Returns number of lines in input, for example <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;filename&gt;</span> <span class="pre">|</span> <span class="pre">wc</span> <span class="pre">-l</span></code></p></td>
+<td><p>Returns number of lines in input, for example <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;filename&gt;</span> <span class="pre">|</span> <span class="pre">wc</span> <span class="pre">-l</span></code>. Use <code class="docutils literal notranslate"><span class="pre">wc</span></code> alone for word count.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sort</span></code></p></td>
 <td><p>Arrange lines in a file in alphabetical order</p></td>
@@ -770,11 +801,22 @@ clear to clear your terminal.</p></li>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code></p></td>
 <td><p>List stuff in a more readable format and show permissions</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">&lt;filename&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-S</span></code></p></td>
+<td><p>List stuff by size</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">&lt;filename&gt;</span></code></p></td>
 <td><p>Give information on the file type of <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">find</span></code></p></td>
+<td><p>Find specific files on your computer, can be piped into other commands for example <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">*.md</span> <span class="pre">-size</span> <span class="pre">+5k</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">|</span> <span class="pre">xargs</span> <span class="pre">wc</span> <span class="pre">-l</span></code> will count the number of lines <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-l</span></code> of all files, <code class="docutils literal notranslate"><span class="pre">-type</span> <span class="pre">f</span></code>, ending in <code class="docutils literal notranslate"><span class="pre">.md</span></code> that are greater than 5 kilobytes in size, <code class="docutils literal notranslate"><span class="pre">-size</span> <span class="pre">+5k</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">diff</span> <span class="pre">-u</span> <span class="pre">&lt;filename1&gt;</span> <span class="pre">&lt;filename2&gt;</span></code></p></td>
+<td><p>Show a single summary of the differences between two files.</p></td>
 </tr>
 </tbody>
 </table>
+<p><img alt="More details of the grep command" src="https://pbs.twimg.com/media/DcPeD_CW0AEkSar?format=jpg&amp;name=small" />
+<em>More details of the grep command, by <a class="reference external" href="https://twitter.com/b0rk">&#64;b0rk</a>.</em></p>
 <p>You can write for loops in bash (remember, it’s a language). The general structure is</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> LIST
 <span class="k">do</span>
@@ -906,7 +948,8 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
 <p>etc.</p>
 <p><a class="reference external" href="https://dev.yorhel.nl/ncdu"><strong>ncdu</strong></a> is a disk usage analyser. It reports, interactively and via the terminal, how much space in a folder is taking up. You can also use return to enter a folder and explore sub-folders. This is especially useful when using a remote computer that you can’t view via a graphical user interface (GUI).</p>
 <p><a class="reference external" href="https://www.ffmpeg.org/"><strong>ffmpeg</strong></a> is a command line tool that aims to “decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge.” Look at the documentation for all of the uses.</p>
-<p>For more on the command line, see <a class="reference external" href="https://github.com/jlevy/the-art-of-command-line">The Art of the Command Line</a>.</p>
+<p><a class="reference external" href="https://github.com/mptre/yank"><strong>yank</strong></a> reads input from stdin (what you see in the terminal) and displays a selection interface that allows a field to be selected and copied to the clipboard. A typical use case would be to copy and paste a file name that you’ve found from using the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command. For example, running <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lah</span> <span class="pre">|</span> <span class="pre">yank</span></code> in a directory brings up a list of permissions, sizes, users, dates modified, and names of files. You can then navigate to the filename you want with the keyboard, hit return, and have that file name in the clipboard ready to paste into your next terminal command. There’s a nice demo <a class="reference external" href="https://calmcode.io/cool-cli/yank.html">here</a>.</p>
+<p>For more on the command line, see <a class="reference external" href="https://github.com/jlevy/the-art-of-command-line">The Art of the Command Line</a>. In terms of other commands, you might like to check out <code class="docutils literal notranslate"><span class="pre">patch</span></code>, <code class="docutils literal notranslate"><span class="pre">sed</span></code>, and <code class="docutils literal notranslate"><span class="pre">awk</span></code>.</p>
 </div>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
@@ -944,19 +987,19 @@ Input settings: <span class="o">[</span><span class="s1">&#39;print_num.py&#39;<
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wrkflow-markdown.html" title="previous page">
+        <a class="left-prev" href="vis-animation.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Markdown</p>
+                <p class="prevnext-title">Animation</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="wrkflow-rap.html" title="next page">
+        <a class="right-next" href="wrkflow-environments.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Reproducible Analysis</p>
+                <p class="prevnext-title">Virtual Code Environments</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

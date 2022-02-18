@@ -133,11 +133,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -145,6 +140,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-extraction.html">
    Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -214,6 +214,33 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-command-line.html">
+   The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-environments.html">
+   Virtual Code Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-rap.html">
+   Reproducible Analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Econometrics
  </span>
 </p>
@@ -246,23 +273,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Text Analysis
+  Craft
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
+  <a class="reference internal" href="craft-intro.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
+  <a class="reference internal" href="craft-writing-papers.html">
+   Writing Papers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
+  <a class="reference internal" href="craft-research-blogs.html">
+   Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-extended-abstracts.html">
+   Extended Abstracts
   </a>
  </li>
 </ul>
@@ -290,6 +322,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Text Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-intro.html">
+   Introduction to Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="text-nlp.html">
+   Natural Language Processing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Automation
  </span>
 </p>
@@ -312,28 +366,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Workflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -351,13 +383,13 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Mathematics with Code
+  Mathematics
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths-maths-coding.html">
-   Intro to Mathematics with Code
+   Maths with Code
   </a>
  </li>
 </ul>
@@ -507,8 +539,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools-similar-to-those-found-in-an-r-workflow">
-   Tools similar to those found in an R workflow
+  <a class="reference internal nav-link" href="#tools-with-similar-syntax-to-those-found-in-an-r-workflow">
+   Tools with similar syntax to those found in an R workflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-python-package-equivalent-to">
+   What is the Python package equivalent to…?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -556,12 +593,13 @@
                 
   <div class="section" id="coming-from-r">
 <h1>Coming from R<a class="headerlink" href="#coming-from-r" title="Permalink to this headline">¶</a></h1>
-<p>If you’re coming from R, then you’re probably already familiar with coding and with integrated developer environments. Overall, Python and R are more similar than they are different, especially when it comes to economics and data science.</p>
+<p>Python and R have strong similarities when it comes to economics and data science. If you’re coming from R, then you’re probably already familiar with coding and with integrated developer environments. And because there are Python packages that replicate the major R packages, there is probably no easier switch in high-level programming languages than the one from R to Python.</p>
 <p>There are, however, some fundamental differences between the two languages. The biggest difference between Python and R is that Python is a general purpose programming language, while R began as a statistical language. But you won’t really notice this unless you’re writing something that looks more like production-grade software. (And, despite being a general language, Python has really fantastic support for statistics.) A second difference is that Python is more object-oriented while R is more functional. These are two different programming paradigms. Actually, both languages do a bit of both and, again, you’re unlikely to notice any difference most of the time.</p>
-<p>Actually, the biggest practical difference I have found in an economics and data science context is that Python has more of a flavour of the bazaar–there are lots of people, and you can find everything under the Sun, but it can be a <em>little bit</em> chaotic–while R has the feel of a curated garden–there is a chief gardener (RStudio) tending a smaller number of more beautiful things, but the garden has boundaries.</p>
-<p>There’s a list of differences at the end of this chapter, but a couple of important gotchas to be aware of up front: first, R uses vectors, arrays, etc., that are indexed from 1. Like C++, Python is numbered from zero, with, eg, <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> as the first element. Second, <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> is the preferred assignment operator in R but in Python it’s <code class="docutils literal notranslate"><span class="pre">=</span></code> (and <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> isn’t used). In fact, in R <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> assigns <code class="docutils literal notranslate"><span class="pre">a</span></code> the value <code class="docutils literal notranslate"><span class="pre">5</span></code>, while <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> in Python would return <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> based on whether <code class="docutils literal notranslate"><span class="pre">a</span></code> was less than <code class="docutils literal notranslate"><span class="pre">-5</span></code> or not!</p>
-<div class="section" id="tools-similar-to-those-found-in-an-r-workflow">
-<h2>Tools similar to those found in an R workflow<a class="headerlink" href="#tools-similar-to-those-found-in-an-r-workflow" title="Permalink to this headline">¶</a></h2>
+<p>Actually, the biggest practical difference in the context of packages for economics and data science is that Python has more of a flavour of the bazaar—there are lots of people, and you can find everything under the Sun, but it can be a <em>little bit</em> chaotic—while R has the feel of a curated garden—there is a chief gardener (RStudio) tending a smaller number of more beautiful things, but the garden has boundaries. As an example of this dynamic, there are around 20,000 packages on CRAN, R’s official and strict package server; there are 350,000+ on PyPI, the Python equivalent (but it’s easier to get a package accepted).</p>
+<p>For those coming from the ‘tidyverse’ set of packages produced by RStudio, there are very direct Python equivalents. For example, Python has <strong>plotnine</strong> which has the same syntax to R’s <strong>ggplot2</strong>. There’s also <strong>plydata</strong>, which has the same syntax as R’s <strong>dplyr</strong> package. In Python, <strong>matplotlib</strong> and <strong>pandas</strong> are more popular packages for plotting and data analysis, respectively, but those R-style packages are absolutely there if you prefer them. More on other similar packages below.</p>
+<p>There’s a list of more fundamental differences between R and Python as programming languages at the end of this chapter, but a couple of important gotchas to be aware of up front: first, R uses vectors, arrays, etc., that are indexed from 1. Like C++, Python is numbered from zero, with, eg, <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> as the first element. Second, <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> is the preferred assignment operator in R but in Python it’s <code class="docutils literal notranslate"><span class="pre">=</span></code> (and <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> isn’t used). In fact, in R <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> assigns <code class="docutils literal notranslate"><span class="pre">a</span></code> the value <code class="docutils literal notranslate"><span class="pre">5</span></code>, while <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> in Python would return <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> based on whether <code class="docutils literal notranslate"><span class="pre">a</span></code> was less than <code class="docutils literal notranslate"><span class="pre">-5</span></code> or not!</p>
+<div class="section" id="tools-with-similar-syntax-to-those-found-in-an-r-workflow">
+<h2>Tools with similar syntax to those found in an R workflow<a class="headerlink" href="#tools-with-similar-syntax-to-those-found-in-an-r-workflow" title="Permalink to this headline">¶</a></h2>
 <p>If you are coming from R, you’re likely familiar with <strong>dplyr</strong> for data analysis and <strong>ggplot2</strong> for plotting. There are Python equivalents that have very similar syntax to these that you can use to help you to become productive quickly in Python–though these libraries are not so popular in Python. Here are the Python equivalents to those R libraries:</p>
 <ul class="simple">
 <li><p><strong>dplyr</strong>: This book recommends learning at least some <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/index.html"><strong>pandas</strong></a> for data analysis in Python because it is a package that is comprehensive and ubiquitous, and it’s the most popular Python library that performs similar functions to <strong>dplyr</strong>. <strong>pandas</strong> also has unrivaled documentation. However, if you want something closer to <strong>dplyr</strong> in terms of philosophy and syntax, there are a host of options available to you:</p>
@@ -578,6 +616,61 @@
 <li><p><strong>data.table</strong>: if you use this library instead of <strong>dplyr</strong>, have no fear as there’s an almost identical library in Python called <a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a>. It’s not nearly as popular in Python as <strong>data.table</strong> is in R, but it’s a very high quality library.</p></li>
 <li><p><strong>here</strong>: Lots of people switching from R to Python ask what the equivalent of the <code class="docutils literal notranslate"><span class="pre">here()</span></code> function is. The “best practice” answer is that you shouldn’t need one! It’s good practice to have your Visual Studio Code (or other IDE) console and interactive Python window automatically start <em>within</em> the directory of your project; that is, you should always be “here” automatically. In Visual Studio Code, you can ensure that the interactive window starts in the root directory of your project by setting “Jupyter: Notebook File Root” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” in the Settings menu. For the integrated command line, change “Terminal › Integrated: Cwd” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” too. If you still need a replacement for <code class="docutils literal notranslate"><span class="pre">here</span></code>, then the <a class="reference external" href="https://github.com/chendaniely/pyprojroot">pyprojroot</a> package has you covered.</p></li>
 </ul>
+</div>
+<div class="section" id="what-is-the-python-package-equivalent-to">
+<h2>What is the Python package equivalent to…?<a class="headerlink" href="#what-is-the-python-package-equivalent-to" title="Permalink to this headline">¶</a></h2>
+<p>In this section we show a list of some of the most popular packages in R along with the Python package(s) with the most similar functionality.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>R</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>dplyr</strong></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>purrr</strong></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>readr</strong>/<strong>vroom</strong></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>lubridate</strong></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>stringr</strong></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>sf</strong></p></td>
+<td><p><a class="reference external" href="https://geopandas.org/"><strong>geopandas</strong></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ggplot2</strong> (declarative)<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></td>
+<td><p><a class="reference external" href="https://matplotlib.org/"><strong>matplotlib</strong></a> (imperative) or <a class="reference external" href="https://seaborn.pydata.org/"><strong>seaborn</strong></a> (declarative)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>mlr3</strong> / <strong>caret</strong></p></td>
+<td><p><a class="reference external" href="https://scikit-learn.org/"><strong>scitkit-learn</strong></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>tidymodels</strong></p></td>
+<td><p><a class="reference external" href="https://scikit-learn.org/"><strong>scitkit-learn</strong></a> / <a class="reference external" href="https://www.statsmodels.org/"><strong>statsmodels</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>knitr</strong> and r markdown</p></td>
+<td><p><a class="reference external" href="https://quarto.org/"><strong>quarto</strong></a> and Jupyter Notebooks or quarto markdown</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>rvest</strong></p></td>
+<td><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><strong>beautifulsoup</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>testhat</strong></p></td>
+<td><p><a class="reference external" href="https://docs.pytest.org/"><strong>pytest</strong></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>shiny</strong></p></td>
+<td><p><a class="reference external" href="https://streamlit.io/"><strong>streamlit</strong></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>skimr</strong></p></td>
+<td><p><a class="reference external" href="https://aeturrell.github.io/skimpy/"><strong>skimpy</strong></a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="need-a-specific-library-that-s-in-r-but-not-in-python">
 <h2>Need a specific library that’s in R but not in Python?<a class="headerlink" href="#need-a-specific-library-that-s-in-r-but-not-in-python" title="Permalink to this headline">¶</a></h2>
@@ -853,6 +946,12 @@
 </tr>
 </tbody>
 </table>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Imperative programming is saying how to do something, and as a result what you want to happen will happen. Declarative programming is saying what you would like to happen, and letting the computer figure out how to do it.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
