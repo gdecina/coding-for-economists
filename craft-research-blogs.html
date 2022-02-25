@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -55,7 +53,7 @@
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/craft-research-blogs.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Extended Abstracts" href="craft-extended-abstracts.html" />
+    <link rel="next" title="Writing Technical Reports" href="craft-technical-reports.html" />
     <link rel="prev" title="Writing Papers" href="craft-writing-papers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -288,6 +286,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Research Blog Posts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="craft-technical-reports.html">
+   Writing Technical Reports
   </a>
  </li>
  <li class="toctree-l1">
@@ -537,11 +540,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dissemination">
    Dissemination
   </a>
@@ -574,12 +572,9 @@
                 
   <div class="section" id="research-blog-posts">
 <span id="craft-research-blogs"></span><h1>Research Blog Posts<a class="headerlink" href="#research-blog-posts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this chapter, you will find hints and tips for writing impactful blog posts that summarise research or analysis. To make the distinction with blogging more generally, the chapter is called ‘research blog posts’, but the advice could apply to any complete analytical project. As in other chapters on craft, although the text below may say ‘do this’ or ‘don’t do that’, there are few universal rules in writing and what’s appropriate for your project may be something completely different. But following these guidelines should give you a solid place to start if you need one.</p>
 <p>Your first question is likely to be “why blog about my research?”, and it’s a good one. Blogs are a really useful way of getting your work to a wider audience, including the general public—either directly or via journalists and aggregators. They will drive people to your research, make your research findings more shareable, and, as a side benefit, help you improve your communication skills too. The rest of the chapter will, hopefully, take some of the pain out of blogging.</p>
 <p>This chapter has benefitted from numerous sources, including conversations with John Lewis at the Bank of England, this <a class="reference external" href="https://blogs.lse.ac.uk/impactofsocialsciences/2016/01/25/how-to-write-a-blogpost-from-your-journal-article/">LSE blog</a> on writing blogposts, and <a class="reference external" href="https://www.transient-spaces.org/blog/blog-how-to-write-a-great-blog-post-on-your-research-topic-a-brief-guide-in-9-steps/">another blog</a> with tips on research blog posts from the transient spaces and cities group at Innsbruck.</p>
-</div>
 <div class="section" id="dissemination">
 <h2>Dissemination<a class="headerlink" href="#dissemination" title="Permalink to this headline">¶</a></h2>
 <p>The reason most people take the trouble to present and summarise their analytical work in the form of a research blog post is to help find a wider audience for it.</p>
@@ -604,7 +599,7 @@
 <div class="section" id="tips-for-writing-a-research-blog-post">
 <h2>Tips for Writing a Research Blog Post<a class="headerlink" href="#tips-for-writing-a-research-blog-post" title="Permalink to this headline">¶</a></h2>
 <p>Alongside the inverted pyramid of dissemination, above, there is another inverted pyramid that gives a suggested structure for research blog posts. This following the classic inverted pyramid of news as used by journalists. Just as with dissemination of research more broadly, more eyeballs will reach the top layer than the bottom, and more of the detail will emerge in the bottom layers.</p>
-<p>If it is to effective, your blog post cannot be too long; 800 words a good target, and definitely no more than 1500. Many places that you would want to publish the blog will have limits anyway, but even if it’s on your own website, if you’re summarising a research project you probably want to make it <em>substantially</em> shorter than the paper.</p>
+<p>If it is to be effective, your blog post cannot be too long; 800 words is a good target, and definitely no more than 1500 words. Many places that you would want to publish the blog will have limits anyway, but even if it’s on your own website, if you’re summarising a research project you probably want to make it <em>substantially</em> shorter than the paper.</p>
 <p>Let’s run over some other general tips for writing good research blog posts:</p>
 <ul class="simple">
 <li><p>Don’t just repeat your paper; for a start, there’s not space to do this! You need to pick out one key feature and focus on it.</p></li>
@@ -618,9 +613,10 @@
 <li><p>There are many ways to make your paragraphs lead a reader clearly through your post, but a solid and reliable way to do this is to ensure that the whole piece would make sense, and follow logically, if you only read the first sentence of each paragraph.</p></li>
 <li><p>Link to other blogs and research freely.</p></li>
 <li><p>Don’t use jargon or acronyms! Be really strict with your prose; you may not even realise that some words you write frequently <em>are</em> jargon.</p></li>
-<li><p>Well-written and engaging blogs will have a much bigger impact. Writing concise, punchy pieces does take time and practice.</p></li>
-<li><p>Figures and tables (floats) should be used sparingly, be really clear, and should tell the story. Take a look at the chapter on narrative data visualisation to get a sense of what works. Any floats should be able to stand alone without the text too. If re-using floats from a paper or report, strip out elements that are superfluous to the narrative of the post.</p></li>
-<li><p>Some blogs require that references to other work only appear as hyperlinks—something to bear in mind as you’re drafting.</p></li>
+<li><p>Well-written and engaging blogs will have a much bigger impact. Writing concise, punchy pieces does take time and practice though.</p></li>
+<li><p>Figures and tables (floats) should be used sparingly, be really clear, and should tell the story. Take a look at the chapter on narrative data visualisation, <a class="reference internal" href="vis-narrative.html#vis-narrative"><span class="std std-ref">Narrative Data Visualisation</span></a>, to get a sense of what works. Any floats should be able to stand alone without the text too. If re-using floats from a paper or report, strip out elements that are superfluous to the narrative of the post.</p></li>
+<li><p>Wherever possible, use vector graphics for your figures. This means using formats such as svg instead of png. Most plotting libraries will write to many output formats, including svg.</p></li>
+<li><p>Some blog sites require that references to other work only appear as hyperlinks—something to bear in mind as you’re drafting.</p></li>
 <li><p>Just as with papers, readers of your blog post will want to know what is different today, now you’ve done this work, as compared to yesterday, when you hadn’t. Is what you discovered a big effect? Does it have big implications?</p></li>
 <li><p>The threshold is a lot lower than you think! A blog post that isn’t perfect will still drive more traffic to your work than one that wins a Pulitzer. Also, experience is easily the best way to improve for next time.</p></li>
 </ul>
@@ -689,10 +685,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="craft-extended-abstracts.html" title="next page">
+        <a class="right-next" href="craft-technical-reports.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Extended Abstracts</p>
+                <p class="prevnext-title">Writing Technical Reports</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
