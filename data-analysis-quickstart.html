@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-analysis-quickstart.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Working with Data" href="data-intro.html" />
-    <link rel="prev" title="Basics of Coding" href="code-basics.html" />
+    <link rel="prev" title="Writing Code" href="code-where.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -108,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -134,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -161,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -210,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -225,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -345,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -423,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -696,24 +739,29 @@
 </div>
 <div class="section" id="loading-data-and-checking-datatypes">
 <h2>Loading data and checking datatypes<a class="headerlink" href="#loading-data-and-checking-datatypes" title="Permalink to this headline">¶</a></h2>
-<p>Loading data into a dataframe is achieved with commands like <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv(...)</span></code> or <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_stata(...)</span></code>. Let’s load the Star Wars data:</p>
+<p>First we must import the packages we’ll be using in the rest of this chapter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hide cell</span>
 <span class="c1"># Set seed for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="c1"># Set max rows displayed for readability</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
-<span class="p">)</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Loading data into a dataframe is achieved with commands like <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv(...)</span></code> or <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_stata(...)</span></code>. Let’s load the Star Wars data from the internet:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
     <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/data/starwars.csv&quot;</span><span class="p">,</span>
     <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span>
@@ -2085,8 +2133,7 @@ memory usage: 5.8+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-analysis-quickstart_40_0.png" src="_images/data-analysis-quickstart_40_0.png" />
-</div>
+<img alt="_images/data-analysis-quickstart_44_0.svg" src="_images/data-analysis-quickstart_44_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2095,8 +2142,7 @@ memory usage: 5.8+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-analysis-quickstart_41_0.png" src="_images/data-analysis-quickstart_41_0.png" />
-</div>
+<img alt="_images/data-analysis-quickstart_45_0.svg" src="_images/data-analysis-quickstart_45_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2105,8 +2151,7 @@ memory usage: 5.8+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-analysis-quickstart_42_0.png" src="_images/data-analysis-quickstart_42_0.png" />
-</div>
+<img alt="_images/data-analysis-quickstart_46_0.svg" src="_images/data-analysis-quickstart_46_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="export-results-and-descriptive-statistics">
@@ -2223,11 +2268,11 @@ std  &amp;  170.810183 &amp;   34.483629 \\
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="code-basics.html" title="previous page">
+        <a class="left-prev" href="code-where.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Basics of Coding</p>
+                <p class="prevnext-title">Writing Code</p>
             </div>
         </a>
     </div>
@@ -2267,15 +2312,12 @@ std  &amp;  170.810183 &amp;   34.483629 \\
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

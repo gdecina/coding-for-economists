@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,9 +51,10 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-read-and-write.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Data" href="data-extraction.html" />
+    <link rel="next" title="Numbers" href="data-numbers.html" />
     <link rel="prev" title="Working with Data" href="data-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -110,7 +109,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -136,23 +145,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,23 +177,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -212,10 +221,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -227,8 +283,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -291,6 +347,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="craft-technical-reports.html">
+   Writing Technical Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="craft-extended-abstracts.html">
    Extended Abstracts
   </a>
@@ -337,28 +398,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
    Natural Language Processing
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
   </a>
  </li>
 </ul>
@@ -420,10 +459,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -582,7 +626,7 @@
               <div>
                 
   <div class="section" id="reading-and-writing-files">
-<h1>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h1>
+<span id="data-read-write"></span><h1>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, you’ll learn about reading and writing data.</p>
 <p>This chapter uses the <strong>pandas</strong> package. If you’re running this code, you may need to install these packages using, for example, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. (If you’re not sure what a command line or terminal is, take a quick look at the basics of coding chapter.)</p>
 <p><img alt="From the pandas documentation" src="https://pandas.pydata.org/pandas-docs/stable/_images/02_io_readwrite.svg" /></p>
@@ -692,8 +736,8 @@
   <tbody>
     <tr>
       <th>1</th>
-      <td>45.652174</td>
-      <td>999.434783</td>
+      <td>50.333333</td>
+      <td>995.866667</td>
     </tr>
     <tr>
       <th>4</th>
@@ -702,8 +746,8 @@
     </tr>
     <tr>
       <th>5</th>
-      <td>36.320755</td>
-      <td>1003.415094</td>
+      <td>36.277778</td>
+      <td>1002.344444</td>
     </tr>
     <tr>
       <th>...</th>
@@ -712,13 +756,13 @@
     </tr>
     <tr>
       <th>10</th>
-      <td>54.590715</td>
-      <td>991.240684</td>
+      <td>56.492725</td>
+      <td>989.365278</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>52.522523</td>
-      <td>992.545946</td>
+      <td>53.309859</td>
+      <td>991.845070</td>
     </tr>
     <tr>
       <th>12</th>
@@ -794,10 +838,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="data-extraction.html" title="next page">
+        <a class="right-next" href="data-numbers.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Getting Data</p>
+                <p class="prevnext-title">Numbers</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -829,15 +873,12 @@
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

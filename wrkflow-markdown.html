@@ -55,10 +55,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-markdown.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reproducible Analysis" href="wrkflow-rap.html" />
-    <link rel="prev" title="Virtual Code Environments" href="wrkflow-environments.html" />
+    <link rel="next" title="The Command Line" href="wrkflow-command-line.html" />
+    <link rel="prev" title="Automating Research Outputs" href="auto-research-outputs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -228,9 +286,9 @@
    Virtual Code Environments
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Markdown
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -293,6 +351,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="craft-technical-reports.html">
+   Writing Technical Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="craft-extended-abstracts.html">
    Extended Abstracts
   </a>
@@ -339,28 +402,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
    Natural Language Processing
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
   </a>
  </li>
 </ul>
@@ -422,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -625,8 +671,8 @@
 <p>There are plenty of situations where you may wish to use markdown:</p>
 <ul class="simple">
 <li><p>repositories for software or research paper replications</p></li>
-<li><p>to create websites, reports, and slides; see <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a> for more on this</p></li>
-<li><p>in the text cells of Jupyter Notebooks; see <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Options for Writing Code</span></a> for more on this</p></li>
+<li><p>to create websites, reports, and slides; see <a class="reference internal" href="wrkflow-quarto.html#quarto"><span class="std std-ref">Combining Code and Text in Quarto Markdown</span></a> for more on this</p></li>
+<li><p>in the text cells of Jupyter Notebooks; see <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Writing Code</span></a> for more on this</p></li>
 <li><p>as a base format that tools like <strong>pandoc</strong> and <strong>Quarto</strong> can turn into other document types</p></li>
 <li><p>to write books about coding for economists!</p></li>
 </ul>
@@ -787,7 +833,7 @@
                   <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Note that there is syntax highlighting of data types and reserved keywords. The syntax highlighting supports a wide range of languages. Also note that the syntax is quite similar to what’s used for code blocks that will be executed by <strong>quarto</strong> when using markdown for publishing automated reports (see <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a> for more on this).</p>
+<p>Note that there is syntax highlighting of data types and reserved keywords. The syntax highlighting supports a wide range of languages. Also note that the syntax is quite similar to what’s used for code blocks that will be executed by <strong>quarto</strong> when using markdown for publishing automated reports (see <a class="reference internal" href="wrkflow-quarto.html#quarto"><span class="std std-ref">Combining Code and Text in Quarto Markdown</span></a> for more on this).</p>
 <p>Display maths is rendered by double dollar signs, like so:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>$$
 {\displaystyle ds^{2}=\left(1-{\frac {r_{\mathrm {s} }}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi ^{2}}
@@ -890,19 +936,19 @@ This allows you to have a footnote with multiple lines.</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wrkflow-environments.html" title="previous page">
+        <a class="left-prev" href="auto-research-outputs.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Virtual Code Environments</p>
+                <p class="prevnext-title">Automating Research Outputs</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="wrkflow-rap.html" title="next page">
+        <a class="right-next" href="wrkflow-command-line.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Reproducible Analysis</p>
+                <p class="prevnext-title">The Command Line</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -934,15 +980,12 @@ This allows you to have a footnote with multiple lines.</p>
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

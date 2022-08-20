@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,6 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/craft-research-blogs.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Writing Technical Reports" href="craft-technical-reports.html" />
@@ -108,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -134,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -161,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -210,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -225,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -345,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -423,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -638,7 +681,7 @@
 <div class="section" id="where-to-put-your-blog-piece">
 <h2>Where to put your blog piece<a class="headerlink" href="#where-to-put-your-blog-piece" title="Permalink to this headline">¶</a></h2>
 <p>So you’ve got an idea for a killer blog summarising your recent paper. Where can you unleash your blog piece on the world?</p>
-<p>The first option is to host it yourself on your own website or on a free service such as <a class="reference external" href="https://www.blogger.com/">Google’s Blogger</a>. If you want to host a blog (and homepage) yourself, a combination of Github Pages and Jekyll is a good way to do it; the <a class="reference external" href="https://github.com/alshedivat/al-folio">Jekyll folio theme</a> is particularly popular and will automatically ingest a .bib file of references but there are <a class="reference external" href="https://jekyll-themes.com/free/">plenty of others</a>. Once setup, you write blogs in markdown, put them in a folder, and commit them: the rest is automatic. As an aside, if you want to blog in code using a self-hosted service that accepts markdown files, you can export Jupyter Notebooks to markdown using the techniques showcased in <a class="reference internal" href="auto-reports.html#auto-reports"><span class="std std-ref">Automating Reports</span></a>.</p>
+<p>The first option is to host it yourself on your own website or on a free service such as <a class="reference external" href="https://www.blogger.com/">Google’s Blogger</a>. If you want to host a blog (and homepage) yourself, a combination of Github Pages and Jekyll is a good way to do it; the <a class="reference external" href="https://github.com/alshedivat/al-folio">Jekyll folio theme</a> is particularly popular and will automatically ingest a .bib file of references but there are <a class="reference external" href="https://jekyll-themes.com/free/">plenty of others</a>. Once setup, you write blogs in markdown, put them in a folder, and commit them: the rest is automatic. As an aside, if you want to blog in code using a self-hosted service that accepts markdown files, you can export Jupyter Notebooks to markdown using the techniques showcased in <a class="reference internal" href="wrkflow-quarto.html#quarto"><span class="std std-ref">Combining Code and Text in Quarto Markdown</span></a>.</p>
 <p>Now although you get lots of control with a self-hosted blog, there are major downsides. Unless you have a large social media following already, posts on there might not find many readers. So what are your other options?</p>
 <p>If you are at a central bank or have a co-author who is, many of them have blogs with big readerships. <a class="reference external" href="https://bankunderground.co.uk/">Bank Underground</a> (Bank of England) and <a class="reference external" href="https://libertystreeteconomics.newyorkfed.org/">Liberty Street Economics</a> (New York Fed) are two worth checking out. Many other institutions have blogs too, like various parts of the UK public sector—the <a class="reference external" href="https://blog.ons.gov.uk/">ONS’ blog</a>, for instance. Most universities have some sort of blog—<a class="reference external" href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/">CAGE</a> at the University of Warwick is a good example—and, for universities that don’t have their own, there’s <a class="reference external" href="https://theconversation.com/become-an-author">The Conversation</a>.</p>
 <p><a class="reference external" href="https://voxeu.org/">VoxEU</a> has a very large economics readership and is solely focused on research blogs but the website is hardly encouraging when it comes to submissions: “Most Vox columns are commissioned directly by the Editor-in-Chief, but Vox does post a few unsolicited columns.” There’s also a <a class="reference external" href="https://voxdev.org/">VoxDev</a> for development economics, and, happily, this outlet actively invites researchers to submit pieces.</p>
@@ -720,15 +763,12 @@
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

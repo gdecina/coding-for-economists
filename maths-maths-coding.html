@@ -55,6 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/maths-maths-coding.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Coming from Stata" href="coming-from-stata.html" />
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -945,7 +986,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>215 µs ± 461 ns per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>220 µs ± 7.53 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -959,7 +1000,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>826 ns ± 1.97 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>850 ns ± 26 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1286,8 +1327,7 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/maths-maths-coding_82_0.png" src="_images/maths-maths-coding_82_0.png" />
-</div>
+<img alt="_images/maths-maths-coding_83_0.svg" src="_images/maths-maths-coding_83_0.svg" /></div>
 </div>
 <p>What about unstructured data? Let’s create a Cobb-Douglas function on a detailed grid but then only retain a random set of the established points.</p>
 <div class="cell docutils container">
@@ -1327,8 +1367,7 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/maths-maths-coding_84_0.png" src="_images/maths-maths-coding_84_0.png" />
-</div>
+<img alt="_images/maths-maths-coding_85_0.svg" src="_images/maths-maths-coding_85_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="optimisation">
@@ -1376,8 +1415,7 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/maths-maths-coding_88_0.png" src="_images/maths-maths-coding_88_0.png" />
-</div>
+<img alt="_images/maths-maths-coding_89_0.svg" src="_images/maths-maths-coding_89_0.svg" /></div>
 </div>
 <p>In higher dimensions, the minimisation works in much the same way, with the same function <code class="docutils literal notranslate"><span class="pre">optimize.minimize</span></code>. There are a LOT of minimisation options that you can pass to the <code class="docutils literal notranslate"><span class="pre">method=</span></code> keyword; the default is intelligently chosen from BFGS, L-BFGS-B, or SLSQP, depending upon whether you supply constraints or bounds.</p>
 <p>Root finding, aka solving equations of the form <span class="math notranslate nohighlight">\(f(x)=0\)</span>, is also catered for by <strong>scipy</strong>, through <code class="docutils literal notranslate"><span class="pre">optimize.root</span></code>. It works in much the same way as <code class="docutils literal notranslate"><span class="pre">optimizer.minimize</span></code>.</p>
@@ -1678,15 +1716,12 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

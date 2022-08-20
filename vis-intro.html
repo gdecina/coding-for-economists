@@ -53,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-intro.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Common Plots" href="vis-common-plots.html" />
-    <link rel="prev" title="Advanced Coding" href="code-advanced.html" />
+    <link rel="prev" title="More Coding" href="code-advanced.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -110,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -136,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -212,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -227,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -347,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -425,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -669,12 +710,6 @@
 
 <span class="c1"># Set seed for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="c1"># Set max rows displayed for readability</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
-<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -682,8 +717,7 @@
 <p><em>Anscombe’s quartet</em>:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_4_0.png" src="_images/vis-intro_4_0.png" />
-</div>
+<img alt="_images/vis-intro_5_0.svg" src="_images/vis-intro_5_0.svg" /></div>
 </div>
 <p>Exploratory visualisation is usually quick and dirty, and flexible too. Some exploratory data viz can be automated, and some of the packages we saw in the chapter on <a class="reference internal" href="data-exploratory-analysis.html#data-exploratory-analysis"><span class="std std-ref">Exploratory Data Analysis</span></a> can do this. For an EDA package that’s explicitly built with visalisation in mind, check out <a class="reference external" href="https://github.com/fbdesignpro/sweetviz">SweetViz</a>. Beyond you and perhaps your co-authors/collaborators, not many other people should be seeing your exploratory visualisation.</p>
 </div>
@@ -718,8 +752,7 @@
 <p>Here are some examples of the qualitative hues available in the visualisation package <strong>matplotlib</strong>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_8_0.png" src="_images/vis-intro_8_0.png" />
-</div>
+<img alt="_images/vis-intro_9_0.svg" src="_images/vis-intro_9_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="continuous-colour-scales">
@@ -728,28 +761,24 @@
 <p>For data that vary from low to high, you can use a sequential colourmap. Best practice is to use a sequential colourmap that is perceptually uniform. The authors of the Python package <strong>matplotlib</strong> <a class="reference external" href="https://bids.github.io/colormap/">developed</a> several perceptually uniform colourmaps that are now widely used, not just in Python, but in other languages and contexts too <span id="id2">[<a class="reference internal" href="zreferences.html#id18">Nuñez, Anderton, and Renslow, 2018</a>]</span>. These are the ones built-in to <strong>matplotlib</strong>:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_10_0.png" src="_images/vis-intro_10_0.png" />
-</div>
+<img alt="_images/vis-intro_11_0.svg" src="_images/vis-intro_11_0.svg" /></div>
 </div>
 <p>Do not use the JET colourmap: it is very much not perceptually uniform. If you do want a rainbow-like sequential and perceptually uniform colourmap, then turbo, <a class="reference external" href="https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html">developed by Google</a>, is as good a choice as you’re going to find. You can find turbo within matplotlib.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_12_0.png" src="_images/vis-intro_12_0.png" />
-</div>
+<img alt="_images/vis-intro_13_0.svg" src="_images/vis-intro_13_0.svg" /></div>
 </div>
 <p>Sometimes a <em>diverging</em> colourmap will be more appropriate for your data. These are also called bipolar or double-ended color scales and, instead of just going from low to high, they tend to have a default middle value (often brighter) with values either side that are darker in different hues. Diverging color scales are often used to visualise negative and positive differences relative to zero, election results, or Likert scales (for example, “strongly agree, agree, neutral, disagree, strongly disagree”).</p>
 <p>These are the built-in ones in <strong>matplotlib</strong>:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_14_0.png" src="_images/vis-intro_14_0.png" />
-</div>
+<img alt="_images/vis-intro_15_0.svg" src="_images/vis-intro_15_0.svg" /></div>
 </div>
 <p>So how do you choose between a diverging or sequential colour scale? Divering colour scales work better when i) there’s a meaningful middle point, ii) there are extremes that you want to emphasise, iii) when differences are more of the story than levels, and iv) when you don’t mind that people will have to put in a bit of extra effort to understand the chart relative to the typically more intuitive sequential colour scale.</p>
 <p>Finally, this book uses a colour-blind friendly qualitative scheme (you can find the list of colours in <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/main/plot_style.txt">this</a> file).</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_17_0.png" src="_images/vis-intro_17_0.png" />
-</div>
+<img alt="_images/vis-intro_18_0.svg" src="_images/vis-intro_18_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -776,11 +805,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb46bccaa90&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f935c3c90d0&gt;]
 </pre></div>
 </div>
-<img alt="_images/vis-intro_20_1.png" src="_images/vis-intro_20_1.png" />
-</div>
+<img alt="_images/vis-intro_21_1.svg" src="_images/vis-intro_21_1.svg" /></div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Tip</p>
@@ -798,11 +826,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fb46bdf0df0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f9357aaf070&gt;
 </pre></div>
 </div>
-<img alt="_images/vis-intro_22_1.png" src="_images/vis-intro_22_1.png" />
-</div>
+<img alt="_images/vis-intro_23_1.svg" src="_images/vis-intro_23_1.svg" /></div>
 </div>
 <p>In the above example, we used <code class="docutils literal notranslate"><span class="pre">ax.scatter</span></code> to get a scatter plot, <code class="docutils literal notranslate"><span class="pre">s=150</span></code> to set the area of the points, and <code class="docutils literal notranslate"><span class="pre">c='b'</span></code> to set the color. Many of these features will accept an array instead of a single value and will map them into the plot in the way you’d expect, for instance:</p>
 <div class="cell docutils container">
@@ -820,8 +847,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_25_0.png" src="_images/vis-intro_25_0.png" />
-</div>
+<img alt="_images/vis-intro_26_0.svg" src="_images/vis-intro_26_0.svg" /></div>
 </div>
 <p>Here we asked for a different colour for each point, an area that’s increasing linearly, partly transparent points (default is <code class="docutils literal notranslate"><span class="pre">alpha=1</span></code>, which is a solid colour), and a black edge colour.</p>
 <p>You can probably begin to see how everything is going to be customisable. We’ve only seen aspects of the plot that are customisable through the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> keyword so far though; let’s now see an example that’s a bit more real (and useful!) in which we’ll want to add labels, a title, and more. We’ll use the Midwest demographics dataset.</p>
@@ -1040,8 +1066,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_28_0.png" src="_images/vis-intro_28_0.png" />
-</div>
+<img alt="_images/vis-intro_29_0.svg" src="_images/vis-intro_29_0.svg" /></div>
 </div>
 <p>Perhaps you can see from this already that <strong>matplotlib</strong> offers a ton of customisation features <em>and</em> that it can be quite verbose.</p>
 <p>Let’s see another couple of customisations that are really useful: formatting axes. The y-axis has already been formatted because we used a specific style file at the top of the page (the line beginning <code class="docutils literal notranslate"><span class="pre">plt.style.use</span></code>) but, on the x-axis, we’ll add a percentage suffix on the numbers plus some minor tick marks.</p>
@@ -1063,8 +1088,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_30_0.png" src="_images/vis-intro_30_0.png" />
-</div>
+<img alt="_images/vis-intro_31_0.svg" src="_images/vis-intro_31_0.svg" /></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">AutoMinorLocator(4)</span></code> inserts 4 minor tick marks between each major tick mark. The major formatter is <code class="docutils literal notranslate"><span class="pre">'{x:.2f}%'</span></code>, which says print 2 decimal places followed by a % sign. Finally, the <code class="docutils literal notranslate"><span class="pre">ax.ticklabel_format</span></code> option changes the computer science notation to use latex to print a prettier form of the one million signifier.</p>
 <p>Rather than go through all of the many, many options for customisation, the figure below (from the Matplotlib documentation) gives an overview of the options:</p>
@@ -1106,8 +1130,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_32_0.png" src="_images/vis-intro_32_0.png" />
-</div>
+<img alt="_images/vis-intro_33_0.svg" src="_images/vis-intro_33_0.svg" /></div>
 </div>
 <p>Okay, so we managed to get what we wanted. We used a colormap to get 5 qualitatively different colours; there are also sequential colormaps for continuous (as opposed to discrete) variables. You can find out more about the colormaps available in base matplotlib <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">here</a>. We also subsetted the dataframe and looped over it by state. Matplotlib doesn’t always work so well with tidy data. As you saw in this example, we had to loop over the different states. Some of its defaults are a little more friendly when using data that is unstacked, eg with one state per column.</p>
 <p>However, this was quite verbose; when we come to <strong>seaborn</strong>, we’ll see a much easier way of doing this.</p>
@@ -1132,8 +1155,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_34_0.png" src="_images/vis-intro_34_0.png" />
-</div>
+<img alt="_images/vis-intro_35_0.svg" src="_images/vis-intro_35_0.svg" /></div>
 </div>
 <p>This demonstrates creating a heatmap (or contour plot) with a colour bar legend and a title that’s rendered with latex. The heatmap uses a perceptually uniform distribution that makes equal changes look equal; <strong>matplotlib</strong> has a few of these. If you need more colours, check out the packages <a class="reference external" href="https://colorcet.holoviz.org/"><strong>colorcet</strong></a> and <a class="reference external" href="https://jiffyclub.github.io/palettable/"><strong>palettable</strong></a>.</p>
 <p>You can do some really quite amazing things using <strong>matplotlib</strong>’s build what you want philosophy. For instance, you can <a class="reference external" href="https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/timeline.html#sphx-glr-gallery-lines-bars-and-markers-timeline-py">build a timeline</a>, make <a class="reference external" href="https://matplotlib.org/3.1.1/gallery/pie_and_polar_charts/polar_bar.html#sphx-glr-gallery-pie-and-polar-charts-polar-bar-py">charts with polar axes</a>, and create <a class="reference external" href="https://matplotlib.org/3.1.1/gallery/showcase/xkcd.html#sphx-glr-gallery-showcase-xkcd-py">XKCD style plots</a>.</p>
@@ -1150,8 +1172,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_37_0.png" src="_images/vis-intro_37_0.png" />
-</div>
+<img alt="_images/vis-intro_38_0.svg" src="_images/vis-intro_38_0.svg" /></div>
 </div>
 <p>Another important class of plots that we should look at are line charts, especially time series. Let’s grab the real GDP time series for the UK and US and look at the year-on-year quarterly growth rates (the first few entries will be <code class="docutils literal notranslate"><span class="pre">NaN</span></code> because we switched to growth space).</p>
 <div class="cell docutils container">
@@ -1247,8 +1268,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_41_0.png" src="_images/vis-intro_41_0.png" />
-</div>
+<img alt="_images/vis-intro_42_0.svg" src="_images/vis-intro_42_0.svg" /></div>
 </div>
 <p>We could also have created this chart by looping through the different countries just as we looped through the difference states in the previous example.</p>
 <p>Let’s also see what happens when we use different limits:</p>
@@ -1266,8 +1286,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_43_0.png" src="_images/vis-intro_43_0.png" />
-</div>
+<img alt="_images/vis-intro_44_0.svg" src="_images/vis-intro_44_0.svg" /></div>
 </div>
 <p>As you can see, the plot dynamically responded to the shorter time period by putting more details in, here of quarters. You can specify exactly what you want with the tick label formatters that cater to datetimes, but the defaults are pretty well-behaved.</p>
 <p>Sometimes, you want to show different lines in different panels (or facets, as they are also known). You can do that with <strong>matplotlib</strong> too, though once again it’s a build-your-own affair.</p>
@@ -1289,8 +1308,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_45_0.png" src="_images/vis-intro_45_0.png" />
-</div>
+<img alt="_images/vis-intro_46_0.svg" src="_images/vis-intro_46_0.svg" /></div>
 </div>
 <p>Quite a few things are happening here. The first is that we asked for more rows and columns from matplotlib using <code class="docutils literal notranslate"><span class="pre">plt.subplots(nrows,</span> <span class="pre">ncolumns)</span></code> and instead of returning a single <code class="docutils literal notranslate"><span class="pre">ax</span></code> it returned a list of axes (here of length 2). We then iterated over those axes using enumerate, which gives an integer <code class="docutils literal notranslate"><span class="pre">i</span></code> and an <code class="docutils literal notranslate"><span class="pre">ax</span></code> from the list, and plotted a column on each axis by subsetting the dataframe one column at a time using <code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">i]</span></code>. Remember that the first position in <code class="docutils literal notranslate"><span class="pre">iloc</span></code> is for the index values (ie the rows), while the second is for the columns. Again, this was quite a lot of code to get a relatively simple chart done! And that’s exactly why we’re now going to take a look at the declarative library <strong>seaborn</strong> that wraps <strong>matplotlib</strong>.</p>
 </div>
@@ -1385,8 +1403,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_50_0.png" src="_images/vis-intro_50_0.png" />
-</div>
+<img alt="_images/vis-intro_51_0.svg" src="_images/vis-intro_51_0.svg" /></div>
 </div>
 <p>In this case, we got a very similar plot with less effort–and what we do is more generalisable too. As long as we have data in a tidy format, we can specify the columns to seaborn and let it put them in different facets. And facets aren’t the only difference it can provide either: you can specify the hue such that it depends on another categorical variable (rather than, as in this case, changing with each facet). Here’s an example changing the hue to reflect an extra type of information, region:</p>
 <div class="cell docutils container">
@@ -1443,46 +1460,46 @@
   </thead>
   <tbody>
     <tr>
-      <th>119</th>
-      <td>2014-10-01</td>
-      <td>FR</td>
-      <td>0.791432</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>2015-01-01</td>
-      <td>FR</td>
-      <td>1.192431</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>2014-07-01</td>
-      <td>FR</td>
-      <td>1.185926</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>2018-10-01</td>
+      <th>112</th>
+      <td>2014-01-01</td>
       <td>US</td>
-      <td>2.320617</td>
+      <td>1.294056</td>
+      <td>North America</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2001-10-01</td>
+      <td>US</td>
+      <td>0.170642</td>
+      <td>North America</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>2010-07-01</td>
+      <td>FR</td>
+      <td>2.180104</td>
+      <td>Europe</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>2016-10-01</td>
+      <td>US</td>
+      <td>2.004171</td>
       <td>North America</td>
     </tr>
     <tr>
       <th>75</th>
       <td>2009-04-01</td>
-      <td>FR</td>
-      <td>-3.434718</td>
+      <td>UK</td>
+      <td>-5.502992</td>
       <td>Europe</td>
     </tr>
     <tr>
-      <th>29</th>
-      <td>2003-07-01</td>
-      <td>FR</td>
-      <td>0.605265</td>
-      <td>Europe</td>
+      <th>100</th>
+      <td>2012-07-01</td>
+      <td>CA</td>
+      <td>1.318874</td>
+      <td>North America</td>
     </tr>
   </tbody>
 </table>
@@ -1504,8 +1521,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_53_0.png" src="_images/vis-intro_53_0.png" />
-</div>
+<img alt="_images/vis-intro_54_0.svg" src="_images/vis-intro_54_0.svg" /></div>
 </div>
 <p>As you can see, we now have two colours: one for each region.</p>
 <p>Let’s see some of the other useful shortcuts that <strong>seaborn</strong> provides over the top of <strong>matplotlib</strong>. First, correlation heatmaps:</p>
@@ -1536,8 +1552,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_55_0.png" src="_images/vis-intro_55_0.png" />
-</div>
+<img alt="_images/vis-intro_56_0.svg" src="_images/vis-intro_56_0.svg" /></div>
 </div>
 <p><strong>seaborn</strong> also offers convenience functions for (continuous) heatmaps, kernel density estimates, and marginal plots:</p>
 <div class="cell docutils container">
@@ -1558,8 +1573,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_57_0.png" src="_images/vis-intro_57_0.png" />
-</div>
+<img alt="_images/vis-intro_58_0.svg" src="_images/vis-intro_58_0.svg" /></div>
 </div>
 <p>And plotting simple linear models according to a category:</p>
 <div class="cell docutils container">
@@ -1579,8 +1593,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_59_0.png" src="_images/vis-intro_59_0.png" />
-</div>
+<img alt="_images/vis-intro_60_0.svg" src="_images/vis-intro_60_0.svg" /></div>
 </div>
 <p>And, finally, violin plots:</p>
 <div class="cell docutils container">
@@ -1599,8 +1612,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_61_0.png" src="_images/vis-intro_61_0.png" />
-</div>
+<img alt="_images/vis-intro_62_0.svg" src="_images/vis-intro_62_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="plotnine">
@@ -1627,8 +1639,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_65_0.png" src="_images/vis-intro_65_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775801762079)&gt;
+<img alt="_images/vis-intro_66_0.svg" src="_images/vis-intro_66_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766935990176)&gt;
 </pre></div>
 </div>
 </div>
@@ -1642,8 +1653,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_67_0.png" src="_images/vis-intro_67_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775810286632)&gt;
+<img alt="_images/vis-intro_68_0.svg" src="_images/vis-intro_68_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766933519080)&gt;
 </pre></div>
 </div>
 </div>
@@ -1662,8 +1672,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/plotnine/stats/smoothers.py:310: PlotnineWarning: Confidence intervals are not yet implementedfor lowess smoothings.
 </pre></div>
 </div>
-<img alt="_images/vis-intro_69_1.png" src="_images/vis-intro_69_1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775805782164)&gt;
+<img alt="_images/vis-intro_70_1.svg" src="_images/vis-intro_70_1.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766931235350)&gt;
 </pre></div>
 </div>
 </div>
@@ -1679,8 +1688,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/plotnine/stats/smoothers.py:310: PlotnineWarning: Confidence intervals are not yet implementedfor lowess smoothings.
 </pre></div>
 </div>
-<img alt="_images/vis-intro_71_1.png" src="_images/vis-intro_71_1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775806888789)&gt;
+<img alt="_images/vis-intro_72_1.svg" src="_images/vis-intro_72_1.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766932286341)&gt;
 </pre></div>
 </div>
 </div>
@@ -1700,8 +1708,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_73_0.png" src="_images/vis-intro_73_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775809748363)&gt;
+<img alt="_images/vis-intro_74_0.svg" src="_images/vis-intro_74_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766932310254)&gt;
 </pre></div>
 </div>
 </div>
@@ -1720,8 +1727,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_75_0.png" src="_images/vis-intro_75_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775809755603)&gt;
+<img alt="_images/vis-intro_76_0.svg" src="_images/vis-intro_76_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766932316380)&gt;
 </pre></div>
 </div>
 </div>
@@ -1743,8 +1749,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_point : Removed 2 rows containing missing values.
 </pre></div>
 </div>
-<img alt="_images/vis-intro_76_1.png" src="_images/vis-intro_76_1.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775810399681)&gt;
+<img alt="_images/vis-intro_77_1.svg" src="_images/vis-intro_77_1.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766933996548)&gt;
 </pre></div>
 </div>
 </div>
@@ -1760,8 +1765,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-intro_78_0.png" src="_images/vis-intro_78_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8775810389176)&gt;
+<img alt="_images/vis-intro_79_0.svg" src="_images/vis-intro_79_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766932515575)&gt;
 </pre></div>
 </div>
 </div>
@@ -1787,12 +1791,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-9c2a0b38b10f4d73aaf4668c54d84a75"></div>
+<div id="altair-viz-2428cbc0b76044f8b105c542797de160"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-9c2a0b38b10f4d73aaf4668c54d84a75") {
-      outputDiv = document.getElementById("altair-viz-9c2a0b38b10f4d73aaf4668c54d84a75");
+    if (outputDiv.id !== "altair-viz-2428cbc0b76044f8b105c542797de160") {
+      outputDiv = document.getElementById("altair-viz-2428cbc0b76044f8b105c542797de160");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1863,12 +1867,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b73b19c352e64560a082b31814529846"></div>
+<div id="altair-viz-1e108bdc05c84f8f87eacba5ca96b31f"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b73b19c352e64560a082b31814529846") {
-      outputDiv = document.getElementById("altair-viz-b73b19c352e64560a082b31814529846");
+    if (outputDiv.id !== "altair-viz-1e108bdc05c84f8f87eacba5ca96b31f") {
+      outputDiv = document.getElementById("altair-viz-1e108bdc05c84f8f87eacba5ca96b31f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1938,12 +1942,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-6f40845adf94409988f6045d88adae9c"></div>
+<div id="altair-viz-6fd23cd0e0664c4dac183497756a41d0"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6f40845adf94409988f6045d88adae9c") {
-      outputDiv = document.getElementById("altair-viz-6f40845adf94409988f6045d88adae9c");
+    if (outputDiv.id !== "altair-viz-6fd23cd0e0664c4dac183497756a41d0") {
+      outputDiv = document.getElementById("altair-viz-6fd23cd0e0664c4dac183497756a41d0");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2003,12 +2007,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b667eb2e172b42d8bc8cc18adec72990"></div>
+<div id="altair-viz-1b4abde3323f4b23b2d4fb05cac5c098"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b667eb2e172b42d8bc8cc18adec72990") {
-      outputDiv = document.getElementById("altair-viz-b667eb2e172b42d8bc8cc18adec72990");
+    if (outputDiv.id !== "altair-viz-1b4abde3323f4b23b2d4fb05cac5c098") {
+      outputDiv = document.getElementById("altair-viz-1b4abde3323f4b23b2d4fb05cac5c098");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2050,7 +2054,7 @@
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-76ac5802028dc2953b28f10227de8086"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "Region"}, "facet": {"type": "nominal", "columns": 2, "field": "Country"}, "x": {"type": "temporal", "field": "Date"}, "y": {"type": "quantitative", "field": "Real GDP growth, %"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-76ac5802028dc2953b28f10227de8086": [{"Date": "2000-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.225955858689923, "Region": "North America"}, {"Date": "2000-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 4.31542599349557, "Region": "Europe"}, {"Date": "2000-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 5.244682768853304, "Region": "North America"}, {"Date": "2000-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 4.675778783008755, "Region": "Europe"}, {"Date": "2000-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.974084495579122, "Region": "North America"}, {"Date": "2000-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.4244879187745436, "Region": "Europe"}, {"Date": "2000-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.901620472117261, "Region": "North America"}, {"Date": "2000-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.3200624200741427, "Region": "Europe"}, {"Date": "2001-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.195542846787979, "Region": "North America"}, {"Date": "2001-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1870603046086234, "Region": "Europe"}, {"Date": "2001-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.9919329568880197, "Region": "North America"}, {"Date": "2001-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.9971500817941301, "Region": "Europe"}, {"Date": "2001-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.48735236716932473, "Region": "North America"}, {"Date": "2001-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0843411761831465, "Region": "Europe"}, {"Date": "2001-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.1706422364229354, "Region": "North America"}, {"Date": "2001-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0230960385908547, "Region": "Europe"}, {"Date": "2002-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3288120484284516, "Region": "North America"}, {"Date": "2002-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.693117858782034, "Region": "Europe"}, {"Date": "2002-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3228839022436212, "Region": "North America"}, {"Date": "2002-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8844650062278534, "Region": "Europe"}, {"Date": "2002-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.1406699897993153, "Region": "North America"}, {"Date": "2002-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.121003970599844, "Region": "Europe"}, {"Date": "2002-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9912861846485441, "Region": "North America"}, {"Date": "2002-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7877276938800932, "Region": "Europe"}, {"Date": "2003-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6761889404258712, "Region": "North America"}, {"Date": "2003-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8205682468721793, "Region": "Europe"}, {"Date": "2003-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.956993641779592, "Region": "North America"}, {"Date": "2003-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.9373794874336445, "Region": "Europe"}, {"Date": "2003-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.239908301526029, "Region": "North America"}, {"Date": "2003-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.2241734496101238, "Region": "Europe"}, {"Date": "2003-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.295076520243923, "Region": "North America"}, {"Date": "2003-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.13308769207179, "Region": "Europe"}, {"Date": "2004-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.353382086215918, "Region": "North America"}, {"Date": "2004-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.0160354670061285, "Region": "Europe"}, {"Date": "2004-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.234811649454451, "Region": "North America"}, {"Date": "2004-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7909674727219835, "Region": "Europe"}, {"Date": "2004-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.490834068650761, "Region": "North America"}, {"Date": "2004-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0425029515938498, "Region": "Europe"}, {"Date": "2004-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.355765916404896, "Region": "North America"}, {"Date": "2004-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5946423261639309, "Region": "Europe"}, {"Date": "2005-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.908617440899942, "Region": "North America"}, {"Date": "2005-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7573131677386389, "Region": "Europe"}, {"Date": "2005-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.607410366126085, "Region": "North America"}, {"Date": "2005-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.182544108134632, "Region": "Europe"}, {"Date": "2005-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.447674589108529, "Region": "North America"}, {"Date": "2005-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8302138680479594, "Region": "Europe"}, {"Date": "2005-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.982672051361135, "Region": "North America"}, {"Date": "2005-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.59199384483031, "Region": "Europe"}, {"Date": "2006-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.2248575723230033, "Region": "North America"}, {"Date": "2006-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.5118921682711024, "Region": "Europe"}, {"Date": "2006-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.9772690255946532, "Region": "North America"}, {"Date": "2006-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8789714373028685, "Region": "Europe"}, {"Date": "2006-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.3282911518637928, "Region": "North America"}, {"Date": "2006-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.2165675659301165, "Region": "Europe"}, {"Date": "2006-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.6089019835609184, "Region": "North America"}, {"Date": "2006-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.757480153166835, "Region": "Europe"}, {"Date": "2007-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.5407153251804973, "Region": "North America"}, {"Date": "2007-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.014354484658676, "Region": "Europe"}, {"Date": "2007-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9386415949978808, "Region": "North America"}, {"Date": "2007-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1340790657410125, "Region": "Europe"}, {"Date": "2007-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.3985598500102956, "Region": "North America"}, {"Date": "2007-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.592506350550372, "Region": "Europe"}, {"Date": "2007-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.16088320819654, "Region": "North America"}, {"Date": "2007-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.3348071365168144, "Region": "Europe"}, {"Date": "2008-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.4468030014427313, "Region": "North America"}, {"Date": "2008-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1515632174312405, "Region": "Europe"}, {"Date": "2008-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3801325593334024, "Region": "North America"}, {"Date": "2008-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.2219493852859253, "Region": "Europe"}, {"Date": "2008-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.2422023781227356, "Region": "North America"}, {"Date": "2008-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -0.9623499165371863, "Region": "Europe"}, {"Date": "2008-10-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.540339259876201, "Region": "North America"}, {"Date": "2008-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -3.3207677476907116, "Region": "Europe"}, {"Date": "2009-01-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.282392443793525, "Region": "North America"}, {"Date": "2009-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -5.632456088376925, "Region": "Europe"}, {"Date": "2009-04-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.995504779306336, "Region": "North America"}, {"Date": "2009-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": -5.502992340593216, "Region": "Europe"}, {"Date": "2009-07-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.13767500328781, "Region": "North America"}, {"Date": "2009-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -4.012850455120287, "Region": "Europe"}, {"Date": "2009-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.08165758387652655, "Region": "North America"}, {"Date": "2009-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -1.7446285595227429, "Region": "Europe"}, {"Date": "2010-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.7684572320283642, "Region": "North America"}, {"Date": "2010-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 0.7575544350168162, "Region": "Europe"}, {"Date": "2010-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.9274678447875457, "Region": "North America"}, {"Date": "2010-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.220528157313484, "Region": "Europe"}, {"Date": "2010-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.34919381385399, "Region": "North America"}, {"Date": "2010-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.872013925968364, "Region": "Europe"}, {"Date": "2010-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.7884496905064005, "Region": "North America"}, {"Date": "2010-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6774740777925965, "Region": "Europe"}, {"Date": "2011-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.030608190613137, "Region": "North America"}, {"Date": "2011-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.43671838067816, "Region": "Europe"}, {"Date": "2011-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.7379050686072928, "Region": "North America"}, {"Date": "2011-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.3910401461792565, "Region": "Europe"}, {"Date": "2011-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.9182208483861531, "Region": "North America"}, {"Date": "2011-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.0068487659139924, "Region": "Europe"}, {"Date": "2011-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.5226915241306704, "Region": "North America"}, {"Date": "2011-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.0134323514412236, "Region": "Europe"}, {"Date": "2012-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.600249297538837, "Region": "North America"}, {"Date": "2012-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.2298623930189656, "Region": "Europe"}, {"Date": "2012-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.373816349715452, "Region": "North America"}, {"Date": "2012-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.068101139559352, "Region": "Europe"}, {"Date": "2012-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5926229770563136, "Region": "North America"}, {"Date": "2012-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.9800470415227034, "Region": "Europe"}, {"Date": "2012-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.566064345889151, "Region": "North America"}, {"Date": "2012-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5990904065006806, "Region": "Europe"}, {"Date": "2013-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6163010952802814, "Region": "North America"}, {"Date": "2013-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.3786229519067161, "Region": "Europe"}, {"Date": "2013-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.296170490384796, "Region": "North America"}, {"Date": "2013-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.104918318304616, "Region": "Europe"}, {"Date": "2013-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9198446200382246, "Region": "North America"}, {"Date": "2013-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.6435718601816918, "Region": "Europe"}, {"Date": "2013-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5320497778072326, "Region": "North America"}, {"Date": "2013-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.431006160164273, "Region": "Europe"}, {"Date": "2014-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.2940558593095508, "Region": "North America"}, {"Date": "2014-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.9139311089126707, "Region": "Europe"}, {"Date": "2014-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.45199309394899, "Region": "North America"}, {"Date": "2014-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.066294920712931, "Region": "Europe"}, {"Date": "2014-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.8314569258469424, "Region": "North America"}, {"Date": "2014-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.974231655143078, "Region": "Europe"}, {"Date": "2014-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.563765649719141, "Region": "North America"}, {"Date": "2014-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.0095882639488813, "Region": "Europe"}, {"Date": "2015-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.761208777556857, "Region": "North America"}, {"Date": "2015-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7156340120597644, "Region": "Europe"}, {"Date": "2015-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.039866711785333, "Region": "North America"}, {"Date": "2015-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6466305849067284, "Region": "Europe"}, {"Date": "2015-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.182668511263297, "Region": "North America"}, {"Date": "2015-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.5039726960319975, "Region": "Europe"}, {"Date": "2015-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.8746839492788103, "Region": "North America"}, {"Date": "2015-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6256587499902784, "Region": "Europe"}, {"Date": "2016-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6481789340307085, "Region": "North America"}, {"Date": "2016-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.418570475573567, "Region": "Europe"}, {"Date": "2016-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3676180648201974, "Region": "North America"}, {"Date": "2016-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.254771739631156, "Region": "Europe"}, {"Date": "2016-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6482576211154676, "Region": "North America"}, {"Date": "2016-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1612003444174466, "Region": "Europe"}, {"Date": "2016-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.004171204942229, "Region": "North America"}, {"Date": "2016-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.221510057950793, "Region": "Europe"}, {"Date": "2017-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.8852903629531292, "Region": "North America"}, {"Date": "2017-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.4333881470265606, "Region": "Europe"}, {"Date": "2017-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.1467223805777813, "Region": "North America"}, {"Date": "2017-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.161879072177131, "Region": "Europe"}, {"Date": "2017-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.266570408126878, "Region": "North America"}, {"Date": "2017-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1446338368501072, "Region": "Europe"}, {"Date": "2017-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.7178799678429177, "Region": "North America"}, {"Date": "2017-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8035131590419695, "Region": "Europe"}, {"Date": "2018-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.015306127010331, "Region": "North America"}, {"Date": "2018-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.385648091830971, "Region": "Europe"}, {"Date": "2018-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.29615228305562, "Region": "North America"}, {"Date": "2018-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.6240757889785629, "Region": "Europe"}, {"Date": "2018-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.0528914292473175, "Region": "North America"}, {"Date": "2018-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8299276042438528, "Region": "Europe"}, {"Date": "2018-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.320617222224519, "Region": "North America"}, {"Date": "2018-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7615405781176818, "Region": "Europe"}, {"Date": "2019-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.153006938174351, "Region": "North America"}, {"Date": "2019-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1729566608493345, "Region": "Europe"}, {"Date": "2019-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.111478835615088, "Region": "North America"}, {"Date": "2019-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7523463758866153, "Region": "Europe"}, {"Date": "2019-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.318315167348328, "Region": "North America"}, {"Date": "2019-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5776679405153926, "Region": "Europe"}, {"Date": "2019-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5694290134008035, "Region": "North America"}, {"Date": "2019-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.1927699624673993, "Region": "Europe"}, {"Date": "2020-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.630779820907712, "Region": "North America"}, {"Date": "2020-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -2.1665987584358892, "Region": "Europe"}, {"Date": "2020-04-01T00:00:00", "Country": "US", "Real GDP growth, %": -9.083742692227293, "Region": "North America"}, {"Date": "2020-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": -21.412490515815264, "Region": "Europe"}, {"Date": "2020-07-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.887500907775642, "Region": "North America"}, {"Date": "2020-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -8.131427297908244, "Region": "Europe"}, {"Date": "2020-10-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.262915243009822, "Region": "North America"}, {"Date": "2020-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -7.072794805957794, "Region": "Europe"}, {"Date": "2021-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.5469820797729286, "Region": "North America"}, {"Date": "2021-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -5.793880579642674, "Region": "Europe"}, {"Date": "2021-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 12.22668361087862, "Region": "North America"}, {"Date": "2021-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 23.578596073927027, "Region": "Europe"}, {"Date": "2021-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.872760155368527, "Region": "North America"}, {"Date": "2021-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 5.230366391343688, "Region": "Europe"}, {"Date": "2000-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.516373336173097, "Region": "North America"}, {"Date": "2000-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.428078957743131, "Region": "Europe"}, {"Date": "2000-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.884751540291044, "Region": "North America"}, {"Date": "2000-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.597152411674976, "Region": "Europe"}, {"Date": "2000-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.313760943218027, "Region": "North America"}, {"Date": "2000-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.976399881415471, "Region": "Europe"}, {"Date": "2000-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 4.030670264042557, "Region": "North America"}, {"Date": "2000-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.3783469511155184, "Region": "Europe"}, {"Date": "2001-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.9349821246223318, "Region": "North America"}, {"Date": "2001-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.0034920753375216, "Region": "Europe"}, {"Date": "2001-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.000024934512279, "Region": "North America"}, {"Date": "2001-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.1871189711868855, "Region": "Europe"}, {"Date": "2001-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.9058839259084017, "Region": "North America"}, {"Date": "2001-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.8323516006886198, "Region": "Europe"}, {"Date": "2001-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3467153834254342, "Region": "North America"}, {"Date": "2001-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.0301105954844791, "Region": "Europe"}, {"Date": "2002-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.3090488186831903, "Region": "North America"}, {"Date": "2002-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8585364606306989, "Region": "Europe"}, {"Date": "2002-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6354387780462174, "Region": "North America"}, {"Date": "2002-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1347056146127077, "Region": "Europe"}, {"Date": "2002-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.5927041055883846, "Region": "North America"}, {"Date": "2002-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.280544714067533, "Region": "Europe"}, {"Date": "2002-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.5307100930207724, "Region": "North America"}, {"Date": "2002-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.2068607200871995, "Region": "Europe"}, {"Date": "2003-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.5810371665891285, "Region": "North America"}, {"Date": "2003-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.0312349466318427, "Region": "Europe"}, {"Date": "2003-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.8296107958548857, "Region": "North America"}, {"Date": "2003-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.3499466878092772, "Region": "Europe"}, {"Date": "2003-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.333114689580528, "Region": "North America"}, {"Date": "2003-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6052647562081459, "Region": "Europe"}, {"Date": "2003-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.4755557063214297, "Region": "North America"}, {"Date": "2003-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.385451916730407, "Region": "Europe"}, {"Date": "2004-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.644029178744466, "Region": "North America"}, {"Date": "2004-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.129875344261878, "Region": "Europe"}, {"Date": "2004-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.00326874460326, "Region": "North America"}, {"Date": "2004-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.011746460867837, "Region": "Europe"}, {"Date": "2004-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.8311862326636303, "Region": "North America"}, {"Date": "2004-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.5878130679251488, "Region": "Europe"}, {"Date": "2004-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.8605416921402513, "Region": "North America"}, {"Date": "2004-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.611515385744134, "Region": "Europe"}, {"Date": "2005-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.4746737965593466, "Region": "North America"}, {"Date": "2005-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.9406939649700528, "Region": "Europe"}, {"Date": "2005-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.001929546023674, "Region": "North America"}, {"Date": "2005-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.46723739461605, "Region": "Europe"}, {"Date": "2005-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.033425786176469, "Region": "North America"}, {"Date": "2005-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.7220037418983036, "Region": "Europe"}, {"Date": "2005-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.3099465518682036, "Region": "North America"}, {"Date": "2005-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.7510820897777002, "Region": "Europe"}, {"Date": "2006-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.7886077760835413, "Region": "North America"}, {"Date": "2006-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.2522395854256194, "Region": "Europe"}, {"Date": "2006-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.0942387279859984, "Region": "North America"}, {"Date": "2006-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.083721638984005, "Region": "Europe"}, {"Date": "2006-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.1447687114385383, "Region": "North America"}, {"Date": "2006-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.578578211153748, "Region": "Europe"}, {"Date": "2006-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5478772482714787, "Region": "North America"}, {"Date": "2006-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.597256065575726, "Region": "Europe"}, {"Date": "2007-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3752558546436644, "Region": "North America"}, {"Date": "2007-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.574679859273621, "Region": "Europe"}, {"Date": "2007-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.3046514183544087, "Region": "North America"}, {"Date": "2007-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3295755142688224, "Region": "Europe"}, {"Date": "2007-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.4481004830093633, "Region": "North America"}, {"Date": "2007-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.6817837070457484, "Region": "Europe"}, {"Date": "2007-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.15730177975626, "Region": "North America"}, {"Date": "2007-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.107820060658905, "Region": "Europe"}, {"Date": "2008-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5858257080814342, "Region": "North America"}, {"Date": "2008-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.7593550116817847, "Region": "Europe"}, {"Date": "2008-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.9748801431604726, "Region": "North America"}, {"Date": "2008-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.5576833521825586, "Region": "Europe"}, {"Date": "2008-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3772814476372908, "Region": "North America"}, {"Date": "2008-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.07840909090909287, "Region": "Europe"}, {"Date": "2008-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.08807600988529618, "Region": "North America"}, {"Date": "2008-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -1.7576379401889164, "Region": "Europe"}, {"Date": "2009-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": -2.248517705013775, "Region": "North America"}, {"Date": "2009-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.753902669906106, "Region": "Europe"}, {"Date": "2009-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": -3.6636606244893066, "Region": "North America"}, {"Date": "2009-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.4347184234054584, "Region": "Europe"}, {"Date": "2009-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": -4.0173066547121605, "Region": "North America"}, {"Date": "2009-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.013726672049677, "Region": "Europe"}, {"Date": "2009-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -1.7588737114710762, "Region": "North America"}, {"Date": "2009-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.8981961067910937, "Region": "Europe"}, {"Date": "2010-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.724913568351849, "Region": "North America"}, {"Date": "2010-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1208009072777747, "Region": "Europe"}, {"Date": "2010-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.385402366086887, "Region": "North America"}, {"Date": "2010-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.740958525489944, "Region": "Europe"}, {"Date": "2010-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.651720445570028, "Region": "North America"}, {"Date": "2010-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.235159844123147, "Region": "Europe"}, {"Date": "2010-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.601873241926734, "Region": "North America"}, {"Date": "2010-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.2510921649416593, "Region": "Europe"}, {"Date": "2011-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.140203860500135, "Region": "North America"}, {"Date": "2011-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.893540003712647, "Region": "Europe"}, {"Date": "2011-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.803198739995283, "Region": "North America"}, {"Date": "2011-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3960966750166346, "Region": "Europe"}, {"Date": "2011-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.4880974493387784, "Region": "North America"}, {"Date": "2011-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.107534939201683, "Region": "Europe"}, {"Date": "2011-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.1503692259719607, "Region": "North America"}, {"Date": "2011-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5643624492275077, "Region": "Europe"}, {"Date": "2012-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.442677818617245, "Region": "North America"}, {"Date": "2012-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.662637470025329, "Region": "Europe"}, {"Date": "2012-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.576982045478804, "Region": "North America"}, {"Date": "2012-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.475746689314116, "Region": "Europe"}, {"Date": "2012-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3188741707179874, "Region": "North America"}, {"Date": "2012-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.3030995154900795, "Region": "Europe"}, {"Date": "2012-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.7350807302659357, "Region": "North America"}, {"Date": "2012-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.05419527491954401, "Region": "Europe"}, {"Date": "2013-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5735834837451002, "Region": "North America"}, {"Date": "2013-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.04387258654101611, "Region": "Europe"}, {"Date": "2013-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.8309374890500774, "Region": "North America"}, {"Date": "2013-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.7670902929978185, "Region": "Europe"}, {"Date": "2013-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.521181158501107, "Region": "North America"}, {"Date": "2013-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.5855157185866267, "Region": "Europe"}, {"Date": "2013-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.384447332610918, "Region": "North America"}, {"Date": "2013-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1501852848006644, "Region": "Europe"}, {"Date": "2014-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6328056473967854, "Region": "North America"}, {"Date": "2014-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.23177321178094, "Region": "Europe"}, {"Date": "2014-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.9725722040196967, "Region": "North America"}, {"Date": "2014-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6927716433144715, "Region": "Europe"}, {"Date": "2014-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.119733602972863, "Region": "North America"}, {"Date": "2014-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1859255080682196, "Region": "Europe"}, {"Date": "2014-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.753807140086395, "Region": "North America"}, {"Date": "2014-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.7914320007386122, "Region": "Europe"}, {"Date": "2015-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.022401696197673, "Region": "North America"}, {"Date": "2015-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1924310242397596, "Region": "Europe"}, {"Date": "2015-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.8238714386709534, "Region": "North America"}, {"Date": "2015-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.0785446650558583, "Region": "Europe"}, {"Date": "2015-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.2193324968943866, "Region": "North America"}, {"Date": "2015-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.9207859965706611, "Region": "Europe"}, {"Date": "2015-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -0.3948691662035597, "Region": "North America"}, {"Date": "2015-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.9792318571878678, "Region": "Europe"}, {"Date": "2016-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.7048585557320131, "Region": "North America"}, {"Date": "2016-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1302453210323415, "Region": "Europe"}, {"Date": "2016-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.48316809122710414, "Region": "North America"}, {"Date": "2016-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.9581810059533069, "Region": "Europe"}, {"Date": "2016-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.1615540022757331, "Region": "North America"}, {"Date": "2016-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.810625168085255, "Region": "Europe"}, {"Date": "2016-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.6534435869696384, "Region": "North America"}, {"Date": "2016-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.203053080567007, "Region": "Europe"}, {"Date": "2017-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.1977790917897755, "Region": "North America"}, {"Date": "2017-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.3860643560786423, "Region": "Europe"}, {"Date": "2017-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.7534755596327463, "Region": "North America"}, {"Date": "2017-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3849085228196287, "Region": "Europe"}, {"Date": "2017-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.1277163599857882, "Region": "North America"}, {"Date": "2017-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.8366352606542744, "Region": "Europe"}, {"Date": "2017-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.083114067459314, "Region": "North America"}, {"Date": "2017-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.1562605322223325, "Region": "Europe"}, {"Date": "2018-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6448003741510684, "Region": "North America"}, {"Date": "2018-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3463951404102845, "Region": "Europe"}, {"Date": "2018-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.262805085524544, "Region": "North America"}, {"Date": "2018-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.8753031866571401, "Region": "Europe"}, {"Date": "2018-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.530052066175381, "Region": "North America"}, {"Date": "2018-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.6381718941165246, "Region": "Europe"}, {"Date": "2018-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.2836629546338028, "Region": "North America"}, {"Date": "2018-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5126395072799337, "Region": "Europe"}, {"Date": "2019-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.7056118285998956, "Region": "North America"}, {"Date": "2019-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.1364024137038307, "Region": "Europe"}, {"Date": "2019-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.132102535605873, "Region": "North America"}, {"Date": "2019-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3193760973531985, "Region": "Europe"}, {"Date": "2019-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.8965586279861002, "Region": "North America"}, {"Date": "2019-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.0003104197565014, "Region": "Europe"}, {"Date": "2019-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.7115884874794096, "Region": "North America"}, {"Date": "2019-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.9102550494588524, "Region": "Europe"}, {"Date": "2020-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": -0.4488622462051284, "Region": "North America"}, {"Date": "2020-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": -5.423556970143384, "Region": "Europe"}, {"Date": "2020-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": -12.612544486312983, "Region": "North America"}, {"Date": "2020-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": -18.584886981508532, "Region": "Europe"}, {"Date": "2020-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": -5.092942206381368, "Region": "North America"}, {"Date": "2020-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.6000804789512064, "Region": "Europe"}, {"Date": "2020-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -3.059297208805778, "Region": "North America"}, {"Date": "2020-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -4.320718513705401, "Region": "Europe"}, {"Date": "2021-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.2969532595569424, "Region": "North America"}, {"Date": "2021-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5166531465336641, "Region": "Europe"}, {"Date": "2021-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 12.722730785558012, "Region": "North America"}, {"Date": "2021-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 18.84580928249695, "Region": "Europe"}, {"Date": "2021-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.3244369060387635, "Region": "North America"}, {"Date": "2021-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.296759189429044, "Region": "Europe"}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-a23802ab341fddff0ee9c3cda5d32cb8"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "Region"}, "facet": {"type": "nominal", "columns": 2, "field": "Country"}, "x": {"type": "temporal", "field": "Date"}, "y": {"type": "quantitative", "field": "Real GDP growth, %"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-a23802ab341fddff0ee9c3cda5d32cb8": [{"Date": "2000-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.225955858689923, "Region": "North America"}, {"Date": "2000-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 4.31542599349557, "Region": "Europe"}, {"Date": "2000-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 5.244682768853304, "Region": "North America"}, {"Date": "2000-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 4.675778783008755, "Region": "Europe"}, {"Date": "2000-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.974084495579122, "Region": "North America"}, {"Date": "2000-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.4244879187745436, "Region": "Europe"}, {"Date": "2000-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.901620472117261, "Region": "North America"}, {"Date": "2000-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.3200624200741427, "Region": "Europe"}, {"Date": "2001-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.195542846787979, "Region": "North America"}, {"Date": "2001-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1870603046086234, "Region": "Europe"}, {"Date": "2001-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.9919329568880197, "Region": "North America"}, {"Date": "2001-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.9971500817941301, "Region": "Europe"}, {"Date": "2001-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.48735236716932473, "Region": "North America"}, {"Date": "2001-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0843411761831465, "Region": "Europe"}, {"Date": "2001-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.1706422364229354, "Region": "North America"}, {"Date": "2001-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0230960385908547, "Region": "Europe"}, {"Date": "2002-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3288120484284516, "Region": "North America"}, {"Date": "2002-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.693117858782034, "Region": "Europe"}, {"Date": "2002-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3228839022436212, "Region": "North America"}, {"Date": "2002-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8844650062278534, "Region": "Europe"}, {"Date": "2002-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.1406699897993153, "Region": "North America"}, {"Date": "2002-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.121003970599844, "Region": "Europe"}, {"Date": "2002-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9912861846485441, "Region": "North America"}, {"Date": "2002-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7877276938800932, "Region": "Europe"}, {"Date": "2003-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6761889404258712, "Region": "North America"}, {"Date": "2003-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8205682468721793, "Region": "Europe"}, {"Date": "2003-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.956993641779592, "Region": "North America"}, {"Date": "2003-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.9373794874336445, "Region": "Europe"}, {"Date": "2003-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.239908301526029, "Region": "North America"}, {"Date": "2003-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.2241734496101238, "Region": "Europe"}, {"Date": "2003-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.295076520243923, "Region": "North America"}, {"Date": "2003-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.13308769207179, "Region": "Europe"}, {"Date": "2004-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.353382086215918, "Region": "North America"}, {"Date": "2004-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.0160354670061285, "Region": "Europe"}, {"Date": "2004-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.234811649454451, "Region": "North America"}, {"Date": "2004-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7909674727219835, "Region": "Europe"}, {"Date": "2004-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.490834068650761, "Region": "North America"}, {"Date": "2004-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.0425029515938498, "Region": "Europe"}, {"Date": "2004-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.355765916404896, "Region": "North America"}, {"Date": "2004-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5946423261639309, "Region": "Europe"}, {"Date": "2005-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.908617440899942, "Region": "North America"}, {"Date": "2005-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7573131677386389, "Region": "Europe"}, {"Date": "2005-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.607410366126085, "Region": "North America"}, {"Date": "2005-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.182544108134632, "Region": "Europe"}, {"Date": "2005-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.447674589108529, "Region": "North America"}, {"Date": "2005-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8302138680479594, "Region": "Europe"}, {"Date": "2005-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.982672051361135, "Region": "North America"}, {"Date": "2005-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.59199384483031, "Region": "Europe"}, {"Date": "2006-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.2248575723230033, "Region": "North America"}, {"Date": "2006-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.5118921682711024, "Region": "Europe"}, {"Date": "2006-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.9772690255946532, "Region": "North America"}, {"Date": "2006-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.8789714373028685, "Region": "Europe"}, {"Date": "2006-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.3282911518637928, "Region": "North America"}, {"Date": "2006-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.2165675659301165, "Region": "Europe"}, {"Date": "2006-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.6089019835609184, "Region": "North America"}, {"Date": "2006-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.757480153166835, "Region": "Europe"}, {"Date": "2007-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.5407153251804973, "Region": "North America"}, {"Date": "2007-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.014354484658676, "Region": "Europe"}, {"Date": "2007-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9386415949978808, "Region": "North America"}, {"Date": "2007-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1340790657410125, "Region": "Europe"}, {"Date": "2007-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.3985598500102956, "Region": "North America"}, {"Date": "2007-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.592506350550372, "Region": "Europe"}, {"Date": "2007-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.16088320819654, "Region": "North America"}, {"Date": "2007-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.3348071365168144, "Region": "Europe"}, {"Date": "2008-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.4468030014427313, "Region": "North America"}, {"Date": "2008-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1515632174312405, "Region": "Europe"}, {"Date": "2008-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3801325593334024, "Region": "North America"}, {"Date": "2008-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.2219493852859253, "Region": "Europe"}, {"Date": "2008-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.2422023781227356, "Region": "North America"}, {"Date": "2008-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -0.9623499165371863, "Region": "Europe"}, {"Date": "2008-10-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.540339259876201, "Region": "North America"}, {"Date": "2008-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -3.3207677476907116, "Region": "Europe"}, {"Date": "2009-01-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.282392443793525, "Region": "North America"}, {"Date": "2009-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -5.632456088376925, "Region": "Europe"}, {"Date": "2009-04-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.995504779306336, "Region": "North America"}, {"Date": "2009-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": -5.502992340593216, "Region": "Europe"}, {"Date": "2009-07-01T00:00:00", "Country": "US", "Real GDP growth, %": -3.13767500328781, "Region": "North America"}, {"Date": "2009-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -4.012850455120287, "Region": "Europe"}, {"Date": "2009-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.08165758387652655, "Region": "North America"}, {"Date": "2009-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -1.7446285595227429, "Region": "Europe"}, {"Date": "2010-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.7684572320283642, "Region": "North America"}, {"Date": "2010-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 0.7575544350168162, "Region": "Europe"}, {"Date": "2010-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.9274678447875457, "Region": "North America"}, {"Date": "2010-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.220528157313484, "Region": "Europe"}, {"Date": "2010-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.34919381385399, "Region": "North America"}, {"Date": "2010-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.872013925968364, "Region": "Europe"}, {"Date": "2010-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.7884496905064005, "Region": "North America"}, {"Date": "2010-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6774740777925965, "Region": "Europe"}, {"Date": "2011-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.030608190613137, "Region": "North America"}, {"Date": "2011-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.43671838067816, "Region": "Europe"}, {"Date": "2011-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.7379050686072928, "Region": "North America"}, {"Date": "2011-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.3910401461792565, "Region": "Europe"}, {"Date": "2011-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.9182208483861531, "Region": "North America"}, {"Date": "2011-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.0068487659139924, "Region": "Europe"}, {"Date": "2011-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.5226915241306704, "Region": "North America"}, {"Date": "2011-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.0134323514412236, "Region": "Europe"}, {"Date": "2012-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.600249297538837, "Region": "North America"}, {"Date": "2012-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.2298623930189656, "Region": "Europe"}, {"Date": "2012-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.373816349715452, "Region": "North America"}, {"Date": "2012-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.068101139559352, "Region": "Europe"}, {"Date": "2012-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5926229770563136, "Region": "North America"}, {"Date": "2012-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.9800470415227034, "Region": "Europe"}, {"Date": "2012-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.566064345889151, "Region": "North America"}, {"Date": "2012-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5990904065006806, "Region": "Europe"}, {"Date": "2013-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6163010952802814, "Region": "North America"}, {"Date": "2013-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.3786229519067161, "Region": "Europe"}, {"Date": "2013-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.296170490384796, "Region": "North America"}, {"Date": "2013-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.104918318304616, "Region": "Europe"}, {"Date": "2013-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.9198446200382246, "Region": "North America"}, {"Date": "2013-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.6435718601816918, "Region": "Europe"}, {"Date": "2013-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5320497778072326, "Region": "North America"}, {"Date": "2013-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.431006160164273, "Region": "Europe"}, {"Date": "2014-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.2940558593095508, "Region": "North America"}, {"Date": "2014-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.9139311089126707, "Region": "Europe"}, {"Date": "2014-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.45199309394899, "Region": "North America"}, {"Date": "2014-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.066294920712931, "Region": "Europe"}, {"Date": "2014-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.8314569258469424, "Region": "North America"}, {"Date": "2014-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.974231655143078, "Region": "Europe"}, {"Date": "2014-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.563765649719141, "Region": "North America"}, {"Date": "2014-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 3.0095882639488813, "Region": "Europe"}, {"Date": "2015-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.761208777556857, "Region": "North America"}, {"Date": "2015-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.7156340120597644, "Region": "Europe"}, {"Date": "2015-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.039866711785333, "Region": "North America"}, {"Date": "2015-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6466305849067284, "Region": "Europe"}, {"Date": "2015-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.182668511263297, "Region": "North America"}, {"Date": "2015-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.5039726960319975, "Region": "Europe"}, {"Date": "2015-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.8746839492788103, "Region": "North America"}, {"Date": "2015-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.6256587499902784, "Region": "Europe"}, {"Date": "2016-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6481789340307085, "Region": "North America"}, {"Date": "2016-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.418570475573567, "Region": "Europe"}, {"Date": "2016-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.3676180648201974, "Region": "North America"}, {"Date": "2016-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.254771739631156, "Region": "Europe"}, {"Date": "2016-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6482576211154676, "Region": "North America"}, {"Date": "2016-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1612003444174466, "Region": "Europe"}, {"Date": "2016-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.004171204942229, "Region": "North America"}, {"Date": "2016-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.221510057950793, "Region": "Europe"}, {"Date": "2017-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.8852903629531292, "Region": "North America"}, {"Date": "2017-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.4333881470265606, "Region": "Europe"}, {"Date": "2017-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.1467223805777813, "Region": "North America"}, {"Date": "2017-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.161879072177131, "Region": "Europe"}, {"Date": "2017-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.266570408126878, "Region": "North America"}, {"Date": "2017-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1446338368501072, "Region": "Europe"}, {"Date": "2017-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.7178799678429177, "Region": "North America"}, {"Date": "2017-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8035131590419695, "Region": "Europe"}, {"Date": "2018-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.015306127010331, "Region": "North America"}, {"Date": "2018-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.385648091830971, "Region": "Europe"}, {"Date": "2018-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.29615228305562, "Region": "North America"}, {"Date": "2018-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.6240757889785629, "Region": "Europe"}, {"Date": "2018-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.0528914292473175, "Region": "North America"}, {"Date": "2018-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.8299276042438528, "Region": "Europe"}, {"Date": "2018-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.320617222224519, "Region": "North America"}, {"Date": "2018-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7615405781176818, "Region": "Europe"}, {"Date": "2019-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.153006938174351, "Region": "North America"}, {"Date": "2019-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.1729566608493345, "Region": "Europe"}, {"Date": "2019-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.111478835615088, "Region": "North America"}, {"Date": "2019-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.7523463758866153, "Region": "Europe"}, {"Date": "2019-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.318315167348328, "Region": "North America"}, {"Date": "2019-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.5776679405153926, "Region": "Europe"}, {"Date": "2019-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 2.5694290134008035, "Region": "North America"}, {"Date": "2019-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 1.1927699624673993, "Region": "Europe"}, {"Date": "2020-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.630779820907712, "Region": "North America"}, {"Date": "2020-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -1.992409698362907, "Region": "Europe"}, {"Date": "2020-04-01T00:00:00", "Country": "US", "Real GDP growth, %": -9.083742692227293, "Region": "North America"}, {"Date": "2020-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": -21.1383153955638, "Region": "Europe"}, {"Date": "2020-07-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.887500907775642, "Region": "North America"}, {"Date": "2020-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": -7.685695182909358, "Region": "Europe"}, {"Date": "2020-10-01T00:00:00", "Country": "US", "Real GDP growth, %": -2.262915243009822, "Region": "North America"}, {"Date": "2020-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": -6.2752495536259385, "Region": "Europe"}, {"Date": "2021-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 0.5469820797729286, "Region": "North America"}, {"Date": "2021-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": -4.973358628264357, "Region": "Europe"}, {"Date": "2021-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 12.22668361087862, "Region": "North America"}, {"Date": "2021-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 24.49297796163734, "Region": "Europe"}, {"Date": "2021-07-01T00:00:00", "Country": "US", "Real GDP growth, %": 4.946550181581877, "Region": "North America"}, {"Date": "2021-07-01T00:00:00", "Country": "UK", "Real GDP growth, %": 6.8575041673851755, "Region": "Europe"}, {"Date": "2021-10-01T00:00:00", "Country": "US", "Real GDP growth, %": 5.5334840384407835, "Region": "North America"}, {"Date": "2021-10-01T00:00:00", "Country": "UK", "Real GDP growth, %": 6.6393277031683295, "Region": "Europe"}, {"Date": "2022-01-01T00:00:00", "Country": "US", "Real GDP growth, %": 3.5278869433831073, "Region": "North America"}, {"Date": "2022-01-01T00:00:00", "Country": "UK", "Real GDP growth, %": 8.738728412043395, "Region": "Europe"}, {"Date": "2022-04-01T00:00:00", "Country": "US", "Real GDP growth, %": 1.6179625377743312, "Region": "North America"}, {"Date": "2022-04-01T00:00:00", "Country": "UK", "Real GDP growth, %": 2.9316532765270464, "Region": "Europe"}, {"Date": "2000-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.516373336173097, "Region": "North America"}, {"Date": "2000-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.9018026565464936, "Region": "Europe"}, {"Date": "2000-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.884751540291044, "Region": "North America"}, {"Date": "2000-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.685939905885461, "Region": "Europe"}, {"Date": "2000-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 5.313760943218027, "Region": "North America"}, {"Date": "2000-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.255749964565414, "Region": "Europe"}, {"Date": "2000-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 4.030670264042557, "Region": "North America"}, {"Date": "2000-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.6312582757955347, "Region": "Europe"}, {"Date": "2001-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.9349821246223318, "Region": "North America"}, {"Date": "2001-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.08205947687743, "Region": "Europe"}, {"Date": "2001-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.000024934512279, "Region": "North America"}, {"Date": "2001-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.148040323281486, "Region": "Europe"}, {"Date": "2001-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.9058839259084017, "Region": "North America"}, {"Date": "2001-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.7212023383837094, "Region": "Europe"}, {"Date": "2001-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3467153834254342, "Region": "North America"}, {"Date": "2001-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8190739135552683, "Region": "Europe"}, {"Date": "2002-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.3090488186831903, "Region": "North America"}, {"Date": "2002-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8837063709905779, "Region": "Europe"}, {"Date": "2002-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6354387780462174, "Region": "North America"}, {"Date": "2002-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1848981319403595, "Region": "Europe"}, {"Date": "2002-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.5927041055883846, "Region": "North America"}, {"Date": "2002-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1610762602015878, "Region": "Europe"}, {"Date": "2002-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.5307100930207724, "Region": "North America"}, {"Date": "2002-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.466685913956134, "Region": "Europe"}, {"Date": "2003-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.5810371665891285, "Region": "North America"}, {"Date": "2003-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.9956455020759369, "Region": "Europe"}, {"Date": "2003-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.8296107958548857, "Region": "North America"}, {"Date": "2003-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.3552375467168911, "Region": "Europe"}, {"Date": "2003-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.333114689580528, "Region": "North America"}, {"Date": "2003-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.7859979951598595, "Region": "Europe"}, {"Date": "2003-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.4755557063214297, "Region": "North America"}, {"Date": "2003-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.2331292065836719, "Region": "Europe"}, {"Date": "2004-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.644029178744466, "Region": "North America"}, {"Date": "2004-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.1194198294599564, "Region": "Europe"}, {"Date": "2004-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.00326874460326, "Region": "North America"}, {"Date": "2004-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.94180483758808, "Region": "Europe"}, {"Date": "2004-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.8311862326636303, "Region": "North America"}, {"Date": "2004-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.538941393359062, "Region": "Europe"}, {"Date": "2004-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.8605416921402513, "Region": "North America"}, {"Date": "2004-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.611265538941643, "Region": "Europe"}, {"Date": "2005-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.4746737965593466, "Region": "North America"}, {"Date": "2005-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.8521512583372424, "Region": "Europe"}, {"Date": "2005-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.001929546023674, "Region": "North America"}, {"Date": "2005-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5378260860718695, "Region": "Europe"}, {"Date": "2005-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.033425786176469, "Region": "North America"}, {"Date": "2005-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.815558567845521, "Region": "Europe"}, {"Date": "2005-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.3099465518682036, "Region": "North America"}, {"Date": "2005-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.7323262839879172, "Region": "Europe"}, {"Date": "2006-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.7886077760835413, "Region": "North America"}, {"Date": "2006-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.2930811720996314, "Region": "Europe"}, {"Date": "2006-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.0942387279859984, "Region": "North America"}, {"Date": "2006-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.0647394650833215, "Region": "Europe"}, {"Date": "2006-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.1447687114385383, "Region": "North America"}, {"Date": "2006-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.5716352794159514, "Region": "Europe"}, {"Date": "2006-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5478772482714787, "Region": "North America"}, {"Date": "2006-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.636898362901685, "Region": "Europe"}, {"Date": "2007-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3752558546436644, "Region": "North America"}, {"Date": "2007-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.586415181807289, "Region": "Europe"}, {"Date": "2007-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.3046514183544087, "Region": "North America"}, {"Date": "2007-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.2199970835561134, "Region": "Europe"}, {"Date": "2007-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.4481004830093633, "Region": "North America"}, {"Date": "2007-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.6328777450908003, "Region": "Europe"}, {"Date": "2007-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.15730177975626, "Region": "North America"}, {"Date": "2007-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.082674279541674, "Region": "Europe"}, {"Date": "2008-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5858257080814342, "Region": "North America"}, {"Date": "2008-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.8360938247965475, "Region": "Europe"}, {"Date": "2008-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.9748801431604726, "Region": "North America"}, {"Date": "2008-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6035268182362774, "Region": "Europe"}, {"Date": "2008-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3772814476372908, "Region": "North America"}, {"Date": "2008-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.0537679194844376, "Region": "Europe"}, {"Date": "2008-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.08807600988529618, "Region": "North America"}, {"Date": "2008-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -1.7369056549581763, "Region": "Europe"}, {"Date": "2009-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": -2.248517705013775, "Region": "North America"}, {"Date": "2009-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.88106174989048, "Region": "Europe"}, {"Date": "2009-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": -3.6636606244893066, "Region": "North America"}, {"Date": "2009-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.3642393121024905, "Region": "Europe"}, {"Date": "2009-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": -4.0173066547121605, "Region": "North America"}, {"Date": "2009-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.0152752731515853, "Region": "Europe"}, {"Date": "2009-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -1.7588737114710762, "Region": "North America"}, {"Date": "2009-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.8453439738474122, "Region": "Europe"}, {"Date": "2010-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.724913568351849, "Region": "North America"}, {"Date": "2010-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.2216401472619154, "Region": "Europe"}, {"Date": "2010-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.385402366086887, "Region": "North America"}, {"Date": "2010-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.726006706813643, "Region": "Europe"}, {"Date": "2010-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.651720445570028, "Region": "North America"}, {"Date": "2010-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.180103673089917, "Region": "Europe"}, {"Date": "2010-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.601873241926734, "Region": "North America"}, {"Date": "2010-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.152904510801368, "Region": "Europe"}, {"Date": "2011-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.140203860500135, "Region": "North America"}, {"Date": "2011-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.8434049740744483, "Region": "Europe"}, {"Date": "2011-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.803198739995283, "Region": "North America"}, {"Date": "2011-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.257358484759897, "Region": "Europe"}, {"Date": "2011-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.4880974493387784, "Region": "North America"}, {"Date": "2011-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.1282370841584575, "Region": "Europe"}, {"Date": "2011-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.1503692259719607, "Region": "North America"}, {"Date": "2011-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.631006397964807, "Region": "Europe"}, {"Date": "2012-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.442677818617245, "Region": "North America"}, {"Date": "2012-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6124144047986002, "Region": "Europe"}, {"Date": "2012-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.576982045478804, "Region": "North America"}, {"Date": "2012-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.5522108181409635, "Region": "Europe"}, {"Date": "2012-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.3188741707179874, "Region": "North America"}, {"Date": "2012-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.29459656740722373, "Region": "Europe"}, {"Date": "2012-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.7350807302659357, "Region": "North America"}, {"Date": "2012-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -0.005604114167012675, "Region": "Europe"}, {"Date": "2013-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.5735834837451002, "Region": "North America"}, {"Date": "2013-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.04183670610646839, "Region": "Europe"}, {"Date": "2013-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.8309374890500774, "Region": "North America"}, {"Date": "2013-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8622995527639343, "Region": "Europe"}, {"Date": "2013-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.521181158501107, "Region": "North America"}, {"Date": "2013-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.5251332427630873, "Region": "Europe"}, {"Date": "2013-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.384447332610918, "Region": "North America"}, {"Date": "2013-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.3019086814461733, "Region": "Europe"}, {"Date": "2014-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6328056473967854, "Region": "North America"}, {"Date": "2014-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.2398275704345707, "Region": "Europe"}, {"Date": "2014-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.9725722040196967, "Region": "North America"}, {"Date": "2014-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6544553592457314, "Region": "Europe"}, {"Date": "2014-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.119733602972863, "Region": "North America"}, {"Date": "2014-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.3332640278608032, "Region": "Europe"}, {"Date": "2014-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.753807140086395, "Region": "North America"}, {"Date": "2014-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.6292184560911629, "Region": "Europe"}, {"Date": "2015-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.022401696197673, "Region": "North America"}, {"Date": "2015-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1558604411005424, "Region": "Europe"}, {"Date": "2015-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.8238714386709534, "Region": "North America"}, {"Date": "2015-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1813780041123545, "Region": "Europe"}, {"Date": "2015-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.2193324968943866, "Region": "North America"}, {"Date": "2015-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8318982889385484, "Region": "Europe"}, {"Date": "2015-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -0.3948691662035597, "Region": "North America"}, {"Date": "2015-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.0674910935507098, "Region": "Europe"}, {"Date": "2016-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.7048585557320131, "Region": "North America"}, {"Date": "2016-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.1665341957312725, "Region": "Europe"}, {"Date": "2016-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.48316809122710414, "Region": "North America"}, {"Date": "2016-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.7531392943507242, "Region": "Europe"}, {"Date": "2016-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.1615540022757331, "Region": "North America"}, {"Date": "2016-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 0.8081380666096205, "Region": "Europe"}, {"Date": "2016-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.6534435869696384, "Region": "North America"}, {"Date": "2016-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.2039956699673837, "Region": "Europe"}, {"Date": "2017-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.1977790917897755, "Region": "North America"}, {"Date": "2017-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.3300369224448438, "Region": "Europe"}, {"Date": "2017-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.7534755596327463, "Region": "North America"}, {"Date": "2017-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.4241646545118067, "Region": "Europe"}, {"Date": "2017-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.1277163599857882, "Region": "North America"}, {"Date": "2017-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.004240793441104, "Region": "Europe"}, {"Date": "2017-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.083114067459314, "Region": "North America"}, {"Date": "2017-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.034738782771962, "Region": "Europe"}, {"Date": "2018-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.86725365294076, "Region": "North America"}, {"Date": "2018-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3422273121736836, "Region": "Europe"}, {"Date": "2018-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.6249711275528886, "Region": "North America"}, {"Date": "2018-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.9674723009897255, "Region": "Europe"}, {"Date": "2018-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.899105585613393, "Region": "North America"}, {"Date": "2018-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5005651615522142, "Region": "Europe"}, {"Date": "2018-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.717788724146586, "Region": "North America"}, {"Date": "2018-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.4885014998043733, "Region": "Europe"}, {"Date": "2019-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.9188591142271116, "Region": "North America"}, {"Date": "2019-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.1162504192014264, "Region": "Europe"}, {"Date": "2019-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.1268048073339374, "Region": "North America"}, {"Date": "2019-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 2.3662884366125736, "Region": "Europe"}, {"Date": "2019-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.7581388551859645, "Region": "North America"}, {"Date": "2019-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.9786448403189771, "Region": "Europe"}, {"Date": "2019-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 1.7173854617245965, "Region": "North America"}, {"Date": "2019-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.0833825935730346, "Region": "Europe"}, {"Date": "2020-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": -0.5670931831551096, "Region": "North America"}, {"Date": "2020-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": -5.206422564737833, "Region": "Europe"}, {"Date": "2020-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": -12.414749164672145, "Region": "North America"}, {"Date": "2020-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": -18.57318427632235, "Region": "Europe"}, {"Date": "2020-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": -4.856904766628778, "Region": "North America"}, {"Date": "2020-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": -3.6103804777778525, "Region": "Europe"}, {"Date": "2020-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": -3.0624428046817864, "Region": "North America"}, {"Date": "2020-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": -4.195213896582473, "Region": "Europe"}, {"Date": "2021-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 0.15774503069456713, "Region": "North America"}, {"Date": "2021-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 1.5173735955812617, "Region": "Europe"}, {"Date": "2021-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 11.698831983679693, "Region": "North America"}, {"Date": "2021-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 18.629443626692787, "Region": "Europe"}, {"Date": "2021-07-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.8314741247519324, "Region": "North America"}, {"Date": "2021-07-01T00:00:00", "Country": "FR", "Real GDP growth, %": 3.564275868358191, "Region": "Europe"}, {"Date": "2021-10-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.23216814814995, "Region": "North America"}, {"Date": "2021-10-01T00:00:00", "Country": "FR", "Real GDP growth, %": 5.056545554910752, "Region": "Europe"}, {"Date": "2022-01-01T00:00:00", "Country": "CA", "Real GDP growth, %": 2.887084991445099, "Region": "North America"}, {"Date": "2022-01-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.772480522833278, "Region": "Europe"}, {"Date": "2022-04-01T00:00:00", "Country": "CA", "Real GDP growth, %": 3.7085069276233007, "Region": "North America"}, {"Date": "2022-04-01T00:00:00", "Country": "FR", "Real GDP growth, %": 4.228342019509768, "Region": "Europe"}]}}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <div class="cell docutils container">
@@ -2067,12 +2071,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-0c9924d7e8d24d208620a1429126d825"></div>
+<div id="altair-viz-fe1e3eb6f701452aba97f88cc9638f45"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0c9924d7e8d24d208620a1429126d825") {
-      outputDiv = document.getElementById("altair-viz-0c9924d7e8d24d208620a1429126d825");
+    if (outputDiv.id !== "altair-viz-fe1e3eb6f701452aba97f88cc9638f45") {
+      outputDiv = document.getElementById("altair-viz-fe1e3eb6f701452aba97f88cc9638f45");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2136,12 +2140,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e0c4f777318245a9895b20ad0c636e69"></div>
+<div id="altair-viz-d92524d84e514ec497da631fd8dc4630"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e0c4f777318245a9895b20ad0c636e69") {
-      outputDiv = document.getElementById("altair-viz-e0c4f777318245a9895b20ad0c636e69");
+    if (outputDiv.id !== "altair-viz-d92524d84e514ec497da631fd8dc4630") {
+      outputDiv = document.getElementById("altair-viz-d92524d84e514ec497da631fd8dc4630");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2220,12 +2224,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-376f08b31b0d450496d62e946d7a2893"></div>
+<div id="altair-viz-3011c6cea2ad4e009cf1ad902bfa8b12"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-376f08b31b0d450496d62e946d7a2893") {
-      outputDiv = document.getElementById("altair-viz-376f08b31b0d450496d62e946d7a2893");
+    if (outputDiv.id !== "altair-viz-3011c6cea2ad4e009cf1ad902bfa8b12") {
+      outputDiv = document.getElementById("altair-viz-3011c6cea2ad4e009cf1ad902bfa8b12");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2350,12 +2354,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-03066ad721a0484587e9aa58329abf3f"></div>
+<div id="altair-viz-01c2bd65fc004ca39191e4607798dae2"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-03066ad721a0484587e9aa58329abf3f") {
-      outputDiv = document.getElementById("altair-viz-03066ad721a0484587e9aa58329abf3f");
+    if (outputDiv.id !== "altair-viz-01c2bd65fc004ca39191e4607798dae2") {
+      outputDiv = document.getElementById("altair-viz-01c2bd65fc004ca39191e4607798dae2");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2484,7 +2488,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Advanced Coding</p>
+                <p class="prevnext-title">More Coding</p>
             </div>
         </a>
     </div>
@@ -2524,15 +2528,12 @@
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

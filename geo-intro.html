@@ -53,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/geo-intro.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Geo-Spatial Visualisation" href="geo-vis.html" />
-    <link rel="prev" title="The Automated Office" href="auto-office.html" />
+    <link rel="prev" title="Natural Language Processing" href="text-nlp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -110,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -136,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -212,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -227,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -347,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -425,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -908,8 +949,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_8_0.png" src="_images/geo-intro_8_0.png" />
-</div>
+<img alt="_images/geo-intro_9_0.svg" src="_images/geo-intro_9_0.svg" /></div>
 </div>
 <p>I think it’s glorious just how easy this is to use.</p>
 <p>Because <strong>geopandas</strong> builds on <strong>pandas</strong>, we can do all of the usual pandas-like operations such as filtering based on values. Here’s how to filter to an individual country (one with a recognisable shape!):</p>
@@ -920,8 +960,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_11_0.png" src="_images/geo-intro_11_0.png" />
-</div>
+<img alt="_images/geo-intro_12_0.svg" src="_images/geo-intro_12_0.svg" /></div>
 </div>
 <p>Note that it is the last column in the dataframe, the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column, that makes this sorcery possible.</p>
 </div>
@@ -972,8 +1011,7 @@ Datum: World Geodetic System 1984 ensemble
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_16_0.png" src="_images/geo-intro_16_0.png" />
-</div>
+<img alt="_images/geo-intro_17_0.svg" src="_images/geo-intro_17_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -1010,13 +1048,12 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27016/4176831303.py:1: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77685/4176831303.py:1: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
 
   df[&quot;centroid&quot;] = df.centroid
 </pre></div>
 </div>
-<img alt="_images/geo-intro_21_1.png" src="_images/geo-intro_21_1.png" />
-</div>
+<img alt="_images/geo-intro_22_1.svg" src="_images/geo-intro_22_1.svg" /></div>
 </div>
 <p>Let’s explore those basic building blocks a bit more. A point at position (1, 2) is defined as follows (<strong>shapely</strong> is used by <strong>geopandas</strong>):</p>
 <div class="cell docutils container">
@@ -1029,7 +1066,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_23_0.svg" src="_images/geo-intro_23_0.svg" /></div>
+<img alt="_images/geo-intro_24_0.svg" src="_images/geo-intro_24_0.svg" /></div>
 </div>
 <p>A point doesn’t have much other than a single position in 2D space. But lines have length, and polygons have area.</p>
 <p>There are different kinds of lines but the simplest is the <code class="docutils literal notranslate"><span class="pre">LineString</span></code> which can be constructed from a sequence of points.</p>
@@ -1049,7 +1086,7 @@ Name: geometry, dtype: geometry
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Length of line is 11.78
 </pre></div>
 </div>
-<img alt="_images/geo-intro_25_1.svg" src="_images/geo-intro_25_1.svg" /></div>
+<img alt="_images/geo-intro_26_1.svg" src="_images/geo-intro_26_1.svg" /></div>
 </div>
 <p>We already saw Polygons in the shape of Italy. But here’s a much simpler one:</p>
 <div class="cell docutils container">
@@ -1066,7 +1103,7 @@ Name: geometry, dtype: geometry
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area of the poly is 0.5
 </pre></div>
 </div>
-<img alt="_images/geo-intro_27_1.svg" src="_images/geo-intro_27_1.svg" /></div>
+<img alt="_images/geo-intro_28_1.svg" src="_images/geo-intro_28_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="spatial-operations">
@@ -1099,8 +1136,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_32_0.png" src="_images/geo-intro_32_0.png" />
-</div>
+<img alt="_images/geo-intro_33_0.svg" src="_images/geo-intro_33_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="buffers">
@@ -1128,8 +1164,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_35_0.png" src="_images/geo-intro_35_0.png" />
-</div>
+<img alt="_images/geo-intro_36_0.svg" src="_images/geo-intro_36_0.svg" /></div>
 </div>
 <p>Next we bring in data on major rivers and pass it through the same projection as our map of England is using:</p>
 <div class="cell docutils container">
@@ -1144,8 +1179,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_37_0.png" src="_images/geo-intro_37_0.png" />
-</div>
+<img alt="_images/geo-intro_38_0.svg" src="_images/geo-intro_38_0.svg" /></div>
 </div>
 <p>We can now combine these for a view on how these rivers goes through the UK. We will use <code class="docutils literal notranslate"><span class="pre">buffer</span></code> to modify how easy it is to visualise the river by asking for everything within 1.5 km from the river.</p>
 <div class="cell docutils container">
@@ -1160,8 +1194,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_39_0.png" src="_images/geo-intro_39_0.png" />
-</div>
+<img alt="_images/geo-intro_40_0.svg" src="_images/geo-intro_40_0.svg" /></div>
 </div>
 <p>Let’s turn our focus to one river: the Trent. We will ask which of the regions are intersected by that river and plot only those parts. We’ll also add some annotations for the names of the regions.</p>
 <div class="cell docutils container">
@@ -1214,8 +1247,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_41_0.png" src="_images/geo-intro_41_0.png" />
-</div>
+<img alt="_images/geo-intro_42_0.svg" src="_images/geo-intro_42_0.svg" /></div>
 </div>
 <p>Note that the way we set this up to use <code class="docutils literal notranslate"><span class="pre">river_name</span></code> as an input variable means we could oh so easily wrap everything up in a function that did this for other rivers. Oh go on then, let’s see how that works <em>because</em> it shows how scalable operations are once you do them in <em>code</em>:</p>
 <div class="cell docutils container">
@@ -1268,8 +1300,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_45_0.png" src="_images/geo-intro_45_0.png" />
-</div>
+<img alt="_images/geo-intro_46_0.svg" src="_images/geo-intro_46_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="computing-distances">
@@ -1325,8 +1356,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_47_0.png" src="_images/geo-intro_47_0.png" />
-</div>
+<img alt="_images/geo-intro_48_0.svg" src="_images/geo-intro_48_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="neighbours">
@@ -1515,8 +1545,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_53_0.png" src="_images/geo-intro_53_0.png" />
-</div>
+<img alt="_images/geo-intro_54_0.svg" src="_images/geo-intro_54_0.svg" /></div>
 </div>
 <p>Hooray! It looks like it worked. And notice how the only variable we need to change to get a different map is <code class="docutils literal notranslate"><span class="pre">name_of_region</span></code>, so this could easily be wrapped up in a function to re-use again.</p>
 <p>For an exercise, why don’t you see if you can figure out what’s so special about Powys and the Isle of Wight.</p>
@@ -1602,8 +1631,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_57_0.png" src="_images/geo-intro_57_0.png" />
-</div>
+<img alt="_images/geo-intro_58_0.svg" src="_images/geo-intro_58_0.svg" /></div>
 </div>
 <p>The default way that columns other than the geometry are combined is by taking the first row of each kind, but dissolve accepts and <code class="docutils literal notranslate"><span class="pre">agg_func=</span></code> argument that you can also pass last, min, max, sum, mean, and median.</p>
 </div>
@@ -1930,7 +1958,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;British Library, 96, Euston Road, St Pancras, London Borough of Camden, London, Greater London, England, NW1 2DB, United Kingdom&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;British Library, 96, Euston Road, Somers Town, London Borough of Camden, London, Greater London, England, NW1 2DB, United Kingdom&#39;
 </pre></div>
 </div>
 </div>
@@ -2033,31 +2061,31 @@ Name: geometry, dtype: geometry
       <th>0</th>
       <td>Staten Island</td>
       <td>POINT (-74.14960 40.58346)</td>
-      <td>Staten Island, New York, New York, United States</td>
+      <td>Staten Island, City of New York, New York, Uni...</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Queens</td>
       <td>POINT (-73.82831 40.71351)</td>
-      <td>Queens, New York, New York, United States</td>
+      <td>Queens, City of New York, New York, United States</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Brooklyn</td>
       <td>POINT (-73.94972 40.65260)</td>
-      <td>Brooklyn, New York, New York, United States</td>
+      <td>Brooklyn, City of New York, New York, United S...</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Manhattan</td>
       <td>POINT (-73.95989 40.78962)</td>
-      <td>Manhattan, New York, New York, United States</td>
+      <td>Manhattan, City of New York, New York, United ...</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Bronx</td>
       <td>POINT (-73.87859 40.84665)</td>
-      <td>The Bronx, New York, New York, United States</td>
+      <td>The Bronx, City of New York, New York, United ...</td>
     </tr>
   </tbody>
 </table>
@@ -2093,8 +2121,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_78_0.png" src="_images/geo-intro_78_0.png" />
-</div>
+<img alt="_images/geo-intro_79_0.svg" src="_images/geo-intro_79_0.svg" /></div>
 </div>
 <p>The channel with few streets is the river Thames.</p>
 <p>We can also use <strong>osmnx</strong> to work out the shortest path between nodes. Let’s see a practical example: going from Bank, north of the river Thames, to Borough Market (great for lunch), south of the river. First, we need the lat and long of Borough Market.</p>
@@ -2106,7 +2133,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Borough Market, Winchester Square, Bankside, Borough, London Borough of Southwark, London, Greater London, England, SE1 9BH, United Kingdom&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Borough Market, Borough High Street, Bermondsey Village, Borough, London Borough of Southwark, London, Greater London, England, SE1 1LY, United Kingdom&#39;
 </pre></div>
 </div>
 </div>
@@ -2145,8 +2172,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_83_0.png" src="_images/geo-intro_83_0.png" />
-</div>
+<img alt="_images/geo-intro_84_0.svg" src="_images/geo-intro_84_0.svg" /></div>
 </div>
 <p>Okay, you’re in Borough Market but you need to decide where exactly to get your lunch from. OpenStreetMap includes information on many kinds of nearby amenities, including <code class="docutils literal notranslate"><span class="pre">bar</span></code>, <code class="docutils literal notranslate"><span class="pre">cafe</span></code>, and <code class="docutils literal notranslate"><span class="pre">pub</span></code>. We can retrieve this information and put it straight into a <strong>geopandas</strong> dataframe using the <code class="docutils literal notranslate"><span class="pre">geometries_from_place</span></code> function.</p>
 <div class="cell docutils container">
@@ -2193,8 +2219,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_86_0.png" src="_images/geo-intro_86_0.png" />
-</div>
+<img alt="_images/geo-intro_87_0.svg" src="_images/geo-intro_87_0.svg" /></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">amenity</span></code> is just one type of geometry that can be retrieved too: others are <code class="docutils literal notranslate"><span class="pre">building</span></code>, <code class="docutils literal notranslate"><span class="pre">landuse</span></code>, and <code class="docutils literal notranslate"><span class="pre">leisure</span></code>. You can find a list of them <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features">here</a>. For example, here are the (many) churches within around 1km of the Bank of England:</p>
 <div class="cell docutils container">
@@ -2214,8 +2239,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/geo-intro_89_0.png" src="_images/geo-intro_89_0.png" />
-</div>
+<img alt="_images/geo-intro_90_0.svg" src="_images/geo-intro_90_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="review">
@@ -2265,11 +2289,11 @@ Name: geometry, dtype: geometry
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="auto-office.html" title="previous page">
+        <a class="left-prev" href="text-nlp.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">The Automated Office</p>
+                <p class="prevnext-title">Natural Language Processing</p>
             </div>
         </a>
     </div>
@@ -2309,15 +2333,12 @@ Name: geometry, dtype: geometry
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

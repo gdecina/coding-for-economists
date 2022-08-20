@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Coding &#8212; Coding for Economists</title>
+    <title>More Coding &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,10 +55,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-advanced.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Intro to Data Visualisation" href="vis-intro.html" />
-    <link rel="prev" title="Tools for Better Coding" href="code-advcd-best-practice.html" />
+    <link rel="prev" title="Better Coding" href="code-advcd-best-practice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -591,11 +632,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#errors-and-exceptions">
-   Errors and exceptions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classes-and-objects">
    Classes and objects
   </a>
@@ -608,30 +644,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tests">
-   Tests
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing-continuous-variables">
-     Testing continuous variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test-coverage">
-     Test coverage
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#type-annotations-and-type-checkers">
    Type annotations and type checkers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#timing-and-profiling">
-   Timing and profiling
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -666,6 +680,16 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time">
+   Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#miscellaneous-fun">
+   Miscellaneous fun
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -677,15 +701,15 @@
         
               <div>
                 
-  <div class="section" id="advanced-coding">
-<span id="code-advanced"></span><h1>Advanced Coding<a class="headerlink" href="#advanced-coding" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="more-coding">
+<span id="code-advanced"></span><h1>More Coding<a class="headerlink" href="#more-coding" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re just starting to code, you can safely skip this chapter.</p>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>This chapter covers some more advanced programming concepts. It’s not strictly necessary to master the content of the book, but it’s here in case you want a deeper understanding or in case you find that you eventually need to draw on more sophisticated programming tools and concepts.</p>
+<p>This chapter covers some more advanced programming concepts. It’s not strictly necessary to master most of the content of the book, but it’s here in case you want a deeper understanding or in case you find that you eventually need to draw on more sophisticated programming tools and concepts.</p>
 <p>This chapter has benefitted from the online book <a class="reference external" href="https://merely-useful.github.io/py-rse/"><em>Research Software Engineering with Python</em></a>, the <a class="reference external" href="https://www.python.org/">official Python documentation</a>, the excellent <a class="reference external" href="https://github.com/Asabeneh/30-Days-Of-Python">30 days of Python</a>, and the <a class="reference external" href="https://docs.python-guide.org/">Hitchhiker’s Guide to Python</a>.</p>
 </div>
 <div class="section" id="sets">
@@ -743,7 +767,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Martineau&#39;, &#39;Robinson&#39;, &#39;Fawcett&#39;, &#39;Ostrom&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Martineau&#39;, &#39;Robinson&#39;, &#39;Ostrom&#39;, &#39;Fawcett&#39;]
 </pre></div>
 </div>
 </div>
@@ -1109,7 +1133,7 @@ Using higher_order_function(&#39;cube&#39;), result(3) yields 27
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10:25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17:52
 </pre></div>
 </div>
 </div>
@@ -1282,7 +1306,7 @@ cube applied to 4 is 64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7feb459714a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fabb636bb30&gt;
 </pre></div>
 </div>
 </div>
@@ -1451,181 +1475,6 @@ Adding ten...
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="errors-and-exceptions">
-<h2>Errors and exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h2>
-<p>When a programme goes wrong, it throws up an error and halts. You won’t be coding for long before you hit one of these errors, which have special names depending on what triggered them.</p>
-<p>Let’s see a real-life error in action:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">denom</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">denom</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
-<span class="ne">ZeroDivisionError</span>                         <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">39</span><span class="o">-</span><span class="n">e45c0e0a3e37</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-      <span class="mi">1</span> <span class="n">denom</span> <span class="o">=</span> <span class="mi">0</span>
-      <span class="mi">2</span> 
-<span class="o">----&gt;</span> <span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">denom</span><span class="p">)</span>
-
-<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
-</pre></div>
-</div>
-<p>Oh no! We got a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> and our programme crashed. Note that the error includes a ‘Traceback’ to show which line went wrong, which is helpful for debugging.</p>
-<p>In practice, there are often times when we know that an error <em>could</em> arise, and we would like to specify what should happen when it does (rather than having the programme crash).</p>
-<p>We can use <em>exceptions</em> to do this. These come in a <code class="docutils literal notranslate"><span class="pre">try</span></code> … <code class="docutils literal notranslate"><span class="pre">except</span></code> pattern, which looks like an <code class="docutils literal notranslate"><span class="pre">if</span></code> … <code class="docutils literal notranslate"><span class="pre">else</span></code> pattern but applies to errors. If no errors occur inside the <code class="docutils literal notranslate"><span class="pre">try</span></code> block, the <code class="docutils literal notranslate"><span class="pre">except</span></code> block isn’t run but <em>if</em> something goes wrong inside the <code class="docutils literal notranslate"><span class="pre">try</span></code> then the <code class="docutils literal notranslate"><span class="pre">except</span></code> block is executed. Let’s see an example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">denom</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">denom</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1/</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cannot divide by </span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/-5 == -0.2
-Cannot divide by 0
-1/5 == 0.2
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now we can see two differences. First: the code executed just fine <em>without</em> halting. Second: when we hit the error, the <code class="docutils literal notranslate"><span class="pre">except</span></code> block was executed and told us what was going on.</p>
-<p>In this case, we wrote an informative message about the error but it’s convenient to use Python’s built in messages where we can. In the below, not only do we send our own message about the error but we add info on what caused the error for the language too:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">denom</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">denom</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1/</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2"> has no reciprocal; error is: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/-5 == -0.2
-0 has no reciprocal; error is: division by zero
-1/5 == 0.2
-</pre></div>
-</div>
-</div>
-</div>
-<p>Sadly, division by zero is just one of the many errors you might encounter. What if a function is likely to end up running into several different errors? We can have multiple <code class="docutils literal notranslate"><span class="pre">except</span></code> clauses to catch these:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">denom</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">denom</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1/</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;index </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> out of range; error is </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s2"> has no reciprocal; error is: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/-5 == -0.2
-0 has no reciprocal; error is: division by zero
-1/5 == 0.2
-index 3 out of range; error is list index out of range
-</pre></div>
-</div>
-</div>
-</div>
-<p>A full list of built-in errors may be <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">found here</a> and they are nested in classes (eg <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> is a special case of a <code class="docutils literal notranslate"><span class="pre">ArithmeticError</span></code>).</p>
-<p>Where do these errors come from anyway? What tells the programming language to throw a tantrum when it encounters certain combinations of values and operations.</p>
-<p>The answer is that the person or people who wrote the code that’s ‘under the hood’ can specify when such errors should be raised. Remember, the philosophy of Python is that things should faily loudly (so that they do not cause issues downstream). Here’s an example of some code that raises its own errors using the <code class="docutils literal notranslate"><span class="pre">raise</span></code> keyword:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;no negatives: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exception: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-0
-exception: no negatives: -1
-</pre></div>
-</div>
-</div>
-</div>
-<p>A <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is a built-in type of error and there are plenty of ones to choose from for your case. Some big or specialised libraries define their own types of error too.</p>
-<p>One very clever feature of Python’s exception handling is “throw low, catch high”, which means that even if an error gets thrown way deep down in the middle of a code block, the catching exception can be used some way away. Here’s an example: the error arises <em>within</em> the <code class="docutils literal notranslate"><span class="pre">sum_reciprocals</span></code> function, but is caught elsewhere.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_reciprocals</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">v</span>
-    <span class="k">return</span> <span class="n">result</span>
-
-
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">one_over</span> <span class="o">=</span> <span class="n">sum_reciprocals</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ArithmeticError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error trying to sum reciprocals: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error trying to sum reciprocals: division by zero
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here’s an example of combining a <code class="docutils literal notranslate"><span class="pre">try</span></code>, several <code class="docutils literal notranslate"><span class="pre">except</span></code> statements, an <code class="docutils literal notranslate"><span class="pre">else</span></code> that gets executed if <code class="docutils literal notranslate"><span class="pre">try</span></code> is, and a <code class="docutils literal notranslate"><span class="pre">finally</span></code> that always get executed.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
-
-<span class="n">b_year</span> <span class="o">=</span> <span class="mi">1852</span>
-<span class="n">name_input</span> <span class="o">=</span> <span class="s2">&quot;Ada&quot;</span>
-
-
-<span class="k">def</span> <span class="nf">process_input</span><span class="p">(</span><span class="n">name_input</span><span class="p">,</span> <span class="n">b_year</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">name_input</span><span class="p">)</span>
-        <span class="n">year_born</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b_year</span><span class="p">)</span>
-        <span class="n">age</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">year_born</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. And your age is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type error occur&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value error occur&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;zero division error occur&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I usually run with the try block&quot;</span><span class="p">)</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I always run.&quot;</span><span class="p">)</span>
-
-
-<span class="n">process_input</span><span class="p">(</span><span class="n">name_input</span><span class="p">,</span> <span class="n">b_year</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You are Ada. And your age is 169.
-I usually run with the try block
-I always run.
 </pre></div>
 </div>
 </div>
@@ -1804,7 +1653,7 @@ I always run.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Circle1 at 0x7feb4597d2e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Circle1 at 0x7fabb4faba30&gt;
 </pre></div>
 </div>
 </div>
@@ -1849,143 +1698,6 @@ I always run.
 </div>
 </div>
 <p>Right away we get a much more informative message when we call the object, <em>and</em> the class definition is a whole lot simpler. Everything else is just the same (just try calling <code class="docutils literal notranslate"><span class="pre">circle2.area()</span></code>).</p>
-</div>
-</div>
-<div class="section" id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>Tests check that your code is behaving as you expect, even as parts of it change or are updated. They most commonly compare an expected input and output with what actually comes out of your code for a given input.</p>
-<p>Writing tests for code is often an after thought for research code, if it’s a thought at all. That’s understandable. But it can really boost reliability and robustness. This excerpt from <a class="reference external" href="https://merely-useful.github.io/py-rse/testing.html">Research Software Engineering with Python</a> explains why testing even research code is extremely useful:</p>
-<blockquote>
-<div><p>Why is testing research software important? A successful early career researcher in protein crystallography, Geoffrey Chang, had to retract five published papers—three from the journal Science—because his code had inadvertently flipped two columns of data (Miller 2006). More recently, a simple calculation mistake in a paper by Reinhart and Rogoff contributed to making the financial crash of 2008 even worse for millions of people (Borwein and Bailey 2013). Testing helps to catch errors like these.</p>
-</div></blockquote>
-<p>The Reinhart and Rogoff paper used Excel for its analysis; while Excel has some pros and does some good in the world, my strong recommendation is that it should <em>not</em> be used for any important analysis.</p>
-<p>Back to testing: if you’re writing a <em>package</em> of code for others to use, one that will change and grow over time, tests are essential. These are some general guidelines for good testing, such as:</p>
-<ul class="simple">
-<li><p>A testing ‘unit’ should focus on a single bit of functionality;</p></li>
-<li><p>Each test unit must be fully independent (in practice, this means that <code class="docutils literal notranslate"><span class="pre">setUp()</span></code> and <code class="docutils literal notranslate"><span class="pre">tearDown()</span></code> methods need to be defined to prep data or objects to the point where they can be used by the testing unit);</p></li>
-<li><p>Tests should run fast if possible;</p></li>
-<li><p>If you know how, it’s a good idea to use something like a ‘Git hook’ that runs tests before code is saved in a shared repository;</p></li>
-<li><p>If you find a bug in your code, it’s good practice to write a new test that targets it; and</p></li>
-<li><p>Although long, extremely descriptive names are not very helpful in regular code, they <em>should</em> be used for functions that test code because this is the name you will see when the test fails (and you want to know what it refers to).</p></li>
-</ul>
-<p>The most common way to run tests is to add assertions to code. An assertion is a statement that something must be true at a certain point in a program. When an assertion evaluates to true, nothing happens; if it’s false, the programme stops and prints a user-defined error message. Here’s an example of an assertion:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">positive_num</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="k">assert</span> <span class="n">positive_num</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>If we had run</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">positive_num</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="k">assert</span> <span class="n">positive_num</span> <span class="o">&lt;</span> <span class="mi">0</span>
-</pre></div>
-</div>
-<p>it would have resulted in</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
-<span class="ne">AssertionError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">55</span><span class="o">-</span><span class="n">db0e55fa5cb7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-      <span class="mi">1</span> <span class="n">positive_num</span> <span class="o">=</span> <span class="mi">5</span>
-      <span class="mi">2</span> 
-<span class="o">----&gt;</span> <span class="mi">3</span> <span class="k">assert</span> <span class="n">positive_num</span> <span class="o">&lt;</span> <span class="mi">0</span>
-
-<span class="ne">AssertionError</span><span class="p">:</span>
-</pre></div>
-</div>
-<p>Putting assertions into code here and there is one way to check that everything is working as you anticipate, but you won’t find out about it until you actually run the code! A testing framework allows you to separate checking the code behaves as you’d expect from running the code, so that you can ensure everything works before putting that big run on.</p>
-<p>To run lots of tests, we can use a test framework (also called a test runner). A commonly used test framework is <a class="reference external" href="https://docs.pytest.org/en/latest/"><strong>pytest</strong></a>. Essentially it will run anything that you’ve flagged as a test in your code and report back to you on whether it passed or not. Here’s how it works: tests are put in files whose names begin with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, each test is a function whose name also begins with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, and these functions use <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements to check results.</p>
-<p>Normally, your functions would be in a different script but here’s an example of a code function and a testing function (that tests it) that you might put in a file called <code class="docutils literal notranslate"><span class="pre">test.py</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># content of test.py</span>
-<span class="k">def</span> <span class="nf">inc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-
-
-<span class="k">def</span> <span class="nf">test_answer</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">inc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>To run this, we would enter</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest
-</pre></div>
-</div>
-<p>on the command line. This would yield</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">===========================</span> <span class="nb">test</span> session <span class="nv">starts</span> <span class="o">============================</span>
-platform linux -- Python <span class="m">3</span>.x.y, pytest-6.x.y, py-1.x.y, pluggy-0.x.y
-cachedir: <span class="nv">$PYTHON_PREFIX</span>/.pytest_cache
-rootdir: <span class="nv">$REGENDOC_TMPDIR</span>
-collected <span class="m">1</span> item
-
-test.py F                                                     <span class="o">[</span><span class="m">100</span>%<span class="o">]</span>
-
-<span class="o">=================================</span> <span class="nv">FAILURES</span> <span class="o">=================================</span>
-_______________________________ test_answer ________________________________
-
-    def test_answer<span class="o">()</span>:
-&gt;       assert inc<span class="o">(</span><span class="m">3</span><span class="o">)</span> <span class="o">==</span> <span class="m">5</span>
-E       assert <span class="nv">4</span> <span class="o">==</span> <span class="m">5</span>
-E        +  where <span class="nv">4</span> <span class="o">=</span> inc<span class="o">(</span><span class="m">3</span><span class="o">)</span>
-
-test_sample.py:6: <span class="nv">AssertionError</span>
-<span class="o">=========================</span> short <span class="nb">test</span> summary <span class="nv">info</span> <span class="o">==========================</span>
-FAILED test.py::test_answer - assert <span class="nv">4</span> <span class="o">==</span> <span class="nv">5</span>
-<span class="o">============================</span> <span class="m">1</span> failed <span class="k">in</span> <span class="m">0</span>.12s <span class="o">=============================</span>
-</pre></div>
-</div>
-<p>As you add more tests, they will be automatically picked up and run by <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
-<p>When writing tests, think about whether you have tested realistic combinations of input parameters, tested all discrete outputs at least once, tested the boundaries of continuous outputs, and ensured that informative errors are raised when things go wrong.</p>
-<p>If you’re using Visual Studio Code, support for <strong>pytest</strong> comes built-in.</p>
-<div class="section" id="testing-continuous-variables">
-<h3>Testing continuous variables<a class="headerlink" href="#testing-continuous-variables" title="Permalink to this headline">¶</a></h3>
-<p>Imagine we are not testing for an integer, such as 4, but instead for a real number, such as 4.32838. Computers are nothing if not punishingly literal, however, so if evaluation of the code produces 4.32837 instead of 4.32838 the <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement will fail and the test won’t pass even if the two numbers are close enough for our purposes. It’s even worse than that because computers <em>cannot</em> accurately represent real numbers to arbitrary levels of precision.</p>
-<p>To avoid tests that fail even though nothing’s really wrong, most testing packages come with tools for real numbers. Here’s an example where we have a parameter alpha that we’d like to test against an expected value of 1 but with a tolerance of 0.01.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
-
-
-<span class="k">def</span> <span class="nf">complicated_func</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;A really complicated func&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="mf">0.998</span>
-
-
-<span class="n">alpha</span> <span class="o">=</span> <span class="n">complicated_func</span><span class="p">()</span>
-<span class="n">expected_alpha</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">alpha</span> <span class="o">==</span> <span class="n">expected_alpha</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">expected_alpha</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0 ± 1.0e-02
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="test-coverage">
-<h3>Test coverage<a class="headerlink" href="#test-coverage" title="Permalink to this headline">¶</a></h3>
-<p>A production-ready code should be heavily tested. Coverage tests ask how much of your code is actually covered by tests and where the code is that isn’t tested. One package to do this is called <a class="reference external" href="https://coverage.readthedocs.io/en/coverage-5.5/"><strong>coverage</strong></a>. If you already have code tests written, you can run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>coverage run -m pytest
-</pre></div>
-</div>
-<p>on the command line instead of just running <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. To get a report on the success use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ coverage report -m
-Name                      Stmts   Miss  Cover   Missing
--------------------------------------------------------
-my_program.py                <span class="m">20</span>      <span class="m">4</span>    <span class="m">80</span>%   <span class="m">33</span>-35, <span class="m">39</span>
-my_other_module.py           <span class="m">56</span>      <span class="m">6</span>    <span class="m">89</span>%   <span class="m">17</span>-23
--------------------------------------------------------
-TOTAL                        <span class="m">76</span>     <span class="m">10</span>    <span class="m">87</span>%
-</pre></div>
-</div>
-<p>If you would prefer a html report over one in the terminal, use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">coverage</span> <span class="pre">html</span></code> to create a report at <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code>.</p>
 </div>
 </div>
 <div class="section" id="type-annotations-and-type-checkers">
@@ -2074,190 +1786,6 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="timing-and-profiling">
-<h2>Timing and profiling<a class="headerlink" href="#timing-and-profiling" title="Permalink to this headline">¶</a></h2>
-<p>Timing and profiling your code are useful to understand where bottlenecks might be. One of the principles of programming is don’t optimise too soon, so, if you are reaching for timing and profiling, you’ve probably already hit that bottleneck.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section just deals with diagnosing slow code: how to speed code up will be covered elsewhere.</p>
-</div>
-<p>There are different levels of sophistication for timing and profiling. The simplest way to time is to use the built-in library.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">timeit</span>
-
-
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">nsec</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function sleeps for nsec seconds.&quot;&quot;&quot;</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">nsec</span><span class="p">)</span>
-
-
-<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
-<span class="n">f</span><span class="p">()</span>
-<span class="n">elapsed</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-<span class="n">elapsed</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0044403049999997
-</pre></div>
-</div>
-</div>
-</div>
-<p>If you’re working jupyter notebooks (which is what this book is written in), you can use the <code class="docutils literal notranslate"><span class="pre">timeit</span></code> magic, a convenient shortcut for timing a line or chunk of code (more on magics, and timeit, <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-time">here</a>):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> f(0.01)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.8 ms ± 123 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
-</pre></div>
-</div>
-</div>
-</div>
-<p>timeit will adjust the number of repeats according to how slow the code is to run. Several other magics are available:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">%time</span></code>: Time the execution of a single statement</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%timeit</span></code>: Time repeated execution of a single statement for more accuracy</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%prun</span></code>: Run code with the profiler</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%lprun</span></code>: Run code with the line-by-line profiler</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%memit</span></code>: Measure the memory use of a single statement</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%mprun</span></code>: Run code with the line-by-line memory profiler</p></li>
-</ul>
-<p>Another way to time functions is via decorators:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_time</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="kn">import</span> <span class="nn">timeit</span>
-
-        <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
-        <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">func</span>
-
-
-<span class="nd">@process_time</span>
-<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">nsec</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function sleeps for nsec seconds.&quot;&quot;&quot;</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">nsec</span><span class="p">)</span>
-
-
-<span class="n">f1</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0051964089999998
-</pre></div>
-</div>
-</div>
-</div>
-<p>Timing is very simple and just tells you the total time of what’s inbetween the start and end points. Often, you would want a bit more detail about what’s being slow, or you may wish to profile an entire script. For that, there’s <code class="docutils literal notranslate"><span class="pre">cProfile</span></code>, which is a built-in package. You can use it on the command line or within scripts, like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">cProfile</span>
-
-
-<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
-
-
-<span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;foo()&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         6 function calls in 3.504 seconds
-
-   Ordered by: standard name
-
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    3.504    3.504 487730401.py:5(foo)
-        1    0.000    0.000    3.504    3.504 &lt;string&gt;:1(&lt;module&gt;)
-        1    0.000    0.000    3.504    3.504 {built-in method builtins.exec}
-        2    3.504    1.752    3.504    1.752 {built-in method time.sleep}
-        1    0.000    0.000    0.000    0.000 {method &#39;disable&#39; of &#39;_lsprof.Profiler&#39; objects}
-</pre></div>
-</div>
-</div>
-</div>
-<p>What do we get here? The <code class="docutils literal notranslate"><span class="pre">percall</span></code> columns are <code class="docutils literal notranslate"><span class="pre">tottime</span></code> and <code class="docutils literal notranslate"><span class="pre">cumtime</span></code> (respectively) divided by <code class="docutils literal notranslate"><span class="pre">ncalls</span></code>. <code class="docutils literal notranslate"><span class="pre">tottime</span></code> is the time spent in the function excluding any sub-functions, while <code class="docutils literal notranslate"><span class="pre">cumtime</span></code> is the cumulative time spent.</p>
-<p>There are various profilers out there that extend the basics provided by <strong>cProfile</strong>. Let’s look at a few others to get a sense of what extra they offer.</p>
-<p><a class="reference external" href="https://github.com/joerick/pyinstrument"><strong>pyinstrument</strong></a> attempts to improve on the standard profilers by recording the ‘entire stack’ of methods so that identifying expensive sub-calls to methods is easier. There are two ways to run it: on the command line, using <code class="docutils literal notranslate"><span class="pre">pyinstrument</span> <span class="pre">script.py</span></code> instead of <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">script.py</span></code>, or by wedging the code you’re interested in <em>within</em> a script between a <code class="docutils literal notranslate"><span class="pre">.start()</span></code> and <code class="docutils literal notranslate"><span class="pre">.stop()</span></code> method like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyinstrument</span> <span class="kn">import</span> <span class="n">Profiler</span>
-
-
-<span class="n">profiler</span> <span class="o">=</span> <span class="n">Profiler</span><span class="p">()</span>
-<span class="n">profiler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;n must be a positive integer&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
-
-
-<span class="n">fibonacci</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-
-<span class="n">profiler</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-
-<span class="c1"># Print the results of the profiling to screen</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">profiler</span><span class="o">.</span><span class="n">output_text</span><span class="p">(</span><span class="n">unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  _     ._   __/__   _ _  _  _ _/_   Recorded: 10:25:41  Samples:  4
- /_//_/// /_\ / //_// / //_&#39;/ //     Duration: 0.005     CPU time: 0.005
-/   _/                      v4.0.4
-
-Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_launcher.py -f /private/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/tmpw1gc4u61.json --HistoryManager.hist_file=:memory:
-
-<span class=" -Color -Color-Red">0.004</span> run_code  <span class=" -Color -Color-Faint">IPython/core/interactiveshell.py:3400</span>
-└─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">&lt;module&gt;</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:19</span>
-   └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-      └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-         └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-            └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-               └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                  └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                     └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                        └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                           └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                              └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                 └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                    └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                       ├─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                       │  └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                       │     ├─ <span class=" -Color -Color-Yellow">0.002</span> [self]  
-                                       │     └─ <span class=" -Color -Color-Yellow">0.001</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_27254/4099532080.py:8</span>
-                                       └─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
-</pre></div>
-</div>
-</div>
-</div>
-<p>Because our function, <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code>, is nested, the function call breakdown that <strong>pyinstrument</strong> produces is likewise nested so that you can see how the code calls progresses.</p>
-<p>The output analysis can be written to an interactive HTML file too: just use <code class="docutils literal notranslate"><span class="pre">profiler.output_html()</span></code></p>
-<p>Time to execute code is not the only thing we care about. In fact, for economics applications, it’s much more likely to be a memory bottleneck than a speed one. Operations that involve lots of data, large matrices, or both, might be memory hogs. If you hit the memory (RAM) limit on your machine, it will slow right down and the process that’s running might just crash completely. So wouldn’t it be great it we had a way to profile both code and memory!? Well, we do.</p>
-<p><a class="reference external" href="https://github.com/plasma-umass/scalene"><strong>scalene</strong></a> is a command-line utility for profiling code execution time <em>and</em> memory. It profiles whole scripts, run <code class="docutils literal notranslate"><span class="pre">scalene</span> <span class="pre">script.py</span></code> on the command line, and produces HTML reports. Here’s an example of some output:</p>
-<p><img alt="Screenshot from scalene running on a problem" src="https://raw.githubusercontent.com/plasma-umass/scalene/master/docs/images/sample-profile-pystone.png" /></p>
-<p>What’s particularly useful is having the part of the code where the bottleneck is displayed on the right. Memory usage over time tells you where the memory-hogging lines are, while the two CPU % columns tell you how much of the total time (shown at the top) was spent in Python code and in non-Python (‘native’) code, which Python often calls under the hood.</p>
 </div>
 <div class="section" id="i-am-the-walrus">
 <h2>I am the Walrus<a class="headerlink" href="#i-am-the-walrus" title="Permalink to this headline">¶</a></h2>
@@ -2405,6 +1933,219 @@ Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_l
 </div>
 </div>
 </div>
+<div class="section" id="time">
+<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<p>Let’s do a quick dive into how to deal with dates and times. This is only going to scratch the surface, but should give a sense of what’s possible.</p>
+<p>The built-in library that deals with datetimes is called <code class="docutils literal notranslate"><span class="pre">datetime</span></code>. Let’s import it and ask it to give us a very precise account of the datetime (when the code is executed):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-08-20 17:52:45.248487
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can pick out bits of the datetime that you need:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">day</span>
+<span class="n">month</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">month</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">year</span>
+<span class="n">hour</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">hour</span>
+<span class="n">minute</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">hour</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">minute</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022/8/20, 17:52
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Using an f-string, add seconds to the date and time string above.</p>
+</div>
+<p>To add or subtract time to a datetime, use <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="n">new_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-20 22:52:45.248487
+</pre></div>
+</div>
+</div>
+</div>
+<p>To take the difference of two dates:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="n">new_year</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">time_till_ny</span> <span class="o">=</span> <span class="n">new_year</span> <span class="o">-</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">time_till_ny</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s2"> days until New Year&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-231 days until New Year
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that date and datetime are two different types of objects-a datetime includes information on the date and time, whereas a date does not.</p>
+</div>
+<div class="section" id="miscellaneous-fun">
+<h2>Miscellaneous fun<a class="headerlink" href="#miscellaneous-fun" title="Permalink to this headline">¶</a></h2>
+<p>Here are some other bits of basic coding that might be useful. They really show why Python is such a delightful language.</p>
+<p>You can use unicode characters for variables</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">α</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">β</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">α</span> <span class="o">/</span> <span class="n">β</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can swap variables in a single assignment:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;This is a string&quot;</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is a string
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>itertools</strong> offers counting, repeating, cycling, chaining, and slicing. Here’s a cycling example that uses the <code class="docutils literal notranslate"><span class="pre">next</span></code> keyword to get the next iteraction:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+
+<span class="n">lorrys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red lorry&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow lorry&quot;</span><span class="p">]</span>
+<span class="n">lorry_iter</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">lorrys</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>red lorry
+yellow lorry
+red lorry
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>itertools</strong> also offers products, combinations, combinations with replacement, and permutations. Here are the combinations of ‘abc’ of length 2:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;a&#39;, &#39;b&#39;), (&#39;a&#39;, &#39;c&#39;), (&#39;b&#39;, &#39;c&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Find out what the date is! (Can pass a timezone as an argument.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-08-20
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because functions are just objects, you can iterate over them just like any other object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">functions</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="o">.</span><span class="n">isdigit</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">islower</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">isupper</span><span class="p">]</span>
+
+<span class="n">raw_str</span> <span class="o">=</span> <span class="s2">&quot;asdfaa3fa&quot;</span>
+
+<span class="k">for</span> <span class="n">str_func</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Function name: </span><span class="si">{</span><span class="n">str_func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">, value is:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">str_func</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function name: isdigit, value is:
+False
+Function name: islower, value is:
+True
+Function name: isupper, value is:
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Functions can be defined recursively. For instance, the Fibonacci sequence is defined such that <span class="math notranslate nohighlight">\( a_n = a_{n-1} + a_{n-2} \)</span> for <span class="math notranslate nohighlight">\( n&gt;1 \)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please enter n&gt;0&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -2441,7 +2182,7 @@ Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_l
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Tools for Better Coding</p>
+                <p class="prevnext-title">Better Coding</p>
             </div>
         </a>
     </div>
@@ -2481,15 +2222,12 @@ Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_l
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

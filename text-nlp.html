@@ -55,9 +55,10 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/text-nlp.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Automating Research Outputs" href="auto-research-outputs.html" />
+    <link rel="next" title="Intro to Geo-Spatial Analysis" href="geo-intro.html" />
     <link rel="prev" title="Regular Expressions, aka regex" href="text-regex.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -1452,8 +1493,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/text-nlp_44_0.png" src="_images/text-nlp_44_0.png" />
-</div>
+<img alt="_images/text-nlp_45_0.svg" src="_images/text-nlp_45_0.svg" /></div>
 </div>
 <p>Let’s see what happens when we ask only for bi-grams.</p>
 <div class="cell docutils container">
@@ -1488,8 +1528,7 @@ dtype: int64
   warnings.warn(msg, category=FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/text-nlp_46_1.png" src="_images/text-nlp_46_1.png" />
-</div>
+<img alt="_images/text-nlp_47_1.svg" src="_images/text-nlp_47_1.svg" /></div>
 </div>
 <p>As you might expect, the highest frequency with which 2-grams occur is less than the highest frequency with which 1-grams occur.</p>
 <p>Now let’s move on to the inverse document frequency. The most common definition is</p>
@@ -1530,8 +1569,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/text-nlp_48_0.png" src="_images/text-nlp_48_0.png" />
-</div>
+<img alt="_images/text-nlp_49_0.svg" src="_images/text-nlp_49_0.svg" /></div>
 </div>
 <p>There are small differences between this ranking of terms versus the original tf 1-gram version above. In the previous one, words such as ‘one’ were slightly higher in the ranking but their common appearance in multiple documents (lines) downweights them here. In this case, we also used the sublinear option, which uses <span class="math notranslate nohighlight">\(1+\log(\mathrm{tf})\)</span> in place of <span class="math notranslate nohighlight">\(\mathrm{tf}\)</span>.</p>
 <div class="section" id="vector-inner-product-and-cosine-similarity">
@@ -1678,8 +1716,7 @@ Sentence number 1:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/text-nlp_62_0.png" src="_images/text-nlp_62_0.png" />
-</div>
+<img alt="_images/text-nlp_63_0.svg" src="_images/text-nlp_63_0.svg" /></div>
 </div>
 <p>Note that we did not pass <code class="docutils literal notranslate"><span class="pre">stopwords</span></code> in this case; there’s no need, because passing a <code class="docutils literal notranslate"><span class="pre">vocab</span></code> effectively says to categorise any word that is <em>not</em> in the special vocabulary as a stopword. We also still passed an n-gram range to ensure our longest n-gram, with <span class="math notranslate nohighlight">\(n=2\)</span>, was counted.</p>
 </div>
@@ -1747,8 +1784,7 @@ be said to have a real and a nominal price . Its real price may be said to cons
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/text-nlp_70_0.png" src="_images/text-nlp_70_0.png" />
-</div>
+<img alt="_images/text-nlp_71_0.svg" src="_images/text-nlp_71_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="stemming-and-lemmatisation">
@@ -1961,81 +1997,11 @@ The word &quot;band&quot; is a NN
       <td>VBP</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>going</td>
-      <td>go</td>
-      <td>VERB</td>
-      <td>VBG</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>to</td>
-      <td>to</td>
-      <td>PART</td>
-      <td>TO</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>die</td>
-      <td>die</td>
-      <td>VERB</td>
-      <td>VB</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>,</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>let</td>
-      <td>let</td>
-      <td>VERB</td>
-      <td>VB</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>us</td>
-      <td>we</td>
-      <td>PRON</td>
-      <td>PRP</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>die</td>
-      <td>die</td>
-      <td>VERB</td>
-      <td>VB</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>looking</td>
-      <td>look</td>
-      <td>VERB</td>
-      <td>VBG</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>like</td>
-      <td>like</td>
-      <td>ADP</td>
-      <td>IN</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>a</td>
-      <td>a</td>
-      <td>DET</td>
-      <td>DT</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Peruvian</td>
-      <td>peruvian</td>
-      <td>ADJ</td>
-      <td>JJ</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>14</th>
@@ -2060,6 +2026,7 @@ The word &quot;band&quot; is a NN
     </tr>
   </tbody>
 </table>
+<p>17 rows × 4 columns</p>
 </div></div></div>
 </div>
 <p>For those brave enough for the pun, <strong>spacy</strong> also has some nifty visualisation tools.</p>
@@ -2074,7 +2041,7 @@ The word &quot;band&quot; is a NN
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><span class="tex2jax_ignore"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" id="0c76388dacf04157ab7e6b924d4cdfc2-0" class="displacy" width="1800" height="399.5" direction="ltr" style="max-width: none; height: 399.5px; color: #000000; background: #ffffff; font-family: Arial; direction: ltr">
+<div class="output text_html"><span class="tex2jax_ignore"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" id="0facb4f03c6e45ef928d6f615987eeea-0" class="displacy" width="1800" height="399.5" direction="ltr" style="max-width: none; height: 399.5px; color: #000000; background: #ffffff; font-family: Arial; direction: ltr">
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
     <tspan class="displacy-word" fill="currentColor" x="50">When</tspan>
     <tspan class="displacy-tag" dy="2em" fill="currentColor" x="50">ADV</tspan>
@@ -2126,73 +2093,73 @@ The word &quot;band&quot; is a NN
 </text>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-0" stroke-width="2px" d="M70,264.5 C70,89.5 395.0,89.5 395.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-0" stroke-width="2px" d="M70,264.5 C70,89.5 395.0,89.5 395.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-0" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-0" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
     </text>
     <path class="displacy-arrowhead" d="M70,266.5 L62,254.5 78,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-1" stroke-width="2px" d="M245,264.5 C245,177.0 390.0,177.0 390.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-1" stroke-width="2px" d="M245,264.5 C245,177.0 390.0,177.0 390.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-1" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-1" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
     </text>
     <path class="displacy-arrowhead" d="M245,266.5 L237,254.5 253,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-2" stroke-width="2px" d="M420,264.5 C420,2.0 1275.0,2.0 1275.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-2" stroke-width="2px" d="M420,264.5 C420,2.0 1275.0,2.0 1275.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-2" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advcl</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-2" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advcl</textPath>
     </text>
     <path class="displacy-arrowhead" d="M420,266.5 L412,254.5 428,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-3" stroke-width="2px" d="M595,264.5 C595,177.0 740.0,177.0 740.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-3" stroke-width="2px" d="M595,264.5 C595,177.0 740.0,177.0 740.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-3" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-3" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
     </text>
     <path class="displacy-arrowhead" d="M595,266.5 L587,254.5 603,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-4" stroke-width="2px" d="M420,264.5 C420,89.5 745.0,89.5 745.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-4" stroke-width="2px" d="M420,264.5 C420,89.5 745.0,89.5 745.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-4" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-4" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
     </text>
     <path class="displacy-arrowhead" d="M745.0,266.5 L753.0,254.5 737.0,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-5" stroke-width="2px" d="M945,264.5 C945,89.5 1270.0,89.5 1270.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-5" stroke-width="2px" d="M945,264.5 C945,89.5 1270.0,89.5 1270.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-5" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-5" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
     </text>
     <path class="displacy-arrowhead" d="M945,266.5 L937,254.5 953,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-6" stroke-width="2px" d="M1120,264.5 C1120,177.0 1265.0,177.0 1265.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-6" stroke-width="2px" d="M1120,264.5 C1120,177.0 1265.0,177.0 1265.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-6" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-6" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
     </text>
     <path class="displacy-arrowhead" d="M1120,266.5 L1112,254.5 1128,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-7" stroke-width="2px" d="M1470,264.5 C1470,177.0 1615.0,177.0 1615.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-7" stroke-width="2px" d="M1470,264.5 C1470,177.0 1615.0,177.0 1615.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-7" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-7" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
     </text>
     <path class="displacy-arrowhead" d="M1470,266.5 L1462,254.5 1478,254.5" fill="currentColor"/>
 </g>
 
 <g class="displacy-arrow">
-    <path class="displacy-arc" id="arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-8" stroke-width="2px" d="M1295,264.5 C1295,89.5 1620.0,89.5 1620.0,264.5" fill="none" stroke="currentColor"/>
+    <path class="displacy-arc" id="arrow-0facb4f03c6e45ef928d6f615987eeea-0-8" stroke-width="2px" d="M1295,264.5 C1295,89.5 1620.0,89.5 1620.0,264.5" fill="none" stroke="currentColor"/>
     <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
-        <textPath xlink:href="#arrow-0c76388dacf04157ab7e6b924d4cdfc2-0-8" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
+        <textPath xlink:href="#arrow-0facb4f03c6e45ef928d6f615987eeea-0-8" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
     </text>
     <path class="displacy-arrowhead" d="M1620.0,266.5 L1628.0,254.5 1612.0,254.5" fill="currentColor"/>
 </g>
@@ -2509,10 +2476,10 @@ The word &quot;band&quot; is a NN
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="auto-research-outputs.html" title="next page">
+        <a class="right-next" href="geo-intro.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Automating Research Outputs</p>
+                <p class="prevnext-title">Intro to Geo-Spatial Analysis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -2544,15 +2511,12 @@ The word &quot;band&quot; is a NN
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

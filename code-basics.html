@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basics of Coding &#8212; Coding for Economists</title>
+    <title>Coding Basics &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,9 +55,10 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-basics.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Analysis Quickstart" href="data-analysis-quickstart.html" />
+    <link rel="next" title="Workflow Basics" href="workflow-basics.html" />
     <link rel="prev" title="Preliminaries" href="code-preliminaries.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -551,6 +592,26 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Coding Basics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keeping-track-of-variables">
+   Keeping Track of Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calling-functions">
+   Calling Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#values-variables-and-types">
    Values, variables, and types
   </a>
@@ -618,40 +679,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#functions">
-   Functions
+  <a class="reference internal nav-link" href="#writing-functions">
+   Writing Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scope">
    Scope
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-packages-and-modules">
-   Using packages and modules
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modules">
-     Modules
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time">
-   Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-and-writing-files">
-   Reading and writing files
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miscellaneous-fun">
-   Miscellaneous fun
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -670,13 +704,13 @@
         
               <div>
                 
-  <div class="section" id="basics-of-coding">
-<span id="code-basics"></span><h1>Basics of Coding<a class="headerlink" href="#basics-of-coding" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter, you’ll learn about the basics of objects, types, operations, conditions, loops, functions, and imports. These are the basic building blocks of almost all programming languages.</p>
+  <div class="section" id="coding-basics">
+<span id="code-basics"></span><h1>Coding Basics<a class="headerlink" href="#coding-basics" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, you’ll learn about the basics of objects, types, operations, conditions, loops, functions, and imports. These are the basic building blocks of almost all programming languages and will serve you well for your coding and economics journey.</p>
 <p>This chapter has benefited from the excellent <a class="reference external" href="https://www.tomasbeuzen.com/python-programming-for-data-science/README.html"><em>Python Programming for Data Science</em></a> book by Tomas Beuzen.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Remember, you can launch this page interactively by using the ‘Colab’ button under the rocket symbol (:rocket:) at the top of the page. You can also download this page as a Jupyter Notebook to run on your own computer: use the ‘download .ipynb’ button under the download symbol the top of the page and open that file using Visual Studio Code.</p>
+<p>Remember, you can launch this page interactively by using the ‘Colab’ button under the rocket symbol (<i class="fas fa-rocket"></i>) at the top of the page. You can also download this page as a Jupyter Notebook to run on your own computer: use the ‘download .ipynb’ button under the download symbol the top of the page and open that file using Visual Studio Code.</p>
 </div>
 <div class="section" id="if-you-get-stuck">
 <h2>If you get stuck<a class="headerlink" href="#if-you-get-stuck" title="Permalink to this headline">¶</a></h2>
@@ -689,6 +723,202 @@
 <li><p>use cheat sheets to get on top of a range of functionality quickly. For instance, this excellent (mostly) base Python <a class="reference external" href="https://gto76.github.io/python-cheatsheet/">Cheat Sheet</a>.</p></li>
 <li><p>if you’re having a coding issue, take a walk to think about the problem, or explain your problem to an animal toy on your desk (<a class="reference external" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">traditionally</a> a rubber duck, but other animals are available).</p></li>
 </ul>
+</div>
+<div class="section" id="id1">
+<h2>Coding Basics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Let’s review some basics in the interests of getting you up to speed as quickly as possible. You can use Python as a calculator:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">200</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">59</span> <span class="o">+</span> <span class="mi">73</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.15
+44.666666666666664
+</pre></div>
+</div>
+</div>
+</div>
+<p>The extra package <strong>numpy</strong> contains many of the additional mathematical operators that you might need. If you don’t already have <strong>numpy</strong> installed, open up the terminal in Visual Studio Code (go to “Terminal -&gt; New Terminal” and then type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">numpy</span></code> into the terminal then hit return). Once you have <strong>numpy</strong> installed, you can import it and use it like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can create new objects with the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>. You should think of this as copying the value of whatever is on the right-hand side into the variable on the left-hand side.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are several structures in Python that capture multiple objects simultaneously but perhaps the most common is the <em>list</em>, which is designated by <em>square brackets</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5, 7, 11, 13]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To do basic arithmetic on a list, use a <em>list comprehension</em> which has the structure “for every element in this list, perform an operation”. For example, to multiply each element by three.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">element</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 6, 9, 15, 21, 33, 39]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the word “element” above could have been almost any word because we define it by saying <code class="docutils literal notranslate"><span class="pre">...for</span> <span class="pre">element</span> <span class="pre">in</span> <span class="pre">...</span></code>. You can try the above with a different word, eg <code class="docutils literal notranslate"><span class="pre">[entry*3</span> <span class="pre">for</span> <span class="pre">entry</span> <span class="pre">in</span> <span class="pre">primes]</span></code>.</p>
+<p>All Python statements where you create objects (known as <em>assignment</em> statements) have the same form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">object_name</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>When reading that code, say “object name gets value” in your head.</p>
+</div>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>Python will ignore any text after <code class="docutils literal notranslate"><span class="pre">#</span></code>. This allows to you to write <strong>comments</strong>, text that is ignored by Python but can be read by other humans. We’ll sometimes include comments in examples explaining what’s happening with the code.</p>
+<p>Comments can be helpful for briefly describing what the subsequent code does.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define primes</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="c1"># multiply primes by 2</span>
+<span class="p">[</span><span class="n">el</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 4, 6, 10, 14, 22, 26]
+</pre></div>
+</div>
+</div>
+</div>
+<p>With short pieces of code like this, it is not necessary to leave a command for every single line of code and you should try to use informative names wherever you can because these help readers of your code (likely to be you in the future) understand what is going on!</p>
+</div>
+<div class="section" id="keeping-track-of-variables">
+<h2>Keeping Track of Variables<a class="headerlink" href="#keeping-track-of-variables" title="Permalink to this headline">¶</a></h2>
+<p>You can always inspect an already-created object by typing its name into the interactive window:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5, 7, 11, 13]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want to know what <em>type</em> of object it is, use <code class="docutils literal notranslate"><span class="pre">type(object)</span></code> in the interactive window like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visual Studio Code has some powerful features to help you keep track of objects:</p>
+<ol class="simple">
+<li><p>At the top of your interactive window, you should see a ‘Variables’ button. Click it to see a panel appear with all variables that you’ve defined.</p></li>
+<li><p>Hover your mouse over variables you’ve previously entered into the interactive window; you will see a pop-up that tells you what type of object it is.</p></li>
+<li><p>If you start typing a variable name into the interactive window, Visual Studio Code will try to auto-complete the name for you. Press the ‘tab’ key on your keyboard to accept the top option.</p></li>
+</ol>
+</div>
+<div class="section" id="calling-functions">
+<h2>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">¶</a></h2>
+<p>If you’re an economist, you hardly need to be told you what a function is. In coding, it’s much the same as in mathematics: a function has inputs, it performs its function, and it returns any outputs. Python has a large number of built-in functions. You can also import functions from packages (like we did with <code class="docutils literal notranslate"><span class="pre">np.sin</span></code>) or define your own.</p>
+<p>In coding, a function has inputs, it performs its function, and it returns any outputs. Let’s see a simple example of using a built-in function, <code class="docutils literal notranslate"><span class="pre">sum</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<p>The general structure of functions is the function name, followed by brackets, followed by one or more arguments. Sometimes there will also be <em>keyword arguments</em>. For example, <code class="docutils literal notranslate"><span class="pre">sum</span></code> comes with a keyword argument that tells the function to start counting from a specific number. Let’s see this in action by starting from ten:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">primes</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you’re ever unsure of what a function does, you can call <code class="docutils literal notranslate"><span class="pre">help</span></code> on it (itself a function):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function sum in module builtins:
+
+sum(iterable, /, start=0)
+    Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
+    
+    When the iterable is empty, return the start value.
+    This function is intended specifically for use with numeric values and may
+    reject non-numeric types.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or, in Visual Studio Code, hover your mouse over the function name.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Why does this code not work?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">my_varıable</span>
+</pre></div>
+</div>
+<p>Look carefully! This may seem like an exercise in pointlessness, but training your brain to notice even the tiniest difference will pay off when programming.</p>
+</div>
 </div>
 <div class="section" id="values-variables-and-types">
 <h2>Values, variables, and types<a class="headerlink" href="#values-variables-and-types" title="Permalink to this headline">¶</a></h2>
@@ -1824,9 +2054,9 @@ Cox maps into Apple
 <p>What is the type of an empty list?</p>
 </div>
 </div>
-<div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>If you’re an economist, you hardly need to be told you what a function is. In coding, it’s much the same as in mathematics: a function has inputs, it performs its function, and it returns any outputs. Functions begin with a <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for ‘define a function’. It then has a name, followed by brackets, <code class="docutils literal notranslate"><span class="pre">()</span></code>, which may contain <em>function arguments</em> and <em>function keyword arguments</em>. This is followed by a colon. The body of the function is then indented relative to the left-most text. Function arguments are defined in brackets following the name, with different inputs separated by commas. Any outputs are given with the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword, again with different variables separated by commas.</p>
+<div class="section" id="writing-functions">
+<h2>Writing Functions<a class="headerlink" href="#writing-functions" title="Permalink to this headline">¶</a></h2>
+<p>Declaring a function starts with a <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for ‘define a function’. It then has a name, followed by brackets, <code class="docutils literal notranslate"><span class="pre">()</span></code>, which may contain <em>function arguments</em> and <em>function keyword arguments</em>. This is followed by a colon. The body of the function is then indented relative to the left-most text. Function arguments are defined in brackets following the name, with different inputs separated by commas. Any outputs are given with the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword, again with different variables separated by commas.</p>
 <div class="tip admonition">
 <p class="admonition-title">Arguments and keyword arguments</p>
 <p><em>arguments</em> are the variables that functions <em>always</em> need, so <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">add(a,</span> <span class="pre">b):</span> <span class="pre">return</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>. The function won’t work without them! Function arguments are sometimes referred to as <em>args</em>.</p>
@@ -2003,476 +2233,7 @@ y is outside a function: I&#39;m a global variable
 <p class="admonition-title">Exercise</p>
 <p>Re-write the above function without the <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> keyword. What does it print?</p>
 </div>
-</div>
-<div class="section" id="using-packages-and-modules">
-<h2>Using packages and modules<a class="headerlink" href="#using-packages-and-modules" title="Permalink to this headline">¶</a></h2>
-<p>We already saw how to install packages in the previous chapter. If you forgot, look back at the Installing Packages section of <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a> now. In short, packages are installed using the command line or, on Windows, the Anaconda prompt. With either of these open, first try typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> and hitting enter. If the package isn’t available on conda, you can use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> as a back-up.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Advanced: install a package in a specific environment
-We haven’t seen isolated Python environments yet, but if you want to install packages into a dedicated environment using <code class="docutils literal notranslate"><span class="pre">conda</span></code>, you’ll need to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">environmentname</span></code> before using the package install command(s). If the command works, you should see <code class="docutils literal notranslate"><span class="pre">(environmentname)</span></code> rather than <code class="docutils literal notranslate"><span class="pre">(base)</span></code> at the start of the command prompt. Using bash, the steps would be:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> your-computer:your-folder your-username$ conda activate environmentname
-<span class="o">(</span>environmentname<span class="o">)</span> your-computer:your-folder your-username$ conda install packagename
-</pre></div>
-</div>
-</div>
-<p>What about using a package that you’ve installed? That’s what we’ll look at now.</p>
-<p>Let’s see an example of using the powerful numerical library <strong>numpy</strong>. There are different ways to import packages to use within a script or notebook; you can import the entire package in one go or just import the functions you need (if you know their names). When an entire package is imported, you can give it any name you like and the convention for <strong>numpy</strong> is to import it as the shortened ‘np’. All of the functions and methods of the package can be accessed by typing <code class="docutils literal notranslate"><span class="pre">np</span></code> followed by <code class="docutils literal notranslate"><span class="pre">.</span></code> and then typing the function name. This convention of importing packages with a given name makes your code easier to read, because you know exactly which package is doing the heavy lifting, and avoids any conflicts when functions from different packages have the same name.</p>
-<p>As well as demonstrating importing the whole package for <strong>numpy</strong>, the example below shows importing just one specific function, for matrix inversion and called <code class="docutils literal notranslate"><span class="pre">inv</span></code>, from within <strong>numpy</strong>. Note that because <code class="docutils literal notranslate"><span class="pre">inv</span></code> was imported separately it can be used without an <code class="docutils literal notranslate"><span class="pre">np</span></code> prefix.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
-
-<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">]])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-
-<span class="n">inv_mat</span> <span class="o">=</span> <span class="n">inv</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inverse:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">inv_mat</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix:
-[[4. 2. 4.]
- [4. 5. 6.]
- [7. 8. 9.]]
-Inverse:
-[[ 0.25       -1.16666667  0.66666667]
- [-0.5        -0.66666667  0.66666667]
- [ 0.25        1.5        -1.        ]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>We could have imported all of <strong>numpy</strong> using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">numpy</span> <span class="pre">import</span> <span class="pre">*</span></code> but this is considered bad practice as it fills our ‘namespace’ with function names that might clash with other packages and it’s less easy to parse which package’s function is doing what. R also relies heavily on imported libraries but uses a different convention for namespaces: in that case, everything is imported but the <em>order</em> of package imports matters for what functions are default (and clashing function names are over-written).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to check what packages you have installed in your Python environment, run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> on the command line.</p>
-</div>
-<p>There are times when you might forget what a function you have imported does! In Visual Studio Code, you can just hover your cursor over the name of the function and a box will come up that tells you everything you need to know about it. This box is auto-generated by the doc-strings we saw earlier in this Chapter (another reason why it’s good practice to write doc-strings!).</p>
-<p>An alternative way to see what a function does is to use a wonderful package called <a class="reference external" href="https://github.com/willmcgugan/rich"><strong>rich</strong></a> that does many things including providing an <code class="docutils literal notranslate"><span class="pre">inspect</span></code> function. You will need to use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install rich by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">rich</span></code> on the command line. Here’s an example of using <strong>rich</strong>’s inpsect method on the <code class="docutils literal notranslate"><span class="pre">inv</span></code> function we imported above (<code class="docutils literal notranslate"><span class="pre">methods=True</span></code> reports all of the functionality of <code class="docutils literal notranslate"><span class="pre">inv</span></code>):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rich</span> <span class="kn">import</span> <span class="n">inspect</span>
-
-<span class="n">inspect</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭───────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">function</span><span style="color: #000000; text-decoration-color: #000000"> inv at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x7fb92470a9d0</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────╮</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">inv</span><span style="font-weight: bold">(</span>a<span style="font-weight: bold">)</span>:                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Compute the </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">multiplicative</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> inverse of a matrix.</span>                   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Given a square matrix `a`, return the matrix `ainv` satisfying</span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">``</span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">dot</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a, ainv</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">dot</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">ainv, a</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">eye</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a.shape</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">])</span><span style="color: #008080; text-decoration-color: #008080">``.</span>                  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Parameters</span>                                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">----------</span>                                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">a : </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="color: #008080; text-decoration-color: #008080">, M, M</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> array_like</span>                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    Matrix to be inverted.</span>                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Returns</span>                                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">-------</span>                                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">ainv : </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="color: #008080; text-decoration-color: #008080">, M, M</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> ndarray or matrix</span>                                <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">Multiplicative</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> inverse of the matrix `a`.</span>                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Raises</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">------</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">LinAlgError</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    If `a` is not square or inversion fails.</span>                        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">See Also</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">--------</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">scipy.linalg.inv : Similar function in SciPy.</span>                       <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Notes</span>                                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">-----</span>                                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">.. versionadded:: </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.8</span><span style="color: #008080; text-decoration-color: #008080">.</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Broadcasting rules apply, see the `numpy.linalg` documentation for</span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">details.</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Examples</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">--------</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; from numpy.linalg import inv</span>                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; a = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.array</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">([[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span><span style="color: #008080; text-decoration-color: #008080">., </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span><span style="color: #008080; text-decoration-color: #008080">.</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span><span style="color: #008080; text-decoration-color: #008080">., </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span><span style="color: #008080; text-decoration-color: #008080">.</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]])</span>                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; ainv = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inv</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.allclose</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.dot</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a, ainv</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.eye</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">))</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span>                                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.allclose</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.dot</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">ainv, a</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.eye</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">))</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span>                                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">If a is a matrix object, then the return value is a matrix as well:</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; ainv = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inv</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.matrix</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">))</span>                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; ainv</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">matrix</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">([[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-2</span><span style="color: #008080; text-decoration-color: #008080">. ,  </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span><span style="color: #008080; text-decoration-color: #008080">. </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">,</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">        </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.5</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-0.5</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]])</span>                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Inverses of several matrices can be computed at once:</span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; a = </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">np.array</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">([[[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span><span style="color: #008080; text-decoration-color: #008080">., </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span><span style="color: #008080; text-decoration-color: #008080">.</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span><span style="color: #008080; text-decoration-color: #008080">., </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span><span style="color: #008080; text-decoration-color: #008080">.</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]]</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">5</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]]])</span>          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">&gt;&gt;&gt; </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inv</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">a</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">array</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">([[[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-2</span><span style="color: #008080; text-decoration-color: #008080">.  ,  </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span><span style="color: #008080; text-decoration-color: #008080">.  </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">,</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">        </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.5</span><span style="color: #008080; text-decoration-color: #008080"> , </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-0.5</span><span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]]</span><span style="color: #008080; text-decoration-color: #008080">,</span>                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">       </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.25</span><span style="color: #008080; text-decoration-color: #008080">,  </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.75</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]</span><span style="color: #008080; text-decoration-color: #008080">,</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">        </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080"> </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.75</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-0.25</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]]])</span>                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">37</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">╰─────────────────────────────────────────────────────────────────────╯</span>
-</pre>
-</div></div>
-</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Write a code block that imports the <strong>numpy</strong> function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.det</span></code> as <code class="docutils literal notranslate"><span class="pre">det</span></code>. Run <code class="docutils literal notranslate"><span class="pre">inspect</span></code> on it. Find the determinant of <code class="docutils literal notranslate"><span class="pre">[[4,</span> <span class="pre">3],</span> <span class="pre">[1,</span> <span class="pre">7]]</span></code>.</p>
-</div>
-<div class="section" id="modules">
-<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
-<p>Sometimes, you will want to call in some code from a different script that you wrote rather than a different package. Imagine you have several code scripts (a, b, and c), all of which use the same underlying function that <em>you</em> have written. A central tenet of good coding is that you <em>do not repeat yourself</em>. Therefore, a bad solution to this problem would be to copy and paste the same code into all three of the scripts. A <em>good</em> solution is to write the code that’s need just once in a separate ‘utility’ script and have the other scripts import that one function. This also adheres to another important programming principle: that of writing modular code.</p>
-<p>This schematic shows the kind of situation we’re talking about:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span>
-    <span class="p">[</span>
-        <span class="p">(</span><span class="s2">&quot;Utility script&quot;</span><span class="p">,</span> <span class="s2">&quot;code file a&quot;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;Utility script&quot;</span><span class="p">,</span> <span class="s2">&quot;code file b&quot;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;code file a&quot;</span><span class="p">,</span> <span class="s2">&quot;code file c&quot;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;code file b&quot;</span><span class="p">,</span> <span class="s2">&quot;code file c&quot;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;Utility script&quot;</span><span class="p">,</span> <span class="s2">&quot;code file c&quot;</span><span class="p">),</span>
-    <span class="p">]</span>
-<span class="p">)</span>
-<span class="n">colour_node</span> <span class="o">=</span> <span class="s2">&quot;#AFCBFF&quot;</span>
-<span class="n">fixed_pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">fixed_pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colour_node</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/code-basics_120_0.png" src="_images/code-basics_120_0.png" />
-</div>
-</div>
-<p>How can we give code files a, b, and c access to the functions etc in the “Utility script”? We would define a file ‘<a class="reference external" href="http://utilities.py">utilities.py</a>’ that had the following function in that we would like to use in the other code files:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contents of utilities.py file</span>
-<span class="k">def</span> <span class="nf">really_useful_func</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="mi">10</span>
-</pre></div>
-</div>
-<p>Then, in ‘code_script_a.py’, we would write:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">utilities</span> <span class="k">as</span> <span class="nn">utils</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">really_useful_func</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
-</pre></div>
-</div>
-</div>
-</div>
-<p>An alternative is to <em>just</em> import the function we want, with the name we want:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utilities</span> <span class="kn">import</span> <span class="n">really_useful_func</span> <span class="k">as</span> <span class="n">ru_fn</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">ru_fn</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>300
-</pre></div>
-</div>
-</div>
-</div>
-<p>Another important example is the case where you want to run ‘<a class="reference external" href="http://utilities.py">utilities.py</a>’ as a script, but still want to borrow functions from it to run in other scripts. There’s a way to do this. Let’s change <a class="reference external" href="http://utilities.py">utilities.py</a> to</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contents of utilities.py file</span>
-<span class="k">def</span> <span class="nf">really_useful_func</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="mi">10</span>
-
-
-<span class="k">def</span> <span class="nf">default_func</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Script has run&#39;</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">default_func</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>What this says is that if we call ‘<a class="reference external" href="http://utilities.py">utilities.py</a>’ from the command line, eg</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python utilities.py
-</pre></div>
-</div>
-<p>It will return <code class="docutils literal notranslate"><span class="pre">Script</span> <span class="pre">has</span> <span class="pre">run</span></code> because, by executing the script alone, we are asking for anything in the <code class="docutils literal notranslate"><span class="pre">main</span></code> block defined at the end of the file to be run. But we can still import anything from utilities into other scripts as before–and in that case it is not the main script, but an import, and so the <code class="docutils literal notranslate"><span class="pre">main</span></code> block will <em>not</em> be executed.</p>
-<p>You can important several functions at once from a module (aka another script file) like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utilities</span> <span class="kn">import</span> <span class="n">really_useful_func</span><span class="p">,</span> <span class="n">default_func</span>
-</pre></div>
-</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Write your own <code class="docutils literal notranslate"><span class="pre">utilities.py</span></code> that has a <code class="docutils literal notranslate"><span class="pre">super_useful_func</span></code> that accepts a number and returns the number divided by 10. In another script, <code class="docutils literal notranslate"><span class="pre">main.py</span></code>, try a) importing all of utilities and running <code class="docutils literal notranslate"><span class="pre">super_useful_func</span></code> on a number and, b), importing just <code class="docutils literal notranslate"><span class="pre">super_useful_func</span></code> from utilities and running it on a number.</p>
-</div>
-</div>
-</div>
-<div class="section" id="time">
-<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
-<p>Let’s do a quick dive into how to deal with dates and times. This is only going to scratch the surface, but should give a sense of what’s possible.</p>
-<p>The built-in library that deals with datetimes is called <code class="docutils literal notranslate"><span class="pre">datetime</span></code>. Let’s import it and ask it to give us a very precise account of the datetime (when the code is executed):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:25:06.192722
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can pick out bits of the datetime that you need:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">day</span>
-<span class="n">month</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">month</span>
-<span class="n">year</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">year</span>
-<span class="n">hour</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">hour</span>
-<span class="n">minute</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">hour</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">minute</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021/11/21, 10:25
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Using an f-string, add seconds to the date and time string above.</p>
-</div>
-<p>To add or subtract time to a datetime, use <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
-
-<span class="n">new_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_time</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-11-21 15:25:06.192722
-</pre></div>
-</div>
-</div>
-</div>
-<p>To take the difference of two dates:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-
-<span class="n">new_year</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">time_till_ny</span> <span class="o">=</span> <span class="n">new_year</span> <span class="o">-</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">time_till_ny</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s2"> days until New Year&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41 days until New Year
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that date and datetime are two different types of objects-a datetime includes information on the date and time, whereas a date does not.</p>
-</div>
-<div class="section" id="reading-and-writing-files">
-<h2>Reading and writing files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h2>
-<p>Although most applications in economics will probably use the <strong>pandas</strong> package to read and write tabular data, it’s sometimes useful to know how to read and write arbitrary files using the built-in Python libraries too. To open a file</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">mode</span></code> could be <code class="docutils literal notranslate"><span class="pre">r</span></code> for read, <code class="docutils literal notranslate"><span class="pre">a</span></code> for append, <code class="docutils literal notranslate"><span class="pre">w</span></code> for write, and <code class="docutils literal notranslate"><span class="pre">x</span></code> to create a file. Create a file called <code class="docutils literal notranslate"><span class="pre">text_example.txt</span></code> and write a single line in it, ‘hello world’. To open the file and print the text, use:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text_example.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">text_in</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">text_in</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello world!</span><span class="se">\n</span><span class="s1">&#39;</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">\n</span></code> is the new line character. Now let’s try adding a line to the file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text_example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;this is another line</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Writing and reading files using the <code class="docutils literal notranslate"><span class="pre">with</span></code> command is a quick and convenient shorthand for the less concise open, action, close pattern. For example, the above example can also be written as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text_example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;this is another line</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Although this short example shows opening and writing a text file, this approach can be used to edit a wide range of file extensions including .json, .xml, .csv, .tsv, and many more, including binary files in addition to plain text files.</p>
-</div>
-<div class="section" id="miscellaneous-fun">
-<h2>Miscellaneous fun<a class="headerlink" href="#miscellaneous-fun" title="Permalink to this headline">¶</a></h2>
-<p>Here are some other bits of basic coding that might be useful. They really show why Python is such a delightful language.</p>
-<p>You can use unicode characters for variables</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">α</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">β</span> <span class="o">=</span> <span class="mi">30</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">α</span> <span class="o">/</span> <span class="n">β</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can swap variables in a single assignment:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;This is a string&quot;</span>
-
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is a string
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>itertools</strong> offers counting, repeating, cycling, chaining, and slicing. Here’s a cycling example that uses the <code class="docutils literal notranslate"><span class="pre">next</span></code> keyword to get the next iteraction:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
-
-<span class="n">lorrys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red lorry&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow lorry&quot;</span><span class="p">]</span>
-<span class="n">lorry_iter</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">lorrys</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">lorry_iter</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>red lorry
-yellow lorry
-red lorry
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>itertools</strong> also offers products, combinations, combinations with replacement, and permutations. Here are the combinations of ‘abc’ of length 2:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;a&#39;, &#39;b&#39;), (&#39;a&#39;, &#39;c&#39;), (&#39;b&#39;, &#39;c&#39;)]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Find out what the date is! (Can pass a timezone as an argument.)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21
-</pre></div>
-</div>
-</div>
-</div>
-<p>Because functions are just objects, you can iterate over them just like any other object:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">functions</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="o">.</span><span class="n">isdigit</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">islower</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">isupper</span><span class="p">]</span>
-
-<span class="n">raw_str</span> <span class="o">=</span> <span class="s2">&quot;asdfaa3fa&quot;</span>
-
-<span class="k">for</span> <span class="n">str_func</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Function name: </span><span class="si">{</span><span class="n">str_func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">, value is:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">str_func</span><span class="p">(</span><span class="n">raw_str</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function name: isdigit, value is:
-False
-Function name: islower, value is:
-True
-Function name: isupper, value is:
-False
-</pre></div>
-</div>
-</div>
-</div>
-<p>Functions can be defined recursively. For instance, the Fibonacci sequence is defined such that <span class="math notranslate nohighlight">\( a_n = a_{n-1} + a_{n-2} \)</span> for <span class="math notranslate nohighlight">\( n&gt;1 \)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please enter n&gt;0&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
-
-
-<span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-</pre></div>
-</div>
-</div>
-</div>
-<p>This is just a taster of what can be done using base Python with few extra packages. For more, especially if you’ve done other chapters in the book already and want to go a bit deeper, see the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">Advanced Coding</span></a>.</p>
+<p>This is just a taster of what can be done using base Python with few extra packages. For more, especially if you’ve done other chapters in the book already and want to go a bit deeper, see the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">More Coding</span></a>.</p>
 </div>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
@@ -2519,10 +2280,10 @@ False
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="data-analysis-quickstart.html" title="next page">
+        <a class="right-next" href="workflow-basics.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Data Analysis Quickstart</p>
+                <p class="prevnext-title">Workflow Basics</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -2554,15 +2315,12 @@ False
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

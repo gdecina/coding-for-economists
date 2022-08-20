@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/intro.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Preliminaries" href="code-preliminaries.html" />
@@ -107,7 +108,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -133,23 +144,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -160,23 +176,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -209,10 +220,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -224,8 +282,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -344,28 +402,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -422,10 +458,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -537,11 +578,18 @@
   <a class="reference internal nav-link" href="#using-the-book-interactively">
    Using the book interactively
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contributing">
-   Contributing
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-examples-in-scripts">
+     Running examples in scripts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-the-code-from-the-book-directly">
+     Running the code from the book directly
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -576,50 +624,29 @@
 </div>
 <div class="section" id="reading-guide">
 <h2>Reading guide<a class="headerlink" href="#reading-guide" title="Permalink to this headline">¶</a></h2>
-<p>You can read this book in any order depending on your experience. Check the section headings and numbered chapter headings to find out what would be most valuable for you.</p>
+<p>You can read this book in any order depending on your experience; check the chapter titles to find out what would be most valuable for you. But if you want to start getting to grips with using code for economics, the first four sections are designed to help you get as far as possible as quickly as possible.</p>
 </div>
 <div class="section" id="using-the-book-interactively">
 <h2>Using the book interactively<a class="headerlink" href="#using-the-book-interactively" title="Permalink to this headline">¶</a></h2>
-<p>As well as reading the book, you can also run the code examples for yourself (this is a great way to learn). There are two ways to run code from the book:</p>
+<p>As well as reading the book, you can also run the code examples for yourself (this is a great way to learn). You can either copy and paste examples into Python scripts and run them yourself, or you can use some of the interactive options we provide.</p>
+<div class="section" id="running-examples-in-scripts">
+<h3>Running examples in scripts<a class="headerlink" href="#running-examples-in-scripts" title="Permalink to this headline">¶</a></h3>
+<p>For this, you just need to copy and paste examples into a Python script in Visual Studio Code and run it in an <em>interactive window</em> (once you have a working Python environment—more on how to set this up in <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>). If you’re finding it difficult to set up your Python environment, you can always use a cloud service version of Visual Studio Code instead: <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a> and <a class="reference external" href="https://www.gitpod.io/">Gitpod</a> both provide cheap or free access to a ready-made Visual Studio Code development environment in your browser window. Gitpod has a free tier.</p>
+</div>
+<div class="section" id="running-the-code-from-the-book-directly">
+<h3>Running the code from the book directly<a class="headerlink" href="#running-the-code-from-the-book-directly" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to run code directly from the book:</p>
 <ol class="simple">
-<li><p>All pages that have code on can be downloaded to your desktop and run as <em>Jupyter Notebooks</em>. Click the download symbol in the top right hand corner of the page and select ‘.ipynb’, which stands for ‘ipython notebook’. You will need to install software on your computer to run Jupyter Notebooks. This book recommends the Anaconda distribution of Python, which provides an installation of the Python language for your computer. To write and run code and notebooks, this book recommends <a class="reference external" href="https://code.visualstudio.com/docs/python/python-tutorial">Visual Studio Code</a> (plus its Python extension). There’s more on how to get started with Anaconda Python and Visual Studio Code together in the next chapter.</p></li>
+<li><p>All pages that have code on can be downloaded to your desktop and run as <em>Jupyter Notebooks</em> (which you’ll find out more about in <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Writing Code</span></a>). Click the download symbol in the top right hand corner of the page and select ‘.ipynb’, which stands for ‘ipython notebook’. You will need to install software on your computer to run Jupyter Notebooks. This book recommends the Anaconda distribution of Python, which provides an installation of the Python language for your computer. To write and run code and notebooks, this book recommends <a class="reference external" href="https://code.visualstudio.com/docs/python/python-tutorial">Visual Studio Code</a> (plus its Python extension). There’s more on how to get started with Anaconda Python and Visual Studio Code together in the next chapter.</p></li>
 <li><p>Most pages that have code on can be run as a <em>Google Colab</em> notebook with a single click on <code class="docutils literal notranslate"><span class="pre">Colab</span></code>, found under the rocket button at the top of the page. If you need to install any extra packages in a Google Colab session, the syntax is <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> to install a library called ‘packagename’. Colab notebooks are run in a browser window.</p></li>
 </ol>
 <p>To run all of the examples in the book, you may need to install additional packages too, depending on what you already have installed on your computer. The Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a> will cover how to install additional packages.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Try going to the <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Basics of Coding</span></a> chapter now and clicking on the rocketship symbol (🚀), then select “Colab”. Try running the first few code cells.</p>
+<p>Try going to the <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Coding Basics</span></a> chapter now and clicking on the rocketship symbol (🚀), then select “Colab”. Try running the first few code cells.</p>
 </div>
-<p>Note that if you’re on a secure network, you may find that option 2 doesn’t work for you because Colab is blocked. If you have a local installation of Python, and can download and run files locally too, option 1 should work. If you’re using a secure computer on a network that <em>won’t</em> allow you to install Python or its packages, there’s some advice at the end of the <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a> chapter.</p>
 <p>For a small number of the examples using data, you may need to download the relevant files from this book’s Github <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/tree/main/data">repository</a>, but this will always be explained in the relevant subsections.</p>
-<div class="tip admonition">
-<p class="admonition-title">Tip</p>
-<p>Every page with code can be downloaded and run as a Jupyter notebook–just click <i class="fas fa-download"></i> at the top of the page and select ‘.ipynb’.</p>
-<p>Most pages with code can be run in Google Colab –just click <i class="fas fa-rocket"></i> at the top of the page and select ‘Colab’.</p>
 </div>
-</div>
-<div class="section" id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<p>Contributions are welcome!</p>
-<p>The easiest way to contribute is to give this book’s <a class="reference external" href="https://github.com/aeturrell/coding-for-economists">Github page a star</a>. You could also tweet about it using the hashtags <code class="docutils literal notranslate"><span class="pre">#Econtwitter</span></code> and <code class="docutils literal notranslate"><span class="pre">#datascience</span></code>. Both of these help others find the book.</p>
-<p>You can make suggestions, requests, and point out bugs or mistakes by <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/issues">raising an issue</a> on the Github repository for the book. You can also make <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/pulls">pull requests</a> with fixes, edits, or new content.</p>
-<p>If you’re thinking of making a contribution, especially of a new page, it’s usually best to open an issue before starting to work on anything. This will allow you a chance to talk the new content over with the maintainers of the site. There is an official <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/main/Dockerfile">dockerfile</a> for the project; you can find more about how to use it and build the book over on the GitHub <a class="reference external" href="https://github.com/aeturrell/coding-for-economists#coding-for-economists">readme</a>.</p>
-<p>Contributors:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/aeturrell">aeturrell</a></p></li>
-<li><p><a class="reference external" href="https://github.com/lukestein">lukestein</a></p></li>
-</ul>
-<p>If you wish to cite the book, please use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@book</span><span class="p">{</span><span class="n">Turrell2021</span><span class="p">,</span>
-<span class="n">title</span>     <span class="o">=</span> <span class="s2">&quot;Coding for Economists&quot;</span><span class="p">,</span>
-<span class="n">author</span>    <span class="o">=</span> <span class="s2">&quot;Turrell, Arthur, and contributors&quot;</span><span class="p">,</span>
-<span class="n">year</span>      <span class="o">=</span> <span class="mi">2021</span><span class="p">,</span>
-<span class="n">publisher</span> <span class="o">=</span> <span class="s2">&quot;Online&quot;</span><span class="p">,</span>
-<span class="n">url</span>       <span class="o">=</span> <span class="s2">&quot;https://aeturrell.github.io/coding-for-economists&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Please note that this book does not represent the views of any employer of its contributors.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -716,15 +743,12 @@
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

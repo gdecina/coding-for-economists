@@ -55,6 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/econmt-regression.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Causal Inference" href="econmt-causal-inference.html" />
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +149,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -788,18 +829,6 @@ y = x'\cdot \hat{\beta} + \epsilon
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set max rows displayed for readability</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="regression-basics">
@@ -927,8 +956,8 @@ y = x'\cdot \hat{\beta} + \epsilon
 Dep. Variable:                   mass   R-squared:                       0.018
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     1.040
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):              0.312
-Time:                        23:45:05   Log-Likelihood:                -385.50
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):              0.312
+Time:                        17:52:07   Log-Likelihood:                -385.50
 No. Observations:                  59   AIC:                             775.0
 Df Residuals:                      57   BIC:                             779.2
 Df Model:                           1                                         
@@ -995,8 +1024,7 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_13_0.png" src="_images/econmt-regression_13_0.png" />
-</div>
+<img alt="_images/econmt-regression_13_0.svg" src="_images/econmt-regression_13_0.svg" /></div>
 </div>
 <p>Oh dear, Jabba’s been on the paddy frogs again, and he’s a bit of different case. When we’re estimating statistical relationships, we have all kinds of choices and should be wary about arbitrary decisions of what to include or exclude in case we fool ourselves about the generality of the relationship we are capturing. Let’s say we knew that we weren’t interested in Hutts though, but only in other species: in that case, it’s fair enough to filter out Jabba and run the regression without this obvious outlier. We’ll exclude any entry that contains the string ‘Jabba’ in the <code class="docutils literal notranslate"><span class="pre">name</span></code> column:</p>
 <div class="cell docutils container">
@@ -1014,8 +1042,8 @@ Notes:
 Dep. Variable:                   mass   R-squared:                       0.580
 Model:                            OLS   Adj. R-squared:                  0.572
 Method:                 Least Squares   F-statistic:                     77.18
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           4.02e-12
-Time:                        23:45:06   Log-Likelihood:                -252.48
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           4.02e-12
+Time:                        17:52:08   Log-Likelihood:                -252.48
 No. Observations:                  58   AIC:                             509.0
 Df Residuals:                      56   BIC:                             513.1
 Df Model:                           1                                         
@@ -1060,8 +1088,8 @@ Method:                          IRLS   Df Model:                            1
 Norm:                     TrimmedMean                                         
 Scale Est.:                       mad                                         
 Cov Type:                          H1                                         
-Date:                Sat, 18 Dec 2021                                         
-Time:                        23:45:06                                         
+Date:                Sat, 20 Aug 2022                                         
+Time:                        17:52:08                                         
 No. Iterations:                     7                                         
 ==============================================================================
                  coef    std err          z      P&gt;|z|      [0.025      0.975]
@@ -1093,8 +1121,7 @@ If the model instance has been used for another fit with different fit parameter
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_20_0.png" src="_images/econmt-regression_20_0.png" />
-</div>
+<img alt="_images/econmt-regression_20_0.svg" src="_images/econmt-regression_20_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="standard-errors">
@@ -1132,8 +1159,8 @@ If the model instance has been used for another fit with different fit parameter
 Dep. Variable:                   mass   R-squared:                       0.018
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     52.75
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           1.16e-09
-Time:                        23:45:06   Log-Likelihood:                -385.50
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.16e-09
+Time:                        17:52:08   Log-Likelihood:                -385.50
 No. Observations:                  59   AIC:                             775.0
 Df Residuals:                      57   BIC:                             779.2
 Df Model:                           1                                         
@@ -1188,8 +1215,8 @@ errors in panel data, again with keyword arguments; and</p></li>
 Dep. Variable:                   mass   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                     39.44
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           2.63e-07
-Time:                        23:45:06   Log-Likelihood:                -361.23
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           2.63e-07
+Time:                        17:52:08   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -1230,8 +1257,8 @@ Notes:
 Dep. Variable:                   mass   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                     35.10
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           1.96e-06
-Time:                        23:45:06   Log-Likelihood:                -361.23
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.96e-06
+Time:                        17:52:08   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -1401,8 +1428,8 @@ Notes:
 Dep. Variable:                    mpg   R-squared:                       0.754
 Model:                            OLS   Adj. R-squared:                  0.727
 Method:                 Least Squares   F-statistic:                     28.59
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           1.14e-08
-Time:                        23:45:06   Log-Likelihood:                -79.948
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.14e-08
+Time:                        17:52:09   Log-Likelihood:                -79.948
 No. Observations:                  32   AIC:                             167.9
 Df Residuals:                      28   BIC:                             173.8
 Df Model:                           3                                         
@@ -1540,43 +1567,43 @@ y_i = x_i\cdot \beta + z_i\cdot \gamma +\epsilon_i
   <tbody>
     <tr>
       <th>0</th>
-      <td>13</td>
-      <td>145553</td>
-      <td>0.345530</td>
-      <td>0.802935</td>
-      <td>4.455435</td>
+      <td>40</td>
+      <td>131875</td>
+      <td>0.649208</td>
+      <td>1.252331</td>
+      <td>3.927877</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>13</td>
-      <td>161335</td>
-      <td>-2.022567</td>
-      <td>1.475042</td>
-      <td>2.457227</td>
+      <td>26</td>
+      <td>65925</td>
+      <td>-0.006038</td>
+      <td>0.562455</td>
+      <td>0.476186</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>39</td>
-      <td>21624</td>
-      <td>-0.895465</td>
-      <td>-0.708896</td>
-      <td>-0.766513</td>
+      <td>25</td>
+      <td>142745</td>
+      <td>0.013956</td>
+      <td>-0.515901</td>
+      <td>0.860223</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>21</td>
-      <td>156771</td>
-      <td>1.133166</td>
-      <td>1.047194</td>
-      <td>6.219329</td>
+      <td>16</td>
+      <td>187574</td>
+      <td>0.040595</td>
+      <td>0.907806</td>
+      <td>4.500432</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>31</td>
-      <td>131429</td>
-      <td>1.493834</td>
-      <td>-2.415441</td>
-      <td>-5.531907</td>
+      <td>36</td>
+      <td>127638</td>
+      <td>-1.201797</td>
+      <td>1.157902</td>
+      <td>1.906127</td>
     </tr>
   </tbody>
 </table>
@@ -1597,19 +1624,19 @@ y_i = x_i\cdot \beta + z_i\cdot \gamma +\epsilon_i
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Absorbing LS Estimation Summary                          
 ==================================================================================
-Dep. Variable:                      y   R-squared:                          0.9370
-Estimator:               Absorbing LS   Adj. R-squared:                     0.9214
-No. Observations:             1000000   F-statistic:                     9.797e+06
-Date:                Sat, Dec 18 2021   P-value (F-stat):                   0.0000
-Time:                        23:45:12   Distribution:                      chi2(2)
-Cov. Estimator:                robust   R-squared (No Effects):             0.9090
+Dep. Variable:                      y   R-squared:                          0.9392
+Estimator:               Absorbing LS   Adj. R-squared:                     0.9241
+No. Observations:             1000000   F-statistic:                     9.827e+06
+Date:                Sat, Aug 20 2022   P-value (F-stat):                   0.0000
+Time:                        17:52:14   Distribution:                      chi2(2)
+Cov. Estimator:                robust   R-squared (No Effects):             0.9093
                                         Varaibles Absorbed:              1.987e+05
                              Parameter Estimates                              
 ==============================================================================
             Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------
-exog_0         0.9996     0.0010     989.68     0.0000      0.9976      1.0016
-exog_1         2.9995     0.0010     2969.7     0.0000      2.9975      3.0015
+exog_0         0.9986     0.0010     991.14     0.0000      0.9966      1.0006
+exog_1         3.0016     0.0010     2972.6     0.0000      2.9996      3.0035
 ==============================================================================
 </pre></div>
 </div>
@@ -1847,8 +1874,8 @@ hp:disp       -0.0001   1.91e-05     -7.409      0.000      -0.000      -0.000
 Dep. Variable:                      y   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                    0.7446
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):              0.392
-Time:                        23:45:12   Log-Likelihood:                -361.23
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):              0.392
+Time:                        17:52:14   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -2008,8 +2035,8 @@ Notes:
 Dep. Variable:                      y   R-squared:                       0.998
 Model:                            OLS   Adj. R-squared:                  0.998
 Method:                 Least Squares   F-statistic:                 4.302e+04
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):          6.90e-261
-Time:                        23:45:12   Log-Likelihood:                 165.45
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):          6.90e-261
+Time:                        17:52:14   Log-Likelihood:                 165.45
 No. Observations:                 200   AIC:                            -324.9
 Df Residuals:                     197   BIC:                            -315.0
 Df Model:                           2                                         
@@ -2206,9 +2233,9 @@ x_{2i} &amp; = z_{1i}\hat{\delta} + z_{2i}\hat{\gamma} + \nu_i\end{split}
 ==============================================================================
 Dep. Variable:          np.log(packs)   R-squared:                      0.9659
 Estimator:                    IV-2SLS   Adj. R-squared:                 0.9279
-No. Observations:                  96   F-statistic:                 3.339e+16
-Date:                Sat, Dec 18 2021   P-value (F-stat)                0.0000
-Time:                        23:45:13   Distribution:                 chi2(50)
+No. Observations:                  96   F-statistic:                 1.606e+16
+Date:                Sat, Aug 20 2022   P-value (F-stat)                0.0000
+Time:                        17:52:15   Distribution:                 chi2(50)
 Cov. Estimator:             clustered                                         
                                                                               
                                 Parameter Estimates                                
@@ -2216,7 +2243,7 @@ Cov. Estimator:             clustered
                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 -----------------------------------------------------------------------------------
 Intercept           9.4924     0.0263     360.24     0.0000      9.4407      9.5440
-C(year)[T.1995]    -0.0328  4.149e-09 -7.907e+06     0.0000     -0.0328     -0.0328
+C(year)[T.1995]    -0.0328                                                         
 C(state)[T.AR]      0.1770     0.0531     3.3338     0.0009      0.0729      0.2810
 C(state)[T.AZ]     -0.0899     0.0132    -6.8132     0.0000     -0.1158     -0.0640
 C(state)[T.CA]     -0.2781     0.0214    -12.996     0.0000     -0.3200     -0.2361
@@ -2264,8 +2291,8 @@ C(state)[T.WA]      0.0064     0.0011     6.0151     0.0000      0.0043      0.0
 C(state)[T.WI]      0.0741     0.0590     1.2569     0.2088     -0.0415      0.1897
 C(state)[T.WV]      0.1576     0.0582     2.7097     0.0067      0.0436      0.2716
 C(state)[T.WY]     -0.0169     0.0590    -0.2858     0.7750     -0.1325      0.0988
-np.log(rincome)     0.4434  3.747e-08  1.183e+07     0.0000      0.4434      0.4434
-np.log(rprice)     -1.2793  9.941e-09 -1.287e+08     0.0000     -1.2793     -1.2793
+np.log(rincome)     0.4434  3.272e-08  1.355e+07     0.0000      0.4434      0.4434
+np.log(rprice)     -1.2793                                                         
 ===================================================================================
 
 Endogenous: np.log(rprice)
@@ -2273,6 +2300,10 @@ Instruments: taxs
 Clustered Covariance (One-Way)
 Debiased: False
 Num Clusters: 2
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:178: RuntimeWarning: invalid value encountered in sqrt
+  std_errors = sqrt(diag(self.cov))
 </pre></div>
 </div>
 </div>
@@ -2293,10 +2324,10 @@ Num Clusters: 2
 R-squared                          0.9760
 Partial R-squared                  0.7070
 Shea&#39;s R-squared                   0.7070
-Partial F-statistic            -1.029e+17
+Partial F-statistic            -8.798e+16
 P-value (Partial F-stat)           1.0000
 Partial F-stat Distn              chi2(1)
-==========================   ============
+========================== ==============
 Intercept                          4.4375
                                  (410.34)
 C(year)[T.1995]                    0.0822
@@ -2396,17 +2427,13 @@ C(state)[T.WV]                     0.0205
 C(state)[T.WY]                    -0.0005
                                 (-0.0220)
 np.log(rincome)                   -0.0296
-                               (        )
+                             (-1.461e+06)
 taxs                               0.0051
                                (        )
 -----------------------------------------
 
 T-stats reported in parentheses
 T-stats use same covariance type as original model
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:178: RuntimeWarning: invalid value encountered in sqrt
-  std_errors = sqrt(diag(self.cov))
 </pre></div>
 </div>
 </div>
@@ -2421,10 +2448,10 @@ T-stats use same covariance type as original model
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wooldridge&#39;s regression test of exogeneity
 H0: Endogenous variables are exogenous
-Statistic: -6922589949093357.0000
+Statistic: -5723571921621970.0000
 P-value: 1.0000
 Distributed: chi2(1)
-WaldTestStatistic, id: 0x7f926de769a0
+WaldTestStatistic, id: 0x7fe64812e340
 </pre></div>
 </div>
 </div>
@@ -2454,6 +2481,10 @@ WaldTestStatistic, id: 0x7f926de769a0
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:1603: FutureWarning: In a future version of pandas all arguments of concat except for the argument &#39;objs&#39; will be keyword-only
+  vals = concat(
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                    Model Comparison                    
 ========================================================
                                    OLS              2SLS
@@ -2464,13 +2495,13 @@ No. Observations                    96                96
 Cov. Est.                    clustered         clustered
 R-squared                       0.9675            0.9659
 Adj. R-squared                  0.9313            0.9279
-F-statistic                  2.253e+16         3.339e+16
-P-value (F-stat)                0.0000            0.0000
+F-statistic                 -1.092e+16         1.606e+16
+P-value (F-stat)                1.0000            0.0000
 ==================     ===============   ===============
 Intercept                       8.3597            9.4924
                               (484.80)          (360.24)
 C(year)[T.1995]                -0.0885           -0.0328
-                          (-1.182e+07)      (-7.907e+06)
+                                                        
 C(state)[T.AR]                  0.1686            0.1770
                               (3.7460)          (3.3338)
 C(state)[T.AZ]                 -0.1280           -0.0899
@@ -2566,18 +2597,14 @@ C(state)[T.WV]                  0.1490            0.1576
 C(state)[T.WY]                 -0.0150           -0.0169
                              (-0.2771)         (-0.2858)
 np.log(rincome)                 0.4974            0.4434
-                                             (1.183e+07)
+                           (7.788e+06)       (1.355e+07)
 np.log(rprice)                 -1.0560           -1.2793
-                          (-1.025e+08)      (-1.287e+08)
+                            (  -9e+07)                  
 ==================== ================= =================
 Instruments                                         taxs
 --------------------------------------------------------
 
 T-stats reported in parentheses
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:1603: FutureWarning: In a future version of pandas all arguments of concat except for the argument &#39;objs&#39; will be keyword-only
-  vals = concat(
 </pre></div>
 </div>
 </div>
@@ -2640,8 +2667,8 @@ T-stats reported in parentheses
 Dep. Variable:                  GRADE   No. Observations:                   32
 Model:                          Logit   Df Residuals:                       28
 Method:                           MLE   Df Model:                            3
-Date:                Sat, 18 Dec 2021   Pseudo R-squ.:                  0.3740
-Time:                        23:45:13   Log-Likelihood:                -12.890
+Date:                Sat, 20 Aug 2022   Pseudo R-squ.:                  0.3740
+Time:                        17:52:15   Log-Likelihood:                -12.890
 converged:                       True   LL-Null:                       -20.592
 Covariance Type:            nonrobust   LLR p-value:                  0.001502
 ==============================================================================
@@ -2725,8 +2752,8 @@ PSI            2.3787      1.065      2.234      0.025       0.292       4.465
 Dep. Variable:                  GRADE   No. Observations:                   32
 Model:                         Probit   Df Residuals:                       28
 Method:                           MLE   Df Model:                            3
-Date:                Sat, 18 Dec 2021   Pseudo R-squ.:                  0.3775
-Time:                        23:45:13   Log-Likelihood:                -12.819
+Date:                Sat, 20 Aug 2022   Pseudo R-squ.:                  0.3775
+Time:                        17:52:15   Log-Likelihood:                -12.819
 converged:                       True   LL-Null:                       -20.592
 Covariance Type:            nonrobust   LLR p-value:                  0.001405
 ==============================================================================
@@ -2793,12 +2820,11 @@ PSI            1.4263      0.595      2.397      0.017       0.260       2.593
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_16508/516205570.py:5: UserWarning: linestyle is redundantly defined by the &#39;linestyle&#39; keyword argument and the fmt string &quot;r-&quot; (-&gt; linestyle=&#39;-&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_76518/516205570.py:5: UserWarning: linestyle is redundantly defined by the &#39;linestyle&#39; keyword argument and the fmt string &quot;r-&quot; (-&gt; linestyle=&#39;-&#39;). The keyword argument will take precedence.
   ax.plot(support, st.logistic.cdf(support), &quot;r-&quot;, ls=&quot;--&quot;, label=&quot;Logistic&quot;)
 </pre></div>
 </div>
-<img alt="_images/econmt-regression_99_1.png" src="_images/econmt-regression_99_1.png" />
-</div>
+<img alt="_images/econmt-regression_99_1.svg" src="_images/econmt-regression_99_1.svg" /></div>
 </div>
 <p>What difference there is, is that logistic regression puts more weight into the tails of the distribution. Arguably, logit is easier to interpret too. With logistic regression, a one unit change in <span class="math notranslate nohighlight">\(x_i\)</span> is associated with a <span class="math notranslate nohighlight">\(\beta_i\)</span> change in the log odds of a 1 outcome or, alternatively, an <span class="math notranslate nohighlight">\(e^{\beta_i}\)</span>-fold change in the odds, all else being equal. With a probit, this is a change of <span class="math notranslate nohighlight">\(\beta_i z\)</span> for <span class="math notranslate nohighlight">\(z\)</span> a normalised variable that you’d have to convert into a predicted probability using the normal CDF.</p>
 </div>
@@ -2925,8 +2951,8 @@ y = x' \cdot \beta
 Dep. Variable:                foodexp   Pseudo R-squared:               0.6206
 Model:                       QuantReg   Bandwidth:                       64.51
 Method:                 Least Squares   Sparsity:                        209.3
-Date:                Sat, 18 Dec 2021   No. Observations:                  235
-Time:                        23:45:13   Df Residuals:                      233
+Date:                Sat, 20 Aug 2022   No. Observations:                  235
+Time:                        17:52:16   Df Residuals:                      233
                                         Df Model:                            1
 ==============================================================================
                  coef    std err          t      P&gt;|t|      [0.025      0.975]
@@ -2969,8 +2995,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_111_0.png" src="_images/econmt-regression_111_0.png" />
-</div>
+<img alt="_images/econmt-regression_111_0.svg" src="_images/econmt-regression_111_0.svg" /></div>
 </div>
 <p>This chart shows very clearly how quantile regression differs from OLS. The line fitted by OLS is trying to be all things to all points whereas the line fitted by quantile regression is focused only on its quantile. You can also see how points far from the median (not all shown) may be having a large influence on the OLS line.</p>
 </div>
@@ -3143,8 +3168,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_120_0.png" src="_images/econmt-regression_120_0.png" />
-</div>
+<img alt="_images/econmt-regression_120_0.svg" src="_images/econmt-regression_120_0.svg" /></div>
 </div>
 <p>A rolling regression with an <em>expanding</em> rather than <em>moving</em> window is effectively a recursive least squares model. We can do this instead using the <code class="docutils literal notranslate"><span class="pre">RecursiveLS</span></code> function from <strong>statsmodels</strong>. Let’s fit this to the whole dataset:</p>
 <div class="cell docutils container">
@@ -3160,8 +3184,8 @@ strong multicollinearity or other numerical problems.
 ==============================================================================
 Dep. Variable:                 target   No. Observations:                  200
 Model:                    RecursiveLS   Log Likelihood                -570.923
-Date:                Sat, 18 Dec 2021   R-squared:                       0.988
-Time:                        23:45:15   AIC                           1145.847
+Date:                Sat, 20 Aug 2022   R-squared:                       0.988
+Time:                        17:52:17   AIC                           1145.847
 Sample:                             0   BIC                           1152.444
                                 - 200   HQIC                          1148.516
 Covariance Type:            nonrobust   Scale                           17.413
@@ -3198,8 +3222,7 @@ Warnings:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_124_0.png" src="_images/econmt-regression_124_0.png" />
-</div>
+<img alt="_images/econmt-regression_124_0.svg" src="_images/econmt-regression_124_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="regression-plots">
@@ -3262,8 +3285,7 @@ Warnings:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_128_0.png" src="_images/econmt-regression_128_0.png" />
-</div>
+<img alt="_images/econmt-regression_128_0.svg" src="_images/econmt-regression_128_0.svg" /></div>
 </div>
 <p>Clearly, this is not quite normal and there are some serious outliers in the tails.</p>
 <p>Let’s run take a look at the unconditional relationship we’re interested in: how murder depends on high school graduation. We’ll use <a class="reference external" href="https://plotnine.readthedocs.io/en/stable/index.html"><strong>plotnine</strong></a>’s <code class="docutils literal notranslate"><span class="pre">geom_smooth</span></code> to do this but bear in mind it will only run a linear model of <code class="docutils literal notranslate"><span class="pre">'murder</span> <span class="pre">~</span> <span class="pre">hs_grad'</span></code> and ignore the other covariates.</p>
@@ -3280,8 +3302,7 @@ Warnings:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_130_0.png" src="_images/econmt-regression_130_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766682134263)&gt;
+<img alt="_images/econmt-regression_130_0.svg" src="_images/econmt-regression_130_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8789235286447)&gt;
 </pre></div>
 </div>
 </div>
@@ -3305,8 +3326,7 @@ Warnings:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_env: 1
 </pre></div>
 </div>
-<img alt="_images/econmt-regression_132_1.png" src="_images/econmt-regression_132_1.png" />
-</div>
+<img alt="_images/econmt-regression_132_1.svg" src="_images/econmt-regression_132_1.svg" /></div>
 </div>
 <p>At this point, the results of the regression are useful context.</p>
 <div class="cell docutils container">
@@ -3324,8 +3344,8 @@ Warnings:
 Dep. Variable:                 murder   R-squared:                       0.813
 Model:                            OLS   Adj. R-squared:                  0.797
 Method:                 Least Squares   F-statistic:                     50.08
-Date:                Sat, 18 Dec 2021   Prob (F-statistic):           3.42e-16
-Time:                        23:45:18   Log-Likelihood:                -95.050
+Date:                Sat, 20 Aug 2022   Prob (F-statistic):           3.42e-16
+Time:                        17:52:19   Log-Likelihood:                -95.050
 No. Observations:                  51   AIC:                             200.1
 Df Residuals:                      46   BIC:                             209.8
 Df Model:                           4                                         
@@ -3369,8 +3389,7 @@ strong multicollinearity or other numerical problems.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eval_env: 1
 </pre></div>
 </div>
-<img alt="_images/econmt-regression_137_1.png" src="_images/econmt-regression_137_1.png" />
-</div>
+<img alt="_images/econmt-regression_137_1.svg" src="_images/econmt-regression_137_1.svg" /></div>
 </div>
 <p><strong>statsmodels</strong> can also produce influence plots of the ‘externally studentised’ residuals vs. the leverage of each observation as measured by the so-called hat matrix <span class="math notranslate nohighlight">\(X(X^{\;\prime}X)^{-1}X^{\;\prime}\)</span> (because it puts the ‘hat’ on <span class="math notranslate nohighlight">\(y\)</span>). Externally studentised residuals are residuals that are scaled by their standard deviation. High leverage points could exert an undue influence over the regression line, but only if the predicted <span class="math notranslate nohighlight">\(y\)</span> values of a regression that was fit with them excluded was quite different. In the example below, DC is having a big influence.</p>
 <div class="cell docutils container">
@@ -3381,8 +3400,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_140_0.png" src="_images/econmt-regression_140_0.png" />
-</div>
+<img alt="_images/econmt-regression_140_0.svg" src="_images/econmt-regression_140_0.svg" /></div>
 </div>
 <p>Finally, it’s nice to be able to see plots of our coefficients along with their standard errors. There isn’t a built-in <strong>statsmodels</strong> option for this, but happily it’s easy to extract the results of regressions in a sensible format. Using the <code class="docutils literal notranslate"><span class="pre">results</span></code> object from earlier, and excluding the intercept, we can get the coefficients from <code class="docutils literal notranslate"><span class="pre">results.params[1:]</span></code> and the associated errors from <code class="docutils literal notranslate"><span class="pre">results.bse[1:]</span></code>.</p>
 <div class="cell docutils container">
@@ -3403,8 +3421,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_142_0.png" src="_images/econmt-regression_142_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8766683401545)&gt;
+<img alt="_images/econmt-regression_142_0.svg" src="_images/econmt-regression_142_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8789190562880)&gt;
 </pre></div>
 </div>
 </div>
@@ -3455,8 +3472,7 @@ strong multicollinearity or other numerical problems.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit complete
 </pre></div>
 </div>
-<img alt="_images/econmt-regression_146_1.png" src="_images/econmt-regression_146_1.png" />
-</div>
+<img alt="_images/econmt-regression_146_1.svg" src="_images/econmt-regression_146_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="review">
@@ -3550,15 +3566,12 @@ strong multicollinearity or other numerical problems.
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

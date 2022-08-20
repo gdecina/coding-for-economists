@@ -53,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-advanced.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Options for Writing Code" href="code-where.html" />
-    <link rel="prev" title="Sharing Data" href="data-sharing.html" />
+    <link rel="next" title="Automating Research Outputs" href="auto-research-outputs.html" />
+    <link rel="prev" title="Databases" href="data-databases.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -110,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -119,7 +130,7 @@
   Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
    Data Analysis Quickstart
@@ -136,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Advanced Data
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -212,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -227,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -347,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -425,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -556,6 +597,51 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternatives-to-pandas">
+   Alternatives to
+   <strong>
+    pandas
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datatable">
+     Datatable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cudf">
+     cuDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polars">
+     Polars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plydata">
+     Plydata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datar">
+     Datar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tidypolars">
+     tidypolars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#others">
+     Others
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-validation">
    Data Validation
   </a>
@@ -600,6 +686,11 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fake-and-synthetic-data">
+   Fake and Synthetic Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-orchestration">
    Data Orchestration
   </a>
@@ -623,7 +714,7 @@
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>In this chapter, you’ll learn about advanced methods for working with data.</p>
+<p>In this chapter, you’ll learn about advanced methods and tolls for working with data, including data validation, data orchestration, and some alternatives to the <strong>pandas</strong> package.</p>
 <div class="section" id="imports">
 <h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <p>First we need to import the classic packages we almost always need:</p>
@@ -637,18 +728,85 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set max rows displayed for readability</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
+</div>
+</div>
+<div class="section" id="alternatives-to-pandas">
+<h2>Alternatives to <strong>pandas</strong><a class="headerlink" href="#alternatives-to-pandas" title="Permalink to this headline">¶</a></h2>
+<p><strong>pandas</strong> isn’t the only game in town, not by a long way—though it’s by far the best supported and the most fully featured. <strong>pandas</strong> is a good default package to use for data in the vast majority of cases. But it’s always good to have options—or, put another way, options have value! Other dataframe libraries may have a syntax that you prefer (<strong>datatable</strong>’s syntax is popular with some) or provide a speed-up in certain situations, for example when working with large datasets (<strong>polars</strong> promises to breeze through big data far faster than pandas can).</p>
+<p>If you’re specifically interested in how different dataframe options perform on increasingly large datasets, take a look at the benchmarks <a class="reference external" href="https://h2oai.github.io/db-benchmark/">here</a>.</p>
+<p>Here’s a quick run-through of some alternatives to <strong>pandas</strong>:</p>
+<div class="section" id="datatable">
+<h3>Datatable<a class="headerlink" href="#datatable" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a> is another dataframe based way to do analysis, and it has quite a different syntax to <strong>pandas</strong> for data manipulation. <strong>datatable</strong> is very fast, not the fastest dataframe option out there, but it holds its own. Its other major advantage is that it is comfortable running on extremely large (think 50GB) datasets. Most other dataframe packages (including in other languages) cannot cope with this.</p>
+<p>In datatable, almost all operations are achieved via so-called ‘square-bracket notation’. Operations with a (data) Frame are almost all expressed in the form</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DT</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">DT</span></code> is a datatable dataframe, <code class="docutils literal notranslate"><span class="pre">i</span></code> is the row selector, <code class="docutils literal notranslate"><span class="pre">j</span></code> is the column selector, and <code class="docutils literal notranslate"><span class="pre">...</span></code> is a space that could be filled by other commands (potentially several). However, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> aren’t just positional, as they might be in a <strong>numpy</strong> array or a list, they do a lot more than that. Datatable allows <code class="docutils literal notranslate"><span class="pre">i</span></code> to be anything that can conceivably be interpreted as a row selector: an integer to select a row, a slice, a range, a list of integers, a list of slices, an expression, a boolean-valued Frame, an integer-valued Frame, an integer <strong>numpy</strong> array, a generator, and more.</p>
+<p>Likewise, <code class="docutils literal notranslate"><span class="pre">j</span></code> is also really versatile. It can be used to select a column by name or position, but it will also accept a list of columns, a slice, a list of booleans indicating which columns to pick, an expression, a list of expressions, and a dictionary of expressions. The j expression can even be a python type (such as int or dt.float32), selecting all columns matching that type!</p>
+<p>To change an entry (entries), you can use <code class="docutils literal notranslate"><span class="pre">DT[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">new_value</span></code>, and to remove it (or them), it’s <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">DT[i,</span> <span class="pre">j]</span></code>.</p>
+</div>
+<div class="section" id="cudf">
+<h3>cuDF<a class="headerlink" href="#cudf" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/rapidsai/cudf"><strong>cuDF</strong></a> is still under development and so doesn’t yet have all the features of <strong>pandas</strong>. It’s a Python GPU DataFrame library built on the blisteringly fast Apache Arrow columnar memory format. The parts of the library that have been implemented follow the same commands and structure as <strong>pandas</strong>, so it should be easy to use it should you need to.</p>
+<p><strong>cuDF</strong> is one of the fastest dataframe library out there in any of Python, Julia, Rust, or R with the caveats that:</p>
+<ul class="simple">
+<li><p>this only applies to in-memory datasets, ie datasets smaller than a few GB</p></li>
+<li><p>it doesn’t yet do everything</p></li>
+<li><p>it’s only currently available on the Linux operating system</p></li>
+<li><p>you need a GPU (and associated software) to use it!</p></li>
+</ul>
+</div>
+<div class="section" id="polars">
+<h3>Polars<a class="headerlink" href="#polars" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.pola.rs/"><strong>Polars</strong></a> is one of the fastest dataframe libraries in any language. It also uses Apache Arrow as backend. It currently consists of an ‘eager’ (for datasets smaller than approximately a few GB) interface that’s very similar to <strong>pandas</strong> and a ‘lazy’ interface (don’t worry if you don’t know what that means, it’s a big data thing) that is somewhat similar to spark (a big data tool). <strong>Polars</strong> is built on the Rust language. It’s particularly effective at merging datasets.</p>
+</div>
+<div class="section" id="plydata">
+<h3>Plydata<a class="headerlink" href="#plydata" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://plydata.readthedocs.io">Plydata</a> uses the syntax of the <strong>dplyr</strong> package in the R statistical language (the package is a really important part of the data ecosystem in R). It’s built around method chaining and everything being in a tidy format, which has pros and cons. Largely, the benefits are in readability and a smaller number of commands to cover the ground that you need to. The downsides are that it plays best with tidy data and when chained methods go wrong it can be more difficult to find out what the issue is.</p>
+</div>
+<div class="section" id="datar">
+<h3>Datar<a class="headerlink" href="#datar" title="Permalink to this headline">¶</a></h3>
+<p>Another library that gets close to <strong>dplylr</strong> syntax is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Like <strong>plydata</strong>, it integrates with <strong>plotnine</strong> for visualisation.</p>
+</div>
+<div class="section" id="tidypolars">
+<h3>tidypolars<a class="headerlink" href="#tidypolars" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://tidypolars.readthedocs.io/"><strong>tidypolars</strong></a> combines the syntax of <strong>dplyr</strong> with the best-in-class speed (for any language, as of the time of writing) of Python package <a class="reference external" href="https://www.pola.rs/"><strong>polars</strong></a>. Here’s an example of a typical command to give you a flavour of what the syntax looks like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tidypolars</span> <span class="k">as</span> <span class="nn">tp</span>
+<span class="kn">from</span> <span class="nn">tidypolars</span> <span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">desc</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">tp</span><span class="o">.</span><span class="n">Tibble</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
+
+<span class="p">(</span>
+    <span class="n">df</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">),</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">double_x</span> <span class="o">=</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">x_plus_y</span> <span class="o">=</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">))</span>
 <span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>┌─────┬─────┬─────┬──────────┬──────────┐
+│ x   ┆ y   ┆ z   ┆ double_x ┆ x_plus_y │
+│ --- ┆ --- ┆ --- ┆ ---      ┆ ---      │
+│ i64 ┆ i64 ┆ str ┆ i64      ┆ i64      │
+╞═════╪═════╪═════╪══════════╪══════════╡
+│ 2   ┆ 5   ┆ b   ┆ 4        ┆ 7        │
+├╌╌╌╌╌┼╌╌╌╌╌┼╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ 0   ┆ 3   ┆ a   ┆ 0        ┆ 3        │
+├╌╌╌╌╌┼╌╌╌╌╌┼╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ 1   ┆ 4   ┆ a   ┆ 2        ┆ 5        │
+└─────┴─────┴─────┴──────────┴──────────┘
+</pre></div>
 </div>
 </div>
+<div class="section" id="others">
+<h3>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/kieferk/dfply">dfplyr</a> also follows the syntax of the <strong>dplyr</strong> package in R but it does not appear to be under active development.</p></li>
+<li><p><a class="reference external" href="https://github.com/machow/siuba">siuba</a> is yet another <strong>dplyr</strong> inspired package! It is under active development.</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="data-validation">
@@ -1155,14 +1313,14 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;result&quot;: {
-    &quot;observed_value&quot;: &quot;int64&quot;
-  },
   &quot;success&quot;: true,
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
+  },
+  &quot;result&quot;: {
+    &quot;observed_value&quot;: &quot;int64&quot;
   },
   &quot;meta&quot;: {}
 }
@@ -1178,17 +1336,17 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;result&quot;: {
-    &quot;observed_value&quot;: 0.6,
-    &quot;element_count&quot;: 5,
-    &quot;missing_count&quot;: null,
-    &quot;missing_percent&quot;: null
-  },
   &quot;success&quot;: false,
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
+  },
+  &quot;result&quot;: {
+    &quot;observed_value&quot;: 0.6,
+    &quot;element_count&quot;: 5,
+    &quot;missing_count&quot;: null,
+    &quot;missing_percent&quot;: null
   },
   &quot;meta&quot;: {}
 }
@@ -1211,6 +1369,12 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: true,
+  &quot;exception_info&quot;: {
+    &quot;raised_exception&quot;: false,
+    &quot;exception_traceback&quot;: null,
+    &quot;exception_message&quot;: null
+  },
   &quot;result&quot;: {
     &quot;element_count&quot;: 5,
     &quot;missing_count&quot;: 0,
@@ -1223,12 +1387,6 @@ failure cases:
       -20.4
     ]
   },
-  &quot;success&quot;: true,
-  &quot;exception_info&quot;: {
-    &quot;raised_exception&quot;: false,
-    &quot;exception_traceback&quot;: null,
-    &quot;exception_message&quot;: null
-  },
   &quot;meta&quot;: {}
 }
 </pre></div>
@@ -1240,6 +1398,7 @@ failure cases:
 <div class="section" id="pydantic">
 <h3>Pydantic<a class="headerlink" href="#pydantic" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://pydantic-docs.helpmanual.io/"><strong>Pydantic</strong></a> has some of the same features as <strong>pandera</strong> but it piggybacks on the ability of Python 3.5+ to have ‘typed’ variables (if you’re not sure what that is, it’s a way to declare a variable has a particular data type from inception) and it is really focused around the validation of objects (created from classes) rather than dataframes.</p>
+<p>If you’ve used the <a class="reference external" href="https://sqlmodel.tiangolo.com/">SQLModel</a> package for writing SQL queries, you may be interested to know that every SQLModel call is also a Pydantic model.</p>
 <p>Here’s an example of a Pydantic schema that also implements a class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1341,222 +1500,19 @@ failure cases:
 <p>Much more complex schemas can be <a class="reference external" href="https://docs.python-cerberus.org/en/stable/validation-rules.html">constructed</a>.</p>
 </div>
 </div>
+<div class="section" id="fake-and-synthetic-data">
+<h2>Fake and Synthetic Data<a class="headerlink" href="#fake-and-synthetic-data" title="Permalink to this headline">¶</a></h2>
+<p>Fake data can be very useful for testing pipelines and trying out analyses before you have the <em>real</em> data. The closer fake data is to real data, the more likely that you’re going to fully prepare yourself for the real data.</p>
+<p><em>Fake</em> data are data generated according to a schema that bear no statistical relationship to the real data. There are powerful tools for generating fake data. One of the most popular and fast libraries for doing so is <a class="reference external" href="https://mimesis.name/">Mimesis</a>.</p>
+<p><em>Synthetic</em> data take this one step further: they do capture some of the statistical properties of the underlying data and are generated from the underlying data. Again, they can be useful for trying out data before using the real thing—especially if the real data are highly confidential. A useful package for comparing real and synthetic data is <a class="reference external" href="https://datasciencecampus.github.io/synthgauge">SynthGuage</a>.</p>
+</div>
 <div class="section" id="data-orchestration">
 <h2>Data Orchestration<a class="headerlink" href="#data-orchestration" title="Permalink to this headline">¶</a></h2>
 <p>Data orchestration is the automation of data-driven processes from end-to-end, including preparing data, making decisions based on that data, and taking actions based on those decisions. Think of a data pipeline in which you extract data (perhaps from files), transform it somehow, and load it into where you want to put it (downstream in your research process, or perhaps into an app).</p>
+<p>Going into details of data orchestration is outside of the scope of this book, so we won’t be seeing a practical example, but we think it’s important enough to mention it and to point you to more resources.</p>
 <p>There are some truly amazing tools out there to help you do this on a production scale. Perhaps the best known and most suited for production are AirBnB’s <a class="reference external" href="http://airflow.incubator.apache.org/"><strong>Airflow</strong></a> and Spotify’s <a class="reference external" href="https://github.com/spotify/luigi"><strong>Luigi</strong></a>. Airflow in particular is widely used in the tech industry, and doesn’t just schedule data processes in Python: it can run processes in pretty much whatever you like. Both of these tools try to solve the ‘plumbing’ associated with long-running batch processes on data: chaining tasks, automating them, dealing with failures, and scheduling. Both Luigi and Airflow have fancy interfaces to show you what’s going on with your tasks.</p>
 <p>Data orchestration tools typically have a directed acyclic graph, a DAG, at the heart of how tasks are strung together. This defines how different tasks depend on each other in order, with one task following from the previous one (or perhaps following from multiple previous tasks). It’s an automation dream.</p>
-<p>However, for a research project, it’s hard to recommend these two tools as they’re just a bit too powerful; Airflow in particular can do just about anything but has a steep learning curve. So, instead, to show the power of data orchestration we’ll use a more lightweight but also very powerful library: <a class="reference external" href="https://dagster.io/"><strong>dagster</strong></a>, which bills itself as ‘a data orchestrator for machine learning, analytics, and ETL [extract, transform, and load]’. Some of the key features are being able to implement components in various tools, such as Pandas and SQL, define pipelines as DAGs, and to test the same setup on your machine that you then deploy to cloud. Like the other tools, it has a nice visual interface to show what’s happening. Necessarily, we’ll only be seeing a very brief introduction to it here.</p>
-<p><strong>Dagster</strong> works by using <em>function decorators</em> (the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> symbol) to define the ‘solids’ that are the nodes in <strong>dagster</strong>’s DAG. The <code class="docutils literal notranslate"><span class="pre">&#64;pipeline</span></code> defines the set of functions that are composed in the pipeline. Here’s an example of defining a simple pipeline that produces the same phrase with different capitalisations:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">execute_pipeline</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">solid</span>
-
-
-<span class="nd">@solid</span>
-<span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;dagster&quot;</span>
-
-
-<span class="nd">@solid</span>
-<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;hello, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-
-
-<span class="nd">@solid</span>
-<span class="k">def</span> <span class="nf">leading_caps</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">phrase</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">phrase</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-
-
-<span class="nd">@solid</span>
-<span class="k">def</span> <span class="nf">all_upper</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">phrase</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">phrase</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-
-
-<span class="nd">@solid</span>
-<span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">phrase_to_display</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">phrase_to_display</span><span class="p">)</span>
-
-
-<span class="nd">@pipeline</span>
-<span class="k">def</span> <span class="nf">hello_pipeline</span><span class="p">():</span>
-    <span class="n">hello_text</span> <span class="o">=</span> <span class="n">hello</span><span class="p">(</span><span class="n">get_name</span><span class="p">())</span>
-    <span class="c1"># Alias distinguishes between the same fn called twice with different params</span>
-    <span class="n">display_leading</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;leading&quot;</span><span class="p">)</span>
-    <span class="n">display_upper</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;upper&quot;</span><span class="p">)</span>
-    <span class="n">display_leading</span><span class="p">(</span><span class="n">leading_caps</span><span class="p">(</span><span class="n">hello_text</span><span class="p">))</span>
-    <span class="n">display_upper</span><span class="p">(</span><span class="n">all_upper</span><span class="p">(</span><span class="n">hello_text</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>This is purposefully both over-engineered and very simple (Dagster pipelines can have a <em>lot</em> more complexity of this), but we’re just seeing the most basic principles of the library here.</p>
-<p>With a pipeline defined, we can now execute it in three different ways: in a python script, using the command line, or via graphical user interface. Let’s see the script method first:</p>
-<div class="cell tag_outputPrepend docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">execute_pipeline</span><span class="p">(</span><span class="n">hello_pipeline</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - PIPELINE_START - Started execution of pipeline &quot;hello_pipeline&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Executing steps in process (pid: 27158)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Starting initialization of resources [io_manager].
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Finished initialization of resources [io_manager].
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - LOGS_CAPTURED - Started capturing logs for solid: get_name.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_START - Started execution of step &quot;get_name&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - get_name - STEP_SUCCESS - Finished execution of step &quot;get_name&quot; in 2.33ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - LOGS_CAPTURED - Started capturing logs for solid: hello.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_START - Started execution of step &quot;hello&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - LOADED_INPUT - Loaded input &quot;name&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;get_name&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_INPUT - Got input &quot;name&quot; of type &quot;String&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - hello - STEP_SUCCESS - Finished execution of step &quot;hello&quot; in 1.97ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - LOGS_CAPTURED - Started capturing logs for solid: all_upper.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_START - Started execution of step &quot;all_upper&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - all_upper - STEP_SUCCESS - Finished execution of step &quot;all_upper&quot; in 2.13ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - LOGS_CAPTURED - Started capturing logs for solid: leading_caps.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_START - Started execution of step &quot;leading_caps&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - LOADED_INPUT - Loaded input &quot;phrase&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;hello&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_INPUT - Got input &quot;phrase&quot; of type &quot;String&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading_caps - STEP_SUCCESS - Finished execution of step &quot;leading_caps&quot; in 2.11ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - LOGS_CAPTURED - Started capturing logs for solid: upper.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_START - Started execution of step &quot;upper&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;all_upper&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - upper - STEP_SUCCESS - Finished execution of step &quot;upper&quot; in 2.15ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - LOGS_CAPTURED - Started capturing logs for solid: leading.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_START - Started execution of step &quot;leading&quot;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - LOADED_INPUT - Loaded input &quot;phrase_to_display&quot; using input manager &quot;io_manager&quot;, from output &quot;result&quot; of step &quot;leading_caps&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_INPUT - Got input &quot;phrase_to_display&quot; of type &quot;String&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_OUTPUT - Yielded output &quot;result&quot; of type &quot;Any&quot;. (Type check passed).
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - HANDLED_OUTPUT - Handled output &quot;result&quot; using IO manager &quot;io_manager&quot;
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - leading - STEP_SUCCESS - Finished execution of step &quot;leading&quot; in 2.13ms.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - ENGINE_EVENT - Finished steps in process (pid: 27158) in 49ms
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-11-21 10:24:40 - dagster - DEBUG - hello_pipeline - d838d864-358c-4375-999a-4b1be19642f3 - 27158 - PIPELINE_SUCCESS - Finished execution of pipeline &quot;hello_pipeline&quot;.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HELLO, DAGSTER!
-Hello, Dagster!
-</pre></div>
-</div>
-</div>
-</div>
-<p>We get a lot of output about how the pipeline executed but it ends with <code class="docutils literal notranslate"><span class="pre">HELLO,</span> <span class="pre">DAGSTER!</span></code> and <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">Dagster!</span></code>, which is the result of our DAG.</p>
-<p>The second way of running it is by using the command line. If this was in a script called <code class="docutils literal notranslate"><span class="pre">hello_dagster.py</span></code> then the command to run it would be:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dagster</span> <span class="n">pipeline</span> <span class="n">execute</span> <span class="o">-</span><span class="n">f</span> <span class="n">hello_dagster</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-</div>
-<p>Finally, there’s a nice GUI (graphical user interface) that you can use to run jobs too. This is launched from the command line via <code class="docutils literal notranslate"><span class="pre">dagit</span> <span class="pre">-f</span> <span class="pre">hello_dagster.py</span></code>. Once you have opened the link using a browser, navigate to ‘Playground’ and use the ‘Launch Execution’ button to set off a run. When you open the GUI, you’ll see the DAG set out for you like this:</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/data-advanced_46_0.png" src="_images/data-advanced_46_0.png" />
-</div>
-</div>
-<p>There are a lot of benefits to thinking about your data processing in terms of pipelines and DAGs. You can see the last time any particular node executed and, if node execution fails, you can see why, where, and how. The GUI has tons of extra functionality too; for instance, you can track what’s produced by your pipelines with the ‘Asset Manager’, so you can understand how your data was generated and trace issues when it doesn’t look how you expect. There’s also optional typing of data types on input and output which helps you to catch bugs in data like you’d catch bugs in code (in the above, we declared all of the input types to be strings but didn’t declare what the output types were so they appeared as ‘any’).</p>
-<p>This has barely scratched the surface, but hopefully it’s given you an insight into what data orchestration tools do and how they might be helpful for complex data workflows.</p>
+<p>However, for a research project, it’s hard to recommend these two tools as they’re just a bit too powerful; Airflow in particular can do just about anything but has a steep learning curve. So, instead, to show the power of data orchestration we’ll use a more lightweight but also very powerful library: <a class="reference external" href="https://dagster.io/"><strong>dagster</strong></a>, which bills itself as ‘a data orchestrator for machine learning, analytics, and ETL [extract, transform, and load]’. Some of the key features are being able to implement components in various tools, such as Pandas and SQL, define pipelines as DAGs, and to test the same setup on your machine that you then deploy to cloud. Like the other tools, it has a nice visual interface to show what’s happening.</p>
 </div>
 </div>
 
@@ -1590,19 +1546,19 @@ Hello, Dagster!
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="data-sharing.html" title="previous page">
+        <a class="left-prev" href="data-databases.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Sharing Data</p>
+                <p class="prevnext-title">Databases</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="code-where.html" title="next page">
+        <a class="right-next" href="auto-research-outputs.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Options for Writing Code</p>
+                <p class="prevnext-title">Automating Research Outputs</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -1634,15 +1590,12 @@ Hello, Dagster!
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

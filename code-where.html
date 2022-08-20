@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Options for Writing Code &#8212; Coding for Economists</title>
+    <title>Writing Code &#8212; Coding for Economists</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -44,8 +44,6 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -55,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-where.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tips for Better Coding" href="code-best-practice.html" />
-    <link rel="prev" title="Advanced Data" href="data-advanced.html" />
+    <link rel="next" title="Data Analysis Quickstart" href="data-analysis-quickstart.html" />
+    <link rel="prev" title="Workflow Basics" href="workflow-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -104,7 +103,7 @@
   Getting Started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-preliminaries.html">
    Preliminaries
@@ -112,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -138,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,12 +177,7 @@
   Coding
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Options for Writing Code
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
@@ -176,12 +185,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -556,6 +595,11 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-your-first-notebook">
+     Writing Your First Notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tips-when-using-jupyter-notebooks">
      Tips when using Jupyter Notebooks
     </a>
@@ -564,15 +608,8 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#markdown-with-executable-code-chunks">
-   Markdown with executable code chunks
+   Markdown with Executable Code Chunks
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#paired-notebook-and-script-or-markdown">
-     Paired notebook and script or markdown
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -585,8 +622,8 @@
         
               <div>
                 
-  <div class="section" id="options-for-writing-code">
-<span id="code-where"></span><h1>Options for Writing Code<a class="headerlink" href="#options-for-writing-code" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="writing-code">
+<span id="code-where"></span><h1>Writing Code<a class="headerlink" href="#writing-code" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, we’ll look at the different ways you can both write and run code. This is something that can be very confusing if you’re just getting into coding.</p>
 <p>There are different ways to write (and run) code that suit different needs. For example, for creating a reproducible pipeline of tasks or writing production-grade software, you might opt for a script——a file that is mostly code. But for sending instructions to a colleague or exploring a narrative, you might choose to write your code in a notebook because it can present text and code together more naturally than a script can.</p>
 <p>We already met some ways to write and run code in the subsequent chapters. Here, we’ll be a bit more systematic so that, by the end of the chapter, you’ll be comfortable writing code in both scripts and notebooks. For advanced users, there’s also information on how to write code with markdown, using markdown files that contain executable code chunks. Scripts and notebooks are by far the most popular ways to write code though.</p>
@@ -597,10 +634,11 @@
 <li><p><strong>scripts</strong>: these are files that almost exclusively contain code. They can be edited and run in an IDE. Python scripts always have the file extension <code class="docutils literal notranslate"><span class="pre">.py</span></code>.</p></li>
 <li><p><strong>notebooks</strong>: aka Jupyter Notebooks, these are files that can contain code and text in different blocks called “cells”. They can be edited, and the code parts can be run, in an IDE. Jupyter Notebooks always have the file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>. Notebooks can be export to other formats, like word documents, HTML pages, PDFs, and even slides!</p></li>
 <li><p><strong>the terminal</strong>: this is the text interface that you use to send instructions to your computer’s operating system. It’s typically what you use to install new packages, for example with commands like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code>. Although your computer will come with a separate terminal application too, you can open a terminal in VS Code by clicking on Terminal &gt; New Terminal at the top of your VS Code window.</p></li>
-<li><p><strong>markdown</strong>: this is a lightweight language that turns simple text commands into professional looking documents. It’s widely used by people who code. It’s also what’s used for the text cells in Jupyter Notebooks. When not in a notebook, files containing markdown always have the extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>. With the Visual Studio Code markdown extensions installed, you can right-click within a Markdown file in VS Code and then select <em>Markdown Preview Enhanced</em> to see how the rendered document will look. The difference between HTML code and the same website viewed in a browser like Chrome is a good analogy for the difference between what you see in a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file and what you see in the preview of that markdown file. You can find out more about markdown in the chapter <a class="reference internal" href="wrkflow-markdown.html#wrkflow-markdown"><span class="std std-ref">Markdown</span></a>.</p></li>
+<li><p><strong>markdown</strong>: this is a lightweight language that turns simple text commands into professional looking documents. It’s widely used by people who code. It’s also what’s used for the text cells in Jupyter Notebooks. When not in a notebook, files containing markdown always have the extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>. With the Visual Studio Code markdown extensions installed, you can right-click within a Markdown file in VS Code and then select <em>Markdown Preview Enhanced</em> to see how the rendered document will look. The difference between HTML code and the same website viewed in a browser like Chrome is a good analogy for the difference between what you see in a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file and what you see in the preview of that markdown file.</p></li>
+<li><p><strong>quarto markdown</strong>: this is a special variant of markdown, with file extension <code class="docutils literal notranslate"><span class="pre">.qmd</span></code>, that can be used to combine text and code that gets executed so that code outputs are inserted into final outputs such as html or pdf documents.</p></li>
 </ul>
 <p>Let’s now turn to all of the different ways you can write code in a fully-featured integrated development environment like Visual Studio Code. They each have pros and cons, and you’re likely to want to use them at different times. The table below sets out all of the different ways you can write, and execute, code.</p>
-<p>If you’re looking for a typical workflow though, this book recommends working with scripts (files that end in <code class="docutils literal notranslate"><span class="pre">.py</span></code>) and the VS Code interactive window. Remember, if you’re working with a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file, you can always open the Visual Studio Code interactive window by right-clicking somewhere within the script and selecting ‘Run in interactive window’.</p>
+<p>If you’re looking for a typical workflow, this book recommends working with scripts (files that end in <code class="docutils literal notranslate"><span class="pre">.py</span></code>) and the VS Code interactive window. Remember, if you’re working with a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file, you can always open the Visual Studio Code interactive window by right-clicking somewhere within the script and selecting ‘Run in interactive window’.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>What</p></th>
@@ -612,20 +650,20 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Script, eg <code class="docutils literal notranslate"><span class="pre">script.py</span></code></p></td>
-<td><p>1. Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">script.py</span></code> on the command line; or 2. ‘Run in interactive window’ in an integrated development environment (IDE)</p></td>
-<td><p>1. Python installation,  2. Python installation + an IDE with Python support, eg Visual Studio Code.</p></td>
+<td><p>‘Run in interactive window’ in an integrated development environment (IDE)</p></td>
+<td><p>Python installation + an IDE with Python support, eg Visual Studio Code.</p></td>
 <td><p>Can be run all-in-one or step-by-step as needed. Very powerful tools available to aid coding in scripts. De facto standard for production-quality code. Can be imported by other scripts. Version control friendly.</p></td>
 <td><p>Not very good if you want to have lots of text alongside code.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Jupyter Notebook, eg <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code></p></td>
-<td><p>1.  In the same folder as the file, run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> on the command line, which will open a browser window, then follow the options to open the relevant file; or 2. Open the file with Visual Studio Code.</p></td>
-<td><p>1. Python installation with jupyter lab installed (install by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyterlab</span></code> on the command line), 2. Everything in 1 + Visual Studio Code and the VS Code Jupyter extension.</p></td>
-<td><p>Code and text can alternate in the same document. Rich outputs of code can be integrated into document. Can export to PDF, HTML, and more, with control over whether code inputs/outputs are shown. Can be run all-in-one or step-by-step as needed.</p></td>
+<td><p>Open the file with Visual Studio Code.</p></td>
+<td><p>Use Visual Studio Code and the VS Code Jupyter extension.</p></td>
+<td><p>Code and text can alternate in the same document. Rich outputs of code can be integrated into document. Can export to PDF, HTML, and more, with control over whether code inputs/outputs are shown, and either exported directly or via <strong>Quarto</strong>. Can be run all-in-one or step-by-step as needed.</p></td>
 <td><p>Fussy to use with version control. Code and text cannot be mixed in same ‘cell’. Not easy to import in other code files.</p></td>
 </tr>
-<tr class="row-even"><td><p>Markdown with executable code chunks, eg <code class="docutils literal notranslate"><span class="pre">markdown_script.md</span></code></p></td>
-<td><p>To produce markdown output, use <code class="docutils literal notranslate"><span class="pre">codebraid</span> <span class="pre">pandoc</span> <span class="pre">--from</span> <span class="pre">markdown</span> <span class="pre">--to</span> <span class="pre">markdown</span> <span class="pre">markdown_script.md</span></code> on the command line. Other output types available.</p></td>
-<td><p>Installations of Python, codebraid (a Python package), and pandoc (an application).</p></td>
+<tr class="row-even"><td><p>Markdown with executable code chunks using <a class="reference external" href="https://quarto.org/"><strong>Quarto</strong></a>, eg <code class="docutils literal notranslate"><span class="pre">markdown_script.qmd</span></code></p></td>
+<td><p>To produce output, write in a mix of markdown and code blocks and then export with commands like <code class="docutils literal notranslate"><span class="pre">quarto</span> <span class="pre">render</span> <span class="pre">markdown_script.qmd</span> <span class="pre">--to</span> <span class="pre">html</span></code> on the command line or using the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Visual Studio Code extension</a>. Other output types available.</p></td>
+<td><p>Installations of Python and Quarto, plus their dependencies.</p></td>
 <td><p>Allows for true mixing of text and code. Can export to wide variety of other formats, such as PDF and HTML, with control over whether code inputs/outputs are shown. Version control friendly.</p></td>
 <td><p>Must be run all-in-one so cannot see outputs of individual code-chunks as you go. Cannot be imported by other code files.</p></td>
 </tr>
@@ -633,13 +671,10 @@
 </table>
 <p>Some of the options above make use of the command line, a way to issue text-based instructions to your computer. Remember, the command line (aka the terminal) can be accessed via the Terminal app on Mac, the Command Prompt app on Windows, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>t</kbd> on Linux. To open up the command line within Visual Studio Code, you can use the keyboard shortcut <kbd>⌃</kbd> + <kbd>`</kbd> (on Mac) or
 <kbd>ctrl</kbd> + <kbd>`</kbd> (Windows/Linux), or click “View &gt; Terminal”.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The command line, or terminal, is covered in more detail in a subsequent chapter.</p>
-</div>
 <p>Now let’s look at each of these ways to run code in more detail using a common example: Hello World!</p>
 <div class="section" id="scripts">
 <h2>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h2>
+<p>Most code is written in scripts and they should be your go to.</p>
 <p>We already met scripts, but let’s have a recap. Create a new file in Visual Studio Code called <code class="docutils literal notranslate"><span class="pre">hello_world.py</span></code>. In the Visual Studio Code editor, add a single line to the file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
 </pre></div>
@@ -654,10 +689,16 @@
 </div>
 <div class="section" id="jupyter-notebooks">
 <h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Notebooks are for experimentation, tinkering, and keeping text and code together. They are the lab books of the coding world. The name, ‘Jupyter’, is a reference to the three original languages supported by Jupyter, which are Julia, Python, and R, and to Galileo’s notebooks recording the discovery of the moons of Jupiter. Jupyter notebooks now support a vast number of languages beyond the original three, including Ruby, Haskell, Go, Scala, Octave, Java, and <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">more</a>.</p>
+<p>Jupyter Notebooks are another popular way to write code, in addition to scripts (<code class="docutils literal notranslate"><span class="pre">.py</span></code> files). Jupyter Notebooks are for experimentation, tinkering, and keeping text and code together. They are the lab books of the coding world. This book is mostly written in Jupyter Notebooks, including this chapter! You can download the notebooks that make up most chapters of this book and run them on your own computer: look for the download symbol at the top of each page; “.ipynb” means ipython notebook.</p>
+<p>The name, ‘Jupyter’, is a reference to the three original languages supported by Jupyter, which are Julia, Python, and R, and to Galileo’s notebooks recording the discovery of the moons of Jupiter. Jupyter notebooks now support a vast number of languages beyond the original three, including Ruby, Haskell, Go, Scala, Octave, Java, and <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">more</a>.</p>
 <p>To get started with Jupyter Notebooks, you’ll need to have a Python installation and to run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyterlab</span></code> on the command line.</p>
 <p>If you get stuck with this tutorial, there’s a more in-depth VS Code and Jupyter tutorial available <a class="reference external" href="https://code.visualstudio.com/docs/python/jupyter-support">here</a>.</p>
-<p>Create a new file in Visual Studio Code and save it as <code class="docutils literal notranslate"><span class="pre">hello_world.ipynb</span></code>. Close the file and re-open it. The notebook interface should automatically load and you’ll see options to create cells with plus signs labelled ‘Code’ and ‘Markdown’. A cell is an independent chunk of either code or text. Text cells have markdown in them. Create a markdown cell containing the following:</p>
+<div class="section" id="writing-your-first-notebook">
+<h3>Writing Your First Notebook<a class="headerlink" href="#writing-your-first-notebook" title="Permalink to this headline">¶</a></h3>
+<p>Notebooks mix code and text by having a series of “cells” that are either code or text.</p>
+<p>Create a new file in Visual Studio Code and save it as <code class="docutils literal notranslate"><span class="pre">hello_world.ipynb</span></code>. Close the file and re-open it. The notebook interface should automatically load and you’ll see options to create cells with plus signs labelled ‘Code’ and ‘Markdown’. A cell is an independent chunk of either code or text. Text cells have markdown in them, a lightweight language for creating text outputs that you will find out more about in <a class="reference internal" href="wrkflow-markdown.html#wrkflow-markdown"><span class="std std-ref">Markdown</span></a>.</p>
+<p>Try adding <code class="docutils literal notranslate"><span class="pre">print(&quot;hello</span> <span class="pre">world!&quot;)</span></code> to the first (code) cell and hitting the play symbol on the left-hand side of the cell. You will be prompted to select a “kernel”, a version of Python on your system. It doesn’t matter which you use.</p>
+<p>Now add a markdown cell (“+ Markdown”) and enter:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># This is a title</span>
 
 <span class="gu">## This is a subtitle</span>
@@ -665,18 +706,20 @@
 This notebook demonstrates printing &#39;hello world!&#39; to screen.
 </pre></div>
 </div>
+<p>Click the tick that appears at the top of this cell.</p>
 <p>Now, for the next cell, choose code and write:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world!&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;another code cell&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To run the notebook, you can choose to run all cells (usually a double play button at the top of the notebook page) or just each cell at a time (a play button beside a cell). ‘Running’ a markdown cell will render the markdown in display mode; running a code cell will execute it and insert the output below. When you play the code cell, you should see the ‘hello world!’ message appear.</p>
-<p>Although Visual Studio Code is very convenient for using notebooks, Jupyter Lab is an alternative that has quite a few more options, for example exporting to HTML, PDF, and markdown with code outputs included. To try this out, open a terminal window in the folder that contains your ‘.ipynb’ file. Type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>. This should open a browser window with some options such as Python and any other languages you might have installed. Choose Python and then select <code class="docutils literal notranslate"><span class="pre">hello_world.ipynb</span></code>. If you run the notebook, you can then use the ‘File-&gt;Export As’ options to export the text, code, and code outputs (including figures, if there were any) as HTML, LaTeX, PDF, slides, markdown, and more-though some of these depend on other applications and settings. Once you’ve finished running your Jupyter Lab session, you can shut it down in the terminal with <code class="docutils literal notranslate"><span class="pre">ctrl+c</span></code>.</p>
-<p>Jupyter Notebooks are versatile and popular for early exploration of ideas, especially in fields like data science. This entire book is written in a combination of Jupyter Notebooks and executable markdown (more on that in a moment). Jupyter Notebooks can easily be run in the cloud using a browser too (via Binder or Google Colab) without any prior installation. Although it’s not got very much code in, the page you’re reading now can be loaded into Google Colab as a Jupyter Notebook by clicking ‘Colab’ under the rocket icon at the top of the page.</p>
-<p>One really nice feature of Jupyter Notebooks is that you can export them without the code inputs, but just showing the text and the code outputs. This is great for sending reports to colleagues who are not interested in the details of your code. Say you have a notebook called <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code>. You can turn this into a HTML report that doesn’t have any code inputs by running the following line in the terminal (in the same directory as <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code>):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --no-input --no-prompt notebook.ipynb
-</pre></div>
+<p>Jupyter Notebooks are versatile and popular for early exploration of ideas, especially in fields like data science. Jupyter Notebooks can easily be run in the cloud using a browser too (via Binder or Google Colab) without any prior installation. Although it’s not got very much code in, the page you’re reading now can be loaded into Google Colab as a Jupyter Notebook by clicking ‘Colab’ under the rocket icon at the top of the page.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>What happens when you press “clear outputs”? What about “run all?”.</p>
 </div>
-<p>Finally, you can try a Jupyter Notebook without installing anything online at <a class="reference external" href="https://jupyter.org/try">https://jupyter.org/try</a>. Click on Try Classic Notebook for a tutorial.</p>
+<p>One really nice feature of Jupyter Notebooks is that you can use them as the input files for <strong>Quarto</strong> instead of using <code class="docutils literal notranslate"><span class="pre">.qmd</span></code> files, and this opens up many export options and possibilities (like hiding some code inputs). You can find more information <a class="reference external" href="https://quarto.org/docs/computations/python.html">here</a> (look for the guidance on Jupyter Notebooks aka <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) or look ahead to the chapters on <a class="reference internal" href="wrkflow-markdown.html#wrkflow-markdown"><span class="std std-ref">Markdown</span></a> and <a class="reference internal" href="wrkflow-quarto.html#quarto"><span class="std std-ref">Combining Code and Text in Quarto Markdown</span></a>.</p>
+<p>You can try a Jupyter Notebook without installing anything online at <a class="reference external" href="https://jupyter.org/try">https://jupyter.org/try</a>. Click on Try Classic Notebook for a tutorial.</p>
+</div>
 <div class="section" id="tips-when-using-jupyter-notebooks">
 <h3>Tips when using Jupyter Notebooks<a class="headerlink" href="#tips-when-using-jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -690,106 +733,10 @@ This notebook demonstrates printing &#39;hello world!&#39; to screen.
 </div>
 </div>
 <div class="section" id="markdown-with-executable-code-chunks">
-<h2>Markdown with executable code chunks<a class="headerlink" href="#markdown-with-executable-code-chunks" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an advanced topic; feel free to skip it.</p>
-</div>
-<p>This is by far the least common way of coding, though it has gained popularity in recent years.</p>
-<p>When you have much more text and code, even using Jupyter Notebooks can feel a bit onerous and, historically, editing the text in a notebook was a bit tedious - especially if you wanted to move cells around a lot. Markdown makes for a much more pleasant writing experience.</p>
-<p><em>Markdown</em> is, like HTML, a mark-up language: a way of specifying rich text (such as links, including an image, displaying bullets, italics) using simple text commands. What this means is that by using a few extra symbols, Markdown creates a document with rich features. For example, here is the markdown syntax for showing different text styles:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="ge">*this is displayed in italics*</span>
-<span class="gs">**this is displayed in bold**</span>
-</pre></div>
-</div>
-<p>Markdown supports LaTeX equations too:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>$$u&#39;(c_{t})=\beta(1+r_{t+1})u&#39;(c_{t+1})$$
-</pre></div>
-</div>
-<p>produces</p>
-<div class="math notranslate nohighlight">
-\[u'(c_{t})=\beta(1+r_{t+1})u'(c_{t+1})\]</div>
-<p>Because all you need to write markdown is a simple text editor, it has found huge popularity in the coding and academic communities. Sites like github use it. Viewing markdown is less easy, but the <strong>markdown-all-in-one</strong> extension of VS Code can show a preview of how it will look. If you open a markdown file in VS Code, just right click and select preview.</p>
-<p>Regular code chunks (ones that are <em>not</em> executed) are written with three backticks, followed by the name of the language, followed by the code, followed by another three backticks. So to express a non-executable Python code chunk (ie a chunk that is displayed only) it’s</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
-import pandas as pd
-```
-</pre></div>
-</div>
-<p>for example. And this gets rendered as</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-<p>Adding <em>executable code chunks</em> to markdown allows you to include code chunks <em>and</em> the outputs they create when they are run <em>or</em> just the outputs (with the code hidden). This is useful when you want to write something that just has a little bit of code in but is mostly text. Or when you want to create documents or slides that update automatically by displaying the outputs of code run on updating inputs. Markdown with executable code chunks allows you to do all of these.</p>
-<p>The magic package that weaves together code and markdown is called <a class="reference external" href="https://github.com/gpoore/codebraid"><strong>codebraid</strong></a>. <strong>codebraid</strong> can take markdown documents, execute any code in them, and incorporate the outputs of that code in a final version of the document. It has built-in code execution that currently supports Python 3.5+, Julia, Rust, R, Bash, JavaScript, and SageMath. It can mix and match languages within the same document too.</p>
-<p>Let’s now try an example with an <em>executable code chunk</em>. For this, you will need to have installed the <a class="reference external" href="https://github.com/gpoore/codebraid"><strong>codebraid</strong></a> Python package and <a class="reference external" href="https://pandoc.org/installing.html"><strong>pandoc</strong></a>, an application. Pandoc is a universal document converter. Codebraid ‘braids’ together code and text.</p>
-<p>Create a new markdown file called ‘hello_world_raw.md’ and add this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>---
-title: &quot;Codebraid Hello World! example&quot;
----
-
-# This is a title
-
-## This is a subtitle
-
-This executable markdown demonstrates printing &#39;hello world!&#39; to screen.
-
-```{.python .cb.nb jupyter_kernel=python3}
-print(&#39;Hello World!&#39;)
-```
-
-Now we can have more text afterwards, and a code chunk that hides itself.
-
-```{.python .cb.run}
-print(&quot;Hello World! But don&#39;t show the code.&quot;)
-```
-
-</pre></div>
-</div>
-<p>In the ‘raw’ input markdown file, <code class="docutils literal notranslate"><span class="pre">.python</span></code> tells codebraid that a code chunk is in Python, <code class="docutils literal notranslate"><span class="pre">jupyter_kernel=python3</span></code> tells codebraid what installation of Jupyter Notebooks to use, while <code class="docutils literal notranslate"><span class="pre">.cb.nb</span></code> tells a Python chunk to run like a notebook (showing both inputs and outputs). <code class="docutils literal notranslate"><span class="pre">.cb.run</span></code> is an instruction to just run the code and insert the output (doesn’t show code input). If you’re unsure what your installation of Jupyter is called, you can see a list by running <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">kernelspec</span> <span class="pre">list</span></code> on the command line.</p>
-<p>Once you have saved the file, using the command line, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>codebraid pandoc hello_world_raw.md -o hello_world.md --overwrite
-</pre></div>
-</div>
-<p>and then open up ‘hello_world.md’. You should see the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># This is a title
-
-## This is a subtitle
-
-This executable markdown demonstrates printing &#39;hello world!&#39; to screen.
-
-``` {.python .numberLines startFrom=&quot;1&quot;}
-print(&#39;Hello World!&#39;)
-```
-
-``` {.stdout}
-Hello World!
-```
-
-Now we can have more text afterwards, and a code chunk that hides itself.
-
-Hello World! But don&#39;t show the code.
-</pre></div>
-</div>
-<p>The code chunks in the markdown have been executed and the relevant text has appeared in the <em>output</em> markdown file. The same rule applies to rich content like figures too. Use the preview of the rendered file to see what it looks like (right click in VS Code, then Preview).</p>
-<p>The powerful combination of markdown and codebraid doesn’t just allow you to write markdown and output executed markdown: you can output a wide range of formats, including Word documents, PDFs (papers and beamer presentations), Powerpoint presentations, HTML slides, HTML pages. To switch to a different output format, the general syntax is <code class="docutils literal notranslate"><span class="pre">codebraid</span> <span class="pre">pandoc</span> <span class="pre">hello_world_raw.md</span> <span class="pre">-o</span> <span class="pre">hello_world.extension</span> <span class="pre">--overwrite</span></code> where ‘extension’ is the file extension.</p>
-<div class="admonition-challenge admonition">
-<p class="admonition-title">Challenge</p>
-<p>Try writing an executable code chunk that produces a figure in the <strong>codebraid</strong> output; then try doing the same but without showing the code input and outputting to PDF format.</p>
-</div>
-<div class="section" id="paired-notebook-and-script-or-markdown">
-<h3>Paired notebook and script or markdown<a class="headerlink" href="#paired-notebook-and-script-or-markdown" title="Permalink to this headline">¶</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an extremely advanced topic; feel free to skip it.</p>
-</div>
-<p>Can’t decide between notebook on the one hand and script or executable markdown on the other? You can have both! Another tool, <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/index.html"><strong>jupytext</strong></a>, allows you to pair a notebook with either a script (.py file) or an executable markdown file (.md). <strong>jupytext</strong> supports Julia, Python and R.</p>
-<p>If you install <strong>jupytext</strong>, the easiest way to use it is via Jupyter Lab, where it will appear as an option when you’re working on a notebook. Type “Pair notebook” in the Command Palette and you will see some options appear.</p>
-<p>Pairing a notebook with one of these other formats means that whatever you write in your notebook will be reflected in the other format, and vice versa.</p>
-<p>So should you pair your notebook to a script or a markdown file? If your notebook is mostly made of code, you will probably prefer to save it as a script with the occasional bit of text in. In that case, you have two options for how the text will appear in your Python script, ‘percent’, which is preceeded by <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code>, or ‘light’, which means preceeded only by <code class="docutils literal notranslate"><span class="pre">#</span></code>.  If your notebook contains more text than code, you may want to pair your notebook to a Markdown document, and there are options for that too.</p>
-<p>Of course, <strong>jupytext</strong> comes with a bunch of commands you can use in the terminal to convert between notebooks, markdown files, and scripts - really handy if you decide you want to change midway through a project.</p>
-<p>You can find out much more on the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/index.html"><strong>jupytext</strong></a> website.</p>
-</div>
+<h2>Markdown with Executable Code Chunks<a class="headerlink" href="#markdown-with-executable-code-chunks" title="Permalink to this headline">¶</a></h2>
+<p>This is by far the least common way of coding, though it has gained popularity in recent years and it’s great if you’re going to ultimately export to other formats like slides, documents, or even a website!</p>
+<p>When you have much more text combined code, even using Jupyter Notebooks can feel a bit onerous and, historically, editing the text in a notebook was a bit tedious - especially if you wanted to move cells around a lot. Markdown makes for a much more pleasant writing experience. But markdown on its own cannot execute code—but imagine you want to combine reproducibility, text, and code + code outputs: however, there is a tool called <strong>Quarto</strong> that allows you to do this by adding executable code chunks to markdown.</p>
+<p>As this is a bit more of an advanced topic, and as much about communication as it is about writing code, we’ll come back to how to do it in <a class="reference internal" href="wrkflow-quarto.html#quarto"><span class="std std-ref">Combining Code and Text in Quarto Markdown</span></a>.</p>
 </div>
 </div>
 
@@ -823,19 +770,19 @@ Hello World! But don&#39;t show the code.
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="data-advanced.html" title="previous page">
+        <a class="left-prev" href="workflow-basics.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Advanced Data</p>
+                <p class="prevnext-title">Workflow Basics</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="code-best-practice.html" title="next page">
+        <a class="right-next" href="data-analysis-quickstart.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Tips for Better Coding</p>
+                <p class="prevnext-title">Data Analysis Quickstart</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -867,15 +814,12 @@ Hello World! But don&#39;t show the code.
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,9 +51,10 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/zreferences.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Coming from Excel" href="coming-from-excel.html" />
+    <link rel="prev" title="Acknowledgements and Contributing" href="acknowledgements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,7 +108,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -135,23 +144,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -162,23 +176,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -211,10 +220,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -226,8 +282,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -290,6 +346,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="craft-technical-reports.html">
+   Writing Technical Reports
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="craft-extended-abstracts.html">
    Extended Abstracts
   </a>
@@ -336,28 +397,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="text-nlp.html">
    Natural Language Processing
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
   </a>
  </li>
 </ul>
@@ -419,10 +458,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Bibliography
@@ -541,9 +585,6 @@
   <div class="section" id="bibliography">
 <h1>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h1>
 <p id="id1"><dl class="citation">
-<dt class="label" id="id5"><span class="brackets">NielsBantilan20</span></dt>
-<dd><p>Niels Bantilan. Pandera: Statistical Data Validation of Pandas Dataframes. In Meghann Agarwal, Chris Calloway, Dillon Niederhut, and David Shupe, editors, <em>Proceedings of the 19th Python in Science Conference</em>, 116 – 124. 2020. <a class="reference external" href="https://doi.org/10.25080/Majora-342d178e-010">doi:10.25080/Majora-342d178e-010</a>.</p>
-</dd>
 <dt class="label" id="id11"><span class="brackets">AAA+19</span></dt>
 <dd><p>Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. <em>The Astrophysical Journal Letters</em>, 875(1):L4, 2019.</p>
 </dd>
@@ -555,6 +596,15 @@
 </dd>
 <dt class="label" id="id17"><span class="brackets">Sch21</span></dt>
 <dd><p>Jonathan Schwabish. <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em>. Columbia University Press, 2021.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">BW18</span></dt>
+<dd><p>Karl W Broman and Kara H Woo. Data organization in spreadsheets. <em>The American Statistician</em>, 72(1):2–10, 2018.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets">HHG20</span></dt>
+<dd><p>Allison Marie Horst, Alison Presmanes Hill, and Kristen B Gorman. Palmerpenguins: palmer archipelago (antarctica) penguin data. <em>R package version 0.1.0</em>, 2020.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">NielsBantilan20</span></dt>
+<dd><p>Niels Bantilan. Pandera: Statistical Data Validation of Pandas Dataframes. In Meghann Agarwal, Chris Calloway, Dillon Niederhut, and David Shupe, editors, <em>Proceedings of the 19th Python in Science Conference</em>, 116 – 124. 2020. <a class="reference external" href="https://doi.org/10.25080/Majora-342d178e-010">doi:10.25080/Majora-342d178e-010</a>.</p>
 </dd>
 <dt class="label" id="id4"><span class="brackets">Val18</span></dt>
 <dd><p>Raphael Vallat. Pingouin: statistics in python. <em>Journal of Open Source Software</em>, 3(31):1026, 2018.</p>
@@ -659,11 +709,11 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="coming-from-excel.html" title="previous page">
+        <a class="left-prev" href="acknowledgements.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Coming from Excel</p>
+                <p class="prevnext-title">Acknowledgements and Contributing</p>
             </div>
         </a>
     </div>
@@ -694,15 +744,12 @@
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

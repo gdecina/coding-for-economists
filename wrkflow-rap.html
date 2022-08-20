@@ -53,10 +53,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-rap.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Probability and Random Processes" href="econmt-probability-random.html" />
-    <link rel="prev" title="Markdown" href="wrkflow-markdown.html" />
+    <link rel="prev" title="Combining Code and Text in Quarto Markdown" href="wrkflow-quarto.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -110,7 +111,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -136,23 +147,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -163,23 +179,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -212,10 +223,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-extraction.html">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -227,8 +285,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -347,28 +405,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -425,10 +461,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -821,7 +862,7 @@ The score is 3.29
 </pre></div>
 </div>
 <p>Let’s take a quick tour through this example project’s structure, all of which sits in the “project” directory.</p>
-<p>First we have the <a class="reference external" href="http://README.md">README.md</a>, a file full of instructions in a simple text format called <em>markdown</em> (=”.md”). Markdown is kind of like a code language for text and is commonly used to write information in coding projects. It can be “rendered” (that is, can be displayed not as code but in a form that is intended to be read) by Visual Studio Code using the markdown all in one extension (see the <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Options for Writing Code</span></a> chapter for more on markdown).</p>
+<p>First we have the <a class="reference external" href="http://README.md">README.md</a>, a file full of instructions in a simple text format called <em>markdown</em> (=”.md”). Markdown is kind of like a code language for text and is commonly used to write information in coding projects. It can be “rendered” (that is, can be displayed not as code but in a form that is intended to be read) by Visual Studio Code using the markdown all in one extension (see the <a class="reference internal" href="code-where.html#code-where"><span class="std std-ref">Writing Code</span></a> chapter for more on markdown).</p>
 <p>The next file, “requirements.txt”, is one we’ll be seeing much more of later in this chapter. For now, all you need to do know is that it is a list of all of the Python packages needed to run the project. Sometimes it might be called “environment.yml” instead, or sometimes “pyproject.toml”.</p>
 <p>Next we have the data, which is the data as you received it, no matter how poor the format (wishful thinking in this example that it might be a clean csv file and not 400 Excel files!). A really important principle here is that <strong>you should not alter raw data</strong> as it comes to you, but instead treat it as read-only. This is so that you can always trace a path from the raw data you began with to the finished product. Incoming data can and does change surprisingly often so if someone else were to do the “same” analysis as you and find a different answer, you want to be able to rule out starting with different input datasets as the cause. Or you may find that your data cleaning script needs adjusting, and you need to repeat all of the operations in your project. Or other good reasons. Always keep a copy of the raw data.</p>
 <p>The next folder is “src”, which is short for “source code”, and it’s where your code scripts (.py files) or possibly Jupyter Notebooks (.ipynb files) live. These are nicely separate into the functions they perform: cleaning the data, performing the analysis, and summarising the analysis into figures and tables (also known as floats). The other script, “<a class="reference external" href="http://utilities.py">utilities.py</a>”, might be imported as module that all of the other scripts can use.</p>
@@ -1220,15 +1261,15 @@ RUN poetry run make
 <p class="admonition-title">Note</p>
 <p>Use the two “recipes” above to help you decide what tools to use in your reproducible analytical pipeline.</p>
 </div>
-<p>Finally, there are a few other good programming practices that you can follow to enhance the long-term sustainability and reproducibility of your code, especially as your code base gets bigger or more complex. You may not have heard of these yet, and they will or do appear in other chapters, but they are listed here for completeness.</p>
+<p>Finally, there are a few other good programming practices that you can follow to enhance the long-term sustainability and reproducibility of your code, especially as your code base gets bigger or more complex. You may not have heard of these yet, and they will or do appear in other chapters (especially <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">More Coding</span></a> and <a class="reference internal" href="code-advcd-best-practice.html#code-advcd-best-practice"><span class="std std-ref">Better Coding</span></a>), but they are listed here for completeness.</p>
 <ul class="simple">
-<li><p>unit testing (covered in brief in the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">Advanced Coding</span></a>)</p></li>
-<li><p>error handling (covered in brief in the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">Advanced Coding</span></a>)</p></li>
-<li><p>documentation of functions (covered extremely briefly in <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Basics of Coding</span></a>)</p></li>
-<li><p>using a code style such as <a class="reference external" href="https://black.readthedocs.io/">black</a> (more info in the Chapter on <a class="reference internal" href="code-advcd-best-practice.html#code-advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
+<li><p>unit testing</p></li>
+<li><p>error handling</p></li>
+<li><p>documentation of functions via docstrings</p></li>
+<li><p>using a code style such as <a class="reference external" href="https://black.readthedocs.io/">black</a></p></li>
 <li><p>consider using <a class="reference external" href="http://mypy-lang.org/">typing</a> and <a class="reference external" href="https://typeguard.readthedocs.io/">typeguarding</a>, at least for some code</p></li>
-<li><p>input data validation (see the Chapter on <a class="reference internal" href="data-advanced.html#advanced-data"><span class="std std-ref">Advanced Data</span></a>)</p></li>
-<li><p>logging (see the Chapter on <a class="reference internal" href="code-advcd-best-practice.html#code-advcd-best-practice"><span class="std std-ref">Tools for Better Coding</span></a>)</p></li>
+<li><p>input data validation</p></li>
+<li><p>logging</p></li>
 <li><p>pre-commit hooks</p></li>
 <li><p>continuous integration</p></li>
 </ul>
@@ -1265,11 +1306,11 @@ RUN poetry run make
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wrkflow-markdown.html" title="previous page">
+        <a class="left-prev" href="wrkflow-quarto.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Markdown</p>
+                <p class="prevnext-title">Combining Code and Text in Quarto Markdown</p>
             </div>
         </a>
     </div>
@@ -1309,15 +1350,12 @@ RUN poetry run make
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>

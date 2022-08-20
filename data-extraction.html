@@ -55,10 +55,11 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-extraction.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exploratory Data Analysis" href="data-exploratory-analysis.html" />
-    <link rel="prev" title="Reading and Writing Files" href="data-read-and-write.html" />
+    <link rel="next" title="Sharing Data" href="data-sharing.html" />
+    <link rel="prev" title="Spreadsheets" href="data-spreadsheets.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -112,7 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-basics.html">
-   Basics of Coding
+   Coding Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-where.html">
+   Writing Code
   </a>
  </li>
 </ul>
@@ -121,7 +132,7 @@
   Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="data-analysis-quickstart.html">
    Data Analysis Quickstart
@@ -137,24 +148,29 @@
    Reading and Writing Files
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Getting Data
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-numbers.html">
+   Numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
+  <a class="reference internal" href="data-categorical.html">
+   Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
+  <a class="reference internal" href="data-boolean.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-joining-data.html">
+   Joins
   </a>
  </li>
 </ul>
@@ -165,23 +181,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Options for Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
    Tips for Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advcd-best-practice.html">
-   Tools for Better Coding
+   Better Coding
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
-   Advanced Coding
+   More Coding
   </a>
  </li>
 </ul>
@@ -214,10 +225,57 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  More Data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-exploratory-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Getting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-databases.html">
+   Databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-advanced.html">
+   Advanced Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -229,8 +287,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
   </a>
  </li>
  <li class="toctree-l1">
@@ -349,28 +407,6 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Automation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-reports.html">
-   Automating Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-office.html">
-   The Automated Office
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   Geospatial
  </span>
 </p>
@@ -427,10 +463,15 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Elsewhere
+  End Matter
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgements.html">
+   Acknowledgements and Contributing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="zreferences.html">
    Bibliography
@@ -658,18 +699,6 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set max rows displayed for readability</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="c1"># Plot settings</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="extracting-data-from-files-on-the-internet">
@@ -714,8 +743,8 @@
       <th>category</th>
       <th>wind</th>
       <th>pressure</th>
-      <th>ts_diameter</th>
-      <th>hu_diameter</th>
+      <th>tropicalstorm_force_diameter</th>
+      <th>hurricane_force_diameter</th>
     </tr>
   </thead>
   <tbody>
@@ -880,8 +909,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-extraction_7_0.png" src="_images/data-extraction_7_0.png" />
-</div>
+<img alt="_images/data-extraction_7_0.svg" src="_images/data-extraction_7_0.svg" /></div>
 </div>
 <p>We’ve talked about <em>reading</em> APIs. You can also create your own to serve up data, models, whatever you like! This is an advanced topic and we won’t cover it; but if you do need to, the simplest way is to use <a class="reference external" href="https://fastapi.tiangolo.com/">Fast API</a>. You can find some short video tutorials for Fast API <a class="reference external" href="https://calmcode.io/fastapi/hello-world.html">here</a>.</p>
 <div class="section" id="pandas-datareader-an-easier-way-to-interact-with-some-apis">
@@ -908,8 +936,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-extraction_9_0.png" src="_images/data-extraction_9_0.png" />
-</div>
+<img alt="_images/data-extraction_9_0.svg" src="_images/data-extraction_9_0.svg" /></div>
 </div>
 <p>And, because it’s also a really useful one, let’s also see how to use <strong>pandas-datareader</strong> to access World Bank data.</p>
 <div class="cell docutils container">
@@ -969,31 +996,31 @@
       <th>3</th>
       <td>India</td>
       <td>2017</td>
-      <td>1.719190</td>
+      <td>1.733361</td>
     </tr>
     <tr>
       <th>1</th>
       <td>East Asia\n&amp; Pacific</td>
       <td>2017</td>
-      <td>6.210897</td>
+      <td>6.220750</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Europe &amp;\nCentral\nAsia</td>
       <td>2017</td>
-      <td>6.722144</td>
+      <td>6.754226</td>
     </tr>
     <tr>
       <th>0</th>
       <td>China</td>
       <td>2017</td>
-      <td>7.174948</td>
+      <td>7.230985</td>
     </tr>
     <tr>
       <th>4</th>
       <td>United\nStates</td>
       <td>2017</td>
-      <td>14.805882</td>
+      <td>14.823261</td>
     </tr>
   </tbody>
 </table>
@@ -1017,8 +1044,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/data-extraction_12_0.png" src="_images/data-extraction_12_0.png" />
-</div>
+<img alt="_images/data-extraction_12_0.svg" src="_images/data-extraction_12_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="the-oecd-api">
@@ -1138,7 +1164,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
   &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
   &lt;meta content=&quot;&quot; name=&quot;description&quot;/&gt;
   &lt;meta content=&quot;&quot; name=&quot;author&quot;/&gt;
@@ -1148,7 +1174,7 @@
   &lt;!-- Bootstrap Core CSS --&gt;
   &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
   &lt;!-- Custom Fonts --&gt;
-  &lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+  &lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&quot;
 </pre></div>
 </div>
 </div>
@@ -1164,9 +1190,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;Bank Underground blog post on using &#39;big data&#39; to develop new measures of job
-                                    vacancies in the UK. Full paper &lt;a href=&quot;https://www.bankofengland.co.uk/working-paper/2018/using-job-vacancies-to-understand-the-effects-of-labour-market-mismatch-on-uk-output&quot;&gt;here&lt;/a&gt;.
-                                    We posted the code we developed on the Bank&#39;s github &lt;a href=&quot;https://github.com/bank-of-england/occupationcoder&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;A talk I gave on some of the amazing wonders that data science has and is bringing the world. Given at the 2022 Bristol Data &amp;amp; AI Showcase, hosted by the &lt;a href=&quot;http://www.bristol.ac.uk/golding/&quot;&gt;Jean Golding Institute&lt;/a&gt;.&lt;/p&gt;
 </pre></div>
 </div>
 </div>
@@ -1179,7 +1203,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Bank Underground blog post on using &#39;big data&#39; to develop new measures of job\n                                    vacancies in the UK. Full paper here.\n                                    We posted the code we developed on the Bank&#39;s github here.&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A talk I gave on some of the amazing wonders that data science has and is bringing the world. Given at the 2022 Bristol Data &amp; AI Showcase, hosted by the Jean Golding Institute.&#39;
 </pre></div>
 </div>
 </div>
@@ -1206,6 +1230,7 @@
  &#39;Pay Transparency and Cracks in the Glass Ceiling&#39;,
  &#39;Solving Heterogeneous General Equilibrium Economic Models with Deep Reinforcement Learning&#39;,
  &quot;Is the UK&#39;s productivity puzzle mostly driven by occupational mismatch? An analysis using big data on job vacancies&quot;,
+ &#39;Revolution in progress? The rise of remote work in the UK&#39;,
  &#39;Coding for Economists&#39;]
 </pre></div>
 </div>
@@ -1439,19 +1464,19 @@ The interim report (Gon
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="data-read-and-write.html" title="previous page">
+        <a class="left-prev" href="data-spreadsheets.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Reading and Writing Files</p>
+                <p class="prevnext-title">Spreadsheets</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="data-exploratory-analysis.html" title="next page">
+        <a class="right-next" href="data-sharing.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Exploratory Data Analysis</p>
+                <p class="prevnext-title">Sharing Data</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -1483,15 +1508,12 @@ The interim report (Gon
   <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-189705534-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
 
   </body>
 </html>
