@@ -142,6 +142,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="data-transformation.html">
+   Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -154,11 +159,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-categorical.html">
    Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
@@ -227,6 +227,11 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
    Exploratory Data Analysis
@@ -595,8 +600,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-packages-and-modules">
-   Using packages and modules
+  <a class="reference internal nav-link" href="#using-installed-packages-and-modules">
+   Using installed packages and modules
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -633,22 +638,14 @@
 <h2>Working with Python scripts and the interactive window<a class="headerlink" href="#working-with-python-scripts-and-the-interactive-window" title="Permalink to this headline">¶</a></h2>
 <p>As a reminder, the figure below shows the typical layout of Visual Studio Code.</p>
 <p><img alt="A typical user view in Visual Studio Code" src="https://github.com/aeturrell/coding-for-economists/blob/main/img/vscode_layout.png?raw=true" /></p>
-<p>When you create a new script (File-&gt;New File-&gt;Save as ‘your_script_name.py), it will appear in the part of the screen labelled as 3. To run a script, select the code you want to run, right click, and select “Run Selection/Line in Interactive Window”. You can also hit shift + enter if you set this shortcut up. Using the “Run Selection/Line in Interactive Window” option (or doing the same via the shortcut) will cause panel 5 (the interactive window) to appear, where you will see the code run and the outputs of your script appear.</p>
+<p>When you create a new script (File-&gt;New File-&gt;Save as ‘your_script_name.py), it will appear in the part of the screen labelled as 3.</p>
+<p>To run a script, select the code you want to run, right click, and select “Run Selection/Line in Interactive Window”. You can also hit shift + enter if you set this shortcut up. Using the “Run Selection/Line in Interactive Window” option (or doing the same via the shortcut) will cause panel 5 (the interactive window) to appear, where you will see the code run and the outputs of your script appear.</p>
 <p>When you are first writing a script, it’s useful to be able to move back and forth between the script and the interactive window. You might execute a line of code (put the cursor on the relevant line and hit shift and enter) in the interactive window, then manually write out some code in the interactive window’s execution box (seen at the bottom of panel 5 saying “Type code here…”), and then explore some of the variables you’ve created with the variable explorer (using the button “Variables”) at the top of the interactive window.</p>
 <p>But, once you’ve honed the code in your script, it’s good to make the script a complete analytical process that you are happy running end-to-end and that—for production or ‘final’ work—you would use the “Run Current File in Interactive Window” option to run all the way through. This is good practice because <em>what is in your script is reproducible</em> but what you’ve entered manually in the interactive window is not. And you want the outputs from your code to be reproducible and understandable by others (including future you!), but this is hard if there are undocumented extra lines of code that you only did on the fly via the interactive window’s execution box.</p>
 </div>
-<div class="section" id="using-packages-and-modules">
-<h2>Using packages and modules<a class="headerlink" href="#using-packages-and-modules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-installed-packages-and-modules">
+<h2>Using installed packages and modules<a class="headerlink" href="#using-installed-packages-and-modules" title="Permalink to this headline">¶</a></h2>
 <p>We already saw how to install packages in the previous chapter. If you forgot, look back at the Installing Packages section of <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a> now. In short, packages are installed using the command line or, on Windows, the Anaconda prompt. With either of these open, first try typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> and hitting enter. If the package isn’t available on conda, you can use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> as a back-up.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Advanced: install a package in a specific environment
-We haven’t seen isolated Python environments yet, but if you want to install packages into a dedicated environment using <code class="docutils literal notranslate"><span class="pre">conda</span></code>, you’ll need to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">environmentname</span></code> before using the package install command(s). If the command works, you should see <code class="docutils literal notranslate"><span class="pre">(environmentname)</span></code> rather than <code class="docutils literal notranslate"><span class="pre">(base)</span></code> at the start of the command prompt. Using the bash command line, the steps would be:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> your-computer:your-folder your-username$ conda activate environmentname
-<span class="o">(</span>environmentname<span class="o">)</span> your-computer:your-folder your-username$ conda install packagename
-</pre></div>
-</div>
-</div>
 <p>What about using a package that you’ve installed? That’s what we’ll look at now.</p>
 <p>Let’s see an example of using the powerful numerical library <strong>numpy</strong>. There are different ways to import packages to use within a script or notebook; you can import the entire package in one go or just import the functions you need (if you know their names). When an entire package is imported, you can give it any name you like and the convention for <strong>numpy</strong> is to import it as the shortened ‘np’. All of the functions and methods of the package can be accessed by typing <code class="docutils literal notranslate"><span class="pre">np</span></code> followed by <code class="docutils literal notranslate"><span class="pre">.</span></code> and then typing the function name. This convention of importing packages with a given name makes your code easier to read, because you know exactly which package is doing the heavy lifting, and avoids any conflicts when functions from different packages have the same name.</p>
 <p>As well as demonstrating importing the whole package for <strong>numpy</strong>, the example below shows importing just one specific function, for matrix inversion and called <code class="docutils literal notranslate"><span class="pre">inv</span></code>, from within <strong>numpy</strong>. Note that because <code class="docutils literal notranslate"><span class="pre">inv</span></code> was imported separately it can be used without an <code class="docutils literal notranslate"><span class="pre">np</span></code> prefix.</p>
@@ -684,7 +681,7 @@ Inverse:
 <p>We could have imported all of <strong>numpy</strong> using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">numpy</span> <span class="pre">import</span> <span class="pre">*</span></code> but this is considered bad practice as it fills our ‘namespace’ with function names that might clash with other packages and it’s less easy to parse which package’s function is doing what. R also relies heavily on imported libraries but uses a different convention for namespaces: in that case, everything is imported but the <em>order</em> of package imports matters for what functions are default (and clashing function names are over-written).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you want to check what packages you have installed in your Python environment, run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> on the command line.</p>
+<p>If you want to check what packages you have installed in your Python environment, run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> on your computer’s command line (aka the <em>terminal</em> or <em>command prompt</em>).</p>
 </div>
 <p>There are times when you might forget what a function you have imported does! In Visual Studio Code, you can just hover your cursor over the name of the function and a box will come up that tells you everything you need to know about it. This box is auto-generated by the doc-strings we saw earlier in this Chapter (another reason why it’s good practice to write doc-strings!).</p>
 <p>An alternative way to see what a function does is to use a wonderful package called <a class="reference external" href="https://github.com/willmcgugan/rich"><strong>rich</strong></a> that does many things including providing an <code class="docutils literal notranslate"><span class="pre">inspect</span></code> function. You will need to use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install rich by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">rich</span></code> on the command line. Here’s an example of using <strong>rich</strong>’s inpsect method on the <code class="docutils literal notranslate"><span class="pre">inv</span></code> function we imported above (<code class="docutils literal notranslate"><span class="pre">methods=True</span></code> reports all of the functionality of <code class="docutils literal notranslate"><span class="pre">inv</span></code>):</p>
@@ -697,7 +694,7 @@ Inverse:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭───────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">function</span><span style="color: #000000; text-decoration-color: #000000"> inv at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x7f8e8c116e50</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────╮</span>
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭───────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">function</span><span style="color: #000000; text-decoration-color: #000000"> inv at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x7fa6b57e3e50</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────╮</span>
 <span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">inv</span><span style="font-weight: bold">(</span>a<span style="font-weight: bold">)</span>:                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
 <span style="color: #000080; text-decoration-color: #000080">│</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
 <span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Compute the </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">multiplicative</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> inverse of a matrix.</span>                   <span style="color: #000080; text-decoration-color: #000080">│</span>
@@ -775,6 +772,14 @@ Inverse:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib_inline.backend_inline</span>
+
+<span class="c1"># Plot settings</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt&quot;</span>
+<span class="p">)</span>
+<span class="n">matplotlib_inline</span><span class="o">.</span><span class="n">backend_inline</span><span class="o">.</span><span class="n">set_matplotlib_formats</span><span class="p">(</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+
 
 <span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
 <span class="n">graph</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span>
@@ -788,16 +793,16 @@ Inverse:
 <span class="p">)</span>
 <span class="n">colour_node</span> <span class="o">=</span> <span class="s2">&quot;#AFCBFF&quot;</span>
 <span class="n">fixed_pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">fixed_pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colour_node</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">fixed_pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">6000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colour_node</span><span class="p">)</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="n">extent</span><span class="p">,</span> <span class="n">extent</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="n">extent</span><span class="p">,</span> <span class="n">extent</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/workflow-basics_8_0.png" src="_images/workflow-basics_8_0.png" />
-</div>
+<img alt="_images/workflow-basics_8_0.svg" src="_images/workflow-basics_8_0.svg" /></div>
 </div>
 <p>How can we give code files a, b, and c access to the functions etc in the “Utility script”? We would define a file ‘<a class="reference external" href="http://utilities.py">utilities.py</a>’ that had the following function in that we would like to use in the other code files:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contents of utilities.py file</span>

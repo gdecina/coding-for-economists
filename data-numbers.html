@@ -142,6 +142,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="data-transformation.html">
+   Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-read-and-write.html">
    Reading and Writing Files
   </a>
@@ -154,11 +159,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="data-categorical.html">
    Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
   </a>
  </li>
  <li class="toctree-l1">
@@ -227,6 +227,11 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-missing-values.html">
+   Missing Values
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-exploratory-analysis.html">
    Exploratory Data Analysis
@@ -696,12 +701,12 @@
 <div class="section" id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>This chapter mostly uses functions from <strong>pandas</strong>, which you are likely to already have installed bu you can install using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> in the terminal. We’ll use real examples from nycflights13, as well as toy examples made with fake data.</p>
-<p>Let’s first load up the NYC flights data</p>
+<p>Let’s first load up the NYC flights data (note that this is not a tiny file so will take a moment to load from the internet)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">flights</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;data/flights.parquet&quot;</span><span class="p">)</span>
+<span class="n">flights</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/blob/main/data/flights.parquet?raw=true&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1747,8 +1752,8 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([80.21631495,  6.58095571, 50.55397744, 86.21698494, 22.23881044,
-       10.16029292, 48.84122684, 87.86146599, 77.38704055, 39.07446794])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58.73268201, 64.58358196, 49.32483003, 56.84591142,  7.1574112 ,
+       37.87665707, 86.20283112, 97.64544472, 19.90747616, 80.36062538])
 </pre></div>
 </div>
 </div>
@@ -1760,7 +1765,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([81.,  7., 51., 87., 23., 11., 49., 88., 78., 40.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([59., 65., 50., 57.,  8., 38., 87., 98., 20., 81.])
 </pre></div>
 </div>
 </div>
@@ -1772,7 +1777,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([80.,  6., 50., 86., 22., 10., 48., 87., 77., 39.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58., 64., 49., 56.,  7., 37., 86., 97., 19., 80.])
 </pre></div>
 </div>
 </div>
