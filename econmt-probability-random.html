@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Probability and Random Processes &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/econmt-probability-random.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -61,10 +62,35 @@
     <link rel="next" title="Statistics" href="econmt-statistics.html" />
     <link rel="prev" title="Reproducible Analysis" href="wrkflow-rap.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +99,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -93,14 +120,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -127,7 +155,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -174,7 +202,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -196,7 +224,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -223,7 +251,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -265,22 +315,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -292,17 +332,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -333,8 +368,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -366,7 +406,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -388,7 +428,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -410,7 +450,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -427,7 +467,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -439,7 +479,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -466,7 +506,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -485,112 +525,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/econmt-probability-random.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Feconmt-probability-random.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/econmt-probability-random.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/econmt-probability-random.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/econmt-probability-random.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/econmt-probability-random.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Feconmt-probability-random.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/econmt-probability-random.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -666,24 +821,115 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Probability and Random Processes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probability-definitions">
+   Probability (definitions)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discrete-random-variables">
+     Discrete random variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continuous-random-variables">
+     Continuous random variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribution-functions">
+   Distribution functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-properties-of-pmfs-and-pdfs">
+     Other properties of PMFs and PDFs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randomness-for-computers">
+   Randomness for computers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reproducibility">
+     Reproducibility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-numbers-drawn-from-distributions">
+     Random numbers drawn from distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-monte-carlo-method">
+     The Monte Carlo Method
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-a-probability-distribution">
+   Fitting a probability distribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="probability-and-random-processes">
-<h1>Probability and Random Processes<a class="headerlink" href="#probability-and-random-processes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="probability-and-random-processes">
+<h1>Probability and Random Processes<a class="headerlink" href="#probability-and-random-processes" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you’ll learn about how to use randomness and probability with code.</p>
 <p>If you’re running this code (either by copying and pasting it, or by downloading it using the icons at the top of the page), you may need to install the packages first. There’s a brief guide on installing packages in the Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 <p>If you’d like to find out more about any of the distributions featured, or the other distributions available in the <strong>scipy</strong> and <strong>numpy</strong> packages, head on over to the <a class="reference external" href="https://distribution-explorer.github.io">Probability Distribution Explorer</a> website.</p>
-<div class="section" id="imports">
-<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<section id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
 <p>First we need to import the packages we’ll be using</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,16 +942,16 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="probability-definitions">
-<h2>Probability (definitions)<a class="headerlink" href="#probability-definitions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="probability-definitions">
+<h2>Probability (definitions)<a class="headerlink" href="#probability-definitions" title="Permalink to this headline">#</a></h2>
 <p>Let’s get the jargon and definitions out of the way first, then we’ll find out a bit about random numbers in code, then we’ll actually see how to <em>use</em> random numbers for probability!</p>
 <p>Any probabilistic event can be considered to have three components: the sample space of possible outcomes <span class="math notranslate nohighlight">\(\Omega\)</span>, the set of possible events <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, and a probability measure <span class="math notranslate nohighlight">\(P\)</span>. Furthermore, <span class="math notranslate nohighlight">\(A\)</span> is often used to denote a subset of <span class="math notranslate nohighlight">\(\Omega\)</span> and <span class="math notranslate nohighlight">\(A^c\)</span> the complement of <span class="math notranslate nohighlight">\(A\)</span>, while individual events in <span class="math notranslate nohighlight">\(\Omega\)</span> are <span class="math notranslate nohighlight">\(\omega\)</span>. In the classic example of rolling a 6-sided fair die once, <span class="math notranslate nohighlight">\(\Omega = \{1, 2, 3, 4, 5, 6\}\)</span>. If <span class="math notranslate nohighlight">\(A = \{1, 2, 3\}\)</span> then, by definition of <span class="math notranslate nohighlight">\(\Omega\)</span>, <span class="math notranslate nohighlight">\(A^c = \{4, 5, 6\}\)</span>. The probability measure of any sample space satisfies <span class="math notranslate nohighlight">\(P(\Omega)=1\)</span> and <span class="math notranslate nohighlight">\(P(\varnothing)\)</span> = 0.</p>
 <p>The most important examples of probability that arise in economics are <strong>continuous random variables</strong> and <strong>discrete random variables</strong>. A random variable is a function <span class="math notranslate nohighlight">\(X: \Omega \rightarrow \mathbb{R}\)</span> such that <span class="math notranslate nohighlight">\(\{ \omega \in \Omega: X(w) \leq x\} \in \mathcal{F}\)</span> for each <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. All this is saying is that for every possible outcome, the random variable is a mapping of that outcome into a well-defined space of real numbers. It makes the connection between outcomes, events, and real numbers.</p>
 <p>Now we’ll go on to more practical matters: discrete and continuous random variables.</p>
-<div class="section" id="discrete-random-variables">
-<h3>Discrete random variables<a class="headerlink" href="#discrete-random-variables" title="Permalink to this headline">¶</a></h3>
+<section id="discrete-random-variables">
+<h3>Discrete random variables<a class="headerlink" href="#discrete-random-variables" title="Permalink to this headline">#</a></h3>
 <p>A random variable is discrete if it only takes values in a countable subset of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>; think the integers, or <span class="math notranslate nohighlight">\(x\in\{0, 1\}\)</span>. The distribution of such values is given by the <strong>probability mass function</strong>, or pmf. The pmf is an object that tells us the probabilty mass given to specific outcomes. The more precise defintion is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -717,9 +963,9 @@ p(x_i) = P(X=x_i) = P(\underbrace{\{\omega\in \Omega\ |\ X(\omega) = x_i\}}_{\te
 \[
 \text{cdf}(x) = P(X\leq x) = \sum_{x_i\leq x} p(x_i)
 \]</div>
-</div>
-<div class="section" id="continuous-random-variables">
-<h3>Continuous random variables<a class="headerlink" href="#continuous-random-variables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="continuous-random-variables">
+<h3>Continuous random variables<a class="headerlink" href="#continuous-random-variables" title="Permalink to this headline">#</a></h3>
 <p>Continuous random variables are functions such that <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow [0, \infty)\)</span> is a <strong>probability density</strong>. Probability density functions are to continuous random variables what PMFs are to discrete random variables, though there are some important differences that can trip up even the most careful. They are defined as follows: the probability of <span class="math notranslate nohighlight">\(X\)</span> taking a value betwen <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -732,10 +978,10 @@ P(a \leq X \leq b) = \displaystyle\int_a^b f(x) dx
 \[
 \text{cdf}(x) = P(X\leq x) = \int\limits^x_{-\infty}\! f(x')\, dx'
 \]</div>
-</div>
-</div>
-<div class="section" id="distribution-functions">
-<h2>Distribution functions<a class="headerlink" href="#distribution-functions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="distribution-functions">
+<h2>Distribution functions<a class="headerlink" href="#distribution-functions" title="Permalink to this headline">#</a></h2>
 <p>Let’s now see how code can help us when working with distributions, beginning with the probability mass function. As an example, let’s take a look at the binomial distribution. This is defined as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -828,8 +1074,8 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 <div class="cell_output docutils container">
 <img alt="_images/econmt-probability-random_12_0.svg" src="_images/econmt-probability-random_12_0.svg" /></div>
 </div>
-<div class="section" id="other-properties-of-pmfs-and-pdfs">
-<h3>Other properties of PMFs and PDFs<a class="headerlink" href="#other-properties-of-pmfs-and-pdfs" title="Permalink to this headline">¶</a></h3>
+<section id="other-properties-of-pmfs-and-pdfs">
+<h3>Other properties of PMFs and PDFs<a class="headerlink" href="#other-properties-of-pmfs-and-pdfs" title="Permalink to this headline">#</a></h3>
 <p>A range of functions are available for PMFs and PDFs in addition to the ones we’ve seen already. For a pmf or pdf, we can call <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">std</span></code>, and so on. Let’s see an example with two of the most useful: interval and percentile.</p>
 <p><code class="docutils literal notranslate"><span class="pre">interval(alpha,</span> <span class="pre">...)</span></code> gives the endpoints of the range around the median that contain alpha percent of the distribution. <code class="docutils literal notranslate"><span class="pre">ppf(q,</span> <span class="pre">...)</span></code> gives the quantiles of a given distribution, defined as <span class="math notranslate nohighlight">\(F(x) = P(X\leq x) = q\)</span>.</p>
 <div class="cell docutils container">
@@ -872,10 +1118,10 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 <div class="cell_output docutils container">
 <img alt="_images/econmt-probability-random_14_0.svg" src="_images/econmt-probability-random_14_0.svg" /></div>
 </div>
-</div>
-</div>
-<div class="section" id="randomness-for-computers">
-<h2>Randomness for computers<a class="headerlink" href="#randomness-for-computers" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="randomness-for-computers">
+<h2>Randomness for computers<a class="headerlink" href="#randomness-for-computers" title="Permalink to this headline">#</a></h2>
 <p>Computers love instruction and hate ambiguity. As such, randomness is quite tricky for them. So tricky, that no computer is able to produce <em>perfectly</em> random numbers but instead only has a <strong>pseudo-random number generator</strong>, or PRNG. As far as humans go, these are pretty good and modern ones are so good that using them is unlikely to be an issue unless you really are working at the frontiers of the science of randomness.</p>
 <p><strong>numpy</strong> uses a PRNG that’s a 64-bit Permuted Congruential Generator, though you can access other generators too. Here’s how to call it to generate <span class="math notranslate nohighlight">\(x \thicksim \mathcal{U}(0,1)\)</span>,</p>
 <div class="cell docutils container">
@@ -888,7 +1134,7 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.57373581, 0.88128219])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.32858424, 0.95268499])
 </pre></div>
 </div>
 </div>
@@ -904,17 +1150,17 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[14, 10],
-        [ 6,  2],
-        [ 5, 15]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[ 9,  3],
+        [19, 12],
+        [ 4, 13]],
 
-       [[13, 14],
-        [10,  7],
-        [ 9,  3]],
+       [[13,  9],
+        [ 8, 14],
+        [ 5,  2]],
 
-       [[ 8,  1],
-        [12,  2],
-        [16,  6]]])
+       [[11, 13],
+        [ 7, 16],
+        [ 2,  3]]])
 </pre></div>
 </div>
 </div>
@@ -927,7 +1173,7 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;c&#39;, &#39;e&#39;], dtype=&#39;&lt;U1&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;d&#39;, &#39;a&#39;], dtype=&#39;&lt;U1&#39;)
 </pre></div>
 </div>
 </div>
@@ -970,13 +1216,13 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;well&#39;, &#39;list&#39;, &#39;ordered.&#39;, &#39;is&#39;, &#39;This&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ordered.&#39;, &#39;list&#39;, &#39;is&#39;, &#39;well&#39;, &#39;This&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="reproducibility">
-<h3>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this headline">¶</a></h3>
+<section id="reproducibility">
+<h3>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this headline">#</a></h3>
 <p>If you need to create random numbers reproducibly, then you can do it by setting a seed value like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1006,9 +1252,9 @@ f(k; n, p) = \binom{n}{k} p^k q^{n-k}
 </div>
 </div>
 <p>The seed tells the generator where to start, so by passing the same seed in we can make the random numbers begin in the same place. The <code class="docutils literal notranslate"><span class="pre">prng</span></code> above can also be passed to some functions as a keyword argument.</p>
-</div>
-<div class="section" id="random-numbers-drawn-from-distributions">
-<h3>Random numbers drawn from distributions<a class="headerlink" href="#random-numbers-drawn-from-distributions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="random-numbers-drawn-from-distributions">
+<h3>Random numbers drawn from distributions<a class="headerlink" href="#random-numbers-drawn-from-distributions" title="Permalink to this headline">#</a></h3>
 <p>Using <strong>numpy</strong>, we can draw samples from distributions using the <code class="docutils literal notranslate"><span class="pre">prng.distribution</span></code> syntax. One of the most common distributions you might like to draw from is the uniform, for example</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1066,9 +1312,9 @@ x \thicksim \mathcal{U}(0, 10)
 <div class="cell_output docutils container">
 <img alt="_images/econmt-probability-random_33_0.svg" src="_images/econmt-probability-random_33_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="the-monte-carlo-method">
-<h3>The Monte Carlo Method<a class="headerlink" href="#the-monte-carlo-method" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-monte-carlo-method">
+<h3>The Monte Carlo Method<a class="headerlink" href="#the-monte-carlo-method" title="Permalink to this headline">#</a></h3>
 <p>Monte Carlo is the name of a part of Monaco that harbours a famous casino, yes, but it’s also the name given to a bunch of techniques that rely on generating random numbers in order to solve problems. It’s a really useful technique that entire textbooks cover and we can’t hope to give it the love and attention it requires here, covering as it does Bayesian statistics, random walks, Markov switching models, Markov Chain Monte Carlo, bootstrapping, and optimisation! But what we can do is take a quick look at the very, very core code tools that can support these applications. The bottom line is that between the drawing of random variables from given <strong>scipy</strong> distributions we’ve already seen, the use of <code class="docutils literal notranslate"><span class="pre">prng.choice()</span></code>, and the use of <code class="docutils literal notranslate"><span class="pre">prng.uniform</span></code>, a lot of Monte Carlo methods are covered.</p>
 <p>We already covered drawing random numbers from distributions already included in <strong>scipy</strong>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">prng.uniform</span></code> is helpful in the following case: in the (extremely unlikely) event that there isn’t a pre-built distribution available for a case where you know the analytical expression of a PDF and its CDF, a quick way to get random numbers distributed according to that PDF is to plug random numbers into the inverse cumulative distribution function. ie you plug random numbers <span class="math notranslate nohighlight">\(r\)</span> into <span class="math notranslate nohighlight">\(\text{cdf}^{-1}(r)\)</span> in order to generate <span class="math notranslate nohighlight">\(x \thicksim \text{pdf}\)</span>. The random numbers you plug in must come from a uniform distribution between 0 and 1.</p>
@@ -1154,10 +1400,10 @@ x \thicksim \mathcal{U}(0, 10)
 <img alt="_images/econmt-probability-random_39_0.svg" src="_images/econmt-probability-random_39_0.svg" /></div>
 </div>
 <p>We can see that the cumulative distribution function also tells a story about what’s going on; namely, there is a lower gradient up to <span class="math notranslate nohighlight">\(i=6\)</span>, followed by a higher gradient. The two distributions are visually distinct.</p>
-</div>
-</div>
-<div class="section" id="fitting-a-probability-distribution">
-<h2>Fitting a probability distribution<a class="headerlink" href="#fitting-a-probability-distribution" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="fitting-a-probability-distribution">
+<h2>Fitting a probability distribution<a class="headerlink" href="#fitting-a-probability-distribution" title="Permalink to this headline">#</a></h2>
 <p>Often we are in a situation where we are working with empirical data and we want to know if a particular distribution function provides a good fit for a variable. <strong>scipy</strong> has a neat ‘fit’ function that can do this for us, given a guess at a distribution. This fit is computed by maximising a log-likelihood function, with a penalty applied for samples outside of range of the distribution.</p>
 <p>Let’s see this in action with an example using synthetic data created from a noisy normal distribution:</p>
 <div class="cell docutils container">
@@ -1200,16 +1446,25 @@ x \thicksim \mathcal{U}(0, 10)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_12734/965074073.py:2: UserWarning: 
+
+`distplot` is a deprecated function and will be removed in seaborn v0.14.0.
+
+Please adapt your code to use either `displot` (a figure-level function with
+similar flexibility) or `histplot` (an axes-level function for histograms).
+
+For a guide to updating your code to use the new functions, please see
+https://gist.github.com/mwaskom/de44147ed2974457ad6372750bbe5751
+
+  sns.distplot(data, bins=60, kde=False, fit=st.norm)
 </pre></div>
 </div>
 <img alt="_images/econmt-probability-random_43_1.svg" src="_images/econmt-probability-random_43_1.svg" /><img alt="_images/econmt-probability-random_43_2.svg" src="_images/econmt-probability-random_43_2.svg" /></div>
 </div>
 <p>As you can see, in this case the estimate <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are pretty close to the true values. The probability plot, the second chart shown, is very useful in practice because it shows how the often problematic tails are behaving.</p>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
 <p>In this very short introduction to probability and random processes with code, you should have learned how to:</p>
 <ul class="simple">
 <li><p>✅ use a wide range of probability density functions and probability mass functions from <strong>scipy</strong>;</p></li>
@@ -1218,8 +1473,8 @@ x \thicksim \mathcal{U}(0, 10)
 <li><p>✅ use <strong>scipy</strong> to fit data to a given distribution using maximum likelihood estimation; and</p></li>
 <li><p>✅ perform simulations using a psuedo-random number generator.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1243,64 +1498,51 @@ x \thicksim \mathcal{U}(0, 10)
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="wrkflow-rap.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Reproducible Analysis</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="wrkflow-rap.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Reproducible Analysis</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="econmt-statistics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistics</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="econmt-statistics.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Statistics</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

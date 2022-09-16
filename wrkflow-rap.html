@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Reproducible Analysis &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,51 +20,75 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/wrkflow-rap.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Probability and Random Processes" href="econmt-probability-random.html" />
-    <link rel="prev" title="Combining Code and Text in Quarto Markdown" href="wrkflow-quarto.html" />
+    <link rel="prev" title="Virtual Code Environments" href="wrkflow-environments.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -289,18 +329,13 @@
    Virtual Code Environments
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/wrkflow-rap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fwrkflow-rap.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/wrkflow-rap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/wrkflow-rap.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/wrkflow-rap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/wrkflow-rap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fwrkflow-rap.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/wrkflow-rap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -670,19 +825,116 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Reproducible Analysis</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-modular-code">
+   Using Modular Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-structure">
+   Project Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproducible-analytical-pipelines">
+   Reproducible Analytical Pipelines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directed-acyclic-graphs">
+     Directed Acyclic Graphs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scripting-reproducible-analytical-pipelines">
+     Scripting Reproducible Analytical Pipelines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#make-for-reproducible-analytical-pipelines">
+     Make for Reproducible Analytical Pipelines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snakemake-for-reproducible-analytical-pipelines">
+     Snakemake for Reproducible Analytical Pipelines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ploomber-for-reproducible-analytical-pipelines">
+     Ploomber for Reproducible Analytical Pipelines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproducible-python-environments">
+   Reproducible Python Environments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reproducible-environments-with-poetry">
+     Reproducible Environments with Poetry
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semi-reproducible-environments-with-anaconda">
+     Semi-reproducible Environments with Anaconda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproducible-computational-environments">
+   Reproducible Computational Environments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-your-analysis-for-prosperity">
+   Saving Your Analysis For Prosperity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bringing-it-all-together">
+   Bringing It All Together
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="reproducible-analysis">
-<span id="wrkflow-rap"></span><h1>Reproducible Analysis<a class="headerlink" href="#reproducible-analysis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="reproducible-analysis">
+<span id="wrkflow-rap"></span><h1>Reproducible Analysis<a class="headerlink" href="#reproducible-analysis" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This chapter will tell you about reproducible analysis and what are sometimes called “reproducible analytical pipelines”, also known as RAPs. This chapter has benefitted from the “<a class="reference external" href="https://best-practice-and-impact.github.io/qa-of-code-guidance">Quality Assurance of Code for Analysis and Research</a>” book produced by the Best Practice and Impact division of the Office for National Statistics and “The Turing Way”, a <a class="reference external" href="https://the-turing-way.netlify.app">guide to reproducibility</a> produced by the Alan Turing Institute.</p>
 <p>Reproducibility can mean a lot of things to a lot of different people in a lot of different contexts. Here, we’re going to think about the reproducibility of analysis performed by code. That excludes external validity and although it might include robust coding practices, it doesn’t include robustness checks.</p>
 <p>It does include Reproducible Analytical Pipelines (RAPs), which are automated analytical processes. At their best, RAPs use elements of software engineering best practice to ensure that analysis is reproducible.</p>
@@ -701,9 +953,9 @@
 <p><em>A lot of the value to be had in reproducible code can be achieved by just the first five</em>. Nailing all but the last one is a high standard and probably the right spot in the trade-off between effort and reproducibility for a lot of projects. If you get this far, you’re doing a really great job. Doing all of these is the gold standard.</p>
 <p>Reproducibility isn’t just about ensuring your results reproduce, though that’s obviously the main reason to do it. It’s also about saving you time and effort. This image, from biological psychiatry researcher Daniel Quintana’s <a class="reference external" href="http://dx.doi.org/10.17605/OSF.IO/DZTVQ">talk</a> <em>Five things about open and reproducible science that every early career researcher should know</em>, sums it up nicely:</p>
 <p><img alt="Time taken with and without reproducibility" src="https://github.com/aeturrell/coding-for-economists/raw/main/img/reproducibiity_relocates_time.png" /></p>
-</div>
-<div class="section" id="using-modular-code">
-<h2>Using Modular Code<a class="headerlink" href="#using-modular-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-modular-code">
+<h2>Using Modular Code<a class="headerlink" href="#using-modular-code" title="Permalink to this headline">#</a></h2>
 <p>(You may have already met this idea before as the DRY, or “don’t repeat yourself”, concept).</p>
 <p>How you structure your code can itself aid reproducibility. Let’s imagine you have a situation where you want to perform two similar analytical tasks in which the only thing that changes are the inputs and outputs. Let’s say, for example, that you want to perform a particular set of operations, perhaps the following:</p>
 <blockquote>
@@ -839,9 +1091,9 @@ The score is 3.29
 <p class="admonition-title">Note</p>
 <p>If you are in the middle of a coding session and you change the code in a module (external script), your Python kernel will not necessarily know that you have changed the external script. You can either restart the Python kernel, but you lose your variables, or use the built-in <code class="docutils literal notranslate"><span class="pre">importlib</span></code> Python package. For example, to reload an external module named <code class="docutils literal notranslate"><span class="pre">utilities.py</span></code> that had been imported via <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">utilities</span> <span class="pre">as</span> <span class="pre">utils</span></code>, you would run <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">importlib</span></code> and, when you wanted to refresh the module, <code class="docutils literal notranslate"><span class="pre">importlib.reload(utils)</span></code>.</p>
 </div>
-</div>
-<div class="section" id="project-structure">
-<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">#</a></h2>
 <p>The first principle to guide you should be that <strong>each project lives in its own folder</strong>. Everything for that project will appear somewhere under the top level directory. Do not mix projects in the same folder directory.</p>
 <p>A typical project structure might look like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>📁 project
@@ -878,14 +1130,14 @@ The score is 3.29
 <p>So that’s the structure. There is another important principle here, which follows on from the first: <strong>you should be able to dispose of the results, figures, and tables (ie delete them), without worrying</strong>. If you are working on a project and deleting any outputs that are generated by code scripts would scupper everything, then your project is not reproducible. (This is another reason why you should always keep an “untouched” version of the raw data.) If it’s feasible to do so time-wise, it is good practice to delete and regenerate your outputs regularly to test that your project is indeed reproducible.</p>
 <p>There are, of course, many variations on this example project structure. You can find “cookiecutter” templates out there that will help you structure your own project (some involve answering some questions about what you need, and what you’d like to call project, and so on), or just get inspiration. Some good templates to check out that can help you structure your project are the UK Government data science, <a class="reference external" href="https://github.com/ukgovdatascience/govcookiecutter">govcookiecutter</a> and this comprehensive Python data science project template known as <a class="reference external" href="http://drivendata.github.io/cookiecutter-data-science/">cookiecutter-data-science</a>. For advanced users looking to build Python packages that others can install, the <a class="reference external" href="https://cookiecutter-hypermodern-python.readthedocs.io/en/2021.7.15/">hypermodern Python cookiecutter</a> is packed full of amazing features and comes highly recommended.</p>
 <p>Another important principle of good project structure is to use relative filepaths; you can read more about those in the Chapter on <a class="reference internal" href="code-best-practice.html#code-best-practice"><span class="std std-ref">Tips for Better Coding</span></a>.</p>
-</div>
-<div class="section" id="reproducible-analytical-pipelines">
-<h2>Reproducible Analytical Pipelines<a class="headerlink" href="#reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reproducible-analytical-pipelines">
+<h2>Reproducible Analytical Pipelines<a class="headerlink" href="#reproducible-analytical-pipelines" title="Permalink to this headline">#</a></h2>
 <p>We’ve seen how functions and modules can aid the reproducibility of logic. We’ve seen the kind of folder and file structure that can aid reproducibility of projects too. But the <em>order</em> of operations matters as well! Pipelines organise your analysis in a series of steps that, when executed, perform the same series of operations in the same order. If you arrange your code in a reproducible analytical pipelines, you will know that you can send your code to someone else and, when they run it, the same steps will be executed in the same order.</p>
 <p>In this section, we’ll look at the concept in general as well as some tools that can aid you in creating reproducible analytical pipelines.</p>
 <p>The first principle of RAPs may be a surprise: you shouldn’t use the interactive console interactively (eg by jamming, re-running lines, etc, as you go). A RAP should be able to go from start to finish with zero human interaction during execution, and produce consistent results at the end. This is different to when you’re still developing a project, and the interactive console is super useful because you’re trying things out. But RAP is for prosperity and needs to work without your intervention!</p>
-<div class="section" id="directed-acyclic-graphs">
-<h3>Directed Acyclic Graphs<a class="headerlink" href="#directed-acyclic-graphs" title="Permalink to this headline">¶</a></h3>
+<section id="directed-acyclic-graphs">
+<h3>Directed Acyclic Graphs<a class="headerlink" href="#directed-acyclic-graphs" title="Permalink to this headline">#</a></h3>
 <p>Directed acyclic graphs pop up in lots of contexts. Here, in a RAP context, we’re talking about them because the execution order of your code and scripts should form a directed acyclic graph (DAG). The word “graph” here can be confusing: it’s referring to the formal notion of a graph from the branch of mathematics called graph theory, which is the study of pairwise relations between objects. A graph in this context is made up of vertices (also called nodes or points) that are connected by edges (also called links or lines). A DAG is a directed graph with no directed cycles (closed loops). It consists of vertices and edges with each edge directed from one vertex to another, such that following the directions will never form a closed loop. To summarise: “directed” means that edges between nodes have a direction and you can only traverse the graph in that direction (often shown by arrows in diagrams) and “acyclic”: means there are no cycles so that, for example, a node A can’t depend on a node B when B depends on A.</p>
 <p>The point is that the set of operations that are performed when following a DAG proceeds like water flowing through a series of rapids: one step after another, with no looping back.</p>
 <p>This is all a bit abstract and so it’s a lot easier to just take a look at a visualisation of one. We’ll use the example from the previous section boiled down to only the code scripts (.py files).</p>
@@ -899,9 +1151,9 @@ The score is 3.29
 </div>
 <p>Here we see the execution order. utilities is the antecedent of every step because it is imported by all three of the other scripts. The rest of the DAG is: data cleaning, analysis, and, finally, generate plots and tables. Fancier DAGs might also show the input data, processed data, results, and outputs on the diagram too.</p>
 <p>Why is turning your project into a DAG important? Because, to be able to reproduce what you did, you must be able to clearly define what the steps were that took raw data at the start and output the finished product at the end.</p>
-</div>
-<div class="section" id="scripting-reproducible-analytical-pipelines">
-<h3>Scripting Reproducible Analytical Pipelines<a class="headerlink" href="#scripting-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="scripting-reproducible-analytical-pipelines">
+<h3>Scripting Reproducible Analytical Pipelines<a class="headerlink" href="#scripting-reproducible-analytical-pipelines" title="Permalink to this headline">#</a></h3>
 <p>There’s still a manual step in the above logic. Even with the raw data and the folder structure, someone needs to come along and remember to run the (right) three scripts in the right order. But there’s no need to leave running the scripts in the right order to chance.</p>
 <p>There are a few options to automate the execution order of the scripts. One is to write all the scripts as modules with a main script, “<a class="reference external" href="http://main.py">main.py</a>”, that runs everything else. The contents of <a class="reference external" href="http://main.py">main.py</a> might look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; main.py: Master script for project &quot;project&quot;.</span>
@@ -919,9 +1171,9 @@ The score is 3.29
 </div>
 <p>With this arrangement, all the user has to know (perhaps from the <a class="reference external" href="http://README.md">README.md</a>) is that they need to run “<a class="reference external" href="http://main.py">main.py</a>” and it will take care of the rest. The code writer (often the same person as the user, but not always) does need to take the extra step of creating the relevant “run” functions in each of the three script files too though. And they need to ensure that <em>they</em> use <a class="reference external" href="http://main.py">main.py</a> when generating their results (rather than running the scripts separately), because otherwise there may be differences.</p>
 <p>You can see an example project that uses the script method <a class="reference external" href="https://github.com/aeturrell/cookie-cutter-research-project">here</a>.</p>
-</div>
-<div class="section" id="make-for-reproducible-analytical-pipelines">
-<h3>Make for Reproducible Analytical Pipelines<a class="headerlink" href="#make-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="make-for-reproducible-analytical-pipelines">
+<h3>Make for Reproducible Analytical Pipelines<a class="headerlink" href="#make-for-reproducible-analytical-pipelines" title="Permalink to this headline">#</a></h3>
 <p>Make is a command line tool (to learn more about what the command line is, check out <a class="reference internal" href="wrkflow-command-line.html#wrkflow-command-line"><span class="std std-ref">The Command Line</span></a>) that helps with automating the execution of a series of processes—exactly what we need in a RAP. Make does its magic via a command line script. Honestly, it’s pretty fussy and complicated, which perhaps explains why it’s not more popular, but it’s well worth considering as one option for gold-plated reproducible analytical pipelines.</p>
 <p>It’s worth saying up front that Make has little time for pipelines that produce more than one output per input dataset + script combination. This can be puzzling initially, but it’s actually probably good practice to have one output per unique combination of inputs. The place where it makes less sense, perhaps, is if you have one script that produces all of your figures and tables.</p>
 <p>Make is not a Python library, so you’ll need to download and install it separately. The installation instructions are different on different operating systems: you can find information on how to install Make <a class="reference external" href="https://www.gnu.org/software/make/">here</a>. On Mac, if you use homebrew, the command to install it is <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">make</span></code>. Similar commands exist for Linux. In Windows, you can use the <a class="reference external" href="https://chocolatey.org/">chocolatey</a> package manager and then <code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">make</span></code> or work in the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>.</p>
@@ -970,9 +1222,9 @@ clean:
 <p><img alt="Directed acyclic graph of make example" src="https://github.com/aeturrell/coding-for-economists/raw/main/img/makefile_example.png" /></p>
 <p>Another good feature is that Make doesn’t care <em>what</em> programme you’re using: pdflatex, python, R, whatever, <em>as long as you can call it from the command line</em>. Which is basically all programmes. So it’s very flexible too.</p>
 <p>One of the less nice features of Make is that it’s quite complex, and it doesn’t play that nicely with Windows. There is a lot extra that you can do with it, and with the complexity of your makefile, that goes beyond what we saw in the simple example above—though, as noted, the <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/make/make-examples.html">Turing’s tutorial</a> is a great place to start.</p>
-</div>
-<div class="section" id="snakemake-for-reproducible-analytical-pipelines">
-<h3>Snakemake for Reproducible Analytical Pipelines<a class="headerlink" href="#snakemake-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="snakemake-for-reproducible-analytical-pipelines">
+<h3>Snakemake for Reproducible Analytical Pipelines<a class="headerlink" href="#snakemake-for-reproducible-analytical-pipelines" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://snakemake.readthedocs.io/en/stable/index.html">Snakemake</a> is a popular tool that shares a lot of similarities with Make but, instead of a Makefile, you write instructions in an arguably simpler format, yaml. Despite being very much geared around the Python ecosystem (and especially biological and genetic applications), it—like Make—can be used to automate any command that you would issue in your terminal.</p>
 <p>Here’s an example (from biology) of a simple <strong>snakemake</strong> file, which would be saved as “Snakefile”:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rule bwa_map:
@@ -989,9 +1241,9 @@ clean:
 <p>In this case, example <code class="docutils literal notranslate"><span class="pre">snakemake</span> <span class="pre">mapped_reads/{A,B}.bam</span></code> on the command line in the same directory as the Snakefile would execute the <code class="docutils literal notranslate"><span class="pre">bwa_map</span></code> command in order to create both “mapped_reads/A.bam” and “mapped_reads/B.bam”. The curly brackets make use of the fact that the command line addresses everything in curly brackets, and so address both the “A” and “B” cases.</p>
 <p>As with Make, the DAG defined by what you set out in your Snakefile can be turned into a plot using <strong>graphviz</strong>.</p>
 <p>This is just a very short introduction to Snakemake—you can find more information in the <a class="reference external" href="https://snakemake.readthedocs.io">documentation</a>.</p>
-</div>
-<div class="section" id="ploomber-for-reproducible-analytical-pipelines">
-<h3>Ploomber for Reproducible Analytical Pipelines<a class="headerlink" href="#ploomber-for-reproducible-analytical-pipelines" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ploomber-for-reproducible-analytical-pipelines">
+<h3>Ploomber for Reproducible Analytical Pipelines<a class="headerlink" href="#ploomber-for-reproducible-analytical-pipelines" title="Permalink to this headline">#</a></h3>
 <p>If you’ve just read the previous section on Make, you’re probably thinking “argh, why does this have to be so complicated!”. Well, happily, there are tools that aim to make defining a reproducible analytical pipeline <em>far</em> easier. <a class="reference external" href="https://ploomber.readthedocs.io/">Ploomber</a> is one such tool that we’ll look at in this section. It supports Python and R.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1004,10 +1256,10 @@ clean:
 <li><p><code class="docutils literal notranslate"><span class="pre">ploomber</span> <span class="pre">build</span></code>, which (like <code class="docutils literal notranslate"><span class="pre">make</span></code>) runs the DAG.</p></li>
 </ul>
 <p>The “first pipeline” <a class="reference external" href="https://ploomber.readthedocs.io/en/latest/get-started/spec-api-python.html">Ploomber tutorial</a> is a good place to start if you are interested in using this tool for RAPs.</p>
-</div>
-</div>
-<div class="section" id="reproducible-python-environments">
-<h2>Reproducible Python Environments<a class="headerlink" href="#reproducible-python-environments" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="reproducible-python-environments">
+<h2>Reproducible Python Environments<a class="headerlink" href="#reproducible-python-environments" title="Permalink to this headline">#</a></h2>
 <p>So, you’ve created your project’s code in a modular way, you’ve used a sensible structure for your files, <em>and</em> you’ve set everything up as a reproducible analytical pipeline (or RAP). But now imagine a scenario where your computer breaks, and you need buy a new one, load it up, and try to run the code, or perhaps your colleague or co-author wants to run the code. What do you do!?</p>
 <p>For code to be truly reproducible, you, your colleagues, and your co-authors (and possibly reviewers too) need to be able to do reproduce the exact set of packages and version of programming languages that you used to generate your results.</p>
 <p>Here we hit upon another important principle of reproducible analysis: <em>you should use a clean, dedicated Python environment and set of packages for each project that you do.</em> This means that only packages that are necessary for your RAP need be installed and included, and makes it easier to isolate what others will need to re-run that project’s scripts.</p>
@@ -1017,8 +1269,8 @@ clean:
 <p>It may be easier to illustrate creating Python environments with an example. Let’s say you’re using Python 3.8, statsmodels, and pandas for one project, project A. And, for project B, you’re using Python 3.8 with numpy and scikit-learn. Best practice would be to have two separate virtual Python environments: environment A, with everything needed for project A, and environment B, with everything needed for project B. This way, when you “hand over” project A to a colleague, what they need is clear—and even specified as <em>part</em> of the documents contained within the project. Better still, you can specify the version of Python too.</p>
 <p>There are two ways one could create reproducible Python environments that we’re going to look at in this section: poetry and Anaconda. <em>Poetry is recommended for full reproducibility but you may find Anaconda to be more convenient on Windows</em>. Anaconda can get you most, but not all, of the way to reproducible  Python environments and are an excellent back-up option if you don’t want to use poetry.</p>
 <p>Before we get into the details though, a word of warning: even if you install the same packages and the same version of a programming language, you may still get differences on different operating systems (or other differences in computers, like hardware). This will be explored later on in this chapter.</p>
-<div class="section" id="reproducible-environments-with-poetry">
-<h3>Reproducible Environments with Poetry<a class="headerlink" href="#reproducible-environments-with-poetry" title="Permalink to this headline">¶</a></h3>
+<section id="reproducible-environments-with-poetry">
+<h3>Reproducible Environments with Poetry<a class="headerlink" href="#reproducible-environments-with-poetry" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://python-poetry.org/">Poetry</a> is a relatively new but really quite amazing command line tool that performs several important tasks:</p>
 <ul class="simple">
 <li><p>automatically creates virtual environments on a per project basis</p></li>
@@ -1045,9 +1297,9 @@ typeguard = &quot;2.12.1&quot;
 <p>Where poetry really shines is when you send someone else the project. They receive all the files for your project, including the automatically generated <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files. Then, all they need is to have the right version of Python installed, navigate to the project folder in the command line, and enter <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all of the packages needed to run the code!</p>
 <p>Note that, if you want to use the virtual environment to run scripts or tools installed using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span></code>, you will need to use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">command-name</span></code> rather than the usual <code class="docutils literal notranslate"><span class="pre">command-name</span></code>. For example, if you have a script <code class="docutils literal notranslate"><span class="pre">analysis.py</span></code>, you would call it with <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">Python</span> <span class="pre">analysis.py</span></code>. You can also open a command line within the virtual environment using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>.</p>
 <p>Although poetry is geared towards developers who are creating Python packages, it’s fast becoming the best go-to option for reproducible Python environments. When using poetry for reproducible research, you’re likely to want to pin to specific versions of all packages.</p>
-</div>
-<div class="section" id="semi-reproducible-environments-with-anaconda">
-<h3>Semi-reproducible Environments with Anaconda<a class="headerlink" href="#semi-reproducible-environments-with-anaconda" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="semi-reproducible-environments-with-anaconda">
+<h3>Semi-reproducible Environments with Anaconda<a class="headerlink" href="#semi-reproducible-environments-with-anaconda" title="Permalink to this headline">#</a></h3>
 <p>Anaconda is a package and environment manager that supports Python and R. It’s very much geared toward data science, and has been around for a while. (This book uses it for its reproducible environment.)</p>
 <p>Note that Anaconda provides pre-built package binaries. This is especially useful on some systems where compiling packages is a nuisance (yes, it’s Windows being difficult again). For this reason, and some others to do with guarantees around package quality, Anaconda is a popular choice for corporate coding setups.</p>
 <p>However, that doesn’t mean it’s a good choice. It has some serious failings when it comes to reproducibility, which we’ll get to.</p>
@@ -1086,10 +1338,10 @@ dependencies:
 <p>Now, having delved into how Anaconda environments work, let’s think about how to make them reproducible. What we did above, pinning the version of <em>Python</em> but not the packages is not going to cut the mustard. Conda environment.yml files are very useful for defining desired environments but there are times, as here, when we want to be able to <em>exactly</em> reproduce an environment—including the dependencies of the dependencies.</p>
 <p>Unfortunately there’s just no good way to do this with Anaconda currently. Although it’s possible to completely and automatically lock down the versions of packages installed in the first part of the environment.yml file, ie those that can be conda installed, it is not currently possible to automatically lock down the packages that are installed by pip. There are some nuances to that story, but the important point is it’s just too painful and complicated to create perfectly reproducible environments using conda &amp; pip together right now (and, really, you want a solution that can cover both given conda doesn’t cover all Python packages).</p>
 <p>So what do semi-reproducible Anaconda Python environments look like? They look just like what we saw above; manually creating a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> with the version of Python pinned and the names of both conda and pip packages listed but without their versions. Then, to install this, it’s <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>.</p>
-</div>
-</div>
-<div class="section" id="reproducible-computational-environments">
-<h2>Reproducible Computational Environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="reproducible-computational-environments">
+<h2>Reproducible Computational Environments<a class="headerlink" href="#reproducible-computational-environments" title="Permalink to this headline">#</a></h2>
 <p>“But it works on my computer!” Ever heard that? The tools in the previous section are fantastic for reproducibility but only up to a point. The hard truth is that code packages prepared for different operating systems can have differences, most often if the package contains C or other compiled language code.</p>
 <p><img alt="" src="https://external-preview.redd.it/aR6WdUcsrEgld5xUlglgKX_0sC_NlryCPTXIHk5qdu8.jpg?auto=webp&amp;s=5fe64dd318eec71711d87805d43def2765dd83cd" /></p>
 <p>For example, because it’s hard to compile code on the fly in Windows, there are pre-compiled versions of popular packages available, either through Anaconda or just on the <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">websites of enthusiasts</a>. The way Windows compiles code is different to Mac, which is different to Linux, and so on.</p>
@@ -1232,18 +1484,18 @@ RUN poetry run make
 <p class="admonition-title">Exercise</p>
 <p>Follow the instructions in this section and export the report.pdf that’s generated from the Dockerfile.</p>
 </div>
-</div>
-<div class="section" id="saving-your-analysis-for-prosperity">
-<h2>Saving Your Analysis For Prosperity<a class="headerlink" href="#saving-your-analysis-for-prosperity" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="saving-your-analysis-for-prosperity">
+<h2>Saving Your Analysis For Prosperity<a class="headerlink" href="#saving-your-analysis-for-prosperity" title="Permalink to this headline">#</a></h2>
 <p>True reproducible analysis should be findable and accessible, as well as interoperable and re-usable (these are the FAIR principles for data, but they pretty much work for analysis too). So how can you make what you’ve done findable and accessible to others?</p>
 <p>Before we try to answer that, it’s worth noting that, for an analysis that’s to be preserved in perpetuity, you really want to freeze it in time. So although github and gitlab are great to sharing dynamically changing content, they’re not as good for long-term preservation. Or, at the very least, you need clear version labels that are used to say what version of the code was used to produce a particular analysis.</p>
 <p>There are some fantastic options out there for preserving your code base (and therefore your reproducible project) while also making it findable and accessible. <a class="reference external" href="https://zenodo.org/">Zenodo</a> accepts both code and data (up to 50GB at the time of writing), and gives each repo a DOI, or Digital Object Identifier, a “perma-link” that will always take users to that repository regardless of other website changes. Importantly, different versions are supported and clearly labelled.</p>
 <p>You can also now integrate a github repo and Zenodo; instructions are available in <a class="reference external" href="https://the-turing-way.netlify.app/communication/citable/citable-cite.html#cm-citable-cite-software">The Turing Way</a>.</p>
 <p>You can also integrate Zenodo, a github repo, and Binder too: so that people coming to your analysis on Zenodo can, with a single click, create a fully interactive version of your analysis on Binder! See this <a class="reference external" href="https://blog.jupyter.org/binder-with-zenodo-af68ed6648a6">blog post</a> for details, and you may want to read the section above on repo2docker too.</p>
 <p><a class="reference external" href="https://figshare.com/">Figshare</a> is a similar service to Zenodo.</p>
-</div>
-<div class="section" id="bringing-it-all-together">
-<h2>Bringing It All Together<a class="headerlink" href="#bringing-it-all-together" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bringing-it-all-together">
+<h2>Bringing It All Together<a class="headerlink" href="#bringing-it-all-together" title="Permalink to this headline">#</a></h2>
 <p>Reproducible analysis is a bit more tricky than you thought, eh? But, as noted at the start, you can derive a lot the value by doing only some of the steps. Although it’s also worth thinking about reproducible analysis <em>right from the start of a project</em> so that it’s not really painful to lever it back in at the end. In research especially, because you’re exploring as you go, this can be hard work and you may have to “refactor” your code multiple times. Favouring simplicity over complexity can make it all go a lot more smoothly.</p>
 <p>We’ve looked at numerous tools throughout this chapter, especially for reproducibility for the steps at the start from automatic execution of your RAP onwards. It’s worth suggesting a default set of tools which this book recommends as:</p>
 <p><strong>Recipe 1 for complete reproducible analytical pipelines</strong></p>
@@ -1278,8 +1530,8 @@ RUN poetry run make
 <li><p>pre-commit hooks</p></li>
 <li><p>continuous integration</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1303,64 +1555,51 @@ RUN poetry run make
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="wrkflow-quarto.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Combining Code and Text in Quarto Markdown</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="wrkflow-environments.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Virtual Code Environments</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="econmt-probability-random.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Probability and Random Processes</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="econmt-probability-random.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Probability and Random Processes</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Intro to Geo-Spatial Analysis &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,37 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/geo-intro.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +58,35 @@
     <link rel="next" title="Geo-Spatial Visualisation" href="geo-vis.html" />
     <link rel="prev" title="Natural Language Processing" href="text-nlp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +95,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +116,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +151,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +198,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +220,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +247,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +311,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +328,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +364,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +402,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +424,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +446,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +463,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +475,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +502,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +521,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/geo-intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fgeo-intro.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/geo-intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/geo-intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/geo-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/geo-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fgeo-intro.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/geo-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -735,25 +888,187 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Intro to Geo-Spatial Analysis</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coordinate-reference-systems">
+     Coordinate Reference Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports-and-packages">
+     Imports and packages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geopandas-dataframes">
+   Geopandas dataframes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-and-output">
+     Input and Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basics">
+     Basics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-coordinate-reference-systems">
+     Working with Coordinate Reference Systems
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulating-space">
+   Manipulating Space
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Basics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-operations">
+     Spatial Operations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#point-in-polygon">
+       Point-in-polygon
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buffers">
+       Buffers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-set-operations">
+     Spatial set operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computing-distances">
+     Computing distances
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#neighbours">
+     Neighbours
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aggregation-and-dissolve">
+   Aggregation and Dissolve
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dissolve">
+     Dissolve
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregation">
+     Aggregation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-data">
+   Merging data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribute-joins">
+     Attribute Joins
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-joins">
+     Spatial Joins
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geocoding">
+   Geocoding
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geopy-stand-alone">
+     Geopy stand-alone
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geopy-built-in-to-geopandas">
+     Geopy built-in to geopandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#openstreetmap-and-osmnx">
+   OpenStreetMap and Osmnx
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="intro-to-geo-spatial-analysis">
-<h1>Intro to Geo-Spatial Analysis<a class="headerlink" href="#intro-to-geo-spatial-analysis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="intro-to-geo-spatial-analysis">
+<h1>Intro to Geo-Spatial Analysis<a class="headerlink" href="#intro-to-geo-spatial-analysis" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you’ll learn the basics of geospatial analysis with code.</p>
 <p>You should be aware when following this chapter that installing geographic analysis packages isn’t always the easiest and things can and do go wrong! (Some geospatial analysis courses recommend running everything in a Docker container.) If you’re not familiar with Docker and you’re installing everything locally, a strong recommendation is to use conda. There’s a brief guide on installing packages in the Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 <p>There are two types of spatial data geographic information systems (GIS): vector and raster. Vector spatial data are made up of vertices and paths. These are represented computationally by points (zero-dimensional objects, if you like), lines (1D objects), and polygons (2D objects, aka an area). Vector data are analogous to vector image formats, like .eps and .pdf, they are smooth and well-defined regardless of the level of zoom you look at them (on a map). Raster data are composed of pixels, also known as grid cells. Each cell has a different value and the raster map is overlaid on a map. Raster data are better for continuous variables such as temperature or rainfall, while vector data are better suited to political boundaries and features like roads. In this book, we’ll only cover vector geospatial data analysis (if you need to work with rasters, check out <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/">rasterio</a>).</p>
 <p>Common file formats for vector data include Shapefile (.shp…), GeoJSON/JSON, KML and GeoPackage.</p>
-<div class="section" id="coordinate-reference-systems">
-<h3>Coordinate Reference Systems<a class="headerlink" href="#coordinate-reference-systems" title="Permalink to this headline">¶</a></h3>
+<section id="coordinate-reference-systems">
+<h3>Coordinate Reference Systems<a class="headerlink" href="#coordinate-reference-systems" title="Permalink to this headline">#</a></h3>
 <p>A Coordinate Reference System (CRS) associates numerical coordinates with a position on the surface of the Earth. Latitude and longitude are an example (and have units of degrees) but there are many CRSs. They are important because they define how your data will look on a map. Think about it like this: in the case of the usual charts you plot, you usually take it as given that you are working in a space that is 2D with an X- and Y-basis vector. But the most basic object in mapping is a <em>sphere</em>, which is fundamentally different to a 2D plane. This means you have to choose whether to show part of a globe or all of a 2D representation of a globe (a <em>projection</em>), which inevitably introduces distortions.</p>
 <p>The type main classes of CRS are geographic or projection. A geographic CRS uses a 3D model of the Earth and ‘drapes’ the data over it.</p>
 <p>A projected CRS has the geographic CRS plus a map projection that has co-ordinates on a 2D plane. It is well known that there is no distortion-free projection from a globe to a plane; you cannot preserve areas, shapes, distances, and angles simultaneously. Different map projections introduce different distortions, as lovingly shown in this <a class="reference external" href="https://xkcd.com/977/">xkcd</a> cartoon.</p>
@@ -763,9 +1078,9 @@
 <p>Some analysis tools expect geospatial data to be in a projected CRS-this is true of the main package we’ll use, <strong>geopandas</strong>. This is usually not a problem for economic data; it’s rare that the curvature of the Earth becomes a factor (though distances might in some rare situations). Most spatial libraries expect that all of the data that are being combined be in the same CRS.</p>
 <p>CRSs are usually referenced by an <a class="reference external" href="https://epsg.io/">EPSG code</a>. Two widely used CRSs are WGS84 (aka EPSG: 4326) which provides a good representaiton of most places on Earth and NAD83 (aka EPSG: 4269), which provides a good representation of the USA.</p>
 <p>Why are we banging on about this? Because maps and geometry objects come in different CRS and it’s worth being aware of that so that you can ensure they are in the same format, and that you have the right CRS for your purposes.</p>
-</div>
-<div class="section" id="imports-and-packages">
-<h3>Imports and packages<a class="headerlink" href="#imports-and-packages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="imports-and-packages">
+<h3>Imports and packages<a class="headerlink" href="#imports-and-packages" title="Permalink to this headline">#</a></h3>
 <p>We’ll be using <a class="reference external" href="https://geopandas.org/index.html"><strong>geopandas</strong></a>, the go-to package for vector spatial analysis in Python. The easiest way to install this package is using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">geopandas</span></code>; if you want to install it via pip then look at the <a class="reference external" href="https://geopandas.org/install.html">install instructions</a>.</p>
 <p>Let’s import some of the packages we’ll be using:</p>
 <div class="cell docutils container">
@@ -801,13 +1116,13 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="geopandas-dataframes">
-<h2>Geopandas dataframes<a class="headerlink" href="#geopandas-dataframes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="geopandas-dataframes">
+<h2>Geopandas dataframes<a class="headerlink" href="#geopandas-dataframes" title="Permalink to this headline">#</a></h2>
 <p>Quite literally, <strong>GeoPandas</strong> is a combination of geo and pandas so the good news is that everything you know about using <strong>pandas</strong> dataframes can be re-used here for geospatial data. The geo part adds functionality for geo-spatial data.</p>
-<div class="section" id="input-and-output">
-<h3>Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h3>
+<section id="input-and-output">
+<h3>Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">#</a></h3>
 <p>So, first, we need some geo-spatial data to analyse. There are several different file formats for geo-spatial data, such as Shapefile (.shp), GeoJSON/JSON, KML, and GeoPackage.</p>
 <p>We’ll use a Shapefile of the countries of the world from <a class="reference external" href="https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/">Natural Earth</a>. It comes as a zip file; unzip it and one of the files ends in .shp, which is the one we load with <strong>geopandas</strong>.</p>
 <p>Let’s load the data and look at the first few rows:</p>
@@ -943,9 +1258,9 @@
 </div>
 <p>There’s a lot of info here, but a lot of it is different labelling. The dataset has one country per row.</p>
 <p>To save the data frame, use <code class="docutils literal notranslate"><span class="pre">df.to_file(&quot;output_name.shp&quot;)</span></code> for shapefiles. For other output formats use, for example, <code class="docutils literal notranslate"><span class="pre">df.to_file(&quot;output_name.geojson&quot;,</span> <span class="pre">driver=&quot;GeoJSON&quot;)</span></code>.</p>
-</div>
-<div class="section" id="basics">
-<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="basics">
+<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h3>
 <p>Let’s see what we get when we call the humble plot function on the data we already read in!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -968,9 +1283,9 @@
 <img alt="_images/geo-intro_12_0.svg" src="_images/geo-intro_12_0.svg" /></div>
 </div>
 <p>Note that it is the last column in the dataframe, the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column, that makes this sorcery possible.</p>
-</div>
-<div class="section" id="working-with-coordinate-reference-systems">
-<h3>Working with Coordinate Reference Systems<a class="headerlink" href="#working-with-coordinate-reference-systems" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="working-with-coordinate-reference-systems">
+<h3>Working with Coordinate Reference Systems<a class="headerlink" href="#working-with-coordinate-reference-systems" title="Permalink to this headline">#</a></h3>
 <p>We can check what the CRS of this entire <strong>geopandas</strong> dataframe is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1018,12 +1333,12 @@ Datum: World Geodetic System 1984 ensemble
 <div class="cell_output docutils container">
 <img alt="_images/geo-intro_17_0.svg" src="_images/geo-intro_17_0.svg" /></div>
 </div>
-</div>
-</div>
-<div class="section" id="manipulating-space">
-<h2>Manipulating Space<a class="headerlink" href="#manipulating-space" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Basics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="manipulating-space">
+<h2>Manipulating Space<a class="headerlink" href="#manipulating-space" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Basics<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Let’s look more closely at the objects that encode the shapes of the countries on our world map:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +1368,7 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77685/4176831303.py:1: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_35711/4176831303.py:1: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
 
   df[&quot;centroid&quot;] = df.centroid
 </pre></div>
@@ -1110,12 +1425,12 @@ Name: geometry, dtype: geometry
 </div>
 <img alt="_images/geo-intro_28_1.svg" src="_images/geo-intro_28_1.svg" /></div>
 </div>
-</div>
-<div class="section" id="spatial-operations">
-<h3>Spatial Operations<a class="headerlink" href="#spatial-operations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spatial-operations">
+<h3>Spatial Operations<a class="headerlink" href="#spatial-operations" title="Permalink to this headline">#</a></h3>
 <p>We’ve seen the basic builidng blocks of geometries: points, lines, and polygons. We’ve also seen how to retireve some basic properties of these such as length, area, and centroid. In this section, we’ll see some slightly more advanced spatial operations that you can perform with <strong>geopandas</strong>.</p>
-<div class="section" id="point-in-polygon">
-<h4>Point-in-polygon<a class="headerlink" href="#point-in-polygon" title="Permalink to this headline">¶</a></h4>
+<section id="point-in-polygon">
+<h4>Point-in-polygon<a class="headerlink" href="#point-in-polygon" title="Permalink to this headline">#</a></h4>
 <p>This does pretty much what you’d expect! It’s useful in practice because we might want to know if a particular place falls within one area or another. As a test, let’s see if the centroid for Germany actually falls within the Germany polygon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1143,14 +1458,14 @@ Name: geometry, dtype: geometry
 <div class="cell_output docutils container">
 <img alt="_images/geo-intro_33_0.svg" src="_images/geo-intro_33_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="buffers">
-<h4>Buffers<a class="headerlink" href="#buffers" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="buffers">
+<h4>Buffers<a class="headerlink" href="#buffers" title="Permalink to this headline">#</a></h4>
 <p>Buffers are just an area drawn around a particular geometry, given a specific radious. They have a great practical use in computing catchment areas and so on. To create a buffer around the geometry you’re currently using, use the <code class="docutils literal notranslate"><span class="pre">df.buffer(number)</span></code> command to return a column with the buffered version of your geometry in. Be aware that the units of the CRS you’re using will determine the units of the buffer.</p>
-</div>
-</div>
-<div class="section" id="spatial-set-operations">
-<h3>Spatial set operations<a class="headerlink" href="#spatial-set-operations" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="spatial-set-operations">
+<h3>Spatial set operations<a class="headerlink" href="#spatial-set-operations" title="Permalink to this headline">#</a></h3>
 <p>More complex spatial manipulation can be achieved through spatial set operations. The figure below shows some examples for polygons (but the same principles apply for lines and polygons too):</p>
 <p><img src="https://geopandas.org/_images/overlay_operations.png" alt="Spatial operations"></a></p>
 <p>Different set operations with two polygons. Source: QGIS documentation.</p>
@@ -1307,9 +1622,9 @@ Name: geometry, dtype: geometry
 <div class="cell_output docutils container">
 <img alt="_images/geo-intro_46_0.svg" src="_images/geo-intro_46_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="computing-distances">
-<h3>Computing distances<a class="headerlink" href="#computing-distances" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="computing-distances">
+<h3>Computing distances<a class="headerlink" href="#computing-distances" title="Permalink to this headline">#</a></h3>
 <p>Computing the distances between two points <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> (in the same CRS) is achieved using the <code class="docutils literal notranslate"><span class="pre">a.distance(b)</span></code> command.</p>
 <p>As an example, let’s now find out how far it is between two regions of interest in our cut of regions around the Trent. We’ll pick the East Riding of Yorkshire and Stafford, and then plot them on the map in different colours. Because <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> is so flexible, and there could be multiple geometries with the names ‘East Riding of Yorkshire’ and ‘Stafford’ we have to not only select the names we want but, in case there are multiple rows, specify which row. If you just want the first you can use <code class="docutils literal notranslate"><span class="pre">iloc[0]</span></code>, which is what happens in the example below.</p>
 <div class="cell docutils container">
@@ -1363,9 +1678,9 @@ Name: geometry, dtype: geometry
 <div class="cell_output docutils container">
 <img alt="_images/geo-intro_48_0.svg" src="_images/geo-intro_48_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="neighbours">
-<h3>Neighbours<a class="headerlink" href="#neighbours" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="neighbours">
+<h3>Neighbours<a class="headerlink" href="#neighbours" title="Permalink to this headline">#</a></h3>
 <p>It’s really useful to have a way to determine all of the adjacent geometries to a given geometry. The <code class="docutils literal notranslate"><span class="pre">touch</span></code> geospatial operation is the best for this <em>but</em> do be careful because the level of the detail in polygons varies for different maps and you may find that they sometimes overlap rather than simply touch. So, in the example of finding all of the neighbours for all of the local authority districts in the UK below, not only do we include those LADs that touch, we also include those that overlap.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1554,12 +1869,12 @@ Name: geometry, dtype: geometry
 </div>
 <p>Hooray! It looks like it worked. And notice how the only variable we need to change to get a different map is <code class="docutils literal notranslate"><span class="pre">name_of_region</span></code>, so this could easily be wrapped up in a function to re-use again.</p>
 <p>For an exercise, why don’t you see if you can figure out what’s so special about Powys and the Isle of Wight.</p>
-</div>
-</div>
-<div class="section" id="aggregation-and-dissolve">
-<h2>Aggregation and Dissolve<a class="headerlink" href="#aggregation-and-dissolve" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="dissolve">
-<h3>Dissolve<a class="headerlink" href="#dissolve" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="aggregation-and-dissolve">
+<h2>Aggregation and Dissolve<a class="headerlink" href="#aggregation-and-dissolve" title="Permalink to this headline">#</a></h2>
+<section id="dissolve">
+<h3>Dissolve<a class="headerlink" href="#dissolve" title="Permalink to this headline">#</a></h3>
 <p>A useful common map operation is to aggregate by spatial region: i.e. to eliminate some of the granularity of a map by combining smaller regions into larger regions. This is called a ‘dissolve’ because it dissolves the boundaries between regions to form larger ones.</p>
 <p>To demonstrate it, let’s take the many UK local authority districts and <code class="docutils literal notranslate"><span class="pre">dissolve</span></code> them into the UK countries. We can do this using the <code class="docutils literal notranslate"><span class="pre">LAD20CD</span></code> column because the code used for it always begins with a letter that represents the country: E for England, W for Wales, N for Northern Ireland, and S for Scotland. So to do the dissolve, we first create a new column just like we would do for a <code class="docutils literal notranslate"><span class="pre">groupby</span></code> in a regular <strong>pandas</strong> dataframe. But instead of using <code class="docutils literal notranslate"><span class="pre">groupby</span></code>, we <code class="docutils literal notranslate"><span class="pre">dissolve</span></code> by the new column. This will give us a new map that is made up of only 4 polygons.</p>
 <div class="cell docutils container">
@@ -1639,20 +1954,20 @@ Name: geometry, dtype: geometry
 <img alt="_images/geo-intro_58_0.svg" src="_images/geo-intro_58_0.svg" /></div>
 </div>
 <p>The default way that columns other than the geometry are combined is by taking the first row of each kind, but dissolve accepts and <code class="docutils literal notranslate"><span class="pre">agg_func=</span></code> argument that you can also pass last, min, max, sum, mean, and median.</p>
-</div>
-<div class="section" id="aggregation">
-<h3>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="aggregation">
+<h3>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">#</a></h3>
 <p>Because <strong>geopandas</strong> builds on <strong>pandas</strong>, all the usual operations (i.e. <code class="docutils literal notranslate"><span class="pre">groupby</span></code>) that you might do on a <strong>pandas</strong> dataframe also work for non-geometry columns.</p>
-</div>
-</div>
-<div class="section" id="merging-data">
-<h2>Merging data<a class="headerlink" href="#merging-data" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="attribute-joins">
-<h3>Attribute Joins<a class="headerlink" href="#attribute-joins" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="merging-data">
+<h2>Merging data<a class="headerlink" href="#merging-data" title="Permalink to this headline">#</a></h2>
+<section id="attribute-joins">
+<h3>Attribute Joins<a class="headerlink" href="#attribute-joins" title="Permalink to this headline">#</a></h3>
 <p>In an attribute join, a GeoSeries or GeoDataFrame is combined with a regular pandas Series or DataFrame based on a common variable. This is analogous to normal merging or joining in pandas.</p>
-</div>
-<div class="section" id="spatial-joins">
-<h3>Spatial Joins<a class="headerlink" href="#spatial-joins" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spatial-joins">
+<h3>Spatial Joins<a class="headerlink" href="#spatial-joins" title="Permalink to this headline">#</a></h3>
 <p>Spatial joins are more complex because we take two different sets of geometries and say how to combine them. The key to this is i) ensuring that the datasets have the same CRS and ii) using <code class="docutils literal notranslate"><span class="pre">sjoin</span></code> to perform the spatial join. We’ll show how to do a spatial join that is an inner intersection using <code class="docutils literal notranslate"><span class="pre">op=intersects</span></code>.</p>
 <p>We’ll take some data on, and a map of, the world, which has per country geometries in plus columns for, eg, gdp per capita, and we’ll merge it with a dataframe with the names and positions of cities in. Our intersects spatial join will combine each city (a lat/lon point) with the shapes of countries and determine which city goes in which country (even if it’s on the boundary).</p>
 <p>This is just one example of a spatial join: the other possible arguments to <code class="docutils literal notranslate"><span class="pre">op</span></code> are <code class="docutils literal notranslate"><span class="pre">within</span></code> and <code class="docutils literal notranslate"><span class="pre">contains</span></code>.</p>
@@ -1694,47 +2009,47 @@ Name: geometry, dtype: geometry
   <tbody>
     <tr>
       <th>0</th>
-      <td>920938</td>
+      <td>889953.0</td>
       <td>Oceania</td>
       <td>Fiji</td>
       <td>FJI</td>
-      <td>8374.0</td>
+      <td>5496</td>
       <td>MULTIPOLYGON (((180.00000 -16.06713, 180.00000...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>53950935</td>
+      <td>58005463.0</td>
       <td>Africa</td>
       <td>Tanzania</td>
       <td>TZA</td>
-      <td>150600.0</td>
+      <td>63177</td>
       <td>POLYGON ((33.90371 -0.95000, 34.07262 -1.05982...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>603253</td>
+      <td>603253.0</td>
       <td>Africa</td>
       <td>W. Sahara</td>
       <td>ESH</td>
-      <td>906.5</td>
+      <td>907</td>
       <td>POLYGON ((-8.66559 27.65643, -8.66512 27.58948...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>35623680</td>
+      <td>37589262.0</td>
       <td>North America</td>
       <td>Canada</td>
       <td>CAN</td>
-      <td>1674000.0</td>
+      <td>1736425</td>
       <td>MULTIPOLYGON (((-122.84000 49.00000, -122.9742...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>326625791</td>
+      <td>328239523.0</td>
       <td>North America</td>
       <td>United States of America</td>
       <td>USA</td>
-      <td>18560000.0</td>
+      <td>21433226</td>
       <td>MULTIPOLYGON (((-122.84000 49.00000, -120.0000...</td>
     </tr>
   </tbody>
@@ -1812,8 +2127,8 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3361: FutureWarning: The `op` parameter is deprecated and will be removed in a future release. Please use the `predicate` parameter instead.
-  if (await self.run_code(code, result,  async_=asy)):
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3338: FutureWarning: The `op` parameter is deprecated and will be removed in a future release. Please use the `predicate` parameter instead.
+  if await self.run_code(code, result, async_=asy):
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1850,71 +2165,71 @@ Name: geometry, dtype: geometry
       <td>Vatican City</td>
       <td>POINT (12.45339 41.90328)</td>
       <td>141</td>
-      <td>62137802</td>
+      <td>60297396.0</td>
       <td>Europe</td>
       <td>Italy</td>
       <td>ITA</td>
-      <td>2221000.0</td>
+      <td>2003576</td>
     </tr>
     <tr>
       <th>1</th>
       <td>San Marino</td>
       <td>POINT (12.44177 43.93610)</td>
       <td>141</td>
-      <td>62137802</td>
+      <td>60297396.0</td>
       <td>Europe</td>
       <td>Italy</td>
       <td>ITA</td>
-      <td>2221000.0</td>
+      <td>2003576</td>
     </tr>
     <tr>
       <th>192</th>
       <td>Rome</td>
       <td>POINT (12.48131 41.89790)</td>
       <td>141</td>
-      <td>62137802</td>
+      <td>60297396.0</td>
       <td>Europe</td>
       <td>Italy</td>
       <td>ITA</td>
-      <td>2221000.0</td>
+      <td>2003576</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Vaduz</td>
       <td>POINT (9.51667 47.13372)</td>
       <td>114</td>
-      <td>8754413</td>
+      <td>8877067.0</td>
       <td>Europe</td>
       <td>Austria</td>
       <td>AUT</td>
-      <td>416600.0</td>
+      <td>445075</td>
     </tr>
     <tr>
       <th>184</th>
       <td>Vienna</td>
       <td>POINT (16.36469 48.20196)</td>
       <td>114</td>
-      <td>8754413</td>
+      <td>8877067.0</td>
       <td>Europe</td>
       <td>Austria</td>
       <td>AUT</td>
-      <td>416600.0</td>
+      <td>445075</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
 <p>Now we have our cities, and their points, merged into a dataset that also gives the continent and other data that was originally only in our <code class="docutils literal notranslate"><span class="pre">world</span></code> dataframe.</p>
-</div>
-</div>
-<div class="section" id="geocoding">
-<h2>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="geocoding">
+<h2>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this headline">#</a></h2>
 <p>Geocoding is the process of taking an address or the name of a place and retrieving its position in a geographic co-ordinate system. There are many entities you might want to do this for, such as cities, landmarks, geographic features like rivers, and postal code. Reverse geocoding takes a latitute and longitude and works backwards to work out the name of the object that’s there.</p>
 <p>Geocoding as a service is offered by several providers, including Geocodio, Google’s geocode API service, Bing, OpenStreetMap, and more. Some of these charge, especially for volume.</p>
 <p>There are two parts of geocoding: one is the interface that you use to issue the command (the front-end, the bit you see), and another is that does the actual geocoding (the back-end, an API you don’t see). The back-end bit is what you sometimes have to pay for as a service if you’re geocoding at scale.</p>
 <p>We’ll look at a geocoding package that comes in two different forms: <a class="reference external" href="https://geopy.readthedocs.io/en/stable/"><strong>Geopy</strong></a>, which is a Python package that provides a front end for a large number of geocoding APIs, including OpenStreetMap, Bing, Google, ArcGIS, and more. You may also want to explore the <a class="reference external" href="https://geocoder.readthedocs.io/"><strong>geocoder</strong></a> Python package as an alternative.</p>
-<div class="section" id="geopy-stand-alone">
-<h3>Geopy stand-alone<a class="headerlink" href="#geopy-stand-alone" title="Permalink to this headline">¶</a></h3>
+<section id="geopy-stand-alone">
+<h3>Geopy stand-alone<a class="headerlink" href="#geopy-stand-alone" title="Permalink to this headline">#</a></h3>
 <p>Below is an example of using <strong>Geopy</strong> as a stand-alone package. We’ll use the OpenStreetMap API to do the geocoding, which is called <code class="docutils literal notranslate"><span class="pre">Nominatim</span></code>. It’s important to note that this API has some fair usage conditions including a maximum of 1 request per second, that you provide an informative ‘user agent’ parameter, and that you clearly display attribution (thank you OpenStreetMap!). For bulk geocoding, you may need to pay a fee to a provider.</p>
 <p>Let’s see an example retrieving the full address of a landmark:</p>
 <div class="cell docutils container">
@@ -1968,9 +2283,9 @@ Name: geometry, dtype: geometry
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="geopy-built-in-to-geopandas">
-<h3>Geopy built-in to geopandas<a class="headerlink" href="#geopy-built-in-to-geopandas" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="geopy-built-in-to-geopandas">
+<h3>Geopy built-in to geopandas<a class="headerlink" href="#geopy-built-in-to-geopandas" title="Permalink to this headline">#</a></h3>
 <p>If you don’t want to break out into a separate package, you need not! <strong>geopandas</strong> has its own interface with <strong>geopy</strong>. We’ll use it to get the boroughs of ..</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2096,12 +2411,12 @@ Name: geometry, dtype: geometry
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="openstreetmap-and-osmnx">
-<h2>OpenStreetMap and Osmnx<a class="headerlink" href="#openstreetmap-and-osmnx" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="openstreetmap-and-osmnx">
+<h2>OpenStreetMap and Osmnx<a class="headerlink" href="#openstreetmap-and-osmnx" title="Permalink to this headline">#</a></h2>
 <p>OpenStreetMap (OSM) is a crowd-sourced project that aims to create a free map of the world containing information about streets, buildings, landmarks, landuse, and more. Its users regularly update the information it holds. Think Wikipedia but for a world map. It excels at highly detailed and freely available renderings of streets.</p>
-<p><a class="reference external" href="https://geoffboeing.com/publications/osmnx-complex-street-networks/"><strong>Osmnx</strong></a> is a package that can retrieve, construct, analyze, and visualize street networks from OpenStreetMap <span id="id2">Boeing [<a class="reference internal" href="zreferences.html#id13">2017</a>]</span>. It also does some geocoding on the fly. Let’s see it in action and feed in the address we obtained in the geocoding example from earlier; using the <code class="docutils literal notranslate"><span class="pre">graph_from_point</span></code> method will give us the network of streets around a location.</p>
+<p><a class="reference external" href="https://geoffboeing.com/publications/osmnx-complex-street-networks/"><strong>Osmnx</strong></a> is a package that can retrieve, construct, analyze, and visualize street networks from OpenStreetMap <span id="id2">Boeing [<a class="reference internal" href="zreferences.html#id13" title="Geoff Boeing. Osmnx: new methods for acquiring, constructing, analyzing, and visualizing complex street networks. Computers, Environment and Urban Systems, 65:126–139, 2017.">2017</a>]</span>. It also does some geocoding on the fly. Let’s see it in action and feed in the address we obtained in the geocoding example from earlier; using the <code class="docutils literal notranslate"><span class="pre">graph_from_point</span></code> method will give us the network of streets around a location.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>
@@ -2146,17 +2461,9 @@ Name: geometry, dtype: geometry
 <p>Now we find the nearest node to the given locations, and ask <strong>osmnx</strong> to work out a route.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orig</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">get_nearest_node</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="p">(</span><span class="n">location</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">location</span><span class="o">.</span><span class="n">longitude</span><span class="p">))</span>
-<span class="n">dest</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">get_nearest_node</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="p">(</span><span class="n">lunch_loc</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">lunch_loc</span><span class="o">.</span><span class="n">longitude</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orig</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">nearest_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">location</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">location</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
+<span class="n">dest</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">nearest_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">lunch_loc</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">lunch_loc</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
 <span class="n">route</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">shortest_path</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">orig</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/osmnx/distance.py:356: UserWarning: The `get_nearest_node` function has been deprecated and will be removed in a future release. Use the more efficient `distance.nearest_nodes` instead.
-  warnings.warn(msg)
-/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/osmnx/distance.py:356: UserWarning: The `get_nearest_node` function has been deprecated and will be removed in a future release. Use the more efficient `distance.nearest_nodes` instead.
-  warnings.warn(msg)
 </pre></div>
 </div>
 </div>
@@ -2246,9 +2553,9 @@ Name: geometry, dtype: geometry
 <div class="cell_output docutils container">
 <img alt="_images/geo-intro_90_0.svg" src="_images/geo-intro_90_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
 <p>If you know:</p>
 <ul class="simple">
 <li><p>✅ what a coordinate reference system (crs) is;</p></li>
@@ -2261,8 +2568,8 @@ Name: geometry, dtype: geometry
 <li><p>✅ how to use geocoding to retrieve geospatial data</p></li>
 </ul>
 <p>then you have a good grasp of the basics of geospatial analysis!</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2286,64 +2593,51 @@ Name: geometry, dtype: geometry
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="text-nlp.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Natural Language Processing</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="text-nlp.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Natural Language Processing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="geo-vis.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Geo-Spatial Visualisation</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="geo-vis.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Geo-Spatial Visualisation</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

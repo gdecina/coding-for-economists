@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Regression &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/econmt-regression.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -61,10 +62,35 @@
     <link rel="next" title="Causal Inference" href="econmt-causal-inference.html" />
     <link rel="prev" title="Statistics" href="econmt-statistics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +99,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -93,14 +120,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -127,7 +155,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -174,7 +202,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -196,7 +224,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -223,7 +251,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -265,22 +315,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -292,17 +332,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -333,8 +368,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -366,7 +406,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -388,7 +428,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -410,7 +450,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -427,7 +467,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -439,7 +479,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -466,7 +506,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -485,112 +525,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/econmt-regression.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Feconmt-regression.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/econmt-regression.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/econmt-regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/econmt-regression.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/econmt-regression.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Feconmt-regression.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/econmt-regression.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -754,24 +909,203 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Regression</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notation-and-basic-definitions">
+     Notation and basic definitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-basics">
+   Regression basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#robust-regression">
+     Robust regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-errors">
+     Standard errors
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#clustered-standard-errors">
+       Clustered standard errors
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixed-effects-and-categorical-variables">
+   Fixed effects and categorical variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-dimensional-fixed-effects-aka-absorbing-regression">
+     High dimensional fixed effects, aka absorbing regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformations-of-regressors">
+   Transformations of regressors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logs-and-arcsinh">
+     Logs and arcsinh
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interaction-terms-and-powers">
+     Interaction terms and powers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-formula-api-explained">
+   The formula API explained
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-regression-models">
+   Multiple regression models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specifying-regressions-without-formulae-using-the-array-api">
+   Specifying regressions without formulae, using the array API
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixed-effects-in-the-array-api">
+     Fixed effects in the array API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrumental-variables">
+   Instrumental variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logit-probit-and-generalised-linear-models">
+   Logit, probit, and generalised linear models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logit">
+     Logit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probit">
+     Probit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generalised-linear-models">
+     Generalised linear models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-probability-model">
+   Linear probability model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#violations-of-the-classical-linear-model-clm">
+   Violations of the classical linear model (CLM)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heteroskedasticity">
+     Heteroskedasticity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantile-regression">
+   Quantile regression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rolling-and-recursive-regressions">
+   Rolling and recursive regressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-plots">
+   Regression plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specification-curve-analysis">
+   Specification curve analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="regression">
-<span id="id1"></span><h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="regression">
+<span id="id1"></span><h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you’ll learn how to run linear regressions with code.</p>
 <p>If you’re running this code (either by copying and pasting it, or by downloading it using the icons at the top of the page), you may need to install the packages it uses first. There’s a brief guide to installing packages in the Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 <p>Most of this chapter will rely on <a class="reference external" href="https://www.statsmodels.org/stable/index.html">statsmodels</a> with some use of <a class="reference external" href="https://bashtage.github.io/linearmodels/"><strong>linearmodels</strong></a>. Some of the material in this chapter follows <a class="reference external" href="https://grantmcdermott.com/">Grant McDermott</a>’s excellent notes and the <a class="reference external" href="https://lost-stats.github.io/">Library of Statistical Translation</a>.</p>
-<div class="section" id="notation-and-basic-definitions">
-<h3>Notation and basic definitions<a class="headerlink" href="#notation-and-basic-definitions" title="Permalink to this headline">¶</a></h3>
+<section id="notation-and-basic-definitions">
+<h3>Notation and basic definitions<a class="headerlink" href="#notation-and-basic-definitions" title="Permalink to this headline">#</a></h3>
 <p>Greek letters, like <span class="math notranslate nohighlight">\(\beta\)</span>, are the truth and represent parameters. Modified Greek letters are an estimate of the truth, for example <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>. Sometimes Greek letters will stand in for vectors of parameters. Most of the time, upper case Latin characters such as <span class="math notranslate nohighlight">\(X\)</span> will represent random variables (which could have more than one dimension). Lower case letters from the Latin alphabet denote realised data, for instance <span class="math notranslate nohighlight">\(x\)</span> (which again could be multi-dimensional).  Modified Latin alphabet letters denote computations performed on data, for instance <span class="math notranslate nohighlight">\(\bar{x} = \frac{1}{n} \displaystyle\sum_{i} x_i\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is number of samples.</p>
 <p>Ordinary least squares (OLS) regression can be used to <em>estimate</em> the parameters of certain types of model, most typically models of the form</p>
 <div class="math notranslate nohighlight">
@@ -815,9 +1149,9 @@ y = x'\cdot \hat{\beta} + \epsilon
 \frac{\partial y}{\partial x_i} = \beta_i \frac{1}{x_i} 
 \]</div>
 <p>with some abuse of notation, we can rewrite this as <span class="math notranslate nohighlight">\(\partial y = \beta_i \partial x_i/x_i\)</span>, which says that a percent change in <span class="math notranslate nohighlight">\(x_i\)</span> is associated with a <span class="math notranslate nohighlight">\(\beta_i\)</span> unit change in <span class="math notranslate nohighlight">\(y\)</span>. With a logged <span class="math notranslate nohighlight">\(y\)</span> variable, it’s a percent change in <span class="math notranslate nohighlight">\(x_i\)</span> that is associated with a percent change in <span class="math notranslate nohighlight">\(y\)</span>, or <span class="math notranslate nohighlight">\(\partial y/y = \beta_i \partial x_i/x_i\)</span> (note that both sides of this equation are unitless in this case). Finally, another example that is important in practice is that of log differences, eg <span class="math notranslate nohighlight">\(y = \beta_i (\ln x_i - \ln x_i')\)</span>. Again, we will abuse notation and say that this case may be represented as <span class="math notranslate nohighlight">\(\partial y = \beta_i (\partial x_i/x_i - \partial x_i'/x_i')\)</span>, i.e. the difference in two percentages, a <em>percentage point</em> change, in <span class="math notranslate nohighlight">\(x_i\)</span> is associated with a <span class="math notranslate nohighlight">\(\beta_i\)</span> unit change in <span class="math notranslate nohighlight">\(y\)</span>.</p>
-</div>
-<div class="section" id="imports">
-<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
 <p>Let’s import some of the packages we’ll be using:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -834,10 +1168,10 @@ y = x'\cdot \hat{\beta} + \epsilon
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="regression-basics">
-<h2>Regression basics<a class="headerlink" href="#regression-basics" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="regression-basics">
+<h2>Regression basics<a class="headerlink" href="#regression-basics" title="Permalink to this headline">#</a></h2>
 <p>There are two ways to run regressions in <a class="reference external" href="https://www.statsmodels.org/stable/index.html"><strong>statsmodels</strong></a>; passing the data directly as objects, and using formulae. We’ll see both but, just to get things started, let’s use the formula API.</p>
 <p>We’ll use the starwars dataset to run a regression of mass on height for star wars characters. This example borrows very heavily from notes by <a class="reference external" href="https://grantmcdermott.com/">Grant McDermott</a>. First, let’s bring the dataset in:</p>
 <div class="cell docutils container">
@@ -961,8 +1295,8 @@ y = x'\cdot \hat{\beta} + \epsilon
 Dep. Variable:                   mass   R-squared:                       0.018
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     1.040
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):              0.312
-Time:                        17:52:07   Log-Likelihood:                -385.50
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):              0.312
+Time:                        15:20:35   Log-Likelihood:                -385.50
 No. Observations:                  59   AIC:                             775.0
 Df Residuals:                      57   BIC:                             779.2
 Df Model:                           1                                         
@@ -1047,8 +1381,8 @@ Notes:
 Dep. Variable:                   mass   R-squared:                       0.580
 Model:                            OLS   Adj. R-squared:                  0.572
 Method:                 Least Squares   F-statistic:                     77.18
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           4.02e-12
-Time:                        17:52:08   Log-Likelihood:                -252.48
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           4.02e-12
+Time:                        15:20:35   Log-Likelihood:                -252.48
 No. Observations:                  58   AIC:                             509.0
 Df Residuals:                      56   BIC:                             513.1
 Df Model:                           1                                         
@@ -1072,8 +1406,8 @@ Notes:
 </div>
 </div>
 <p>This looks a lot more healthy. Not only is the model explaining a <em>lot</em> more of the data, but the coefficients are now significant.</p>
-<div class="section" id="robust-regression">
-<h3>Robust regression<a class="headerlink" href="#robust-regression" title="Permalink to this headline">¶</a></h3>
+<section id="robust-regression">
+<h3>Robust regression<a class="headerlink" href="#robust-regression" title="Permalink to this headline">#</a></h3>
 <p>Filtering out data is one way to deal with outliers, but it’s not the only one; an alternative is to use a regression technique that is robust to such outliers. <strong>statsmodels</strong> has a variety of robust linear models that you can read more about <a class="reference external" href="https://www.statsmodels.org/stable/examples/notebooks/generated/robust_models_0.html">here</a>. To demonstrate the general idea, we will run the regression again but using a robust method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1093,8 +1427,8 @@ Method:                          IRLS   Df Model:                            1
 Norm:                     TrimmedMean                                         
 Scale Est.:                       mad                                         
 Cov Type:                          H1                                         
-Date:                Sat, 20 Aug 2022                                         
-Time:                        17:52:08                                         
+Date:                Fri, 16 Sep 2022                                         
+Time:                        15:20:35                                         
 No. Iterations:                     7                                         
 ==============================================================================
                  coef    std err          z      P&gt;|z|      [0.025      0.975]
@@ -1128,9 +1462,9 @@ If the model instance has been used for another fit with different fit parameter
 <div class="cell_output docutils container">
 <img alt="_images/econmt-regression_20_0.svg" src="_images/econmt-regression_20_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="standard-errors">
-<h3>Standard errors<a class="headerlink" href="#standard-errors" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="standard-errors">
+<h3>Standard errors<a class="headerlink" href="#standard-errors" title="Permalink to this headline">#</a></h3>
 <p>You’ll have seen that there’s a column for the standard error of the estimates in the regression table and a message saying that the covariance type of these is ‘nonrobust’. Let’s say that, instead, we want to use Eicker-Huber-White robust standard errors, aka “HC2” standard errors. We can specify to use these up front standard errors up front in the fit method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1164,8 +1498,8 @@ If the model instance has been used for another fit with different fit parameter
 Dep. Variable:                   mass   R-squared:                       0.018
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     52.75
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.16e-09
-Time:                        17:52:08   Log-Likelihood:                -385.50
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           1.16e-09
+Time:                        15:20:36   Log-Likelihood:                -385.50
 No. Observations:                  59   AIC:                             775.0
 Df Residuals:                      57   BIC:                             779.2
 Df Model:                           1                                         
@@ -1200,8 +1534,8 @@ errors in panel data, again with keyword arguments; and</p></li>
 </ul>
 <p>You can find information on all of these <a class="reference external" href="https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html?highlight=get_robustcov_results#statsmodels.regression.linear_model.OLSResults.get_robustcov_results">here</a>. For more on standard errors in python, <a class="reference external" href="http://www.vincentgregoire.com/standard-errors-in-python/">this is a good</a> link.</p>
 <p>For now, let’s look more closely at those last ones: clustered standard errors.</p>
-<div class="section" id="clustered-standard-errors">
-<h4>Clustered standard errors<a class="headerlink" href="#clustered-standard-errors" title="Permalink to this headline">¶</a></h4>
+<section id="clustered-standard-errors">
+<h4>Clustered standard errors<a class="headerlink" href="#clustered-standard-errors" title="Permalink to this headline">#</a></h4>
 <p>Often, we know something about the structure of likely errors, namely that they occur in groups. In the below example we use one-way clusters to capture this effect in the errors.</p>
 <p>Note that in the below example, we grab a subset of the data for which a set of variables we’re interested in are defined, otherwise the below example would execute with an error because of missing cluster-group values.</p>
 <div class="cell docutils container">
@@ -1220,8 +1554,8 @@ errors in panel data, again with keyword arguments; and</p></li>
 Dep. Variable:                   mass   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                     39.44
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           2.63e-07
-Time:                        17:52:08   Log-Likelihood:                -361.23
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           2.63e-07
+Time:                        15:20:36   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -1262,8 +1596,8 @@ Notes:
 Dep. Variable:                   mass   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                     35.10
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.96e-06
-Time:                        17:52:08   Log-Likelihood:                -361.23
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           1.96e-06
+Time:                        15:20:36   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -1287,11 +1621,11 @@ Notes:
 </div>
 </div>
 <p>As you would generally expect, the addition of clustering has increased the standard errors.</p>
-</div>
-</div>
-</div>
-<div class="section" id="fixed-effects-and-categorical-variables">
-<h2>Fixed effects and categorical variables<a class="headerlink" href="#fixed-effects-and-categorical-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="fixed-effects-and-categorical-variables">
+<h2>Fixed effects and categorical variables<a class="headerlink" href="#fixed-effects-and-categorical-variables" title="Permalink to this headline">#</a></h2>
 <p>Fixed effects are a way of allowing the intercept of a regression model to vary freely across individuals or groups. It is, for example, used to control for any individual-specific attributes that do not vary across time in panel data.</p>
 <p>Let’s use the ‘mtcars’ dataset to demonstrate this. We’ll read it in and set the datatypes of some of the columns at the same time.</p>
 <div class="cell docutils container">
@@ -1433,8 +1767,8 @@ Notes:
 Dep. Variable:                    mpg   R-squared:                       0.754
 Model:                            OLS   Adj. R-squared:                  0.727
 Method:                 Least Squares   F-statistic:                     28.59
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           1.14e-08
-Time:                        17:52:09   Log-Likelihood:                -79.948
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           1.14e-08
+Time:                        15:20:36   Log-Likelihood:                -79.948
 No. Observations:                  32   AIC:                             167.9
 Df Residuals:                      28   BIC:                             173.8
 Df Model:                           3                                         
@@ -1494,8 +1828,8 @@ hp            -0.0240      0.015     -1.560      0.130      -0.056       0.008
 </div>
 </div>
 <p>When there is an intercept, the coefficients of fixed effect variables can be interpreted as being the average of <span class="math notranslate nohighlight">\(y\)</span> for that class <em>compared</em> to the excluded classes holding all other categories and variables fixed.</p>
-<div class="section" id="high-dimensional-fixed-effects-aka-absorbing-regression">
-<h3>High dimensional fixed effects, aka absorbing regression<a class="headerlink" href="#high-dimensional-fixed-effects-aka-absorbing-regression" title="Permalink to this headline">¶</a></h3>
+<section id="high-dimensional-fixed-effects-aka-absorbing-regression">
+<h3>High dimensional fixed effects, aka absorbing regression<a class="headerlink" href="#high-dimensional-fixed-effects-aka-absorbing-regression" title="Permalink to this headline">#</a></h3>
 <p>Sometimes, you just have a LOT of fixed effects (and perhaps you don’t particularly care about them individually). A common example is having a large number of firms as part of a panel. Fortunately, there are ways to make regression with high dimensional fixed effects be both fast and concise. (In Stata, this is provided by the <code class="docutils literal notranslate"><span class="pre">reghdfe</span></code> package.) Here, we will use the <a class="reference external" href="https://bashtage.github.io/linearmodels/index.html"><strong>linearmodels</strong></a> package, which is built on top of <strong>statsmodels</strong>.</p>
 <p>Let’s say we have a regression of the form</p>
 <div class="math notranslate nohighlight">
@@ -1572,43 +1906,43 @@ y_i = x_i\cdot \beta + z_i\cdot \gamma +\epsilon_i
   <tbody>
     <tr>
       <th>0</th>
-      <td>40</td>
-      <td>131875</td>
-      <td>0.649208</td>
-      <td>1.252331</td>
-      <td>3.927877</td>
+      <td>46</td>
+      <td>98734</td>
+      <td>0.664394</td>
+      <td>-1.364725</td>
+      <td>-4.115972</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>26</td>
-      <td>65925</td>
-      <td>-0.006038</td>
-      <td>0.562455</td>
-      <td>0.476186</td>
+      <td>13</td>
+      <td>177705</td>
+      <td>-1.159891</td>
+      <td>-0.096227</td>
+      <td>-1.698217</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>25</td>
-      <td>142745</td>
-      <td>0.013956</td>
-      <td>-0.515901</td>
-      <td>0.860223</td>
+      <td>43</td>
+      <td>165499</td>
+      <td>0.103816</td>
+      <td>0.272454</td>
+      <td>1.323568</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>16</td>
-      <td>187574</td>
-      <td>0.040595</td>
-      <td>0.907806</td>
-      <td>4.500432</td>
+      <td>44</td>
+      <td>153355</td>
+      <td>-0.211383</td>
+      <td>0.670507</td>
+      <td>1.454710</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>36</td>
-      <td>127638</td>
-      <td>-1.201797</td>
-      <td>1.157902</td>
-      <td>1.906127</td>
+      <td>41</td>
+      <td>26964</td>
+      <td>0.830660</td>
+      <td>0.870571</td>
+      <td>2.158992</td>
     </tr>
   </tbody>
 </table>
@@ -1629,32 +1963,32 @@ y_i = x_i\cdot \beta + z_i\cdot \gamma +\epsilon_i
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Absorbing LS Estimation Summary                          
 ==================================================================================
-Dep. Variable:                      y   R-squared:                          0.9392
-Estimator:               Absorbing LS   Adj. R-squared:                     0.9241
+Dep. Variable:                      y   R-squared:                          0.9367
+Estimator:               Absorbing LS   Adj. R-squared:                     0.9210
 No. Observations:             1000000   F-statistic:                     9.827e+06
-Date:                Sat, Aug 20 2022   P-value (F-stat):                   0.0000
-Time:                        17:52:14   Distribution:                      chi2(2)
-Cov. Estimator:                robust   R-squared (No Effects):             0.9093
+Date:                Fri, Sep 16 2022   P-value (F-stat):                   0.0000
+Time:                        15:20:41   Distribution:                      chi2(2)
+Cov. Estimator:                robust   R-squared (No Effects):             0.9092
                                         Varaibles Absorbed:              1.987e+05
                              Parameter Estimates                              
 ==============================================================================
             Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------
-exog_0         0.9986     0.0010     991.14     0.0000      0.9966      1.0006
-exog_1         3.0016     0.0010     2972.6     0.0000      2.9996      3.0035
+exog_0         1.0007     0.0010     988.31     0.0000      0.9988      1.0027
+exog_1         3.0020     0.0010     2972.8     0.0000      3.0001      3.0040
 ==============================================================================
 </pre></div>
 </div>
 </div>
 </div>
 <p>So, from our 1,000,000 observations, we have roughly 200,000 fixed effects that have been scooped up and packed away, leaving us with just the coefficients, <span class="math notranslate nohighlight">\(\beta\)</span>, on the exogenous variables of interest.</p>
-</div>
-</div>
-<div class="section" id="transformations-of-regressors">
-<h2>Transformations of regressors<a class="headerlink" href="#transformations-of-regressors" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="transformations-of-regressors">
+<h2>Transformations of regressors<a class="headerlink" href="#transformations-of-regressors" title="Permalink to this headline">#</a></h2>
 <p>This chapter is showcasing <em>linear</em> regression. What that means is that the model is linear in the regressors: but it doesn’t mean that those regressors can’t be some kind of (potentially non-linear) transform of the original features <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
-<div class="section" id="logs-and-arcsinh">
-<h3>Logs and arcsinh<a class="headerlink" href="#logs-and-arcsinh" title="Permalink to this headline">¶</a></h3>
+<section id="logs-and-arcsinh">
+<h3>Logs and arcsinh<a class="headerlink" href="#logs-and-arcsinh" title="Permalink to this headline">#</a></h3>
 <p>You have two options for adding in logs: do them before, or do them in the formula. Doing them before just makes use of standard dataframe operations to declare a new column:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1693,7 +2027,7 @@ np.log(hp)   -10.7642      1.224     -8.792      0.000     -13.265      -8.264
 </div>
 </div>
 </div>
-<p>Clearly, the first method will work for <code class="docutils literal notranslate"><span class="pre">arcsinh(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">log(x+1)</span></code>, but you can also pass both of these into the formula directly too. (For more on the pros and cons of arcsinh, see <span id="id2">Bellemare and Wichman [<a class="reference internal" href="zreferences.html#id6">2020</a>]</span>.) Here it is with arcsinh:</p>
+<p>Clearly, the first method will work for <code class="docutils literal notranslate"><span class="pre">arcsinh(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">log(x+1)</span></code>, but you can also pass both of these into the formula directly too. (For more on the pros and cons of arcsinh, see <span id="id2">Bellemare and Wichman [<a class="reference internal" href="zreferences.html#id6" title="Marc F Bellemare and Casey J Wichman. Elasticities and the inverse hyperbolic sine transformation. Oxford Bulletin of Economics and Statistics, 82(1):50–61, 2020.">2020</a>]</span>.) Here it is with arcsinh:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;mpg ~ np.arcsinh(hp)&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mpg</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -1711,9 +2045,9 @@ np.arcsinh(hp)   -10.7646      1.224     -8.792      0.000     -13.265      -8.2
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="interaction-terms-and-powers">
-<h3>Interaction terms and powers<a class="headerlink" href="#interaction-terms-and-powers" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="interaction-terms-and-powers">
+<h3>Interaction terms and powers<a class="headerlink" href="#interaction-terms-and-powers" title="Permalink to this headline">#</a></h3>
 <p>This chapter is showcasing <em>linear</em> regression. What that means is that the model is linear in the regressors: but it doesn’t mean that those regressors can’t be some kind of non-linear transform of the original features <span class="math notranslate nohighlight">\(x_i\)</span>. Two of the most common transformations that you might want to use are <em>interaction terms</em> and <em>polynomial terms</em>. An example of an interaction term would be</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1725,7 +2059,7 @@ y = \beta_0 + \beta_1 x_1 \cdot x_2
 y = \beta_0 + \beta_1 x_1^2
 \]</div>
 <p>i.e. the last term enters only after it is multiplied by itself.</p>
-<p>One note of warning: the interpretation of the effect of a variable is no longer as simple as was set out at the start of this chapter. To work out <em>what</em> the new interpretation is, the procedure is the same though: just take the derivative. In the case of the interaction model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> is now going to be a function of <span class="math notranslate nohighlight">\(x_2\)</span>. In the case of the polynomial model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> will be <span class="math notranslate nohighlight">\(2\beta_1 \cdot x_1\)</span>. For more on interaction terms, see <span id="id3">Balli and Sørensen [<a class="reference internal" href="zreferences.html#id7">2013</a>]</span>.</p>
+<p>One note of warning: the interpretation of the effect of a variable is no longer as simple as was set out at the start of this chapter. To work out <em>what</em> the new interpretation is, the procedure is the same though: just take the derivative. In the case of the interaction model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> is now going to be a function of <span class="math notranslate nohighlight">\(x_2\)</span>. In the case of the polynomial model above, the effect of a unit change in <span class="math notranslate nohighlight">\(x_1\)</span> on <span class="math notranslate nohighlight">\(y\)</span> will be <span class="math notranslate nohighlight">\(2\beta_1 \cdot x_1\)</span>. For more on interaction terms, see <span id="id3">Balli and Sørensen [<a class="reference internal" href="zreferences.html#id7" title="Hatice Ozer Balli and Bent E Sørensen. Interaction effects in econometrics. Empirical Economics, 45(1):583–603, 2013.">2013</a>]</span>.</p>
 <p>Alright, with all of that preamble out of the way, let’s see how we actual do some of this! Let’s try including a linear and squared term in the regression of <code class="docutils literal notranslate"><span class="pre">mpg</span></code> on <code class="docutils literal notranslate"><span class="pre">hp</span></code> making use of the numpy power function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1785,15 +2119,15 @@ hp:disp       -0.0001   1.91e-05     -7.409      0.000      -0.000      -0.000
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="the-formula-api-explained">
-<h2>The formula API explained<a class="headerlink" href="#the-formula-api-explained" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="the-formula-api-explained">
+<h2>The formula API explained<a class="headerlink" href="#the-formula-api-explained" title="Permalink to this headline">#</a></h2>
 <p>As you will have seen <code class="docutils literal notranslate"><span class="pre">~</span></code> separates the left- and right-hand sides of the regression. <code class="docutils literal notranslate"><span class="pre">+</span></code> computes a set union, which will also be familiar from the examples above (ie it inludes two terms as long as they are distinct). <code class="docutils literal notranslate"><span class="pre">-</span></code> computes a set difference; it adds the set of terms to the left of it while removing any that appear on the right of it. As we’ve seen, <code class="docutils literal notranslate"><span class="pre">a*b</span></code> is a short-hand for <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">a:b</span></code>, with the last term representing the interaction. <code class="docutils literal notranslate"><span class="pre">/</span></code> is short hand for <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">a:b</span></code>, which is useful if, for example <code class="docutils literal notranslate"><span class="pre">b</span></code> is nested within <code class="docutils literal notranslate"><span class="pre">a</span></code>, so it doesn’t make sense to control for <code class="docutils literal notranslate"><span class="pre">b</span></code> on its own. Actually, the <code class="docutils literal notranslate"><span class="pre">:</span></code> character can interact multiple terms so that <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">+</span> <span class="pre">b):(d</span> <span class="pre">+</span> <span class="pre">c)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">a:c</span> <span class="pre">+</span> <span class="pre">a:d</span> <span class="pre">+</span> <span class="pre">b:c</span> <span class="pre">+</span> <span class="pre">b:d</span></code>. <code class="docutils literal notranslate"><span class="pre">C(a)</span></code> tells statsmodels to treat <code class="docutils literal notranslate"><span class="pre">a</span></code> as a categorical variable that will be included as a fixed effect. Finally, as we saw above with powers, you can also pass in vectorised functions, such as <code class="docutils literal notranslate"><span class="pre">np.log</span></code> and <code class="docutils literal notranslate"><span class="pre">np.power</span></code>, directly into the formulae.</p>
 <p>One gotcha with the formula API is ensuring that you have sensible variable names in your dataframe, i.e. ones that do <em>not</em> include whitespace or, to take a really pathological example, have the name ‘a + b’ for one of the columns that you want to regress on. You can dodge this kind of problem by passing in the variable name as, for example, <code class="docutils literal notranslate"><span class="pre">Q(&quot;a</span> <span class="pre">+</span> <span class="pre">b&quot;)</span></code> to be clear that the <em>column name</em> is anything within the <code class="docutils literal notranslate"><span class="pre">Q(&quot;...&quot;)</span></code>.</p>
-</div>
-<div class="section" id="multiple-regression-models">
-<h2>Multiple regression models<a class="headerlink" href="#multiple-regression-models" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="multiple-regression-models">
+<h2>Multiple regression models<a class="headerlink" href="#multiple-regression-models" title="Permalink to this headline">#</a></h2>
 <p>As is so often the case, you’re likely to want to run more than one model at once with different specifications. Although there is a base version of this in <strong>statsmodels</strong>, called <code class="docutils literal notranslate"><span class="pre">summary_col</span></code>, which you can find an example of <a class="reference external" href="http://aeturrell.com//2018/05/05/running-many-regressions-alongside-pandas/">here</a>, instead we’ll be using the <a class="reference external" href="https://github.com/mwburke/stargazer"><strong>stargazer</strong></a> package to assemble the regressions together in a table.</p>
 <p>In the above examples, we’ve collected a few different regression results. Let’s put them together:</p>
 <div class="cell docutils container">
@@ -1858,9 +2192,9 @@ hp:disp       -0.0001   1.91e-05     -7.409      0.000      -0.000      -0.000
 </div>
 </div>
 <p>And of course this can be written to a file using <code class="docutils literal notranslate"><span class="pre">open('regression.tex',</span> <span class="pre">'w').write(stargazer.render_latex())</span></code> where you can get your main latex compilation to scoop it up and use it.</p>
-</div>
-<div class="section" id="specifying-regressions-without-formulae-using-the-array-api">
-<h2>Specifying regressions without formulae, using the array API<a class="headerlink" href="#specifying-regressions-without-formulae-using-the-array-api" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="specifying-regressions-without-formulae-using-the-array-api">
+<h2>Specifying regressions without formulae, using the array API<a class="headerlink" href="#specifying-regressions-without-formulae-using-the-array-api" title="Permalink to this headline">#</a></h2>
 <p>As noted, there are two ways to run regressions in <a class="reference external" href="https://www.statsmodels.org/stable/index.html"><strong>statsmodels</strong></a>; passing the data directly as objects, and using formulae. We’ve seen the formula API, now let’s see how to specify regressions using arrays with the format <code class="docutils literal notranslate"><span class="pre">sm.OLS(y,</span> <span class="pre">X)</span></code>.</p>
 <p>We will first need to take the data out of the <strong>pandas</strong> dataframe and put it into a couple of arrays. When we’re not using the formula API, the default is to treat the array X as the design matrix for the regression-so, if it doesn’t have a column of constants in, there will be no intercept in the regression. Therefore, we need to add a constant vector to the matrix <code class="docutils literal notranslate"><span class="pre">X</span></code> if we <em>do</em> want an intercept. Use <code class="docutils literal notranslate"><span class="pre">sm.add_constant(X)</span></code> for this.</p>
 <div class="cell docutils container">
@@ -1879,8 +2213,8 @@ hp:disp       -0.0001   1.91e-05     -7.409      0.000      -0.000      -0.000
 Dep. Variable:                      y   R-squared:                       0.014
 Model:                            OLS   Adj. R-squared:                 -0.005
 Method:                 Least Squares   F-statistic:                    0.7446
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):              0.392
-Time:                        17:52:14   Log-Likelihood:                -361.23
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):              0.392
+Time:                        15:20:41   Log-Likelihood:                -361.23
 No. Observations:                  55   AIC:                             726.5
 Df Residuals:                      53   BIC:                             730.5
 Df Model:                           1                                         
@@ -1904,8 +2238,8 @@ Notes:
 </div>
 </div>
 <p>This approach seems a lot less convenient, not to mention less clear, so you may be wondering when it is useful. It’s useful when you want to do many regressions in a systematic way or when you don’t know what the columns of a dataset will be called ahead of time. It can actually be a little bit simpler to specify for more complex regressions too.</p>
-<div class="section" id="fixed-effects-in-the-array-api">
-<h3>Fixed effects in the array API<a class="headerlink" href="#fixed-effects-in-the-array-api" title="Permalink to this headline">¶</a></h3>
+<section id="fixed-effects-in-the-array-api">
+<h3>Fixed effects in the array API<a class="headerlink" href="#fixed-effects-in-the-array-api" title="Permalink to this headline">#</a></h3>
 <p>If you’re using the formula API, it’s easy to turn a regressor <code class="docutils literal notranslate"><span class="pre">x</span></code> into a fixed effect by putting <code class="docutils literal notranslate"><span class="pre">C(x)</span></code> into the model formula, as you’ll see in the next section.</p>
 <p>For the array API, things are not that simple and you need to use dummy variables. Let’s say we have some data like this:</p>
 <div class="cell docutils container">
@@ -2040,8 +2374,8 @@ Notes:
 Dep. Variable:                      y   R-squared:                       0.998
 Model:                            OLS   Adj. R-squared:                  0.998
 Method:                 Least Squares   F-statistic:                 4.302e+04
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):          6.90e-261
-Time:                        17:52:14   Log-Likelihood:                 165.45
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):          6.90e-261
+Time:                        15:20:41   Log-Likelihood:                 165.45
 No. Observations:                 200   AIC:                            -324.9
 Df Residuals:                     197   BIC:                            -315.0
 Df Model:                           2                                         
@@ -2066,10 +2400,10 @@ Notes:
 </div>
 </div>
 <p>Perhaps you can see why I generally prefer the formula API…</p>
-</div>
-</div>
-<div class="section" id="instrumental-variables">
-<h2>Instrumental variables<a class="headerlink" href="#instrumental-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="instrumental-variables">
+<h2>Instrumental variables<a class="headerlink" href="#instrumental-variables" title="Permalink to this headline">#</a></h2>
 <p>Rather than use <strong>statsmodels</strong> for IV, we’ll use the <a class="reference external" href="https://bashtage.github.io/linearmodels/doc/index.html"><strong>linearmodels</strong></a> package, which has very clean documentation (indeed, this sub-section is indebted to that documentation).</p>
 <p>Recall that a good instrumental variable <span class="math notranslate nohighlight">\(z\)</span> has zero covariance with the error from the regression (which is untestable) and non-zero covariance with the variable of interest (which is).</p>
 <p>Recall that in IV regression, we have a model of the form</p>
@@ -2238,9 +2572,9 @@ x_{2i} &amp; = z_{1i}\hat{\delta} + z_{2i}\hat{\gamma} + \nu_i\end{split}
 ==============================================================================
 Dep. Variable:          np.log(packs)   R-squared:                      0.9659
 Estimator:                    IV-2SLS   Adj. R-squared:                 0.9279
-No. Observations:                  96   F-statistic:                 1.606e+16
-Date:                Sat, Aug 20 2022   P-value (F-stat)                0.0000
-Time:                        17:52:15   Distribution:                 chi2(50)
+No. Observations:                  96   F-statistic:                  1.23e+17
+Date:                Fri, Sep 16 2022   P-value (F-stat)                0.0000
+Time:                        15:20:42   Distribution:                 chi2(50)
 Cov. Estimator:             clustered                                         
                                                                               
                                 Parameter Estimates                                
@@ -2248,7 +2582,6 @@ Cov. Estimator:             clustered
                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 -----------------------------------------------------------------------------------
 Intercept           9.4924     0.0263     360.24     0.0000      9.4407      9.5440
-C(year)[T.1995]    -0.0328                                                         
 C(state)[T.AR]      0.1770     0.0531     3.3338     0.0009      0.0729      0.2810
 C(state)[T.AZ]     -0.0899     0.0132    -6.8132     0.0000     -0.1158     -0.0640
 C(state)[T.CA]     -0.2781     0.0214    -12.996     0.0000     -0.3200     -0.2361
@@ -2296,8 +2629,9 @@ C(state)[T.WA]      0.0064     0.0011     6.0151     0.0000      0.0043      0.0
 C(state)[T.WI]      0.0741     0.0590     1.2569     0.2088     -0.0415      0.1897
 C(state)[T.WV]      0.1576     0.0582     2.7097     0.0067      0.0436      0.2716
 C(state)[T.WY]     -0.0169     0.0590    -0.2858     0.7750     -0.1325      0.0988
-np.log(rincome)     0.4434  3.272e-08  1.355e+07     0.0000      0.4434      0.4434
-np.log(rprice)     -1.2793                                                         
+C(year)[T.1995]    -0.0328  3.591e-09 -9.137e+06     0.0000     -0.0328     -0.0328
+np.log(rincome)     0.4434                                                         
+np.log(rprice)     -1.2793  9.692e-09  -1.32e+08     0.0000     -1.2793     -1.2793
 ===================================================================================
 
 Endogenous: np.log(rprice)
@@ -2307,7 +2641,7 @@ Debiased: False
 Num Clusters: 2
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:178: RuntimeWarning: invalid value encountered in sqrt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:180: RuntimeWarning: invalid value encountered in sqrt
   std_errors = sqrt(diag(self.cov))
 </pre></div>
 </div>
@@ -2329,14 +2663,12 @@ Num Clusters: 2
 R-squared                          0.9760
 Partial R-squared                  0.7070
 Shea&#39;s R-squared                   0.7070
-Partial F-statistic            -8.798e+16
-P-value (Partial F-stat)           1.0000
+Partial F-statistic             1.568e+18
+P-value (Partial F-stat)           0.0000
 Partial F-stat Distn              chi2(1)
 ========================== ==============
 Intercept                          4.4375
                                  (410.34)
-C(year)[T.1995]                    0.0822
-                               (        )
 C(state)[T.AR]                    -0.0190
                                 (-3.5717)
 C(state)[T.AZ]                     0.0552
@@ -2431,10 +2763,12 @@ C(state)[T.WV]                     0.0205
                                  (1.7212)
 C(state)[T.WY]                    -0.0005
                                 (-0.0220)
+C(year)[T.1995]                    0.0822
+                              (1.799e+07)
 np.log(rincome)                   -0.0296
-                             (-1.461e+06)
+                             (-1.675e+06)
 taxs                               0.0051
-                               (        )
+                              (1.252e+09)
 -----------------------------------------
 
 T-stats reported in parentheses
@@ -2453,10 +2787,10 @@ T-stats use same covariance type as original model
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wooldridge&#39;s regression test of exogeneity
 H0: Endogenous variables are exogenous
-Statistic: -5723571921621970.0000
+Statistic: -24963534146713064.0000
 P-value: 1.0000
 Distributed: chi2(1)
-WaldTestStatistic, id: 0x7fe64812e340
+WaldTestStatistic, id: 0x7fb898126610
 </pre></div>
 </div>
 </div>
@@ -2486,10 +2820,6 @@ WaldTestStatistic, id: 0x7fe64812e340
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:1603: FutureWarning: In a future version of pandas all arguments of concat except for the argument &#39;objs&#39; will be keyword-only
-  vals = concat(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                    Model Comparison                    
 ========================================================
                                    OLS              2SLS
@@ -2500,13 +2830,11 @@ No. Observations                    96                96
 Cov. Est.                    clustered         clustered
 R-squared                       0.9675            0.9659
 Adj. R-squared                  0.9313            0.9279
-F-statistic                 -1.092e+16         1.606e+16
+F-statistic                 -7.751e+16          1.23e+17
 P-value (F-stat)                1.0000            0.0000
 ==================     ===============   ===============
 Intercept                       8.3597            9.4924
                               (484.80)          (360.24)
-C(year)[T.1995]                -0.0885           -0.0328
-                                                        
 C(state)[T.AR]                  0.1686            0.1770
                               (3.7460)          (3.3338)
 C(state)[T.AZ]                 -0.1280           -0.0899
@@ -2601,10 +2929,12 @@ C(state)[T.WV]                  0.1490            0.1576
                               (2.4854)          (2.7097)
 C(state)[T.WY]                 -0.0150           -0.0169
                              (-0.2771)         (-0.2858)
+C(year)[T.1995]                -0.0885           -0.0328
+                          (-2.569e+07)      (-9.137e+06)
 np.log(rincome)                 0.4974            0.4434
-                           (7.788e+06)       (1.355e+07)
+                                                        
 np.log(rprice)                 -1.0560           -1.2793
-                            (  -9e+07)                  
+                          (-9.916e+07)       (-1.32e+08)
 ==================== ================= =================
 Instruments                                         taxs
 --------------------------------------------------------
@@ -2612,14 +2942,18 @@ Instruments                                         taxs
 T-stats reported in parentheses
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/linearmodels/iv/results.py:180: RuntimeWarning: invalid value encountered in sqrt
+  std_errors = sqrt(diag(self.cov))
+</pre></div>
+</div>
 </div>
 </div>
 <p>Once we take into account the fact that the real price is endogeneous to (realised) demand, we find that its coefficient is more negative; i.e. an increase in the real price of cigarettes creates a bigger fall in number of packs bought.</p>
-</div>
-<div class="section" id="logit-probit-and-generalised-linear-models">
-<h2>Logit, probit, and generalised linear models<a class="headerlink" href="#logit-probit-and-generalised-linear-models" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="logit">
-<h3>Logit<a class="headerlink" href="#logit" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="logit-probit-and-generalised-linear-models">
+<h2>Logit, probit, and generalised linear models<a class="headerlink" href="#logit-probit-and-generalised-linear-models" title="Permalink to this headline">#</a></h2>
+<section id="logit">
+<h3>Logit<a class="headerlink" href="#logit" title="Permalink to this headline">#</a></h3>
 <p>A logistical regression, aka a logit, is a statistical method for a best-fit line between a regressors <span class="math notranslate nohighlight">\(X\)</span> and an outcome varibale <span class="math notranslate nohighlight">\(y\)</span> that takes on values in <span class="math notranslate nohighlight">\((0, 1)\)</span>.</p>
 <p>The function that we’re assuming links the regressors and the outcome has a few different names but the most common is the sigmoid function or the logistic function. The data generating process is assumed to be</p>
 <div class="math notranslate nohighlight">
@@ -2672,8 +3006,8 @@ T-stats reported in parentheses
 Dep. Variable:                  GRADE   No. Observations:                   32
 Model:                          Logit   Df Residuals:                       28
 Method:                           MLE   Df Model:                            3
-Date:                Sat, 20 Aug 2022   Pseudo R-squ.:                  0.3740
-Time:                        17:52:15   Log-Likelihood:                -12.890
+Date:                Fri, 16 Sep 2022   Pseudo R-squ.:                  0.3740
+Time:                        15:20:42   Log-Likelihood:                -12.890
 converged:                       True   LL-Null:                       -20.592
 Covariance Type:            nonrobust   LLR p-value:                  0.001502
 ==============================================================================
@@ -2725,9 +3059,9 @@ PSI            2.3787      1.065      2.234      0.025       0.292       4.465
 </table></div></div>
 </div>
 <p>So participation gives almost half a grade increase.</p>
-</div>
-<div class="section" id="probit">
-<h3>Probit<a class="headerlink" href="#probit" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="probit">
+<h3>Probit<a class="headerlink" href="#probit" title="Permalink to this headline">#</a></h3>
 <p>Probit is very similar to logit: it’s a statistical method for a best-fit line between regressors <span class="math notranslate nohighlight">\(X\)</span> and an outcome varibale <span class="math notranslate nohighlight">\(y\)</span> that takes on values in <span class="math notranslate nohighlight">\((0, 1)\)</span>. And, just like with logit, the function that we’re assuming links the regressors and the outcome has a few different names!</p>
 <p>The data generating process is assumed to be</p>
 <div class="math notranslate nohighlight">
@@ -2750,15 +3084,17 @@ PSI            2.3787      1.065      2.234      0.025       0.292       4.465
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
-         Current function value: 0.400588
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Current function value: 0.400588
          Iterations 6
                           Probit Regression Results                           
 ==============================================================================
 Dep. Variable:                  GRADE   No. Observations:                   32
 Model:                         Probit   Df Residuals:                       28
 Method:                           MLE   Df Model:                            3
-Date:                Sat, 20 Aug 2022   Pseudo R-squ.:                  0.3775
-Time:                        17:52:15   Log-Likelihood:                -12.819
+Date:                Fri, 16 Sep 2022   Pseudo R-squ.:                  0.3775
+Time:                        15:20:42   Log-Likelihood:                -12.819
 converged:                       True   LL-Null:                       -20.592
 Covariance Type:            nonrobust   LLR p-value:                  0.001405
 ==============================================================================
@@ -2825,16 +3161,16 @@ PSI            1.4263      0.595      2.397      0.017       0.260       2.593
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_76518/516205570.py:5: UserWarning: linestyle is redundantly defined by the &#39;linestyle&#39; keyword argument and the fmt string &quot;r-&quot; (-&gt; linestyle=&#39;-&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15329/516205570.py:5: UserWarning: linestyle is redundantly defined by the &#39;linestyle&#39; keyword argument and the fmt string &quot;r-&quot; (-&gt; linestyle=&#39;-&#39;). The keyword argument will take precedence.
   ax.plot(support, st.logistic.cdf(support), &quot;r-&quot;, ls=&quot;--&quot;, label=&quot;Logistic&quot;)
 </pre></div>
 </div>
 <img alt="_images/econmt-regression_99_1.svg" src="_images/econmt-regression_99_1.svg" /></div>
 </div>
 <p>What difference there is, is that logistic regression puts more weight into the tails of the distribution. Arguably, logit is easier to interpret too. With logistic regression, a one unit change in <span class="math notranslate nohighlight">\(x_i\)</span> is associated with a <span class="math notranslate nohighlight">\(\beta_i\)</span> change in the log odds of a 1 outcome or, alternatively, an <span class="math notranslate nohighlight">\(e^{\beta_i}\)</span>-fold change in the odds, all else being equal. With a probit, this is a change of <span class="math notranslate nohighlight">\(\beta_i z\)</span> for <span class="math notranslate nohighlight">\(z\)</span> a normalised variable that you’d have to convert into a predicted probability using the normal CDF.</p>
-</div>
-<div class="section" id="generalised-linear-models">
-<h3>Generalised linear models<a class="headerlink" href="#generalised-linear-models" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="generalised-linear-models">
+<h3>Generalised linear models<a class="headerlink" href="#generalised-linear-models" title="Permalink to this headline">#</a></h3>
 <p>Logit and probit (and OLS for that matter) as special cases of a class of models such that <span class="math notranslate nohighlight">\(g\)</span> is a ‘link’ function connects a function of regressors to the output, and <span class="math notranslate nohighlight">\(\mu\)</span> is the mean of a conditional response distribution at a given point in the space of regressors. When <span class="math notranslate nohighlight">\(g(\mu) = X'\beta\)</span>, we just get regular OLS. When it’s logit, we have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2842,21 +3178,21 @@ PSI            1.4263      0.595      2.397      0.017       0.260       2.593
 \]</div>
 <p>But as well as the ones we’ve seen, there are many possible link functions one can use via the catch-all <code class="docutils literal notranslate"><span class="pre">glm</span></code> function. These come in different ‘families’ of distributions, with the default for the binomial family being logit. So, running <code class="docutils literal notranslate"><span class="pre">smf.glm('GRADE</span> <span class="pre">~</span> <span class="pre">GPA</span> <span class="pre">+</span> <span class="pre">TUCE</span> <span class="pre">+</span> <span class="pre">PSI',</span> <span class="pre">data=df,</span> <span class="pre">family=sm.families.Binomial()).fit()</span></code> will produce exactly the same as we got both using the <code class="docutils literal notranslate"><span class="pre">logit</span></code> function. For more on the families of distributions and possible link functions, see the <a class="reference external" href="https://www.statsmodels.org/stable/glm.html">relevant part</a> of the <strong>statsmodels</strong> documentation.</p>
 <p>If you need a library dedicated to GLMs that has all the bells and whistles you can dream of, you might want to check out <a class="reference external" href="https://glum.readthedocs.io/en/latest/">glum</a>. At the time of writing, it is <a class="reference external" href="https://glum.readthedocs.io/en/latest/benchmarks.html">faster</a> than either GLMnet or H2O (two other popular GLM libraries).</p>
-</div>
-</div>
-<div class="section" id="linear-probability-model">
-<h2>Linear probability model<a class="headerlink" href="#linear-probability-model" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="linear-probability-model">
+<h2>Linear probability model<a class="headerlink" href="#linear-probability-model" title="Permalink to this headline">#</a></h2>
 <p>When <span class="math notranslate nohighlight">\(y\)</span> takes values in <span class="math notranslate nohighlight">\(\{0, 1\}\)</span> but the model looks like</p>
 <div class="math notranslate nohighlight">
 \[
 y = x' \cdot \beta
 \]</div>
 <p>and is estimated by OLS then you have a linear probability model. In this case, the interpretion of a unit change in <span class="math notranslate nohighlight">\(x_i\)</span> is that it induces a <span class="math notranslate nohighlight">\(\beta_i\)</span> <em>change in probability</em> of <span class="math notranslate nohighlight">\(y\)</span>. Note that homoskedasticity does not hold for the linear probability model.</p>
-</div>
-<div class="section" id="violations-of-the-classical-linear-model-clm">
-<h2>Violations of the classical linear model (CLM)<a class="headerlink" href="#violations-of-the-classical-linear-model-clm" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="heteroskedasticity">
-<h3>Heteroskedasticity<a class="headerlink" href="#heteroskedasticity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="violations-of-the-classical-linear-model-clm">
+<h2>Violations of the classical linear model (CLM)<a class="headerlink" href="#violations-of-the-classical-linear-model-clm" title="Permalink to this headline">#</a></h2>
+<section id="heteroskedasticity">
+<h3>Heteroskedasticity<a class="headerlink" href="#heteroskedasticity" title="Permalink to this headline">#</a></h3>
 <p>If an estimated model is homoskedastic then its random variables have equal (finite) variance. This is also known as homogeneity of variance. Another way of putting it is that, for all <em>observations</em> <span class="math notranslate nohighlight">\(i\)</span> in an estimated model <span class="math notranslate nohighlight">\(y_i = X_i\hat{\beta} + \epsilon_i\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2868,10 +3204,10 @@ y = x' \cdot \beta
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">get_robustcov_results</span><span class="p">(</span><span class="s1">&#39;HAC&#39;</span><span class="p">,</span> <span class="n">maxlags</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="quantile-regression">
-<h2>Quantile regression<a class="headerlink" href="#quantile-regression" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="quantile-regression">
+<h2>Quantile regression<a class="headerlink" href="#quantile-regression" title="Permalink to this headline">#</a></h2>
 <p>Quantile regression estimates the conditional quantiles of a response variable. In some cases, it can be more robust to outliers and, in the case of the <span class="math notranslate nohighlight">\(q=0.5\)</span> quantile it is equivalent LAD (Least Absolute Deviation) regression. Let’s look at an example of quantile regression in action, lifted direct from the <strong>statsmodels</strong> <a class="reference external" href="https://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html">documentation</a> and based on a Journal of Economic Perspectives paper by Koenker and Hallock.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2956,8 +3292,8 @@ y = x' \cdot \beta
 Dep. Variable:                foodexp   Pseudo R-squared:               0.6206
 Model:                       QuantReg   Bandwidth:                       64.51
 Method:                 Least Squares   Sparsity:                        209.3
-Date:                Sat, 20 Aug 2022   No. Observations:                  235
-Time:                        17:52:16   Df Residuals:                      233
+Date:                Fri, 16 Sep 2022   No. Observations:                  235
+Time:                        15:20:42   Df Residuals:                      233
                                         Df Model:                            1
 ==============================================================================
                  coef    std err          t      P&gt;|t|      [0.025      0.975]
@@ -3003,9 +3339,9 @@ strong multicollinearity or other numerical problems.
 <img alt="_images/econmt-regression_111_0.svg" src="_images/econmt-regression_111_0.svg" /></div>
 </div>
 <p>This chart shows very clearly how quantile regression differs from OLS. The line fitted by OLS is trying to be all things to all points whereas the line fitted by quantile regression is focused only on its quantile. You can also see how points far from the median (not all shown) may be having a large influence on the OLS line.</p>
-</div>
-<div class="section" id="rolling-and-recursive-regressions">
-<h2>Rolling and recursive regressions<a class="headerlink" href="#rolling-and-recursive-regressions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="rolling-and-recursive-regressions">
+<h2>Rolling and recursive regressions<a class="headerlink" href="#rolling-and-recursive-regressions" title="Permalink to this headline">#</a></h2>
 <p>Rolling ordinary least squares applies OLS (ordinary least squares) across a fixed window of observations and then rolls (moves or slides) that window across the data set. They key parameter is <code class="docutils literal notranslate"><span class="pre">window</span></code>, which determines the number of observations used in each OLS regression. Recursive regression is equivalent to rolling regression but with a window that expands over time.</p>
 <p>Let’s first create some synthetic data to perform estimation on:</p>
 <div class="cell docutils container">
@@ -3189,8 +3525,8 @@ strong multicollinearity or other numerical problems.
 ==============================================================================
 Dep. Variable:                 target   No. Observations:                  200
 Model:                    RecursiveLS   Log Likelihood                -570.923
-Date:                Sat, 20 Aug 2022   R-squared:                       0.988
-Time:                        17:52:17   AIC                           1145.847
+Date:                Fri, 16 Sep 2022   R-squared:                       0.988
+Time:                        15:20:43   AIC                           1145.847
 Sample:                             0   BIC                           1152.444
                                 - 200   HQIC                          1148.516
 Covariance Type:            nonrobust   Scale                           17.413
@@ -3229,9 +3565,9 @@ Warnings:
 <div class="cell_output docutils container">
 <img alt="_images/econmt-regression_124_0.svg" src="_images/econmt-regression_124_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="regression-plots">
-<h2>Regression plots<a class="headerlink" href="#regression-plots" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="regression-plots">
+<h2>Regression plots<a class="headerlink" href="#regression-plots" title="Permalink to this headline">#</a></h2>
 <p><strong>statsmodels</strong> has a number of built-in plotting methods to help you understand how well your regression is capturing the relationships you’re looking for. Let’s see a few examples of these using <strong>statsmodels</strong> built-in Statewide Crime data set:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3307,7 +3643,7 @@ Warnings:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_130_0.svg" src="_images/econmt-regression_130_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8789235286447)&gt;
+<img alt="_images/econmt-regression_130_0.svg" src="_images/econmt-regression_130_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8776926800086)&gt;
 </pre></div>
 </div>
 </div>
@@ -3349,8 +3685,8 @@ Warnings:
 Dep. Variable:                 murder   R-squared:                       0.813
 Model:                            OLS   Adj. R-squared:                  0.797
 Method:                 Least Squares   F-statistic:                     50.08
-Date:                Sat, 20 Aug 2022   Prob (F-statistic):           3.42e-16
-Time:                        17:52:19   Log-Likelihood:                -95.050
+Date:                Fri, 16 Sep 2022   Prob (F-statistic):           3.42e-16
+Time:                        15:20:46   Log-Likelihood:                -95.050
 No. Observations:                  51   AIC:                             200.1
 Df Residuals:                      46   BIC:                             209.8
 Df Model:                           4                                         
@@ -3426,27 +3762,27 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/econmt-regression_142_0.svg" src="_images/econmt-regression_142_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8789190562880)&gt;
+<img alt="_images/econmt-regression_142_0.svg" src="_images/econmt-regression_142_0.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8776928112041)&gt;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="specification-curve-analysis">
-<h2>Specification curve analysis<a class="headerlink" href="#specification-curve-analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="specification-curve-analysis">
+<h2>Specification curve analysis<a class="headerlink" href="#specification-curve-analysis" title="Permalink to this headline">#</a></h2>
 <p>When specifying a model, modellers have many options. These can be informed by field intelligence, priors, and even misguided attempts to find a significant result. Even with the best of intentions, research teams can reach entirely different conclusions using the same, or similar, data because of different choices made in preparing data or in modelling it.</p>
-<p>There’s formal evidence that researchers really do make different decisions; one study <span id="id4">Silberzahn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id8">2018</a>]</span> gave the same research question - whether soccer referees are more likely to give red cards to dark-skin-toned players than to light-skin-toned players - to 29 different teams. From the abstract of that paper:</p>
+<p>There’s formal evidence that researchers really do make different decisions; one study <span id="id4">Silberzahn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id8" title="Raphael Silberzahn, Eric L Uhlmann, Daniel P Martin, Pasquale Anselmi, Frederik Aust, Eli Awtrey, Štěpán Bahník, Feng Bai, Colin Bannard, Evelina Bonnier, and others. Many analysts, one data set: making transparent how variations in analytic choices affect results. Advances in Methods and Practices in Psychological Science, 1(3):337–356, 2018.">2018</a>]</span> gave the same research question - whether soccer referees are more likely to give red cards to dark-skin-toned players than to light-skin-toned players - to 29 different teams. From the abstract of that paper:</p>
 <blockquote>
 <div><p>Analytic approaches varied widely across the teams, and the estimated effect sizes ranged from 0.89 to 2.93 (Mdn = 1.31) in odds-ratio units. Twenty teams (69%) found a statistically significant positive effect, and 9 teams (31%) did not observe a significant relationship. Overall, the 29 different analyses used 21 unique combinations of covariates. Neither analysts’ prior beliefs about the effect of interest nor their level of expertise readily explained the variation in the outcomes of the analyses. Peer ratings of the quality of the analyses also did not account for the variability.</p>
 </div></blockquote>
 <p>So not only were different decisions made, there seems to be no clearly identifiable reason for them. There is usually scope for reasonable alternative model specifications when estimating coefficients, and those coefficients will vary with those specifications.</p>
-<p>Specification curve analysis <span id="id5">Simonsohn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id9">2020</a>]</span> looks for a more exhaustive way of trying out alternative specifications. The three steps of specification curve analysis are:</p>
+<p>Specification curve analysis <span id="id5">Simonsohn <em>et al.</em> [<a class="reference internal" href="zreferences.html#id9" title="Uri Simonsohn, Joseph P Simmons, and Leif D Nelson. Specification curve analysis. Nature Human Behaviour, 4(11):1208–1214, 2020.">2020</a>]</span> looks for a more exhaustive way of trying out alternative specifications. The three steps of specification curve analysis are:</p>
 <ol class="simple">
 <li><p>identifying the set of theoretically justified, statistically valid, and non-redundant analytic specifications;</p></li>
 <li><p>displaying alternative results graphically, allowing the identification of decisions producing different results; and</p></li>
 <li><p>conducting statistical tests to determine whether as a whole results are inconsistent with the null hypothesis.</p></li>
 </ol>
-<p>For a good example of specification curve analysis in action, see this recent Nature Human Behaviour paper <span id="id6">Orben and Przybylski [<a class="reference internal" href="zreferences.html#id10">2019</a>]</span> on the association between adolescent well-being and the use of digital technology.</p>
+<p>For a good example of specification curve analysis in action, see this recent Nature Human Behaviour paper <span id="id6">Orben and Przybylski [<a class="reference internal" href="zreferences.html#id10" title="Amy Orben and Andrew K Przybylski. The association between adolescent well-being and digital technology use. Nature Human Behaviour, 3(2):173–182, 2019.">2019</a>]</span> on the association between adolescent well-being and the use of digital technology.</p>
 <p>We’ll use the <a class="reference external" href="https://specification-curve.readthedocs.io/en/latest/readme.html"><strong>specification curve analysis</strong></a> package to do the first two, which you can install with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">specification_curve</span></code>. To demonstrate the full functionality, we’ll create a second, alternative ‘hp’ that is a transformed version of the original.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3479,9 +3815,9 @@ strong multicollinearity or other numerical problems.
 </div>
 <img alt="_images/econmt-regression_146_1.svg" src="_images/econmt-regression_146_1.svg" /></div>
 </div>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
 <p>In this very short introduction to regression with code, you should have learned how to:</p>
 <ul class="simple">
 <li><p>✅ perform linear OLS regressions with code;</p></li>
@@ -3494,8 +3830,8 @@ strong multicollinearity or other numerical problems.
 <li><p>✅ perform GLM regressions; and</p></li>
 <li><p>✅ use plots as a way to interrogate regression results.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3519,64 +3855,51 @@ strong multicollinearity or other numerical problems.
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="econmt-statistics.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Statistics</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="econmt-statistics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Statistics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="econmt-causal-inference.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Causal Inference</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="econmt-causal-inference.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Causal Inference</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

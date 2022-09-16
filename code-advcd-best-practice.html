@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Better Coding &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-advcd-best-practice.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="More Coding" href="code-advanced.html" />
     <link rel="prev" title="Tips for Better Coding" href="code-best-practice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/code-advcd-best-practice.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-advcd-best-practice.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/code-advcd-best-practice.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/code-advcd-best-practice.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/code-advcd-best-practice.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/code-advcd-best-practice.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-advcd-best-practice.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/code-advcd-best-practice.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -677,27 +832,131 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Better Coding</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auto-magically-improving-your-code">
+   Auto-magically improving your code
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linting">
+     Linting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatting">
+     Formatting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecting-variables">
+   Inspecting Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rich-for-beautiful-inspection">
+     <strong>
+      rich
+     </strong>
+     for beautiful inspection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-and-exceptions">
+   Errors and Exceptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debugging-code">
+   Debugging Code
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#print-statements">
+     Print statements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debugging-with-the-ide">
+     Debugging with the IDE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logging">
+     Logging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tests">
+   Tests
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-continuous-variables">
+     Testing continuous variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-coverage">
+     Test coverage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#timing-and-profiling">
+   Timing and profiling
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="better-coding">
-<span id="code-advcd-best-practice"></span><h1>Better Coding<a class="headerlink" href="#better-coding" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="better-coding">
+<span id="code-advcd-best-practice"></span><h1>Better Coding<a class="headerlink" href="#better-coding" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This chapter covers the tools and knowledge that will help you to write better code faster and to understand what’s going on when your code goes wrong! This includes practical topics such as debugging code, logging, linting, and the magic of auto-formatting. Some of the topics are a bit more advanced and come with a warning to tell you so.</p>
 <p>As ever, you may need to <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on the terminal before being able to use some of the packages that are featured.</p>
-</div>
-<div class="section" id="auto-magically-improving-your-code">
-<h2>Auto-magically improving your code<a class="headerlink" href="#auto-magically-improving-your-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="auto-magically-improving-your-code">
+<h2>Auto-magically improving your code<a class="headerlink" href="#auto-magically-improving-your-code" title="Permalink to this headline">#</a></h2>
 <p>In the previous chapter, we met the idea of <em>code style</em>: even for code that runs, <em>how</em> you write it matters for readability. (And it goes without saying that you don’t want bugs in your code that stop it running at all.) It is possible to catch some errors, to flag style issues, and even to re-format code to comply with a code style automatically. In this section, we’ll see how to use tools to perform these functions automatically.</p>
-<div class="section" id="linting">
-<h3>Linting<a class="headerlink" href="#linting" title="Permalink to this headline">¶</a></h3>
+<section id="linting">
+<h3>Linting<a class="headerlink" href="#linting" title="Permalink to this headline">#</a></h3>
 <p>Linters are tools that analyse code for programmatic and stylistic errors, assuming you have declared a style. A linting tool flags any potential errors and deviations from style before you even run it. When you run a linter, you get a report of what line the issue is on and why it has been raised. They are supposedly named after the lint trap in a clothes dryer because of the way they catch small errors that could have big effects.</p>
 <p>Some of the most popular linters in Python are <a class="reference external" href="https://flake8.pycqa.org/en/latest/"><strong>flake8</strong></a>, <a class="reference external" href="https://pycodestyle.pycqa.org/en/latest/intro.html"><strong>pycodestyle</strong></a>, and <a class="reference external" href="https://www.pylint.org/"><strong>pylint</strong></a>.</p>
 <p>Let’s see an example of running a linter. VS Code has direct integration with a range of linters. To get going, use <code class="docutils literal notranslate"><span class="pre">⇧⌘P</span></code> (Mac) and then type ‘Python Select Linter’. In the example below, we’ll use <strong>flake8</strong> (and <strong>pylance</strong>, another VS Code extension). Let’s pretend we have a script, <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, containing</p>
@@ -726,9 +985,9 @@
 </ul>
 <p>each message is a warning or error that says what the problem is (for example, missing whitespace after ‘,’), what library is reporting it (mostly flake8 here), the name of the rule that has been broken (E231), and the line, row position (1, 15). Very helpfully, we get an undefined name message for variable <code class="docutils literal notranslate"><span class="pre">X</span></code>, this is especially handy because it would cause an error on execution otherwise. The same goes for the indentation message (indentation matters!). You can customise your <a class="reference external" href="https://code.visualstudio.com/docs/python/linting">linting settings</a> in VS Code too.</p>
 <p>Although the automatic linting offered by an IDE is very convenient, it’s not the only way to use linting tools. You can also run them from the command line. For example, for <strong>flake8</strong>, the command is <code class="docutils literal notranslate"><span class="pre">flake8</span> <span class="pre">test.py</span></code>.</p>
-</div>
-<div class="section" id="formatting">
-<h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="formatting">
+<h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">#</a></h3>
 <p>It’s great to find out all the ways in which you are failing with respect to code style from a linter but wouldn’t it be <em>even</em> better if you could fix those style issues automatically? The answer is clearly yes! This is where formatters come in; they can take valid code and forcibly apply a code style to them. This is really handy in practice for all kinds of reasons.</p>
 <p>The most popular code formatters in Python are probably: <a class="reference external" href="https://github.com/google/yapf"><strong>yapf</strong></a>, ‘yet another Python formatter’, from Google; <a class="reference external" href="https://github.com/hhatto/autopep8"><strong>autopep8</strong></a>, which applies PEP8 to your code; and <a class="reference external" href="https://black.readthedocs.io/en/stable/"><strong>black</strong></a>, the ‘uncompromising formatter’ that is very opinionated (“any colour, as long as it’s black”).</p>
 <p>There are two ways to use formatters, line-by-line (though <strong>black</strong> doesn’t work in this mode) or on an entire script at once. VS Code offers an integration with formatters. To select a formatter in VS Code, bring up the settings using <kbd>⌘</kbd> + <kbd>,</kbd> (Mac) or <kbd>ctrl</kbd> + <kbd>,</kbd> (otherwise) and type ‘python formatting provider’ and you can choose from autopep8, black, and yapf.</p>
@@ -771,12 +1030,12 @@
 <p>So what did the formatter do? Many things. It moved the import to the top, put two blank lines after the function definition, removed whitespace around keyword arguments, added a new line at the end, and fixed some of the indentation. The different formatters have different strengths and weaknesses; for example, <strong>black</strong> is not so good at putting imports in the right place but excels at splitting up troublesome wide lines. If you need a formatter that deals specifically with module imports, check out <a class="reference external" href="https://pycqa.github.io/isort/"><strong>isort</strong></a>.</p>
 <p>Apart from taking the pressure off you to always be thinking about code style, formatters can be useful when working collaboratively too. For some open source packages, maintainers ask that new code or changed code be run through a particular formatter if it is to be incorporated into the main branch. This helps ensure the code style is consistent regardless of who is writing it. Running the code formatter can even be automated to happen every time someone <em>commits</em> some code to a shared code repository too, using something called a <em>pre-commit hook</em>.</p>
 <p>There is a package that can run <strong>Black</strong> on Jupyter Notebooks too: <a class="reference external" href="https://pypi.org/project/black-nb/"><strong>black-nb</strong></a>.</p>
-</div>
-</div>
-<div class="section" id="inspecting-variables">
-<h2>Inspecting Variables<a class="headerlink" href="#inspecting-variables" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="rich-for-beautiful-inspection">
-<h3><strong>rich</strong> for beautiful inspection<a class="headerlink" href="#rich-for-beautiful-inspection" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="inspecting-variables">
+<h2>Inspecting Variables<a class="headerlink" href="#inspecting-variables" title="Permalink to this headline">#</a></h2>
+<section id="rich-for-beautiful-inspection">
+<h3><strong>rich</strong> for beautiful inspection<a class="headerlink" href="#rich-for-beautiful-inspection" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://github.com/willmcgugan/rich"><strong>rich</strong></a> is much more than just a tool for inspecting variables, it’s a way to create beautiful renderings of all objects both in the terminal and in interactive Python windows. You can use it to build fantastic looking command line interfaces. Here, we’ll see how it can help us find what value a variable takes <em>and</em> what methods can be used on a variable via its <code class="docutils literal notranslate"><span class="pre">inspect</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -788,27 +1047,25 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭───────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">class</span><span style="color: #000000; text-decoration-color: #000000"> </span><span style="color: #008000; text-decoration-color: #008000">'list'</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────────────────────────╮</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Built-in mutable sequence.</span>                                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╭───────────────────────────────────────────────────────────────────────────────────────╮</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="font-weight: bold">[</span><span style="color: #008000; text-decoration-color: #008000">'foo'</span>, <span style="color: #008000; text-decoration-color: #008000">'bar'</span><span style="font-weight: bold">]</span>                                                                        <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╰───────────────────────────────────────────────────────────────────────────────────────╯</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">append</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">append</span><span style="font-weight: bold">(</span>object, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Append object to the end of the list.</span>                    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">clear</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">clear</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove all items from list.</span>                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">copy</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">copy</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a shallow copy of the list.</span>                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">count</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">count</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return number of occurrences of value.</span>                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">extend</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">extend</span><span style="font-weight: bold">(</span>iterable, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Extend list by appending elements from the iterable.</span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">index</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">index</span><span style="font-weight: bold">(</span>value, <span style="color: #808000; text-decoration-color: #808000">start</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span>, <span style="color: #808000; text-decoration-color: #808000">stop</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9223372036854775807</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return first index of </span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">value.</span>                                                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">insert</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">insert</span><span style="font-weight: bold">(</span>index, object, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Insert object before index.</span>                       <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">pop</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">pop</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">index</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove and return item at index </span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">default last</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">remove</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">remove</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove first occurrence of value.</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #808000; text-decoration-color: #808000; font-style: italic">reverse</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">reverse</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Reverse *IN PLACE*.</span>                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">sort</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">sort</span><span style="font-weight: bold">(</span>*, <span style="color: #808000; text-decoration-color: #808000">key</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">reverse</span>=<span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Sort the list in ascending order and </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-style: italic">None</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">╰───────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭───────────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">class</span><span style="color: #000000; text-decoration-color: #000000"> </span><span style="color: #008000; text-decoration-color: #008000">'list'</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────────────────────────────╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Built-in mutable sequence.</span>                                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╭───────────────────────────────────────────────────────────────────────────────────────────────╮</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="font-weight: bold">[</span><span style="color: #008000; text-decoration-color: #008000">'foo'</span>, <span style="color: #008000; text-decoration-color: #008000">'bar'</span><span style="font-weight: bold">]</span>                                                                                <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╰───────────────────────────────────────────────────────────────────────────────────────────────╯</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">append</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">append</span><span style="font-weight: bold">(</span>object, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Append object to the end of the list.</span>                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">clear</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">clear</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove all items from list.</span>                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">copy</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">copy</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a shallow copy of the list.</span>                                          <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">count</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">count</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return number of occurrences of value.</span>                             <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">extend</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">extend</span><span style="font-weight: bold">(</span>iterable, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Extend list by appending elements from the iterable.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">index</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">index</span><span style="font-weight: bold">(</span>value, <span style="color: #808000; text-decoration-color: #808000">start</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span>, <span style="color: #808000; text-decoration-color: #808000">stop</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9223372036854775807</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return first index of value.</span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">insert</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">insert</span><span style="font-weight: bold">(</span>index, object, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Insert object before index.</span>                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">pop</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">pop</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">index</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove and return item at index </span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">default last</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">remove</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">remove</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Remove first occurrence of value.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #808000; text-decoration-color: #808000; font-style: italic">reverse</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">reverse</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Reverse *IN PLACE*.</span>                                                      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">sort</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">sort</span><span style="font-weight: bold">(</span>*, <span style="color: #808000; text-decoration-color: #808000">key</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">reverse</span>=<span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Sort the list in ascending order and return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-style: italic">None</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰───────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 </pre>
 </div></div>
 </div>
@@ -817,10 +1074,10 @@
 <p class="admonition-title">Exercise</p>
 <p>Create a dictionary (it doesn’t matter what’s in it, but you could map the integer 1 to the letter “a”). Then use <code class="docutils literal notranslate"><span class="pre">inspect</span></code> with <code class="docutils literal notranslate"><span class="pre">methods=True</span></code> to find out about all the methods you can call on an object of type dict.</p>
 </div>
-</div>
-</div>
-<div class="section" id="errors-and-exceptions">
-<h2>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="errors-and-exceptions">
+<h2>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">#</a></h2>
 <p>When a programme goes wrong, it throws up an error and halts. You won’t be coding for long before you hit one of these errors, which have special names depending on what triggered them.</p>
 <p>Let’s see a real-life error in action:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">denom</span> <span class="o">=</span> <span class="mi">0</span>
@@ -993,14 +1250,14 @@ I always run.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="debugging-code">
-<h2>Debugging Code<a class="headerlink" href="#debugging-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="debugging-code">
+<h2>Debugging Code<a class="headerlink" href="#debugging-code" title="Permalink to this headline">#</a></h2>
 <p>Computers are <em>very</em> literal, so literal that unless you’re perfectly precise about what you want, they will end up doing something different. When that happens, one of the most difficult issues in programming is to understand <em>why</em> the code isn’t doing what you expected. When the code doesn’t do what we expect, it’s called a bug.</p>
 <p>Bugs could be fundamental issues with the code you’re using (in fact, the term originated because a moth causing a problem in an early computer) and, if you find one of these, you should file an issue with the maintainers of the code. However, what’s much more likely is that the instructions you gave aren’t quite what is needed to produce the outcome that you want. And, in this case, you might need to <em>debug</em> the code: to find out which part of it isn’t doing what you expect.</p>
 <p>Even with a small code base, it can be tricky to track down where the bug is: but don’t fear, there are tools on hand to help you find where the bug is.</p>
-<div class="section" id="print-statements">
-<h3>Print statements<a class="headerlink" href="#print-statements" title="Permalink to this headline">¶</a></h3>
+<section id="print-statements">
+<h3>Print statements<a class="headerlink" href="#print-statements" title="Permalink to this headline">#</a></h3>
 <p>The simplest, and I’m afraid to say the most common, way to debug code is to plonk <code class="docutils literal notranslate"><span class="pre">print</span></code> statements in the code. Let’s take a common example in which we perform some simple array operations, here multiplying an array and then summing it with another array:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -1148,9 +1405,9 @@ I always run.
 </div>
 <p>The print statement now tells us the shapes of the arrays as we go through the function. We can see that in the line before the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement the two arrays that are being combined using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator don’t have the same shape, so we’re effectively adding two vectors from two differently dimensioned vector spaces and, understandably, we are being called out on our nonsense. To fix this problem, we would have to ensure that the input arrays are the same shape (it looks like we may have just missed a value from <code class="docutils literal notranslate"><span class="pre">in_vals_two</span></code>).</p>
 <p><code class="docutils literal notranslate"><span class="pre">print</span></code> statements are great for a quick bit of debugging and you are likely to want to use them more frequently than any other debugging tool. However, for complex, nested code debugging, they aren’t always very efficient and you will sometimes feel like you are playing battleships in continually refining where they should go until you have pinpointed the actual problem, so they’re far from perfect. Fortunately, there are other tools in the debugging toolbox…</p>
-</div>
-<div class="section" id="debugging-with-the-ide">
-<h3>Debugging with the IDE<a class="headerlink" href="#debugging-with-the-ide" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="debugging-with-the-ide">
+<h3>Debugging with the IDE<a class="headerlink" href="#debugging-with-the-ide" title="Permalink to this headline">#</a></h3>
 <p>In this section, we’ll learn about how your Integrated Development Environment, or IDE, can aid you with debugging. While we’ll talk through the use of Visual Studio Code, which is free, directly supports Python, R, and other languages, and is especially rich, many of the features will be present in other IDEs too and the ideas are somewhat general.</p>
 <p>To begin debugging using Visual Studio Code, get a script ready, for example <code class="docutils literal notranslate"><span class="pre">script.py</span></code>, that you’d like to debug. If your script has an error in, a debug run will automatically run into it and stop on the error; alternatively you can click to the left of the line number in your script to create a <em>breakpoint</em> that your code will stop at anyway when in debug mode.</p>
 <p>To begin a debug session, click on the play button partially covered by a bug that’s on the left hand ribbon of the VS Code window. It will bring up a menu. Click ‘Run and debug’ and select ‘Python file’. The debugger will now start running the script you had open. When it reaches and error or a breakpoint it will stop.</p>
@@ -1158,9 +1415,9 @@ I always run.
 <p>Perhaps you now want to progress the code on from a breakpoint; you can do this too. You’ll see that a menu has appeared with stop, restart, play, and other buttons on it. To skip over the next line of code, use the curved arrow over the dot. To dig in to the next line of code, for example if it’s a function, use the arrow pointing toward a dot. To carry on running the code, use the play button.</p>
 <p>This is only really scratching the surface of what you can do with IDE based debugging, but even that surface layer provides lots of really useful tools for finding out what’s going on when your code executes.</p>
 <p>You can find a short ‘hello world!’ debugging tutorial in the <a class="reference external" href="https://code.visualstudio.com/docs/python/python-tutorial#_configure-and-run-the-debugger">official VS Code documentation</a>.</p>
-</div>
-<div class="section" id="logging">
-<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">#</a></h3>
 <p>Logging is a means of tracking events that happen when software runs. It’s really the best way to debug code. An event is described by a descriptive message that can optionally contain data about variables that are defined as the code is executing.</p>
 <p>Logging has two main purposes: to record events of interest, such as an error, and to act as an auditable account of what happened after the fact.</p>
 <p>Although Python has a built-in logger, we will see an example of logging using <a class="reference external" href="https://github.com/Delgan/loguru"><strong>loguru</strong></a>, a package that makes logging a little easier and has some nice settings.</p>
@@ -1174,7 +1431,7 @@ I always run.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-08-20 18:00:09.354 | DEBUG    | __main__:&lt;module&gt;:3 - Simple logging!
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-09-16 15:20:01.018 | DEBUG    | __main__:&lt;cell line: 3&gt;:3 - Simple logging!
 </pre></div>
 </div>
 </div>
@@ -1232,10 +1489,10 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>While this is a slightly more advanced topic, the quality and robustness improvements you will get from writing tests mean it’s still really useful to use the tricks from it.</p>
@@ -1328,8 +1585,8 @@ FAILED test.py::test_answer - assert <span class="nv">4</span> <span class="o">=
 <p>As you add more tests, they will be automatically picked up and run by <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
 <p>When writing tests, think about whether you have tested realistic combinations of input parameters, tested all discrete outputs at least once, tested the boundaries of continuous outputs, and ensured that informative errors are raised when things go wrong.</p>
 <p>If you’re using Visual Studio Code, support for <strong>pytest</strong> comes built-in.</p>
-<div class="section" id="testing-continuous-variables">
-<h3>Testing continuous variables<a class="headerlink" href="#testing-continuous-variables" title="Permalink to this headline">¶</a></h3>
+<section id="testing-continuous-variables">
+<h3>Testing continuous variables<a class="headerlink" href="#testing-continuous-variables" title="Permalink to this headline">#</a></h3>
 <p>Imagine we are not testing for an integer, such as 4, but instead for a real number, such as 4.32838. Computers are nothing if not punishingly literal, however, so if evaluation of the code produces 4.32837 instead of 4.32838 the <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement will fail and the test won’t pass even if the two numbers are close enough for our purposes. It’s even worse than that because computers <em>cannot</em> accurately represent real numbers to arbitrary levels of precision.</p>
 <p>To avoid tests that fail even though nothing’s really wrong, most testing packages come with tools for real numbers. Here’s an example where we have a parameter alpha that we’d like to test against an expected value of 1 but with a tolerance of 0.01.</p>
 <div class="cell docutils container">
@@ -1355,9 +1612,9 @@ FAILED test.py::test_answer - assert <span class="nv">4</span> <span class="o">=
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="test-coverage">
-<h3>Test coverage<a class="headerlink" href="#test-coverage" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-coverage">
+<h3>Test coverage<a class="headerlink" href="#test-coverage" title="Permalink to this headline">#</a></h3>
 <p>A production-ready code should be heavily tested. Coverage tests ask how much of your code is actually covered by tests and where the code is that isn’t tested. One package to do this is called <a class="reference external" href="https://coverage.readthedocs.io/en/coverage-5.5/"><strong>coverage</strong></a>. If you already have code tests written, you can run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>coverage run -m pytest
 </pre></div>
@@ -1373,10 +1630,10 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </pre></div>
 </div>
 <p>If you would prefer a html report over one in the terminal, use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">coverage</span> <span class="pre">html</span></code> to create a report at <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code>.</p>
-</div>
-</div>
-<div class="section" id="timing-and-profiling">
-<h2>Timing and profiling<a class="headerlink" href="#timing-and-profiling" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="timing-and-profiling">
+<h2>Timing and profiling<a class="headerlink" href="#timing-and-profiling" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a more advanced topic.</p>
@@ -1406,7 +1663,7 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0042526729999999
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0002314429999997
 </pre></div>
 </div>
 </div>
@@ -1419,7 +1676,7 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.7 ms ± 227 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12 ms ± 242 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1458,7 +1715,7 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0009314810000003
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0000593640000002
 </pre></div>
 </div>
 </div>
@@ -1480,15 +1737,15 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         6 function calls in 3.515 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         6 function calls in 3.500 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    3.514    3.514 487730401.py:5(foo)
-        1    0.000    0.000    3.514    3.514 &lt;string&gt;:1(&lt;module&gt;)
-        1    0.000    0.000    3.515    3.515 {built-in method builtins.exec}
-        2    3.514    1.757    3.514    1.757 {built-in method time.sleep}
+        1    0.000    0.000    3.500    3.500 487730401.py:5(foo)
+        1    0.000    0.000    3.500    3.500 &lt;string&gt;:1(&lt;module&gt;)
+        1    0.000    0.000    3.500    3.500 {built-in method builtins.exec}
+        2    3.500    1.750    3.500    1.750 {built-in method time.sleep}
         1    0.000    0.000    0.000    0.000 {method &#39;disable&#39; of &#39;_lsprof.Profiler&#39; objects}
 </pre></div>
 </div>
@@ -1527,31 +1784,32 @@ TOTAL                        <span class="m">76</span>     <span class="m">10</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  _     ._   __/__   _ _  _  _ _/_   Recorded: 18:00:25  Samples:  3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  _     ._   __/__   _ _  _  _ _/_   Recorded: 15:20:16  Samples:  4
  /_//_/// /_\ / //_// / //_&#39;/ //     Duration: 0.004     CPU time: 0.004
-/   _/                      v4.0.4
+/   _/                      v4.3.0
 
-Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_launcher.py -f /private/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/tmpf4jnh7sn.json --HistoryManager.hist_file=:memory:
+Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_launcher.py -f /private/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/tmp7z9go7z4.json --HistoryManager.hist_file=:memory:
 
-<span class=" -Color -Color-Red">0.003</span> run_code  <span class=" -Color -Color-Faint">IPython/core/interactiveshell.py:3400</span>
-└─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">&lt;module&gt;</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:19</span>
-   └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-      └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-         └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-            └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-               └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                  └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                     └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                        └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                           └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              ├─ <span class=" -Color -Color-Red">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              │  └─ <span class=" -Color -Color-Red">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              │     └─ <span class=" -Color -Color-Red">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              │        └─ <span class=" -Color -Color-Red">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              │           └─ <span class=" -Color -Color-Red">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              │              ├─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
-                              │              └─ <span class=" -Color -Color-Yellow">0.001</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_77653/4099532080.py:8</span>
-                              └─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
+<span class=" -Color -Color-Red">0.004</span> run_code  <span class=" -Color -Color-Faint">IPython/core/interactiveshell.py:3362</span>
+└─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">&lt;cell line: 19&gt;</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:19</span>
+   └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+      └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+         └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+            └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+               └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                  └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                     └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                        └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                           └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                              └─ <span class=" -Color -Color-Red">0.004</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 ├─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 │  └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 │     └─ <span class=" -Color -Color-Red">0.003</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 │        ├─ <span class=" -Color -Color-Yellow">0.002</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 │        │  ├─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
+                                 │        │  └─ <span class=" -Color -Color-Yellow">0.001</span> <span class=" -Color -Color-C15 -Color-C15-BGC24">fibonacci</span>  <span class=" -Color -Color-Faint">../../../../../var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_15296/4099532080.py:8</span>
+                                 │        └─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
+                                 └─ <span class=" -Color -Color-Yellow">0.001</span> [self]  
 </pre></div>
 </div>
 </div>
@@ -1562,8 +1820,8 @@ Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_l
 <p><a class="reference external" href="https://github.com/plasma-umass/scalene"><strong>scalene</strong></a> is a command-line utility for profiling code execution time <em>and</em> memory. It profiles whole scripts, run <code class="docutils literal notranslate"><span class="pre">scalene</span> <span class="pre">script.py</span></code> on the command line, and produces HTML reports. Here’s an example of some output:</p>
 <p><img alt="Screenshot from scalene running on a problem" src="https://raw.githubusercontent.com/plasma-umass/scalene/master/docs/images/sample-profile-pystone.png" /></p>
 <p>What’s particularly useful is having the part of the code where the bottleneck is displayed on the right. Memory usage over time tells you where the memory-hogging lines are, while the two CPU % columns tell you how much of the total time (shown at the top) was spent in Python code and in non-Python (‘native’) code, which Python often calls under the hood.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1587,64 +1845,51 @@ Program: /opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/ipykernel_l
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="code-best-practice.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Tips for Better Coding</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="code-best-practice.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tips for Better Coding</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="code-advanced.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">More Coding</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="code-advanced.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">More Coding</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

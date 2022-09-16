@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Introduction to Text &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/text-intro.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="Regular Expressions, aka regex" href="text-regex.html" />
     <link rel="prev" title="Forecasting Exercises" href="time-fcasts-env.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/text-intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Ftext-intro.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/text-intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/text-intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/text-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/text-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Ftext-intro.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/text-intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#an-aside-on-encodings">
    An aside on encodings
@@ -672,30 +827,129 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to Text</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-aside-on-encodings">
+   An aside on encodings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-strings">
+     f-strings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-characters">
+     Special characters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods-for-strings">
+     Methods for Strings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleaning-text">
+   Cleaning Text
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replacing-sub-strings">
+     Replacing sub-strings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replacing-characters-with-translate">
+     Replacing characters with translate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slugifying">
+     Slugifying
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splitting-strings">
+     Splitting strings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#count-and-find">
+     count and find
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scaling-up-from-a-single-string-to-a-corpus">
+   Scaling up from a single string to a corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-text-in">
+   Reading Text In
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-file">
+     Text file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csv-file">
+     CSV file
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="introduction-to-text">
-<span id="text-intro"></span><h1>Introduction to Text<a class="headerlink" href="#introduction-to-text" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-text">
+<span id="text-intro"></span><h1>Introduction to Text<a class="headerlink" href="#introduction-to-text" title="Permalink to this headline">#</a></h1>
 <p>This chapter covers how to use code to work with text as data, including opening files with text in, changing and cleaning text, and vectorised operations on text.</p>
 <p>It has benefitted from the <a class="reference external" href="https://mkaz.blog/code/python-string-format-cookbook/">Python String Cook Book</a> and Jake VanderPlas’ <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html">Python Data Science Handbook</a>.</p>
 <p>Note that regexes are mentioned a few times in this chapter; you’ll find out much more about them in the <a class="reference internal" href="text-regex.html#text-regex"><span class="std std-ref">Regular Expressions, aka regex</span></a> chapter.</p>
-<div class="section" id="an-aside-on-encodings">
-<h2>An aside on encodings<a class="headerlink" href="#an-aside-on-encodings" title="Permalink to this headline">¶</a></h2>
+<section id="an-aside-on-encodings">
+<h2>An aside on encodings<a class="headerlink" href="#an-aside-on-encodings" title="Permalink to this headline">#</a></h2>
 <p>Before we get to the good stuff, we need to talk about string encodings. Whether you’re using code or a text editor (Notepad, Word, Pages, Visual Studio Code), every bit of text that you see on a computer will have an encoding behind the scenes that tells the computer how to display the underlying data. There is no such thing as ‘plain’ text: all text on computers is the result of an encoding. Oftentimes, a computer programme (email reader, Word, whatever) will guess the encoding and show you what it thinks the text should look like. But it doesn’t always know, or get it right: <em>that is what is happening when you get an email or open an file full of weird symbols and question marks</em>. If a computer doesn’t know whether a particular string is encoded using UTF-8 or ASCII or ISO 8859-1 (Latin 1) or Windows 1252 (Western European), it simply cannot display it correctly and you get gibberish.</p>
 <p>When it comes to encodings, there are just two things to remember: i) you should use UTF-8 (aka Unicode), it’s the international standard. ii) the Windows operating system tends to use either Latin 1 or Windows 1252 but (and this is good news) is moving to UTF-8.</p>
 <p><a class="reference external" href="https://www.unicode.org/">Unicode</a> is a specification that aims to list every character used by human languages and give each character its own unique code. The Unicode specifications are continually revised and updated to add new languages and symbols.</p>
 <p>Take special care when saving CSV files containing text on a Windows machine using Excel; unless you specify it, the text may not be saved in UTF-8. If your computer and you get confused enough about encodings and re-save a file with the wrong ones, you could lose data.</p>
 <p>Hopefully you’ll never have to worry about string encodings. But if you <em>do</em> see weird symbols appearing in your text, at least you’ll know that there’s an encoding problem and will know where to start Googling. You can find a much more in-depth explanation of text encodings <a class="reference external" href="https://kunststube.net/encoding/">here</a>.</p>
-</div>
-<div class="section" id="strings">
-<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h2>
 <p>Note that there are many built-in functions for using strings in Python, you can find a comprehensive list <a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">here</a>.</p>
 <p>Strings are the basic data type for text in Python. They can be of any length. A string can be signalled by quote marks or double quote marks like so:</p>
 <p><code class="docutils literal notranslate"><span class="pre">'text'</span></code></p>
@@ -716,22 +970,12 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
-</pre></div>
-</div>
-</div>
 </div>
 <p>We see that it is <code class="docutils literal notranslate"><span class="pre">str</span></code>, which is short for string.</p>
 <p>Strings in Python can be indexed, so we can get certain characters out by using square brackets to say which positions we would like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ban&#39;
 </pre></div>
 </div>
 </div>
@@ -743,22 +987,12 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;aaa&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that strings, like tuples such as <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> but unlike lists such as <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>, are <em>immutable</em>. This means commands like <code class="docutils literal notranslate"><span class="pre">var[0]</span> <span class="pre">=</span> <span class="pre">&quot;B&quot;</span></code> will result in an error. If you want to change a single character, you will have to replace the entire string. In this example, the command to do that would be <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">&quot;Banana&quot;</span></code>.</p>
 <p>Like lists, you can find the length of a string using <code class="docutils literal notranslate"><span class="pre">len</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -772,21 +1006,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>black panther
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that we added a space so that the noun made sense. Another way of achieving the same end that scales to many words more efficiently (if you have them in a list) is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">first_word</span><span class="p">,</span> <span class="n">second_word</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;black panther&#39;
 </pre></div>
 </div>
 </div>
@@ -800,11 +1024,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;INPUT TEXT&#39;, &#39;input text&#39;, &#39;Input Text&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
@@ -814,13 +1033,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">var_list</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;; and </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INPUT TEXT; and 
-input text; and 
-Input Text
 </pre></div>
 </div>
 </div>
@@ -840,25 +1052,15 @@ Input Text
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A boolean is either True or False, there are only 2 options.&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>In this example two boolean variables and one integer variable were converted to strings. <code class="docutils literal notranslate"><span class="pre">str</span></code> generally makes an intelligent guess at how you’d like to convert your non-string type variable into a string type. You can pass a variable or a literal value to <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
-<div class="section" id="f-strings">
-<h3>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this headline">¶</a></h3>
+<section id="f-strings">
+<h3>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this headline">#</a></h3>
 <p>The example above is quite verbose. Another way of combining strings with variables is via <em>f-strings</em>. A simple f-string looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="mf">15.32399</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You scored </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored 15.32399
 </pre></div>
 </div>
 </div>
@@ -870,22 +1072,12 @@ Input Text
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored 234.8246695201
-</pre></div>
-</div>
-</div>
 </div>
 <p>This also works with functions; after all <code class="docutils literal notranslate"><span class="pre">**2</span></code> is just a function with its own special syntax.</p>
 <p>In this example, the score number that came out had a lot of (probably) uninteresting decimal places. So how do we polish the printed output? You can pass more inforation to the f-string to get the output formatted just the way you want. Let’s say we wanted two decimal places and a sign (although you always write <code class="docutils literal notranslate"><span class="pre">+</span></code> in the formatting, the sign comes out as + or - depending on the value):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You scored </span><span class="si">{</span><span class="n">variable</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored +15.32
 </pre></div>
 </div>
 </div>
@@ -968,20 +1160,15 @@ Input Text
 </tbody>
 </table>
 <p>As well as using this page interactively through the Colab and Binder links at the top of the page, or downloading this page and using it on your own computer, you can play around with some of these options over at <a class="reference external" href="https://www.python-utils.com/">this link</a>.</p>
-</div>
-<div class="section" id="special-characters">
-<h3>Special characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="special-characters">
+<h3>Special characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">#</a></h3>
 <p>Python has a string module that comes with some useful built-in strings and characters. For example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
 
 <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&quot;#$%&amp;\&#39;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&#39;
 </pre></div>
 </div>
 </div>
@@ -993,21 +1180,11 @@ Input Text
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>returns all of the basic letters in the ‘ASCII’ encoding (with <code class="docutils literal notranslate"><span class="pre">.ascii_lowercase</span></code> and <code class="docutils literal notranslate"><span class="pre">.ascii_uppercase</span></code> variants), and</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span><span class="o">.</span><span class="n">digits</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0123456789&#39;
 </pre></div>
 </div>
 </div>
@@ -1018,13 +1195,6 @@ Input Text
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is a </span><span class="se">\n</span><span class="s2"> new line&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is an </span><span class="se">\\</span><span class="s2">n escaped new line &quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is a 
- new line
-Here is an \n escaped new line 
 </pre></div>
 </div>
 </div>
@@ -1057,9 +1227,9 @@ Here is an \n escaped new line
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="methods-for-strings">
-<h3>Methods for Strings<a class="headerlink" href="#methods-for-strings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="methods-for-strings">
+<h3>Methods for Strings<a class="headerlink" href="#methods-for-strings" title="Permalink to this headline">#</a></h3>
 <p>Let’s end this sub-section on strings with a comprehensive overview of all string methods, courtesy of the excellent <a class="reference external" href="https://github.com/willmcgugan/rich"><strong>rich</strong></a> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1070,110 +1240,18 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭────────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">class</span><span style="color: #000000; text-decoration-color: #000000"> </span><span style="color: #008000; text-decoration-color: #008000">'str'</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────────────────────────╮</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">str</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">object</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008000; text-decoration-color: #008000">''</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> -&gt; str</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">str</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bytes_or_buffer</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080">, encoding</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080">, errors</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]])</span><span style="color: #008080; text-decoration-color: #008080"> -&gt; str</span>                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╭───────────────────────────────────────────────────────────────────────────────────────╮</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #008000; text-decoration-color: #008000">'string'</span>                                                                              <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╰───────────────────────────────────────────────────────────────────────────────────────╯</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">capitalize</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">capitalize</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a capitalized version of the string.</span>              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">casefold</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">casefold</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a version of the string suitable for caseless </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">comparisons.</span>                                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">center</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">center</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a centered string of length </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">width.</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">count</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">count</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.count</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">encode</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">encode</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">encoding</span>=<span style="color: #008000; text-decoration-color: #008000">'utf-8'</span>, <span style="color: #808000; text-decoration-color: #808000">errors</span>=<span style="color: #008000; text-decoration-color: #008000">'strict'</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Encode the string using the</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">codec registered for encoding.</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">endswith</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">endswith</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.endswith</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">suffix</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; bool</span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">expandtabs</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">expandtabs</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">tabsize</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy where all tab characters are </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">expanded using spaces.</span>                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #808000; text-decoration-color: #808000; font-style: italic">find</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">find</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.find</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">format</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">format</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.format</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">*args, **kwargs</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; str</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">format_map</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">format_map</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.format_map</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">mapping</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; str</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">index</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">index</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.index</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isalnum</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isalnum</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an alpha-numeric string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isalpha</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isalpha</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an alphabetic string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isascii</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isascii</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if all characters in the string are ASCII, </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> otherwise.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isdecimal</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isdecimal</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a decimal string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isdigit</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isdigit</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a digit string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isidentifier</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isidentifier</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a valid Python </span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">identifier, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> otherwise.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">islower</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">islower</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a lowercase string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isnumeric</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isnumeric</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a numeric string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isprintable</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isprintable</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is printable, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>          <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isspace</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isspace</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a whitespace string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">istitle</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">istitle</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a title-cased string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isupper</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isupper</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an uppercase string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #808000; text-decoration-color: #808000; font-style: italic">join</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">join</span><span style="font-weight: bold">(</span>iterable, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Concatenate any number of strings.</span>                  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">ljust</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">ljust</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a left-justified string of </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">length width.</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">lower</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">lower</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string converted to lowercase.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">lstrip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">lstrip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with leading </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">whitespace removed.</span>                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">maketrans</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">maketrans</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a translation table usable for </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">str.translate</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">partition</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">partition</span><span style="font-weight: bold">(</span>sep, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Partition the string into three parts using the </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given separator.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">replace</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">replace</span><span style="font-weight: bold">(</span>old, new, <span style="color: #808000; text-decoration-color: #808000">count</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy with all occurrences of </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">substring old replaced by new.</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rfind</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rfind</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.rfind</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rindex</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rindex</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.rindex</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                       <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rjust</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rjust</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a right-justified string of </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">length width.</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rpartition</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rpartition</span><span style="font-weight: bold">(</span>sep, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Partition the string into three parts using the </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given separator.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rsplit</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rsplit</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">sep</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">maxsplit</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the words in the </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string, using sep as the delimiter string.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rstrip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rstrip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with trailing </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">whitespace removed.</span>                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">split</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">split</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">sep</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">maxsplit</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the words in the </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string, using sep as the delimiter string.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">splitlines</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">splitlines</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">keepends</span>=<span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the lines in the string, </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">breaking at line boundaries.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">startswith</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">startswith</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.startswith</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">prefix</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; bool</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">strip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">strip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with leading and </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">trailing whitespace removed.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">swapcase</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">swapcase</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Convert uppercase characters to lowercase and lowercase </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">characters to uppercase.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">title</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">title</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a version of the string where each word is titlecased.</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">translate</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">translate</span><span style="font-weight: bold">(</span>table, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Replace each character in the string using the </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given translation table.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">upper</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">upper</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string converted to uppercase.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">zfill</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">zfill</span><span style="font-weight: bold">(</span>width, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Pad a numeric string with zeros on the left, to fill </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">a field of the given width.</span>                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
-<span style="color: #000080; text-decoration-color: #000080">╰───────────────────────────────────────────────────────────────────────────────────────────╯</span>
-</pre>
-</div></div>
 </div>
-</div>
-</div>
-<div class="section" id="cleaning-text">
-<h2>Cleaning Text<a class="headerlink" href="#cleaning-text" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="cleaning-text">
+<h2>Cleaning Text<a class="headerlink" href="#cleaning-text" title="Permalink to this headline">#</a></h2>
 <p>You often want to make changes to the text you’re working with. In this section, we’ll look at the various options to do this.</p>
-<div class="section" id="replacing-sub-strings">
-<h3>Replacing sub-strings<a class="headerlink" href="#replacing-sub-strings" title="Permalink to this headline">¶</a></h3>
+<section id="replacing-sub-strings">
+<h3>Replacing sub-strings<a class="headerlink" href="#replacing-sub-strings" title="Permalink to this headline">#</a></h3>
 <p>A common text task is to replace a substring within a longer string. Let’s say you have a string variable <code class="docutils literal notranslate"><span class="pre">var</span></code>. You can use <code class="docutils literal notranslate"><span class="pre">.replace(old_text,</span> <span class="pre">new_text)</span></code> to do this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Value is objective&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;objective&quot;</span><span class="p">,</span> <span class="s2">&quot;subjective&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Value is subjective&#39;
 </pre></div>
 </div>
 </div>
@@ -1188,19 +1266,14 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Value is subjective&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">.replace</span></code> performs an exact replace and so is case-sensitive.</p>
-</div>
-<div class="section" id="replacing-characters-with-translate">
-<h3>Replacing characters with translate<a class="headerlink" href="#replacing-characters-with-translate" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="replacing-characters-with-translate">
+<h3>Replacing characters with translate<a class="headerlink" href="#replacing-characters-with-translate" title="Permalink to this headline">#</a></h3>
 <p>A character is an individual entry within a string, like the ‘l’ in ‘equilibrium’. You can always count the number of characters in a string variable called <code class="docutils literal notranslate"><span class="pre">var</span></code> by using <code class="docutils literal notranslate"><span class="pre">len(var)</span></code>. A very fast method for replacing individual characters in a string is <code class="docutils literal notranslate"><span class="pre">str.translate</span></code>.</p>
 <p>Replacing characters is extremely useful in certain situations, most commonly when you wish to remote all punctuation prior to doing other text analysis. You can use the built-in <code class="docutils literal notranslate"><span class="pre">string.punctuation</span></code> for this.</p>
-<p>Let’s see how to use it to remove all of the vowels from some text. With apologies to economist Lisa Cook, we’ll use the abstract from <span id="id1">Cook [<a class="reference internal" href="zreferences.html#id16">2011</a>]</span> as the text we’ll modify and we’ll first create a dictionary of translations of vowels to nothing, i.e. <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
+<p>Let’s see how to use it to remove all of the vowels from some text. With apologies to economist Lisa Cook, we’ll use the abstract from <span id="id1">Cook [<a class="reference internal" href="zreferences.html#id16" title="Lisa D Cook. Inventing social capital: evidence from african american inventors, 1843–1930. Explorations in Economic History, 48(4):507–518, 2011.">2011</a>]</span> as the text we’ll modify and we’ll first create a dictionary of translations of vowels to nothing, i.e. <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;Much recent work has focused on the influence of social capital on innovative outcomes. Little research has been done on disadvantaged groups who were often restricted from participation in social networks that provide information necessary for invention and innovation. Unique new data on African American inventors and patentees between 1843 and 1930 permit an empirical investigation of the relation between social capital and economic outcomes. I find that African Americans used both traditional, i.e., occupation-based, and nontraditional, i.e., civic, networks to maximize inventive output and that laws constraining social-capital formation are most negatively correlated with economically important inventive activity.&quot;</span>
@@ -1210,22 +1283,12 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;: &#39;&#39;, &#39;e&#39;: &#39;&#39;, &#39;i&#39;: &#39;&#39;, &#39;o&#39;: &#39;&#39;, &#39;u&#39;: &#39;&#39;}
-</pre></div>
-</div>
-</div>
 </div>
 <p>Now we turn our dictionary into a string translator and apply it to our text:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">translator</span> <span class="o">=</span> <span class="n">example_text</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="n">translation_dict</span><span class="p">)</span>
 <span class="n">example_text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">translator</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mch rcnt wrk hs fcsd n th nflnc f scl cptl n nnvtv tcms. Lttl rsrch hs bn dn n dsdvntgd grps wh wr ftn rstrctd frm prtcptn n scl ntwrks tht prvd nfrmtn ncssry fr nvntn nd nnvtn. Unq nw dt n Afrcn Amrcn nvntrs nd ptnts btwn 1843 nd 1930 prmt n mprcl nvstgtn f th rltn btwn scl cptl nd cnmc tcms. I fnd tht Afrcn Amrcns sd bth trdtnl, .., ccptn-bsd, nd nntrdtnl, .., cvc, ntwrks t mxmz nvntv tpt nd tht lws cnstrnng scl-cptl frmtn r mst ngtvly crrltd wth cnmclly mprtnt nvntv ctvty.&#39;
 </pre></div>
 </div>
 </div>
@@ -1247,15 +1310,10 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Example string with excess punctuation&#39;
-</pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="slugifying">
-<h3>Slugifying<a class="headerlink" href="#slugifying" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="slugifying">
+<h3>Slugifying<a class="headerlink" href="#slugifying" title="Permalink to this headline">#</a></h3>
 <p>A special case of string cleaning occurs when you are given text with lots of non-standard characters in, and spaces, and other symbols; and what you want is a clean string suitable for a filename or column heading in a dataframe. Remember that it’s best practice to have filenames that don’t have spaces in. Slugiyfing is the process of creating the latter from the former and we can use the <a class="reference external" href="https://github.com/un33k/python-slugify"><strong>slugify</strong></a> package to do it.</p>
 <p>Here are some examples of slugifying text:</p>
 <div class="cell docutils container">
@@ -1267,11 +1325,6 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;quick-brown-fox-jumps-over-lazy-dog&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>In this very simple example, the words listed in the <code class="docutils literal notranslate"><span class="pre">stopwords=</span></code> keyword argument (a list), are removed and spaces are replaced by hyphens. Let’s now see a more complicated example:</p>
 <div class="cell docutils container">
@@ -1280,25 +1333,15 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;dang-wo-de-xin-xi-gai-bian-shi-accentaed-text&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Slugify converts text to latin characters, while also removing accents and whitespace (of all kinds-the last whitespace is a tab). There’s also a <code class="docutils literal notranslate"><span class="pre">replacement=</span></code> keyword argument that will replace specific strings with other strings using a list of lists format, eg <code class="docutils literal notranslate"><span class="pre">replacement=[['old_text',</span> <span class="pre">'new_text']]</span></code></p>
-</div>
-<div class="section" id="splitting-strings">
-<h3>Splitting strings<a class="headerlink" href="#splitting-strings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="splitting-strings">
+<h3>Splitting strings<a class="headerlink" href="#splitting-strings" title="Permalink to this headline">#</a></h3>
 <p>If you want to split a string at a certain position, there are two quick ways to do it. The first is to use indexing methods, which work well if you know at which position you want to split text, eg</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is a sentence and we will split it at character 18&quot;</span><span class="p">[:</span><span class="mi">18</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is a sentence&#39;
 </pre></div>
 </div>
 </div>
@@ -1310,11 +1353,6 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is a sentence&#39;, &#39; And another sentence&#39;, &#39; And a third sentence&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that the character used to split the string is removed from the resulting list of strings. Let’s see an example with a string used for splitting instead of a single character:</p>
 <div class="cell docutils container">
@@ -1323,27 +1361,17 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is a &#39;, &#39;. And another &#39;, &#39;. And a third &#39;, &#39;&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <p>A useful extra function to know about is <code class="docutils literal notranslate"><span class="pre">splitlines()</span></code>, which splits a string at line breaks and returns the split parts as a list.</p>
-</div>
-<div class="section" id="count-and-find">
-<h3>count and find<a class="headerlink" href="#count-and-find" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="count-and-find">
+<h3>count and find<a class="headerlink" href="#count-and-find" title="Permalink to this headline">#</a></h3>
 <p>Let’s do some simple counting of words within text using <code class="docutils literal notranslate"><span class="pre">str.count</span></code>. Let’s use the first verse of Elizabeth Bishop’s sestina ‘A Miracle for Breakfast’ for our text.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;At six o&#39;clock we were waiting for coffee, </span><span class="se">\n</span><span class="s2"> waiting for coffee and the charitable crumb </span><span class="se">\n</span><span class="s2"> that was going to be served from a certain balcony </span><span class="se">\n</span><span class="s2"> --like kings of old, or like a miracle. </span><span class="se">\n</span><span class="s2"> It was still dark. One foot of the sun </span><span class="se">\n</span><span class="s2"> steadied itself on a long ripple in the river.&quot;</span>
 <span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;coffee&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The word &quot;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s1">&quot; appears </span><span class="si">{</span><span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="si">}</span><span class="s1"> times.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word &quot;coffee&quot; appears 2 times.
 </pre></div>
 </div>
 </div>
@@ -1355,21 +1383,11 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
-</pre></div>
-</div>
-</div>
 </div>
 <p>We can check this using the number we get and some string indexing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="p">[</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="p">:</span> <span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;coffee&#39;
 </pre></div>
 </div>
 </div>
@@ -1381,16 +1399,11 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57
-</pre></div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="scaling-up-from-a-single-string-to-a-corpus">
-<h2>Scaling up from a single string to a corpus<a class="headerlink" href="#scaling-up-from-a-single-string-to-a-corpus" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="scaling-up-from-a-single-string-to-a-corpus">
+<h2>Scaling up from a single string to a corpus<a class="headerlink" href="#scaling-up-from-a-single-string-to-a-corpus" title="Permalink to this headline">#</a></h2>
 <p>For this section, it’s useful to be familiar with the <strong>pandas</strong> package, which is covered in the <a class="reference internal" href="data-analysis-quickstart.html#data-quickstart"><span class="std std-ref">Data Analysis Quickstart</span></a> and <a class="reference internal" href="data-intro.html#working-with-data"><span class="std std-ref">Working with Data</span></a> sections. This section will closely follow the treatment by Jake VanderPlas.</p>
 <p>We’ve seen how to work with individual strings. But often we want to work with a group of strings, otherwise known as a corpus, that is a collection of texts. It could be a collection of words, sentences, paragraphs, or some domain-based grouping (eg job descriptions).</p>
 <p>Fortunately, many of the methods that we have seen deployed on a single string can be straightforwardly scaled up to hundreds, thousands, or millions of strings using <strong>pandas</strong> or other tools. This scaling up is achieved via <em>vectorisation</em>, in analogy with going from a single value (a scalar) to multiple values in a list (a vector).</p>
@@ -1398,11 +1411,6 @@ Here is an \n escaped new line
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ada&quot;</span><span class="p">,</span> <span class="s2">&quot;adam&quot;</span><span class="p">,</span> <span class="s2">&quot;elinor&quot;</span><span class="p">,</span> <span class="s2">&quot;grace&quot;</span><span class="p">,</span> <span class="s2">&quot;jean&quot;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ada&#39;, &#39;Adam&#39;, &#39;Elinor&#39;, &#39;Grace&#39;, &#39;Jean&#39;]
 </pre></div>
 </div>
 </div>
@@ -1420,31 +1428,11 @@ Here is an \n escaped new line
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     ada lovelace
-1       adam smith
-2    elinor ostrom
-3     grace hopper
-4      jean bartik
-dtype: string
-</pre></div>
-</div>
-</div>
 </div>
 <p>Now we use the syntax series.str.function to change the text series:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Ada Lovelace
-1       Adam Smith
-2    Elinor Ostrom
-3     Grace Hopper
-4      Jean Bartik
-dtype: string
 </pre></div>
 </div>
 </div>
@@ -1454,16 +1442,6 @@ dtype: string
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Ada Lovelace
-1       Adam Smith
-2    Elinor Ostrom
-3     Grace Hopper
-4      Jean Bartik
-Name: names, dtype: string
 </pre></div>
 </div>
 </div>
@@ -1576,16 +1554,6 @@ Name: names, dtype: string
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [ada, lovelace]
-1       [adam, smith]
-2    [elinor, ostrom]
-3     [grace, hopper]
-4      [jean, bartik]
-Name: names, dtype: object
-</pre></div>
-</div>
-</div>
 </div>
 <p>It’s fairly common that you want to split out strings and save the results to new columns in your dataframe. You can specify a (max) number of splits via the <code class="docutils literal notranslate"><span class="pre">n=</span></code> kwarg and you can get the columns using <code class="docutils literal notranslate"><span class="pre">expand</span></code></p>
 <div class="cell docutils container">
@@ -1594,58 +1562,6 @@ Name: names, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>ada</td>
-      <td>lovelace</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>adam</td>
-      <td>smith</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>elinor</td>
-      <td>ostrom</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>grace</td>
-      <td>hopper</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>jean</td>
-      <td>bartik</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
@@ -1655,16 +1571,6 @@ Name: names, dtype: object
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s2">&quot;(\w+)&quot;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       ada
-1      adam
-2    elinor
-3     grace
-4      jean
-Name: names, dtype: string
 </pre></div>
 </div>
 </div>
@@ -1716,16 +1622,6 @@ Name: names, dtype: string
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    lovelace
-1       smith
-2      ostrom
-3      hopper
-4      bartik
-Name: names, dtype: object
-</pre></div>
-</div>
-</div>
 </div>
 <p>We already saw <code class="docutils literal notranslate"><span class="pre">get_dummies()</span></code> in the <a class="reference internal" href="econmt-regression.html#regression"><span class="std std-ref">Regression</span></a> chapter, but it’s worth revisiting it here with strings. If we have a column with tags split by a symbol, we can use this function to split it out. For example, let’s create a dataframe with a single column that mixes subject and nationality tags:</p>
 <div class="cell docutils container">
@@ -1746,58 +1642,6 @@ Name: names, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>names</th>
-      <th>tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>ada lovelace</td>
-      <td>uk; cs</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>adam smith</td>
-      <td>uk; econ</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>elinor ostrom</td>
-      <td>usa; econ</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>grace hopper</td>
-      <td>usa; cs</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>jean bartik</td>
-      <td>usa; cs</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p>If we now use <code class="docutils literal notranslate"><span class="pre">str.get_dummies</span></code> and split on <code class="docutils literal notranslate"><span class="pre">;</span></code> we can get a dataframe of dummies.</p>
 <div class="cell docutils container">
@@ -1806,76 +1650,12 @@ Name: names, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cs</th>
-      <th>econ</th>
-      <th>uk</th>
-      <th>usa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
-</div>
-<div class="section" id="reading-text-in">
-<h2>Reading Text In<a class="headerlink" href="#reading-text-in" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="text-file">
-<h3>Text file<a class="headerlink" href="#text-file" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reading-text-in">
+<h2>Reading Text In<a class="headerlink" href="#reading-text-in" title="Permalink to this headline">#</a></h2>
+<section id="text-file">
+<h3>Text file<a class="headerlink" href="#text-file" title="Permalink to this headline">#</a></h3>
 <p>If you have just a plain text file, you can read it in like so:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;book.txt&#39;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -1891,17 +1671,17 @@ Name: names, dtype: object
 <p class="admonition-title">Exercise</p>
 <p>Download the file ‘smith_won.txt’ from this book’s github repository using this <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/main/data/smith_won.txt">link</a> (use right-click and save as). Then read the text in using <strong>pandas</strong>.</p>
 </div>
-</div>
-<div class="section" id="csv-file">
-<h3>CSV file<a class="headerlink" href="#csv-file" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="csv-file">
+<h3>CSV file<a class="headerlink" href="#csv-file" title="Permalink to this headline">#</a></h3>
 <p>CSV files are already split into rows. By far the easiest way to read in csv files is using <strong>pandas</strong>,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;book.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Remember that <strong>pandas</strong> can read many other file types too.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1925,64 +1705,51 @@ Name: names, dtype: object
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="time-fcasts-env.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Forecasting Exercises</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="time-fcasts-env.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Forecasting Exercises</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="text-regex.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Regular Expressions, aka regex</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="text-regex.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Regular Expressions, aka regex</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

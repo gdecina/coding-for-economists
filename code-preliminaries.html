@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Preliminaries &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-preliminaries.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="Coding Basics" href="code-basics.html" />
     <link rel="prev" title="Introduction" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -248,13 +298,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
+  <a class="reference internal" href="data-databases.html">
+   Databases
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data-databases.html">
-   Databases
+  <a class="reference internal" href="data-sharing.html">
+   Sharing Data
   </a>
  </li>
  <li class="toctree-l1">
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,90 +523,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/code-preliminaries.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-preliminaries.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-preliminaries.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/code-preliminaries.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-environment">
    Computational environment
@@ -640,28 +770,117 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Preliminaries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computational-environment">
+   Computational environment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operating-system">
+     Operating system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#choice-of-programming-language">
+     Choice of Programming Language
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-python-on-your-computer">
+     Installing Python On Your Computer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-an-integrated-development-environment-ide">
+     Installing an integrated development environment (IDE)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-your-first-code">
+   Writing Your First Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#packages-and-how-to-install-them">
+   Packages and How to Install Them
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-terminal-in-brief">
+     The Terminal in Brief
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-packages">
+     Installing Packages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extras">
+   Extras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-on-your-work-computer">
+     Coding on your work computer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fine-tuning-visual-studio-code">
+     Fine-tuning Visual Studio Code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="preliminaries">
-<span id="code-preliminaries"></span><h1>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="preliminaries">
+<span id="code-preliminaries"></span><h1>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">#</a></h1>
 <p>In this chapter, you’ll find out about how to get the basic tools you need to code set up on your own computer. While you don’t need to know all of this if you’re planning on using the book interactively via ‘Google Colab’ (to run code examples), you will find it helpful to read through this chapter anyway.</p>
-<div class="section" id="computational-environment">
-<h2>Computational environment<a class="headerlink" href="#computational-environment" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="operating-system">
-<h3>Operating system<a class="headerlink" href="#operating-system" title="Permalink to this headline">¶</a></h3>
+<section id="computational-environment">
+<h2>Computational environment<a class="headerlink" href="#computational-environment" title="Permalink to this headline">#</a></h2>
+<section id="operating-system">
+<h3>Operating system<a class="headerlink" href="#operating-system" title="Permalink to this headline">#</a></h3>
 <p>Almost all of the code you’ll see can be run on all three of the major operating systems: Windows, MacOS, and Linux, as well as in free online notebooks provided by Google (this service is called Google Colab).</p>
 <p>If you haven’t yet decided which operating system to use, this book recommends either Linux or MacOS because, in a very small number of cases, you’ll find it easier to run the most advanced code on them rather than on Windows. Don’t panic if you have Windows already though—most things will work just fine and it tends to be power users who run into this problem. (If you’re not familiar with Linux, it’s a free operating system that is also widely used for cloud services and, while it used to  have a reputation as being fearsomely difficult for beginners, some modern Linux distributions, such as Ubuntu, are pretty user-friendly.)</p>
 <p>If you have Windows and you want to use Linux or Mac but don’t want to shell out for a new computer, there are a couple of options. One is to use the <a class="reference external" href="https://pbpython.com/wsl-python.html"><em>Windows Subsystem for Linux</em></a>. It’s essentially a Linux operating system that installs alongside and integrates with your existing Windows operating system. This allows you to run code as if you were using Linux. You can get WSL <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">for free from Microsoft</a> (the fact that Microsoft has included this feature speaks to the demand for it). Another option is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a>, which gives cheap (but not free) access to a pre-built Linux machine in the cloud. A further option is <a class="reference external" href="https://www.gitpod.io/">Gitpod</a>, which is like Codespaces but has a generous free tier.</p>
-</div>
-<div class="section" id="choice-of-programming-language">
-<h3>Choice of Programming Language<a class="headerlink" href="#choice-of-programming-language" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="choice-of-programming-language">
+<h3>Choice of Programming Language<a class="headerlink" href="#choice-of-programming-language" title="Permalink to this headline">#</a></h3>
 <p>This book uses Python, which is usually ranked as the first or second most popular programming language in the world and, just as importantly, it’s also one of the easiest to learn. It’s a general purpose language, which means it can perform a wide range of tasks. This combination of features is why people say Python has a low floor and a high ceiling. It’s also very versatile; the joke goes that Python is the 2nd best language at everything, and there’s some truth to that (although Python is 1st best at some tasks, like machine learning). But a language that covers such a lot of ground is also very useful; and Python is widely used across industry, academia, and the public sector, and is often taught in school computer science classes too. Python is the main ‘dynamic’ language used at <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google</a> and the <a class="reference external" href="https://insights.dice.com/2020/12/01/7-programming-languages-popular-at-apple-that-could-land-you-a-job/">most demanded language</a> in jobs for Apple. It is used for everything from computer games to websites, data science to software applications: it’s even being used to help <a class="reference external" href="https://github.com/nasa/fprime">fly a helicopter on Mars</a>. As an economist, you will know that this means Python benefits from strong positive network externalities. As such, learning Python has a lot of value and, once you have, learning more specialised languages like C++ or R is much easier; many of the basic programming concepts you’ll see in this book are useful in almost any programming language. One other benefit of Python if you plan to do any work on the cloud is that it is extremely well supported.</p>
 <p><img alt="xkcd-python" src="https://imgs.xkcd.com/comics/python.png" /></p>
 <p><em>Python</em>, from <a class="reference external" href="https://xkcd.com">xkcd</a>.</p>
@@ -674,17 +893,17 @@
 <li><p>an installation of the programming language (also known as the “interpreter”), for example Python 3.8</p></li>
 <li><p>a way to write and run your code, using an integrated development environment (IDE), for example Visual Studio Code</p></li>
 </ul>
-</div>
-<div class="section" id="installing-python-on-your-computer">
-<h3>Installing Python On Your Computer<a class="headerlink" href="#installing-python-on-your-computer" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-python-on-your-computer">
+<h3>Installing Python On Your Computer<a class="headerlink" href="#installing-python-on-your-computer" title="Permalink to this headline">#</a></h3>
 <p>The Anaconda distribution of Python, which this book recommends, is available on all major operating systems. To install it, follow the instructions below or watch the video.</p>
 <iframe width="700" height="394" src="https://www.youtube.com/embed/ZWQwGR5ppnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p><em><a class="reference external" href="https://www.youtube.com/watch?v=ZWQwGR5ppnk">How to install Python using the Anaconda distribution of Python</a></em></p>
 <p>Download the individual edition of the <a class="reference external" href="https://www.anaconda.com/">Anaconda distribution</a> of Python for your operating system and install it (on Anaconda’s website, this is currently found under Products -&gt; Individual Edition). This will provide you with a Python installation and a host of the most useful libraries. If you get stuck, there are more detailed instructions available for installing the Anaconda distribution of Python <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">on Windows</a>, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">on Mac</a>, and <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">on Linux</a>.</p>
 <p>You can confirm that you’ve set up Anaconda correctly by following the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/verify-install/">verify installation instructions</a> on the Anaconda website. If you’re using Windows, you can check if Anaconda has installed properly by opening the ‘Anaconda prompt’ (a special text-based way to issue commands to your computer) and type <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code>. You should see a path rendered as text in the prompt that includes “Anaconda3”, for example something like <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;your-username&gt;\Anaconda3\...</span></code>. On Mac and Linux you may need to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span></code> on your command line to activate your Anaconda Python environment (Mac and Linux usually come with, typically, old versions of Python pre-installed). You can check you’ve got the right Python with <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code>, which should result in a message back saying <code class="docutils literal notranslate"><span class="pre">/Users/&lt;your-username&gt;/opt/anaconda3/bin/python</span></code>.</p>
-</div>
-<div class="section" id="installing-an-integrated-development-environment-ide">
-<h3>Installing an integrated development environment (IDE)<a class="headerlink" href="#installing-an-integrated-development-environment-ide" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-an-integrated-development-environment-ide">
+<h3>Installing an integrated development environment (IDE)<a class="headerlink" href="#installing-an-integrated-development-environment-ide" title="Permalink to this headline">#</a></h3>
 <p>An integrated development environment is a software application that provides a few tools to make coding easier. The most important of these is a way to write the code itself! IDEs are not the only way to programme, but they are perhaps the most useful. If you have used <strong>Stata</strong> or <strong>Matlab</strong>, you may not have realised it, but these package up the language and the IDE together. But they are separate things: the language is a way of processing your instructions, the IDE is where you write those instructions.</p>
 <p>Here are some of the useful features an IDE might have:</p>
 <ul class="simple">
@@ -714,10 +933,10 @@
 </ol>
 <p>Note that there is lots of useful information arrayed right at the bottom of the window in the blue bar, including the version of Python currently being used by VS Code.</p>
 <p>If you have installed the Anaconda distribution of Python, Visual Studio Code, and the Python extension for VS Code, then you are ready to run your first script!</p>
-</div>
-</div>
-<div class="section" id="writing-your-first-code">
-<h2>Writing Your First Code<a class="headerlink" href="#writing-your-first-code" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="writing-your-first-code">
+<h2>Writing Your First Code<a class="headerlink" href="#writing-your-first-code" title="Permalink to this headline">#</a></h2>
 <p>Now you will create and run your first code. If you get stuck, there’s a more in-depth tutorial over at the <a class="reference external" href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code documentation</a>.</p>
 <p>Create a new folder for your work (perhaps named ‘codingforeconomists’, no white space), open that folder with Visual Studio Code and create a new file, naming it <code class="docutils literal notranslate"><span class="pre">hello_world.py</span></code>. The file extension, <code class="docutils literal notranslate"><span class="pre">.py</span></code>, is very important as it implicitly tells Visual Studio Code that this is a Python script. In the Visual Studio Code editor, add a single line to the file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
@@ -747,16 +966,16 @@
 <p class="admonition-title">Exercise</p>
 <p>Create a new script that, when run, prints “Welcome to coding for economists” and run it in both the terminal and an interactive window.</p>
 </div>
-</div>
-<div class="section" id="packages-and-how-to-install-them">
-<h2>Packages and How to Install Them<a class="headerlink" href="#packages-and-how-to-install-them" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="packages-and-how-to-install-them">
+<h2>Packages and How to Install Them<a class="headerlink" href="#packages-and-how-to-install-them" title="Permalink to this headline">#</a></h2>
 <p>Packages (also called libraries) are key to extending the functionality of Python. The default installation of Anaconda comes with many (around 250) of the packages you’ll need, but it won’t be long before you’ll need to install some extra ones. There are packages for geoscience, for building websites, for analysing genetic data, and, yes, of course, for economics. Packages are typically not written by the core maintainers of the Python language but by enthusiasts, firms, researchers, academics, all sorts! Because anyone can write packages, they vary widely in their quality and usefulness. There are some that are key for an economics workflow, though, and you’ll be seeing them again and again.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Name a more iconic trio, I&#39;ll wait. <a href="https://t.co/pGaLuUxQ3r">pic.twitter.com/pGaLuUxQ3r</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1032631145035427840?ref_src=twsrc%5Etfw">August 23, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>The three Python packages <strong>numpy</strong>, <strong>pandas</strong>, and <strong>maplotlib</strong>, which respectively provide numerical, data analysis, and plotting functionality, are ubiquitous. So many scripts begin by importing all three of them, as in the tweet above!</p>
 <p>Python packages don’t come built-in (by definition) so you need to install them (just once, like installing any other application), and then import them into your scripts (whenever you use them in a script). When you issue an install command for a specific package, it is automatically downloaded from the internet and installed in the appropriate place on your computer.</p>
 <p>To install extra Python packages, you issue install commands to a text-based window called the “terminal”.</p>
-<div class="section" id="the-terminal-in-brief">
-<h3>The Terminal in Brief<a class="headerlink" href="#the-terminal-in-brief" title="Permalink to this headline">¶</a></h3>
+<section id="the-terminal-in-brief">
+<h3>The Terminal in Brief<a class="headerlink" href="#the-terminal-in-brief" title="Permalink to this headline">#</a></h3>
 <p>The <em>terminal</em> is also known as the <em>command line</em> and sometimes the <em>command prompt</em>. It was labelled 4 in the screenshot of Visual Studio Code from earlier in the chapter. The terminal is a text-based way to issue all kinds of commands to your computer (not just Python commands) and knowing a little bit about it is really useful for coding (and more) because managing packages, environments (which we haven’t yet discussed), and version control (ditto) can all be done via the terminal. We’ll come to these in due course, but for now, a little background on what the terminal is and what it does.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -781,9 +1000,9 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">(base)</span></code> part is saying that your current Python environment is the base one (later, we’ll see how to add others for reproducibility and to isolate projects). Unfortunately, and confusingly, the commands that you can use in the terminal on Mac and Linux, on the one hand, and Windows, on the other, are different but many of the principles are the same.</p>
 <p>For now, to at least try out the command line, let’s use something that works across all three of the major operating systems. Type <code class="docutils literal notranslate"><span class="pre">python</span></code> on the command prompt that came up in your new terminal window. You should see information about your installation of Python appear, including the version, followed by a Python prompt that looks like <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. This is a kind of interactive Python session, in the terminal. It’s much less rich than the one available in Visual Studio Code (it can’t run scripts line-by-line, for example) but you can try <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World!')</span></code> and it will run, printing your message. To exit the terminal-based Python session, type <code class="docutils literal notranslate"><span class="pre">exit()</span></code> to go back to the regular command line.</p>
 <p>You can find out more about the terminal in the chapter on <a class="reference internal" href="wrkflow-command-line.html#wrkflow-command-line"><span class="std std-ref">The Command Line</span></a>.</p>
-</div>
-<div class="section" id="installing-packages">
-<h3>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-packages">
+<h3>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">#</a></h3>
 <p>To install extra Python packages, there are two options, and both use the command line.</p>
 <div class="admonition-activating-conda-python-environments admonition">
 <p class="admonition-title">Activating Conda Python Environments</p>
@@ -812,10 +1031,10 @@
 <p class="admonition-title">Exercise</p>
 <p>Install the <strong>skimpy</strong> package. (Hint: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> may not be enough.)</p>
 </div>
-</div>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
 <p>That’s it for the preliminaries! Well done if you made this far: starting is the hardest bit. There are some extra bits below for if you’re coding on a restricted work computer or you want to add all the bells and whistles to Visual Studio Code, but you can safely skip these if you just want to get on with some coding.</p>
 <p>So, if you have:</p>
 <ul class="simple">
@@ -826,12 +1045,12 @@
 <li><p>✅ installed packages in the terminal using both <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>, then</p></li>
 </ul>
 <p>you are ready to move on to the next chapter! 🚀</p>
-</div>
-<div class="section" id="extras">
-<h2>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="extras">
+<h2>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">#</a></h2>
 <p>The rest if this chapter contains extras that could be helpful to some people. However, if you just want to get on with some coding or you don’t think they apply to you, skip them and move on to the next chapter.</p>
-<div class="section" id="coding-on-your-work-computer">
-<h3>Coding on your work computer<a class="headerlink" href="#coding-on-your-work-computer" title="Permalink to this headline">¶</a></h3>
+<section id="coding-on-your-work-computer">
+<h3>Coding on your work computer<a class="headerlink" href="#coding-on-your-work-computer" title="Permalink to this headline">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re not planning to code at work, or your place of work allows you to install whatever programmes you like, this section won’t be relevant to you.</p>
@@ -842,9 +1061,9 @@
 <p><a class="reference external" href="https://research.google.com/colaboratory/">Google Colab</a> is a great way to start learning and trying out the exercises in this book remotely without having to install anything on your computer. Most pages in this book that have code on are just a click away from launching a Colab notebook—just click the 🚀 at the top of a page with code on and select ‘Colab’. Google Colab is fantastic for trying things out, sharing tinkering with others, and generally having a first go at some coding, but it only supports notebooks.</p>
 <p>If you need the full power of Visual Studio Code, which supports scripts and notebooks, the easiest way is to use <a class="reference external" href="https://github.com/features/codespaces">Github Codespaces</a> or <a class="reference external" href="https://www.gitpod.io/">Gitpod</a>. Codespaces provides cheap access to a ready-made Visual Studio Code development environment in your browser window. Gitpod is similar, but also has a free tier. Many IT departments will use Github themselves, so you may find your organisation already has a subscription to GitHub (and therefore Codespaces) can use. Another advantage of using a Github subscription is that you can use Github for version control too (if ‘version control’ is new to you, don’t worry—it’s just a way of efficiently working with files that have code in).</p>
 <p>Finally, if you’re just starting to learn and don’t need to save any data or code, or use any non-standard packages, you can run a limited instance of JupyterLab (an IDE) in your browser window using <em>JupyterLite</em>. This will be slower than regular Python because all of the computation is done by your browser (eg Google Chrome), as opposed to by your computer directly. And, also because of how this magic is put together, only some packages are available. To use it, head to the <a class="reference external" href="https://jupyterlite.readthedocs.io/en/latest/">JupyterLite website</a> and click on the link that says <em>Try it with JupyterLab!</em>. Once the page loads, select Pyolite Notebook. Note that if you have very high levels of security at your organisation, this website may be blocked from running.</p>
-</div>
-<div class="section" id="fine-tuning-visual-studio-code">
-<h3>Fine-tuning Visual Studio Code<a class="headerlink" href="#fine-tuning-visual-studio-code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fine-tuning-visual-studio-code">
+<h3>Fine-tuning Visual Studio Code<a class="headerlink" href="#fine-tuning-visual-studio-code" title="Permalink to this headline">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re not using Visual Studio Code or you’re not ready to delve deeper into its settings, you can safely ignore this section.</p>
@@ -899,9 +1118,9 @@
 <li><p><em>Docker</em> - makes it easy to build, manage, and deploy Docker containers from Visual Studio Code</p></li>
 </ul>
 <p>As well as adding extra extensions, you can customise the default settings of VS Code. As mentioned before, you’ll probably want to change the <code class="docutils literal notranslate"><span class="pre">jupyter.sendSelectionToInteractiveWindow</span></code> setting to True. The easiest way to do this is to go to Settings (the cog icon) and type in ‘Jupyter: Send Selection’, and you should see a tick box come up; make sure it’s ticked. Another useful one for coding is to change the ‘Editor: Render Whitespace’ setting, aka <code class="docutils literal notranslate"><span class="pre">editor.renderWhitespace</span></code> from ‘selection’ to ‘boundary’. This will now show any boundary whitespace, or more than one instance of whitespace contiguously, as a grey dot. This might seem odd but it’s really useful because the wrong amount of whitespace can create problems with code.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -925,64 +1144,51 @@
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="intro.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Introduction</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="code-basics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Coding Basics</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="code-basics.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Coding Basics</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Numbers &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-numbers.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="Categorical Data" href="data-categorical.html" />
     <link rel="prev" title="Reading and Writing Files" href="data-read-and-write.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/data-numbers.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-numbers.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-numbers.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-numbers.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-numbers.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-numbers.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-numbers.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/data-numbers.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -684,22 +839,133 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Numbers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#counts">
+     Counts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numeric-transformations">
+   Numeric Transformations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-and-maximum">
+     Minimum and Maximum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modular-arithmetic">
+     Modular arithmetic
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logarithms">
+     Logarithms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rounding">
+     Rounding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cumulative-and-rolling-aggregates">
+     Cumulative and Rolling Aggregates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-transformations">
+   General transformations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranking">
+     Ranking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#offsets-and-shifting">
+     Offsets and Shifting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-useful-summary-statistics">
+   More Useful Summary Statistics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spread">
+     Spread
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributions">
+     Distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="numbers">
-<span id="id1"></span><h1>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="numbers">
+<span id="id1"></span><h1>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you’ll learn useful tools for creating and manipulating numeric vectors. We’ll start by going into a little more detail of <code class="docutils literal notranslate"><span class="pre">.count()</span></code> before diving into various numeric transformations. You’ll then learn about more general transformations that can be applied to other types of column, but are often used with numeric column. Then you’ll learn about a few more useful summaries.</p>
-<div class="section" id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>This chapter mostly uses functions from <strong>pandas</strong>, which you are likely to already have installed bu you can install using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> in the terminal. We’ll use real examples from nycflights13, as well as toy examples made with fake data.</p>
 <p>Let’s first load up the NYC flights data (note that this is not a tiny file so will take a moment to load from the internet)</p>
 <div class="cell docutils container">
@@ -711,9 +977,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="counts">
-<h3>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="counts">
+<h3>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">#</a></h3>
 <p>It’s surprising how much data science you can do with just counts and a little basic arithmetic, so <strong>pandas</strong> strives to make counting as easy as possible with <code class="docutils literal notranslate"><span class="pre">.count()</span></code> and <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code>. The former just provides a straight count of all the non NA items:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -973,23 +1239,23 @@ Name: dest, Length: 105, dtype: int64
   <tbody>
     <tr>
       <th>ABQ</th>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>ACK</th>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>ALB</th>
-      <td>6.0</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>ANC</th>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>ATL</th>
-      <td>109.0</td>
+      <td>109</td>
     </tr>
     <tr>
       <th>...</th>
@@ -997,41 +1263,41 @@ Name: dest, Length: 105, dtype: int64
     </tr>
     <tr>
       <th>TPA</th>
-      <td>20.0</td>
+      <td>20</td>
     </tr>
     <tr>
       <th>TUL</th>
-      <td>2.0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>TVC</th>
-      <td>3.0</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>TYS</th>
-      <td>19.0</td>
+      <td>19</td>
     </tr>
     <tr>
       <th>XNA</th>
-      <td>9.0</td>
+      <td>9</td>
     </tr>
   </tbody>
 </table>
 <p>105 rows × 1 columns</p>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="numeric-transformations">
-<h2>Numeric Transformations<a class="headerlink" href="#numeric-transformations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="numeric-transformations">
+<h2>Numeric Transformations<a class="headerlink" href="#numeric-transformations" title="Permalink to this headline">#</a></h2>
 <p>Transformation functions have an output is the same length as the input. The vast majority of transformation functions are either built into Python or come with the numerical package <strong>numpy</strong>. It’s impractical to list all the possible numerical transformations so this section will show the most useful ones.</p>
 <p>Basic number arithmatic is achieved by <code class="docutils literal notranslate"><span class="pre">+</span></code> (addition), <code class="docutils literal notranslate"><span class="pre">-</span></code> (subtraction), <code class="docutils literal notranslate"><span class="pre">*</span></code> (multiplication), <code class="docutils literal notranslate"><span class="pre">/</span></code> (division), <code class="docutils literal notranslate"><span class="pre">**</span></code> (powers), <code class="docutils literal notranslate"><span class="pre">%</span></code> (modulo), and <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> (tensor product). Most of these functions don’t need a huge amount of explanation because you’ll be familiar with them already (and you can look up the others when you do need them).</p>
 <p>When you have two numeric columns of equal length and you add or subtract them, it’s pretty obvious what’s going to happen. But we do need to talk about what happens when there is a variable involved that is <em>not</em> as long as the column. This is important for operations like <code class="docutils literal notranslate"><span class="pre">flights.assign(air_time</span> <span class="pre">=</span> <span class="pre">air_time</span> <span class="pre">/</span> <span class="pre">60)</span></code> because there are 336,776 numbers on the left of <code class="docutils literal notranslate"><span class="pre">/</span></code> but only one on the right. In this case, <strong>pandas</strong> will understand that you’d like to divide <em>all</em> values of air time by 60. This is sometimes called ‘broadcasting’. Below is a digram that tries to explain what’s going on:</p>
 <p><img alt="" src="https://numpy.org/doc/stable/_images/broadcasting_1.png" /></p>
 <p>You can find out much more about <a class="reference external" href="https://numpy.org/doc/stable/user/basics.broadcasting.html">broadcasting on the <strong>numpy</strong> documentation</a>. <strong>pandas</strong> is built on top of <strong>numpy</strong> and inherits some of its functionality.</p>
 <p>When operating on two columns, <strong>pandas</strong> compares their shapes element-wise. Two columns are compatible when they are equal, or one of them is a scalar. If these conditions are not met, you will get an error.</p>
-<div class="section" id="minimum-and-maximum">
-<h3>Minimum and Maximum<a class="headerlink" href="#minimum-and-maximum" title="Permalink to this headline">¶</a></h3>
+<section id="minimum-and-maximum">
+<h3>Minimum and Maximum<a class="headerlink" href="#minimum-and-maximum" title="Permalink to this headline">#</a></h3>
 <p>The arithmetic functions do what you’d expect.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1112,9 +1378,9 @@ dtype: float64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="modular-arithmetic">
-<h3>Modular arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="modular-arithmetic">
+<h3>Modular arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permalink to this headline">#</a></h3>
 <p>Modular arithmetic is the technical name for the type of math you do on whole numbers, i.e. division that yields a whole number and a remainder. In Python, <code class="docutils literal notranslate"><span class="pre">//</span></code> does integer division and <code class="docutils literal notranslate"><span class="pre">%</span></code> computes the remainder:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1436,9 +1702,9 @@ divisions:
 <p>100000 rows × 19 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="logarithms">
-<h3>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="logarithms">
+<h3>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this headline">#</a></h3>
 <p>Logarithms are an incredibly useful transformation for dealing with data that ranges across multiple orders of magnitude. They also convert exponential growth to linear growth. For example, take compounding interest — the amount of money you have at <code class="docutils literal notranslate"><span class="pre">year</span> <span class="pre">+</span> <span class="pre">1</span></code> is the amount of money you had at <code class="docutils literal notranslate"><span class="pre">year</span></code> multiplied by the interest rate. That gives a formula like <code class="docutils literal notranslate"><span class="pre">money</span> <span class="pre">=</span> <span class="pre">starting</span> <span class="pre">*</span> <span class="pre">interest</span> <span class="pre">**</span> <span class="pre">year</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1529,9 +1795,9 @@ divisions:
 <p>This a straight line because <code class="docutils literal notranslate"><span class="pre">log(money)</span> <span class="pre">=</span> <span class="pre">log(starting)</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">log(interest)</span></code> matches the pattern for a line, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">b</span></code>. This is a useful pattern: if you see a (roughly) straight line after log-transforming the y-axis, you know that there’s underlying exponential growth.</p>
 <p>If you’re log-transforming your data you have a choice of a lot of logarithms provided by <strong>numpy</strong> but there are three ones you’ll want to commonly use: assuming you’ve imported it using <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>, you have <code class="docutils literal notranslate"><span class="pre">np.log()</span></code> (the natural log, base e), <code class="docutils literal notranslate"><span class="pre">np.log2()</span></code> (base 2), and <code class="docutils literal notranslate"><span class="pre">np.log10()</span></code> (base 10).</p>
 <p>The inverse of <code class="docutils literal notranslate"><span class="pre">log()</span></code> is <code class="docutils literal notranslate"><span class="pre">np.exp()</span></code>; to compute the inverse of <code class="docutils literal notranslate"><span class="pre">np.log2()</span></code> or <code class="docutils literal notranslate"><span class="pre">np.log10()</span></code> you’ll need to use <code class="docutils literal notranslate"><span class="pre">2**</span></code> or <code class="docutils literal notranslate"><span class="pre">10**</span></code>.</p>
-</div>
-<div class="section" id="rounding">
-<h3>Rounding<a class="headerlink" href="#rounding" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rounding">
+<h3>Rounding<a class="headerlink" href="#rounding" title="Permalink to this headline">#</a></h3>
 <p>To round to a specific number of decimal places, use <code class="docutils literal notranslate"><span class="pre">.round(n)</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of decimal places that you wish to round to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1752,8 +2018,8 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58.73268201, 64.58358196, 49.32483003, 56.84591142,  7.1574112 ,
-       37.87665707, 86.20283112, 97.64544472, 19.90747616, 80.36062538])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.51488473, 45.52366496, 55.67764872, 25.34682084, 53.4357518 ,
+       66.85554274, 82.35929153, 85.94720062, 52.52215459, 22.09128929])
 </pre></div>
 </div>
 </div>
@@ -1765,7 +2031,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([59., 65., 50., 57.,  8., 38., 87., 98., 20., 81.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([21., 46., 56., 26., 54., 67., 83., 86., 53., 23.])
 </pre></div>
 </div>
 </div>
@@ -1777,7 +2043,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58., 64., 49., 56.,  7., 37., 86., 97., 19., 80.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20., 45., 55., 25., 53., 66., 82., 85., 52., 22.])
 </pre></div>
 </div>
 </div>
@@ -1800,9 +2066,9 @@ Name: money, dtype: float64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="cumulative-and-rolling-aggregates">
-<h3>Cumulative and Rolling Aggregates<a class="headerlink" href="#cumulative-and-rolling-aggregates" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="cumulative-and-rolling-aggregates">
+<h3>Cumulative and Rolling Aggregates<a class="headerlink" href="#cumulative-and-rolling-aggregates" title="Permalink to this headline">#</a></h3>
 <p><strong>pandas</strong> has several cumulative functions, including <code class="docutils literal notranslate"><span class="pre">.cumsum</span></code>, <code class="docutils literal notranslate"><span class="pre">.cummax</span></code> and <code class="docutils literal notranslate"><span class="pre">.cummin</span></code>, and <code class="docutils literal notranslate"><span class="pre">.cumprod</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1822,13 +2088,13 @@ Name: money, dtype: float64
 </div>
 </div>
 <p>As ever, this can be applied across rows too by passing <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>.</p>
-</div>
-</div>
-<div class="section" id="general-transformations">
-<h2>General transformations<a class="headerlink" href="#general-transformations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="general-transformations">
+<h2>General transformations<a class="headerlink" href="#general-transformations" title="Permalink to this headline">#</a></h2>
 <p>The following sections describe some general transformations that are often used with numeric vectors, but which can be applied to all other column types.</p>
-<div class="section" id="ranking">
-<h3>Ranking<a class="headerlink" href="#ranking" title="Permalink to this headline">¶</a></h3>
+<section id="ranking">
+<h3>Ranking<a class="headerlink" href="#ranking" title="Permalink to this headline">#</a></h3>
 <p><strong>pandas</strong>’ rank function is <code class="docutils literal notranslate"><span class="pre">.rank</span></code>. Let’s look back at the data we made earlier and rank it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1978,9 +2244,9 @@ Name: money, dtype: float64
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="offsets-and-shifting">
-<h3>Offsets and Shifting<a class="headerlink" href="#offsets-and-shifting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="offsets-and-shifting">
+<h3>Offsets and Shifting<a class="headerlink" href="#offsets-and-shifting" title="Permalink to this headline">#</a></h3>
 <p>Offsets allow you to ‘roll’ columns up and down relative to their original position, ie to offset their location relative to the index. The function that does this is called <code class="docutils literal notranslate"><span class="pre">shift</span></code> and it produces leads or lags depending on whether you use positive or negative values respectively. Remember that a lead is going to shift the pattern in the data to the left when plotted against the index, while the lag is going to shift patterns to the right. Leads and lags are particularly useful for time series data (which we haven’t yet seen).</p>
 <p>Let’s see an example of offsets with the <code class="docutils literal notranslate"><span class="pre">money</span></code> data frame from earlier:</p>
 <div class="cell docutils container">
@@ -1994,9 +2260,9 @@ Name: money, dtype: float64
 <div class="cell_output docutils container">
 <img alt="_images/data-numbers_57_0.svg" src="_images/data-numbers_57_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="exercises">
-<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="exercises">
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Find the 10 most delayed flights using a ranking function.</p></li>
 <li><p>Which plane (<code class="docutils literal notranslate"><span class="pre">&quot;tailnum&quot;</span></code>) has the worst on-time record?</p></li>
@@ -2006,10 +2272,10 @@ Name: money, dtype: float64
 <li><p>Look at each destination. Can you find flights that are suspiciously fast? (i.e. flights that represent a potential data entry error). Compute the air time of a flight relative to the shortest flight to that destination. Which flights were most delayed in the air?</p></li>
 <li><p>Find all destinations that are flown by at least two carriers. Use those destinations to come up with a relative ranking of the carriers based on their performance for the same destination.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="more-useful-summary-statistics">
-<h2>More Useful Summary Statistics<a class="headerlink" href="#more-useful-summary-statistics" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="more-useful-summary-statistics">
+<h2>More Useful Summary Statistics<a class="headerlink" href="#more-useful-summary-statistics" title="Permalink to this headline">#</a></h2>
 <p>We’ve seen how useful <code class="docutils literal notranslate"><span class="pre">.mean</span></code>, <code class="docutils literal notranslate"><span class="pre">.count</span></code>, and <code class="docutils literal notranslate"><span class="pre">.value_counts</span></code> can be for analysis. <strong>pandas</strong> has a great many more built-in summary statistics functions, however. These include <code class="docutils literal notranslate"><span class="pre">.median</span></code> (you may find it interesting to compare the mean vs the median when looking at the hourly departure delay in the flights data), <code class="docutils literal notranslate"><span class="pre">.mode</span></code>, <code class="docutils literal notranslate"><span class="pre">.min</span></code>, and <code class="docutils literal notranslate"><span class="pre">.max</span></code>.</p>
 <p>A class of useful summary statistics are provided by the <code class="docutils literal notranslate"><span class="pre">.quantile</span></code> function, which is the same as <code class="docutils literal notranslate"><span class="pre">median</span></code> for <code class="docutils literal notranslate"><span class="pre">.quantile(0.5)</span></code>. The quantile at x% is the value that x% of values are below. (Note that under this definition, <code class="docutils literal notranslate"><span class="pre">.quantile(1)</span></code> will be the same as <code class="docutils literal notranslate"><span class="pre">.max()</span></code>.) Let’s see an example with the 25th percentile.</p>
 <div class="cell docutils container">
@@ -2041,8 +2307,8 @@ Name: money, dtype: float64
 </div>
 </div>
 </div>
-<div class="section" id="spread">
-<h3>Spread<a class="headerlink" href="#spread" title="Permalink to this headline">¶</a></h3>
+<section id="spread">
+<h3>Spread<a class="headerlink" href="#spread" title="Permalink to this headline">#</a></h3>
 <p>Sometimes you’re not so interested in where the bulk of the data lies, but how it is spread out.
 Two commonly used summaries are the standard deviation, <code class="docutils literal notranslate"><span class="pre">.std()</span></code>, and the inter-quartile range, which you can compute from the relevant quantiles, ie it’s the quantile at 75% minus the quantile at 25% and gives you the range that contains the middle 50% of the data.</p>
 <p>We can use this to reveal a small oddity in the flights data. You might expect that the spread of the distance between origin and destination to be zero, since airports are always in the same place. But the code below makes it looks like one airport, <a class="reference external" href="https://en.wikipedia.org/wiki/Eagle_County_Regional_Airport">EGE</a>, might have moved.</p>
@@ -2106,9 +2372,9 @@ Two commonly used summaries are the standard deviation, <code class="docutils li
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="distributions">
-<h3>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="distributions">
+<h3>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">#</a></h3>
 <p>It’s worth remembering that all of the summary statistics described above are a way of reducing the distribution down to a single number. This means that they’re fundamentally reductive, and if you pick the wrong summary, you can easily miss important differences between groups. That’s why it’s always a good idea to visualise the distribution of values as well as using aggregate statistics.</p>
 <p>The plot below shows the overall distribution of departure delays. The distribution is so skewed that we have to zoom in to see the bulk of the data. This suggests that the mean is unlikely to be a good summary and we might prefer the median instead.</p>
 <div class="cell docutils container">
@@ -2133,9 +2399,9 @@ Two commonly used summaries are the standard deviation, <code class="docutils li
 </div>
 <p>Two histograms of <code class="docutils literal notranslate"><span class="pre">&quot;dep_delay&quot;</span></code>. On the former, it’s very hard to see any pattern except that there’s a very large spike around zero, the bars rapidly decay in height, and for most of the plot, you can’t see any bars because they are too short to see. On the latter, where we’ve discarded delays of greater than two hours, we can see that the spike occurs slightly below zero (i.e. most flights leave a couple of minutes early), but there’s still a very steep decay after that.</p>
 <p>Don’t be afraid to explore your own custom summaries specifically tailored for the data that you’re working with. In this case, that might mean separately summarising the flights that left early vs the flights that left late, or given that the values are so heavily skewed, you might try a log-transformation. Finally, don’t forget that it’s always a good idea to include the number of observations in each group when creating summaries.</p>
-</div>
-<div class="section" id="id2">
-<h3>Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ol>
 <li><p>Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights.
 Consider the following scenarios:</p>
@@ -2151,9 +2417,9 @@ Consider the following scenarios:</p>
 <li><p>Create a plot to further explore the adventures of EGE.
 Can you find any evidence that the airport moved locations?</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2177,64 +2443,51 @@ Can you find any evidence that the airport moved locations?</p></li>
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="data-read-and-write.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Reading and Writing Files</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="data-read-and-write.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Reading and Writing Files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data-categorical.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Categorical Data</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="data-categorical.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Categorical Data</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

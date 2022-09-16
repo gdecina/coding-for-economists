@@ -1,0 +1,251 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from pandas_datareader import wb
+from datetime import datetime
+
+end_year = datetime.now().year
+countries = ["GBR", "USA", "CHN", "IND", "FRA", "CAN", "KOR", "DEU", "ITA"]
+df = wb.download(indicator='NY.GDP.MKTP.CD', country=countries, start=end_year-2, end=end_year)
+df = df.reset_index()
+df.head()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mtimeout[0m                                   Traceback (most recent call last)
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:449[0m, in [0;36mHTTPConnectionPool._make_request[0;34m(self, conn, method, url, timeout, chunked, **httplib_request_kw)[0m
+[1;32m    445[0m         [38;5;28;01mexcept[39;00m [38;5;167;01mBaseException[39;00m [38;5;28;01mas[39;00m e:
+[1;32m    446[0m             [38;5;66;03m# Remove the TypeError from the exception chain in[39;00m
+[1;32m    447[0m             [38;5;66;03m# Python 3 (including for exceptions like SystemExit).[39;00m
+[1;32m    448[0m             [38;5;66;03m# Otherwise it looks like a bug in the code.[39;00m
+[0;32m--> 449[0m             [43msix[49m[38;5;241;43m.[39;49m[43mraise_from[49m[43m([49m[43me[49m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m)[49m
+[1;32m    450[0m [38;5;28;01mexcept[39;00m (SocketTimeout, BaseSSLError, SocketError) [38;5;28;01mas[39;00m e:
+
+File [0;32m<string>:3[0m, in [0;36mraise_from[0;34m(value, from_value)[0m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:444[0m, in [0;36mHTTPConnectionPool._make_request[0;34m(self, conn, method, url, timeout, chunked, **httplib_request_kw)[0m
+[1;32m    443[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 444[0m     httplib_response [38;5;241m=[39m [43mconn[49m[38;5;241;43m.[39;49m[43mgetresponse[49m[43m([49m[43m)[49m
+[1;32m    445[0m [38;5;28;01mexcept[39;00m [38;5;167;01mBaseException[39;00m [38;5;28;01mas[39;00m e:
+[1;32m    446[0m     [38;5;66;03m# Remove the TypeError from the exception chain in[39;00m
+[1;32m    447[0m     [38;5;66;03m# Python 3 (including for exceptions like SystemExit).[39;00m
+[1;32m    448[0m     [38;5;66;03m# Otherwise it looks like a bug in the code.[39;00m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py:1348[0m, in [0;36mHTTPConnection.getresponse[0;34m(self)[0m
+[1;32m   1347[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 1348[0m     [43mresponse[49m[38;5;241;43m.[39;49m[43mbegin[49m[43m([49m[43m)[49m
+[1;32m   1349[0m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py:316[0m, in [0;36mHTTPResponse.begin[0;34m(self)[0m
+[1;32m    315[0m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[0;32m--> 316[0m     version, status, reason [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_read_status[49m[43m([49m[43m)[49m
+[1;32m    317[0m     [38;5;28;01mif[39;00m status [38;5;241m!=[39m CONTINUE:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py:277[0m, in [0;36mHTTPResponse._read_status[0;34m(self)[0m
+[1;32m    276[0m [38;5;28;01mdef[39;00m [38;5;21m_read_status[39m([38;5;28mself[39m):
+[0;32m--> 277[0m     line [38;5;241m=[39m [38;5;28mstr[39m([38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfp[49m[38;5;241;43m.[39;49m[43mreadline[49m[43m([49m[43m_MAXLINE[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[38;5;241;43m1[39;49m[43m)[49m, [38;5;124m"[39m[38;5;124miso-8859-1[39m[38;5;124m"[39m)
+[1;32m    278[0m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(line) [38;5;241m>[39m _MAXLINE:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/socket.py:669[0m, in [0;36mSocketIO.readinto[0;34m(self, b)[0m
+[1;32m    668[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 669[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_sock[49m[38;5;241;43m.[39;49m[43mrecv_into[49m[43m([49m[43mb[49m[43m)[49m
+[1;32m    670[0m [38;5;28;01mexcept[39;00m timeout:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/ssl.py:1241[0m, in [0;36mSSLSocket.recv_into[0;34m(self, buffer, nbytes, flags)[0m
+[1;32m   1238[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m   1239[0m           [38;5;124m"[39m[38;5;124mnon-zero flags not allowed in calls to recv_into() on [39m[38;5;132;01m%s[39;00m[38;5;124m"[39m [38;5;241m%[39m
+[1;32m   1240[0m           [38;5;28mself[39m[38;5;241m.[39m[38;5;18m__class__[39m)
+[0;32m-> 1241[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m[43mnbytes[49m[43m,[49m[43m [49m[43mbuffer[49m[43m)[49m
+[1;32m   1242[0m [38;5;28;01melse[39;00m:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/ssl.py:1099[0m, in [0;36mSSLSocket.read[0;34m(self, len, buffer)[0m
+[1;32m   1098[0m [38;5;28;01mif[39;00m buffer [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 1099[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_sslobj[49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m[38;5;28;43mlen[39;49m[43m,[49m[43m [49m[43mbuffer[49m[43m)[49m
+[1;32m   1100[0m [38;5;28;01melse[39;00m:
+
+[0;31mtimeout[0m: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+[0;31mReadTimeoutError[0m                          Traceback (most recent call last)
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/requests/adapters.py:489[0m, in [0;36mHTTPAdapter.send[0;34m(self, request, stream, timeout, verify, cert, proxies)[0m
+[1;32m    488[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m chunked:
+[0;32m--> 489[0m     resp [38;5;241m=[39m [43mconn[49m[38;5;241;43m.[39;49m[43murlopen[49m[43m([49m
+[1;32m    490[0m [43m        [49m[43mmethod[49m[38;5;241;43m=[39;49m[43mrequest[49m[38;5;241;43m.[39;49m[43mmethod[49m[43m,[49m
+[1;32m    491[0m [43m        [49m[43murl[49m[38;5;241;43m=[39;49m[43murl[49m[43m,[49m
+[1;32m    492[0m [43m        [49m[43mbody[49m[38;5;241;43m=[39;49m[43mrequest[49m[38;5;241;43m.[39;49m[43mbody[49m[43m,[49m
+[1;32m    493[0m [43m        [49m[43mheaders[49m[38;5;241;43m=[39;49m[43mrequest[49m[38;5;241;43m.[39;49m[43mheaders[49m[43m,[49m
+[1;32m    494[0m [43m        [49m[43mredirect[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[1;32m    495[0m [43m        [49m[43massert_same_host[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[1;32m    496[0m [43m        [49m[43mpreload_content[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[1;32m    497[0m [43m        [49m[43mdecode_content[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[1;32m    498[0m [43m        [49m[43mretries[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mmax_retries[49m[43m,[49m
+[1;32m    499[0m [43m        [49m[43mtimeout[49m[38;5;241;43m=[39;49m[43mtimeout[49m[43m,[49m
+[1;32m    500[0m [43m    [49m[43m)[49m
+[1;32m    502[0m [38;5;66;03m# Send the request.[39;00m
+[1;32m    503[0m [38;5;28;01melse[39;00m:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:787[0m, in [0;36mHTTPConnectionPool.urlopen[0;34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)[0m
+[1;32m    785[0m     e [38;5;241m=[39m ProtocolError([38;5;124m"[39m[38;5;124mConnection aborted.[39m[38;5;124m"[39m, e)
+[0;32m--> 787[0m retries [38;5;241m=[39m [43mretries[49m[38;5;241;43m.[39;49m[43mincrement[49m[43m([49m
+[1;32m    788[0m [43m    [49m[43mmethod[49m[43m,[49m[43m [49m[43murl[49m[43m,[49m[43m [49m[43merror[49m[38;5;241;43m=[39;49m[43me[49m[43m,[49m[43m [49m[43m_pool[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43m_stacktrace[49m[38;5;241;43m=[39;49m[43msys[49m[38;5;241;43m.[39;49m[43mexc_info[49m[43m([49m[43m)[49m[43m[[49m[38;5;241;43m2[39;49m[43m][49m
+[1;32m    789[0m [43m[49m[43m)[49m
+[1;32m    790[0m retries[38;5;241m.[39msleep()
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/util/retry.py:550[0m, in [0;36mRetry.increment[0;34m(self, method, url, response, error, _pool, _stacktrace)[0m
+[1;32m    549[0m [38;5;28;01mif[39;00m read [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_is_method_retryable(method):
+[0;32m--> 550[0m     [38;5;28;01mraise[39;00m [43msix[49m[38;5;241;43m.[39;49m[43mreraise[49m[43m([49m[38;5;28;43mtype[39;49m[43m([49m[43merror[49m[43m)[49m[43m,[49m[43m [49m[43merror[49m[43m,[49m[43m [49m[43m_stacktrace[49m[43m)[49m
+[1;32m    551[0m [38;5;28;01melif[39;00m read [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/packages/six.py:770[0m, in [0;36mreraise[0;34m(tp, value, tb)[0m
+[1;32m    769[0m         [38;5;28;01mraise[39;00m value[38;5;241m.[39mwith_traceback(tb)
+[0;32m--> 770[0m     [38;5;28;01mraise[39;00m value
+[1;32m    771[0m [38;5;28;01mfinally[39;00m:
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:703[0m, in [0;36mHTTPConnectionPool.urlopen[0;34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)[0m
+[1;32m    702[0m [38;5;66;03m# Make the request on the httplib connection object.[39;00m
+[0;32m--> 703[0m httplib_response [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_request[49m[43m([49m
+[1;32m    704[0m [43m    [49m[43mconn[49m[43m,[49m
+[1;32m    705[0m [43m    [49m[43mmethod[49m[43m,[49m
+[1;32m    706[0m [43m    [49m[43murl[49m[43m,[49m
+[1;32m    707[0m [43m    [49m[43mtimeout[49m[38;5;241;43m=[39;49m[43mtimeout_obj[49m[43m,[49m
+[1;32m    708[0m [43m    [49m[43mbody[49m[38;5;241;43m=[39;49m[43mbody[49m[43m,[49m
+[1;32m    709[0m [43m    [49m[43mheaders[49m[38;5;241;43m=[39;49m[43mheaders[49m[43m,[49m
+[1;32m    710[0m [43m    [49m[43mchunked[49m[38;5;241;43m=[39;49m[43mchunked[49m[43m,[49m
+[1;32m    711[0m [43m[49m[43m)[49m
+[1;32m    713[0m [38;5;66;03m# If we're going to release the connection in ``finally:``, then[39;00m
+[1;32m    714[0m [38;5;66;03m# the response doesn't need to know about the connection. Otherwise[39;00m
+[1;32m    715[0m [38;5;66;03m# it will also try to release it and we'll have a double-release[39;00m
+[1;32m    716[0m [38;5;66;03m# mess.[39;00m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:451[0m, in [0;36mHTTPConnectionPool._make_request[0;34m(self, conn, method, url, timeout, chunked, **httplib_request_kw)[0m
+[1;32m    450[0m [38;5;28;01mexcept[39;00m (SocketTimeout, BaseSSLError, SocketError) [38;5;28;01mas[39;00m e:
+[0;32m--> 451[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_raise_timeout[49m[43m([49m[43merr[49m[38;5;241;43m=[39;49m[43me[49m[43m,[49m[43m [49m[43murl[49m[38;5;241;43m=[39;49m[43murl[49m[43m,[49m[43m [49m[43mtimeout_value[49m[38;5;241;43m=[39;49m[43mread_timeout[49m[43m)[49m
+[1;32m    452[0m     [38;5;28;01mraise[39;00m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/urllib3/connectionpool.py:340[0m, in [0;36mHTTPConnectionPool._raise_timeout[0;34m(self, err, url, timeout_value)[0m
+[1;32m    339[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(err, SocketTimeout):
+[0;32m--> 340[0m     [38;5;28;01mraise[39;00m ReadTimeoutError(
+[1;32m    341[0m         [38;5;28mself[39m, url, [38;5;124m"[39m[38;5;124mRead timed out. (read timeout=[39m[38;5;132;01m%s[39;00m[38;5;124m)[39m[38;5;124m"[39m [38;5;241m%[39m timeout_value
+[1;32m    342[0m     )
+[1;32m    344[0m [38;5;66;03m# See the above comment about EAGAIN in Python 3. In Python 2 we have[39;00m
+[1;32m    345[0m [38;5;66;03m# to specifically catch it and throw the timeout error[39;00m
+
+[0;31mReadTimeoutError[0m: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+[0;31mReadTimeout[0m                               Traceback (most recent call last)
+Input [0;32mIn [7][0m, in [0;36m<cell line: 6>[0;34m()[0m
+[1;32m      4[0m end_year [38;5;241m=[39m datetime[38;5;241m.[39mnow()[38;5;241m.[39myear
+[1;32m      5[0m countries [38;5;241m=[39m [[38;5;124m"[39m[38;5;124mGBR[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mUSA[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mCHN[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mIND[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mFRA[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mCAN[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mKOR[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mDEU[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mITA[39m[38;5;124m"[39m]
+[0;32m----> 6[0m df [38;5;241m=[39m [43mwb[49m[38;5;241;43m.[39;49m[43mdownload[49m[43m([49m[43mindicator[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mNY.GDP.MKTP.CD[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mcountry[49m[38;5;241;43m=[39;49m[43mcountries[49m[43m,[49m[43m [49m[43mstart[49m[38;5;241;43m=[39;49m[43mend_year[49m[38;5;241;43m-[39;49m[38;5;241;43m2[39;49m[43m,[49m[43m [49m[43mend[49m[38;5;241;43m=[39;49m[43mend_year[49m[43m)[49m
+[1;32m      7[0m df [38;5;241m=[39m df[38;5;241m.[39mreset_index()
+[1;32m      8[0m df[38;5;241m.[39mhead()
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:861[0m, in [0;36mdownload[0;34m(country, indicator, start, end, freq, errors, **kwargs)[0m
+[1;32m    816[0m [38;5;28;01mdef[39;00m [38;5;21mdownload[39m(
+[1;32m    817[0m     country[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m    818[0m     indicator[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[0;32m   (...)[0m
+[1;32m    823[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs
+[1;32m    824[0m ):
+[1;32m    825[0m     [38;5;124;03m"""[39;00m
+[1;32m    826[0m [38;5;124;03m    Download data series from the World Bank's World Development Indicators[39;00m
+[1;32m    827[0m 
+[0;32m   (...)[0m
+[1;32m    859[0m [38;5;124;03m        DataFrame with columns country, year, indicator value[39;00m
+[1;32m    860[0m [38;5;124;03m    """[39;00m
+[0;32m--> 861[0m     [38;5;28;01mreturn[39;00m [43mWorldBankReader[49m[43m([49m
+[1;32m    862[0m [43m        [49m[43msymbols[49m[38;5;241;43m=[39;49m[43mindicator[49m[43m,[49m
+[1;32m    863[0m [43m        [49m[43mcountries[49m[38;5;241;43m=[39;49m[43mcountry[49m[43m,[49m
+[1;32m    864[0m [43m        [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m
+[1;32m    865[0m [43m        [49m[43mend[49m[38;5;241;43m=[39;49m[43mend[49m[43m,[49m
+[1;32m    866[0m [43m        [49m[43mfreq[49m[38;5;241;43m=[39;49m[43mfreq[49m[43m,[49m
+[1;32m    867[0m [43m        [49m[43merrors[49m[38;5;241;43m=[39;49m[43merrors[49m[43m,[49m
+[1;32m    868[0m [43m        [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m
+[1;32m    869[0m [43m    [49m[43m)[49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m[43m)[49m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:641[0m, in [0;36mWorldBankReader.read[0;34m(self)[0m
+[1;32m    639[0m [38;5;124;03m"""Read data"""[39;00m
+[1;32m    640[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 641[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_read[49m[43m([49m[43m)[49m
+[1;32m    642[0m [38;5;28;01mfinally[39;00m:
+[1;32m    643[0m     [38;5;28mself[39m[38;5;241m.[39mclose()
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:650[0m, in [0;36mWorldBankReader._read[0;34m(self)[0m
+[1;32m    647[0m [38;5;28;01mfor[39;00m indicator [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39msymbols:
+[1;32m    648[0m     [38;5;66;03m# Build URL for api call[39;00m
+[1;32m    649[0m     [38;5;28;01mtry[39;00m:
+[0;32m--> 650[0m         df [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_read_one_data[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43murl[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[43mindicator[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mparams[49m[43m)[49m
+[1;32m    651[0m         df[38;5;241m.[39mcolumns [38;5;241m=[39m [[38;5;124m"[39m[38;5;124mcountry[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124miso_code[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124myear[39m[38;5;124m"[39m, indicator]
+[1;32m    652[0m         data[38;5;241m.[39mappend(df)
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/base.py:110[0m, in [0;36m_BaseReader._read_one_data[0;34m(self, url, params)[0m
+[1;32m    108[0m     out [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_read_url_as_StringIO(url, params[38;5;241m=[39mparams)
+[1;32m    109[0m [38;5;28;01melif[39;00m [38;5;28mself[39m[38;5;241m.[39m_format [38;5;241m==[39m [38;5;124m"[39m[38;5;124mjson[39m[38;5;124m"[39m:
+[0;32m--> 110[0m     out [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_get_response[49m[43m([49m[43murl[49m[43m,[49m[43m [49m[43mparams[49m[38;5;241;43m=[39;49m[43mparams[49m[43m)[49m[38;5;241m.[39mjson()
+[1;32m    111[0m [38;5;28;01melse[39;00m:
+[1;32m    112[0m     [38;5;28;01mraise[39;00m [38;5;167;01mNotImplementedError[39;00m([38;5;28mself[39m[38;5;241m.[39m_format)
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/base.py:155[0m, in [0;36m_BaseReader._get_response[0;34m(self, url, params, headers)[0m
+[1;32m    153[0m last_response_text [38;5;241m=[39m [38;5;124m"[39m[38;5;124m"[39m
+[1;32m    154[0m [38;5;28;01mfor[39;00m _ [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;28mself[39m[38;5;241m.[39mretry_count [38;5;241m+[39m [38;5;241m1[39m):
+[0;32m--> 155[0m     response [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msession[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m
+[1;32m    156[0m [43m        [49m[43murl[49m[43m,[49m[43m [49m[43mparams[49m[38;5;241;43m=[39;49m[43mparams[49m[43m,[49m[43m [49m[43mheaders[49m[38;5;241;43m=[39;49m[43mheaders[49m[43m,[49m[43m [49m[43mtimeout[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtimeout[49m
+[1;32m    157[0m [43m    [49m[43m)[49m
+[1;32m    158[0m     [38;5;28;01mif[39;00m response[38;5;241m.[39mstatus_code [38;5;241m==[39m requests[38;5;241m.[39mcodes[38;5;241m.[39mok:
+[1;32m    159[0m         [38;5;28;01mreturn[39;00m response
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/requests/sessions.py:600[0m, in [0;36mSession.get[0;34m(self, url, **kwargs)[0m
+[1;32m    592[0m [38;5;124mr[39m[38;5;124;03m"""Sends a GET request. Returns :class:`Response` object.[39;00m
+[1;32m    593[0m 
+[1;32m    594[0m [38;5;124;03m:param url: URL for the new :class:`Request` object.[39;00m
+[1;32m    595[0m [38;5;124;03m:param \*\*kwargs: Optional arguments that ``request`` takes.[39;00m
+[1;32m    596[0m [38;5;124;03m:rtype: requests.Response[39;00m
+[1;32m    597[0m [38;5;124;03m"""[39;00m
+[1;32m    599[0m kwargs[38;5;241m.[39msetdefault([38;5;124m"[39m[38;5;124mallow_redirects[39m[38;5;124m"[39m, [38;5;28;01mTrue[39;00m)
+[0;32m--> 600[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mrequest[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mGET[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43murl[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/requests/sessions.py:587[0m, in [0;36mSession.request[0;34m(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)[0m
+[1;32m    582[0m send_kwargs [38;5;241m=[39m {
+[1;32m    583[0m     [38;5;124m"[39m[38;5;124mtimeout[39m[38;5;124m"[39m: timeout,
+[1;32m    584[0m     [38;5;124m"[39m[38;5;124mallow_redirects[39m[38;5;124m"[39m: allow_redirects,
+[1;32m    585[0m }
+[1;32m    586[0m send_kwargs[38;5;241m.[39mupdate(settings)
+[0;32m--> 587[0m resp [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msend[49m[43m([49m[43mprep[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43msend_kwargs[49m[43m)[49m
+[1;32m    589[0m [38;5;28;01mreturn[39;00m resp
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/requests/sessions.py:701[0m, in [0;36mSession.send[0;34m(self, request, **kwargs)[0m
+[1;32m    698[0m start [38;5;241m=[39m preferred_clock()
+[1;32m    700[0m [38;5;66;03m# Send the request[39;00m
+[0;32m--> 701[0m r [38;5;241m=[39m [43madapter[49m[38;5;241;43m.[39;49m[43msend[49m[43m([49m[43mrequest[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    703[0m [38;5;66;03m# Total elapsed time of the request (approximately)[39;00m
+[1;32m    704[0m elapsed [38;5;241m=[39m preferred_clock() [38;5;241m-[39m start
+
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/requests/adapters.py:578[0m, in [0;36mHTTPAdapter.send[0;34m(self, request, stream, timeout, verify, cert, proxies)[0m
+[1;32m    576[0m     [38;5;28;01mraise[39;00m SSLError(e, request[38;5;241m=[39mrequest)
+[1;32m    577[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, ReadTimeoutError):
+[0;32m--> 578[0m     [38;5;28;01mraise[39;00m ReadTimeout(e, request[38;5;241m=[39mrequest)
+[1;32m    579[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, _InvalidHeader):
+[1;32m    580[0m     [38;5;28;01mraise[39;00m InvalidHeader(e, request[38;5;241m=[39mrequest)
+
+[0;31mReadTimeout[0m: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=30)
+ReadTimeout: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=30)
+

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Data Transformation &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-transformation.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="Reading and Writing Files" href="data-read-and-write.html" />
     <link rel="prev" title="Working with Data" href="data-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/data-transformation.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-transformation.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-transformation.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-transformation.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-transformation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-transformation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-transformation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/data-transformation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -699,23 +854,149 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Transformation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aggregation">
+   Aggregation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby-and-then-aggregate-aka-split-apply-combine">
+   Groupby and then aggregate (aka split, apply, combine)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-functions-using-agg">
+     Multiple Functions using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       agg
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter">
+     Filter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transform">
+     Transform
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assign">
+     Assign
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agg-transform-and-apply-when-to-use-each-with-a-groupby">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     agg
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     transform
+    </span>
+   </code>
+   , and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     apply
+    </span>
+   </code>
+   : when to use each with a groupby
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshaping-data">
+   Reshaping Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy">
+     Pivoting data from tidy to, err, untidy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melt">
+     Melt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stack-and-unstack">
+     Stack and unstack
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-dummies">
+     Get dummies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-quick-look-at-time-series-and-rolling-windows">
+   A quick look at time series and rolling windows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-chaining">
+   Method Chaining
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="data-transformation">
-<span id="id1"></span><h1>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-transformation">
+<span id="id1"></span><h1>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>The previous chapter showed how to access different parts of a data frame and create new rows or columns. In this chapter, you’ll learn how to do more interesting transformations of data including aggregations and groupbys.</p>
 <p>This chapter is hugely indebted to the fantastic <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a> by Jake Vanderplas. Remember, if you get stuck with pandas, there is brilliant <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">documentation</a> and a fantastic set of <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/index.html">introductory tutorials</a> on the <strong>pandas</strong> website. These notes are heavily indebted to those introductory tutorials.</p>
-<div class="section" id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>This chapter uses the <strong>pandas</strong>, <strong>seaborn</strong>, and <strong>numpy</strong> packages. If you’re running this code, you may need to install these packages, which you can do using either <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. If you’re running this page in Google Colab, you can install new packages by running <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> in a new code cell but you will need to restart the Colab notebook for the change to take effect. There’s a brief guide on installing packages in the Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -731,10 +1012,10 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="aggregation">
-<h2>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="aggregation">
+<h2>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">#</a></h2>
 <p>Aggregation means taking some data and applying a statistical operation that <em>aggregates</em> the information into a smaller number of statistics. Because aggregations take many numbers and produce, typically, fewer numbers, they involve a function of some kind. While you can always write your own aggregation functions, <strong>pandas</strong> has some common ones built in—and these can be applied to rows or columns as we’ll see.</p>
 <p>The <strong>pandas</strong> built-in aggregation functions include:</p>
 <table class="colwidths-auto table">
@@ -810,27 +1091,27 @@
   <tbody>
     <tr>
       <th>0</th>
+      <td>1</td>
+      <td>0</td>
       <td>4</td>
       <td>2</td>
-      <td>3</td>
-      <td>3</td>
-      <td>2</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
       <td>1</td>
+      <td>4</td>
+      <td>2</td>
       <td>3</td>
       <td>0</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
       <td>3</td>
-      <td>0</td>
       <td>4</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -843,11 +1124,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A     7
-B     3
-C     9
-D     3
-E    10
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A    2
+B    5
+C    9
+D    9
+E    0
 dtype: int64
 </pre></div>
 </div>
@@ -860,11 +1141,11 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A     7
-B     3
-C     9
-D     3
-E    10
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A    2
+B    5
+C    9
+D    9
+E    0
 dtype: int64
 </pre></div>
 </div>
@@ -875,9 +1156,9 @@ dtype: int64
 <p>Find the mean values of each column (eg leaving only column headers so aggregating over rows using <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) and the mean values of each row (eg leaving only row headers and therefore aggregating over columns using <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>)</p>
 </div>
 <p>If you want to create custom aggregations, you can of course do that too using the <code class="docutils literal notranslate"><span class="pre">apply</span></code> method from <a class="reference internal" href="data-intro.html#working-with-data"><span class="std std-ref">Working with Data</span></a>.</p>
-</div>
-<div class="section" id="groupby-and-then-aggregate-aka-split-apply-combine">
-<h2>Groupby and then aggregate (aka split, apply, combine)<a class="headerlink" href="#groupby-and-then-aggregate-aka-split-apply-combine" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="groupby-and-then-aggregate-aka-split-apply-combine">
+<h2>Groupby and then aggregate (aka split, apply, combine)<a class="headerlink" href="#groupby-and-then-aggregate-aka-split-apply-combine" title="Permalink to this headline">#</a></h2>
 <p>Splitting a dataset, applying a function, and combining the results are three key operations that we’ll want to use together again and again. Splitting means differentiating between rows or columns of data based on some conditions, for instance different categories or different values. Applying means applying a function, for example finding the mean or sum. Combine means putting the results of these operations back into the dataframe, or into a variable. The figure gives an example</p>
 <p><img alt="" src="https://jakevdp.github.io/PythonDataScienceHandbook/figures/03.08-split-apply-combine.png" /></p>
 <p>A very common way of doing this is using the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation to group rows according to come common property. The classic use-case would be to find the mean by a particular characteristic, perhaps the mean height by gender. Note that the ‘combine’ part at the end doesn’t always have to result in a new dataframe; it could create new columns in an existing dataframe (but the new column is the result of a groupby operation, eg subtracting a group mean).</p>
@@ -1041,8 +1322,8 @@ dtype: int64
 <p class="admonition-title">Exercise</p>
 <p>Using a groupby, find the standard deviation of different penguin species’ body measurements. (Hint: standard deviation has its own aggregation/combine function given by <code class="docutils literal notranslate"><span class="pre">std()</span></code>)</p>
 </div>
-<div class="section" id="multiple-functions-using-agg">
-<h3>Multiple Functions using <code class="docutils literal notranslate"><span class="pre">agg</span></code><a class="headerlink" href="#multiple-functions-using-agg" title="Permalink to this headline">¶</a></h3>
+<section id="multiple-functions-using-agg">
+<h3>Multiple Functions using <code class="docutils literal notranslate"><span class="pre">agg</span></code><a class="headerlink" href="#multiple-functions-using-agg" title="Permalink to this headline">#</a></h3>
 <p>You can also pass multiple functions via the <code class="docutils literal notranslate"><span class="pre">agg</span></code> method (short for aggregation). Here we pass two numpy functions (these two functions have built-in equivalents <code class="docutils literal notranslate"><span class="pre">std()</span></code> and <code class="docutils literal notranslate"><span class="pre">mean()</span></code> so this is just for illustrative purposes):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1051,6 +1332,10 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_13740/4032971144.py:1: FutureWarning: [&#39;island&#39;, &#39;sex&#39;] did not aggregate successfully. If any error is raised this will raise in a future version of pandas. Drop these columns/ops to avoid this warning.
+  penguins.groupby(&quot;species&quot;).agg([np.mean, np.std])
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1302,9 +1587,9 @@ dtype: int64
 <p class="admonition-title">Exercise</p>
 <p>Using a two-column <code class="docutils literal notranslate"><span class="pre">groupby</span></code> on species and island and a named <code class="docutils literal notranslate"><span class="pre">agg</span></code>, create a new column called <code class="docutils literal notranslate"><span class="pre">mean_flipper</span></code> that gives the mean of <code class="docutils literal notranslate"><span class="pre">flipper_length_mm</span></code>.</p>
 </div>
-</div>
-<div class="section" id="filter">
-<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="filter">
+<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">#</a></h3>
 <p>Filtering does exactly what it sounds like, but it can make use of group-by commands. In the example below, all but one species is filtered out.</p>
 <p>In the example below, <code class="docutils literal notranslate"><span class="pre">filter</span></code> passes a grouped version of the dataframe into the <code class="docutils literal notranslate"><span class="pre">filter_func</span></code> we’ve defined (imagine that a dataframe is passed for each group). Because the passed variable is a dataframe, and variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is defined in the function, the <code class="docutils literal notranslate"><span class="pre">x</span></code> within <code class="docutils literal notranslate"><span class="pre">filter_func</span></code> body behaves like our dataframe–including having the same columns.</p>
 <div class="cell docutils container">
@@ -1400,9 +1685,9 @@ dtype: int64
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="transform">
-<h3>Transform<a class="headerlink" href="#transform" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="transform">
+<h3>Transform<a class="headerlink" href="#transform" title="Permalink to this headline">#</a></h3>
 <p>Transforms return a transformed version of the data, typically with an intermediate groupby, that has the same shape as the input. Think of it as split-apply-combine but without the ‘combine’ part! This is useful when creating new columns that depend on some grouped data, for instance creating group-wise means. Here’s an example using the datetime group to subtract a yearly mean. First let’s create a synthetic example with some data, a datetime index, and some groups:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1441,62 +1726,62 @@ dtype: int64
   <tbody>
     <tr>
       <th>2000-03-31</th>
-      <td>0</td>
+      <td>2</td>
       <td>8</td>
-      <td>group0</td>
+      <td>group2</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>1</td>
+      <td>4</td>
       <td>5</td>
-      <td>group1</td>
+      <td>group0</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>9</td>
-      <td>4</td>
+      <td>0</td>
+      <td>6</td>
       <td>group0</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
+      <td>0</td>
       <td>3</td>
-      <td>2</td>
       <td>group1</td>
     </tr>
     <tr>
       <th>2001-03-31</th>
-      <td>0</td>
+      <td>6</td>
       <td>7</td>
-      <td>group2</td>
+      <td>group0</td>
     </tr>
     <tr>
       <th>2001-06-30</th>
       <td>3</td>
-      <td>9</td>
-      <td>group1</td>
+      <td>7</td>
+      <td>group2</td>
     </tr>
     <tr>
       <th>2001-09-30</th>
-      <td>7</td>
-      <td>6</td>
+      <td>0</td>
+      <td>4</td>
       <td>group2</td>
     </tr>
     <tr>
       <th>2001-12-31</th>
-      <td>5</td>
-      <td>3</td>
-      <td>group1</td>
-    </tr>
-    <tr>
-      <th>2002-03-31</th>
+      <td>1</td>
       <td>2</td>
-      <td>8</td>
       <td>group2</td>
     </tr>
     <tr>
+      <th>2002-03-31</th>
+      <td>6</td>
+      <td>4</td>
+      <td>group0</td>
+    </tr>
+    <tr>
       <th>2002-06-30</th>
-      <td>5</td>
       <td>9</td>
+      <td>0</td>
       <td>group0</td>
     </tr>
   </tbody>
@@ -1541,73 +1826,73 @@ dtype: int64
   <tbody>
     <tr>
       <th>2000-03-31</th>
-      <td>0</td>
+      <td>2</td>
       <td>8</td>
-      <td>group0</td>
-      <td>-4.5</td>
+      <td>group2</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>1</td>
+      <td>4</td>
       <td>5</td>
-      <td>group1</td>
-      <td>-1.0</td>
+      <td>group0</td>
+      <td>2.000000</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>9</td>
-      <td>4</td>
+      <td>0</td>
+      <td>6</td>
       <td>group0</td>
-      <td>4.5</td>
+      <td>-2.000000</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
+      <td>0</td>
       <td>3</td>
-      <td>2</td>
       <td>group1</td>
-      <td>1.0</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2001-03-31</th>
-      <td>0</td>
+      <td>6</td>
       <td>7</td>
-      <td>group2</td>
-      <td>-3.5</td>
+      <td>group0</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2001-06-30</th>
       <td>3</td>
-      <td>9</td>
-      <td>group1</td>
-      <td>-1.0</td>
+      <td>7</td>
+      <td>group2</td>
+      <td>1.666667</td>
     </tr>
     <tr>
       <th>2001-09-30</th>
-      <td>7</td>
-      <td>6</td>
+      <td>0</td>
+      <td>4</td>
       <td>group2</td>
-      <td>3.5</td>
+      <td>-1.333333</td>
     </tr>
     <tr>
       <th>2001-12-31</th>
-      <td>5</td>
-      <td>3</td>
-      <td>group1</td>
-      <td>1.0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>group2</td>
+      <td>-0.333333</td>
     </tr>
     <tr>
       <th>2002-03-31</th>
-      <td>2</td>
-      <td>8</td>
-      <td>group2</td>
-      <td>0.0</td>
+      <td>6</td>
+      <td>4</td>
+      <td>group0</td>
+      <td>-1.500000</td>
     </tr>
     <tr>
       <th>2002-06-30</th>
-      <td>5</td>
       <td>9</td>
+      <td>0</td>
       <td>group0</td>
-      <td>0.0</td>
+      <td>1.500000</td>
     </tr>
   </tbody>
 </table>
@@ -1617,9 +1902,9 @@ dtype: int64
 <p class="admonition-title">Exercise</p>
 <p>Create a new column that gives <code class="docutils literal notranslate"><span class="pre">values2</span></code> normalised (minus the mean and divided by standard deviation) by <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p>
 </div>
-</div>
-<div class="section" id="assign">
-<h3>Assign<a class="headerlink" href="#assign" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="assign">
+<h3>Assign<a class="headerlink" href="#assign" title="Permalink to this headline">#</a></h3>
 <p>Assign is a method that allows you to return a new object with all the original columns in addition to new ones. Existing columns that are re-assigned will be overwritten. This is <em>really</em> useful when you want to perform a bunch of operations together in a concise way and keep the original columns. To show it in action, let’s generate some data:</p>
 <p>For instance, to demean the ‘values1’ column by year-type and to recompute the ‘val1_times_val2’ column using the newly demeaned ‘values1’ column:</p>
 <div class="cell docutils container">
@@ -1664,83 +1949,83 @@ dtype: int64
   <tbody>
     <tr>
       <th>2000-03-31</th>
-      <td>-4.5</td>
+      <td>0.000000</td>
       <td>8</td>
-      <td>group0</td>
-      <td>-4.5</td>
-      <td>-36.0</td>
+      <td>group2</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>-1.0</td>
+      <td>2.000000</td>
       <td>5</td>
-      <td>group1</td>
-      <td>-1.0</td>
-      <td>-5.0</td>
+      <td>group0</td>
+      <td>2.000000</td>
+      <td>10.000000</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>4.5</td>
-      <td>4</td>
+      <td>-2.000000</td>
+      <td>6</td>
       <td>group0</td>
-      <td>4.5</td>
-      <td>18.0</td>
+      <td>-2.000000</td>
+      <td>-12.000000</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
-      <td>1.0</td>
-      <td>2</td>
+      <td>0.000000</td>
+      <td>3</td>
       <td>group1</td>
-      <td>1.0</td>
-      <td>2.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2001-03-31</th>
-      <td>-3.5</td>
+      <td>0.000000</td>
       <td>7</td>
-      <td>group2</td>
-      <td>-3.5</td>
-      <td>-24.5</td>
+      <td>group0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>2001-06-30</th>
-      <td>-1.0</td>
-      <td>9</td>
-      <td>group1</td>
-      <td>-1.0</td>
-      <td>-9.0</td>
+      <td>1.666667</td>
+      <td>7</td>
+      <td>group2</td>
+      <td>1.666667</td>
+      <td>11.666667</td>
     </tr>
     <tr>
       <th>2001-09-30</th>
-      <td>3.5</td>
-      <td>6</td>
+      <td>-1.333333</td>
+      <td>4</td>
       <td>group2</td>
-      <td>3.5</td>
-      <td>21.0</td>
+      <td>-1.333333</td>
+      <td>-5.333333</td>
     </tr>
     <tr>
       <th>2001-12-31</th>
-      <td>1.0</td>
-      <td>3</td>
-      <td>group1</td>
-      <td>1.0</td>
-      <td>3.0</td>
+      <td>-0.333333</td>
+      <td>2</td>
+      <td>group2</td>
+      <td>-0.333333</td>
+      <td>-0.666667</td>
     </tr>
     <tr>
       <th>2002-03-31</th>
-      <td>0.0</td>
-      <td>8</td>
-      <td>group2</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>-1.500000</td>
+      <td>4</td>
+      <td>group0</td>
+      <td>-1.500000</td>
+      <td>-6.000000</td>
     </tr>
     <tr>
       <th>2002-06-30</th>
-      <td>0.0</td>
-      <td>9</td>
+      <td>1.500000</td>
+      <td>0</td>
       <td>group0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>1.500000</td>
+      <td>0.000000</td>
     </tr>
   </tbody>
 </table>
@@ -1750,10 +2035,10 @@ dtype: int64
 <p class="admonition-title">Exercise</p>
 <p>Re-write the transform function from the transform exercise (creating a normalised column transformed by <code class="docutils literal notranslate"><span class="pre">type</span></code>) as an assign statement with a new column name <code class="docutils literal notranslate"><span class="pre">transformed_by_type</span></code>.</p>
 </div>
-</div>
-</div>
-<div class="section" id="agg-transform-and-apply-when-to-use-each-with-a-groupby">
-<h2><code class="docutils literal notranslate"><span class="pre">agg</span></code>, <code class="docutils literal notranslate"><span class="pre">transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">apply</span></code>: when to use each with a groupby<a class="headerlink" href="#agg-transform-and-apply-when-to-use-each-with-a-groupby" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="agg-transform-and-apply-when-to-use-each-with-a-groupby">
+<h2><code class="docutils literal notranslate"><span class="pre">agg</span></code>, <code class="docutils literal notranslate"><span class="pre">transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">apply</span></code>: when to use each with a groupby<a class="headerlink" href="#agg-transform-and-apply-when-to-use-each-with-a-groupby" title="Permalink to this headline">#</a></h2>
 <p>With all of the different options available, it can be confusing to know when to use the different functions available for performing groupby operations, namely: <code class="docutils literal notranslate"><span class="pre">.agg</span></code>, <code class="docutils literal notranslate"><span class="pre">.transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">.apply</span></code>. Here are the key points to remember:</p>
 <ul class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">.agg</span></code> when using a groupby, but you want your groups to become the new index</p></li>
@@ -1824,12 +2109,12 @@ dtype: int64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="reshaping-data">
-<h2>Reshaping Data<a class="headerlink" href="#reshaping-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reshaping-data">
+<h2>Reshaping Data<a class="headerlink" href="#reshaping-data" title="Permalink to this headline">#</a></h2>
 <p>The main options for reshaping data are <code class="docutils literal notranslate"><span class="pre">pivot</span></code>, <code class="docutils literal notranslate"><span class="pre">melt</span></code>, <code class="docutils literal notranslate"><span class="pre">stack</span></code>, <code class="docutils literal notranslate"><span class="pre">unstack</span></code>, <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code>, <code class="docutils literal notranslate"><span class="pre">get_dummies</span></code>, <code class="docutils literal notranslate"><span class="pre">cross_tab</span></code>, and <code class="docutils literal notranslate"><span class="pre">explode</span></code>. We’ll look at some of these here.</p>
-<div class="section" id="pivoting-data-from-tidy-to-err-untidy">
-<h3>Pivoting data from tidy to, err, untidy<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy" title="Permalink to this headline">¶</a></h3>
+<section id="pivoting-data-from-tidy-to-err-untidy">
+<h3>Pivoting data from tidy to, err, untidy<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy" title="Permalink to this headline">#</a></h3>
 <p>In a previous chapter, we said you should use tidy data–one row per observation, one column per variable–whenever you can. But there are times when you will want to take your lovingly prepared tidy data and pivot it into a wider format. <code class="docutils literal notranslate"><span class="pre">pivot</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> help you to do that.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_pivot.png" /></p>
 <p>This can be especially useful for time series data, where operations like <code class="docutils literal notranslate"><span class="pre">shift</span></code> or <code class="docutils literal notranslate"><span class="pre">diff</span></code> are typically applied assuming that an entry in one row follows (in time) from the one above. Here’s an example:</p>
@@ -1876,39 +2161,39 @@ dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>16</th>
-      <td>2000-07-31</td>
-      <td>B</td>
-      <td>type3</td>
-      <td>1.888933</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2000-07-31</td>
-      <td>A</td>
-      <td>type2</td>
-      <td>1.526569</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2000-09-30</td>
-      <td>B</td>
-      <td>type4</td>
-      <td>0.459469</td>
-    </tr>
-    <tr>
       <th>10</th>
       <td>2000-01-31</td>
       <td>B</td>
       <td>type1</td>
-      <td>1.964530</td>
+      <td>-1.327014</td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>2000-06-30</td>
+      <th>14</th>
+      <td>2000-05-31</td>
       <td>B</td>
-      <td>type1</td>
-      <td>-0.004616</td>
+      <td>type3</td>
+      <td>-1.637476</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2000-06-30</td>
+      <td>A</td>
+      <td>type2</td>
+      <td>0.163817</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2000-02-29</td>
+      <td>A</td>
+      <td>type4</td>
+      <td>0.141038</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2000-07-31</td>
+      <td>B</td>
+      <td>type3</td>
+      <td>0.771642</td>
     </tr>
   </tbody>
 </table>
@@ -1957,48 +2242,48 @@ dtype: int64
     </tr>
     <tr>
       <th>2000-02-29</th>
-      <td>-0.569767</td>
-      <td>1.964530</td>
+      <td>-1.359867</td>
+      <td>-1.327014</td>
     </tr>
     <tr>
       <th>2000-03-31</th>
-      <td>0.815722</td>
-      <td>0.515977</td>
+      <td>0.141038</td>
+      <td>0.764351</td>
     </tr>
     <tr>
       <th>2000-04-30</th>
-      <td>0.086532</td>
-      <td>1.989750</td>
+      <td>1.345851</td>
+      <td>-0.309346</td>
     </tr>
     <tr>
       <th>2000-05-31</th>
-      <td>0.022323</td>
-      <td>0.070358</td>
+      <td>-0.857227</td>
+      <td>-0.500433</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>0.986112</td>
-      <td>-0.536225</td>
+      <td>0.751531</td>
+      <td>-1.637476</td>
     </tr>
     <tr>
       <th>2000-07-31</th>
-      <td>-1.823453</td>
-      <td>-0.004616</td>
+      <td>0.163817</td>
+      <td>-0.505202</td>
     </tr>
     <tr>
       <th>2000-08-31</th>
-      <td>1.526569</td>
-      <td>1.888933</td>
+      <td>-0.480170</td>
+      <td>0.771642</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>-0.945434</td>
-      <td>-0.571457</td>
+      <td>1.841605</td>
+      <td>0.847757</td>
     </tr>
     <tr>
       <th>2000-10-31</th>
-      <td>0.455111</td>
-      <td>0.459469</td>
+      <td>0.826310</td>
+      <td>0.515481</td>
     </tr>
   </tbody>
 </table>
@@ -2009,9 +2294,9 @@ dtype: int64
 <p class="admonition-title">Exercise</p>
 <p>Perform a pivot that applies to both the <code class="docutils literal notranslate"><span class="pre">variable</span></code> and <code class="docutils literal notranslate"><span class="pre">category</span></code> columns. (Hint: remember that you will need to pass multiple objects via a list.)</p>
 </div>
-</div>
-<div class="section" id="melt">
-<h3>Melt<a class="headerlink" href="#melt" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="melt">
+<h3>Melt<a class="headerlink" href="#melt" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">melt</span></code> can help you go from untidy to tidy data (from wide data to long data), and is a <em>really</em> good one to remember. Of course, I have to look at the documentation every single time myself, but I’m sure you’ll do better.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_melt.png" /></p>
 <p>Here’s an example of it in action:</p>
@@ -2154,7 +2439,7 @@ dtype: int64
       <td>d</td>
       <td>2.5</td>
       <td>3.2</td>
-      <td>0.242166</td>
+      <td>0.218046</td>
       <td>0</td>
     </tr>
     <tr>
@@ -2163,7 +2448,7 @@ dtype: int64
       <td>e</td>
       <td>1.2</td>
       <td>1.3</td>
-      <td>-1.358961</td>
+      <td>1.467545</td>
       <td>1</td>
     </tr>
     <tr>
@@ -2172,7 +2457,7 @@ dtype: int64
       <td>f</td>
       <td>0.7</td>
       <td>0.1</td>
-      <td>1.203499</td>
+      <td>-0.710249</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -2222,42 +2507,42 @@ dtype: int64
     <tr>
       <th>0</th>
       <th>1970</th>
-      <td>0.242166</td>
+      <td>0.218046</td>
       <td>a</td>
       <td>2.5</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1970</th>
-      <td>-1.358961</td>
+      <td>1.467545</td>
       <td>b</td>
       <td>1.2</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1970</th>
-      <td>1.203499</td>
+      <td>-0.710249</td>
       <td>c</td>
       <td>0.7</td>
     </tr>
     <tr>
       <th>0</th>
       <th>1980</th>
-      <td>0.242166</td>
+      <td>0.218046</td>
       <td>d</td>
       <td>3.2</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1980</th>
-      <td>-1.358961</td>
+      <td>1.467545</td>
       <td>e</td>
       <td>1.3</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1980</th>
-      <td>1.203499</td>
+      <td>-0.710249</td>
       <td>f</td>
       <td>0.1</td>
     </tr>
@@ -2265,9 +2550,9 @@ dtype: int64
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="stack-and-unstack">
-<h3>Stack and unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stack-and-unstack">
+<h3>Stack and unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this headline">#</a></h3>
 <p>Stack, <code class="docutils literal notranslate"><span class="pre">stack()</span></code> is a shortcut for taking a single type of wide data variable from columns and turning it into a long form dataset, but with an extra index.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_stack.png" /></p>
 <p>Unstack, <code class="docutils literal notranslate"><span class="pre">unstack()</span></code> unsurprisingly does the same operation, but in reverse.</p>
@@ -2323,46 +2608,46 @@ dtype: int64
     <tr>
       <th rowspan="2" valign="top">bar</th>
       <th>one</th>
-      <td>-0.535849</td>
-      <td>-0.814013</td>
+      <td>-1.048413</td>
+      <td>0.669383</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>0.201696</td>
-      <td>-1.095501</td>
+      <td>0.792789</td>
+      <td>-0.931927</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">baz</th>
       <th>one</th>
-      <td>-1.379562</td>
-      <td>0.240403</td>
+      <td>-0.191107</td>
+      <td>2.308337</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-0.411353</td>
-      <td>-0.510288</td>
+      <td>0.388362</td>
+      <td>1.104554</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">foo</th>
       <th>one</th>
-      <td>-0.818071</td>
-      <td>0.258794</td>
+      <td>-0.005959</td>
+      <td>1.123720</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-1.012644</td>
-      <td>0.467200</td>
+      <td>-0.897481</td>
+      <td>1.168920</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">qux</th>
       <th>one</th>
-      <td>-1.660616</td>
-      <td>0.780266</td>
+      <td>0.309240</td>
+      <td>0.335647</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-2.037947</td>
-      <td>-0.602610</td>
+      <td>-1.825872</td>
+      <td>0.803889</td>
     </tr>
   </tbody>
 </table>
@@ -2378,22 +2663,22 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first  second   
-bar    one     A   -0.535849
-               B   -0.814013
-       two     A    0.201696
-               B   -1.095501
-baz    one     A   -1.379562
-               B    0.240403
-       two     A   -0.411353
-               B   -0.510288
-foo    one     A   -0.818071
-               B    0.258794
-       two     A   -1.012644
-               B    0.467200
-qux    one     A   -1.660616
-               B    0.780266
-       two     A   -2.037947
-               B   -0.602610
+bar    one     A   -1.048413
+               B    0.669383
+       two     A    0.792789
+               B   -0.931927
+baz    one     A   -0.191107
+               B    2.308337
+       two     A    0.388362
+               B    1.104554
+foo    one     A   -0.005959
+               B    1.123720
+       two     A   -0.897481
+               B    1.168920
+qux    one     A    0.309240
+               B    0.335647
+       two     A   -1.825872
+               B    0.803889
 dtype: float64
 </pre></div>
 </div>
@@ -2447,32 +2732,32 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">one</th>
       <th>A</th>
-      <td>-0.535849</td>
-      <td>-1.379562</td>
-      <td>-0.818071</td>
-      <td>-1.660616</td>
+      <td>-1.048413</td>
+      <td>-0.191107</td>
+      <td>-0.005959</td>
+      <td>0.309240</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-0.814013</td>
-      <td>0.240403</td>
-      <td>0.258794</td>
-      <td>0.780266</td>
+      <td>0.669383</td>
+      <td>2.308337</td>
+      <td>1.123720</td>
+      <td>0.335647</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">two</th>
       <th>A</th>
-      <td>0.201696</td>
-      <td>-0.411353</td>
-      <td>-1.012644</td>
-      <td>-2.037947</td>
+      <td>0.792789</td>
+      <td>0.388362</td>
+      <td>-0.897481</td>
+      <td>-1.825872</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-1.095501</td>
-      <td>-0.510288</td>
-      <td>0.467200</td>
-      <td>-0.602610</td>
+      <td>-0.931927</td>
+      <td>1.104554</td>
+      <td>1.168920</td>
+      <td>0.803889</td>
     </tr>
   </tbody>
 </table>
@@ -2482,9 +2767,9 @@ dtype: float64
 <p class="admonition-title">Exercise</p>
 <p>What happens if you unstack to <code class="docutils literal notranslate"><span class="pre">level=1</span></code> instead? What about applying <code class="docutils literal notranslate"><span class="pre">unstack()</span></code> twice?</p>
 </div>
-</div>
-<div class="section" id="get-dummies">
-<h3>Get dummies<a class="headerlink" href="#get-dummies" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="get-dummies">
+<h3>Get dummies<a class="headerlink" href="#get-dummies" title="Permalink to this headline">#</a></h3>
 <p>This is a really useful reshape command for when you want (explicit) dummies in your dataframe. When running simple regressions, you can achieve the same effect by declaring the column only be included as a fixed effect, but there are some machine learning packages where converting to dummies may be easier.</p>
 <p>Here’s an example:</p>
 <div class="cell docutils container">
@@ -2559,10 +2844,10 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="a-quick-look-at-time-series-and-rolling-windows">
-<h2>A quick look at time series and rolling windows<a class="headerlink" href="#a-quick-look-at-time-series-and-rolling-windows" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="a-quick-look-at-time-series-and-rolling-windows">
+<h2>A quick look at time series and rolling windows<a class="headerlink" href="#a-quick-look-at-time-series-and-rolling-windows" title="Permalink to this headline">#</a></h2>
 <p>The support for time series and the datetime type is excellent in <strong>pandas</strong> and in Python in general; you can find more about this in <a class="reference internal" href="time-intro.html#time-intro"><span class="std std-ref">Introduction to Time</span></a> and more on how to use time series with <strong>pandas</strong> in <a class="reference internal" href="time-series.html#time-series"><span class="std std-ref">Time Series</span></a>.</p>
 <p>It is very easy to manipulate datetimes with <strong>pandas</strong>. The <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">relevant part</a> of the documentation has more info; here we’ll just see a couple of the most important bits. First, let’s create some synthetic data to work with:</p>
 <div class="cell docutils container">
@@ -2608,31 +2893,31 @@ dtype: float64
   <tbody>
     <tr>
       <th>2000-01-31</th>
-      <td>0.615918</td>
+      <td>0.674496</td>
     </tr>
     <tr>
       <th>2000-02-29</th>
-      <td>0.465688</td>
+      <td>0.819494</td>
     </tr>
     <tr>
       <th>2000-03-31</th>
-      <td>0.275121</td>
+      <td>2.310490</td>
     </tr>
     <tr>
       <th>2000-04-30</th>
-      <td>-0.059647</td>
+      <td>3.368644</td>
     </tr>
     <tr>
       <th>2000-05-31</th>
-      <td>0.853519</td>
+      <td>3.468246</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>1.799290</td>
+      <td>3.392826</td>
     </tr>
     <tr>
       <th>2000-07-31</th>
-      <td>2.306091</td>
+      <td>4.792135</td>
     </tr>
     <tr>
       <th>2000-08-31</th>
@@ -2640,19 +2925,19 @@ dtype: float64
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>1.203404</td>
+      <td>4.726579</td>
     </tr>
     <tr>
       <th>2000-10-31</th>
-      <td>1.950528</td>
+      <td>4.401450</td>
     </tr>
     <tr>
       <th>2000-11-30</th>
-      <td>1.349622</td>
+      <td>4.821884</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
-      <td>1.892713</td>
+      <td>5.329517</td>
     </tr>
   </tbody>
 </table>
@@ -2703,75 +2988,75 @@ dtype: float64
   <tbody>
     <tr>
       <th>2000-02-01</th>
-      <td>0.615918</td>
+      <td>0.674496</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2000-03-01</th>
-      <td>0.465688</td>
-      <td>-0.150230</td>
+      <td>0.819494</td>
+      <td>0.144998</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2000-04-01</th>
-      <td>0.275121</td>
-      <td>-0.190567</td>
-      <td>-0.150230</td>
+      <td>2.310490</td>
+      <td>1.490996</td>
+      <td>0.144998</td>
     </tr>
     <tr>
       <th>2000-05-01</th>
-      <td>-0.059647</td>
-      <td>-0.334768</td>
-      <td>-0.190567</td>
+      <td>3.368644</td>
+      <td>1.058154</td>
+      <td>1.490996</td>
     </tr>
     <tr>
       <th>2000-06-01</th>
-      <td>0.853519</td>
-      <td>0.913165</td>
-      <td>-0.334768</td>
+      <td>3.468246</td>
+      <td>0.099602</td>
+      <td>1.058154</td>
     </tr>
     <tr>
       <th>2000-07-01</th>
-      <td>1.799290</td>
-      <td>0.945772</td>
-      <td>0.913165</td>
+      <td>3.392826</td>
+      <td>-0.075420</td>
+      <td>0.099602</td>
     </tr>
     <tr>
       <th>2000-08-01</th>
-      <td>2.306091</td>
-      <td>0.506801</td>
-      <td>0.945772</td>
+      <td>4.792135</td>
+      <td>1.399309</td>
+      <td>-0.075420</td>
     </tr>
     <tr>
       <th>2000-09-01</th>
-      <td>1.745709</td>
-      <td>-0.560382</td>
-      <td>0.506801</td>
+      <td>4.758820</td>
+      <td>-0.033315</td>
+      <td>1.399309</td>
     </tr>
     <tr>
       <th>2000-10-01</th>
-      <td>1.203404</td>
-      <td>-0.542305</td>
-      <td>-0.560382</td>
+      <td>4.726579</td>
+      <td>-0.032241</td>
+      <td>-0.033315</td>
     </tr>
     <tr>
       <th>2000-11-01</th>
-      <td>1.950528</td>
-      <td>0.747124</td>
-      <td>-0.542305</td>
+      <td>4.401450</td>
+      <td>-0.325130</td>
+      <td>-0.032241</td>
     </tr>
     <tr>
       <th>2000-12-01</th>
-      <td>1.349622</td>
-      <td>-0.600906</td>
-      <td>0.747124</td>
+      <td>4.821884</td>
+      <td>0.420435</td>
+      <td>-0.325130</td>
     </tr>
     <tr>
       <th>2001-01-01</th>
-      <td>1.892713</td>
-      <td>0.543091</td>
-      <td>-0.600906</td>
+      <td>5.329517</td>
+      <td>0.507633</td>
+      <td>0.420435</td>
     </tr>
   </tbody>
 </table>
@@ -2795,15 +3080,15 @@ dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000-02-01         NaN
 2000-03-01         NaN
 2000-04-01         NaN
-2000-05-01   -0.225188
-2000-06-01    0.129277
-2000-07-01    0.508056
-2000-08-01    0.788579
-2000-09-01    0.297397
-2000-10-01   -0.198629
-2000-11-01   -0.118521
-2000-12-01   -0.132029
-2001-01-01    0.229769
+2000-05-01    0.898049
+2000-06-01    0.882917
+2000-07-01    0.360779
+2000-08-01    0.474497
+2000-09-01    0.430191
+2000-10-01    0.444584
+2000-11-01   -0.130229
+2000-12-01    0.021022
+2001-01-01    0.200979
 Name: diff_values, dtype: float64
 </pre></div>
 </div>
@@ -3115,9 +3400,9 @@ Name: diff_values, dtype: float64
 </div></div></div>
 </div>
 <p>For a more in-depth look at combining groups with rolling aggregations, take a look at the <a class="reference external" href="https://calmcode.io/pandas-datetime/rolling-groupby.html">tutorial on calmcode</a>.</p>
-</div>
-<div class="section" id="method-chaining">
-<h2>Method Chaining<a class="headerlink" href="#method-chaining" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="method-chaining">
+<h2>Method Chaining<a class="headerlink" href="#method-chaining" title="Permalink to this headline">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Method Chaining is a more advanced topic; feel free to skip it.</p>
@@ -3335,7 +3620,9 @@ Name: diff_values, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_92287/1424200124.py:22: FutureWarning: The default value of regex will change from True to False in a future version.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_13740/1424200124.py:22: FutureWarning: The default value of regex will change from True to False in a future version.
+  col.astype(str)
+/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_13740/1424200124.py:22: FutureWarning: The default value of regex will change from True to False in a future version.
   col.astype(str)
 </pre></div>
 </div>
@@ -3469,8 +3756,8 @@ Name: diff_values, dtype: float64
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3494,64 +3781,51 @@ Name: diff_values, dtype: float64
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="data-intro.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Working with Data</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="data-intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Working with Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data-read-and-write.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Reading and Writing Files</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="data-read-and-write.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Reading and Writing Files</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

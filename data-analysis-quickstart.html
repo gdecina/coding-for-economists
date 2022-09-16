@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Data Analysis Quickstart &#8212; Coding for Economists</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-analysis-quickstart.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -59,10 +60,35 @@
     <link rel="next" title="Working with Data" href="data-intro.html" />
     <link rel="prev" title="Writing Code" href="code-where.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9FZQCPFXZJ');
+                </script>
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting Started
  </span>
@@ -125,7 +153,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -172,7 +200,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coding
  </span>
@@ -194,7 +222,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data Visualisation
  </span>
@@ -221,7 +249,29 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="auto-research-outputs.html">
+   Automating Research Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-quarto.html">
+   Combining Code and Text in Quarto Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More Data
  </span>
@@ -263,22 +313,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Workflow
+  More Workflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-command-line.html">
    The Command Line
@@ -290,17 +330,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Econometrics
  </span>
@@ -331,8 +366,13 @@
    Bayesian Inference
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Craft
  </span>
@@ -364,7 +404,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Time
  </span>
@@ -386,7 +426,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Text Analysis
  </span>
@@ -408,7 +448,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Geospatial
  </span>
@@ -425,7 +465,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mathematics
  </span>
@@ -437,7 +477,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Coming from ...
  </span>
@@ -464,7 +504,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   End Matter
  </span>
@@ -483,112 +523,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/data-analysis-quickstart.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/coding-for-economists"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-analysis-quickstart.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-analysis-quickstart.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-analysis-quickstart.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-analysis-quickstart.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-analysis-quickstart.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-analysis-quickstart.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/data-analysis-quickstart.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
    Introduction
@@ -728,27 +883,182 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Analysis Quickstart</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-data-and-checking-datatypes">
+   Loading data and checking datatypes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#look-at-the-first-few-rows-with-head">
+     Look at the first few rows with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       head()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filter-rows-and-columns-with-conditions-using-df-loc-condition-s-or-row-s-column-s">
+   Filter rows and columns with conditions using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     df.loc[condition(s)
+    </span>
+    <span class="pre">
+     or
+    </span>
+    <span class="pre">
+     row(s),
+    </span>
+    <span class="pre">
+     column(s)]
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sort-rows-or-columns-with-sort-values">
+   Sort rows or columns with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .sort_values()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choose-multiple-rows-or-columns-using-slices">
+   Choose multiple rows or columns using slices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randomly-selecting-a-sample-using-sample">
+   Randomly selecting a sample using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .sample
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rename-with-rename">
+   Rename with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .rename
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-new-columns-with-assign-or-assignment">
+   Add new columns with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .assign
+    </span>
+   </code>
+   or assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summarise-numerical-values-with-describe">
+   Summarise numerical values with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .describe()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-variables-values-with-groupby">
+   Group variables values with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .groupby()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-transformed-columns-using-transform">
+   Add transformed columns using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .transform()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-quick-charts-with-plot">
+   Make quick charts with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .plot.*
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#export-results-and-descriptive-statistics">
+   Export results and descriptive statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="data-analysis-quickstart">
-<span id="data-quickstart"></span><h1>Data Analysis Quickstart<a class="headerlink" href="#data-analysis-quickstart" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-analysis-quickstart">
+<span id="data-quickstart"></span><h1>Data Analysis Quickstart<a class="headerlink" href="#data-analysis-quickstart" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Here we’ll do a whistlestop tour of data analysis in Python using a structure called a <em>dataframe</em>. Dataframes do everything a spreadsheet does, and a whole lot more. At their simplest, dataframes are a tabular representation of data with rows and columns. The data in each column can be anything; text, numbers, Python objects such as lists or dictionaries, or even other dataframes!</p>
 <p>The ability to extract, clean, and analyse data is one of the core skills any economist needs. Fortunately, the (open source) tools that are available for data analysis have improved enormously in recent years, and working with them can be a delight——even the most badly formatted data can be beaten into shape.</p>
 <p>In this chapter, we’ll see analysis on a <em>single</em> dataframe using the Star Wars’ characters dataset as an example. For a more thorough grounding in using data, see the next chapter.</p>
 <p>This chapter uses the <a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a> and <a class="reference external" href="https://numpy.org/"><strong>numpy</strong></a> packages. If you’re running this code, you may need to install these packages. The Anaconda distribution of Python comes with <strong>pandas</strong> and <strong>numpy</strong> installed. If you don’t have these installed, you can install them by running either <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. You can find a brief guide to installing packages on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 <p>This chapter is hugely indebted to the fantastic <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, and both the <strong>pandas</strong> <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">documentation</a> and amazing <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/index.html">introductory tutorials</a>.</p>
-</div>
-<div class="section" id="loading-data-and-checking-datatypes">
-<h2>Loading data and checking datatypes<a class="headerlink" href="#loading-data-and-checking-datatypes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="loading-data-and-checking-datatypes">
+<h2>Loading data and checking datatypes<a class="headerlink" href="#loading-data-and-checking-datatypes" title="Permalink to this headline">#</a></h2>
 <p>First we must import the packages we’ll be using in the rest of this chapter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -802,8 +1112,8 @@ memory usage: 5.8+ KB
 </div>
 </div>
 </div>
-<div class="section" id="look-at-the-first-few-rows-with-head">
-<h3>Look at the first few rows with <code class="docutils literal notranslate"><span class="pre">head()</span></code><a class="headerlink" href="#look-at-the-first-few-rows-with-head" title="Permalink to this headline">¶</a></h3>
+<section id="look-at-the-first-few-rows-with-head">
+<h3>Look at the first few rows with <code class="docutils literal notranslate"><span class="pre">head()</span></code><a class="headerlink" href="#look-at-the-first-few-rows-with-head" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -903,10 +1213,10 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>What happens if you pass a number to <code class="docutils literal notranslate"><span class="pre">head()</span></code>, eg <code class="docutils literal notranslate"><span class="pre">head(10)</span></code>?</p>
 </div>
-</div>
-</div>
-<div class="section" id="filter-rows-and-columns-with-conditions-using-df-loc-condition-s-or-row-s-column-s">
-<h2>Filter rows and columns with conditions using <code class="docutils literal notranslate"><span class="pre">df.loc[condition(s)</span> <span class="pre">or</span> <span class="pre">row(s),</span> <span class="pre">column(s)]</span></code><a class="headerlink" href="#filter-rows-and-columns-with-conditions-using-df-loc-condition-s-or-row-s-column-s" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="filter-rows-and-columns-with-conditions-using-df-loc-condition-s-or-row-s-column-s">
+<h2>Filter rows and columns with conditions using <code class="docutils literal notranslate"><span class="pre">df.loc[condition(s)</span> <span class="pre">or</span> <span class="pre">row(s),</span> <span class="pre">column(s)]</span></code><a class="headerlink" href="#filter-rows-and-columns-with-conditions-using-df-loc-condition-s-or-row-s-column-s" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">.loc</span></code> stands for location and allows you to filter (aka subset) a dataframe. <code class="docutils literal notranslate"><span class="pre">.loc</span></code> works like an index, so it always comes with square brackets, eg <code class="docutils literal notranslate"><span class="pre">df.loc[...]</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">loc</span></code> takes two arguments. The first is a list of the names of the rows that you’d like to select <em>or</em> a condition (ie a list of booleans with the same length as the dataframe) that selects certain rows. Remember, you can easily create a series of booleans by checking a column against a condition, for example <code class="docutils literal notranslate"><span class="pre">df['column1']</span> <span class="pre">==</span> <span class="pre">'black'</span></code>.</p>
 <p>The second argument consists of a list of column names you’d like to select. In both cases, <code class="docutils literal notranslate"><span class="pre">:</span></code> is shorthand for ‘use all rows’ or ‘use all columns’. If you have <em>either</em> condition(s) <em>or</em> column(s) (but not both), you can simply write <code class="docutils literal notranslate"><span class="pre">df[condition(s)]</span></code> or <code class="docutils literal notranslate"><span class="pre">df[column(s)]</span></code>.</p>
@@ -979,9 +1289,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">loc</span></code>, filter the dataframe to <code class="docutils literal notranslate"><span class="pre">mass</span></code> greater than 50 for the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> columns</p>
 </div>
-</div>
-<div class="section" id="sort-rows-or-columns-with-sort-values">
-<h2>Sort rows or columns with <code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code><a class="headerlink" href="#sort-rows-or-columns-with-sort-values" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sort-rows-or-columns-with-sort-values">
+<h2>Sort rows or columns with <code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code><a class="headerlink" href="#sort-rows-or-columns-with-sort-values" title="Permalink to this headline">#</a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">sort_values(columns,</span> <span class="pre">ascending=False)</span></code> for descending order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1105,9 +1415,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">sort_values</span></code>, sort the dataframe by the <code class="docutils literal notranslate"><span class="pre">name</span></code> column.</p>
 </div>
-</div>
-<div class="section" id="choose-multiple-rows-or-columns-using-slices">
-<h2>Choose multiple rows or columns using slices<a class="headerlink" href="#choose-multiple-rows-or-columns-using-slices" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="choose-multiple-rows-or-columns-using-slices">
+<h2>Choose multiple rows or columns using slices<a class="headerlink" href="#choose-multiple-rows-or-columns-using-slices" title="Permalink to this headline">#</a></h2>
 <p>Slices can be passed by name using <code class="docutils literal notranslate"><span class="pre">.loc[startrow:stoprow:step,</span> <span class="pre">startcolumn:stopcolumn:step]</span></code> or by position using <code class="docutils literal notranslate"><span class="pre">.iloc[start:stop:step,</span> <span class="pre">start:stop:step]</span></code>.</p>
 <p>Choosing every 10th row from the second, and the columns between ‘name’ and ‘gender’:</p>
 <div class="cell docutils container">
@@ -1277,9 +1587,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>, display the first 6 rows and last 6 columns.</p>
 </div>
-</div>
-<div class="section" id="randomly-selecting-a-sample-using-sample">
-<h2>Randomly selecting a sample using <code class="docutils literal notranslate"><span class="pre">.sample</span></code><a class="headerlink" href="#randomly-selecting-a-sample-using-sample" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="randomly-selecting-a-sample-using-sample">
+<h2>Randomly selecting a sample using <code class="docutils literal notranslate"><span class="pre">.sample</span></code><a class="headerlink" href="#randomly-selecting-a-sample-using-sample" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">.sample(n)</span></code> randomly selects <code class="docutils literal notranslate"><span class="pre">n</span></code> rows, <code class="docutils literal notranslate"><span class="pre">.sample(frac=0.4)</span></code> selects 40% of the data, <code class="docutils literal notranslate"><span class="pre">replace=True</span></code> samples with replacement, and passing <code class="docutils literal notranslate"><span class="pre">weights=</span></code> selects a number or fraction with the probabilities given by the passed weights. (Note that weights passed should have the same length as the dataframe.)</p>
 <p>Taking a sample of 5 rows:</p>
 <div class="cell docutils container">
@@ -1381,9 +1691,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">.sample</span></code> to sample 5% of the dataframe.</p>
 </div>
-</div>
-<div class="section" id="rename-with-rename">
-<h2>Rename with <code class="docutils literal notranslate"><span class="pre">.rename</span></code><a class="headerlink" href="#rename-with-rename" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="rename-with-rename">
+<h2>Rename with <code class="docutils literal notranslate"><span class="pre">.rename</span></code><a class="headerlink" href="#rename-with-rename" title="Permalink to this headline">#</a></h2>
 <p>You can rename all columns by passing a function, for instance <code class="docutils literal notranslate"><span class="pre">df.rename(columns=str.lower)</span></code> to put all columns in lower case. Alternatively, use a dictionary to say which columns should be mapped to what:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1503,9 +1813,9 @@ memory usage: 5.8+ KB
 <p>82 rows × 8 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="add-new-columns-with-assign-or-assignment">
-<h2>Add new columns with <code class="docutils literal notranslate"><span class="pre">.assign</span></code> or assignment<a class="headerlink" href="#add-new-columns-with-assign-or-assignment" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="add-new-columns-with-assign-or-assignment">
+<h2>Add new columns with <code class="docutils literal notranslate"><span class="pre">.assign</span></code> or assignment<a class="headerlink" href="#add-new-columns-with-assign-or-assignment" title="Permalink to this headline">#</a></h2>
 <p>Very often you will want to create new columns based on existing columns.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/05_newcolumn_1.svg" /></p>
 <p>There are two ways to do this. Let’s see them both with an example where we’d like to create a new column of height in metres, called <code class="docutils literal notranslate"><span class="pre">&quot;height_m:</span></code>.</p>
@@ -1852,9 +2162,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Add a new column that gives the ratio of mass to height.</p>
 </div>
-</div>
-<div class="section" id="summarise-numerical-values-with-describe">
-<h2>Summarise numerical values with <code class="docutils literal notranslate"><span class="pre">.describe()</span></code><a class="headerlink" href="#summarise-numerical-values-with-describe" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="summarise-numerical-values-with-describe">
+<h2>Summarise numerical values with <code class="docutils literal notranslate"><span class="pre">.describe()</span></code><a class="headerlink" href="#summarise-numerical-values-with-describe" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1933,9 +2243,9 @@ memory usage: 5.8+ KB
 <p>8 rows × 3 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="group-variables-values-with-groupby">
-<h2>Group variables values with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code><a class="headerlink" href="#group-variables-values-with-groupby" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="group-variables-values-with-groupby">
+<h2>Group variables values with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code><a class="headerlink" href="#group-variables-values-with-groupby" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;species&quot;</span><span class="p">)[[</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;mass&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -2015,9 +2325,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Find the standard deviation (using <code class="docutils literal notranslate"><span class="pre">std()</span></code>) of masses by <code class="docutils literal notranslate"><span class="pre">homeworld</span></code>.</p>
 </div>
-</div>
-<div class="section" id="add-transformed-columns-using-transform">
-<h2>Add transformed columns using <code class="docutils literal notranslate"><span class="pre">.transform()</span></code><a class="headerlink" href="#add-transformed-columns-using-transform" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="add-transformed-columns-using-transform">
+<h2>Add transformed columns using <code class="docutils literal notranslate"><span class="pre">.transform()</span></code><a class="headerlink" href="#add-transformed-columns-using-transform" title="Permalink to this headline">#</a></h2>
 <p>Quite often, it’s useful to put a column into a dataframe that is the result of an intermediate groupby and aggregation. For example, subtracting the group mean or normalisation. Transform does this and <em>returns a transformed column with the same shape as the original dataframe</em>. Transform preserves the original index. (There are other methods, such as apply, that return a new dataframe with the groupby variables as a new index.)</p>
 <p>Below is an example of transform being used to demean a variable according to the mean by species. Note that we are using lambda functions here. Lambda functions are a quick way of writing functions without needing to give them a name, e.g. <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x+1</span></code> defines a function that adds one to x. In the example below, the <code class="docutils literal notranslate"><span class="pre">x</span></code> in the lambda function takes on the role of mass grouped by species.</p>
 <div class="cell docutils container">
@@ -2132,9 +2442,9 @@ memory usage: 5.8+ KB
 <p class="admonition-title">Exercise</p>
 <p>Create a <code class="docutils literal notranslate"><span class="pre">height_demean_homeworld</span></code> column that gives the height column with the mean height by homeworld subtracted.</p>
 </div>
-</div>
-<div class="section" id="make-quick-charts-with-plot">
-<h2>Make quick charts with <code class="docutils literal notranslate"><span class="pre">.plot.*</span></code><a class="headerlink" href="#make-quick-charts-with-plot" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="make-quick-charts-with-plot">
+<h2>Make quick charts with <code class="docutils literal notranslate"><span class="pre">.plot.*</span></code><a class="headerlink" href="#make-quick-charts-with-plot" title="Permalink to this headline">#</a></h2>
 <p>Including scatter, area, bar, box, density, hexbin, histogram, kde, and line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2163,9 +2473,9 @@ memory usage: 5.8+ KB
 <div class="cell_output docutils container">
 <img alt="_images/data-analysis-quickstart_46_0.svg" src="_images/data-analysis-quickstart_46_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="export-results-and-descriptive-statistics">
-<h2>Export results and descriptive statistics<a class="headerlink" href="#export-results-and-descriptive-statistics" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="export-results-and-descriptive-statistics">
+<h2>Export results and descriptive statistics<a class="headerlink" href="#export-results-and-descriptive-statistics" title="Permalink to this headline">#</a></h2>
 <p>You’ll often want to export your results to a latex file for inclusion in a paper, presentation, or poster. Let’s say we had some descriptive statistics on a dataframe:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2236,6 +2546,10 @@ std  &amp;  170.810183 &amp;   34.483629 \\
 \end{table}
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_12812/3440778236.py:1: FutureWarning: In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
+  print(table.to_latex(caption=&quot;A Table&quot;, label=&quot;tab:descriptive&quot;))
+</pre></div>
+</div>
 </div>
 </div>
 <p>Writing to the terminal isn’t that useful for getting your paper or report done! To export to a file, use <code class="docutils literal notranslate"><span class="pre">table.to_latex('file.tex',</span> <span class="pre">...)</span></code>.</p>
@@ -2245,12 +2559,12 @@ std  &amp;  170.810183 &amp;   34.483629 \\
 <p>If you are running this locally, the file should appear in the directory in which you are running this notebook.</p>
 <p>If you are using Google Colab to do these exercises, you can check that the file exported by running <code class="docutils literal notranslate"><span class="pre">!ls</span></code> in a new code cell to see all files in the current notebook directory. To get the contents of the file you created, run <code class="docutils literal notranslate"><span class="pre">!cat</span> <span class="pre">table.txt</span></code>.</p>
 </div>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <p>This has been a quick tour of what <strong>pandas</strong> can do, and shows the power of this ubiquitous tool, but we’ve barely seen a fraction of its features. The next chapter will go deeper into how to use <strong>pandas</strong>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2274,64 +2588,51 @@ std  &amp;  170.810183 &amp;   34.483629 \\
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="code-where.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Writing Code</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="code-where.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Writing Code</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data-intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Working with Data</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="data-intro.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Working with Data</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Arthur Turrell<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            This book is available under an MIT license.
-          </div>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Arthur Turrell<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      This book is available under an MIT license.
     </div>
-  </footer>
-</main>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
 
   </body>
 </html>

@@ -1,125 +1,96 @@
 Traceback (most recent call last):
   File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 1112, in execute
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
   File "/opt/anaconda3/envs/codeforecon/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 553, in async_execute
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 857, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import matplotlib_inline.backend_inline
-
-# Plot settings
-plt.style.use(
-    "https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt"
+# World Bank CO2 emissions (metric tons per capita)
+# https://data.worldbank.org/indicator/EN.ATM.CO2E.PC
+# World Bank pop
+# https://data.worldbank.org/indicator/SP.POP.TOTL
+# country and region codes at http://api.worldbank.org/v2/country
+from pandas_datareader import wb
+df = wb.download(
+    indicator="EN.ATM.CO2E.PC",
+    country=["US", "CHN", "IND", "Z4", "Z7"],
+    start=2017,
+    end=2017,
 )
-matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
-
-# Set max rows displayed for readability
-pd.set_option("display.max_rows", 6)
+# remove country as index for ease of plotting with seaborn
+df = df.reset_index()
+# wrap long country names
+df["country"] = df["country"].apply(lambda x: textwrap.fill(x, 10))
+# order based on size
+df = df.sort_values("EN.ATM.CO2E.PC")
+df.head()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mRemoteDisconnected[0m                        Traceback (most recent call last)
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/matplotlib/style/core.py[0m in [0;36muse[0;34m(style)[0m
-[1;32m    114[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 115[0;31m                 [0mrc[0m [0;34m=[0m [0mrc_params_from_file[0m[0;34m([0m[0mstyle[0m[0;34m,[0m [0muse_default_template[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    116[0m                 [0m_apply_style[0m[0;34m([0m[0mrc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Input [0;32mIn [6][0m, in [0;36m<cell line: 7>[0;34m()[0m
+[1;32m      1[0m [38;5;66;03m# World Bank CO2 emissions (metric tons per capita)[39;00m
+[1;32m      2[0m [38;5;66;03m# https://data.worldbank.org/indicator/EN.ATM.CO2E.PC[39;00m
+[1;32m      3[0m [38;5;66;03m# World Bank pop[39;00m
+[1;32m      4[0m [38;5;66;03m# https://data.worldbank.org/indicator/SP.POP.TOTL[39;00m
+[1;32m      5[0m [38;5;66;03m# country and region codes at http://api.worldbank.org/v2/country[39;00m
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpandas_datareader[39;00m [38;5;28;01mimport[39;00m wb
+[0;32m----> 7[0m df [38;5;241m=[39m [43mwb[49m[38;5;241;43m.[39;49m[43mdownload[49m[43m([49m
+[1;32m      8[0m [43m    [49m[43mindicator[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mEN.ATM.CO2E.PC[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m      9[0m [43m    [49m[43mcountry[49m[38;5;241;43m=[39;49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43mUS[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mCHN[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mIND[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mZ4[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mZ7[39;49m[38;5;124;43m"[39;49m[43m][49m[43m,[49m
+[1;32m     10[0m [43m    [49m[43mstart[49m[38;5;241;43m=[39;49m[38;5;241;43m2017[39;49m[43m,[49m
+[1;32m     11[0m [43m    [49m[43mend[49m[38;5;241;43m=[39;49m[38;5;241;43m2017[39;49m[43m,[49m
+[1;32m     12[0m [43m)[49m
+[1;32m     13[0m [38;5;66;03m# remove country as index for ease of plotting with seaborn[39;00m
+[1;32m     14[0m df [38;5;241m=[39m df[38;5;241m.[39mreset_index()
 
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/matplotlib/__init__.py[0m in [0;36mrc_params_from_file[0;34m(fname, fail_on_error, use_default_template)[0m
-[1;32m    797[0m     """
-[0;32m--> 798[0;31m     [0mconfig_from_file[0m [0;34m=[0m [0m_rc_params_in_file[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0mfail_on_error[0m[0;34m=[0m[0mfail_on_error[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    799[0m [0;34m[0m[0m
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:861[0m, in [0;36mdownload[0;34m(country, indicator, start, end, freq, errors, **kwargs)[0m
+[1;32m    816[0m [38;5;28;01mdef[39;00m [38;5;21mdownload[39m(
+[1;32m    817[0m     country[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m    818[0m     indicator[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[0;32m   (...)[0m
+[1;32m    823[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs
+[1;32m    824[0m ):
+[1;32m    825[0m     [38;5;124;03m"""[39;00m
+[1;32m    826[0m [38;5;124;03m    Download data series from the World Bank's World Development Indicators[39;00m
+[1;32m    827[0m 
+[0;32m   (...)[0m
+[1;32m    859[0m [38;5;124;03m        DataFrame with columns country, year, indicator value[39;00m
+[1;32m    860[0m [38;5;124;03m    """[39;00m
+[0;32m--> 861[0m     [38;5;28;01mreturn[39;00m [43mWorldBankReader[49m[43m([49m
+[1;32m    862[0m [43m        [49m[43msymbols[49m[38;5;241;43m=[39;49m[43mindicator[49m[43m,[49m
+[1;32m    863[0m [43m        [49m[43mcountries[49m[38;5;241;43m=[39;49m[43mcountry[49m[43m,[49m
+[1;32m    864[0m [43m        [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m
+[1;32m    865[0m [43m        [49m[43mend[49m[38;5;241;43m=[39;49m[43mend[49m[43m,[49m
+[1;32m    866[0m [43m        [49m[43mfreq[49m[38;5;241;43m=[39;49m[43mfreq[49m[43m,[49m
+[1;32m    867[0m [43m        [49m[43merrors[49m[38;5;241;43m=[39;49m[43merrors[49m[43m,[49m
+[1;32m    868[0m [43m        [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m
+[1;32m    869[0m [43m    [49m[43m)[49m[38;5;241;43m.[39;49m[43mread[49m[43m([49m[43m)[49m
 
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/matplotlib/__init__.py[0m in [0;36m_rc_params_in_file[0;34m(fname, transform, fail_on_error)[0m
-[1;32m    726[0m     [0mrc_temp[0m [0;34m=[0m [0;34m{[0m[0;34m}[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 727[0;31m     [0;32mwith[0m [0m_open_file_or_url[0m[0;34m([0m[0mfname[0m[0;34m)[0m [0;32mas[0m [0mfd[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    728[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:641[0m, in [0;36mWorldBankReader.read[0;34m(self)[0m
+[1;32m    639[0m [38;5;124;03m"""Read data"""[39;00m
+[1;32m    640[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 641[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_read[49m[43m([49m[43m)[49m
+[1;32m    642[0m [38;5;28;01mfinally[39;00m:
+[1;32m    643[0m     [38;5;28mself[39m[38;5;241m.[39mclose()
 
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/contextlib.py[0m in [0;36m__enter__[0;34m(self)[0m
-[1;32m    112[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 113[0;31m             [0;32mreturn[0m [0mnext[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mgen[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    114[0m         [0;32mexcept[0m [0mStopIteration[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/pandas_datareader/wb.py:671[0m, in [0;36mWorldBankReader._read[0;34m(self)[0m
+[1;32m    669[0m [38;5;28;01melse[39;00m:
+[1;32m    670[0m     msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mNo indicators returned data.[39m[38;5;124m"[39m
+[0;32m--> 671[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(msg)
 
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/matplotlib/__init__.py[0m in [0;36m_open_file_or_url[0;34m(fname)[0m
-[1;32m    697[0m             )
-[0;32m--> 698[0;31m         [0;32mwith[0m [0murllib[0m[0;34m.[0m[0mrequest[0m[0;34m.[0m[0murlopen[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0mcontext[0m[0;34m=[0m[0mssl_ctx[0m[0;34m)[0m [0;32mas[0m [0mf[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    699[0m             [0;32myield[0m [0;34m([0m[0mline[0m[0;34m.[0m[0mdecode[0m[0;34m([0m[0;34m'utf-8'[0m[0;34m)[0m [0;32mfor[0m [0mline[0m [0;32min[0m [0mf[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36murlopen[0;34m(url, data, timeout, cafile, capath, cadefault, context)[0m
-[1;32m    221[0m         [0mopener[0m [0;34m=[0m [0m_opener[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 222[0;31m     [0;32mreturn[0m [0mopener[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0murl[0m[0;34m,[0m [0mdata[0m[0;34m,[0m [0mtimeout[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    223[0m [0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36mopen[0;34m(self, fullurl, data, timeout)[0m
-[1;32m    524[0m         [0msys[0m[0;34m.[0m[0maudit[0m[0;34m([0m[0;34m'urllib.Request'[0m[0;34m,[0m [0mreq[0m[0;34m.[0m[0mfull_url[0m[0;34m,[0m [0mreq[0m[0;34m.[0m[0mdata[0m[0;34m,[0m [0mreq[0m[0;34m.[0m[0mheaders[0m[0;34m,[0m [0mreq[0m[0;34m.[0m[0mget_method[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 525[0;31m         [0mresponse[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_open[0m[0;34m([0m[0mreq[0m[0;34m,[0m [0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    526[0m [0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36m_open[0;34m(self, req, data)[0m
-[1;32m    541[0m         [0mprotocol[0m [0;34m=[0m [0mreq[0m[0;34m.[0m[0mtype[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 542[0;31m         result = self._call_chain(self.handle_open, protocol, protocol +
-[0m[1;32m    543[0m                                   '_open', req)
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36m_call_chain[0;34m(self, chain, kind, meth_name, *args)[0m
-[1;32m    501[0m             [0mfunc[0m [0;34m=[0m [0mgetattr[0m[0;34m([0m[0mhandler[0m[0;34m,[0m [0mmeth_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 502[0;31m             [0mresult[0m [0;34m=[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    503[0m             [0;32mif[0m [0mresult[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36mhttps_open[0;34m(self, req)[0m
-[1;32m   1396[0m         [0;32mdef[0m [0mhttps_open[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mreq[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1397[0;31m             return self.do_open(http.client.HTTPSConnection, req,
-[0m[1;32m   1398[0m                 context=self._context, check_hostname=self._check_hostname)
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/urllib/request.py[0m in [0;36mdo_open[0;34m(self, http_class, req, **http_conn_args)[0m
-[1;32m   1357[0m                 [0;32mraise[0m [0mURLError[0m[0;34m([0m[0merr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1358[0;31m             [0mr[0m [0;34m=[0m [0mh[0m[0;34m.[0m[0mgetresponse[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1359[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py[0m in [0;36mgetresponse[0;34m(self)[0m
-[1;32m   1347[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1348[0;31m                 [0mresponse[0m[0;34m.[0m[0mbegin[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1349[0m             [0;32mexcept[0m [0mConnectionError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py[0m in [0;36mbegin[0;34m(self)[0m
-[1;32m    315[0m         [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 316[0;31m             [0mversion[0m[0;34m,[0m [0mstatus[0m[0;34m,[0m [0mreason[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_read_status[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    317[0m             [0;32mif[0m [0mstatus[0m [0;34m!=[0m [0mCONTINUE[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/http/client.py[0m in [0;36m_read_status[0;34m(self)[0m
-[1;32m    284[0m             [0;31m# sending a valid response.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 285[0;31m             raise RemoteDisconnected("Remote end closed connection without"
-[0m[1;32m    286[0m                                      " response")
-
-[0;31mRemoteDisconnected[0m: Remote end closed connection without response
-
-The above exception was the direct cause of the following exception:
-
-[0;31mOSError[0m                                   Traceback (most recent call last)
-[0;32m/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_78062/1003300902.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      2[0m [0;34m[0m[0m
-[1;32m      3[0m [0;31m# Plot settings[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 4[0;31m plt.style.use(
-[0m[1;32m      5[0m     [0;34m"https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt"[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      6[0m )
-
-[0;32m/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/matplotlib/style/core.py[0m in [0;36muse[0;34m(style)[0m
-[1;32m    116[0m                 [0m_apply_style[0m[0;34m([0m[0mrc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    117[0m             [0;32mexcept[0m [0mIOError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 118[0;31m                 raise IOError(
-[0m[1;32m    119[0m                     [0;34m"{!r} not found in the style library and input is not a "[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    120[0m                     [0;34m"valid URL or path; see `style.available` for list of "[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mOSError[0m: 'https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt' not found in the style library and input is not a valid URL or path; see `style.available` for list of available styles
-OSError: 'https://github.com/aeturrell/coding-for-economists/raw/main/plot_style.txt' not found in the style library and input is not a valid URL or path; see `style.available` for list of available styles
+[0;31mValueError[0m: No indicators returned data.
+ValueError: No indicators returned data.
 
