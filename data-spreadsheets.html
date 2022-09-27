@@ -894,6 +894,84 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Student ID</th>
+      <th>Full Name</th>
+      <th>favourite.food</th>
+      <th>mealPlan</th>
+      <th>AGE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Sunil Huffmann</td>
+      <td>Strawberry yoghurt</td>
+      <td>Lunch only</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Barclay Lynn</td>
+      <td>French fries</td>
+      <td>Lunch only</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Jayendra Lyne</td>
+      <td>NaN</td>
+      <td>Breakfast and lunch</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Leon Rossini</td>
+      <td>Anchovies</td>
+      <td>Lunch only</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Chidiegwu Dunkel</td>
+      <td>Pizza</td>
+      <td>Breakfast and lunch</td>
+      <td>five</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Güvenç Attila</td>
+      <td>Ice cream</td>
+      <td>Lunch only</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We have six students in the data and five variables on each student. However there are a few things we might want to address in this dataset:</p>
 <ul class="simple">
@@ -908,6 +986,84 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student_id</th>
+      <th>full_name</th>
+      <th>favourite_food</th>
+      <th>meal_plan</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Sunil Huffmann</td>
+      <td>Strawberry yoghurt</td>
+      <td>Lunch only</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Barclay Lynn</td>
+      <td>French fries</td>
+      <td>Lunch only</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Jayendra Lyne</td>
+      <td>NaN</td>
+      <td>Breakfast and lunch</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Leon Rossini</td>
+      <td>Anchovies</td>
+      <td>Lunch only</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Chidiegwu Dunkel</td>
+      <td>Pizza</td>
+      <td>Breakfast and lunch</td>
+      <td>five</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Güvenç Attila</td>
+      <td>Ice cream</td>
+      <td>Lunch only</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> is read in as a column of objects, but it really should be numeric. Just like with <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code>, you can supply a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> argument to <code class="docutils literal notranslate"><span class="pre">read_excel()</span></code> and specify the data types for the columns of data you read in. Your options include <code class="docutils literal notranslate"><span class="pre">&quot;boolean&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;int&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;float&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;datetime&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;string&quot;</span></code>, and more. But we can see right away that this isn’t going to work with the “age” column as it mixes numbers and text: so we first need to map its text to numbers.</p></li>
@@ -923,6 +1079,84 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student_id</th>
+      <th>full_name</th>
+      <th>favourite_food</th>
+      <th>meal_plan</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Sunil Huffmann</td>
+      <td>Strawberry yoghurt</td>
+      <td>Lunch only</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Barclay Lynn</td>
+      <td>French fries</td>
+      <td>Lunch only</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Jayendra Lyne</td>
+      <td>NaN</td>
+      <td>Breakfast and lunch</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Leon Rossini</td>
+      <td>Anchovies</td>
+      <td>Lunch only</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Chidiegwu Dunkel</td>
+      <td>Pizza</td>
+      <td>Breakfast and lunch</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Güvenç Attila</td>
+      <td>Ice cream</td>
+      <td>Lunch only</td>
+      <td>6.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Okay, now we can apply the data types.</p>
 <div class="cell docutils container">
@@ -937,6 +1171,22 @@ title="Print to PDF"
     <span class="p">}</span>
 <span class="p">)</span>
 <span class="n">students</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 5 columns):
+ #   Column          Non-Null Count  Dtype   
+---  ------          --------------  -----   
+ 0   student_id      6 non-null      Int64   
+ 1   full_name       6 non-null      string  
+ 2   favourite_food  5 non-null      string  
+ 3   meal_plan       6 non-null      category
+ 4   age             5 non-null      Int64   
+dtypes: Int64(2), category(1), string(2)
+memory usage: 462.0 bytes
 </pre></div>
 </div>
 </div>
@@ -956,6 +1206,94 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Now this relies on us knowing the names of the sheets in advance. There will be situations where you can to read in data without peeking into the Excel spreadsheet. To read all sheets in, use <code class="docutils literal notranslate"><span class="pre">sheet_name=None</span></code>. The object that’s created is a dictionary with key value pairs that are sheet names and data frames respectively. Let’s look at the second key value pair (note that we have to convert the keys() and values() objects to list to then retrieve the second element of each using a subscript, ie <code class="docutils literal notranslate"><span class="pre">list(dictionary.keys())[&lt;element</span> <span class="pre">number&gt;]</span></code>).</p>
 <p>To give a sense of how this works, let’s first print all of the retrieved keys:</p>
@@ -969,6 +1307,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Torgersen Island&#39;, &#39;Biscoe Island&#39;, &#39;Dream Island&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now let’s show the second entry data frame</p>
 <div class="cell docutils container">
@@ -978,6 +1321,97 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Biscoe Island
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>37.8</td>
+      <td>18.3</td>
+      <td>174.0</td>
+      <td>3400.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>37.7</td>
+      <td>18.7</td>
+      <td>180.0</td>
+      <td>3600.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>35.9</td>
+      <td>19.2</td>
+      <td>189.0</td>
+      <td>3800.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>38.2</td>
+      <td>18.1</td>
+      <td>185.0</td>
+      <td>3950.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Biscoe</td>
+      <td>38.8</td>
+      <td>17.2</td>
+      <td>180.0</td>
+      <td>3800.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>What we really want is these three <em>consistent</em> datasets to be in the <em>same</em> single dataframe. For this, we can use the <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> function. This concatenates any given iterable of data frames.</p>
 <div class="cell docutils container">
@@ -987,6 +1421,161 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>male</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>female</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>55.8</td>
+      <td>19.8</td>
+      <td>207.0</td>
+      <td>4000.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>43.5</td>
+      <td>18.1</td>
+      <td>202.0</td>
+      <td>3400.0</td>
+      <td>female</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>49.6</td>
+      <td>18.2</td>
+      <td>193.0</td>
+      <td>3775.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>50.8</td>
+      <td>19.0</td>
+      <td>210.0</td>
+      <td>4100.0</td>
+      <td>male</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>Chinstrap</td>
+      <td>Dream</td>
+      <td>50.2</td>
+      <td>18.7</td>
+      <td>198.0</td>
+      <td>3775.0</td>
+      <td>female</td>
+      <td>2009</td>
+    </tr>
+  </tbody>
+</table>
+<p>344 rows × 8 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="reading-part-of-a-sheet">
@@ -1002,6 +1591,163 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Profession</th>
+      <th>Age</th>
+      <th>Has kids</th>
+      <th>Date of birth</th>
+      <th>Date of death</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>David Bowie</td>
+      <td>musician</td>
+      <td>69</td>
+      <td>True</td>
+      <td>1947-01-08</td>
+      <td>2016-01-10 00:00:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Carrie Fisher</td>
+      <td>actor</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1956-10-21</td>
+      <td>2016-12-27 00:00:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chuck Berry</td>
+      <td>musician</td>
+      <td>90</td>
+      <td>True</td>
+      <td>1926-10-18</td>
+      <td>2017-03-18 00:00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bill Paxton</td>
+      <td>actor</td>
+      <td>61</td>
+      <td>True</td>
+      <td>1955-05-17</td>
+      <td>2017-02-25 00:00:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Prince</td>
+      <td>musician</td>
+      <td>57</td>
+      <td>True</td>
+      <td>1958-06-07</td>
+      <td>2016-04-21 00:00:00</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alan Rickman</td>
+      <td>actor</td>
+      <td>69</td>
+      <td>False</td>
+      <td>1946-02-21</td>
+      <td>2016-01-14 00:00:00</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Florence Henderson</td>
+      <td>actor</td>
+      <td>82</td>
+      <td>True</td>
+      <td>1934-02-14</td>
+      <td>2016-11-24 00:00:00</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Harper Lee</td>
+      <td>author</td>
+      <td>89</td>
+      <td>False</td>
+      <td>1926-04-28</td>
+      <td>2016-02-19 00:00:00</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Zsa Zsa Gábor</td>
+      <td>actor</td>
+      <td>99</td>
+      <td>True</td>
+      <td>1917-02-06</td>
+      <td>2016-12-18 00:00:00</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>George Michael</td>
+      <td>musician</td>
+      <td>53</td>
+      <td>False</td>
+      <td>1963-06-25</td>
+      <td>2016-12-25 00:00:00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Some</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaT</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NaN</td>
+      <td>also like to write stuff</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaT</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>at the</td>
+      <td>bottom,</td>
+      <td>NaT</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaT</td>
+      <td>too!</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We could also set <code class="docutils literal notranslate"><span class="pre">nrows</span></code> to omit the extraneous rows at the bottom (another option would to be to skip a set number of rows at the end using <code class="docutils literal notranslate"><span class="pre">skipfooter</span></code>).</p>
 <div class="cell docutils container">
@@ -1010,6 +1756,127 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Profession</th>
+      <th>Age</th>
+      <th>Has kids</th>
+      <th>Date of birth</th>
+      <th>Date of death</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>David Bowie</td>
+      <td>musician</td>
+      <td>69</td>
+      <td>True</td>
+      <td>1947-01-08</td>
+      <td>2016-01-10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Carrie Fisher</td>
+      <td>actor</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1956-10-21</td>
+      <td>2016-12-27</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chuck Berry</td>
+      <td>musician</td>
+      <td>90</td>
+      <td>True</td>
+      <td>1926-10-18</td>
+      <td>2017-03-18</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bill Paxton</td>
+      <td>actor</td>
+      <td>61</td>
+      <td>True</td>
+      <td>1955-05-17</td>
+      <td>2017-02-25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Prince</td>
+      <td>musician</td>
+      <td>57</td>
+      <td>True</td>
+      <td>1958-06-07</td>
+      <td>2016-04-21</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Alan Rickman</td>
+      <td>actor</td>
+      <td>69</td>
+      <td>False</td>
+      <td>1946-02-21</td>
+      <td>2016-01-14</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Florence Henderson</td>
+      <td>actor</td>
+      <td>82</td>
+      <td>True</td>
+      <td>1934-02-14</td>
+      <td>2016-11-24</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Harper Lee</td>
+      <td>author</td>
+      <td>89</td>
+      <td>False</td>
+      <td>1926-04-28</td>
+      <td>2016-02-19</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Zsa Zsa Gábor</td>
+      <td>actor</td>
+      <td>99</td>
+      <td>True</td>
+      <td>1917-02-06</td>
+      <td>2016-12-18</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>George Michael</td>
+      <td>musician</td>
+      <td>53</td>
+      <td>False</td>
+      <td>1963-06-25</td>
+      <td>2016-12-25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -1040,6 +1907,48 @@ A recommended workflow is to let <strong>pandas</strong> guess the column types 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>item</th>
+      <th>quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>brownie</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>cupcake</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>cookie</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>You can write data back to disk as an Excel file using the <code class="docutils literal notranslate"><span class="pre">&lt;dataframe&gt;.to_excel()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">index=False</span></code> keyword argument just writes the two columns without the index that was automatically added in the last step.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bake_sale</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;data/bake_sale.xlsx&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1051,6 +1960,19 @@ A recommended workflow is to let <strong>pandas</strong> guess the column types 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;data/bake_sale.xlsx&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   item      3 non-null      object
+ 1   quantity  3 non-null      int64 
+dtypes: int64(1), object(1)
+memory usage: 176.0+ bytes
 </pre></div>
 </div>
 </div>

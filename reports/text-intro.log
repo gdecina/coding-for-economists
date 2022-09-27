@@ -24,12 +24,12 @@ slugify(txt, stopwords=["the"])
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Input [0;32mIn [24][0m, in [0;36m<cell line: 1>[0;34m()[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mslugify[39;00m [38;5;28;01mimport[39;00m slugify
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [24][0m, in [0;36m<cell line: 4>[0;34m()[0m
+[1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mslugify[39;00m [38;5;28;01mimport[39;00m slugify
 [1;32m      3[0m txt [38;5;241m=[39m [38;5;124m"[39m[38;5;124mthe quick brown fox jumps over the lazy dog[39m[38;5;124m"[39m
-[1;32m      4[0m slugify(txt, stopwords[38;5;241m=[39m[[38;5;124m"[39m[38;5;124mthe[39m[38;5;124m"[39m])
+[0;32m----> 4[0m [43mslugify[49m[43m([49m[43mtxt[49m[43m,[49m[43m [49m[43mstopwords[49m[38;5;241;43m=[39;49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43mthe[39;49m[38;5;124;43m"[39;49m[43m][49m[43m)[49m
 
-[0;31mModuleNotFoundError[0m: No module named 'slugify'
-ModuleNotFoundError: No module named 'slugify'
+[0;31mTypeError[0m: slugify() got an unexpected keyword argument 'stopwords'
+TypeError: slugify() got an unexpected keyword argument 'stopwords'
 

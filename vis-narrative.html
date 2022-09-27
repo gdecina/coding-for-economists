@@ -974,6 +974,56 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pm25</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-02-28</th>
+      <td>102.857143</td>
+    </tr>
+    <tr>
+      <th>2020-02-29</th>
+      <td>103.285714</td>
+    </tr>
+    <tr>
+      <th>2020-03-01</th>
+      <td>123.571429</td>
+    </tr>
+    <tr>
+      <th>2020-03-02</th>
+      <td>118.142857</td>
+    </tr>
+    <tr>
+      <th>2020-03-03</th>
+      <td>108.142857</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Now let’s get on to the figure. The code that generates individual parts of the chart is annotated to explain what it’s doing.</p>
 <div class="cell docutils container">
@@ -1067,6 +1117,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/vis-narrative_8_0.svg" src="_images/vis-narrative_8_0.svg" /></div>
 </div>
 <p>What do we learn from this exercise? Well, there’s a big last mile issue with making narrative visualisations. Normally, when coding, you should do your best to avoid hard-coding numbers (for example <code class="docutils literal notranslate"><span class="pre">x=0.15</span></code> above). But in this case getting things just so requires a lot of manual adjustment and that’s <em>after</em> you’ve decided what story you’re going to tell, and how to show it.</p>
 <p>The example above demonstrates many of the pain points of the last mile, like decluttering, adjusting text, careful use of saturation and colour, and ensuring dates are displayed in an aesthetically pleasing way.</p>
@@ -1084,6 +1136,76 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>hits</th>
+      <th>geo</th>
+      <th>keyword</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2019-09-21</td>
+      <td>1</td>
+      <td>world</td>
+      <td>physics nobel</td>
+      <td>Physics</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019-09-22</td>
+      <td>1</td>
+      <td>world</td>
+      <td>physics nobel</td>
+      <td>Physics</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2019-09-23</td>
+      <td>1</td>
+      <td>world</td>
+      <td>physics nobel</td>
+      <td>Physics</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2019-09-24</td>
+      <td>1</td>
+      <td>world</td>
+      <td>physics nobel</td>
+      <td>Physics</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2019-09-25</td>
+      <td>1</td>
+      <td>world</td>
+      <td>physics nobel</td>
+      <td>Physics</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1168,6 +1290,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/vis-narrative_11_0.svg" src="_images/vis-narrative_11_0.svg" /></div>
 </div>
 </section>
 <section id="the-economist">
@@ -1189,6 +1313,64 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>NY.GDP.MKTP.CD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Canada</td>
+      <td>2021</td>
+      <td>1.990762e+12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Canada</td>
+      <td>2020</td>
+      <td>1.645423e+12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>China</td>
+      <td>2021</td>
+      <td>1.773406e+13</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>China</td>
+      <td>2020</td>
+      <td>1.468767e+13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Germany</td>
+      <td>2021</td>
+      <td>4.223116e+12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Let’s do some quick tidying and prep of the data ready for plotting.</p>
 <div class="cell docutils container">
@@ -1200,6 +1382,70 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>NY.GDP.MKTP.CD</th>
+      <th>gdp_trillions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>Korea, Rep.</td>
+      <td>2021</td>
+      <td>1.798534e+12</td>
+      <td>1.798534</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Canada</td>
+      <td>2021</td>
+      <td>1.990762e+12</td>
+      <td>1.990762</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Italy</td>
+      <td>2021</td>
+      <td>2.099880e+12</td>
+      <td>2.099880</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>France</td>
+      <td>2021</td>
+      <td>2.937473e+12</td>
+      <td>2.937473</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>India</td>
+      <td>2021</td>
+      <td>3.173398e+12</td>
+      <td>3.173398</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Before making the chart, let’s set the font:</p>
 <div class="cell docutils container">
@@ -1277,6 +1523,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/vis-narrative_19_0.svg" src="_images/vis-narrative_19_0.svg" /></div>
 </div>
 </section>
 </section>
