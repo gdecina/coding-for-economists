@@ -325,6 +325,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +583,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/text-intro.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/text-intro.ipynb"
    class="headerbtn"
@@ -970,12 +957,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
 </div>
 <p>We see that it is <code class="docutils literal notranslate"><span class="pre">str</span></code>, which is short for string.</p>
 <p>Strings in Python can be indexed, so we can get certain characters out by using square brackets to say which positions we would like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ban&#39;
 </pre></div>
 </div>
 </div>
@@ -987,12 +984,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;aaa&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Note that strings, like tuples such as <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> but unlike lists such as <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>, are <em>immutable</em>. This means commands like <code class="docutils literal notranslate"><span class="pre">var[0]</span> <span class="pre">=</span> <span class="pre">&quot;B&quot;</span></code> will result in an error. If you want to change a single character, you will have to replace the entire string. In this example, the command to do that would be <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">&quot;Banana&quot;</span></code>.</p>
 <p>Like lists, you can find the length of a string using <code class="docutils literal notranslate"><span class="pre">len</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -1006,11 +1013,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>black panther
+</pre></div>
+</div>
+</div>
 </div>
 <p>Note that we added a space so that the noun made sense. Another way of achieving the same end that scales to many words more efficiently (if you have them in a list) is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">first_word</span><span class="p">,</span> <span class="n">second_word</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;black panther&#39;
 </pre></div>
 </div>
 </div>
@@ -1024,6 +1041,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;INPUT TEXT&#39;, &#39;input text&#39;, &#39;Input Text&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
@@ -1033,6 +1055,13 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">var_list</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;; and </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INPUT TEXT; and 
+input text; and 
+Input Text
 </pre></div>
 </div>
 </div>
@@ -1052,6 +1081,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A boolean is either True or False, there are only 2 options.&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>In this example two boolean variables and one integer variable were converted to strings. <code class="docutils literal notranslate"><span class="pre">str</span></code> generally makes an intelligent guess at how you’d like to convert your non-string type variable into a string type. You can pass a variable or a literal value to <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 <section id="f-strings">
@@ -1064,11 +1098,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored 15.32399
+</pre></div>
+</div>
+</div>
 </div>
 <p>This is similar to calling <code class="docutils literal notranslate"><span class="pre">str</span></code> on variable and using <code class="docutils literal notranslate"><span class="pre">+</span></code> for concatenation but much shorter to write. You can add expressions to f-strings too:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You scored </span><span class="si">{</span><span class="n">variable</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored 234.8246695201
 </pre></div>
 </div>
 </div>
@@ -1078,6 +1122,11 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You scored </span><span class="si">{</span><span class="n">variable</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You scored +15.32
 </pre></div>
 </div>
 </div>
@@ -1172,11 +1221,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&quot;#$%&amp;\&#39;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>gives you all of the punctuation,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
 </pre></div>
 </div>
 </div>
@@ -1188,6 +1247,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0123456789&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>gives you the numbers from 0 to 9. Finally, though less impressive visually, <code class="docutils literal notranslate"><span class="pre">string.whitespace</span></code> gives a string containing all of the different (there is more than one!) types of whitespace.</p>
 <p>There are other special characters around; in fact, we already met the most famous of them: “\n” for new line. To actually print “\n” we have to ‘escape’ the backward slash by adding another backward slash:</p>
@@ -1195,6 +1259,13 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is a </span><span class="se">\n</span><span class="s2"> new line&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is an </span><span class="se">\\</span><span class="s2">n escaped new line &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is a 
+ new line
+Here is an \n escaped new line 
 </pre></div>
 </div>
 </div>
@@ -1240,6 +1311,93 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭────────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">class</span><span style="color: #000000; text-decoration-color: #000000"> </span><span style="color: #008000; text-decoration-color: #008000">'str'</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ──────────────────────────────────────╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">str</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">object</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008000; text-decoration-color: #008000">''</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> -&gt; str</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">str</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bytes_or_buffer</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080">, encoding</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080">, errors</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">]])</span><span style="color: #008080; text-decoration-color: #008080"> -&gt; str</span>                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╭───────────────────────────────────────────────────────────────────────────────────────╮</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #008000; text-decoration-color: #008000">'string'</span>                                                                              <span style="color: #008000; text-decoration-color: #008000">│</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008000; text-decoration-color: #008000">╰───────────────────────────────────────────────────────────────────────────────────────╯</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">capitalize</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">capitalize</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a capitalized version of the string.</span>              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">casefold</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">casefold</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a version of the string suitable for caseless </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">comparisons.</span>                                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">center</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">center</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a centered string of length </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">width.</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">count</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">count</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.count</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">encode</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">encode</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">encoding</span>=<span style="color: #008000; text-decoration-color: #008000">'utf-8'</span>, <span style="color: #808000; text-decoration-color: #808000">errors</span>=<span style="color: #008000; text-decoration-color: #008000">'strict'</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Encode the string using the</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">codec registered for encoding.</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">endswith</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">endswith</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.endswith</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">suffix</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; bool</span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">expandtabs</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">expandtabs</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">tabsize</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy where all tab characters are </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">expanded using spaces.</span>                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #808000; text-decoration-color: #808000; font-style: italic">find</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">find</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.find</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">format</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">format</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.format</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">*args, **kwargs</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; str</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">format_map</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">format_map</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.format_map</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">mapping</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; str</span>                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">index</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">index</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.index</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isalnum</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isalnum</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an alpha-numeric string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isalpha</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isalpha</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an alphabetic string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isascii</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isascii</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if all characters in the string are ASCII, </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> otherwise.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isdecimal</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isdecimal</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a decimal string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isdigit</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isdigit</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a digit string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isidentifier</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isidentifier</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a valid Python </span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">identifier, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> otherwise.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">islower</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">islower</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a lowercase string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isnumeric</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isnumeric</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a numeric string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isprintable</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isprintable</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is printable, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>          <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isspace</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isspace</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a whitespace string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">istitle</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">istitle</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is a title-cased string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">isupper</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">isupper</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #7fff7f; text-decoration-color: #7fff7f; font-style: italic">True</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> if the string is an uppercase string, </span><span style="color: #ff7f7f; text-decoration-color: #ff7f7f; font-style: italic">False</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">otherwise.</span>                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #808000; text-decoration-color: #808000; font-style: italic">join</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">join</span><span style="font-weight: bold">(</span>iterable, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Concatenate any number of strings.</span>                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">ljust</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">ljust</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a left-justified string of </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">length width.</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">lower</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">lower</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string converted to lowercase.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">lstrip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">lstrip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with leading </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">whitespace removed.</span>                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">maketrans</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">maketrans</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a translation table usable for </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">str.translate</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">partition</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">partition</span><span style="font-weight: bold">(</span>sep, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Partition the string into three parts using the </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given separator.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #808000; text-decoration-color: #808000; font-style: italic">replace</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">replace</span><span style="font-weight: bold">(</span>old, new, <span style="color: #808000; text-decoration-color: #808000">count</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy with all occurrences of </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">substring old replaced by new.</span>                                             <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rfind</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rfind</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.rfind</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rindex</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rindex</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.rindex</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">sub</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; int</span>                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rjust</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rjust</span><span style="font-weight: bold">(</span>width, <span style="color: #808000; text-decoration-color: #808000">fillchar</span>=<span style="color: #008000; text-decoration-color: #008000">' '</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a right-justified string of </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">length width.</span>                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rpartition</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rpartition</span><span style="font-weight: bold">(</span>sep, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Partition the string into three parts using the </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given separator.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rsplit</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rsplit</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">sep</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">maxsplit</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the words in the </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string, using sep as the delimiter string.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #808000; text-decoration-color: #808000; font-style: italic">rstrip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">rstrip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with trailing </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">whitespace removed.</span>                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">split</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">split</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">sep</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #808000; text-decoration-color: #808000">maxsplit</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the words in the </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string, using sep as the delimiter string.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">splitlines</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">splitlines</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">keepends</span>=<span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a list of the lines in the string, </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">breaking at line boundaries.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #808000; text-decoration-color: #808000; font-style: italic">startswith</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">startswith</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">S.startswith</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">prefix</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, start</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">[</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">, end</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">]])</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> -&gt; bool</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">strip</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">strip</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">chars</span>=<span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string with leading and </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">trailing whitespace removed.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>     <span style="color: #808000; text-decoration-color: #808000; font-style: italic">swapcase</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">swapcase</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Convert uppercase characters to lowercase and lowercase </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">characters to uppercase.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">title</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">title</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a version of the string where each word is titlecased.</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>    <span style="color: #808000; text-decoration-color: #808000; font-style: italic">translate</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">translate</span><span style="font-weight: bold">(</span>table, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Replace each character in the string using the </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">given translation table.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">upper</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">upper</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return a copy of the string converted to uppercase.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #808000; text-decoration-color: #808000; font-style: italic">zfill</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">zfill</span><span style="font-weight: bold">(</span>width, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Pad a numeric string with zeros on the left, to fill </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">a field of the given width.</span>                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰───────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div></div>
 </div>
 </section>
 </section>
@@ -1255,6 +1413,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Value is subjective&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>As with any variable of a specific type (here, string), this would also work with variables:</p>
 <div class="cell docutils container">
@@ -1263,6 +1426,11 @@ title="Print to PDF"
 <span class="n">old_substr</span> <span class="o">=</span> <span class="s2">&quot;objective&quot;</span>
 <span class="n">new_substr</span> <span class="o">=</span> <span class="s2">&quot;subjective&quot;</span>
 <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">old_substr</span><span class="p">,</span> <span class="n">new_substr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Value is subjective&#39;
 </pre></div>
 </div>
 </div>
@@ -1283,12 +1451,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;: &#39;&#39;, &#39;e&#39;: &#39;&#39;, &#39;i&#39;: &#39;&#39;, &#39;o&#39;: &#39;&#39;, &#39;u&#39;: &#39;&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now we turn our dictionary into a string translator and apply it to our text:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">translator</span> <span class="o">=</span> <span class="n">example_text</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="n">translation_dict</span><span class="p">)</span>
 <span class="n">example_text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">translator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mch rcnt wrk hs fcsd n th nflnc f scl cptl n nnvtv tcms. Lttl rsrch hs bn dn n dsdvntgd grps wh wr ftn rstrctd frm prtcptn n scl ntwrks tht prvd nfrmtn ncssry fr nvntn nd nnvtn. Unq nw dt n Afrcn Amrcn nvntrs nd ptnts btwn 1843 nd 1930 prmt n mprcl nvstgtn f th rltn btwn scl cptl nd cnmc tcms. I fnd tht Afrcn Amrcns sd bth trdtnl, .., ccptn-bsd, nd nntrdtnl, .., cvc, ntwrks t mxmz nvntv tpt nd tht lws cnstrnng scl-cptl frmtn r mst ngtvly crrltd wth cnmclly mprtnt nvntv ctvty.&#39;
 </pre></div>
 </div>
 </div>
@@ -1310,6 +1488,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Example string with excess punctuation&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="slugifying">
@@ -1325,11 +1508,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;quick-brown-fox-jumps-over-lazy-dog&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>In this very simple example, the words listed in the <code class="docutils literal notranslate"><span class="pre">stopwords=</span></code> keyword argument (a list), are removed and spaces are replaced by hyphens. Let’s now see a more complicated example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slugify</span><span class="p">(</span><span class="s2">&quot;当我的信息改变时... àccêntæd tËXT  &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;dang-wo-de-xin-xi-gai-bian-shi-accentaed-text&#39;
 </pre></div>
 </div>
 </div>
@@ -1345,6 +1538,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is a sentence&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Next up we can use the built-in <code class="docutils literal notranslate"><span class="pre">split</span></code> function, which returns a list of places where a given sub-string occurs:</p>
 <div class="cell docutils container">
@@ -1353,11 +1551,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is a sentence&#39;, &#39; And another sentence&#39;, &#39; And a third sentence&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Note that the character used to split the string is removed from the resulting list of strings. Let’s see an example with a string used for splitting instead of a single character:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is a sentence. And another sentence. And a third sentence&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;sentence&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is a &#39;, &#39;. And another &#39;, &#39;. And a third &#39;, &#39;&#39;]
 </pre></div>
 </div>
 </div>
@@ -1375,11 +1583,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word &quot;coffee&quot; appears 2 times.
+</pre></div>
+</div>
+</div>
 </div>
 <p>Meanwhile, <code class="docutils literal notranslate"><span class="pre">find</span></code> returns the position where a particular word or character occurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
 </pre></div>
 </div>
 </div>
@@ -1391,11 +1609,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;coffee&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>But this isn’t the only place where the word ‘coffee’ appears. If we want to find the last occurrence, it’s</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57
 </pre></div>
 </div>
 </div>
@@ -1414,6 +1642,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ada&#39;, &#39;Adam&#39;, &#39;Elinor&#39;, &#39;Grace&#39;, &#39;Jean&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>A <strong>pandas</strong> series can be used in place of a list. Let’s create the series first:</p>
 <div class="cell docutils container">
@@ -1428,11 +1661,31 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     ada lovelace
+1       adam smith
+2    elinor ostrom
+3     grace hopper
+4      jean bartik
+dtype: string
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now we use the syntax series.str.function to change the text series:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Ada Lovelace
+1       Adam Smith
+2    Elinor Ostrom
+3     Grace Hopper
+4      Jean Bartik
+dtype: string
 </pre></div>
 </div>
 </div>
@@ -1442,6 +1695,16 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Ada Lovelace
+1       Adam Smith
+2    Elinor Ostrom
+3     Grace Hopper
+4      Jean Bartik
+Name: names, dtype: string
 </pre></div>
 </div>
 </div>
@@ -1554,6 +1817,16 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [ada, lovelace]
+1       [adam, smith]
+2    [elinor, ostrom]
+3     [grace, hopper]
+4      [jean, bartik]
+Name: names, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <p>It’s fairly common that you want to split out strings and save the results to new columns in your dataframe. You can specify a (max) number of splits via the <code class="docutils literal notranslate"><span class="pre">n=</span></code> kwarg and you can get the columns using <code class="docutils literal notranslate"><span class="pre">expand</span></code></p>
 <div class="cell docutils container">
@@ -1562,6 +1835,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ada</td>
+      <td>lovelace</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>adam</td>
+      <td>smith</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>elinor</td>
+      <td>ostrom</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>grace</td>
+      <td>hopper</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>jean</td>
+      <td>bartik</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
@@ -1571,6 +1896,16 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s2">&quot;(\w+)&quot;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       ada
+1      adam
+2    elinor
+3     grace
+4      jean
+Name: names, dtype: string
 </pre></div>
 </div>
 </div>
@@ -1622,6 +1957,16 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    lovelace
+1       smith
+2      ostrom
+3      hopper
+4      bartik
+Name: names, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <p>We already saw <code class="docutils literal notranslate"><span class="pre">get_dummies()</span></code> in the <a class="reference internal" href="econmt-regression.html#regression"><span class="std std-ref">Regression</span></a> chapter, but it’s worth revisiting it here with strings. If we have a column with tags split by a symbol, we can use this function to split it out. For example, let’s create a dataframe with a single column that mixes subject and nationality tags:</p>
 <div class="cell docutils container">
@@ -1642,6 +1987,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ada lovelace</td>
+      <td>uk; cs</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>adam smith</td>
+      <td>uk; econ</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>elinor ostrom</td>
+      <td>usa; econ</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>grace hopper</td>
+      <td>usa; cs</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>jean bartik</td>
+      <td>usa; cs</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>If we now use <code class="docutils literal notranslate"><span class="pre">str.get_dummies</span></code> and split on <code class="docutils literal notranslate"><span class="pre">;</span></code> we can get a dataframe of dummies.</p>
 <div class="cell docutils container">
@@ -1650,6 +2047,70 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cs</th>
+      <th>econ</th>
+      <th>uk</th>
+      <th>usa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="reading-text-in">

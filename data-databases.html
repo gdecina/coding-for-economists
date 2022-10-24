@@ -325,6 +325,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +583,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-databases.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-databases.ipynb"
    class="headerbtn"
@@ -1305,7 +1292,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </section>
 <section id="exploring-sql-databases-with-datasette">
 <h2>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this headline">#</a></h2>
-<p>SQL can be pretty intimidating at first, but there’s a great tool for getting to know it better called <a class="reference external" href="https://datasette.io/"><strong>Datasette</strong></a>. Datasette is a tool for exploring (and creating and sharing—but that’s covered in <span class="xref std std-ref">data-sharing</span>) databases. It’s author says that “Datasette is aimed at data journalists, museum curators, archivists, local governments, scientists, researchers and anyone else who has data that they wish to share with the world. It is part of a wider ecosystem of 40 tools and 99 plugins dedicated to making working with structured data as productive as possible.”</p>
+<p>SQL can be pretty intimidating at first, but there’s a great tool for getting to know it better called <a class="reference external" href="https://datasette.io/"><strong>Datasette</strong></a>. Datasette is a tool for exploring (and creating and sharing—but that’s covered in <a class="reference internal" href="data-sharing.html#data-sharing"><span class="std std-ref">Sharing Data</span></a>) databases. It’s author says that “Datasette is aimed at data journalists, museum curators, archivists, local governments, scientists, researchers and anyone else who has data that they wish to share with the world. It is part of a wider ecosystem of 40 tools and 99 plugins dedicated to making working with structured data as productive as possible.”</p>
 <p>In this context, <strong>Datasette</strong> is useful in two ways:</p>
 <ul class="simple">
 <li><p>to explore a database interactively, through pointing and clicking</p></li>
@@ -1981,10 +1968,10 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=None id=1 secret_name=&#39;Dive Wilson&#39; name=&#39;Deadpond&#39;
-age=None id=2 secret_name=&#39;Pedro Parqueador&#39; name=&#39;Spider-Boy&#39;
-age=48 id=3 secret_name=&#39;Tommy Sharp&#39; name=&#39;Rusty-Man&#39;
-age=17 id=4 secret_name=&#39;Barjabeen Bhabra&#39; name=&#39;Ms Amazing&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Dive Wilson&#39; age=None id=1 name=&#39;Deadpond&#39;
+secret_name=&#39;Pedro Parqueador&#39; age=None id=2 name=&#39;Spider-Boy&#39;
+secret_name=&#39;Tommy Sharp&#39; age=48 id=3 name=&#39;Rusty-Man&#39;
+secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4 name=&#39;Ms Amazing&#39;
 </pre></div>
 </div>
 </div>
@@ -2002,10 +1989,10 @@ age=17 id=4 secret_name=&#39;Barjabeen Bhabra&#39; name=&#39;Ms Amazing&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=None id=1 secret_name=&#39;Dive Wilson&#39; name=&#39;Deadpond&#39;
-age=None id=2 secret_name=&#39;Pedro Parqueador&#39; name=&#39;Spider-Boy&#39;
-age=48 id=3 secret_name=&#39;Tommy Sharp&#39; name=&#39;Rusty-Man&#39;
-age=17 id=4 secret_name=&#39;Barjabeen Bhabra&#39; name=&#39;Ms Amazing&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Dive Wilson&#39; age=None id=1 name=&#39;Deadpond&#39;
+secret_name=&#39;Pedro Parqueador&#39; age=None id=2 name=&#39;Spider-Boy&#39;
+secret_name=&#39;Tommy Sharp&#39; age=48 id=3 name=&#39;Rusty-Man&#39;
+secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4 name=&#39;Ms Amazing&#39;
 </pre></div>
 </div>
 </div>
@@ -2023,8 +2010,8 @@ age=17 id=4 secret_name=&#39;Barjabeen Bhabra&#39; name=&#39;Ms Amazing&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=17 id=4 secret_name=&#39;Barjabeen Bhabra&#39; name=&#39;Ms Amazing&#39;
-age=48 id=3 secret_name=&#39;Tommy Sharp&#39; name=&#39;Rusty-Man&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4 name=&#39;Ms Amazing&#39;
+secret_name=&#39;Tommy Sharp&#39; age=48 id=3 name=&#39;Rusty-Man&#39;
 </pre></div>
 </div>
 </div>

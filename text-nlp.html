@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/text-nlp.html" />
@@ -327,6 +325,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -580,24 +583,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/text-nlp.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/text-nlp.ipynb"
    class="headerbtn"
@@ -998,13 +983,59 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
     <span class="s2">&quot;https://github.com/aeturrell/coding-for-economists/raw/main/data/smith_won.txt&quot;</span><span class="p">,</span>
-    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
     <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>An Inquiry into the Nature and Causes of the...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>POWERS OF LABOUR, AND OF THE ORDER ACCORDING T...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>DISTRIBUTED AMONG THE DIFFERENT RANKS OF THE P...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>DIVISION OF LABOUR.     CHAPTER III. THAT THE ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>THE EXTENT OF THE MARKET.     CHAPTER IV. OF T...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We need to do a bit of light text cleaning before we get on to the more in-depth natural language processing. We’ll make use of vectorised string operations as seen in the <a class="reference internal" href="text-intro.html#text-intro"><span class="std std-ref">Introduction to Text</span></a> chapter. First, we want to put everything in lower case:</p>
 <div class="cell docutils container">
@@ -1014,6 +1045,52 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>an inquiry into the nature and causes of the...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>powers of labour, and of the order according t...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>distributed among the different ranks of the p...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>division of labour.     chapter iii. that the ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>the extent of the market.     chapter iv. of t...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Next, we’ll remove the punctuation from the text. You may not always wish to do this but it’s a good default.</p>
 <div class="cell docutils container">
@@ -1024,6 +1101,52 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>an inquiry into the nature and causes of the...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>powers of labour and of the order according to...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>distributed among the different ranks of the p...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>division of labour     chapter iii that the di...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>the extent of the market     chapter iv of the...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Okay, we now have rows and rows of lower case words without punctuation.</p>
 <div class="admonition-exercise admonition">
@@ -1056,6 +1179,42 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;an&#39;,
+ &#39;inquiry&#39;,
+ &#39;into&#39;,
+ &#39;the&#39;,
+ &#39;nature&#39;,
+ &#39;and&#39;,
+ &#39;causes&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;wealth&#39;,
+ &#39;of&#39;,
+ &#39;nations&#39;,
+ &#39;by&#39;,
+ &#39;adam&#39;,
+ &#39;smith&#39;,
+ &#39;contents&#39;,
+ &#39;introduction&#39;,
+ &#39;and&#39;,
+ &#39;plan&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;work&#39;,
+ &#39;book&#39;,
+ &#39;i&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;causes&#39;,
+ &#39;of&#39;,
+ &#39;improvement&#39;,
+ &#39;in&#39;,
+ &#39;the&#39;,
+ &#39;productive&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>This produced a split of a single line into one word tokens that are represented by a list of strings. We could have also asked for other variations, eg sentences, by asking to split at every “.”.</p>
 </section>
@@ -1070,6 +1229,42 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;an&#39;,
+ &#39;inquiry&#39;,
+ &#39;into&#39;,
+ &#39;the&#39;,
+ &#39;nature&#39;,
+ &#39;and&#39;,
+ &#39;causes&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;wealth&#39;,
+ &#39;of&#39;,
+ &#39;nations&#39;,
+ &#39;by&#39;,
+ &#39;adam&#39;,
+ &#39;smith&#39;,
+ &#39;contents&#39;,
+ &#39;introduction&#39;,
+ &#39;and&#39;,
+ &#39;plan&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;work&#39;,
+ &#39;book&#39;,
+ &#39;i&#39;,
+ &#39;of&#39;,
+ &#39;the&#39;,
+ &#39;causes&#39;,
+ &#39;of&#39;,
+ &#39;improvement&#39;,
+ &#39;in&#39;,
+ &#39;the&#39;,
+ &#39;productive&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>We have the same results as before when we used regex. Now let’s scale this tokenisation up to our whole corpus while retaining the lines of text, giving us a structure of the form (lines x tokens):</p>
 <div class="cell docutils container">
@@ -1079,6 +1274,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>tokens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>an inquiry into the nature and causes of the ...</td>
+      <td>[an, inquiry, into, the, nature, and, causes, ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>powers of labour and of the order according to...</td>
+      <td>[powers, of, labour, and, of, the, order, acco...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>distributed among the different ranks of the p...</td>
+      <td>[distributed, among, the, different, ranks, of...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>division of labour chapter iii that the divisi...</td>
+      <td>[division, of, labour, chapter, iii, that, the...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>the extent of the market chapter iv of the ori...</td>
+      <td>[the, extent, of, the, market, chapter, iv, of...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p><strong>nltk</strong> also has a <code class="docutils literal notranslate"><span class="pre">sent_tokenize</span></code> function that tokenises sentences, although as it makes use of punctuation you must take care with what pre-cleaning of text you undertake.</p>
 </section>
@@ -1101,6 +1348,25 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;inquiry&#39;,
+ &#39;nature&#39;,
+ &#39;causes&#39;,
+ &#39;wealth&#39;,
+ &#39;nations&#39;,
+ &#39;adam&#39;,
+ &#39;smith&#39;,
+ &#39;contents&#39;,
+ &#39;introduction&#39;,
+ &#39;plan&#39;,
+ &#39;work&#39;,
+ &#39;book&#39;,
+ &#39;causes&#39;,
+ &#39;improvement&#39;,
+ &#39;productive&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Having filtered the first entry, we can see that words such as ‘an’ and ‘into’ have disappeared but we have retained more informative words such as ‘inquiry’ and ‘nature’. Processing one entry is not enough: we need all of the lines to have stopwords removed. So we can now scale this up to the full corpus with <strong>pandas</strong>. Just as we did above, we’ll use a list comprehension to do this: but we’ll vectorise the list comprehension across the whole “tokens” series of our dataframe.</p>
 <div class="cell docutils container">
@@ -1112,6 +1378,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>tokens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>an inquiry into the nature and causes of the ...</td>
+      <td>[inquiry, nature, causes, wealth, nations, ada...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>powers of labour and of the order according to...</td>
+      <td>[powers, labour, order, according, produce, na...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>distributed among the different ranks of the p...</td>
+      <td>[distributed, among, different, ranks, people,...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>division of labour chapter iii that the divisi...</td>
+      <td>[division, labour, chapter, iii, division, lab...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>the extent of the market chapter iv of the ori...</td>
+      <td>[extent, market, chapter, iv, origin, use, mon...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Now we have a much reduced set of words in our tokens, which will make the next step of analysis more meaningful.</p>
 </section>
@@ -1139,11 +1457,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Counter({&#39;apple&#39;: 2, &#39;orange&#39;: 3, &#39;satsuma&#39;: 2, &#39;banana&#39;: 1, &#39;mango&#39;: 1})
+</pre></div>
+</div>
+</div>
 </div>
 <p>Counter returns a <code class="docutils literal notranslate"><span class="pre">collections.Counter</span></code> object where the numbers of each type in a given input list are summed. The resulting dictionnary of unique counts can be extracted using <code class="docutils literal notranslate"><span class="pre">dict(freq)</span></code>, and <code class="docutils literal notranslate"><span class="pre">Counter</span></code> has some other useful functions too including <code class="docutils literal notranslate"><span class="pre">most_common()</span></code> which, given a number <code class="docutils literal notranslate"><span class="pre">n</span></code>, returns <code class="docutils literal notranslate"><span class="pre">n</span></code> tuples of the form <code class="docutils literal notranslate"><span class="pre">(thing,</span> <span class="pre">count)</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;orange&#39;, 3), (&#39;apple&#39;, 2), (&#39;satsuma&#39;, 2), (&#39;banana&#39;, 1), (&#39;mango&#39;, 1)]
 </pre></div>
 </div>
 </div>
@@ -1156,6 +1484,20 @@ title="Print to PDF"
 <span class="n">merged_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;tokens&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()))</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">merged_list</span><span class="p">)</span>
 <span class="n">freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;price&#39;, 775),
+ (&#39;labour&#39;, 578),
+ (&#39;quantity&#39;, 389),
+ (&#39;greater&#39;, 386),
+ (&#39;part&#39;, 376),
+ (&#39;silver&#39;, 355),
+ (&#39;one&#39;, 330),
+ (&#39;much&#39;, 323),
+ (&#39;upon&#39;, 322),
+ (&#39;may&#39;, 313)]
 </pre></div>
 </div>
 </div>
@@ -1188,6 +1530,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;  An Inquiry into the Nature and Causes of the Wealth of Nations  by Adam Smith   Contents     INTRO&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Great, so we have our raw text. Let’s now tokenise it using <strong>nltk</strong>.</p>
 <div class="cell docutils container">
@@ -1200,6 +1547,52 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>An Inquiry into the Nature and Causes of the...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BOOK I.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OF THE CAUSES OF IMPROVEMENT IN THE PRODUCTIVE...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHAPTER I.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>OF THE DIVISION OF LABOUR.</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Now we just need to apply all of the cleaning procudures we did before——that is lowering the case, removing punctuation, and removing any excess whitespace.</p>
 <div class="cell docutils container">
@@ -1214,6 +1607,52 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>an inquiry into the nature and causes of the ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>book i</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>of the causes of improvement in the productive...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>chapter i</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>of the division of labour</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We’ll use this tokenised version by sentence in the next section.</p>
 <section id="tf-idf">
@@ -1236,12 +1675,38 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of the resulting tf matrix is (7750, 5160)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;augustine&#39;,
+ &#39;aulnagers&#39;,
+ &#39;austria&#39;,
+ &#39;authentic&#39;,
+ &#39;authenticated&#39;,
+ &#39;author&#39;,
+ &#39;authorises&#39;,
+ &#39;authority&#39;,
+ &#39;authors&#39;,
+ &#39;avail&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>This created a matrix of 5,160 terms by 7,750 “documents” (actually sentences in our example) running with more or less the default settings. The only change we made to those default settings was to pass in a list of stopwords that we used earlier. The other default settings tokenise words using a regex of “(?u)\b\w\w+\b”, assume text is lowercase, only accept n-grams in the range (1, 1), and have no limit on the maximum number of features.</p>
 <p>The matrix X that comes out is of an interesting type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scipy.sparse._csr.csr_matrix
 </pre></div>
 </div>
 </div>
@@ -1254,6 +1719,16 @@ title="Print to PDF"
 <span class="n">counts_df</span> <span class="o">=</span> <span class="n">counts_df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">counts_df</span> <span class="o">=</span> <span class="n">counts_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">counts_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>price       775
+labour      578
+quantity    389
+greater     386
+part        376
+dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1281,6 +1756,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/text-nlp_45_0.svg" src="_images/text-nlp_45_0.svg" /></div>
 </div>
 <p>Let’s see what happens when we ask only for bi-grams.</p>
 <div class="cell docutils container">
@@ -1310,6 +1787,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/text-nlp_47_1.svg" src="_images/text-nlp_47_1.svg" /></div>
 </div>
 <p>As you might expect, the highest frequency with which 2-grams occur is less than the highest frequency with which 1-grams occur.</p>
 <p>Now let’s move on to the inverse document frequency. The most common definition is</p>
@@ -1349,6 +1832,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/text-nlp_49_1.svg" src="_images/text-nlp_49_1.svg" /></div>
 </div>
 <p>There are small differences between this ranking of terms versus the original tf 1-gram version above. In the previous one, words such as ‘one’ were slightly higher in the ranking but their common appearance in multiple documents (lines) downweights them here. In this case, we also used the sublinear option, which uses <span class="math notranslate nohighlight">\(1+\log(\mathrm{tf})\)</span> in place of <span class="math notranslate nohighlight">\(\mathrm{tf}\)</span>.</p>
 <section id="vector-inner-product-and-cosine-similarity">
@@ -1361,6 +1850,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>102
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1370,6 +1864,16 @@ title="Print to PDF"
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_val</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">]):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sentence </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">sent</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cosine similarity is 0.42
+Sentence 0:
+	an inquiry into the nature and causes of the wealth of nations by adam smith contents introduction and plan of the work book i of the causes of improvement in the productive
+
+Sentence 1:
+	the society book i of the causes of improvement in the
 </pre></div>
 </div>
 </div>
@@ -1412,6 +1916,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1012, 1768]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now, armed with the rows of <span class="math notranslate nohighlight">\(X\)</span>, we are ready for the final part, v)</p>
 <div class="cell docutils container">
@@ -1420,6 +1929,17 @@ title="Print to PDF"
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sentence number </span><span class="si">{</span><span class="n">y_pos</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;        test: </span><span class="si">{</span><span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;         WoN: </span><span class="si">{</span><span class="n">df_sent</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x_pos</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentence number 0:
+        test: poverty is a trap and rearing children in it is hard and perilous
+         WoN: but poverty though it does not prevent the generation is extremely unfavourable to the rearing of children 
+
+Sentence number 1:
+        test: people in different trades can meet and develop a conspiracy which ultimately hurts consumers by raising prices
+         WoN: people of the same trade seldom meet together even for merriment and diversion but the conversation ends in a conspiracy against the public or in some contrivance to raise prices 
 </pre></div>
 </div>
 </div>
@@ -1463,6 +1983,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/arthurturrell/opt/anaconda3/envs/codeforecon/lib/python3.8/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/text-nlp_63_1.svg" src="_images/text-nlp_63_1.svg" /></div>
 </div>
 <p>Note that we did not pass <code class="docutils literal notranslate"><span class="pre">stopwords</span></code> in this case; there’s no need, because passing a <code class="docutils literal notranslate"><span class="pre">vocab</span></code> effectively says to categorise any word that is <em>not</em> in the special vocabulary as a stopword. We also still passed an n-gram range to ensure our longest n-gram, with <span class="math notranslate nohighlight">\(n=2\)</span>, was counted.</p>
 </section>
@@ -1491,6 +2017,36 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying 25 of 775 matches:
+. CHAPTER V. OF THE REAL AND NOMINAL PRICE OF COMMODITIES , OR OF THEIR PRICE I
+L PRICE OF COMMODITIES , OR OF THEIR PRICE IN LABOUR , AND THEIR PRICE IN MONEY
+OF THEIR PRICE IN LABOUR , AND THEIR PRICE IN MONEY . CHAPTER VI . OF THE COMPO
+ER VI . OF THE COMPONENT PART OF THE PRICE OF COMMODITIES . CHAPTER VII . OF TH
+PTER VII . OF THE NATURAL AND MARKET PRICE OF COMMODITIES . CHAPTER VIII . OF T
+ in most years nearly about the same price with the corn of England , though , 
+at comes to the same thing , for the price of a great quantity of theirs . He s
+one to the other , except such whose price was very considerable in proportion 
+value ; or wherein consists the real price of all commodities . Secondly , what
+e different parts of which this real price is composed or made up . And , lastl
+e or all of these different parts of price above , and sometimes sink them belo
+es which sometimes hinder the market price , that is , the actual price of comm
+ market price , that is , the actual price of commodities , from coinciding exa
+ith what may be called their natural price . I shall endeavour to explain , as 
+. CHAPTER V. OF THE REAL AND NOMINAL PRICE OF COMMODITIES , OR OF THEIR PRICE I
+L PRICE OF COMMODITIES , OR OF THEIR PRICE IN LABOUR , AND THEIR PRICE IN MONEY
+OF THEIR PRICE IN LABOUR , AND THEIR PRICE IN MONEY . Every man is rich or poor
+ value of all commodities . The real price of every thing , what every thing re
+qual quantity . Labour was the first price , the original purchase money that w
+is liberty , and his happiness . The price which he pays must always be the sam
+ated and compared . It is their real price ; money is their nominal price only 
+ real price ; money is their nominal price only . But though equal quantities o
+r quantity of goods , and to him the price of labour seems to vary like that of
+be said to have a real and a nominal price . Its real price may be said to cons
+ real and a nominal price . Its real price may be said to consist in the quanti
+</pre></div>
+</div>
+</div>
 </div>
 <p>This gives us context for all fo the occurrences of the terms. Context is useful, but there’s more than one kind. What about <em>where</em> in a text references to different ideas or terms appear? We can do that with  <em>text dispersion plot</em>, as shown below for a selection of terms.</p>
 <div class="cell docutils container">
@@ -1499,6 +2055,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/text-nlp_71_0.svg" src="_images/text-nlp_71_0.svg" /></div>
 </div>
 </section>
 <section id="stemming-and-lemmatisation">
@@ -1524,12 +2082,45 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;iv&#39;,
+ &#39;stock&#39;,
+ &#39;lent&#39;,
+ &#39;interest&#39;,
+ &#39;chapt&#39;,
+ &#39;v&#39;,
+ &#39;diff&#39;,
+ &#39;employ&#39;,
+ &#39;capit&#39;,
+ &#39;book&#39;,
+ &#39;ii&#39;,
+ &#39;diff&#39;,
+ &#39;progress&#39;,
+ &#39;op&#39;,
+ &#39;diff&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now we have “pric” instead of price, and “compon” instead of “compnonent”, and so on. The stemming has taken away the ends of the words, leaving us with just their stem. Let’s see if a word count following this approach will be different.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">stem_tokens</span><span class="p">)</span>
 <span class="n">freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;pric&#39;, 832),
+ (&#39;gre&#39;, 700),
+ (&#39;labo&#39;, 686),
+ (&#39;part&#39;, 511),
+ (&#39;quant&#39;, 442),
+ (&#39;country&#39;, 388),
+ (&#39;produc&#39;, 356),
+ (&#39;silv&#39;, 355),
+ (&#39;diff&#39;, 348),
+ (&#39;on&#39;, 348)]
 </pre></div>
 </div>
 </div>
@@ -1550,6 +2141,20 @@ title="Print to PDF"
 <span class="p">]</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">lemma_tokens</span><span class="p">)</span>
 <span class="n">freq</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;price&#39;, 832),
+ (&#39;labour&#39;, 578),
+ (&#39;part&#39;, 475),
+ (&#39;quantity&#39;, 442),
+ (&#39;country&#39;, 388),
+ (&#39;greater&#39;, 386),
+ (&#39;silver&#39;, 355),
+ (&#39;one&#39;, 347),
+ (&#39;time&#39;, 343),
+ (&#39;much&#39;, 323)]
 </pre></div>
 </div>
 </div>
@@ -1576,6 +2181,25 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word &quot;If&quot; is a IN
+The word &quot;we&quot; is a PRP
+The word &quot;are&quot; is a VBP
+The word &quot;going&quot; is a VBG
+The word &quot;to&quot; is a TO
+The word &quot;die&quot; is a VB
+The word &quot;let&quot; is a VB
+The word &quot;us&quot; is a PRP
+The word &quot;die&quot; is a VB
+The word &quot;looking&quot; is a VBG
+The word &quot;like&quot; is a IN
+The word &quot;a&quot; is a DT
+The word &quot;Peruvian&quot; is a JJ
+The word &quot;folk&quot; is a NN
+The word &quot;band&quot; is a NN
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>nltk</strong> uses contractions to refer to the different parts of speech: IN is a preposition, PRP a personal pronoun, VBP a verb (in non 3rd person singular present), JJ is an adjective, NN a noun, and so on.</p>
 <p>When might you actually use PoS tagging? You can imagine thinking about how the use of language is different or has changed across people or institutions. You might be interested in how more active language is being employed to help readers engage more with documents and reports issued by official organisations. You might be interested in removing all words that aren’t, for example, nouns before doing some further analysis.</p>
@@ -1597,6 +2221,85 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>lemma</th>
+      <th>pos</th>
+      <th>tag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>If</td>
+      <td>if</td>
+      <td>SCONJ</td>
+      <td>IN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>we</td>
+      <td>we</td>
+      <td>PRON</td>
+      <td>PRP</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>are</td>
+      <td>be</td>
+      <td>AUX</td>
+      <td>VBP</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>folk</td>
+      <td>folk</td>
+      <td>NOUN</td>
+      <td>NN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>band</td>
+      <td>band</td>
+      <td>NOUN</td>
+      <td>NN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>.</td>
+      <td>.</td>
+      <td>PUNCT</td>
+      <td>.</td>
+    </tr>
+  </tbody>
+</table>
+<p>17 rows × 4 columns</p>
+</div></div></div>
 </div>
 <p>For those brave enough for the pun, <strong>spacy</strong> also has some nifty visualisation tools.</p>
 <div class="cell docutils container">
@@ -1609,6 +2312,130 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><span class="tex2jax_ignore"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" id="51215021b8464a638b029d4d79573ae8-0" class="displacy" width="1800" height="399.5" direction="ltr" style="max-width: none; height: 399.5px; color: #000000; background: #ffffff; font-family: Arial; direction: ltr">
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="50">When</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="50">SCONJ</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="225">you</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="225">PRON</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="400">light</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="400">VERB</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="575">a</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="575">DET</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="750">candle,</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="750">NOUN</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="925">you</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="925">PRON</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="1100">also</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="1100">ADV</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="1275">cast</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="1275">VERB</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="1450">a</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="1450">DET</tspan>
+</text>
+
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="309.5">
+    <tspan class="displacy-word" fill="currentColor" x="1625">shadow.</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="1625">NOUN</tspan>
+</text>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-0" stroke-width="2px" d="M70,264.5 C70,89.5 395.0,89.5 395.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-0" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M70,266.5 L62,254.5 78,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-1" stroke-width="2px" d="M245,264.5 C245,177.0 390.0,177.0 390.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-1" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M245,266.5 L237,254.5 253,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-2" stroke-width="2px" d="M420,264.5 C420,2.0 1275.0,2.0 1275.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-2" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advcl</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M420,266.5 L412,254.5 428,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-3" stroke-width="2px" d="M595,264.5 C595,177.0 740.0,177.0 740.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-3" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M595,266.5 L587,254.5 603,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-4" stroke-width="2px" d="M420,264.5 C420,89.5 745.0,89.5 745.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-4" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M745.0,266.5 L753.0,254.5 737.0,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-5" stroke-width="2px" d="M945,264.5 C945,89.5 1270.0,89.5 1270.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-5" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M945,266.5 L937,254.5 953,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-6" stroke-width="2px" d="M1120,264.5 C1120,177.0 1265.0,177.0 1265.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-6" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">advmod</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M1120,266.5 L1112,254.5 1128,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-7" stroke-width="2px" d="M1470,264.5 C1470,177.0 1615.0,177.0 1615.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-7" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M1470,266.5 L1462,254.5 1478,254.5" fill="currentColor"/>
+</g>
+
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-51215021b8464a638b029d4d79573ae8-0-8" stroke-width="2px" d="M1295,264.5 C1295,89.5 1620.0,89.5 1620.0,264.5" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-51215021b8464a638b029d4d79573ae8-0-8" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M1620.0,266.5 L1628.0,254.5 1612.0,254.5" fill="currentColor"/>
+</g>
+</svg></span></div></div>
 </div>
 </section>
 <section id="named-entity-recognition">
@@ -1625,6 +2452,33 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><span class="tex2jax_ignore"><div class="entities" style="line-height: 2.5; direction: ltr">
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    TAE Technologies
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+, a 
+<mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    California
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">GPE</span>
+</mark>
+-based firm building technology to generate power from nuclear fusion, said on 
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Thursday
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">DATE</span>
+</mark>
+ it had raised 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    $280 million
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">MONEY</span>
+</mark>
+ from new and existing investors, including 
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Google and New Enterprise Associates
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+.</div></span></div></div>
 </div>
 <p>Pretty impressive stuff, but a health warning that there are plenty of texts that are not quite as clean as this one! As with the PoS tagger, you can extract the named entities in a tabular format for onward use:</p>
 <div class="cell docutils container">
@@ -1636,6 +2490,70 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>start_pos</th>
+      <th>end_pos</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TAE Technologies</td>
+      <td>0</td>
+      <td>16</td>
+      <td>ORG</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>California</td>
+      <td>20</td>
+      <td>30</td>
+      <td>GPE</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Thursday</td>
+      <td>109</td>
+      <td>117</td>
+      <td>DATE</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>$280 million</td>
+      <td>132</td>
+      <td>144</td>
+      <td>MONEY</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Google and New Enterprise Associates</td>
+      <td>188</td>
+      <td>224</td>
+      <td>ORG</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>The table below gives the different label meanings in Named Entity Recognition:</p>
 <table class="colwidths-auto table">
@@ -1712,6 +2630,52 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>flesch_reading_ease</th>
+      <td>52.23</td>
+    </tr>
+    <tr>
+      <th>flesch_kincaid_grade</th>
+      <td>12.80</td>
+    </tr>
+    <tr>
+      <th>automated_readability_index</th>
+      <td>15.50</td>
+    </tr>
+    <tr>
+      <th>dale_chall_readability_score</th>
+      <td>7.30</td>
+    </tr>
+    <tr>
+      <th>difficult_words</th>
+      <td>9.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="see-also">

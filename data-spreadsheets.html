@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-spreadsheets.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -325,6 +323,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +581,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-spreadsheets.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-spreadsheets.ipynb"
    class="headerbtn"
@@ -869,7 +854,7 @@ title="Print to PDF"
 <span id="data-spreadsheets"></span><h1>Spreadsheets<a class="headerlink" href="#spreadsheets" title="Permalink to this headline">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>This chapter will show you how to work with spreadsheets, for example Microsoft Excel files, in Python. We already saw how to import csv (and tsv) files in <a class="reference internal" href="data-read-and-write.html#data-read-write"><span class="std std-ref">Reading and Writing Files</span></a>. In this chapter we will introduce you to tools for working with data in Excel spreadsheets and Google Sheets.</p>
+<p>This chapter will show you how to work with spreadsheets, for example Microsoft Excel files, in Python. We already saw how to import csv (and tsv) files in <a class="reference internal" href="data-read-and-write.html#data-read-and-write"><span class="std std-ref">Reading and Writing Files</span></a>. In this chapter we will introduce you to tools for working with data in Excel spreadsheets and Google Sheets.</p>
 <p>If you or your collaborators are using spreadsheets for organising data that will be ingested by an analytical tool like Python, we recommend reading the paper “Data Organization in Spreadsheets” by Karl Broman and Kara Woo <span id="id1">[<a class="reference internal" href="zreferences.html#id35" title="Karl W Broman and Kara H Woo. Data organization in spreadsheets. The American Statistician, 72(1):2–10, 2018.">Broman and Woo, 2018</a>]</span>. The best practices presented in this paper will save you much headache down the line when you import the data from a spreadsheet into Python to analyse and visualise. (For spreadsheets that are meant to be read by humans, we recommend the <a class="reference external" href="https://github.com/best-practice-and-impact/gptables">good practice tables</a> package.)</p>
 <section id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>

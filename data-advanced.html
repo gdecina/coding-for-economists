@@ -325,6 +325,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +583,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-advanced.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-advanced.ipynb"
    class="headerbtn"
@@ -1602,16 +1589,16 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;result&quot;: {
-    &quot;observed_value&quot;: &quot;int64&quot;
-  },
+  &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
   &quot;success&quot;: true,
-  &quot;meta&quot;: {}
+  &quot;result&quot;: {
+    &quot;observed_value&quot;: &quot;int64&quot;
+  }
 }
 </pre></div>
 </div>
@@ -1625,19 +1612,19 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-  &quot;result&quot;: {
-    &quot;observed_value&quot;: 0.6,
-    &quot;element_count&quot;: 5,
-    &quot;missing_count&quot;: null,
-    &quot;missing_percent&quot;: null
-  },
+  &quot;meta&quot;: {},
   &quot;exception_info&quot;: {
     &quot;raised_exception&quot;: false,
     &quot;exception_traceback&quot;: null,
     &quot;exception_message&quot;: null
   },
   &quot;success&quot;: false,
-  &quot;meta&quot;: {}
+  &quot;result&quot;: {
+    &quot;observed_value&quot;: 0.6,
+    &quot;element_count&quot;: 5,
+    &quot;missing_count&quot;: null,
+    &quot;missing_percent&quot;: null
+  }
 }
 </pre></div>
 </div>
@@ -1658,6 +1645,13 @@ failure cases:
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;meta&quot;: {},
+  &quot;exception_info&quot;: {
+    &quot;raised_exception&quot;: false,
+    &quot;exception_traceback&quot;: null,
+    &quot;exception_message&quot;: null
+  },
+  &quot;success&quot;: true,
   &quot;result&quot;: {
     &quot;element_count&quot;: 5,
     &quot;missing_count&quot;: 0,
@@ -1669,14 +1663,7 @@ failure cases:
     &quot;partial_unexpected_list&quot;: [
       -20.4
     ]
-  },
-  &quot;exception_info&quot;: {
-    &quot;raised_exception&quot;: false,
-    &quot;exception_traceback&quot;: null,
-    &quot;exception_message&quot;: null
-  },
-  &quot;success&quot;: true,
-  &quot;meta&quot;: {}
+  }
 }
 </pre></div>
 </div>

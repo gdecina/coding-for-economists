@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-read-and-write.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -325,6 +323,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +581,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-read-and-write.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-read-and-write.md"
    class="headerbtn"
@@ -859,7 +844,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="reading-and-writing-files">
-<span id="data-read-write"></span><h1>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">#</a></h1>
+<span id="data-read-and-write"></span><h1>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">#</a></h1>
 <p>In this chapter, you’ll learn about reading and writing data.</p>
 <p>This chapter uses the <strong>pandas</strong> package. If you’re running this code, you may need to install these packages using, for example, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. (If you’re not sure what a command line or terminal is, take a quick look at the basics of coding chapter.)</p>
 <p><img alt="From the pandas documentation" src="https://pandas.pydata.org/pandas-docs/stable/_images/02_io_readwrite.svg" /></p>
@@ -969,8 +954,8 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>1</th>
-      <td>50.333333</td>
-      <td>995.866667</td>
+      <td>45.652174</td>
+      <td>999.434783</td>
     </tr>
     <tr>
       <th>4</th>
@@ -979,8 +964,8 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>5</th>
-      <td>36.277778</td>
-      <td>1002.344444</td>
+      <td>36.320755</td>
+      <td>1003.415094</td>
     </tr>
     <tr>
       <th>...</th>
@@ -989,13 +974,13 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>10</th>
-      <td>56.492725</td>
-      <td>989.365278</td>
+      <td>54.590715</td>
+      <td>991.240684</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>53.309859</td>
-      <td>991.845070</td>
+      <td>52.522523</td>
+      <td>992.545946</td>
     </tr>
     <tr>
       <th>12</th>

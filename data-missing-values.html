@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-missing-values.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -325,6 +323,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -578,24 +581,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/data-missing-values.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-missing-values.ipynb"
    class="headerbtn"
@@ -1524,7 +1509,7 @@ We’ll finish off with a related discussion of empty groups, caused by categori
 </table>
 </div></div></div>
 </div>
-<p>Of course, another option might be just to filter out the missing values altogether. There are a couple of ways to do this depending if you want to remove entire rows (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or columns (<code class="docutils literal notranslate"><span class="pre">axis=1</span></code>—but in this case, as there is at least one NaN in each column though, there will be no data left!)</p>
+<p>Of course, another option might be just to filter out the missing values altogether. There are a couple of ways to do this depending if you want to remove entire rows (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or columns (<code class="docutils literal notranslate"><span class="pre">axis=1</span></code>)—but in this case, as there is at least one NaN in each column though, there will be no data left!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nan_df</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># on a single column</span>
@@ -1763,7 +1748,7 @@ Name: A, dtype: float64
 <p>The easiest option is probably <code class="docutils literal notranslate"><span class="pre">.replace</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -1794,21 +1779,21 @@ Name: A, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
+      <td>3.0</td>
       <td>4</td>
-      <td>5</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-7</td>
+      <td>-7.0</td>
       <td>4</td>
-      <td>&lt;NA&gt;</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>&lt;NA&gt;</td>
+      <td>NaN</td>
       <td>6</td>
-      <td>5</td>
+      <td>5.0</td>
     </tr>
   </tbody>
 </table>
@@ -1817,7 +1802,7 @@ Name: A, dtype: float64
 <p>Because <code class="docutils literal notranslate"><span class="pre">.replace</span></code> accepts a dictionary, it’s possible to replace several values at once:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -1848,21 +1833,21 @@ Name: A, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
+      <td>3.0</td>
       <td>4</td>
-      <td>5</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>&lt;NA&gt;</td>
+      <td>NaN</td>
       <td>4</td>
-      <td>&lt;NA&gt;</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>&lt;NA&gt;</td>
+      <td>NaN</td>
       <td>6</td>
-      <td>5</td>
+      <td>5.0</td>
     </tr>
   </tbody>
 </table>

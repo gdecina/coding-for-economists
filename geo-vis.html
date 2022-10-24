@@ -327,6 +327,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="wrkflow-version-control.html">
+   Version Control
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-environments.html">
    Virtual Code Environments
   </a>
@@ -580,24 +585,6 @@ title="Toggle navigation"
   </button>
   <div class="menu-dropdown__content">
     <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/aeturrell/coding-for-economists/main?urlpath=tree/geo-vis.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
       <li>
         <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/geo-vis.ipynb"
    class="headerbtn"
@@ -1859,7 +1846,7 @@ title="Print to PDF"
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_b29d14767c66b799984fd80d093d6cb5 {
+                #map_b264da2e72c0f50c48428f76ce37bb21 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1871,13 +1858,13 @@ title="Print to PDF"
 &lt;/head&gt;
 &lt;body&gt;    
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_b29d14767c66b799984fd80d093d6cb5&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_b264da2e72c0f50c48428f76ce37bb21&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;    
 
-            var map_b29d14767c66b799984fd80d093d6cb5 = L.map(
-                &quot;map_b29d14767c66b799984fd80d093d6cb5&quot;,
+            var map_b264da2e72c0f50c48428f76ce37bb21 = L.map(
+                &quot;map_b264da2e72c0f50c48428f76ce37bb21&quot;,
                 {
                     center: [51.5128, -0.0933],
                     crs: L.CRS.EPSG3857,
@@ -1891,32 +1878,34 @@ title="Print to PDF"
 
 
 
-            var tile_layer_be181296179fc4c76e5ee023de4473b0 = L.tileLayer(
+            var tile_layer_6cfea97a8994bac56a66135d91eb5365 = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_b29d14767c66b799984fd80d093d6cb5);
+            ).addTo(map_b264da2e72c0f50c48428f76ce37bb21);
 
 
-            var marker_c708565a7fb0b91a6325102e5736f25b = L.marker(
+            var marker_d0c28ebcece8327caa6da6fc3843f289 = L.marker(
                 [51.5128, -0.0933],
                 {}
-            ).addTo(map_b29d14767c66b799984fd80d093d6cb5);
+            ).addTo(map_b264da2e72c0f50c48428f76ce37bb21);
 
 
-        var popup_73d25ae5076ea81407553d4d124d3316 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_aa9953726191492977be0d9f3c51b5f9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
-            var html_1c5f66222cc4296fd5a100c15720d4bb = $(`&lt;div id=&quot;html_1c5f66222cc4296fd5a100c15720d4bb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Host Coffee&lt;/div&gt;`)[0];
-            popup_73d25ae5076ea81407553d4d124d3316.setContent(html_1c5f66222cc4296fd5a100c15720d4bb);
+
+                var html_7d69f9a7f777030be8879ee48d9c5122 = $(`&lt;div id=&quot;html_7d69f9a7f777030be8879ee48d9c5122&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Host Coffee&lt;/div&gt;`)[0];
+                popup_aa9953726191492977be0d9f3c51b5f9.setContent(html_7d69f9a7f777030be8879ee48d9c5122);
 
 
-        marker_c708565a7fb0b91a6325102e5736f25b.bindPopup(popup_73d25ae5076ea81407553d4d124d3316)
+
+        marker_d0c28ebcece8327caa6da6fc3843f289.bindPopup(popup_aa9953726191492977be0d9f3c51b5f9)
         ;
 
 
 
 
-            marker_c708565a7fb0b91a6325102e5736f25b.bindTooltip(
+            marker_d0c28ebcece8327caa6da6fc3843f289.bindTooltip(
                 `&lt;div&gt;
                      Click here.
                  &lt;/div&gt;`,
@@ -1924,26 +1913,28 @@ title="Print to PDF"
             );
 
 
-            var marker_1b7503acc550416393ad17ee0b061c1d = L.marker(
+            var marker_bad4fc7206adf75b9f6d2f8a71efcf8c = L.marker(
                 [51.5128, -0.0882],
                 {}
-            ).addTo(map_b29d14767c66b799984fd80d093d6cb5);
+            ).addTo(map_b264da2e72c0f50c48428f76ce37bb21);
 
 
-        var popup_60a45258238e97355faf08f2271e6bf7 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_1a180d686c8b7c5c201d57fb76349e92 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
-            var html_18a76cadfe5d6beffa48dd36b2ad8895 = $(`&lt;div id=&quot;html_18a76cadfe5d6beffa48dd36b2ad8895&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Cosy Coffee Corner&lt;/div&gt;`)[0];
-            popup_60a45258238e97355faf08f2271e6bf7.setContent(html_18a76cadfe5d6beffa48dd36b2ad8895);
+
+                var html_8b981f30ccddb9a54a68e9ab555e187d = $(`&lt;div id=&quot;html_8b981f30ccddb9a54a68e9ab555e187d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Cosy Coffee Corner&lt;/div&gt;`)[0];
+                popup_1a180d686c8b7c5c201d57fb76349e92.setContent(html_8b981f30ccddb9a54a68e9ab555e187d);
 
 
-        marker_1b7503acc550416393ad17ee0b061c1d.bindPopup(popup_60a45258238e97355faf08f2271e6bf7)
+
+        marker_bad4fc7206adf75b9f6d2f8a71efcf8c.bindPopup(popup_1a180d686c8b7c5c201d57fb76349e92)
         ;
 
 
 
 
-            marker_1b7503acc550416393ad17ee0b061c1d.bindTooltip(
+            marker_bad4fc7206adf75b9f6d2f8a71efcf8c.bindTooltip(
                 `&lt;div&gt;
                      Click here.
                  &lt;/div&gt;`,
@@ -1951,26 +1942,28 @@ title="Print to PDF"
             );
 
 
-            var marker_cef393362006bdeabebffe1de9f3bdeb = L.marker(
+            var marker_d3d7fbd37a151318e1646a35dd69591a = L.marker(
                 [51.512106, -0.09687],
                 {}
-            ).addTo(map_b29d14767c66b799984fd80d093d6cb5);
+            ).addTo(map_b264da2e72c0f50c48428f76ce37bb21);
 
 
-        var popup_d518dde5ac9179a721576c799a795ac4 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_7be492b75e6a0b5e2e24559b1a95b26e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
-            var html_c4b7a872743a8d7ebafda396b1f2ba7a = $(`&lt;div id=&quot;html_c4b7a872743a8d7ebafda396b1f2ba7a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;The Wren Coffee&lt;/div&gt;`)[0];
-            popup_d518dde5ac9179a721576c799a795ac4.setContent(html_c4b7a872743a8d7ebafda396b1f2ba7a);
+
+                var html_11678e37150a7f2eeae0f6742e093ef7 = $(`&lt;div id=&quot;html_11678e37150a7f2eeae0f6742e093ef7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;The Wren Coffee&lt;/div&gt;`)[0];
+                popup_7be492b75e6a0b5e2e24559b1a95b26e.setContent(html_11678e37150a7f2eeae0f6742e093ef7);
 
 
-        marker_cef393362006bdeabebffe1de9f3bdeb.bindPopup(popup_d518dde5ac9179a721576c799a795ac4)
+
+        marker_d3d7fbd37a151318e1646a35dd69591a.bindPopup(popup_7be492b75e6a0b5e2e24559b1a95b26e)
         ;
 
 
 
 
-            marker_cef393362006bdeabebffe1de9f3bdeb.bindTooltip(
+            marker_d3d7fbd37a151318e1646a35dd69591a.bindTooltip(
                 `&lt;div&gt;
                      Click here.
                  &lt;/div&gt;`,
