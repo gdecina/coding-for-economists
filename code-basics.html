@@ -210,17 +210,49 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
-   Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Better Coding
+   Code in Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
    More Coding
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Econometrics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-probability-random.html">
+   Probability and Random Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-statistics.html">
+   Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-regression.html">
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayesian.html">
+   Bayesian Inference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
   </a>
  </li>
 </ul>
@@ -236,6 +268,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="vis-seaborn.html">
+   Easy Data Visualisation for Tidy Data with
+   <strong>
+    Seaborn
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-matplotlib.html">
+   Powerful Data Visualisation with
+   <strong>
+    Matplotlib
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
    Common Plots
   </a>
@@ -243,11 +291,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
    Narrative Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
   </a>
  </li>
 </ul>
@@ -317,6 +360,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  More Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Essential Tricks for Better Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-further-advanced.html">
+   Yet More Coding
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   More Workflow
  </span>
 </p>
@@ -339,43 +399,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
   </a>
  </li>
 </ul>
@@ -469,6 +492,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="geo-vis.html">
    Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Data Visualisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-plotnine.html">
+   Data Visualisation using the Grammar of Graphics with Plotnine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-animation.html">
+   Animation
   </a>
  </li>
 </ul>
@@ -2464,36 +2504,6 @@ y is outside a function: I&#39;m a global variable
 </pre></div>
 </div>
 </div>
-</div>
-<p><strong>nonlocal</strong></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you are just learning to code you should feel free to skip this section.</p>
-</div>
-<p>Finally, non-local variables are used in nested functions as a means to say ‘hey, this variable is not just local to this nested function, it exists outside it too’. Here’s an example that prints “world” because we tell the inner function to use the same <code class="docutils literal notranslate"><span class="pre">x</span></code> as the outer function:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outer_function</span><span class="p">():</span>
-  <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
-  <span class="k">def</span> <span class="nf">nested_function</span><span class="p">():</span>
-    <span class="k">nonlocal</span> <span class="n">x</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
-  <span class="n">nested_function</span><span class="p">()</span>
-  <span class="k">return</span> <span class="n">x</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">outer_function</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>world
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Re-write the above function without the <code class="docutils literal notranslate"><span class="pre">nonlocal</span></code> keyword. What does it print?</p>
 </div>
 <p>This is just a taster of what can be done using base Python with few extra packages. For more, especially if you’ve done other chapters in the book already and want to go a bit deeper, see the Chapter on <a class="reference internal" href="code-advanced.html#code-advanced"><span class="std std-ref">More Coding</span></a>. Otherwise, head on to the next chapter!</p>
 </section>

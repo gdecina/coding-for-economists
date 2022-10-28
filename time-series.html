@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/time-series.html" />
@@ -208,17 +210,49 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="code-best-practice.html">
-   Tips for Better Coding
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Better Coding
+   Code in Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code-advanced.html">
    More Coding
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Econometrics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-probability-random.html">
+   Probability and Random Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-statistics.html">
+   Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-regression.html">
+   Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-causal-inference.html">
+   Causal Inference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayesian.html">
+   Bayesian Inference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="econmt-bayes-bambi.html">
+   Bayesian Inference Made Easier
   </a>
  </li>
 </ul>
@@ -234,6 +268,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="vis-seaborn.html">
+   Easy Data Visualisation for Tidy Data with
+   <strong>
+    Seaborn
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-matplotlib.html">
+   Powerful Data Visualisation with
+   <strong>
+    Matplotlib
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="vis-common-plots.html">
    Common Plots
   </a>
@@ -241,11 +291,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="vis-narrative.html">
    Narrative Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
   </a>
  </li>
 </ul>
@@ -315,6 +360,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  More Coding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-advcd-best-practice.html">
+   Essential Tricks for Better Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-further-advanced.html">
+   Yet More Coding
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   More Workflow
  </span>
 </p>
@@ -337,43 +399,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="wrkflow-rap.html">
    Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
   </a>
  </li>
 </ul>
@@ -467,6 +492,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="geo-vis.html">
    Geo-Spatial Visualisation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More Data Visualisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-plotnine.html">
+   Data Visualisation using the Grammar of Graphics with Plotnine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-animation.html">
+   Animation
   </a>
  </li>
 </ul>
@@ -2714,15 +2756,6 @@ g_k = \frac{1}{n}\sum_{t=1}^{n-k} \left(y_t-\bar{y}\right) \left(x_{t+k}-\bar{x}
   </thead>
   <tbody>
     <tr>
-      <th>2021-04-01</th>
-      <td>5784816.0</td>
-      <td>15.570747</td>
-      <td>3.346410e+13</td>
-      <td>2405.164443</td>
-      <td>6.252473</td>
-      <td>17.334378</td>
-    </tr>
-    <tr>
       <th>2021-07-01</th>
       <td>5883177.0</td>
       <td>15.587607</td>
@@ -2757,6 +2790,15 @@ g_k = \frac{1}{n}\sum_{t=1}^{n-k} \left(y_t-\bar{y}\right) \left(x_{t+k}-\bar{x}
       <td>2520.512250</td>
       <td>5.693964</td>
       <td>9.821678</td>
+    </tr>
+    <tr>
+      <th>2022-07-01</th>
+      <td>6423822.0</td>
+      <td>15.675524</td>
+      <td>4.126549e+13</td>
+      <td>2534.525991</td>
+      <td>1.115067</td>
+      <td>9.189678</td>
     </tr>
   </tbody>
 </table>
@@ -2805,29 +2847,29 @@ y_t' = y_t - \langle y_t \rangle
   </thead>
   <tbody>
     <tr>
-      <th>2021-04-01</th>
-      <td>5784816.0</td>
-      <td>1.140006e+06</td>
-    </tr>
-    <tr>
       <th>2021-07-01</th>
       <td>5883177.0</td>
-      <td>1.238367e+06</td>
+      <td>1.206022e+06</td>
     </tr>
     <tr>
       <th>2021-10-01</th>
       <td>6203369.0</td>
-      <td>1.558559e+06</td>
+      <td>1.526214e+06</td>
     </tr>
     <tr>
       <th>2022-01-01</th>
       <td>6010733.0</td>
-      <td>1.365923e+06</td>
+      <td>1.333578e+06</td>
     </tr>
     <tr>
       <th>2022-04-01</th>
       <td>6352982.0</td>
-      <td>1.708172e+06</td>
+      <td>1.675827e+06</td>
+    </tr>
+    <tr>
+      <th>2022-07-01</th>
+      <td>6423822.0</td>
+      <td>1.746667e+06</td>
     </tr>
   </tbody>
 </table>
@@ -3260,8 +3302,8 @@ Name: default, dtype: float64
 Dep. Variable:                      y   R-squared:                       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.095</span>
 Model:                            OLS   Adj. R-squared:                  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.090</span>
 Method:                 Least Squares   F-statistic:                     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">17.83</span>
-Date:                Mon, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> Oct <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2022</span>   Prob <span style="font-weight: bold">(</span>F-statistic<span style="font-weight: bold">)</span>:           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.30e-22</span>
-Time:                        <span style="color: #00ff00; text-decoration-color: #00ff00; font-weight: bold">22:00:02</span>   Log-Likelihood:                 <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">630.15</span>
+Date:                Fri, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">28</span> Oct <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2022</span>   Prob <span style="font-weight: bold">(</span>F-statistic<span style="font-weight: bold">)</span>:           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.30e-22</span>
+Time:                        <span style="color: #00ff00; text-decoration-color: #00ff00; font-weight: bold">18:27:32</span>   Log-Likelihood:                 <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">630.15</span>
 No. Observations:                <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1194</span>   AIC:                            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1244</span>.
 Df Residuals:                    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1186</span>   BIC:                            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1204</span>.
 Df Model:                           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">7</span>                                         
@@ -3537,16 +3579,17 @@ At X0         0 variables are exactly at the bounds
 At iterate    0    f= -4.12260D-01    |proj g|=  4.06629D-01
 
 At iterate    5    f= -6.88039D-01    |proj g|=  5.75258D-03
-
-At iterate   10    f= -6.89765D-01    |proj g|=  6.66193D-03
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   15    f= -6.90767D-01    |proj g|=  1.70465D-03
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   10    f= -6.89765D-01    |proj g|=  6.66193D-03
 
-At iterate   20    f= -6.90809D-01    |proj g|=  3.36966D-05
+At iterate   15    f= -6.90767D-01    |proj g|=  1.70460D-03
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   20    f= -6.90809D-01    |proj g|=  3.37166D-05
 
            * * *
 
@@ -3561,8 +3604,8 @@ F     = final function value
            * * *
 
    N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
-    3     23     24      1     0     0   7.923D-06  -6.908D-01
-  F = -0.69081045364463145     
+    3     23     24      1     0     0   7.925D-06  -6.908D-01
+  F = -0.69081045364528326     
 
 CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_&lt;=_PGTOL            
 </pre></div>
@@ -3613,13 +3656,6 @@ CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_&lt;=_PGTOL
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
-
- Warning:  more than 10 function and gradient
-   evaluations in the last line search.  Termination
-   may possibly be caused by a bad search direction.
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RUNNING THE L-BFGS-B CODE
 
            * * *
@@ -3630,11 +3666,16 @@ Machine precision = 2.220D-16
 At X0         0 variables are exactly at the bounds
 
 At iterate    0    f=  1.00272D+00    |proj g|=  1.55100D+00
-
-At iterate    5    f= -3.23408D-01    |proj g|=  4.15915D+00
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate    5    f= -3.23408D-01    |proj g|=  4.15915D+00
   ys=-2.635E-01  -gs= 2.177E-01 BFGS update SKIPPED
-
-At iterate   10    f= -6.09373D-01    |proj g|=  3.95724D+00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   10    f= -6.09373D-01    |proj g|=  3.95724D+00
 
 At iterate   15    f= -6.24190D-01    |proj g|=  9.17700D-02
 
@@ -3657,7 +3698,12 @@ F     = final function value
 CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH             
 </pre></div>
 </div>
-<img alt="_images/time-series_123_2.svg" src="_images/time-series_123_2.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Warning:  more than 10 function and gradient
+   evaluations in the last line search.  Termination
+   may possibly be caused by a bad search direction.
+</pre></div>
+</div>
+<img alt="_images/time-series_123_5.svg" src="_images/time-series_123_5.svg" /></div>
 </div>
 </section>
 <section id="other-seasonal-adjustment-approaches">
@@ -4152,8 +4198,9 @@ At iterate   10    f= -7.25501D-01    |proj g|=  2.81797D+00
 At iterate   15    f= -7.71234D-01    |proj g|=  1.57449D-01
 
 At iterate   20    f= -7.73361D-01    |proj g|=  1.44064D+00
-
-At iterate   25    f= -7.74325D-01    |proj g|=  2.29415D-04
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f= -7.74325D-01    |proj g|=  2.29415D-04
 
            * * *
 
@@ -4174,7 +4221,7 @@ F     = final function value
 CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH             
 </pre></div>
 </div>
-<img alt="_images/time-series_136_2.svg" src="_images/time-series_136_2.svg" /></div>
+<img alt="_images/time-series_136_3.svg" src="_images/time-series_136_3.svg" /></div>
 </div>
 <p>Did this model do better than the same unobserved components model without the dummy indicators for holidays? We can test that directly:</p>
 <div class="cell docutils container">
