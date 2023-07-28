@@ -51,13 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-intro.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Easy Data Visualisation for Tidy Data with Seaborn" href="vis-seaborn.html" />
+    <link rel="next" title="Easy Data Visualisation for Tidy Data with Lets-Plot" href="vis-letsplot.html" />
     <link rel="prev" title="Bayesian Inference Made Easier" href="econmt-bayes-bambi.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -266,10 +264,10 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
+  <a class="reference internal" href="vis-letsplot.html">
    Easy Data Visualisation for Tidy Data with
    <strong>
-    Seaborn
+    Lets-Plot
    </strong>
   </a>
  </li>
@@ -537,6 +535,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="maths-numerical.html">
    Numerical Mathematics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Even More Data Visualisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-seaborn.html">
+   Data Visualisation with
+   <strong>
+    Seaborn
+   </strong>
   </a>
  </li>
 </ul>
@@ -1045,11 +1058,12 @@ title="Print to PDF"
 </section>
 <section id="libraries-for-data-visualisation">
 <h2>Libraries for Data Visualisation<a class="headerlink" href="#libraries-for-data-visualisation" title="Permalink to this headline">#</a></h2>
-<p>In the rest of this chapter, we’ll take a look at making visualisations with several of these libraries. But first, let’s introduce them.</p>
-<p>The most important and widely used data visualisation library in Python is <a class="reference external" href="https://matplotlib.org/"><strong>matplotlib</strong></a>. It was used to make the first image of a black hole <span id="id3">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11" title="Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. The Astrophysical Journal Letters, 875(1):L4, 2019.">2019</a>]</span> and to image the first empirical evidence of gravitational waves <span id="id4">Abbott <em>et al.</em> [<a class="reference internal" href="zreferences.html#id12" title="Benjamin P Abbott, Richard Abbott, TD Abbott, MR Abernathy, Fausto Acernese, Kendall Ackley, Carl Adams, Thomas Adams, Paolo Addesso, RX Adhikari, and others. Observation of gravitational waves from a binary black hole merger. Physical review letters, 116(6):061102, 2016.">2016</a>]</span>. <strong>matplotlib</strong> is an imperative visualisation library: you specify each part of what you want individually to build up an entire picture. It’s perhaps the easiest to get started with and the most difficult to master. As well as making plots, it can also be used to make diagrams, animations, and 3D visualisations (which you should use sparingly, if at all).</p>
-<p><a class="reference external" href="https://seaborn.pydata.org"><strong>seaborn</strong></a> is a popular declarative library that builds on <strong>maplotlib</strong> and works especially well with data that are in a <em>tidy</em> format (one row per observation, one column per variable). This book recommends a mixture of <strong>seaborn</strong> and <strong>matplotlib</strong> for most needs. especially for graphs that are not interactive.</p>
-<p><a class="reference external" href="https://plotly.com/python/plotly-express/"><strong>plotly</strong> express</a> is another declarative-leaning library that’s suited to web apps and dashboards. This comes highly recommended if you need interactivity out of the box.</p>
-<p><a class="reference external" href="https://plotnine.readthedocs.io"><strong>plotnine</strong></a> is another declarative plotting library. It adopts a <em>grammar of graphics</em> approach. What this means is that <em>all</em> visualisations begin with the same command, <code class="docutils literal notranslate"><span class="pre">ggplot</span></code>, and are combinations of layers that address different aspects of a plot, for example points or lines, scale, labels, and so on. It’ll be clearer when we come to an example.</p>
+<p>In subsequent chapters, we’ll take a look at making visualisations with several of these libraries. Our overall advice is to use <strong>lets-plot</strong> for declarative plotting and <strong>matplotlib</strong> for imperative plotting due to their high quality, flexibility, and likelihood of long term support. You can find lots of examples of the kinds of visualisations these packages produce side-by-side over in <a class="reference internal" href="vis-common-plots.html#vis-common-plots"><span class="std std-ref">Common Plots</span></a>.</p>
+<p>The most important and widely used data visualisation library in Python is <a class="reference external" href="https://matplotlib.org/"><strong>matplotlib</strong></a>. It was used to make the first image of a black hole <span id="id3">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11" title="Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. The Astrophysical Journal Letters, 875(1):L4, 2019.">2019</a>]</span> and to image the first empirical evidence of gravitational waves <span id="id4">Abbott <em>et al.</em> [<a class="reference internal" href="zreferences.html#id12" title="Benjamin P Abbott, Richard Abbott, TD Abbott, MR Abernathy, Fausto Acernese, Kendall Ackley, Carl Adams, Thomas Adams, Paolo Addesso, RX Adhikari, and others. Observation of gravitational waves from a binary black hole merger. Physical review letters, 116(6):061102, 2016.">2016</a>]</span>. <strong>matplotlib</strong> is an imperative visualisation library: you specify each part of what you want individually to build up an entire picture. It’s perhaps the easiest to get started with and the most difficult to master. As well as making plots, it can also be used to make diagrams, animations, and 3D visualisations (which you should use sparingly, if at all). Reach for it if you like to have very fine-grained control over your plots, for example, you’re making a bespoke or unusual chart, you need to control the look of a chart very carefully, you’re making something that requires more graphical design, or you prefer to build up your plots from elemental pieces. You can explore it further in <a class="reference internal" href="vis-matplotlib.html#vis-matplotlib"><span class="std std-ref">Powerful Data Visualisation with Matplotlib</span></a>.</p>
+<p><a class="reference external" href="https://lets-plot.org/"><strong>lets-plot</strong></a> is a fantastic and extremely high-quality declarative library that works especially well with data that are in a <em>tidy</em> format (one row per observation, one column per variable). It adopts a <em>grammar of graphics</em> approach. What this means is that <em>all</em> visualisations begin with the same command, <code class="docutils literal notranslate"><span class="pre">ggplot</span></code>, and are combinations of layers that address different aspects of a plot, for example points or lines, scale, labels, and so on. Use it if you want one of a long list of standard charts produced quickly and to a high standard, and if your data are in a tidy format. You can find out more about it in <a class="reference internal" href="vis-letsplot.html#vis-letsplot"><span class="std std-ref">Easy Data Visualisation for Tidy Data with Lets-Plot</span></a>.</p>
+<p><a class="reference external" href="https://plotly.com/python/plotly-express/"><strong>plotly</strong> express</a> is another declarative-leaning library that’s suited to web apps and dashboards.</p>
+<p><a class="reference external" href="https://seaborn.pydata.org"><strong>seaborn</strong></a> is a popular declarative library that builds on <strong>maplotlib</strong> and works especially well with data that are in a <em>tidy</em> format (one row per observation, one column per variable). <strong>seaborn</strong> is still a work in progress, but you can find information on it in <a class="reference internal" href="vis-seaborn.html#vis-seaborn"><span class="std std-ref">Data Visualisation with Seaborn</span></a>.</p>
+<p><a class="reference external" href="https://plotnine.readthedocs.io"><strong>plotnine</strong></a> is another declarative plotting library that adopts a <em>grammar of graphics</em> approach and uses a <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> command, but it’s not quite as full featured as <strong>lets-plot</strong>. You can read more about it in <a class="reference internal" href="vis-plotnine.html#vis-plotnine"><span class="std std-ref">Data Visualisation using the Grammar of Graphics with Plotnine</span></a>.</p>
 <p><a class="reference external" href="https://altair-viz.github.io/"><strong>altair</strong></a> is yet another declarative plotting library for Python! It’s most suited to interactive graphics on the web, and produces really beautiful charts. Under the hood, it calls a javascript library named <strong>Vega-Lite</strong> that’s the sort of thing newspaper data visualisation units might use to make their infographics.</p>
 <p><strong>pandas</strong> also has <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html">built-in plotting functions</a> that you will have seen in the data analysis part of this book. They are of the form <code class="docutils literal notranslate"><span class="pre">df.plot.*</span></code> where <code class="docutils literal notranslate"><span class="pre">*</span></code> could be, for example, <code class="docutils literal notranslate"><span class="pre">scatter</span></code>. These are convenience functions for making a quick plot of your data and they actually use <strong>matplotlib</strong>; we won’t see much of these here but you can find them in the data analysis chapter.</p>
 <p>We’re going to start this chapter by finding out a little bit more about each of these data visualisation libraries before looking at some examples of how to make specific plots with all the main libraries. We’ll end by looking at some more interesting and advanced plots.</p>
@@ -1127,10 +1141,10 @@ title="Print to PDF"
             <p class="prev-next-title">Bayesian Inference Made Easier</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="vis-seaborn.html" title="next page">
+    <a class='right-next' id="next-link" href="vis-letsplot.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Easy Data Visualisation for Tidy Data with <strong>Seaborn</strong></p>
+        <p class="prev-next-title">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

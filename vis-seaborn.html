@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Easy Data Visualisation for Tidy Data with Seaborn &#8212; Coding for Economists</title>
+    <title>Data Visualisation with Seaborn &#8212; Coding for Economists</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Powerful Data Visualisation with Matplotlib" href="vis-matplotlib.html" />
-    <link rel="prev" title="Intro to Data Visualisation" href="vis-intro.html" />
+    <link rel="next" title="Coming from Stata" href="coming-from-stata.html" />
+    <link rel="prev" title="Numerical Mathematics" href="maths-numerical.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -259,17 +259,17 @@ const thebe_selector_output = ".output, .cell_output"
   Data Visualisation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="vis-intro.html">
    Intro to Data Visualisation
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-letsplot.html">
    Easy Data Visualisation for Tidy Data with
    <strong>
-    Seaborn
+    Lets-Plot
    </strong>
   </a>
  </li>
@@ -537,6 +537,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="maths-numerical.html">
    Numerical Mathematics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Even More Data Visualisation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Visualisation with
+   <strong>
+    Seaborn
+   </strong>
   </a>
  </li>
 </ul>
@@ -906,7 +921,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Easy Data Visualisation for Tidy Data with Seaborn</h1>
+                <h1>Data Visualisation with Seaborn</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1034,15 +1049,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="easy-data-visualisation-for-tidy-data-with-seaborn">
-<span id="vis-seaborn"></span><h1>Easy Data Visualisation for Tidy Data with <strong>Seaborn</strong><a class="headerlink" href="#easy-data-visualisation-for-tidy-data-with-seaborn" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-visualisation-with-seaborn">
+<span id="vis-seaborn"></span><h1>Data Visualisation with <strong>Seaborn</strong><a class="headerlink" href="#data-visualisation-with-seaborn" title="Permalink to this headline">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Here you’ll see how to make plots quickly using the <em>declarative</em> plotting package <strong>seaborn</strong>. This package is perfect if you want to make a standard chart from so-called <em>tidy</em> data where you have one row per observation and one columnn per variable.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>seaborn</strong> is perhaps the quickest way to get going with plots in Python.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>seaborn</strong>’s object API is still a work-in-progress, so check the version you’re using carefully and note that the API may change relative to what’s shown here.</p>
 </div>
+<p>Here you’ll see how to make plots quickly using the <em>declarative</em> plotting package <strong>seaborn</strong>. This package is good if you want to make a standard chart from so-called <em>tidy</em> data where you have one row per observation and one columnn per variable.</p>
 <p><strong>seaborn</strong> is actually built on top of <strong>matplotlib</strong> so you can also mix code for the two packages.</p>
 <p>The rest of this chapter is indebted to the excellent <strong>seaborn</strong> object notation <a class="reference external" href="https://seaborn.pydata.org/tutorial/objects_interface.html">documentation</a>.</p>
 <p>As ever, we start by bringing in the packages we’ll need:</p>
@@ -1789,17 +1804,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="vis-intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="maths-numerical.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Intro to Data Visualisation</p>
+            <p class="prev-next-title">Numerical Mathematics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="vis-matplotlib.html" title="next page">
+    <a class='right-next' id="next-link" href="coming-from-stata.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Powerful Data Visualisation with <strong>Matplotlib</strong></p>
+        <p class="prev-next-title">Coming from Stata</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
