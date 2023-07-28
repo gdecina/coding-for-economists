@@ -268,10 +268,10 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
+  <a class="reference internal" href="vis-letsplot.html">
    Easy Data Visualisation for Tidy Data with
    <strong>
-    Seaborn
+    Lets-Plot
    </strong>
   </a>
  </li>
@@ -539,6 +539,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="maths-numerical.html">
    Numerical Mathematics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Even More Data Visualisation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vis-seaborn.html">
+   Data Visualisation with
+   <strong>
+    Seaborn
+   </strong>
   </a>
  </li>
 </ul>
@@ -926,7 +941,7 @@ title="Print to PDF"
 <p>Python and R have strong similarities when it comes to economics and data science. If you’re coming from R, then you’re probably already familiar with coding and with integrated developer environments. And because there are Python packages that replicate the major R packages, there is probably no easier switch in high-level programming languages than the one from R to Python.</p>
 <p>There are, however, some fundamental differences between the two languages. The biggest difference between Python and R is that Python is a general purpose programming language, while R began as a statistical language. But you won’t really notice this unless you’re writing something that looks more like production-grade software. (And, despite being a general language, Python has really fantastic support for statistics.) A second difference is that Python is more object-oriented while R is more functional. These are two different programming paradigms. Actually, both languages do a bit of both and, again, you’re unlikely to notice any difference most of the time.</p>
 <p>Actually, the biggest practical difference in the context of packages for economics and data science is that Python has more of a flavour of the bazaar—there are lots of people, and you can find everything under the Sun, but it can be a <em>little bit</em> chaotic—while R has the feel of a curated garden—there is a chief gardener (RStudio) tending a smaller number of more beautiful things, but the garden has boundaries. As an example of this dynamic, there are around 20,000 packages on CRAN, R’s official and strict package server; there are 350,000+ on PyPI, the Python equivalent (but it’s easier to get a package accepted).</p>
-<p>For those coming from the ‘tidyverse’ set of packages produced by RStudio, there are very direct Python equivalents. For example, Python has <strong>plotnine</strong> which has the same syntax to R’s <strong>ggplot2</strong>. There’s also <strong>plydata</strong>, which has the same syntax as R’s <strong>dplyr</strong> package. In Python, <strong>matplotlib</strong> and <strong>pandas</strong> are more popular packages for plotting and data analysis, respectively, but those R-style packages are absolutely there if you prefer them. More on other similar packages below.</p>
+<p>For those coming from the ‘tidyverse’ set of packages produced by RStudio, there are very direct Python equivalents. For example, Python has <strong>lets-plot</strong> which has almostly exactly the same syntax to R’s <strong>ggplot2</strong>. There’s also <strong>plydata</strong>, which has the same syntax as R’s <strong>dplyr</strong> package, and <strong>polars</strong>, which is our recommended substitute for <strong>dplr</strong> as it has a consistent syntax and, wow, is it fast. In Python, <strong>matplotlib</strong> and <strong>pandas</strong> are more popular packages for plotting and data analysis, respectively, but those R-style packages are absolutely there if you prefer them. More on other similar packages below.</p>
 <p>There’s a list of more fundamental differences between R and Python as programming languages at the end of this chapter, but a couple of important gotchas to be aware of up front: first, R uses vectors, arrays, etc., that are indexed from 1. Like C++, Python is numbered from zero, with, eg, <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> as the first element. Second, <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> is the preferred assignment operator in R but in Python it’s <code class="docutils literal notranslate"><span class="pre">=</span></code> (and <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> isn’t used). In fact, in R <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> assigns <code class="docutils literal notranslate"><span class="pre">a</span></code> the value <code class="docutils literal notranslate"><span class="pre">5</span></code>, while <code class="docutils literal notranslate"><span class="pre">a&lt;-5</span></code> in Python would return <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> based on whether <code class="docutils literal notranslate"><span class="pre">a</span></code> was less than <code class="docutils literal notranslate"><span class="pre">-5</span></code> or not!</p>
 <section id="tools-with-similar-syntax-to-those-found-in-an-r-workflow">
 <h2>Tools with similar syntax to those found in an R workflow<a class="headerlink" href="#tools-with-similar-syntax-to-those-found-in-an-r-workflow" title="Permalink to this headline">#</a></h2>
@@ -934,15 +949,16 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><strong>dplyr</strong>: This book recommends learning at least some <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/index.html"><strong>pandas</strong></a> for data analysis in Python because it is a package that is comprehensive and ubiquitous, and it’s the most popular Python library that performs similar functions to <strong>dplyr</strong>. <strong>pandas</strong> also has unrivaled documentation. However, if you want something closer to <strong>dplyr</strong> in terms of philosophy and syntax, there are a host of options available to you:</p>
 <ul>
-<li><p>a Python package that is very similar to <strong>dplyr</strong> is <a class="reference external" href="https://plydata.readthedocs.io/en/stable/index.html"><strong>plydata</strong></a>. It is created to be consistent with visualisation package <strong>plotnine</strong> (featured below).</p></li>
-<li><p>another library that gets close to <strong>dplylr</strong> is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Because it uses a consistent framework for data piping under the hood called <a class="reference external" href="https://github.com/pwwang/pipda"><strong>pipda</strong></a>, <strong>datar</strong> seems highly extensible too. It also integrates with <strong>plotnine</strong> for visualisation.</p></li>
+<li><p>the package we recommend is the blisteringly fast <a class="reference external" href="https://www.pola.rs/"><strong>polars</strong></a>. It has different syntax to <strong>dplyr</strong> but has a very consistent API that will be familiar to those coming from the R package.</p></li>
 <li><p><a class="reference external" href="https://tidypolars.readthedocs.io/"><strong>tidypolars</strong></a> combines the syntax of <strong>dplyr</strong> with the best-in-class speed of Python package <a class="reference external" href="https://www.pola.rs/"><strong>polars</strong></a></p></li>
+<li><p>a Python package that is very similar to <strong>dplyr</strong> is <a class="reference external" href="https://plydata.readthedocs.io/en/stable/index.html"><strong>plydata</strong></a>. It is created to be consistent with visualisation package <strong>plotnine</strong>.</p></li>
+<li><p>another library that gets close to <strong>dplylr</strong> is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Because it uses a consistent framework for data piping under the hood called <a class="reference external" href="https://github.com/pwwang/pipda"><strong>pipda</strong></a>, <strong>datar</strong> seems highly extensible too. It also integrates with <strong>plotnine</strong> for visualisation.</p></li>
 <li><p><a class="reference external" href="https://siuba.readthedocs.io/en/latest/"><strong>siuba</strong></a> is a port of dplyr, tidyr, and other R libraries for data analysis.</p></li>
 <li><p><a class="reference external" href="https://github.com/kieferk/dfply"><strong>dfplyr</strong></a> is another attempt to replicate the syntax of <strong>dplyr</strong>, but it doesn’t seem to be maintained.</p></li>
 <li><p><a class="reference external" href="https://pyjanitor-devs.github.io/pyjanitor/"><strong>pyjanitor</strong></a> builds a range of extra features on top of <strong>pandas</strong>. Two of the things it adds are likely to make anyone coming from <strong>dplyr</strong> feel a bit more at home: better support for method chaining and some functions with the same names as the ones in <strong>dplyr</strong> and which do the same things.</p></li>
 </ul>
 </li>
-<li><p><strong>ggplot2</strong>: the most similar Python version of this library is <a class="reference external" href="https://plotnine.readthedocs.io/en/stable/index.html"><strong>plotnine</strong></a>, while the most popular Python library that performs similar functions is a combination of <a class="reference external" href="https://matplotlib.org/"><strong>matplolib</strong></a> and <a class="reference external" href="https://seaborn.pydata.org/"><strong>seaborn</strong></a>, which builds on <strong>matplotlib</strong>. I think either those two together or <strong>plotnine</strong> are good choices, though <strong>plotnine</strong>’s documentation is not (yet) as good and it’s certainly not as widely used. (It’s gaining popularity though.)</p></li>
+<li><p><strong>ggplot2</strong>: the most similar Python version of this library is <a class="reference external" href="https://lets-plot.org/"><strong>lets-plot</strong></a>, and it is indeed <em>extremely</em> similar. So much so that you’ll be able to write in it in about five seconds if you’re already familiar with <strong>ggplot2</strong>. This isn’t the only option for you: <a class="reference external" href="https://plotnine.readthedocs.io/en/stable/index.html"><strong>plotnine</strong></a> is another choice for declarative plotting, as is <a class="reference external" href="https://seaborn.pydata.org/"><strong>seaborn</strong></a>’s object API. R doesn’t have a core imperative plotting package, but in Python this role is fulfilled by the astonishingly versatile <a class="reference external" href="https://matplotlib.org/"><strong>matplolib</strong></a>.</p></li>
 <li><p><strong>data.table</strong>: if you use this library instead of <strong>dplyr</strong>, have no fear as there’s an almost identical library in Python called <a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a>. It’s not nearly as popular in Python as <strong>data.table</strong> is in R, but it’s a very high quality library.</p></li>
 <li><p><strong>here</strong>: Lots of people switching from R to Python ask what the equivalent of the <code class="docutils literal notranslate"><span class="pre">here()</span></code> function is. The “best practice” answer is that you shouldn’t need one! It’s good practice to have your Visual Studio Code (or other IDE) console and interactive Python window automatically start <em>within</em> the directory of your project; that is, you should always be “here” automatically. In Visual Studio Code, you can ensure that the interactive window starts in the root directory of your project by setting “Jupyter: Notebook File Root” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” in the Settings menu. For the integrated command line, change “Terminal › Integrated: Cwd” to “<code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code>” too. If you still need a replacement for <code class="docutils literal notranslate"><span class="pre">here</span></code>, then the <a class="reference external" href="https://github.com/chendaniely/pyprojroot">pyprojroot</a> package has you covered.</p></li>
 </ul>

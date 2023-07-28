@@ -825,6 +825,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polars">
+     Polars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tidypolars">
+     tidypolars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datatable">
      Datatable
     </a>
@@ -835,11 +845,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#polars">
-     Polars
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plydata">
      Plydata
     </a>
@@ -847,11 +852,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datar">
      Datar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidypolars">
-     tidypolars
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -955,6 +955,16 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polars">
+     Polars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tidypolars">
+     tidypolars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datatable">
      Datatable
     </a>
@@ -965,11 +975,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#polars">
-     Polars
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plydata">
      Plydata
     </a>
@@ -977,11 +982,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datar">
      Datar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidypolars">
-     tidypolars
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1083,40 +1083,11 @@ title="Print to PDF"
 <h2>Alternatives to <strong>pandas</strong><a class="headerlink" href="#alternatives-to-pandas" title="Permalink to this headline">#</a></h2>
 <p><strong>pandas</strong> isn’t the only game in town, not by a long way—though it’s by far the best supported and the most fully featured. <strong>pandas</strong> is a good default package to use for data in the vast majority of cases. But it’s always good to have options—or, put another way, options have value! Other dataframe libraries may have a syntax that you prefer (<strong>datatable</strong>’s syntax is popular with some) or provide a speed-up in certain situations, for example when working with large datasets (<strong>polars</strong> promises to breeze through big data far faster than pandas can).</p>
 <p>If you’re specifically interested in how different dataframe options perform on increasingly large datasets, take a look at the benchmarks <a class="reference external" href="https://h2oai.github.io/db-benchmark/">here</a>.</p>
+<p>If you only choose one <strong>pandas</strong> alternative, we recommend <strong>polars</strong>. It brings the benefits of speed and a consistent API.</p>
 <p>Here’s a quick run-through of some alternatives to <strong>pandas</strong>:</p>
-<section id="datatable">
-<h3>Datatable<a class="headerlink" href="#datatable" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a> is another dataframe based way to do analysis, and it has quite a different syntax to <strong>pandas</strong> for data manipulation. <strong>datatable</strong> is very fast, not the fastest dataframe option out there, but it holds its own. Its other major advantage is that it is comfortable running on extremely large (think 50GB) datasets. Most other dataframe packages (including in other languages) cannot cope with this.</p>
-<p>In datatable, almost all operations are achieved via so-called ‘square-bracket notation’. Operations with a (data) Frame are almost all expressed in the form</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DT</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">DT</span></code> is a datatable dataframe, <code class="docutils literal notranslate"><span class="pre">i</span></code> is the row selector, <code class="docutils literal notranslate"><span class="pre">j</span></code> is the column selector, and <code class="docutils literal notranslate"><span class="pre">...</span></code> is a space that could be filled by other commands (potentially several). However, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> aren’t just positional, as they might be in a <strong>numpy</strong> array or a list, they do a lot more than that. Datatable allows <code class="docutils literal notranslate"><span class="pre">i</span></code> to be anything that can conceivably be interpreted as a row selector: an integer to select a row, a slice, a range, a list of integers, a list of slices, an expression, a boolean-valued Frame, an integer-valued Frame, an integer <strong>numpy</strong> array, a generator, and more.</p>
-<p>Likewise, <code class="docutils literal notranslate"><span class="pre">j</span></code> is also really versatile. It can be used to select a column by name or position, but it will also accept a list of columns, a slice, a list of booleans indicating which columns to pick, an expression, a list of expressions, and a dictionary of expressions. The j expression can even be a python type (such as int or dt.float32), selecting all columns matching that type!</p>
-<p>To change an entry (entries), you can use <code class="docutils literal notranslate"><span class="pre">DT[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">new_value</span></code>, and to remove it (or them), it’s <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">DT[i,</span> <span class="pre">j]</span></code>.</p>
-</section>
-<section id="cudf">
-<h3>cuDF<a class="headerlink" href="#cudf" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://github.com/rapidsai/cudf"><strong>cuDF</strong></a> is still under development and so doesn’t yet have all the features of <strong>pandas</strong>. It’s a Python GPU DataFrame library built on the blisteringly fast Apache Arrow columnar memory format. The parts of the library that have been implemented follow the same commands and structure as <strong>pandas</strong>, so it should be easy to use it should you need to.</p>
-<p><strong>cuDF</strong> is one of the fastest dataframe library out there in any of Python, Julia, Rust, or R with the caveats that:</p>
-<ul class="simple">
-<li><p>this only applies to in-memory datasets, ie datasets smaller than a few GB</p></li>
-<li><p>it doesn’t yet do everything</p></li>
-<li><p>it’s only currently available on the Linux operating system</p></li>
-<li><p>you need a GPU (and associated software) to use it!</p></li>
-</ul>
-</section>
 <section id="polars">
 <h3>Polars<a class="headerlink" href="#polars" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://www.pola.rs/"><strong>Polars</strong></a> is one of the fastest dataframe libraries in any language. It also uses Apache Arrow as backend. It currently consists of an ‘eager’ (for datasets smaller than approximately a few GB) interface that’s very similar to <strong>pandas</strong> and a ‘lazy’ interface (don’t worry if you don’t know what that means, it’s a big data thing) that is somewhat similar to spark (a big data tool). <strong>Polars</strong> is built on the Rust language. It’s particularly effective at merging datasets.</p>
-</section>
-<section id="plydata">
-<h3>Plydata<a class="headerlink" href="#plydata" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://plydata.readthedocs.io">Plydata</a> uses the syntax of the <strong>dplyr</strong> package in the R statistical language (the package is a really important part of the data ecosystem in R). It’s built around method chaining and everything being in a tidy format, which has pros and cons. Largely, the benefits are in readability and a smaller number of commands to cover the ground that you need to. The downsides are that it plays best with tidy data and when chained methods go wrong it can be more difficult to find out what the issue is.</p>
-</section>
-<section id="datar">
-<h3>Datar<a class="headerlink" href="#datar" title="Permalink to this headline">#</a></h3>
-<p>Another library that gets close to <strong>dplylr</strong> syntax is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Like <strong>plydata</strong>, it integrates with <strong>plotnine</strong> for visualisation.</p>
 </section>
 <section id="tidypolars">
 <h3>tidypolars<a class="headerlink" href="#tidypolars" title="Permalink to this headline">#</a></h3>
@@ -1149,6 +1120,36 @@ title="Print to PDF"
 └─────┴─────┴─────┴──────────┴──────────┘
 </pre></div>
 </div>
+</section>
+<section id="datatable">
+<h3>Datatable<a class="headerlink" href="#datatable" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://datatable.readthedocs.io/en/latest/"><strong>datatable</strong></a> is another dataframe based way to do analysis, and it has quite a different syntax to <strong>pandas</strong> for data manipulation. <strong>datatable</strong> is very fast, not the fastest dataframe option out there, but it holds its own. Its other major advantage is that it is comfortable running on extremely large (think 50GB) datasets. Most other dataframe packages (including in other languages) cannot cope with this.</p>
+<p>In datatable, almost all operations are achieved via so-called ‘square-bracket notation’. Operations with a (data) Frame are almost all expressed in the form</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DT</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">DT</span></code> is a datatable dataframe, <code class="docutils literal notranslate"><span class="pre">i</span></code> is the row selector, <code class="docutils literal notranslate"><span class="pre">j</span></code> is the column selector, and <code class="docutils literal notranslate"><span class="pre">...</span></code> is a space that could be filled by other commands (potentially several). However, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> aren’t just positional, as they might be in a <strong>numpy</strong> array or a list, they do a lot more than that. Datatable allows <code class="docutils literal notranslate"><span class="pre">i</span></code> to be anything that can conceivably be interpreted as a row selector: an integer to select a row, a slice, a range, a list of integers, a list of slices, an expression, a boolean-valued Frame, an integer-valued Frame, an integer <strong>numpy</strong> array, a generator, and more.</p>
+<p>Likewise, <code class="docutils literal notranslate"><span class="pre">j</span></code> is also really versatile. It can be used to select a column by name or position, but it will also accept a list of columns, a slice, a list of booleans indicating which columns to pick, an expression, a list of expressions, and a dictionary of expressions. The j expression can even be a python type (such as int or dt.float32), selecting all columns matching that type!</p>
+<p>To change an entry (entries), you can use <code class="docutils literal notranslate"><span class="pre">DT[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">new_value</span></code>, and to remove it (or them), it’s <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">DT[i,</span> <span class="pre">j]</span></code>.</p>
+</section>
+<section id="cudf">
+<h3>cuDF<a class="headerlink" href="#cudf" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://github.com/rapidsai/cudf"><strong>cuDF</strong></a> is still under development and so doesn’t yet have all the features of <strong>pandas</strong>. It’s a Python GPU DataFrame library built on the blisteringly fast Apache Arrow columnar memory format. The parts of the library that have been implemented follow the same commands and structure as <strong>pandas</strong>, so it should be easy to use it should you need to.</p>
+<p><strong>cuDF</strong> is one of the fastest dataframe library out there in any of Python, Julia, Rust, or R with the caveats that:</p>
+<ul class="simple">
+<li><p>this only applies to in-memory datasets, ie datasets smaller than a few GB</p></li>
+<li><p>it doesn’t yet do everything</p></li>
+<li><p>it’s only currently available on the Linux operating system</p></li>
+<li><p>you need a GPU (and associated software) to use it!</p></li>
+</ul>
+</section>
+<section id="plydata">
+<h3>Plydata<a class="headerlink" href="#plydata" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://plydata.readthedocs.io">Plydata</a> uses the syntax of the <strong>dplyr</strong> package in the R statistical language (the package is a really important part of the data ecosystem in R). It’s built around method chaining and everything being in a tidy format, which has pros and cons. Largely, the benefits are in readability and a smaller number of commands to cover the ground that you need to. The downsides are that it plays best with tidy data and when chained methods go wrong it can be more difficult to find out what the issue is.</p>
+</section>
+<section id="datar">
+<h3>Datar<a class="headerlink" href="#datar" title="Permalink to this headline">#</a></h3>
+<p>Another library that gets close to <strong>dplylr</strong> syntax is <a class="reference external" href="https://github.com/pwwang/datar"><strong>datar</strong></a>. Like <strong>plydata</strong>, it integrates with <strong>plotnine</strong> for visualisation.</p>
 </section>
 <section id="others">
 <h3>Others<a class="headerlink" href="#others" title="Permalink to this headline">#</a></h3>
