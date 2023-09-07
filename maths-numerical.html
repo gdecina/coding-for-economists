@@ -222,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html"><strong>pandas</strong> alternatives, validation, and orchestration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
@@ -564,7 +564,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>193 µs ± 264 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>195 µs ± 410 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -578,7 +578,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>626 ns ± 4.02 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>635 ns ± 4.74 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -792,26 +792,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">LinAlgError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">b</span>
-
-<span class="nn">File &lt;__array_function__ internals&gt;:200,</span> in <span class="ni">inv</span><span class="nt">(*args, **kwargs)</span>
-
-<span class="nn">File ~/mambaforge/envs/codeforecon/lib/python3.10/site-packages/numpy/linalg/linalg.py:538,</span> in <span class="ni">inv</span><span class="nt">(a)</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="n">signature</span> <span class="o">=</span> <span class="s1">&#39;D-&gt;D&#39;</span> <span class="k">if</span> <span class="n">isComplexType</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;d-&gt;d&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span> <span class="n">extobj</span> <span class="o">=</span> <span class="n">get_linalg_error_extobj</span><span class="p">(</span><span class="n">_raise_linalgerror_singular</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">538</span> <span class="n">ainv</span> <span class="o">=</span> <span class="n">_umath_linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span> <span class="n">extobj</span><span class="o">=</span><span class="n">extobj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span> <span class="k">return</span> <span class="n">wrap</span><span class="p">(</span><span class="n">ainv</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">result_t</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-
-<span class="nn">File ~/mambaforge/envs/codeforecon/lib/python3.10/site-packages/numpy/linalg/linalg.py:89,</span> in <span class="ni">_raise_linalgerror_singular</span><span class="nt">(err, flag)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="k">def</span> <span class="nf">_raise_linalgerror_singular</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">89</span>     <span class="k">raise</span> <span class="n">LinAlgError</span><span class="p">(</span><span class="s2">&quot;Singular matrix&quot;</span><span class="p">)</span>
-
-<span class="ne">LinAlgError</span>: Singular matrix
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.00000000e+00,  0.00000000e+00, -1.11022302e-16],
+       [ 1.73472348e-17,  1.00000000e+00, -3.33066907e-16],
+       [ 2.42861287e-17,  0.00000000e+00,  1.00000000e+00]])
 </pre></div>
 </div>
 </div>
@@ -823,11 +806,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9999999999999996
+</pre></div>
+</div>
+</div>
 </div>
 <p>Determinant:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-117.00000000000003
 </pre></div>
 </div>
 </div>
@@ -839,6 +832,12 @@ document.write(`
 <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cholesky</span><span class="p">(</span><span class="n">Σ</span><span class="p">)</span>
 
 <span class="n">c</span> <span class="o">@</span> <span class="n">c</span><span class="o">.</span><span class="n">T</span> <span class="o">-</span> <span class="n">Σ</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0.],
+       [0., 0.]])
 </pre></div>
 </div>
 </div>
@@ -865,6 +864,11 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 5.,  3., -2.])
+</pre></div>
+</div>
+</div>
 </div>
 <p>Finally, eigenvalues and eigenvectors can be found from:</p>
 <div class="cell docutils container">
@@ -872,6 +876,12 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
 <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
 <span class="n">eigvals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.65662617+0.j        , 1.17168692+4.51348646j,
+       1.17168692-4.51348646j])
 </pre></div>
 </div>
 </div>
@@ -897,6 +907,8 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/75c7b06e5bb0ce0642e3c55ef9f4ffa33da7842bc8ab8fadbab3d7ba0d56f411.svg" src="_images/75c7b06e5bb0ce0642e3c55ef9f4ffa33da7842bc8ab8fadbab3d7ba0d56f411.svg" /></div>
 </div>
 <p>What about unstructured data? Let’s create a Cobb-Douglas function on a detailed grid but then only retain a random set of the established points.</p>
 <div class="cell docutils container">
@@ -935,6 +947,8 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/f6bc8e0ed01b4b5b0f146a2902cda922035d1cf889c4fc797e59abe728c39e89.svg" src="_images/f6bc8e0ed01b4b5b0f146a2902cda922035d1cf889c4fc797e59abe728c39e89.svg" /></div>
 </div>
 </section>
 <section id="optimisation">
@@ -953,6 +967,20 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  message: Optimization terminated successfully.
+  success: True
+   status: 0
+      fun: -9.145823375615207
+        x: [-1.306e+00]
+      nit: 5
+      jac: [-1.192e-06]
+ hess_inv: [[ 8.589e-02]]
+     nfev: 12
+     njev: 6
+</pre></div>
+</div>
+</div>
 </div>
 <p>The result of the optimisation is in the ‘x’ attribute of <code class="docutils literal notranslate"><span class="pre">result</span></code>. Let’s see this:</p>
 <div class="cell docutils container">
@@ -967,6 +995,8 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/7fcc7da8cc07b3d4bba344c0908c41998e833e828fa02f2e3bf7f262ee57e3ab.svg" src="_images/7fcc7da8cc07b3d4bba344c0908c41998e833e828fa02f2e3bf7f262ee57e3ab.svg" /></div>
 </div>
 <p>In higher dimensions, the minimisation works in much the same way, with the same function <code class="docutils literal notranslate"><span class="pre">optimize.minimize</span></code>. There are a LOT of minimisation options that you can pass to the <code class="docutils literal notranslate"><span class="pre">method=</span></code> keyword; the default is intelligently chosen from BFGS, L-BFGS-B, or SLSQP, depending upon whether you supply constraints or bounds.</p>
 <p>Root finding, aka solving equations of the form <span class="math notranslate nohighlight">\(f(x)=0\)</span>, is also catered for by <strong>scipy</strong>, through <code class="docutils literal notranslate"><span class="pre">optimize.root</span></code>. It works in much the same way as <code class="docutils literal notranslate"><span class="pre">optimizer.minimize</span></code>.</p>
@@ -987,6 +1017,11 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
 </div>
 <p>What if we just have data samples? In that case, there are several routines that perform purely numerical integration:</p>
 <div class="cell docutils container">
@@ -996,6 +1031,11 @@ M^{-1} M \cdot \vec{x} = I \cdot \vec{x} = M^{-1} \cdot \vec{c}
 <span class="n">f_of_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">simps</span><span class="p">(</span><span class="n">f_of_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">9</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
 </pre></div>
 </div>
 </div>

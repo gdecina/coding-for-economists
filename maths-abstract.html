@@ -222,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html"><strong>pandas</strong> alternatives, validation, and orchestration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
@@ -556,7 +556,7 @@ document.write(`
 </div>
 <section id="symbolic-mathematics">
 <h2>Symbolic mathematics<a class="headerlink" href="#symbolic-mathematics" title="Permalink to this heading">#</a></h2>
-<p>When using computers to do mathematics, we’re most often performing numerical computations such as <span class="math notranslate nohighlight">\(\sqrt{8} = \)</span>. Although we have the answer, it’s only useful for the one special case. Symbolic mathematics allows us to use coding to solve equations in the general case, which can often be more illuminating. As an example, if we evaluate this in symbolic mathematics we get <span class="math notranslate nohighlight">\(\sqrt{8} = \)</span>.</p>
+<p>When using computers to do mathematics, we’re most often performing numerical computations such as <span class="math notranslate nohighlight">\(\sqrt{8} = \)</span><span class="output text_plain">5.656854249492381</span>. Although we have the answer, it’s only useful for the one special case. Symbolic mathematics allows us to use coding to solve equations in the general case, which can often be more illuminating. As an example, if we evaluate this in symbolic mathematics we get <span class="math notranslate nohighlight">\(\sqrt{8} = \)</span><span class="output text_latex math notranslate nohighlight">\(\displaystyle 2 \sqrt{2}\)</span>.</p>
 <p>The Python package for symbolic mathemtics is <a class="reference external" href="https://www.sympy.org/en/index.html"><strong>sympy</strong></a>, which provides some features of a computer algebra system.</p>
 <p>To define <em>symbolic</em> variables, we use sympy’s symbols function. For ease, we’ll import the entire sympy library into the namespace by using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code>.</p>
 <div class="cell docutils container">
@@ -578,6 +578,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \alpha\]</div>
+</div>
 </div>
 <p>Things get much more interesting when we start to do maths on them. Let’s see some integration, for example, say we want to evaluate</p>
 <div class="cell docutils container">
@@ -585,6 +589,10 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int \log{\left(x \right)}\, dx\]</div>
 </div>
 </div>
 <p>(note that the symbols are printed as latex equations) we simply call</p>
@@ -594,6 +602,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x \log{\left(x \right)} - x\]</div>
+</div>
 </div>
 <p>We can differentiate too:</p>
 <div class="cell docutils container">
@@ -601,6 +613,10 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x} \sin{\left(x \right)} + e^{x} \cos{\left(x \right)}\]</div>
 </div>
 </div>
 <p>and even take limits!</p>
@@ -610,11 +626,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
 </div>
 <p>It is also possible to solve equations using <strong>sympy</strong>. The solve function tries to find the roots of <span class="math notranslate nohighlight">\(f(x)\)</span> and has syntax <code class="docutils literal notranslate"><span class="pre">solve(f(x)=0,</span> <span class="pre">x)</span></code>. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2/5]
 </pre></div>
 </div>
 </div>
@@ -628,6 +653,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -1.0\]</div>
+</div>
 </div>
 <p>But you don’t have to substitute in a real value; you can just as well substitute in a different symbolic variable:</p>
 <div class="cell docutils container">
@@ -636,6 +665,10 @@ document.write(`
 <span class="n">simplify</span><span class="p">(</span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \cos{\left(t \right)}\]</div>
 </div>
 </div>
 <p>I snuck in a simplify here too!</p>
@@ -653,6 +686,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(\alpha \right)} - \frac{\alpha^{2}}{6} + O\left(\alpha^{4}\right)\]</div>
+</div>
 </div>
 <p>This is a 3rd order expansion around <span class="math notranslate nohighlight">\(\alpha=0\)</span>.</p>
 </section>
@@ -666,6 +703,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; x\\\alpha &amp; - t &amp; 3\\4 &amp; \beta &amp; 2\end{matrix}\right]\end{split}\]</div>
+</div>
 </div>
 <p>and its determinant:</p>
 <div class="cell docutils container">
@@ -673,6 +714,10 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \alpha \beta x - 3 \beta + 4 t x - 2 t\]</div>
 </div>
 </div>
 <p>I can hardly go to a talk in economics that involves matrices that doesn’t see those matrices get diagonalised: there’s a function for that too.</p>
@@ -682,6 +727,10 @@ document.write(`
 <span class="n">D</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\0 &amp; - t\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </section>
@@ -701,6 +750,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \lambda \left(3 x + y - 5\right) - 2 x^{2} + 4 x y + y^{2}\]</div>
+</div>
 </div>
 <p>The Karush-Kuhn-Tucker (KKT) conditions tell us whether any solutions we find will be optimal. Simply, the constaint is that a solution vector is a saddle point of the Lagrangian, <span class="math notranslate nohighlight">\(\nabla \mathcal{L} = 0\)</span>. Let’s solve this.</p>
 <div class="cell docutils container">
@@ -711,11 +764,16 @@ document.write(`
 </div>
 </div>
 </div>
-<p>This gives 3 equations from the KKT conditions:  ,   , and  . (The symbolic manipulation is now over: we solved for the conditions in terms of algebra–now we’re looking for real values.) Now we look for the values of <span class="math notranslate nohighlight">\(x, y\)</span> that minimise <span class="math notranslate nohighlight">\(f\)</span> given that <span class="math notranslate nohighlight">\(g=0\)</span> by solving these equations over <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<p>This gives 3 equations from the KKT conditions:  <span class="output text_latex math notranslate nohighlight">\(\displaystyle - 3 \lambda - 4 x + 4 y\)</span>,   <span class="output text_latex math notranslate nohighlight">\(\displaystyle - \lambda + 4 x + 2 y\)</span>, and  <span class="output text_latex math notranslate nohighlight">\(\displaystyle 3 x + y - 5\)</span>. (The symbolic manipulation is now over: we solved for the conditions in terms of algebra–now we’re looking for real values.) Now we look for the values of <span class="math notranslate nohighlight">\(x, y\)</span> that minimise <span class="math notranslate nohighlight">\(f\)</span> given that <span class="math notranslate nohighlight">\(g=0\)</span> by solving these equations over <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stationary_pts</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">KKT_eqns</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">λ</span><span class="p">],</span> <span class="nb">dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">stationary_pts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{\lambda: 12, x: -1, y: 8}]
 </pre></div>
 </div>
 </div>
@@ -724,6 +782,11 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stationary_pts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">x</span><span class="p">],</span> <span class="n">stationary_pts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">y</span><span class="p">],</span> <span class="n">f</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">stationary_pts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1, 8, 30)
 </pre></div>
 </div>
 </div>
@@ -761,6 +824,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ada Lovelace&#39;, &#39;Adam Smith&#39;, &#39;Charles Babbage&#39;, &#39;Sadie Alexander&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <p>Notice that a couple of entries appeared twice in the list but only once in the set: that’s because a set contains only unique elements. Let’s define a second set in order to demonstrate some of the operations we can perform on sets.</p>
 <div class="cell docutils container">
@@ -772,12 +840,34 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ada Lovelace&#39;,
+ &#39;Adam Smith&#39;,
+ &#39;Grace Hopper&#39;,
+ &#39;Janet Yellen&#39;,
+ &#39;Jean Bartik&#39;,
+ &#39;Joan Robinson&#39;}
+</pre></div>
 </div>
-<p>Now we have two sets we can look at to demonstrate some of the basic functions you can call on the set object type. <code class="docutils literal notranslate"><span class="pre">x.intersection(y)</span></code> gives, in this example, , <code class="docutils literal notranslate"><span class="pre">x.difference(y)</span></code> gives , and <code class="docutils literal notranslate"><span class="pre">x.union(y)</span></code> gives .</p>
+</div>
+</div>
+<p>Now we have two sets we can look at to demonstrate some of the basic functions you can call on the set object type. <code class="docutils literal notranslate"><span class="pre">x.intersection(y)</span></code> gives, in this example, <span class="output text_plain">{‘Ada Lovelace’, ‘Adam Smith’}</span>, <code class="docutils literal notranslate"><span class="pre">x.difference(y)</span></code> gives <span class="output text_plain">{‘Charles Babbage’, ‘Sadie Alexander’}</span>, and <code class="docutils literal notranslate"><span class="pre">x.union(y)</span></code> gives <span class="output text_plain">{‘Ada Lovelace’,
+ ‘Adam Smith’,
+ ‘Charles Babbage’,
+ ‘Grace Hopper’,
+ ‘Janet Yellen’,
+ ‘Jean Bartik’,
+ ‘Joan Robinson’,
+ ‘Sadie Alexander’}</span>.</p>
 <p><strong>numpy</strong> also has functions that use set theory. <code class="docutils literal notranslate"><span class="pre">np.unique</span></code> returns only the unique entries of an input array or list:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">([</span><span class="s1">&#39;Lovelace&#39;</span><span class="p">,</span> <span class="s1">&#39;Hopper&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexander&#39;</span><span class="p">,</span> <span class="s1">&#39;Hopper&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;27&#39;, &#39;45&#39;, &#39;Alexander&#39;, &#39;Hopper&#39;, &#39;Lovelace&#39;], dtype=&#39;&lt;U21&#39;)
 </pre></div>
 </div>
 </div>
@@ -791,6 +881,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, False, False,  True,  True,  True,  True,
+        True])
+</pre></div>
+</div>
+</div>
 </div>
 <p>And we have the numpy equivalents of intersection, <code class="docutils literal notranslate"><span class="pre">np.intersect1d(x,</span> <span class="pre">y)</span></code>, difference, <code class="docutils literal notranslate"><span class="pre">np.setdiff1d(x,</span> <span class="pre">y)</span></code>, and union, <code class="docutils literal notranslate"><span class="pre">np.union1d(x,</span> <span class="pre">y)</span></code>. Additionally, there is the exclusive-or (that I like to call ‘xor’). This effectively returns the two arrays with their union removed:</p>
 <div class="cell docutils container">
@@ -798,6 +894,11 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="n">np</span><span class="o">.</span><span class="n">setxor1d</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 4, 5, 7])
 </pre></div>
 </div>
 </div>
@@ -841,8 +942,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \left(1 - \tanh^{2}{\left(\theta \right)}\right) \left(2 - 2 \tanh^{2}{\left(\theta \right)}\right) + 2 \cdot \left(2 - 2 \tanh^{2}{\left(\theta \right)}\right) \tanh^{2}{\left(\theta \right)}\]</div>
 </div>
-<p>If we evaluate this at <span class="math notranslate nohighlight">\(\theta=1\)</span>, we get . This was a simple example that had a (relatively) simple mathematical expression. But imagine if we had lots of branches (eg if, else statements), and/or a really complicated function: <strong>jax</strong>’s grad would still work. It’s designed for really complex derivatives of the kind encountered in machine learning.</p>
+</div>
+<p>If we evaluate this at <span class="math notranslate nohighlight">\(\theta=1\)</span>, we get <span class="output text_plain">‘0.622’</span>. This was a simple example that had a (relatively) simple mathematical expression. But imagine if we had lots of branches (eg if, else statements), and/or a really complicated function: <strong>jax</strong>’s grad would still work. It’s designed for really complex derivatives of the kind encountered in machine learning.</p>
 </section>
 <section id="just-in-time-compilation">
 <h3>Just-in-time compilation<a class="headerlink" href="#just-in-time-compilation" title="Permalink to this heading">#</a></h3>

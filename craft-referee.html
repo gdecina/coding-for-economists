@@ -220,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html"><strong>pandas</strong> alternatives, validation, and orchestration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
@@ -558,6 +558,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="writing-referee-reports">
 <span id="craft-referee"></span><h1>Writing Referee Reports<a class="headerlink" href="#writing-referee-reports" title="Permalink to this heading">#</a></h1>
 <p>In this chapter, you’ll learn tips and tricks for writing referee reports. Much of this chapter is advisory: some of it might work for you, some of it might not. It’s not intended to be a foolproof guide, or to cover everyone’s preferences–but it is designed to help you get started on writing good referee reports.</p>
+<p>This chapter very much stands on the shoulders of giants. Those giants include <a class="reference external" href="https://the-turing-way.netlify.app/">The Turing Way</a>’s <a class="reference external" href="https://the-turing-way.netlify.app/communication/peer-review/peer-review-guidance.html">Guidance on Peer Review</a>, <span id="id1">Nyhan [<a class="reference internal" href="zreferences.html#id42" title="Brendan Nyhan. A checklist manifesto for peer review. Political Methodologist, 23(1):4–6, 2015.">2015</a>]</span>, <span id="id2">Berk, Harvey, and Hirshleifer [<a class="reference internal" href="zreferences.html#id43" title="Jonathan B Berk, Campbell R Harvey, and David Hirshleifer. How to write an effective referee report and improve the scientific review process. Journal of Economic Perspectives, 31(1):231–244, 2017.">2017</a>]</span>, <span id="id3">Nicholas and Gordon [<a class="reference internal" href="zreferences.html#id44" title="Kimberly A Nicholas and Wendy S Gordon. A quick guide to writing a solid peer review. Eos, Transactions American Geophysical Union, 92(28):233–234, 2011.">2011</a>]</span>, Econometrica’s <a class="reference external" href="https://www.econometricsociety.org/publications/econometrica/guidelines-referees">guidelines for referees</a>, Marc Bellemare’s <a class="reference external" href="http://marcfbellemare.com/wordpress/5542">20 Rules for Refereeing</a>, Tyler Cowan’s <a class="reference external" href="https://marginalrevolution.com/marginalrevolution/2006/10/how_to_be_a_goo.html">how to be a good referee</a>, and Tatyana Deryugina’s <a class="reference external" href="https://deryugina.com/how-to-be-a-constructive-referee/">how to be a constructive referee</a>.</p>
 <p>What is the purpose of a referee report? We think there are two:</p>
 <ol class="arabic simple">
 <li><p>to help the editor make a decision about whether to publish the paper in their journal</p></li>
@@ -595,7 +596,7 @@ document.write(`
 <li><p>Does the author present a clear description of the data? Is there a summary statistics table?</p></li>
 <li><p>Does the author’s choice of a dataset seem well suited to answering the question posed?</p></li>
 <li><p>If you had to replicate the author’s study five years from now, is there sufficient information in the paper about the source of the data and sample used that you could do it?</p></li>
-<li><p>Does the author discuss issues that may affect the data, for example “dark data” <span id="id1">Hand [<a class="reference internal" href="zreferences.html#id33" title="David J Hand. Dark Data: Why What You Don't Know Matters. Princeton University Press, 2020.">2020</a>]</span> (see <a class="reference internal" href="craft-writing-papers.html#craft-writing-papers"><span class="std std-ref">Writing Papers</span></a> for more on the types of dark data)?</p></li>
+<li><p>Does the author discuss issues that may affect the data, for example “dark data” <span id="id4">Hand [<a class="reference internal" href="zreferences.html#id33" title="David J Hand. Dark Data: Why What You Don't Know Matters. Princeton University Press, 2020.">2020</a>]</span> (see <a class="reference internal" href="craft-writing-papers.html#craft-writing-papers"><span class="std std-ref">Writing Papers</span></a> for more on the types of dark data)?</p></li>
 </ul>
 </li>
 <li><p>The model, if there is one:</p>
