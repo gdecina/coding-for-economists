@@ -1,125 +1,165 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>More Coding &#8212; Coding for Economists</title>
-    
+    <title>Coding &#8212; Coding for Economists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9FZQCPFXZJ');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'code-advanced';</script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/code-advanced.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Probability and Random Processes" href="econmt-probability-random.html" />
+    <link rel="next" title="Shortcuts to Better Coding" href="code-advcd-best-practice.html" />
     <link rel="prev" title="Code in Style" href="code-best-practice.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/smith_lovelace.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Coding for Economists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/smith_lovelace.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/smith_lovelace.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -128,832 +168,485 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-preliminaries.html">
-   Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-basics.html">
-   Coding Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   Workflow Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Writing Code
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-preliminaries.html">Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-basics.html">Coding Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">Workflow Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-where.html">Writing Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-analysis-quickstart.html">
-   Data Analysis Quickstart
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-intro.html">
-   Working with Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transformation.html">
-   Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-read-and-write.html">
-   Reading and Writing Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-numbers.html">
-   Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-categorical.html">
-   Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-boolean.html">
-   Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-joining-data.html">
-   Joins
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis-quickstart.html">Data Analysis Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-intro.html">Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transformation.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-read-and-write.html">Reading and Writing Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-spreadsheets.html">Spreadsheets</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Coding</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-best-practice.html">
-   Code in Style
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-best-practice.html">Code in Style</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advcd-best-practice.html">Shortcuts to Better Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-intro.html">Intro to Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-letsplot.html">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-matplotlib.html">Powerful Data Visualisation with <strong>Matplotlib</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-common-plots.html">Common Plots</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-intro.html">
-   Intro to Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-letsplot.html">
-   Easy Data Visualisation for Tidy Data with
-   <strong>
-    Lets-Plot
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-matplotlib.html">
-   Powerful Data Visualisation with
-   <strong>
-    Matplotlib
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-common-plots.html">
-   Common Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-narrative.html">
-   Narrative Data Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="auto-research-outputs.html">Automating Research Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-markdown.html">Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-quarto.html">Combining Code and Text in Quarto Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-version-control.html">Version Control</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Econometrics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-probability-random.html">Probability and Random Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-causal-inference.html">Causal Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayesian.html">Bayesian Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayes-bambi.html">Bayesian Inference Made Easier</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-spreadsheets.html">
-   Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-databases.html">
-   Databases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-boolean.html">Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-joining-data.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-missing-values.html">Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Essential Tricks for Better Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-further-advanced.html">
-   Yet More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-further-advanced.html">Advanced Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-version-control.html">
-   Version Control
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-environments.html">
-   Virtual Code Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-command-line.html">The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-environments.html">Virtual Code Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-rap.html">Reproducible Analysis</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Craft
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-search.html">
-   Putting the Search in Research
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-writing-papers.html">
-   Writing Papers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-research-blogs.html">
-   Research Blog Posts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-technical-reports.html">
-   Writing Technical Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-extended-abstracts.html">
-   Extended Abstracts
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="time-intro.html">Introduction to Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series.html">Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-fcasts-env.html">Forecasting Exercises</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Time
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Text Analysis</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="time-intro.html">
-   Introduction to Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-series.html">
-   Time Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-fcasts-env.html">
-   Forecasting Exercises
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="text-intro.html">Introduction to Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-regex.html">Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-nlp.html">Natural Language Processing</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Text Analysis
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geospatial</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="geo-intro.html">Intro to Geo-Spatial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo-vis.html">Geo-Spatial Visualisation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   Geo-Spatial Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-narrative.html">Narrative Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-dashboards.html">Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-animation.html">Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-plotnine.html">Data Visualisation using the Grammar of Graphics with <strong>Plotnine</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-seaborn.html">Data Visualisation with <strong>Seaborn</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-plotnine.html">
-   Data Visualisation using the Grammar of Graphics with
-   <strong>
-    Plotnine
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-dashboards.html">
-   Dashboards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="maths-abstract.html">Abstract Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths-numerical.html">Numerical Mathematics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Mathematics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Craft</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-abstract.html">
-   Abstract Mathematics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-numerical.html">
-   Numerical Mathematics
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="craft-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-search.html">Putting the Search in Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-writing-papers.html">Writing Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-research-blogs.html">Research Blog Posts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-referee.html">Writing Referee Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-technical-reports.html">Writing Technical Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-extended-abstracts.html">Extended Abstracts</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Even More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coming from ...</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
-   Data Visualisation with
-   <strong>
-    Seaborn
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-stata.html">Coming from Stata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-matlab.html">Coming from Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-r.html">Coming from R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-excel.html">Coming from Excel</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coming from ...
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-stata.html">
-   Coming from Stata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-matlab.html">
-   Coming from Matlab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-r.html">
-   Coming from R
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-excel.html">
-   Coming from Excel
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  End Matter
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgements.html">
-   Acknowledgements and Contributing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/code-advanced.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/code-advanced.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-advanced.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/code-advanced.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fcode-advanced.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/code-advanced.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sets">
-   Sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#truthy-and-falsy-values">
-   Truthy and falsy values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambda-functions">
-   Lambda functions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#splat-and-splatty-splat">
-   Splat and splatty-splat
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#higher-order-functions">
-   Higher order functions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#iterators">
-   Iterators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generators">
-   Generators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decorators">
-   Decorators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time">
-   Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miscellaneous-fun">
-   Miscellaneous Fun
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>More Coding</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sets">
-   Sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#truthy-and-falsy-values">
-   Truthy and falsy values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambda-functions">
-   Lambda functions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#splat-and-splatty-splat">
-   Splat and splatty-splat
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#higher-order-functions">
-   Higher order functions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#iterators">
-   Iterators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generators">
-   Generators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decorators">
-   Decorators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time">
-   Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miscellaneous-fun">
-   Miscellaneous Fun
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Coding</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-on-empty">Running on empty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting-variables">Casting variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-and-im-mutability">Tuples and (im)mutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truthy-and-falsy-values">Truthy and falsy values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-functions">Lambda functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splat-and-splatty-splat">Splat and splatty-splat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-fun">Miscellaneous Fun</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="more-coding">
-<span id="code-advanced"></span><h1>More Coding<a class="headerlink" href="#more-coding" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="coding">
+<span id="code-advanced"></span><h1>Coding<a class="headerlink" href="#coding" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>This chapter covers more programming, building on <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Coding Basics</span></a>. Some of it will come in useful as you do more in code.</p>
 <p>This chapter has benefitted from the online book <a class="reference external" href="https://merely-useful.github.io/py-rse/"><em>Research Software Engineering with Python</em></a>, the <a class="reference external" href="https://www.python.org/">official Python documentation</a>, the excellent <a class="reference external" href="https://github.com/Asabeneh/30-Days-Of-Python">30 days of Python</a>, and the <a class="reference external" href="https://docs.python-guide.org/">Hitchhiker’s Guide to Python</a>.</p>
 </section>
+<section id="running-on-empty">
+<h2>Running on empty<a class="headerlink" href="#running-on-empty" title="Permalink to this heading">#</a></h2>
+<p>Being able to create empty containers is sometimes useful. The commands to create empty lists, tuples, dictionaries, and sets are <code class="docutils literal notranslate"><span class="pre">lst</span> <span class="pre">=</span> <span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">tup=()</span></code>, <code class="docutils literal notranslate"><span class="pre">dic={}</span></code>, and <code class="docutils literal notranslate"><span class="pre">st</span> <span class="pre">=</span> <span class="pre">set()</span></code> respectively.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>What is the type of an empty list?</p>
+</div>
+</section>
+<section id="casting-variables">
+<h2>Casting variables<a class="headerlink" href="#casting-variables" title="Permalink to this heading">#</a></h2>
+<p>Sometimes we need to explicitly cast a value from one type to another. We can do this using functions like <code class="docutils literal notranslate"><span class="pre">str()</span></code>, <code class="docutils literal notranslate"><span class="pre">int()</span></code>, and <code class="docutils literal notranslate"><span class="pre">float()</span></code>. If you try these, Python will do its best to interpret the input and convert it to the output type you’d like and, if they can’t, the code will throw a great big error.</p>
+<p>Here’s an example of casting a <code class="docutils literal notranslate"><span class="pre">float</span></code> as an <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orig_number</span> <span class="o">=</span> <span class="mf">4.39898498</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">orig_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we cast it to an int:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mod_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">orig_number</span><span class="p">)</span>
+<span class="n">mod_number</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>which looks like it became an integer, but we can double check that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">mod_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tuples-and-im-mutability">
+<h2>Tuples and (im)mutability<a class="headerlink" href="#tuples-and-im-mutability" title="Permalink to this heading">#</a></h2>
+<p>A tuple is an object that is defined by parentheses and entries that are separated by commas, for example <code class="docutils literal notranslate"><span class="pre">(15,</span> <span class="pre">20,</span> <span class="pre">32)</span></code>. (They are of type <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.) As such, they have a lot in common with lists-but there’s a big and important difference.</p>
+<p>Tuples are immutable, while lists are mutable. This means that, once defined, we can always modify a list using slicing and indexing, e.g. to change the first entry of a list called <code class="docutils literal notranslate"><span class="pre">listy</span></code> we would use <code class="docutils literal notranslate"><span class="pre">listy[0]</span> <span class="pre">=</span> <span class="pre">5</span></code>. But trying to do this with a tuple will result in an error.</p>
+<p><em>Immutable</em> objects, such as tuples, can’t have their elements changed, appended, extended, or removed. Lists can do all of these things. Tuples aren’t the only immutable objects in Python; strings are immutable too.</p>
+<p>You may wonder why both are needed given lists seem to provide a superset of functionality: sometimes in coding, lack of flexibility is a <em>good</em> thing because it restricts the number of ways a process can go awry. I dare say there are other reasons too, but you don’t need to worry about them and using lists is a good default most of the time.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Are the entries in dictionaries mutable or immutable? To help you answer this, a simple dictionary can be defined as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>and the values are accessed by <code class="docutils literal notranslate"><span class="pre">dictionary[key]</span></code>, eg <code class="docutils literal notranslate"><span class="pre">my_dict[&quot;a&quot;]</span></code> for this example.</p>
+</div>
+</section>
+<section id="while-loops">
+<h2>While loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops continue to execute code until their conditional expression evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>. (Of course, if it evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> forever, your code will just continue to execute…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;execution complete&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+execution complete
+</pre></div>
+</div>
+</div>
+</div>
+<p>NB: in case you’re wondering what <code class="docutils literal notranslate"><span class="pre">-=</span></code> does, it’s a compound assignment that sets the left-hand side equal to the left-hand side minus the right-hand side.</p>
+<p>You can use the keyword <code class="docutils literal notranslate"><span class="pre">break</span></code> to break out of a while loop, for example if it’s reached a certain number of iterations without converging.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Making use of <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">string</span></code> and then <code class="docutils literal notranslate"><span class="pre">string.ascii_lowercase</span></code> to get the characters in the alphabet, write a while loop that iterates backwards through the alphabet (starting at “z”) before printing “execution complete”.</p>
+</div>
+</section>
 <section id="sets">
-<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h2>
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h2>
 <p>A set in coding is a collection of unordered and unindexed distinct elements (in analogy to the mathematical definition of a set). To define a set, the two commands are:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1007,7 +700,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Robinson&#39;, &#39;Fawcett&#39;, &#39;Ostrom&#39;, &#39;Martineau&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Martineau&#39;, &#39;Robinson&#39;, &#39;Fawcett&#39;, &#39;Ostrom&#39;]
 </pre></div>
 </div>
 </div>
@@ -1059,7 +752,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="truthy-and-falsy-values">
-<h2>Truthy and falsy values<a class="headerlink" href="#truthy-and-falsy-values" title="Permalink to this headline">#</a></h2>
+<h2>Truthy and falsy values<a class="headerlink" href="#truthy-and-falsy-values" title="Permalink to this heading">#</a></h2>
 <p>Python objects can be used in expressions that will return a boolean value, such as when a list, <code class="docutils literal notranslate"><span class="pre">listy</span></code>, is used with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">listy</span></code>. Built-in Python objects that are empty are usually evaluated as <code class="docutils literal notranslate"><span class="pre">False</span></code>, and are said to be ‘Falsy’. In contrast, when these built-in objects are not empty, they evaluate as <code class="docutils literal notranslate"><span class="pre">True</span></code> and are said to be ‘truthy’.</p>
 <p>(If you are building your own classes, you can define this behaviour for them through the <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> dunder method.)</p>
 <p>Let’s see some examples:</p>
@@ -1151,7 +844,7 @@ title="Print to PDF"
 <p>Knowing what is truthy or falsy is useful in practice; imagine you’d like to default to a specific behaviour if a list called <code class="docutils literal notranslate"><span class="pre">list_vals</span></code> doesn’t have any values in. You now know you can do it simply with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">list_vals</span></code>.</p>
 </section>
 <section id="lambda-functions">
-<h2>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">#</a></h2>
+<h2>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this heading">#</a></h2>
 <p>Lambda functions are a very old idea in programming, and are part of the functional programming paradigm. Coding languages tend to be more object-oriented or functional, with the object-oriented approach originating with Alan Turing’s “Turing Machines” and the functional approach with Alonso Church’s “lambda calculus”. These two approaches are mathematically equivalent and, on a more practical note, high-level programming languages often mix both. As examples, Haskell is strongly a functional language, statistics language R leans toward being more functional, Python is slightly more object oriented, and powerhouse languages like Fortran and C are object-oriented. However, despite being less functional than some languages, Python does have lambda functions, for example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1214,7 +907,7 @@ Name: strings, dtype: object
 <p>If you want to learn more about lambda functions, check out these <a class="reference external" href="https://calmcode.io/lambda/introduction.html">short video tutorials</a>.</p>
 </section>
 <section id="splat-and-splatty-splat">
-<h2>Splat and splatty-splat<a class="headerlink" href="#splat-and-splatty-splat" title="Permalink to this headline">#</a></h2>
+<h2>Splat and splatty-splat<a class="headerlink" href="#splat-and-splatty-splat" title="Permalink to this heading">#</a></h2>
 <p>You read those right, yes. These are also known as “unpacking operators” for iterables that are fed into functions as arguments (in the form of a tuple) and keyword arguments (in the form of a dictionary) respectively. Splat is <code class="docutils literal notranslate"><span class="pre">*</span></code> and splatty-splat is <code class="docutils literal notranslate"><span class="pre">**</span></code>. Because they unpack, they allow us to efficiency send packages of arguments or keyword arguments into functions without labouriously writing out every single argument.</p>
 <p>Because function arguments are always tuples, the use of <code class="docutils literal notranslate"><span class="pre">*</span></code> must be accompanied by a tuple. Because function keywords are always dictionaries of key, value pairs, the use of <code class="docutils literal notranslate"><span class="pre">**</span></code> must always be accompanied by a dictionary.</p>
 <p>Let’s take a look at splat, which unpacks tuples into function arguments. If we have a function that takes two arguments we can send variables to it in different ways:</p>
@@ -1295,433 +988,8 @@ Name: strings, dtype: object
 <p>Using a dictionary and splatty-splat with the <code class="docutils literal notranslate"><span class="pre">function_with_kwargs</span></code> function, find the sum of 9, 6, 13, and 2.</p>
 </div>
 </section>
-<section id="higher-order-functions">
-<h2>Higher order functions<a class="headerlink" href="#higher-order-functions" title="Permalink to this headline">#</a></h2>
-<p>Functions are like any other variable in Python, which means you can do some interesting things with them and, well, it can get a bit <em>meta</em>. For example, a function can take one or more functions as parameters, a function can be returned as a result of another function, functions can be defined within functions, a function can be assigned to a variable, and you can iterate over functions (for example, if they are in a list).</p>
-<p>Here’s an example that shows how to use a higher order function: it accepts a function, <code class="docutils literal notranslate"><span class="pre">f</span></code>, as an argument and then, using the splat operator <code class="docutils literal notranslate"><span class="pre">*</span></code>, it accepts all arguments of that function.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">join_a_string</span><span class="p">(</span><span class="n">str_list</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">str_list</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">higher_order_function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Lowers case of result&quot;&quot;&quot;</span>
-    <span class="n">out_string</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">out_string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">higher_order_function</span><span class="p">(</span><span class="n">join_a_string</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World!&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello world!
-</pre></div>
-</div>
-</div>
-</div>
-<p>In the next example, we show how to return a function from a function (assigning a function, <code class="docutils literal notranslate"><span class="pre">result</span></code>, to a variable in the process):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-
-
-<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span>
-
-
-<span class="k">def</span> <span class="nf">higher_order_function</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>  <span class="c1"># a higher order function returning a function</span>
-    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;square&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">square</span>
-    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;cube&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">cube</span>
-
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">higher_order_function</span><span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using higher_order_function(&#39;square&#39;), result(3) yields </span><span class="si">{</span><span class="n">result</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">higher_order_function</span><span class="p">(</span><span class="s2">&quot;cube&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using higher_order_function(&#39;cube&#39;), result(3) yields </span><span class="si">{</span><span class="n">result</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using higher_order_function(&#39;square&#39;), result(3) yields 9
-Using higher_order_function(&#39;cube&#39;), result(3) yields 27
-</pre></div>
-</div>
-</div>
-</div>
-<p>Functions within functions are allowed. They are known as <em>closures</em>. Here’s a simple (if contrived) example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-
-
-<span class="k">def</span> <span class="nf">print_time_now</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">get_curr_time</span><span class="p">():</span>
-        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M&quot;</span><span class="p">)</span>
-
-    <span class="n">now</span> <span class="o">=</span> <span class="n">get_curr_time</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
-
-
-<span class="n">print_time_now</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18:04
-</pre></div>
-</div>
-</div>
-</div>
-<p>Finally, let’s see how to iterate over functions</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square_root</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-
-
-<span class="n">functions_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">square_root</span><span class="p">,</span> <span class="n">square</span><span class="p">,</span> <span class="n">cube</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">functions_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> applied to 4 is </span><span class="si">{</span><span class="n">func</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>square_root applied to 4 is 2.0
-square applied to 4 is 16
-cube applied to 4 is 64
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="iterators">
-<h2>Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">#</a></h2>
-<p>An iterator is an object that contains a countable number of values that a single command, <code class="docutils literal notranslate"><span class="pre">next</span></code>, iterates through. Before that’s possible though, we need to take a countable group of some kind and use the <code class="docutils literal notranslate"><span class="pre">iter</span></code> keyword on it to turn it into an iterator. Let’s see an example with some text:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mumbai&quot;</span><span class="p">,</span> <span class="s2">&quot;Delhi&quot;</span><span class="p">,</span> <span class="s2">&quot;Bangalore&quot;</span><span class="p">]</span>
-
-<span class="n">myiterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">text_lst</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Okay, nothing has happened yet, but that’s because we didn’t call it yet. To get the next iteration, whatever it is, use <code class="docutils literal notranslate"><span class="pre">next</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">myiterator</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mumbai&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">myiterator</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Delhi&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">myiterator</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Bangalore&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Alright, we’ve been through all of the values so… what’s going to happen <code class="docutils literal notranslate"><span class="pre">next</span></code>!?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">myiterator</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
-<span class="ne">StopIteration</span>                             <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="mi">29</span><span class="n">fb3b4dbbec</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">myiterator</span><span class="p">)</span>
-
-<span class="ne">StopIteration</span><span class="p">:</span> 
-</pre></div>
-</div>
-<p>Iterating beyond the end raises a <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> error because we reached the end. To keep going, use <code class="docutils literal notranslate"><span class="pre">cycle</span></code> in place of <code class="docutils literal notranslate"><span class="pre">iter</span></code>. Note that you can build your own iterators (here we used a built-in object type, the <code class="docutils literal notranslate"><span class="pre">list</span></code>, to create an iterator of type <code class="docutils literal notranslate"><span class="pre">list_iterator</span></code>).</p>
-</section>
-<section id="generators">
-<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">#</a></h2>
-<p>Generator functions return ‘lazy’ iterators. They are lazy because they do not store their contents in memory. This has <em>big</em> advantages for some operations in specific situations: datasets larger than can fit into your computer’s memory, or a complex function that needs to maintain an internal state every time it’s called.</p>
-<p>To give an idea of how and when they work, imagine that (exogeneously) integers are really costly, taking as much as 10 MB of space to store (the real figure is more like 128 bytes). We will write a function, “firstn”, that represents the first <span class="math notranslate nohighlight">\(n\)</span> non-negative integers, where <span class="math notranslate nohighlight">\(n\)</span> is large. The most naive possible way of doing this would be to build the full list in memory like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_n_naive</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Build and return a list&quot;&quot;&quot;</span>
-    <span class="n">num</span><span class="p">,</span> <span class="n">nums</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-        <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nums</span>
-
-
-<span class="n">sum_of_first_n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">first_n_naive</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
-<span class="n">sum_of_first_n</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>499999500000
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">nums</span></code> stores <em>every</em> number before returning all of them. In our imagined case, this is completely infeasible because we don’t have enough computer space to keep all <span class="math notranslate nohighlight">\(n\)</span> 10MB integers in memory.</p>
-<p>Now we’ll rewrite the list-based function as a generator-based function:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_n_generator</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A generator that yields items instead of returning a list&quot;&quot;&quot;</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-        <span class="k">yield</span> <span class="n">num</span>
-        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
-
-
-<span class="n">sum_of_first_n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">first_n_generator</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
-<span class="n">sum_of_first_n</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>499999500000
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, instead of creating an enormous list that has to be stored in memory, we <code class="docutils literal notranslate"><span class="pre">yield</span></code> up each number as it is ‘generated’. The cleverness that’s going on here is that  the ‘state’ of the function is remembered from one call to the next. This means that when <code class="docutils literal notranslate"><span class="pre">next</span></code> is called on a generator object (either explicitly or implicitly, as in this example), the previously yielded variable <code class="docutils literal notranslate"><span class="pre">num</span></code> is incremented, and then yielded again.</p>
-<p>That was a fairly contrived example but there are plenty of practical ones. Working with pipelines that process very large datasets is a classic use case. For example, imagine you have a csv file that’s far too big to fit in memory, i.e. open all at once, but you’d like to check the contents of each row and perhaps process them. The code below would <code class="docutils literal notranslate"><span class="pre">yield</span></code> each row in turn.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">csv_reader</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">):</span>
-        <span class="k">yield</span> <span class="n">row</span>
-</pre></div>
-</div>
-<p>An even more concise way of defining this is via a <em>generator expression</em>, which syntactically looks a lot like a <em>list comprehension</em> but is a generator rather than a list. The example we just saw would be written as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">csv_gen</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>It’s easier to see the difference in the below example which clearly shows the analogy between <em>list comprehensions</em> and <em>generator comprehensions</em>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sq_nums_lc</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
-<span class="n">sq_nums_lc</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 9, 16, 25]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sq_nums_gc</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sq_nums_gc</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7f875f7d44a0&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The latter is a generator object and we can only access individual values calling <code class="docutils literal notranslate"><span class="pre">next</span></code> on it.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">sq_nums_gc</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that for small numbers of entries, lists may actually be faster and more efficient than generators-but for large numbers of entries, generators will almost always win out.</p>
-</section>
-<section id="decorators">
-<h2>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">#</a></h2>
-<p>Decorators ‘decorate’ functions, they adorn them, modifying them as they execute. Let’s say we want to run some numerical functions but we’d like to add ten on to whatever results we get. We could do it like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">num_one</span> <span class="o">*</span> <span class="n">num_two</span>
-
-
-<span class="k">def</span> <span class="nf">add_ten</span><span class="p">(</span><span class="n">in_num</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">in_num</span> <span class="o">+</span> <span class="mi">10</span>
-
-
-<span class="n">answer</span> <span class="o">=</span> <span class="n">add_ten</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">answer</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
-</pre></div>
-</div>
-</div>
-</div>
-<p>This is fine for a one-off but a bit tedious if we’re going to be using <code class="docutils literal notranslate"><span class="pre">add_ten</span></code> a lot, and on many functions. Decorators allow for a more general solution that can be applied, in this case, to any <code class="docutils literal notranslate"><span class="pre">inner</span></code> function that has two arguments and returns a numeric value.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_ten</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
-
-    <span class="k">return</span> <span class="n">inner</span>
-
-
-<span class="nd">@add_ten</span>
-<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">num_one</span> <span class="o">*</span> <span class="n">num_two</span>
-
-
-<span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can use the same decorator for a different function (albeit one of the same form) now.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@add_ten</span>
-<span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">num_one</span> <span class="o">/</span> <span class="n">num_two</span>
-
-
-<span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.0
-</pre></div>
-</div>
-</div>
-</div>
-<p>But the magic of decorators is such that we can define them for much more general cases, regardless of the number of arguments or even keyword arguments:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_ten</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function has been decorated!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Adding ten...&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
-
-    <span class="k">return</span> <span class="n">inner</span>
-
-
-<span class="nd">@add_ten</span>
-<span class="k">def</span> <span class="nf">combine_three_nums</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">c</span>
-
-
-<span class="nd">@add_ten</span>
-<span class="k">def</span> <span class="nf">combine_four_nums</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">c</span> <span class="o">-</span> <span class="n">d</span>
-
-
-<span class="n">combine_three_nums</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function has been decorated!
-Adding ten...
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let’s now see it applied to a function with a different number of (keyword) arguments:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combine_four_nums</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function has been decorated!
-Adding ten...
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
-</pre></div>
-</div>
-</div>
-</div>
-<p>Decorators can be chained too (and order matters):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dividing_line</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;-&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">30</span><span class="p">))</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">out</span>
-
-    <span class="k">return</span> <span class="n">inner</span>
-
-
-<span class="nd">@dividing_line</span>
-<span class="nd">@add_ten</span>
-<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">num_one</span> <span class="o">*</span> <span class="n">num_two</span>
-
-
-<span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------
-Function has been decorated!
-Adding ten...
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="time">
-<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">#</a></h2>
+<h2>Time<a class="headerlink" href="#time" title="Permalink to this heading">#</a></h2>
 <p>Let’s do a quick dive into how to deal with dates and times. This is only going to scratch the surface, but should give a sense of what’s possible. For more, see the <a class="reference internal" href="time-intro.html#time-intro"><span class="std std-ref">Introduction to Time</span></a> chapter.</p>
 <p>The built-in library that deals with datetimes is called <code class="docutils literal notranslate"><span class="pre">datetime</span></code>. Let’s import it and ask it to give us a very precise account of the datetime (when the code is executed):</p>
 <div class="cell docutils container">
@@ -1734,7 +1002,7 @@ Adding ten...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-10-28 18:04:21.023795
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-09-07 18:43:24.412850
 </pre></div>
 </div>
 </div>
@@ -1752,7 +1020,7 @@ Adding ten...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022/10/28, 18:4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023/9/7, 18:43
 </pre></div>
 </div>
 </div>
@@ -1772,7 +1040,7 @@ Adding ten...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-10-28 23:04:21.023795
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-09-06 23:43:24.412850
 </pre></div>
 </div>
 </div>
@@ -1789,7 +1057,7 @@ Adding ten...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-300 days until New Year
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-614 days until New Year
 </pre></div>
 </div>
 </div>
@@ -1797,7 +1065,7 @@ Adding ten...
 <p>Note that date and datetime are two different types of objects-a datetime includes information on the date and time, whereas a date does not.</p>
 </section>
 <section id="miscellaneous-fun">
-<h2>Miscellaneous Fun<a class="headerlink" href="#miscellaneous-fun" title="Permalink to this headline">#</a></h2>
+<h2>Miscellaneous Fun<a class="headerlink" href="#miscellaneous-fun" title="Permalink to this heading">#</a></h2>
 <p>Here are some other bits of basic coding that might be useful. They really show why Python is such a delightful language.</p>
 <p>You can use unicode characters for variables</p>
 <div class="cell docutils container">
@@ -1868,9 +1136,6 @@ red lorry
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;a&#39;, &#39;b&#39;), (&#39;a&#39;, &#39;c&#39;), (&#39;b&#39;, &#39;c&#39;)]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <p>Find out what the date is! (Can pass a timezone as an argument.)</p>
@@ -1883,7 +1148,7 @@ red lorry
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-10-28
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-09-07
 </pre></div>
 </div>
 </div>
@@ -1950,7 +1215,7 @@ False
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1958,53 +1223,118 @@ False
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="code-best-practice.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Code in Style</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="econmt-probability-random.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Probability and Random Processes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Arthur Turrell<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      This book is available under an MIT license.
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="code-best-practice.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code in Style</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="code-advcd-best-practice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Shortcuts to Better Coding</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-on-empty">Running on empty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting-variables">Casting variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-and-im-mutability">Tuples and (im)mutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truthy-and-falsy-values">Truthy and falsy values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-functions">Lambda functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splat-and-splatty-splat">Splat and splatty-splat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-fun">Miscellaneous Fun</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arthur Turrell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This book is available under an MIT license.
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

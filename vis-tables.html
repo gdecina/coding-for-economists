@@ -1,0 +1,1472 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Tables &#8212; Coding for Economists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9FZQCPFXZJ');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vis-tables';</script>
+    <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-tables.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dashboards" href="vis-dashboards.html" />
+    <link rel="prev" title="Narrative Data Visualisation" href="vis-narrative.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/smith_lovelace.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/smith_lovelace.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="code-preliminaries.html">Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-basics.html">Coding Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">Workflow Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-where.html">Writing Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data-analysis-quickstart.html">Data Analysis Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-intro.html">Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transformation.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-read-and-write.html">Reading and Writing Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-spreadsheets.html">Spreadsheets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Coding</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="code-best-practice.html">Code in Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advanced.html">Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advcd-best-practice.html">Shortcuts to Better Coding</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data Visualisation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vis-intro.html">Intro to Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-letsplot.html">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-matplotlib.html">Powerful Data Visualisation with <strong>Matplotlib</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-common-plots.html">Common Plots</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="auto-research-outputs.html">Automating Research Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-markdown.html">Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-quarto.html">Combining Code and Text in Quarto Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-version-control.html">Version Control</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Econometrics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="econmt-probability-random.html">Probability and Random Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-causal-inference.html">Causal Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayesian.html">Bayesian Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayes-bambi.html">Bayesian Inference Made Easier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data-boolean.html">Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-joining-data.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-missing-values.html">Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="code-further-advanced.html">Advanced Coding</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-command-line.html">The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-environments.html">Virtual Code Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-rap.html">Reproducible Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="time-intro.html">Introduction to Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series.html">Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-fcasts-env.html">Forecasting Exercises</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Text Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="text-intro.html">Introduction to Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-regex.html">Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-nlp.html">Natural Language Processing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geospatial</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="geo-intro.html">Intro to Geo-Spatial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo-vis.html">Geo-Spatial Visualisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vis-narrative.html">Narrative Data Visualisation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-dashboards.html">Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-animation.html">Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-plotnine.html">Data Visualisation using the Grammar of Graphics with <strong>Plotnine</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-seaborn.html">Data Visualisation with <strong>Seaborn</strong></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="maths-abstract.html">Abstract Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths-numerical.html">Numerical Mathematics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Craft</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="craft-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-search.html">Putting the Search in Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-writing-papers.html">Writing Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-research-blogs.html">Research Blog Posts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-referee.html">Writing Referee Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-technical-reports.html">Writing Technical Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-extended-abstracts.html">Extended Abstracts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coming from ...</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="coming-from-stata.html">Coming from Stata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-matlab.html">Coming from Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-r.html">Coming from R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-excel.html">Coming from Excel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/vis-tables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fvis-tables.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/vis-tables.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tables</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tables-with-pandas">Creating tables with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-data">Getting data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-your-table-in-pandas">Preparing your table in <strong>pandas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-a-pandas-dataframe">Styling a <strong>pandas</strong> dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-pandas-tables-to-file">Writing <strong>pandas</strong> tables to file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-to-pandas-tables">Limitations to <strong>pandas</strong> tables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tables-with-matplotlib">Creating tables with <strong>matplotlib</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tables">
+<span id="vis-tables"></span><h1>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>The humble table is a vastly underloved and underappreciated element of communicating analysis. While it may not be as visually engaging as a vivid graph (and is far less good for a general audience), it has the advantage of being able to convey exact numerical information. It’s also an essential part of some analysis: for example, when writing economics papers, there is usually a “table 1” that contains descriptive statistics.</p>
+<p>Unfortunately, Python is a bit weaker on tables than it ought to be. As ever, <strong>pandas</strong> is the Swiss Army Knife of data analysis and can produce tables in a wide range of formats—so, in this chapter, we’ll be looking at <em>creating tables with <strong>pandas</strong></em>. While <strong>pandas</strong> isn’t perfect for crafting tables, using it for them means you can benefit from its incredible number of output formats. However, <strong>pandas</strong> is not your <em>only</em> option—you can also create visually exciting tables using <strong>matplotlib</strong>, as we’ll see.</p>
+<p>The main difference between creating (and exporting) tables with <strong>pandas</strong> versus <strong>matplotlib</strong> is that the former can produce machine-readable tables (eg in markdown, HTML) but has some limitations (eg it’s hard to add footnotes or rich media) while the latter can include images and is as flexible as you can possibly need but can only export images.</p>
+<p>For more on best practice for tables, check out the advice provided by the UK government’s <a class="reference external" href="https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-tables/">Analysis Function</a>.</p>
+<p>As ever, we’ll start by importing some key packages and initialising any settings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Set seed for random numbers</span>
+<span class="n">seed_for_prng</span> <span class="o">=</span> <span class="mi">78557</span>
+<span class="n">prng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span>
+    <span class="n">seed_for_prng</span>
+<span class="p">)</span>  <span class="c1"># prng=probabilistic random number generator</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-tables-with-pandas">
+<h2>Creating tables with <strong>pandas</strong><a class="headerlink" href="#creating-tables-with-pandas" title="Permalink to this heading">#</a></h2>
+<section id="getting-data">
+<h3>Getting data<a class="headerlink" href="#getting-data" title="Permalink to this heading">#</a></h3>
+<p>We’ll use the <em>penguins</em> dataset to demonstrate the use of <strong>pandas</strong> in creating tables. These data come with the <strong>seaborn</strong> package, which you’ll need:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">pen</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;penguins&quot;</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>Female</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="preparing-your-table-in-pandas">
+<h3>Preparing your table in <strong>pandas</strong><a class="headerlink" href="#preparing-your-table-in-pandas" title="Permalink to this heading">#</a></h3>
+<p>There are a few operations that you’ll want to do again, and again, and again to create tables. A cross-tab is one such operation! A cross-tab is just a count of the number of elements split by two groupings. Rather than just display this using the <code class="docutils literal notranslate"><span class="pre">pd.crosstab</span></code> function, we can add totals or percentages using the <code class="docutils literal notranslate"><span class="pre">margins=</span></code> and <code class="docutils literal notranslate"><span class="pre">normalize=</span></code> commands.</p>
+<p>In the below, we’ll use margins and normalisation so that each row sums to 1, and the last row shows the probability mass over islands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">pen</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">],</span> <span class="n">pen</span><span class="p">[</span><span class="s2">&quot;island&quot;</span><span class="p">],</span> <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>island</th>
+      <th>Biscoe</th>
+      <th>Dream</th>
+      <th>Torgersen</th>
+    </tr>
+    <tr>
+      <th>species</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Adelie</th>
+      <td>0.289474</td>
+      <td>0.368421</td>
+      <td>0.342105</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>0.488372</td>
+      <td>0.360465</td>
+      <td>0.151163</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The neat thing about the cross-tabs that come out is that they are themselves <strong>pandas</strong> dataframes.</p>
+<p>Of course, the usual <strong>pandas</strong> functions can be used to create any table you need:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_summary</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pen</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="s2">&quot;island&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">median_bill</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span> <span class="s2">&quot;median&quot;</span><span class="p">),</span>
+        <span class="n">mean_bill</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+        <span class="n">std_flipper</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">pen_summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>median_bill</th>
+      <th>mean_bill</th>
+      <th>std_flipper</th>
+    </tr>
+    <tr>
+      <th>species</th>
+      <th>island</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">Adelie</th>
+      <th>Biscoe</th>
+      <td>38.70</td>
+      <td>38.975000</td>
+      <td>6.729247</td>
+    </tr>
+    <tr>
+      <th>Dream</th>
+      <td>38.55</td>
+      <td>38.501786</td>
+      <td>6.585083</td>
+    </tr>
+    <tr>
+      <th>Torgersen</th>
+      <td>38.90</td>
+      <td>38.950980</td>
+      <td>6.232238</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <th>Dream</th>
+      <td>49.55</td>
+      <td>48.833824</td>
+      <td>7.131894</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <th>Biscoe</th>
+      <td>47.30</td>
+      <td>47.504878</td>
+      <td>6.484976</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>For reasons that will become apparent later, we’ll replace one of these values with a missing value (<code class="docutils literal notranslate"><span class="pre">pd.NA</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_summary</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The table we just saw, <code class="docutils literal notranslate"><span class="pre">pen_summary</span></code>, is not what you’d call publication quality. The numbers have lots of superfluous digits. The names are useful for when you’re doing analysis, but might not be so obvious to someone coming to this table for the first time. So let’s see what we can do to clean it up a bit.</p>
+<p>First, those numbers. We can apply number rounding quickly using <code class="docutils literal notranslate"><span class="pre">.round</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_summary</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>median_bill</th>
+      <th>mean_bill</th>
+      <th>std_flipper</th>
+    </tr>
+    <tr>
+      <th>species</th>
+      <th>island</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">Adelie</th>
+      <th>Biscoe</th>
+      <td>38.70</td>
+      <td>38.98</td>
+      <td>6.73</td>
+    </tr>
+    <tr>
+      <th>Dream</th>
+      <td>38.55</td>
+      <td>38.50</td>
+      <td>6.59</td>
+    </tr>
+    <tr>
+      <th>Torgersen</th>
+      <td>38.90</td>
+      <td>NaN</td>
+      <td>6.23</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <th>Dream</th>
+      <td>49.55</td>
+      <td>48.83</td>
+      <td>7.13</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <th>Biscoe</th>
+      <td>47.30</td>
+      <td>47.50</td>
+      <td>6.48</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This returns another dataframe. To change the names of the columns, you can just use one of the standard approaches:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_sum_clean</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pen_summary</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;median_bill&quot;</span><span class="p">:</span> <span class="s2">&quot;Median bill length (mm)&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_bill&quot;</span><span class="p">:</span> <span class="s2">&quot;Mean bill length (mm)&quot;</span><span class="p">,</span> <span class="s2">&quot;std_flipper&quot;</span><span class="p">:</span> <span class="s2">&quot;Std. deviation of flipper length&quot;</span><span class="p">})</span>
+<span class="p">)</span>
+<span class="n">pen_sum_clean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Median bill length (mm)</th>
+      <th>Mean bill length (mm)</th>
+      <th>Std. deviation of flipper length</th>
+    </tr>
+    <tr>
+      <th>species</th>
+      <th>island</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">Adelie</th>
+      <th>Biscoe</th>
+      <td>38.70</td>
+      <td>38.975000</td>
+      <td>6.729247</td>
+    </tr>
+    <tr>
+      <th>Dream</th>
+      <td>38.55</td>
+      <td>38.501786</td>
+      <td>6.585083</td>
+    </tr>
+    <tr>
+      <th>Torgersen</th>
+      <td>38.90</td>
+      <td>NaN</td>
+      <td>6.232238</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <th>Dream</th>
+      <td>49.55</td>
+      <td>48.833824</td>
+      <td>7.131894</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <th>Biscoe</th>
+      <td>47.30</td>
+      <td>47.504878</td>
+      <td>6.484976</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>One tip is to always have a dictionary up your sleeve that maps between the short names that are convenient for coding, and the longer names that you need to make outputs clear. Then, just before you do any exporting, you can always map the short names into the long names.</p>
+</section>
+<section id="styling-a-pandas-dataframe">
+<h3>Styling a <strong>pandas</strong> dataframe<a class="headerlink" href="#styling-a-pandas-dataframe" title="Permalink to this heading">#</a></h3>
+<p>As well as making direct modifications to a dataframe, you can apply <em>styles</em>. These are much more versatile ways to achieve styling of a table <em>for some output formats, namely HTML</em> and, although it isn’t perfect, for Latex too. (But this doesn’t work for markdown outputs, and markdown doesn’t support such rich formatting in any case.)</p>
+<p>Behind the scenes, when a table is displayed on a webpage like the one you’re reading right now, HTML (the language most of the internet is in) is used. Styling is a way of modifying the default HTML for showing tables so that they look nicer or better.</p>
+<p>In the example below, you can see some of the options that are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">precision</span></code> is like <code class="docutils literal notranslate"><span class="pre">.round</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">na_rep</span></code> sets how missing values are rendered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thousands</span></code> sets the separator between every thousand (for readability)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formatter</span></code> gives fine-grained control over the formatting of individual columns</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_styled</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pen_sum_clean</span><span class="o">.</span><span class="n">style</span>
+    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">na_rep</span><span class="o">=</span><span class="s1">&#39;Value missing&#39;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+            <span class="n">formatter</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;Mean bill length (mm)&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Std. deviation of flipper length (mm)&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:,.0f}</span><span class="s2"> um&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mf">1e3</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+    <span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;This is the title&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">pen_styled</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_5ba69">
+  <caption>This is the title</caption>
+  <thead>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_5ba69_level0_col0" class="col_heading level0 col0" >Median bill length (mm)</th>
+      <th id="T_5ba69_level0_col1" class="col_heading level0 col1" >Mean bill length (mm)</th>
+      <th id="T_5ba69_level0_col2" class="col_heading level0 col2" >Std. deviation of flipper length</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >species</th>
+      <th class="index_name level1" >island</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_5ba69_level0_row0" class="row_heading level0 row0" rowspan="3">Adelie</th>
+      <th id="T_5ba69_level1_row0" class="row_heading level1 row0" >Biscoe</th>
+      <td id="T_5ba69_row0_col0" class="data row0 col0" >38.700</td>
+      <td id="T_5ba69_row0_col1" class="data row0 col1" >39.0</td>
+      <td id="T_5ba69_row0_col2" class="data row0 col2" >6.729</td>
+    </tr>
+    <tr>
+      <th id="T_5ba69_level1_row1" class="row_heading level1 row1" >Dream</th>
+      <td id="T_5ba69_row1_col0" class="data row1 col0" >38.550</td>
+      <td id="T_5ba69_row1_col1" class="data row1 col1" >38.5</td>
+      <td id="T_5ba69_row1_col2" class="data row1 col2" >6.585</td>
+    </tr>
+    <tr>
+      <th id="T_5ba69_level1_row2" class="row_heading level1 row2" >Torgersen</th>
+      <td id="T_5ba69_row2_col0" class="data row2 col0" >38.900</td>
+      <td id="T_5ba69_row2_col1" class="data row2 col1" >Value missing</td>
+      <td id="T_5ba69_row2_col2" class="data row2 col2" >6.232</td>
+    </tr>
+    <tr>
+      <th id="T_5ba69_level0_row3" class="row_heading level0 row3" >Chinstrap</th>
+      <th id="T_5ba69_level1_row3" class="row_heading level1 row3" >Dream</th>
+      <td id="T_5ba69_row3_col0" class="data row3 col0" >49.550</td>
+      <td id="T_5ba69_row3_col1" class="data row3 col1" >48.8</td>
+      <td id="T_5ba69_row3_col2" class="data row3 col2" >7.132</td>
+    </tr>
+    <tr>
+      <th id="T_5ba69_level0_row4" class="row_heading level0 row4" >Gentoo</th>
+      <th id="T_5ba69_level1_row4" class="row_heading level1 row4" >Biscoe</th>
+      <td id="T_5ba69_row4_col0" class="data row4 col0" >47.300</td>
+      <td id="T_5ba69_row4_col1" class="data row4 col1" >47.5</td>
+      <td id="T_5ba69_row4_col2" class="data row4 col2" >6.485</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>If you need to add more labels to either the index or the column names, you can. It’s a bit fiddly, but you can.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_sum_extra_col_info</span> <span class="o">=</span> <span class="n">pen_sum_clean</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># create an independent copy</span>
+<span class="n">pen_sum_extra_col_info</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;Lengths&quot;</span><span class="p">,</span> <span class="s2">&quot;Lengths&quot;</span><span class="p">,</span> <span class="s2">&quot;Stds&quot;</span><span class="p">],</span> <span class="n">pen_sum_clean</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="n">pen_sum_extra_col_info_styled</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pen_sum_extra_col_info</span>
+    <span class="o">.</span><span class="n">style</span>
+    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">na_rep</span><span class="o">=</span><span class="s1">&#39;Value missing&#39;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+            <span class="n">formatter</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;Mean bill length (mm)&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Std. deviation of flipper length (mm)&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:,.0f}</span><span class="s2"> um&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mf">1e3</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+    <span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;This is the title&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span>
+        <span class="p">[{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;th&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;text-align&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">)]}]</span>
+        <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">pen_sum_extra_col_info_styled</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_5213d th {
+  text-align: center;
+}
+</style>
+<table id="T_5213d">
+  <caption>This is the title</caption>
+  <thead>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_5213d_level0_col0" class="col_heading level0 col0" colspan="2">Lengths</th>
+      <th id="T_5213d_level0_col2" class="col_heading level0 col2" >Stds</th>
+    </tr>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="blank level1" >&nbsp;</th>
+      <th id="T_5213d_level1_col0" class="col_heading level1 col0" >Median bill length (mm)</th>
+      <th id="T_5213d_level1_col1" class="col_heading level1 col1" >Mean bill length (mm)</th>
+      <th id="T_5213d_level1_col2" class="col_heading level1 col2" >Std. deviation of flipper length</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >species</th>
+      <th class="index_name level1" >island</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_5213d_level0_row0" class="row_heading level0 row0" rowspan="3">Adelie</th>
+      <th id="T_5213d_level1_row0" class="row_heading level1 row0" >Biscoe</th>
+      <td id="T_5213d_row0_col0" class="data row0 col0" >38.700</td>
+      <td id="T_5213d_row0_col1" class="data row0 col1" >38.975</td>
+      <td id="T_5213d_row0_col2" class="data row0 col2" >6.729</td>
+    </tr>
+    <tr>
+      <th id="T_5213d_level1_row1" class="row_heading level1 row1" >Dream</th>
+      <td id="T_5213d_row1_col0" class="data row1 col0" >38.550</td>
+      <td id="T_5213d_row1_col1" class="data row1 col1" >38.502</td>
+      <td id="T_5213d_row1_col2" class="data row1 col2" >6.585</td>
+    </tr>
+    <tr>
+      <th id="T_5213d_level1_row2" class="row_heading level1 row2" >Torgersen</th>
+      <td id="T_5213d_row2_col0" class="data row2 col0" >38.900</td>
+      <td id="T_5213d_row2_col1" class="data row2 col1" >Value missing</td>
+      <td id="T_5213d_row2_col2" class="data row2 col2" >6.232</td>
+    </tr>
+    <tr>
+      <th id="T_5213d_level0_row3" class="row_heading level0 row3" >Chinstrap</th>
+      <th id="T_5213d_level1_row3" class="row_heading level1 row3" >Dream</th>
+      <td id="T_5213d_row3_col0" class="data row3 col0" >49.550</td>
+      <td id="T_5213d_row3_col1" class="data row3 col1" >48.834</td>
+      <td id="T_5213d_row3_col2" class="data row3 col2" >7.132</td>
+    </tr>
+    <tr>
+      <th id="T_5213d_level0_row4" class="row_heading level0 row4" >Gentoo</th>
+      <th id="T_5213d_level1_row4" class="row_heading level1 row4" >Biscoe</th>
+      <td id="T_5213d_row4_col0" class="data row4 col0" >47.300</td>
+      <td id="T_5213d_row4_col1" class="data row4 col1" >47.505</td>
+      <td id="T_5213d_row4_col2" class="data row4 col2" >6.485</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Let’s see an example of exporting this to Latex too:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pen_sum_extra_col_info_styled</span><span class="o">.</span><span class="n">to_latex</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\\begin{table}\n\\caption{This is the title}\n\\thcenter\n\\begin{tabular}{llrrr}\n &amp;  &amp; \\multicolumn{2}{r}{Lengths} &amp; Stds \\\\\n &amp;  &amp; Median bill length (mm) &amp; Mean bill length (mm) &amp; Std. deviation of flipper length \\\\\nspecies &amp; island &amp;  &amp;  &amp;  \\\\\n\\multirow[c]{3}{*}{Adelie} &amp; Biscoe &amp; 38.700 &amp; 38.975 &amp; 6.729 \\\\\n &amp; Dream &amp; 38.550 &amp; 38.502 &amp; 6.585 \\\\\n &amp; Torgersen &amp; 38.900 &amp; Value missing &amp; 6.232 \\\\\nChinstrap &amp; Dream &amp; 49.550 &amp; 48.834 &amp; 7.132 \\\\\nGentoo &amp; Biscoe &amp; 47.300 &amp; 47.505 &amp; 6.485 \\\\\n\\end{tabular}\n\\end{table}\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can read more about the style functionality over at the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.io.formats.style.Styler.to_latex.html"><strong>pandas</strong> Styler docs</a>.</p>
+<p>Another thing you might reasonably want to do is provide summary statistics for all columns, as the last column, or for all rows, as the last row. To do this for, say, the mean when <em>not</em> using the <code class="docutils literal notranslate"><span class="pre">pd.crosstab</span></code> function, you will need to insert a summary row into the dataframe object. To start with, you need to actually create the summary row—this is achieved with the <code class="docutils literal notranslate"><span class="pre">.mean(axis=0)</span></code> method to get the mean over rows. We cast this into being a dataframe using <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> as otherwise it would just be a single column, or Series object. Then we need to give the columns a name that’s better than the default “<code class="docutils literal notranslate"><span class="pre">0</span></code>”, and we choose a multi-level (here, two level) column name recognising that the <em>index</em> of our original dataframe has two levels: species and island. We actually just want to put “summary” in once and we’ve arbitrarily chosen the first level for that. Note that multi-level indices and columns can get complicated but the essential trick to bear in mind is that you replace a list of strings with a list of tuples of strings, eg for the first column <code class="docutils literal notranslate"><span class="pre">[&quot;Summary:&quot;,</span> <span class="pre">...]</span></code> becomes <code class="docutils literal notranslate"><span class="pre">[(&quot;Summary&quot;,</span> <span class="pre">&quot;summary</span> <span class="pre">level</span> <span class="pre">two&quot;),</span> <span class="pre">...]</span></code>. Putting this all together gives us a dataframe with an <em>index</em> that is the same as the <em>columns</em> of the original dataframe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_row</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pen_sum_extra_col_info</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">summary_row</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Summary:&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="c1"># note our index has two levels</span>
+<span class="n">summary_row</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>(Summary:, )</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">Lengths</th>
+      <th>Median bill length (mm)</th>
+      <td>42.600000</td>
+    </tr>
+    <tr>
+      <th>Mean bill length (mm)</th>
+      <td>43.453872</td>
+    </tr>
+    <tr>
+      <th>Stds</th>
+      <th>Std. deviation of flipper length</th>
+      <td>6.632687</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Next we need to transpose the new summary row (so that its columns align with those in our original data frame) using <code class="docutils literal notranslate"><span class="pre">.T</span></code>, and concatenate the two dataframes together:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pen_sum_extra_col_info</span><span class="p">,</span> <span class="n">summary_row</span><span class="o">.</span><span class="n">T</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="2" halign="left">Lengths</th>
+      <th>Stds</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Median bill length (mm)</th>
+      <th>Mean bill length (mm)</th>
+      <th>Std. deviation of flipper length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">Adelie</th>
+      <th>Biscoe</th>
+      <td>38.70</td>
+      <td>38.975000</td>
+      <td>6.729247</td>
+    </tr>
+    <tr>
+      <th>Dream</th>
+      <td>38.55</td>
+      <td>38.501786</td>
+      <td>6.585083</td>
+    </tr>
+    <tr>
+      <th>Torgersen</th>
+      <td>38.90</td>
+      <td>NaN</td>
+      <td>6.232238</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <th>Dream</th>
+      <td>49.55</td>
+      <td>48.833824</td>
+      <td>7.131894</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <th>Biscoe</th>
+      <td>47.30</td>
+      <td>47.504878</td>
+      <td>6.484976</td>
+    </tr>
+    <tr>
+      <th>Summary:</th>
+      <th></th>
+      <td>42.60</td>
+      <td>43.453872</td>
+      <td>6.632687</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Once this is done, you can apply all the usual stylings.</p>
+</section>
+<section id="writing-pandas-tables-to-file">
+<h3>Writing <strong>pandas</strong> tables to file<a class="headerlink" href="#writing-pandas-tables-to-file" title="Permalink to this heading">#</a></h3>
+<p>Writing <strong>pandas</strong> tables to file is fairly straightforward: just use one of <strong>pandas</strong> many, many output functions. These typically begin with <code class="docutils literal notranslate"><span class="pre">.to_</span></code> and then the output name. The most useful output formats will be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">to_html</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_latex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_string</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_markdown</span></code></p></li>
+</ul>
+<p>Add the filename you’d like to write to within the brackets following these method names. For example, to write a latex table it would be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pen_styled</span><span class="o">.</span><span class="n">to_latex</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;outputs/table_one.tex&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>These files can then be picked up by other documents. Note that, sometimes, when exporting to Latex, the code will have “escape” characters, for example extra backslashes. In some versions of <strong>pandas</strong> you can turn these off with an <code class="docutils literal notranslate"><span class="pre">escape=False</span></code> keyword argument.</p>
+</section>
+<section id="limitations-to-pandas-tables">
+<h3>Limitations to <strong>pandas</strong> tables<a class="headerlink" href="#limitations-to-pandas-tables" title="Permalink to this heading">#</a></h3>
+<p><strong>pandas</strong> tables have some limitations. It is not easy to include rich information such as images: while they can be included in the HTML rendition of a table on a webpage or in a Jupyter Notebook, it’s far harder to export this kind of information sensibly to an output file that <em>isn’t</em> HTML.</p>
+<p>A more tricky general issue with them is that it can be hard to include all of the relevant information you’d expect in a table: they work extremely well for a typical table that is just rows and columns with equal-sized cells, but it you want to include, say, a long row (of a single cell) at the end for either footnotes or source notes, there isn’t an obvious way to do it. Similarly, it’s hard to make parts of a table such as the title, sub-title, and stubhead label work well in all cases.</p>
+<p>To create a footnote or source note row, you could insert an extra row like above, but it’s a very unsatisfactory work-around as your notes can only be in one of the columns (not spread across all of them) and it will lead to you losing the data types in at least one of your original columns.</p>
+<p>Unfortunately, until someone comes along with a better package, this is largely how it is. In R, packages like <a class="reference external" href="https://gt.rstudio.com/">GT</a>, <a class="reference external" href="https://davidgohel.github.io/flextable/">flextable</a> and <a class="reference external" href="https://haozhu233.github.io/kableExtra/">kableExtra</a> make building tables that bit easier. In the meantime, if you’re writing a table to latex and want footnotes and source notes, you can make use of the <code class="docutils literal notranslate"><span class="pre">to_latex</span></code> method’s <code class="docutils literal notranslate"><span class="pre">caption=</span></code> keyword argument.</p>
+</section>
+</section>
+<section id="creating-tables-with-matplotlib">
+<h2>Creating tables with <strong>matplotlib</strong><a class="headerlink" href="#creating-tables-with-matplotlib" title="Permalink to this heading">#</a></h2>
+<p>If you want to create much richer tables, with images and so on, you can use <strong>matplotlib</strong>, the infinitely flexible image package. However, the downside of <strong>matplotlib</strong> is that your tables have to be exported as image files rather than as machine-readable text-based files. If you want a graphic that is more striking, <strong>matplotib</strong> is brilliant.</p>
+<p>However, creating anything beyond the most simple table with <strong>matplotlib</strong> is an advanced topic—it relies on content from <a class="reference internal" href="vis-matplotlib.html#vis-matplotlib"><span class="std std-ref">Powerful Data Visualisation with Matplotlib</span></a> and <a class="reference internal" href="vis-common-plots.html#vis-common-plots"><span class="std std-ref">Common Plots</span></a>, plus more besides. So, rather than attempt to cover it here, instead we’re just going to direct you to this excellent <a class="reference external" href="https://karbartolome.quarto.pub/the-grammar-of-tables/">blog post</a> on ‘the grammar of table’ by Karina Bartolomé that walks through creating a table with <strong>matplotlib</strong>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="vis-narrative.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Narrative Data Visualisation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="vis-dashboards.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dashboards</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tables-with-pandas">Creating tables with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-data">Getting data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-your-table-in-pandas">Preparing your table in <strong>pandas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-a-pandas-dataframe">Styling a <strong>pandas</strong> dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-pandas-tables-to-file">Writing <strong>pandas</strong> tables to file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-to-pandas-tables">Limitations to <strong>pandas</strong> tables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tables-with-matplotlib">Creating tables with <strong>matplotlib</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arthur Turrell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This book is available under an MIT license.
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

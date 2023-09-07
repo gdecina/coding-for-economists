@@ -1,123 +1,163 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Narrative Data Visualisation &#8212; Coding for Economists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9FZQCPFXZJ');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vis-narrative';</script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-narrative.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Automating Research Outputs" href="auto-research-outputs.html" />
-    <link rel="prev" title="Common Plots" href="vis-common-plots.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
-
+    <link rel="next" title="Tables" href="vis-tables.html" />
+    <link rel="prev" title="Geo-Spatial Visualisation" href="geo-vis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/smith_lovelace.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Coding for Economists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/smith_lovelace.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/smith_lovelace.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -126,839 +166,381 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-preliminaries.html">
-   Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-basics.html">
-   Coding Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   Workflow Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Writing Code
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-preliminaries.html">Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-basics.html">Coding Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">Workflow Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-where.html">Writing Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-analysis-quickstart.html">
-   Data Analysis Quickstart
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-intro.html">
-   Working with Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transformation.html">
-   Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-read-and-write.html">
-   Reading and Writing Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-numbers.html">
-   Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-categorical.html">
-   Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-boolean.html">
-   Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-joining-data.html">
-   Joins
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis-quickstart.html">Data Analysis Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-intro.html">Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transformation.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-read-and-write.html">Reading and Writing Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-spreadsheets.html">Spreadsheets</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-best-practice.html">
-   Code in Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-best-practice.html">Code in Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advanced.html">Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advcd-best-practice.html">Shortcuts to Better Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-intro.html">Intro to Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-letsplot.html">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-matplotlib.html">Powerful Data Visualisation with <strong>Matplotlib</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-common-plots.html">Common Plots</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="auto-research-outputs.html">Automating Research Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-markdown.html">Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-quarto.html">Combining Code and Text in Quarto Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-version-control.html">Version Control</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Econometrics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="econmt-probability-random.html">Probability and Random Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-causal-inference.html">Causal Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayesian.html">Bayesian Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayes-bambi.html">Bayesian Inference Made Easier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data-boolean.html">Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-joining-data.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-missing-values.html">Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="code-further-advanced.html">Advanced Coding</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-command-line.html">The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-environments.html">Virtual Code Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-rap.html">Reproducible Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="time-intro.html">Introduction to Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series.html">Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-fcasts-env.html">Forecasting Exercises</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Text Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="text-intro.html">Introduction to Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-regex.html">Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-nlp.html">Natural Language Processing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geospatial</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="geo-intro.html">Intro to Geo-Spatial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo-vis.html">Geo-Spatial Visualisation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-intro.html">
-   Intro to Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-letsplot.html">
-   Easy Data Visualisation for Tidy Data with
-   <strong>
-    Lets-Plot
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-matplotlib.html">
-   Powerful Data Visualisation with
-   <strong>
-    Matplotlib
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-common-plots.html">
-   Common Plots
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Narrative Data Visualisation
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Narrative Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-dashboards.html">Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-animation.html">Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-plotnine.html">Data Visualisation using the Grammar of Graphics with <strong>Plotnine</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-seaborn.html">Data Visualisation with <strong>Seaborn</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="maths-abstract.html">Abstract Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths-numerical.html">Numerical Mathematics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Craft</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-spreadsheets.html">
-   Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-databases.html">
-   Databases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="craft-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-search.html">Putting the Search in Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-writing-papers.html">Writing Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-research-blogs.html">Research Blog Posts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-referee.html">Writing Referee Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-technical-reports.html">Writing Technical Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-extended-abstracts.html">Extended Abstracts</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coming from ...</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Essential Tricks for Better Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-further-advanced.html">
-   Yet More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-stata.html">Coming from Stata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-matlab.html">Coming from Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-r.html">Coming from R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-excel.html">Coming from Excel</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-version-control.html">
-   Version Control
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-environments.html">
-   Virtual Code Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Craft
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-search.html">
-   Putting the Search in Research
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-writing-papers.html">
-   Writing Papers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-research-blogs.html">
-   Research Blog Posts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-technical-reports.html">
-   Writing Technical Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-extended-abstracts.html">
-   Extended Abstracts
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Time
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="time-intro.html">
-   Introduction to Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-series.html">
-   Time Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-fcasts-env.html">
-   Forecasting Exercises
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Text Analysis
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   Geo-Spatial Visualisation
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data Visualisation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-plotnine.html">
-   Data Visualisation using the Grammar of Graphics with
-   <strong>
-    Plotnine
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-dashboards.html">
-   Dashboards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Mathematics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-abstract.html">
-   Abstract Mathematics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-numerical.html">
-   Numerical Mathematics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Even More Data Visualisation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
-   Data Visualisation with
-   <strong>
-    Seaborn
-   </strong>
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coming from ...
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-stata.html">
-   Coming from Stata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-matlab.html">
-   Coming from Matlab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-r.html">
-   Coming from R
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-excel.html">
-   Coming from Excel
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  End Matter
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgements.html">
-   Acknowledgements and Contributing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/vis-narrative.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/vis-narrative.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fvis-narrative.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/vis-narrative.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fvis-narrative.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/vis-narrative.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Narrative Data Visualisation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deciding-the-story">
-     Deciding the story
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-plot-should-i-use">
-     What plot should I use?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#drawing-attention-to-enhance-narrative-visualisation">
-     Drawing Attention to Enhance Narrative Visualisation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#case-studies-in-narrative-visualisation">
-   Case Studies in Narrative Visualisation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-financial-times">
-     The Financial Times
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#direct-labelling-of-lines">
-     Direct Labelling of Lines
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#labelling-line-ends">
-       Labelling Line Ends
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#labelling-on-lines">
-       Labelling On Lines
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-economist">
-     The Economist
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Narrative Data Visualisation</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Narrative Data Visualisation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deciding-the-story">
-     Deciding the story
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-plot-should-i-use">
-     What plot should I use?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#drawing-attention-to-enhance-narrative-visualisation">
-     Drawing Attention to Enhance Narrative Visualisation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#case-studies-in-narrative-visualisation">
-   Case Studies in Narrative Visualisation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-financial-times">
-     The Financial Times
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#direct-labelling-of-lines">
-     Direct Labelling of Lines
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#labelling-line-ends">
-       Labelling Line Ends
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#labelling-on-lines">
-       Labelling On Lines
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-economist">
-     The Economist
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Narrative Data Visualisation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Narrative Data Visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deciding-the-story">Deciding the story</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-plot-should-i-use">What plot should I use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-attention-to-enhance-narrative-visualisation">Drawing Attention to Enhance Narrative Visualisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-studies-in-narrative-visualisation">Case Studies in Narrative Visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-financial-times">The Financial Times</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-labelling-of-lines">Direct Labelling of Lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-line-ends">Labelling Line Ends</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-on-lines">Labelling On Lines</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-economist">The Economist</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="narrative-data-visualisation">
-<span id="vis-narrative"></span><h1>Narrative Data Visualisation<a class="headerlink" href="#narrative-data-visualisation" title="Permalink to this headline">#</a></h1>
+<span id="vis-narrative"></span><h1>Narrative Data Visualisation<a class="headerlink" href="#narrative-data-visualisation" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this chapter, we’ll examine the tricks and techniques of <em>narrative data visualisation</em>. This type of visualisation gets a lot more press than the others discussed in <a class="reference internal" href="vis-intro.html#vis-intro"><span class="std std-ref">Intro to Data Visualisation</span></a> ; literally, because journalists use it in their work. There are many books written on it too.</p>
 <p>For narrative visualisation, it’s particularly helpful to bear this quote in mind:</p>
 <blockquote>
@@ -985,10 +567,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="id1">
-<h2>Narrative Data Visualisation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2>Narrative Data Visualisation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>As discussed, the name of the game here is to communicate a particular narrative. Let’s see what tricks we can use to help do this. The three stages of this are: deciding the story, deciding the chart, and creating a chart that helps deliver that narrative.</p>
 <section id="deciding-the-story">
-<h3>Deciding the story<a class="headerlink" href="#deciding-the-story" title="Permalink to this headline">#</a></h3>
+<h3>Deciding the story<a class="headerlink" href="#deciding-the-story" title="Permalink to this heading">#</a></h3>
 <p>We are only human, and a digestible narrative goes a lot further than lots of data with no thread running through. If you are doing narrative visualisation, you must first be clear about the story you want to tell and why it’s important. Let’s say you are making a visualisation on topic ‘Y’, then some reasons why ‘Y’ might be important that you may want to think about when creating your narrative are:</p>
 <ul class="simple">
 <li><p>Y matters: when Y rises or falls, people are hurt or helped.</p></li>
@@ -1000,13 +582,13 @@ title="Print to PDF"
 <p>If you can identify why a story is important, you’re half way to designing a narrative visualisation that brings the story into focus. Later on, we’ll recreate a chart from the <em>Financial Times</em>. In that case, ‘Y’ is a high for air pollution in Beijing that hurts people (it’s also political because of efforts to tackle the problem). So, in this case, the creator of the narrative needs to convey that the pollution has hit a high (presumably relative to other points in time) and that this high is far above safe levels.</p>
 </section>
 <section id="what-plot-should-i-use">
-<h3>What plot should I use?<a class="headerlink" href="#what-plot-should-i-use" title="Permalink to this headline">#</a></h3>
+<h3>What plot should I use?<a class="headerlink" href="#what-plot-should-i-use" title="Permalink to this heading">#</a></h3>
 <p>Once you know what story you want to tell, you need the right kind of chart for the job. Resources like the <em>Financial Times</em>’ <a class="reference external" href="http://ft-interactive.github.io/visual-vocabulary/">visual vocabulary</a> are extremely useful here. You need to ask yourself what element you’re trying to highlight: a point in time, the size relative to other units cross-sectionally, the distribution either in numbers or spatially, the difference between groups, how something has changed, etc.? There are charts that can help with all of these and it’s well worth looking at the link to get a sense. You can find code for many of the plots that are featured in the <a class="reference internal" href="vis-common-plots.html#vis-common-plots"><span class="std std-ref">Common Plots</span></a> chapter.</p>
 </section>
 <section id="drawing-attention-to-enhance-narrative-visualisation">
-<h3>Drawing Attention to Enhance Narrative Visualisation<a class="headerlink" href="#drawing-attention-to-enhance-narrative-visualisation" title="Permalink to this headline">#</a></h3>
+<h3>Drawing Attention to Enhance Narrative Visualisation<a class="headerlink" href="#drawing-attention-to-enhance-narrative-visualisation" title="Permalink to this heading">#</a></h3>
 <p>According to data visualisation master Jon Schwabish’s book <em>Better Data Visusalizations</em> <span id="id2">Schwabish [<a class="reference internal" href="zreferences.html#id17" title="Jonathan Schwabish. Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks. Columbia University Press, 2021.">2021</a>]</span>, there are 15 ways to draw an audience’s attention in a chart:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Shape</p></li>
 <li><p>Enclosure</p></li>
 <li><p>Line width</p></li>
@@ -1029,7 +611,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="case-studies-in-narrative-visualisation">
-<h2>Case Studies in Narrative Visualisation<a class="headerlink" href="#case-studies-in-narrative-visualisation" title="Permalink to this headline">#</a></h2>
+<h2>Case Studies in Narrative Visualisation<a class="headerlink" href="#case-studies-in-narrative-visualisation" title="Permalink to this heading">#</a></h2>
 <p>Good visualisation helps the viewer to grasp the narrative—rather than leaving them puzzling as to what the key message is. To that end, various adornments may be added to a plot to bring out the narrative. These adornments typically take the form of those we have seen already that draw the eye, but for a successful narrative visualisation they must come together to tell a story.</p>
 <p>We’ll also make use of some other tricks:</p>
 <ul class="simple">
@@ -1040,7 +622,7 @@ title="Print to PDF"
 <li><p>If there are multiple lines, label them directly rather than via a legend</p></li>
 </ul>
 <section id="the-financial-times">
-<h3>The Financial Times<a class="headerlink" href="#the-financial-times" title="Permalink to this headline">#</a></h3>
+<h3>The Financial Times<a class="headerlink" href="#the-financial-times" title="Permalink to this heading">#</a></h3>
 <p>Let’s see an example that brings together quite a few of these elements, recreating a chart from the <em>Financial Times</em>: a newspaper that is well-known for its impressive visualisations. The chart tells the story of extremely high levels of air pollution in Beijing at the start of 2021. (Note that the data here disagree with the original Financial Times source, which were unavailable; do not take the numbers too seriously.)</p>
 <p>Let’s first grab the data:</p>
 <div class="cell docutils container">
@@ -1200,16 +782,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-narrative_8_0.svg" src="_images/vis-narrative_8_0.svg" /></div>
+<img alt="_images/65a4da2c3cb86d3e0a58b08d10eefd216a2ab22cc1c095c38aa77cdea6faf089.svg" src="_images/65a4da2c3cb86d3e0a58b08d10eefd216a2ab22cc1c095c38aa77cdea6faf089.svg" /></div>
 </div>
 <p>What do we learn from this exercise? Well, there’s a big last mile issue with making narrative visualisations. Normally, when coding, you should do your best to avoid hard-coding numbers (for example <code class="docutils literal notranslate"><span class="pre">x=0.15</span></code> above). But in this case getting things just so requires a lot of manual adjustment and that’s <em>after</em> you’ve decided what story you’re going to tell, and how to show it.</p>
 <p>The example above demonstrates many of the pain points of the last mile, like decluttering, adjusting text, careful use of saturation and colour, and ensuring dates are displayed in an aesthetically pleasing way.</p>
 </section>
 <section id="direct-labelling-of-lines">
-<h3>Direct Labelling of Lines<a class="headerlink" href="#direct-labelling-of-lines" title="Permalink to this headline">#</a></h3>
+<h3>Direct Labelling of Lines<a class="headerlink" href="#direct-labelling-of-lines" title="Permalink to this heading">#</a></h3>
 <p>One commonly used trick that we didn’t see in the above example is labelling lines directly (rather than using a legend).</p>
 <section id="labelling-line-ends">
-<h4>Labelling Line Ends<a class="headerlink" href="#labelling-line-ends" title="Permalink to this headline">#</a></h4>
+<h4>Labelling Line Ends<a class="headerlink" href="#labelling-line-ends" title="Permalink to this heading">#</a></h4>
 <p>So let’s now see an example of labelling line ends that was originally posted on the <a class="reference external" href="https://lost-stats.github.io/Presentation/Figures/line_graph_with_labels_at_the_beginning_or_end.html">Library of Statistical Translation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1376,11 +958,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-narrative_11_0.svg" src="_images/vis-narrative_11_0.svg" /></div>
+<img alt="_images/b14133d74553dce60fa5c2d16311ed306ddc42d41f52ef369bfbb2730adecede.svg" src="_images/b14133d74553dce60fa5c2d16311ed306ddc42d41f52ef369bfbb2730adecede.svg" /></div>
 </div>
 </section>
 <section id="labelling-on-lines">
-<h4>Labelling On Lines<a class="headerlink" href="#labelling-on-lines" title="Permalink to this headline">#</a></h4>
+<h4>Labelling On Lines<a class="headerlink" href="#labelling-on-lines" title="Permalink to this heading">#</a></h4>
 <p>Another powerful way to remove the need for a legend is to put labels directly on the lines. Here’s an example from the online book <a class="reference external" href="https://github.com/rougier/scientific-visualization-book"><em>Scientific Visualization in Matplotlib</em></a> <span id="id3">Rougier [<a class="reference internal" href="zreferences.html#id38" title="Nicolas Rougier. Scientific Visualization: Python + Matplotlib. HAL Open Science, 2021.">2021</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1433,12 +1015,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-narrative_13_0.svg" src="_images/vis-narrative_13_0.svg" /></div>
+<img alt="_images/4af0bea5a55b46404c39b3ffe08747f55aca39f4ead27a1fbd5c4ce040db147d.svg" src="_images/4af0bea5a55b46404c39b3ffe08747f55aca39f4ead27a1fbd5c4ce040db147d.svg" /></div>
 </div>
 </section>
 </section>
 <section id="the-economist">
-<h3>The Economist<a class="headerlink" href="#the-economist" title="Permalink to this headline">#</a></h3>
+<h3>The Economist<a class="headerlink" href="#the-economist" title="Permalink to this heading">#</a></h3>
 <p>This example comes from a blog post called <a class="reference external" href="https://towardsdatascience.com/making-economist-style-plots-in-matplotlib-e7de6d679739">Making Economist-Style Plots in Matplotlib</a> by Robert Ritz. Our objective is to recreate a plot from <em>The Economist</em>.</p>
 <p>In terms of narrative bells and whistles, this chart uses a less is more approach. But this is on purpose; there’s very little chart clutter so all we see is the order of GDP levels.</p>
 <p>We’ll use the <a class="reference external" href="https://fonts.google.com/specimen/Varta">Varta</a> font, which is somewhat similar to the proprietary font used by <em>The Economist</em>. If you are going to use a custom font for a chart, you need to either download and install it on your system or tell <strong>matplotlib</strong> where the file is (we’ll use the former approach below).</p>
@@ -1484,32 +1066,32 @@ title="Print to PDF"
     <tr>
       <th>0</th>
       <td>Canada</td>
-      <td>2021</td>
-      <td>1.990762e+12</td>
+      <td>2022</td>
+      <td>2.139840e+12</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Canada</td>
-      <td>2020</td>
-      <td>1.645423e+12</td>
+      <td>2021</td>
+      <td>2.001487e+12</td>
     </tr>
     <tr>
       <th>2</th>
       <td>China</td>
-      <td>2021</td>
-      <td>1.773406e+13</td>
+      <td>2022</td>
+      <td>1.796317e+13</td>
     </tr>
     <tr>
       <th>3</th>
       <td>China</td>
-      <td>2020</td>
-      <td>1.468767e+13</td>
+      <td>2021</td>
+      <td>1.782046e+13</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Germany</td>
-      <td>2021</td>
-      <td>4.223116e+12</td>
+      <td>2022</td>
+      <td>4.072192e+12</td>
     </tr>
   </tbody>
 </table>
@@ -1554,37 +1136,37 @@ title="Print to PDF"
     <tr>
       <th>14</th>
       <td>Korea, Rep.</td>
-      <td>2021</td>
-      <td>1.798534e+12</td>
-      <td>1.798534</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>Canada</td>
-      <td>2021</td>
-      <td>1.990762e+12</td>
-      <td>1.990762</td>
+      <td>2022</td>
+      <td>1.665246e+12</td>
+      <td>1.665246</td>
     </tr>
     <tr>
       <th>12</th>
       <td>Italy</td>
-      <td>2021</td>
-      <td>2.099880e+12</td>
-      <td>2.099880</td>
+      <td>2022</td>
+      <td>2.010432e+12</td>
+      <td>2.010432</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Canada</td>
+      <td>2022</td>
+      <td>2.139840e+12</td>
+      <td>2.139840</td>
     </tr>
     <tr>
       <th>6</th>
       <td>France</td>
-      <td>2021</td>
-      <td>2.937473e+12</td>
-      <td>2.937473</td>
+      <td>2022</td>
+      <td>2.782905e+12</td>
+      <td>2.782905</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>India</td>
-      <td>2021</td>
-      <td>3.173398e+12</td>
-      <td>3.173398</td>
+      <th>8</th>
+      <td>United Kingdom</td>
+      <td>2022</td>
+      <td>3.070668e+12</td>
+      <td>3.070668</td>
     </tr>
   </tbody>
 </table>
@@ -1681,7 +1263,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-narrative_21_0.svg" src="_images/vis-narrative_21_0.svg" /></div>
+<img alt="_images/b73e34e2ff6f99921e75d8ea7ce2045c1602cd92aae0c9f4b5a90b4de78951a3.svg" src="_images/b73e34e2ff6f99921e75d8ea7ce2045c1602cd92aae0c9f4b5a90b4de78951a3.svg" /></div>
 </div>
 </section>
 </section>
@@ -1699,7 +1281,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1707,53 +1289,124 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="vis-common-plots.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Common Plots</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="auto-research-outputs.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Automating Research Outputs</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Arthur Turrell<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      This book is available under an MIT license.
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="geo-vis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Geo-Spatial Visualisation</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="vis-tables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Narrative Data Visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deciding-the-story">Deciding the story</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-plot-should-i-use">What plot should I use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-attention-to-enhance-narrative-visualisation">Drawing Attention to Enhance Narrative Visualisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-studies-in-narrative-visualisation">Case Studies in Narrative Visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-financial-times">The Financial Times</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-labelling-of-lines">Direct Labelling of Lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-line-ends">Labelling Line Ends</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-on-lines">Labelling On Lines</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-economist">The Economist</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arthur Turrell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This book is available under an MIT license.
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

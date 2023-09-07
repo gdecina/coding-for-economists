@@ -1,123 +1,163 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Powerful Data Visualisation with Matplotlib &#8212; Coding for Economists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9FZQCPFXZJ');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vis-matplotlib';</script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/vis-matplotlib.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Common Plots" href="vis-common-plots.html" />
     <link rel="prev" title="Easy Data Visualisation for Tidy Data with Lets-Plot" href="vis-letsplot.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/smith_lovelace.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Coding for Economists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/smith_lovelace.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/smith_lovelace.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -126,1067 +166,409 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-preliminaries.html">
-   Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-basics.html">
-   Coding Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   Workflow Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Writing Code
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-preliminaries.html">Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-basics.html">Coding Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">Workflow Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-where.html">Writing Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-analysis-quickstart.html">
-   Data Analysis Quickstart
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-intro.html">
-   Working with Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transformation.html">
-   Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-read-and-write.html">
-   Reading and Writing Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-numbers.html">
-   Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-categorical.html">
-   Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-boolean.html">
-   Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-joining-data.html">
-   Joins
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis-quickstart.html">Data Analysis Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-intro.html">Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transformation.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-read-and-write.html">Reading and Writing Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-spreadsheets.html">Spreadsheets</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-best-practice.html">
-   Code in Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-best-practice.html">Code in Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advanced.html">Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advcd-best-practice.html">Shortcuts to Better Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data Visualisation</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-intro.html">
-   Intro to Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-letsplot.html">
-   Easy Data Visualisation for Tidy Data with
-   <strong>
-    Lets-Plot
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Powerful Data Visualisation with
-   <strong>
-    Matplotlib
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-common-plots.html">
-   Common Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-narrative.html">
-   Narrative Data Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-intro.html">Intro to Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-letsplot.html">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Powerful Data Visualisation with <strong>Matplotlib</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-common-plots.html">Common Plots</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="auto-research-outputs.html">Automating Research Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-markdown.html">Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-quarto.html">Combining Code and Text in Quarto Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-version-control.html">Version Control</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Econometrics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-spreadsheets.html">
-   Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-databases.html">
-   Databases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-probability-random.html">Probability and Random Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-causal-inference.html">Causal Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayesian.html">Bayesian Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayes-bambi.html">Bayesian Inference Made Easier</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Essential Tricks for Better Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-further-advanced.html">
-   Yet More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-boolean.html">Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-joining-data.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-missing-values.html">Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-version-control.html">
-   Version Control
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-environments.html">
-   Virtual Code Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-further-advanced.html">Advanced Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Craft
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-search.html">
-   Putting the Search in Research
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-writing-papers.html">
-   Writing Papers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-research-blogs.html">
-   Research Blog Posts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-technical-reports.html">
-   Writing Technical Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-extended-abstracts.html">
-   Extended Abstracts
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-command-line.html">The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-environments.html">Virtual Code Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-rap.html">Reproducible Analysis</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Time
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="time-intro.html">
-   Introduction to Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-series.html">
-   Time Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-fcasts-env.html">
-   Forecasting Exercises
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="time-intro.html">Introduction to Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series.html">Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-fcasts-env.html">Forecasting Exercises</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Text Analysis
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Text Analysis</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="text-intro.html">Introduction to Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-regex.html">Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-nlp.html">Natural Language Processing</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geospatial</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   Geo-Spatial Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="geo-intro.html">Intro to Geo-Spatial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo-vis.html">Geo-Spatial Visualisation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-plotnine.html">
-   Data Visualisation using the Grammar of Graphics with
-   <strong>
-    Plotnine
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-dashboards.html">
-   Dashboards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-narrative.html">Narrative Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-dashboards.html">Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-animation.html">Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-plotnine.html">Data Visualisation using the Grammar of Graphics with <strong>Plotnine</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-seaborn.html">Data Visualisation with <strong>Seaborn</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Mathematics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-abstract.html">
-   Abstract Mathematics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-numerical.html">
-   Numerical Mathematics
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="maths-abstract.html">Abstract Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths-numerical.html">Numerical Mathematics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Even More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Craft</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
-   Data Visualisation with
-   <strong>
-    Seaborn
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="craft-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-search.html">Putting the Search in Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-writing-papers.html">Writing Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-research-blogs.html">Research Blog Posts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-referee.html">Writing Referee Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-technical-reports.html">Writing Technical Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-extended-abstracts.html">Extended Abstracts</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coming from ...
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coming from ...</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-stata.html">
-   Coming from Stata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-matlab.html">
-   Coming from Matlab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-r.html">
-   Coming from R
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-excel.html">
-   Coming from Excel
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-stata.html">Coming from Stata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-matlab.html">Coming from Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-r.html">Coming from R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-excel.html">Coming from Excel</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  End Matter
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgements.html">
-   Acknowledgements and Contributing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/vis-matplotlib.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/vis-matplotlib.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fvis-matplotlib.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/vis-matplotlib.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fvis-matplotlib.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/vis-matplotlib.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-matplotlib">
-   Understanding Matplotlib
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-matplotlib-api">
-     The
-     <strong>
-      matplotlib
-     </strong>
-     API
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pandas-and-matplotlib">
-       <strong>
-        pandas
-       </strong>
-       and
-       <strong>
-        matplotlib
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#summary">
-       Summary
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#anatomy-of-a-matplotlib-graph">
-     Anatomy of a
-     <strong>
-      matplotlib
-     </strong>
-     graph
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#customising-charts">
-   Customising Charts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limits-and-labels">
-     Limits and Labels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#customising-axes">
-     Customising Axes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ticks-locators-and-formatters">
-       Ticks Locators and Formatters
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scales">
-       Scales
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-loops-to-achieve-customisation-effects">
-     Using Loops to Achieve Customisation Effects
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-text-annotations">
-     Adding Text Annotations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#special-lines">
-     Special Lines
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#styling-artists">
-     Styling Artists
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-charts-on-one-figure">
-   Multiple Charts on one Figure
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mutiples-features-on-one-set-of-axes">
-     Mutiples features on one set of axes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#facets">
-     Facets
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#subplots">
-       Subplots
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#gridspec">
-       Gridspec
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#using-subplot-mosaic-to-specify-a-layout">
-       Using Subplot Mosaic to Specify a Layout
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-advanced-example-zoomed-plots">
-       An Advanced Example: Zoomed Plots
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-times-and-dates">
-   Working with Times and Dates
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-topics">
-   Advanced Topics
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#styles">
-     Styles
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#consistent-styling-across-axes-and-subplots-using-dictionaries">
-       Consistent Styling Across Axes and Subplots using Dictionaries
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#temporarily-change-the-global-style">
-       Temporarily Change the Global Style
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setting-the-style-for-an-entire-script-or-notebook">
-       Setting the Style for an Entire Script or Notebook
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review">
-   Review
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Powerful Data Visualisation with Matplotlib</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-matplotlib">
-   Understanding Matplotlib
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-matplotlib-api">
-     The
-     <strong>
-      matplotlib
-     </strong>
-     API
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pandas-and-matplotlib">
-       <strong>
-        pandas
-       </strong>
-       and
-       <strong>
-        matplotlib
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#summary">
-       Summary
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#anatomy-of-a-matplotlib-graph">
-     Anatomy of a
-     <strong>
-      matplotlib
-     </strong>
-     graph
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#customising-charts">
-   Customising Charts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limits-and-labels">
-     Limits and Labels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#customising-axes">
-     Customising Axes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ticks-locators-and-formatters">
-       Ticks Locators and Formatters
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scales">
-       Scales
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-loops-to-achieve-customisation-effects">
-     Using Loops to Achieve Customisation Effects
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-text-annotations">
-     Adding Text Annotations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#special-lines">
-     Special Lines
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#styling-artists">
-     Styling Artists
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-charts-on-one-figure">
-   Multiple Charts on one Figure
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mutiples-features-on-one-set-of-axes">
-     Mutiples features on one set of axes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#facets">
-     Facets
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#subplots">
-       Subplots
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#gridspec">
-       Gridspec
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#using-subplot-mosaic-to-specify-a-layout">
-       Using Subplot Mosaic to Specify a Layout
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-advanced-example-zoomed-plots">
-       An Advanced Example: Zoomed Plots
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-times-and-dates">
-   Working with Times and Dates
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-topics">
-   Advanced Topics
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#styles">
-     Styles
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#consistent-styling-across-axes-and-subplots-using-dictionaries">
-       Consistent Styling Across Axes and Subplots using Dictionaries
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#temporarily-change-the-global-style">
-       Temporarily Change the Global Style
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setting-the-style-for-an-entire-script-or-notebook">
-       Setting the Style for an Entire Script or Notebook
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review">
-   Review
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Powerful Data Visualisation with Matplotlib</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-matplotlib">Understanding Matplotlib</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-matplotlib-api">The <strong>matplotlib</strong> API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-and-matplotlib"><strong>pandas</strong> and <strong>matplotlib</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-matplotlib-graph">Anatomy of a <strong>matplotlib</strong> graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-charts">Customising Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limits-and-labels">Limits and Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-axes">Customising Axes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ticks-locators-and-formatters">Ticks Locators and Formatters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scales">Scales</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-to-achieve-customisation-effects">Using Loops to Achieve Customisation Effects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-text-annotations">Adding Text Annotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-lines">Special Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-artists">Styling Artists</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-charts-on-one-figure">Multiple Charts on one Figure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutiples-features-on-one-set-of-axes">Mutiples features on one set of axes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#facets">Facets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subplots">Subplots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gridspec">Gridspec</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subplot-mosaic-to-specify-a-layout">Using Subplot Mosaic to Specify a Layout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-advanced-example-zoomed-plots">An Advanced Example: Zoomed Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-times-and-dates">Working with Times and Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced Topics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styles">Styles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-styling-across-axes-and-subplots-using-dictionaries">Consistent Styling Across Axes and Subplots using Dictionaries</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#temporarily-change-the-global-style">Temporarily Change the Global Style</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-style-for-an-entire-script-or-notebook">Setting the Style for an Entire Script or Notebook</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="powerful-data-visualisation-with-matplotlib">
-<span id="vis-matplotlib"></span><h1>Powerful Data Visualisation with <strong>Matplotlib</strong><a class="headerlink" href="#powerful-data-visualisation-with-matplotlib" title="Permalink to this headline">#</a></h1>
+<span id="vis-matplotlib"></span><h1>Powerful Data Visualisation with <strong>Matplotlib</strong><a class="headerlink" href="#powerful-data-visualisation-with-matplotlib" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Here you’ll see how to make just about any plot you can possibly imagine using the ferociously powerful <em>imperative</em> graphing package, <strong>matplotlib</strong>. Here, it will be about explaining the basics. If you read on to the chapter on <a class="reference internal" href="vis-narrative.html#vis-narrative"><span class="std std-ref">Narrative Data Visualisation</span></a>, you’ll see just how flexible it is and how it can produce commercial-quality graphics. Additionally, <strong>matplotlib</strong> is the foundation stone of quite a few other data visualisation libraries, such as <strong>plotlnine</strong> and <strong>seaborn</strong>, which shows how much it can do. It was famously used to create the first ever image of a black hole <span id="id1">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11" title="Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. The Astrophysical Journal Letters, 875(1):L4, 2019.">2019</a>]</span>.</p>
 <p>It’s worth saying that <strong>matplotlib</strong> has a very different philosophy than <strong>seaborn</strong> and <strong>lets-plot</strong> though. Apart from being <em>imperative</em> rather than <em>declarative</em>, it also prefers unstacked data to tidy data: so, to create plots quickly, instead of every line you want to plot being stored in a single column called “country” as it would be using tidy data, it prefers <em>each</em> column to have a different country in.</p>
 <p>For a more in-depth introduction to <strong>matplotlib</strong>, head over to <a class="reference external" href="https://github.com/rougier/matplotlib-tutorial">this tutorial</a>. This chapter is indebted to that tutorial, to the excellent <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html"><strong>matplotlib</strong> documentation</a>, and to the book <em>Scientific Visualization in Matplotlib</em> <span id="id2">Rougier [<a class="reference internal" href="zreferences.html#id38" title="Nicolas Rougier. Scientific Visualization: Python + Matplotlib. HAL Open Science, 2021.">2021</a>]</span>.</p>
@@ -1208,10 +590,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="understanding-matplotlib">
-<h2>Understanding Matplotlib<a class="headerlink" href="#understanding-matplotlib" title="Permalink to this headline">#</a></h2>
+<h2>Understanding Matplotlib<a class="headerlink" href="#understanding-matplotlib" title="Permalink to this heading">#</a></h2>
 <p>You’ll see we imported <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code> above; this is the main part of <strong>matplotlib</strong> that we’ll use in practice.</p>
 <section id="the-matplotlib-api">
-<h3>The <strong>matplotlib</strong> API<a class="headerlink" href="#the-matplotlib-api" title="Permalink to this headline">#</a></h3>
+<h3>The <strong>matplotlib</strong> API<a class="headerlink" href="#the-matplotlib-api" title="Permalink to this heading">#</a></h3>
 <p><strong>matplotlib</strong> <span id="id3">Hunter [<a class="reference internal" href="zreferences.html#id37" title="John D Hunter. Matplotlib: a 2d graphics environment. Computing in science &amp; engineering, 9(03):90–95, 2007.">2007</a>]</span> has its origin in an attempt to replicate the plotting functionality of the paid programming language Matlab but has since outgrown these roots. Because <strong>matplotlib</strong> has been around a long time and there are different ways to use it, much of the material online about how to use <strong>matplotlib</strong> uses the old, Matlab-inspired approach—which is not what this book recommends; instead, we strongly recommend the modern object oriented API. If you see a plot feature that begins <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code> or similar, then it’s using the legacy API rather than the now recommended “object oriented API” which is focused around axes, eg <code class="docutils literal notranslate"><span class="pre">ax.scatter</span></code> and similar. You want to follow examples that use the object-oriented approach.</p>
 <p>Everything you see below will use the ‘object-oriented API’. This means that we create objects, like <em>figures</em> and <em>axes</em>, that have state (they remember what you did to them).</p>
 <p>Also worth saying: the <strong>matplotlib</strong> API (application programming interface) is huge so there’s no way we’ll be able to cover <em>everything</em> it can do!</p>
@@ -1228,10 +610,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa1f0eab310&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x13d32fa90&gt;]
 </pre></div>
 </div>
-<img alt="_images/vis-matplotlib_7_1.svg" src="_images/vis-matplotlib_7_1.svg" /></div>
+<img alt="_images/1134f84bb5465b7ef4c41bbd8aabd4cd409d76e3ee769d11cd1141e5893bbdea.svg" src="_images/1134f84bb5465b7ef4c41bbd8aabd4cd409d76e3ee769d11cd1141e5893bbdea.svg" /></div>
 </div>
 <p>Notice that, unlike <strong>seaborn</strong>, <strong>matplotlib</strong> will happily accept raw data (but will work with dataframes too).</p>
 <div class="tip admonition">
@@ -1249,7 +631,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_9_0.svg" src="_images/vis-matplotlib_9_0.svg" /></div>
+<img alt="_images/3017ebaa10283c72c4d08bd39de5b7ba0284bcdc909afaffc1dd01109dcd305e.svg" src="_images/3017ebaa10283c72c4d08bd39de5b7ba0284bcdc909afaffc1dd01109dcd305e.svg" /></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">s=150</span></code> sets the area of the points (ie the size of each marker), and <code class="docutils literal notranslate"><span class="pre">c='b'</span></code> sets the colour. Many of these features will accept an <em>array</em> of values (like <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code>) instead of a single value and will map them into the plot in the way you’d expect.</p>
 <p>Let’s see that in practice. For the sizes, we’ll linearly increment the points between 300 and 2000 in 6 steps. For the colours, we’ll just type out six distinct values.</p>
@@ -1268,7 +650,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_11_0.svg" src="_images/vis-matplotlib_11_0.svg" /></div>
+<img alt="_images/2e762e007babcb0e9628a5ed980f81569b15b26bd2a940659419fc41d0a03d01.svg" src="_images/2e762e007babcb0e9628a5ed980f81569b15b26bd2a940659419fc41d0a03d01.svg" /></div>
 </div>
 <p>We also asked for partly transparent points via the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> setting (the default is <code class="docutils literal notranslate"><span class="pre">alpha=1</span></code>, which is a solid colour), and a black (<code class="docutils literal notranslate"><span class="pre">color='k'</span></code>) line-edge colour.</p>
 <p>As ever, you can call help on a specific command in order to understand what options (keyword arguments) it accepts. And, in Visual Studio Code, you can just hover over the function or method name.</p>
@@ -1282,7 +664,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method scatter in module matplotlib.axes._axes:
 
-scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, *, edgecolors=None, plotnonfinite=False, data=None, **kwargs) method of matplotlib.axes._subplots.AxesSubplot instance
+scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, *, edgecolors=None, plotnonfinite=False, data=None, **kwargs) method of matplotlib.axes._axes.Axes instance
     A scatter plot of *y* vs. *x* with varying marker size and/or color.
     
     Parameters
@@ -1291,7 +673,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
         The data positions.
     
     s : float or array-like, shape (n, ), optional
-        The marker size in points**2.
+        The marker size in points**2 (typographic points are 1/72 in.).
         Default is ``rcParams[&#39;lines.markersize&#39;] ** 2``.
     
     c : array-like or list of colors or color, optional
@@ -1306,9 +688,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
         Note that *c* should not be a single numeric RGB or RGBA sequence
         because that is indistinguishable from an array of values to be
         colormapped. If you want to specify the same RGB or RGBA value for
-        all points, use a 2D array with a single row.  Otherwise, value-
-        matching will have precedence in case of a size matching with *x*
-        and *y*.
+        all points, use a 2D array with a single row.  Otherwise,
+        value-matching will have precedence in case of a size matching with
+        *x* and *y*.
     
         If you wish to specify a single color for all points
         prefer the *color* keyword argument.
@@ -1326,20 +708,35 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
         styles.
     
     cmap : str or `~matplotlib.colors.Colormap`, default: :rc:`image.cmap`
-        A `.Colormap` instance or registered colormap name. *cmap* is only
-        used if *c* is an array of floats.
+        The Colormap instance or registered colormap name used to map scalar data
+        to colors.
     
-    norm : `~matplotlib.colors.Normalize`, default: None
-        If *c* is an array of floats, *norm* is used to scale the color
-        data, *c*, in the range 0 to 1, in order to map into the colormap
-        *cmap*.
-        If *None*, use the default `.colors.Normalize`.
+        This parameter is ignored if *c* is RGB(A).
     
-    vmin, vmax : float, default: None
-        *vmin* and *vmax* are used in conjunction with the default norm to
-        map the color array *c* to the colormap *cmap*. If None, the
-        respective min and max of the color array is used.
-        It is an error to use *vmin*/*vmax* when *norm* is given.
+    norm : str or `~matplotlib.colors.Normalize`, optional
+        The normalization method used to scale scalar data to the [0, 1] range
+        before mapping to colors using *cmap*. By default, a linear scaling is
+        used, mapping the lowest value to 0 and the highest to 1.
+    
+        If given, this can be one of the following:
+    
+        - An instance of `.Normalize` or one of its subclasses
+          (see :doc:`/tutorials/colors/colormapnorms`).
+        - A scale name, i.e. one of &quot;linear&quot;, &quot;log&quot;, &quot;symlog&quot;, &quot;logit&quot;, etc.  For a
+          list of available scales, call `matplotlib.scale.get_scale_names()`.
+          In that case, a suitable `.Normalize` subclass is dynamically generated
+          and instantiated.
+    
+        This parameter is ignored if *c* is RGB(A).
+    
+    vmin, vmax : float, optional
+        When using scalar data and no explicit *norm*, *vmin* and *vmax* define
+        the data range that the colormap covers. By default, the colormap covers
+        the complete value range of the supplied data. It is an error to use
+        *vmin*/*vmax* when a *norm* instance is given (but using a `str` *norm*
+        name together with *vmin*/*vmax* is acceptable).
+    
+        This parameter is ignored if *c* is RGB(A).
     
     alpha : float, default: None
         The alpha blending value, between 0 (transparent) and 1 (opaque).
@@ -1400,7 +797,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <section id="pandas-and-matplotlib">
-<h4><strong>pandas</strong> and <strong>matplotlib</strong><a class="headerlink" href="#pandas-and-matplotlib" title="Permalink to this headline">#</a></h4>
+<h4><strong>pandas</strong> and <strong>matplotlib</strong><a class="headerlink" href="#pandas-and-matplotlib" title="Permalink to this heading">#</a></h4>
 <p><strong>matplotlib</strong> will accept any array-like data, but it’s fair to say it <em>much</em> prefers data frames to be in wide data format than tidy format (fortunately <strong>pandas</strong> makes it easy to switch between the two using <code class="docutils literal notranslate"><span class="pre">unstack</span></code> or <code class="docutils literal notranslate"><span class="pre">pivot</span></code>). <strong>pandas</strong> also has built-in plotting methods that make use of <strong>matplotlib</strong>; these can be accessed via <code class="docutils literal notranslate"><span class="pre">DataFrame.plot.*</span></code>, for example <code class="docutils literal notranslate"><span class="pre">df.plot()</span></code>.</p>
 <p>Let’s see an example of this. First we generate some data:</p>
 <div class="cell docutils container">
@@ -1489,7 +886,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_17_0.svg" src="_images/vis-matplotlib_17_0.svg" /></div>
+<img alt="_images/2e961b1138b0ca0f85bc49d59a3b3b10cd4dfb1d554ac4d5651002909576fef4.svg" src="_images/2e961b1138b0ca0f85bc49d59a3b3b10cd4dfb1d554ac4d5651002909576fef4.svg" /></div>
 </div>
 <p>This works pretty much as expected. But what if we had tidy data?</p>
 <div class="cell docutils container">
@@ -1566,7 +963,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_21_0.svg" src="_images/vis-matplotlib_21_0.svg" /></div>
+<img alt="_images/d4886f8b64a66552f1dad53fb9f29800a13d456d2fa649e956452849405a20c9.svg" src="_images/d4886f8b64a66552f1dad53fb9f29800a13d456d2fa649e956452849405a20c9.svg" /></div>
 </div>
 <p>Uh oh! This isn’t what we wanted at all! It’s <em>combined</em> all of the series. If you have this issue with tidy data, you can switch to wide format like this:</p>
 <div class="cell docutils container">
@@ -1664,9 +1061,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </section>
 <section id="summary">
-<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h4>
+<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h4>
 <p>There are a huge number of options for what to put on axes; the table below gives a guide to the most essential ones for 2D plots.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>What it does</p></th>
@@ -1781,7 +1178,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </tbody>
 </table>
 <p>Now, it might not seem like it, but you already have the makings of a wide range of <strong>matplotlib</strong> plots. You just need to follow this recipe:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">plt.subplots()</span></code></p></li>
 <li><p>Choose what you want to put on your axis, for example <code class="docutils literal notranslate"><span class="pre">axes[0].scatter</span></code> or <code class="docutils literal notranslate"><span class="pre">axes[0].plot</span></code></p></li>
 <li><p>Put data into the method you chose in 2 in the required format (and remember you can check the documentation to get the right format; either using <code class="docutils literal notranslate"><span class="pre">help</span></code>, hovering over the method name in Visual Studio Code, or heading to the <strong>matplotlib</strong> documentation, where there are often also examples to look at—here are the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hexbin.html#examples-using-matplotlib-axes-axes-hexbin">examples for hex bins</a>).</p></li>
@@ -1789,7 +1186,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </section>
 </section>
 <section id="anatomy-of-a-matplotlib-graph">
-<h3>Anatomy of a <strong>matplotlib</strong> graph<a class="headerlink" href="#anatomy-of-a-matplotlib-graph" title="Permalink to this headline">#</a></h3>
+<h3>Anatomy of a <strong>matplotlib</strong> graph<a class="headerlink" href="#anatomy-of-a-matplotlib-graph" title="Permalink to this heading">#</a></h3>
 <p>So, you’ve made a nice plot and now you want to tweak it. Well, <strong>matplotlib</strong> certainly has a LOT of choice when it comes to tweaking! Rather than go through all of the many, many options for customisation, the figure below (from the documentation) gives an overview of the options:</p>
 <p><img alt="Anatomy of a matplotlib figure" src="https://matplotlib.org/_images/anatomy.png" /></p>
 <p>Let’s run through a few of the most important plot elements:</p>
@@ -1805,10 +1202,10 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </section>
 </section>
 <section id="customising-charts">
-<h2>Customising Charts<a class="headerlink" href="#customising-charts" title="Permalink to this headline">#</a></h2>
+<h2>Customising Charts<a class="headerlink" href="#customising-charts" title="Permalink to this heading">#</a></h2>
 <p>While the <strong>matplotlib</strong> API is too extensive for us to cover every detail, it’s important to know about some standard customisations that you might need to get going.</p>
 <section id="limits-and-labels">
-<h3>Limits and Labels<a class="headerlink" href="#limits-and-labels" title="Permalink to this headline">#</a></h3>
+<h3>Limits and Labels<a class="headerlink" href="#limits-and-labels" title="Permalink to this heading">#</a></h3>
 <p>We’ve only seen aspects of the plot that are customisable through the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> keyword so far; let’s now see an example that’s a bit more real (and useful!) in which we’ll want to add labels, a title, and more. Note that <strong>matplotlib</strong> supports LaTeX equations in text.</p>
 <p>We’ll plot some data from the US Midwest demographics dataset.</p>
 <div class="cell docutils container">
@@ -1816,7 +1213,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
     <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/ggplot2/midwest.csv&quot;</span><span class="p">,</span>
     <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;PID&quot;</span><span class="p">,</span>
-<span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Unnamed: 0&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1840,9 +1237,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>rownames</th>
       <th>county</th>
       <th>state</th>
-      <th>area</th>
       <th>...</th>
       <th>percelderlypoverty</th>
       <th>inmetro</th>
@@ -1862,9 +1259,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
   <tbody>
     <tr>
       <th>561</th>
+      <td>1</td>
       <td>ADAMS</td>
       <td>IL</td>
-      <td>0.052</td>
       <td>...</td>
       <td>12.443812</td>
       <td>0</td>
@@ -1872,9 +1269,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
     </tr>
     <tr>
       <th>562</th>
+      <td>2</td>
       <td>ALEXANDER</td>
       <td>IL</td>
-      <td>0.014</td>
       <td>...</td>
       <td>25.228976</td>
       <td>0</td>
@@ -1882,9 +1279,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
     </tr>
     <tr>
       <th>563</th>
+      <td>3</td>
       <td>BOND</td>
       <td>IL</td>
-      <td>0.022</td>
       <td>...</td>
       <td>12.697410</td>
       <td>0</td>
@@ -1892,9 +1289,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
     </tr>
     <tr>
       <th>564</th>
+      <td>4</td>
       <td>BOONE</td>
       <td>IL</td>
-      <td>0.017</td>
       <td>...</td>
       <td>6.217047</td>
       <td>1</td>
@@ -1902,9 +1299,9 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
     </tr>
     <tr>
       <th>565</th>
+      <td>5</td>
       <td>BROWN</td>
       <td>IL</td>
-      <td>0.018</td>
       <td>...</td>
       <td>19.200000</td>
       <td>0</td>
@@ -1912,7 +1309,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
     </tr>
   </tbody>
 </table>
-<p>5 rows × 27 columns</p>
+<p>5 rows × 28 columns</p>
 </div></div></div>
 </div>
 <p>Now, as well as a scatter, let’s add some context to the chart:</p>
@@ -1933,7 +1330,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_30_0.svg" src="_images/vis-matplotlib_30_0.svg" /></div>
+<img alt="_images/0d0d756fb2f621c3dc142bdf3939da17c61e7fd27f33fa69d8fa81df4f7cdcf9.svg" src="_images/0d0d756fb2f621c3dc142bdf3939da17c61e7fd27f33fa69d8fa81df4f7cdcf9.svg" /></div>
 </div>
 <p>We’re not quite done with titles. Often it’s useful to have a y-axis title that is horizontal, and so easier to read. And, additionally, it’s good practice to have a title that tells the viewer what they should take away from the graph. To achieve both of these together, you can i) use <code class="docutils literal notranslate"><span class="pre">plt.suptitle</span></code> for a figure-level title whose position can be fine-tuned using <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> keyword arguments; and ii) use <code class="docutils literal notranslate"><span class="pre">ax.set_title</span></code> to provide the y-axis label. The chart below demonstrates this.</p>
 <div class="cell docutils container">
@@ -1949,11 +1346,11 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_32_0.svg" src="_images/vis-matplotlib_32_0.svg" /></div>
+<img alt="_images/d8e72d240ce5b732e210c05930224270e9a4f8f07b6b0aae25e39e85ef683dbe.svg" src="_images/d8e72d240ce5b732e210c05930224270e9a4f8f07b6b0aae25e39e85ef683dbe.svg" /></div>
 </div>
 </section>
 <section id="customising-axes">
-<h3>Customising Axes<a class="headerlink" href="#customising-axes" title="Permalink to this headline">#</a></h3>
+<h3>Customising Axes<a class="headerlink" href="#customising-axes" title="Permalink to this heading">#</a></h3>
 <p>Each Axes has two (or three) Axis objects representing the x- and y-axis. These control the scale of the Axis, the tick locators and the tick formatters. Additional Axes can be attached to display further Axis objects.</p>
 <p>First, we’re going to make some random data that will help explain some of the concepts in the rest of the chapter.</p>
 <div class="cell docutils container">
@@ -1965,7 +1362,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <section id="ticks-locators-and-formatters">
-<h4>Ticks Locators and Formatters<a class="headerlink" href="#ticks-locators-and-formatters" title="Permalink to this headline">#</a></h4>
+<h4>Ticks Locators and Formatters<a class="headerlink" href="#ticks-locators-and-formatters" title="Permalink to this heading">#</a></h4>
 <p>Each Axis has a tick <em>locator</em> and <em>formatter</em> that choose where along the Axis objects to put tick marks.  A simple interface to this is <code class="docutils literal notranslate"><span class="pre">Axes.set_xticks</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1981,7 +1378,7 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_36_0.svg" src="_images/vis-matplotlib_36_0.svg" /></div>
+<img alt="_images/fa04985ee80e8e60caaff86e4cfa140fc73cdd55a53e0adcc957eefe2290ec5a.svg" src="_images/fa04985ee80e8e60caaff86e4cfa140fc73cdd55a53e0adcc957eefe2290ec5a.svg" /></div>
 </div>
 <p>See the <strong>matplotlib</strong> documentation on <a class="reference external" href="https://matplotlib.org/stable/gallery/ticks/tick-locators.html">Tick locators</a> and <a class="reference external" href="https://matplotlib.org/stable/gallery/ticks/tick-formatters.html">Tick formatters</a> for other formatters and locators and information for writing your own.</p>
 <p>Returning to our Midwest examples, we had the makings of a basic chart, with axes labels and even a title.</p>
@@ -2012,12 +1409,12 @@ scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_39_0.svg" src="_images/vis-matplotlib_39_0.svg" /></div>
+<img alt="_images/f0ecfe70ca7a4a6c6225e671f6febef676fa5481c640869429f62d7ca7dfc1a9.svg" src="_images/f0ecfe70ca7a4a6c6225e671f6febef676fa5481c640869429f62d7ca7dfc1a9.svg" /></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">AutoMinorLocator(4)</span></code> inserts 4 minor tick marks between each major tick mark. The major formatter is <code class="docutils literal notranslate"><span class="pre">'{x:.2f}%'</span></code>, which says print 2 decimal places followed by a % sign.</p>
 </section>
 <section id="scales">
-<h4>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">#</a></h4>
+<h4>Scales<a class="headerlink" href="#scales" title="Permalink to this heading">#</a></h4>
 <p>In addition to the linear scale, <strong>matplotlib</strong> supplies non-linear scales, such as a log-scale.  Since log-scales are used so much there are also direct methods like <code class="docutils literal notranslate"><span class="pre">Axes.loglog</span></code>, <code class="docutils literal notranslate"><span class="pre">Axes.semilogx</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">Axes.semilogy</span></code>. There are a number of scales (see the <strong>matplotlib</strong> <a class="reference external" href="https://matplotlib.org/stable/gallery/scales/scales.html">scales</a> docs for other examples).  Here we set the scale
 manually:</p>
@@ -2034,12 +1431,12 @@ manually:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_42_0.svg" src="_images/vis-matplotlib_42_0.svg" /></div>
+<img alt="_images/ec0c5becc4182c61889fb09e3f524b8a20499da37f030c0f7a4378968f907095.svg" src="_images/ec0c5becc4182c61889fb09e3f524b8a20499da37f030c0f7a4378968f907095.svg" /></div>
 </div>
 </section>
 </section>
 <section id="using-loops-to-achieve-customisation-effects">
-<h3>Using Loops to Achieve Customisation Effects<a class="headerlink" href="#using-loops-to-achieve-customisation-effects" title="Permalink to this headline">#</a></h3>
+<h3>Using Loops to Achieve Customisation Effects<a class="headerlink" href="#using-loops-to-achieve-customisation-effects" title="Permalink to this heading">#</a></h3>
 <p>Let’s say we want to now differentiate these points with colour according to which state they belong to and add a legend that says which states have which colour. The easiest way to do this is by creating a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 <p>We’re going to loop over <code class="docutils literal notranslate"><span class="pre">state</span></code>. We do it using <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">state</span> <span class="pre">in</span> <span class="pre">df[&quot;state&quot;].unique():</span></code>, which runs over states. The different colours are provided by passing <code class="docutils literal notranslate"><span class="pre">cmap=&quot;colourmap-name&quot;</span></code>. This generates a different colour for each state and cycles to the next colour each time <code class="docutils literal notranslate"><span class="pre">ax.scatter</span></code> is called in the loop.</p>
 <p>Now we have colour capturing a new dimension of the data (state), we also need to have a legend that shows which colour each state corresponds to. By passing <code class="docutils literal notranslate"><span class="pre">lable=state</span></code> within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, we build up state&lt;==&gt;colour equivalences that appears on the chart when we call <code class="docutils literal notranslate"><span class="pre">ax.legend</span></code>.</p>
@@ -2069,12 +1466,16 @@ manually:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_44_0.svg" src="_images/vis-matplotlib_44_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_9755/4007070724.py:4: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
+  ax.scatter(
+</pre></div>
+</div>
+<img alt="_images/32ef87d1fa0e9011cf7729045a6e2a5a82ed61da950b16d618c0621fa3425c40.svg" src="_images/32ef87d1fa0e9011cf7729045a6e2a5a82ed61da950b16d618c0621fa3425c40.svg" /></div>
 </div>
 <p>We used a colourmap to get 5 qualitatively different colours; there are also sequential colormaps for continuous (as opposed to discrete) variables. You can find out more about the colormaps available in base <strong>matplotlib</strong> <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">here</a>.</p>
 </section>
 <section id="adding-text-annotations">
-<h3>Adding Text Annotations<a class="headerlink" href="#adding-text-annotations" title="Permalink to this headline">#</a></h3>
+<h3>Adding Text Annotations<a class="headerlink" href="#adding-text-annotations" title="Permalink to this heading">#</a></h3>
 <p>It’s possible to point out specific values with a text label. Adding extra information like this can be useful in all kinds of circumstances; for example, showing the biggest or smallest, drawing attention to a particular story, or simply flagging a special value.</p>
 <p>Let’s add a couple of text annotations. Let’s say we want to annotate the county with the biggest area, and the county with the highest population. For the biggest area, we’ll just pop the label next to the point. First we need to <em>find</em> the position of the point:</p>
 <div class="cell docutils container">
@@ -2085,14 +1486,14 @@ manually:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>county                MARQUETTE
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rownames                    246
+county                MARQUETTE
 state                        MI
-area                       0.11
                         ...    
 percelderlypoverty    12.523891
 inmetro                       0
 category                    HAR
-Name: 1248, Length: 27, dtype: object
+Name: 1248, Length: 28, dtype: object
 </pre></div>
 </div>
 </div>
@@ -2126,7 +1527,11 @@ Name: 1248, Length: 27, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_49_0.svg" src="_images/vis-matplotlib_49_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_9755/124428108.py:4: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
+  ax.scatter(
+</pre></div>
+</div>
+<img alt="_images/7cc7fc6d5f0de411d3608f4922b56979fb6637c2835848d6ca69ae2f25854e88.svg" src="_images/7cc7fc6d5f0de411d3608f4922b56979fb6637c2835848d6ca69ae2f25854e88.svg" /></div>
 </div>
 <p>What if we want to put text somewhere <em>other</em> than right next to the datapoint? We can do that and have an arrow to connect the label to the data point.</p>
 <div class="cell docutils container">
@@ -2169,16 +1574,20 @@ Name: 1248, Length: 27, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_51_0.svg" src="_images/vis-matplotlib_51_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_9755/2614635337.py:6: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
+  ax.scatter(
+</pre></div>
+</div>
+<img alt="_images/6f7a6ee65a98d0098226a6a40a25005ad5c1d7a6a90b3c1e09efbd003cec1f0c.svg" src="_images/6f7a6ee65a98d0098226a6a40a25005ad5c1d7a6a90b3c1e09efbd003cec1f0c.svg" /></div>
 </div>
 <p>You can get really creative with text annotations—as the image below, taken from <a class="reference external" href="https://github.com/rougier/scientific-visualization-book"><em>Scientific Visualisation: Python + Matplotlib</em></a> <span id="id4">Rougier [<a class="reference internal" href="zreferences.html#id38" title="Nicolas Rougier. Scientific Visualization: Python + Matplotlib. HAL Open Science, 2021.">2021</a>]</span> shows. You can learn more about text annotations <a class="reference external" href="https://matplotlib.org/stable/tutorials/text/annotations.html">here</a>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_53_0.svg" src="_images/vis-matplotlib_53_0.svg" /></div>
+<img alt="_images/bd57fa5633fbabdfe5808fcd94e6b3d869af07b4087eb4cf86def384f593217c.svg" src="_images/bd57fa5633fbabdfe5808fcd94e6b3d869af07b4087eb4cf86def384f593217c.svg" /></div>
 </div>
 </section>
 <section id="special-lines">
-<h3>Special Lines<a class="headerlink" href="#special-lines" title="Permalink to this headline">#</a></h3>
+<h3>Special Lines<a class="headerlink" href="#special-lines" title="Permalink to this heading">#</a></h3>
 <p>Next, we’re going to add some special lines to our chart. This is surprisingly useful in practice, and there are a few commands. If we just want a horizontal or vertical line, our best bet is <code class="docutils literal notranslate"><span class="pre">ax.axhline</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.axvline</span></code> respectively.</p>
 <p>Let’s add a special line to our example to show where the <em>mean area</em> of counties appears. First we need the mean area:</p>
 <div class="cell docutils container">
@@ -2189,7 +1598,7 @@ Name: 1248, Length: 27, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03316933638443934
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03316933638443936
 </pre></div>
 </div>
 </div>
@@ -2241,7 +1650,11 @@ Name: 1248, Length: 27, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_57_0.svg" src="_images/vis-matplotlib_57_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_9755/3286688189.py:4: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
+  ax.scatter(
+</pre></div>
+</div>
+<img alt="_images/800007bf4d58c4fa0876e075fdd035ed6b9175652cad0fe0c0e533192a654aa1.svg" src="_images/800007bf4d58c4fa0876e075fdd035ed6b9175652cad0fe0c0e533192a654aa1.svg" /></div>
 </div>
 <p>Note that the second co-ordinate of the text annotation is in terms of fraction of the figure’s y-axis rather than in the co-ordinates of the data. This is useful because now, whatever else changes in the chart, we know the text will appear half-way up the axis. There are several different co-ordinate systems that <strong>matplotlib</strong> accepts depending on what you’re trying to achieve:</p>
 <ul class="simple">
@@ -2254,7 +1667,7 @@ Name: 1248, Length: 27, dtype: object
 <p>You can find out a bit more about the different co-ordinate systems on the <a class="reference external" href="https://matplotlib.org/stable/tutorials/advanced/transforms_tutorial.html"><strong>matplotlib</strong> documentation</a>.</p>
 </section>
 <section id="styling-artists">
-<h3>Styling Artists<a class="headerlink" href="#styling-artists" title="Permalink to this headline">#</a></h3>
+<h3>Styling Artists<a class="headerlink" href="#styling-artists" title="Permalink to this heading">#</a></h3>
 <p>Most plotting methods have styling options for the Artists, accessible either
 when a plotting method is called, or from a “setter” on the Artist.  In the
 plot below we manually set the <em>color</em>, <em>linewidth</em>, and <em>linestyle</em> of the
@@ -2271,15 +1684,15 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_60_0.svg" src="_images/vis-matplotlib_60_0.svg" /></div>
+<img alt="_images/40329a60d278fbb672e69a20f6d125c11bd5a07a5b973de6a39df80c75607e98.svg" src="_images/40329a60d278fbb672e69a20f6d125c11bd5a07a5b973de6a39df80c75607e98.svg" /></div>
 </div>
 </section>
 </section>
 <section id="multiple-charts-on-one-figure">
-<h2>Multiple Charts on one Figure<a class="headerlink" href="#multiple-charts-on-one-figure" title="Permalink to this headline">#</a></h2>
+<h2>Multiple Charts on one Figure<a class="headerlink" href="#multiple-charts-on-one-figure" title="Permalink to this heading">#</a></h2>
 <p>One basic bit of functionality that you might need is to put more than one type of information on a single overall figure. This could mean having multiple subplots or it could be about putting more information on a single set of axes.</p>
 <section id="mutiples-features-on-one-set-of-axes">
-<h3>Mutiples features on one set of axes<a class="headerlink" href="#mutiples-features-on-one-set-of-axes" title="Permalink to this headline">#</a></h3>
+<h3>Mutiples features on one set of axes<a class="headerlink" href="#mutiples-features-on-one-set-of-axes" title="Permalink to this heading">#</a></h3>
 <p>This is the kind of task where <strong>matplotlib</strong>’s build-what-you-want philosophy starts to win out. To add another feature on an <code class="docutils literal notranslate"><span class="pre">ax</span></code> that you’ve already created is as simple as calling <code class="docutils literal notranslate"><span class="pre">ax.&lt;method&gt;</span></code> again. You can add as many features as you like.</p>
 <p>In the example below, we’ll call <code class="docutils literal notranslate"><span class="pre">ax.hist</span></code> followed by <code class="docutils literal notranslate"><span class="pre">ax.plot</span></code> to get a the theoretical curve for a normal distribution (aka Gaussian) overlaid on a kernel density estimate based on many draws from the relevant distribution using <strong>numpy</strong>.</p>
 <p>While we’re at it, let’s add an equation that describes the theoretical curve.</p>
@@ -2301,11 +1714,11 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_62_0.svg" src="_images/vis-matplotlib_62_0.svg" /></div>
+<img alt="_images/a75c348a13e71b8714ae4d32d795dcf603eddd5d35c7eda84db96de3c4466539.svg" src="_images/a75c348a13e71b8714ae4d32d795dcf603eddd5d35c7eda84db96de3c4466539.svg" /></div>
 </div>
 </section>
 <section id="facets">
-<h3>Facets<a class="headerlink" href="#facets" title="Permalink to this headline">#</a></h3>
+<h3>Facets<a class="headerlink" href="#facets" title="Permalink to this heading">#</a></h3>
 <p>Another way to put more information on a single figure is to have different <em>facets</em>. To illustrate some of the ideas we’re about to see, it’s going to be useful to have some data. Let’s pull down GDP per capita for a selection of countries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2314,23 +1727,23 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 <span class="n">start_year</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="n">end_year</span> <span class="o">=</span> <span class="mi">2022</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
+<span class="n">df_cc_gdp</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
     <span class="n">indicator</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;NY.GDP.PCAP.KD&quot;</span><span class="p">],</span>  <span class="c1"># GDP per capita in 2015 USD</span>
     <span class="n">country</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;GB&quot;</span><span class="p">,</span> <span class="s2">&quot;FR&quot;</span><span class="p">,</span> <span class="s2">&quot;DE&quot;</span><span class="p">,</span> <span class="s2">&quot;IT&quot;</span><span class="p">,</span> <span class="s2">&quot;JP&quot;</span><span class="p">],</span>
     <span class="n">start</span><span class="o">=</span><span class="n">start_year</span><span class="p">,</span>
     <span class="n">end</span><span class="o">=</span><span class="n">end_year</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>  <span class="c1"># drop country as index (for plots)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>  <span class="c1"># ensure year is a number</span>
+<span class="n">df_cc_gdp</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>  <span class="c1"># drop country as index (for plots)</span>
+<span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>  <span class="c1"># ensure year is a number</span>
 <span class="c1"># sort by year, then country (important for next step)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">])</span>
+<span class="n">df_cc_gdp</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">])</span>
 <span class="c1"># index to that country&#39;s value in first entry by country</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+<span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="mi">100</span>
-    <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;NY.GDP.PCAP.KD&quot;</span><span class="p">]</span>
-    <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[</span><span class="s2">&quot;NY.GDP.PCAP.KD&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">*</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;NY.GDP.PCAP.KD&quot;</span><span class="p">]</span>
+    <span class="o">/</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[</span><span class="s2">&quot;NY.GDP.PCAP.KD&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2361,38 +1774,38 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
   </thead>
   <tbody>
     <tr>
-      <th>43</th>
+      <th>45</th>
       <td>France</td>
       <td>2000</td>
-      <td>33597.366243</td>
+      <td>33592.466830</td>
       <td>100.0</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>22</th>
       <td>Germany</td>
       <td>2000</td>
       <td>34490.075769</td>
       <td>100.0</td>
     </tr>
     <tr>
-      <th>87</th>
+      <th>91</th>
       <td>Italy</td>
       <td>2000</td>
       <td>32350.904367</td>
       <td>100.0</td>
     </tr>
     <tr>
-      <th>109</th>
+      <th>114</th>
       <td>Japan</td>
       <td>2000</td>
       <td>31430.631130</td>
       <td>100.0</td>
     </tr>
     <tr>
-      <th>65</th>
+      <th>68</th>
       <td>United Kingdom</td>
       <td>2000</td>
-      <td>39229.268465</td>
+      <td>39187.583082</td>
       <td>100.0</td>
     </tr>
   </tbody>
@@ -2400,7 +1813,7 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div></div></div>
 </div>
 <section id="subplots">
-<h4>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">#</a></h4>
+<h4>Subplots<a class="headerlink" href="#subplots" title="Permalink to this heading">#</a></h4>
 <p>The first way to put data on multiple charts that are part of the same overall figure is to use the built-in subplot function. <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> accepts arguments for <code class="docutils literal notranslate"><span class="pre">nrows=</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols=</span></code> that we can specify the number of figures with. We have six countries so let’s do two rows of three columns.</p>
 <p>We can use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to go over these. Actually, though, the structure of the <code class="docutils literal notranslate"><span class="pre">axes</span></code> object that comes back from <code class="docutils literal notranslate"><span class="pre">plt.subplots</span></code> is a 2x3 matrix (or array), and you can’t loop over that. But we can loop over a “flattened” version of it, which you can create with <code class="docutils literal notranslate"><span class="pre">axes.flatten()</span></code>.</p>
 <p>Once we’re in the loop, we subset the data by country for each loop and add it to the chart using <code class="docutils literal notranslate"><span class="pre">ax.plot</span></code>. Finally, we’ll use the same limits for every subplot to make the chart easier to read.</p>
@@ -2409,8 +1822,8 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
-    <span class="n">country</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">country</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">],</span>
@@ -2423,25 +1836,25 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GDP per capita (indexed to 100 in </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_66_0.svg" src="_images/vis-matplotlib_66_0.svg" /></div>
+<img alt="_images/4a5e549550dc10b84f6784aa6afcc5409b6c465c8ef2b4a75dde48f23395ce53.svg" src="_images/4a5e549550dc10b84f6784aa6afcc5409b6c465c8ef2b4a75dde48f23395ce53.svg" /></div>
 </div>
 <p>A nice extra you can do with this sort of chart is to add the other countries but greyed out so that it’s clear which country is featured but the cross-country comparison is a bit easier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
-    <span class="n">country</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">country</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
     <span class="c1"># grab the other countries</span>
-    <span class="n">other_countries</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">country</span><span class="p">]</span>
+    <span class="n">other_countries</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">country</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">other</span> <span class="ow">in</span> <span class="n">other_countries</span><span class="p">:</span>
-        <span class="n">o_country_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">o_country_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span><span class="p">,</span> <span class="p">:]</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
             <span class="n">o_country_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
             <span class="n">o_country_df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">],</span>
@@ -2449,7 +1862,7 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
             <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span>
             <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
         <span class="p">)</span>
-    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">],</span>
@@ -2462,23 +1875,23 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GDP per capita (indexed to 100 in </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_68_0.svg" src="_images/vis-matplotlib_68_0.svg" /></div>
+<img alt="_images/1b645d67e25f6a11ddb828b974ef7367ba4ba30f966d07d8d756c07a498d81cd.svg" src="_images/1b645d67e25f6a11ddb828b974ef7367ba4ba30f966d07d8d756c07a498d81cd.svg" /></div>
 </div>
 </section>
 <section id="gridspec">
-<h4>Gridspec<a class="headerlink" href="#gridspec" title="Permalink to this headline">#</a></h4>
+<h4>Gridspec<a class="headerlink" href="#gridspec" title="Permalink to this heading">#</a></h4>
 <p>This is a more complicated way of creating multiple subplots, but it is more flexible too: although it still relies on an underlying grid structure, the units of that grid don’t have to all equate to a single subplot. It’s easier to see than to describe!</p>
 <p>Here’s an example that shows what’s possible:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_70_0.svg" src="_images/vis-matplotlib_70_0.svg" /></div>
+<img alt="_images/b2ae9a93578d32e441bcf330033e5daf5b4c810d008f8198f146d51f79b1d838.svg" src="_images/b2ae9a93578d32e441bcf330033e5daf5b4c810d008f8198f146d51f79b1d838.svg" /></div>
 </div>
 <p>Let’s say we wanted to really feature a single country more than the others: we might want to give it a full height spot. We can do this with <code class="docutils literal notranslate"><span class="pre">gridspec</span></code>.</p>
 <p>Taking our example, let’s “focus” on the UK. We’re going to use the layout above, with one corner having the UK in and covering the grid from units 1 to 2 on both dimensions. Meanwhile, positions (0, 0), (0, 1), (1, 0), (2, 0), and (0, 2) will have the other five countries on.</p>
@@ -2516,7 +1929,7 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 <span class="n">uk_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gspec</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:])</span>
 <span class="n">all_axes</span> <span class="o">=</span> <span class="n">non_uk_axes</span> <span class="o">+</span> <span class="p">[</span><span class="n">uk_ax</span><span class="p">]</span>
 <span class="c1"># Plot the other countries</span>
-<span class="n">o_countries_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">o_countries_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="p">:]</span>
 <span class="n">o_country_names</span> <span class="o">=</span> <span class="n">o_countries_df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">non_uk_axes</span><span class="p">):</span>
     <span class="c1"># grab the other country&#39;s data</span>
@@ -2530,7 +1943,7 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
     <span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">o_country</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
 <span class="c1"># Now do UK</span>
-<span class="n">uk_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">uk_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="p">:]</span>
 <span class="n">uk_ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">uk_ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">uk_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
@@ -2552,18 +1965,18 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_74_0.svg" src="_images/vis-matplotlib_74_0.svg" /></div>
+<img alt="_images/9b43b87000b52f9e14705c3c5c7faa7e758882f5425f327963c1d547ab3e1e13.svg" src="_images/9b43b87000b52f9e14705c3c5c7faa7e758882f5425f327963c1d547ab3e1e13.svg" /></div>
 </div>
 <p>You should note, though, that this kind of chart can be quite confusing and—generally—it’s better to have consistent axes and subplot sizes if you’re trying to make comparisons easy.</p>
 </section>
 <section id="using-subplot-mosaic-to-specify-a-layout">
-<h4>Using Subplot Mosaic to Specify a Layout<a class="headerlink" href="#using-subplot-mosaic-to-specify-a-layout" title="Permalink to this headline">#</a></h4>
+<h4>Using Subplot Mosaic to Specify a Layout<a class="headerlink" href="#using-subplot-mosaic-to-specify-a-layout" title="Permalink to this heading">#</a></h4>
 <p>We told you that the <strong>matplotlib</strong> API was ferociously powerful. Well, subplot grids and GridSpec aren’t the only ways to build up multiple subplots: you can build a layout of Axes based on ASCII art or nested lists! The method that does this, <code class="docutils literal notranslate"><span class="pre">subplot_mosaic</span></code>, is a helper function to build complex GridSpec layouts visually.</p>
 <p>Here’s an example of using text to specify a layout:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">axd</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">subplot_mosaic</span><span class="p">(</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    ABD</span>
 <span class="sd">    CCD</span>
 <span class="sd">    CC.</span>
@@ -2576,7 +1989,7 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_77_0.svg" src="_images/vis-matplotlib_77_0.svg" /></div>
+<img alt="_images/17df079e3d5290697e3ea04f19fa57bcc3d40060bb27f70ec7644cc59d1bc0e4.svg" src="_images/17df079e3d5290697e3ea04f19fa57bcc3d40060bb27f70ec7644cc59d1bc0e4.svg" /></div>
 </div>
 <p>Note how we did a little trick with the font settings too: we put them in a keyword argument dictionary called <code class="docutils literal notranslate"><span class="pre">kw</span></code> and passed these into the <code class="docutils literal notranslate"><span class="pre">ax.text</span></code> function with the “splatty-splat” operator, which unpacks them.</p>
 <p>Let’s now see another way to use <code class="docutils literal notranslate"><span class="pre">subplot_mosiac</span></code>, this time using lists to achieve a particular layout:</p>
@@ -2592,11 +2005,11 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_79_0.svg" src="_images/vis-matplotlib_79_0.svg" /></div>
+<img alt="_images/1f1a59c858c2391147032479c4fee3f1facce19afae9d6b1d97676391ecc76a4.svg" src="_images/1f1a59c858c2391147032479c4fee3f1facce19afae9d6b1d97676391ecc76a4.svg" /></div>
 </div>
 </section>
 <section id="an-advanced-example-zoomed-plots">
-<h4>An Advanced Example: Zoomed Plots<a class="headerlink" href="#an-advanced-example-zoomed-plots" title="Permalink to this headline">#</a></h4>
+<h4>An Advanced Example: Zoomed Plots<a class="headerlink" href="#an-advanced-example-zoomed-plots" title="Permalink to this heading">#</a></h4>
 <p>This is taken from the online book <a class="reference external" href="https://github.com/rougier/scientific-visualization-book"><em>Scientific Visualization in Matplotlib</em></a> <span id="id5">Rougier [<a class="reference internal" href="zreferences.html#id38" title="Nicolas Rougier. Scientific Visualization: Python + Matplotlib. HAL Open Science, 2021.">2021</a>]</span>. It’s quite a complex example, but does show what can be achieved.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2675,33 +2088,32 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_81_0.svg" src="_images/vis-matplotlib_81_0.svg" /></div>
+<img alt="_images/2f06839dcec05fe799994f9f4bf36235066d2dc4b351ebd93ef9309de26586af.svg" src="_images/2f06839dcec05fe799994f9f4bf36235066d2dc4b351ebd93ef9309de26586af.svg" /></div>
 </div>
 </section>
 </section>
 </section>
 <section id="working-with-times-and-dates">
-<h2>Working with Times and Dates<a class="headerlink" href="#working-with-times-and-dates" title="Permalink to this headline">#</a></h2>
+<h2>Working with Times and Dates<a class="headerlink" href="#working-with-times-and-dates" title="Permalink to this heading">#</a></h2>
 <p>Python has really amazing support for “datetimes”, and you can find out more about the general capabilities in <a class="reference internal" href="time-intro.html#time-intro"><span class="std std-ref">Introduction to Time</span></a>.</p>
 <p>It’s also <em>very</em> important to know how to make charts with times and dates in economics, so we’re going to give this one some special attention.</p>
 <p>To demonstrate some of the principles, we’re going to work with real data on UK and US GDP growth. First let’s pull in that data and take a look at it</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader.data</span> <span class="k">as</span> <span class="nn">web</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas_datareader</span> <span class="kn">import</span> <span class="n">wb</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="n">ts_start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s2">&quot;1999-01-01&quot;</span><span class="p">)</span>
-
-<span class="n">gdp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
-    <span class="p">[</span>
-        <span class="n">web</span><span class="o">.</span><span class="n">DataReader</span><span class="p">(</span><span class="s2">&quot;ticker=RGDP&quot;</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;econdb&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">ts_start_date</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;UK&quot;</span><span class="p">]</span>
-    <span class="p">],</span>
-    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">gdp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;UK&quot;</span><span class="p">]</span>
-<span class="n">gdp</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Date&quot;</span>
-<span class="n">gdp_growth</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">gdp</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">gdp_growth</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">ts_end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GBR&quot;</span><span class="p">,</span> <span class="s2">&quot;USA&quot;</span><span class="p">]</span>
+<span class="n">gdf_const_2015_usd_code</span> <span class="o">=</span> <span class="s1">&#39;NY.GDP.MKTP.KD&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">indicator</span><span class="o">=</span><span class="n">gdf_const_2015_usd_code</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="n">countries</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">ts_start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">ts_end_date</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span> <span class="c1"># this is very important!</span>
+<span class="c1"># note that we are computing the percent change on a by-country basis!</span>
+<span class="c1"># Otherwise, you&#39;d mix up the UK and US values</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;growth, %&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[</span><span class="n">gdf_const_2015_usd_code</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2724,217 +2136,244 @@ after the fact with <code class="docutils literal notranslate"><span class="pre"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>US</th>
-      <th>UK</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1999-01-01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1999-04-01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1999-07-01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1999-10-01</th>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2000-01-01</th>
-      <td>4.225956</td>
-      <td>4.774235</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>By the way, something very important—and which can be a subtle source of errors—happened here. When we ran <code class="docutils literal notranslate"><span class="pre">.pct_change</span></code> it was on wide format data, rather than tidy data. That’s good because it applies <em>separately</em> to each column. However, if you had just used <code class="docutils literal notranslate"><span class="pre">.pct_change</span></code> on tidy data—where country is encoded by a column—then you’d mix the UK and US values. If you need to do <code class="docutils literal notranslate"><span class="pre">pct_change</span></code> on tidy data, use a groupby and then a transform. Because this is so important, let’s just see it; first, we need a tidy version of the above data:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tidy_gdp</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
-<span class="n">tidy_gdp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>variable</th>
-      <th>value</th>
+      <th>country</th>
+      <th>year</th>
+      <th>NY.GDP.MKTP.KD</th>
+      <th>growth, %</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1999-01-01</td>
-      <td>US</td>
-      <td>12410778.0</td>
+      <td>United Kingdom</td>
+      <td>1999</td>
+      <td>2.217116e+12</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1999-04-01</td>
-      <td>US</td>
-      <td>12514408.0</td>
+      <td>United States</td>
+      <td>1999</td>
+      <td>1.321548e+13</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1999-07-01</td>
-      <td>US</td>
-      <td>12679977.0</td>
+      <td>United States</td>
+      <td>2000</td>
+      <td>1.375430e+13</td>
+      <td>4.077159</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1999-10-01</td>
-      <td>US</td>
-      <td>12888281.0</td>
+      <td>United Kingdom</td>
+      <td>2000</td>
+      <td>2.307855e+12</td>
+      <td>4.092653</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2000-01-01</td>
-      <td>US</td>
-      <td>12935252.0</td>
+      <td>United Kingdom</td>
+      <td>2001</td>
+      <td>2.357646e+12</td>
+      <td>2.157428</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>Now, we perform the pct change:</p>
+<p>Now, you can see that this is annual data, and what’s been returned by the World Bank has given us a “year” field that is of type “object”, basically the lowest common denominator data type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tidy_gdp</span><span class="p">[</span><span class="s2">&quot;pct_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tidy_gdp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;variable&quot;</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span>
-    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">tidy_gdp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>variable</th>
-      <th>value</th>
-      <th>pct_change</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1999-01-01</td>
-      <td>US</td>
-      <td>12410778.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1999-04-01</td>
-      <td>US</td>
-      <td>12514408.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1999-07-01</td>
-      <td>US</td>
-      <td>12679977.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1999-10-01</td>
-      <td>US</td>
-      <td>12888281.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2000-01-01</td>
-      <td>US</td>
-      <td>12935252.0</td>
-      <td>4.225956</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Okay, let’s wind back now to our example on wide-format data.</p>
-<p>By running <code class="docutils literal notranslate"><span class="pre">df.info()</span></code>, we can learn what data types we have.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdp_growth</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-DatetimeIndex: 95 entries, 1999-01-01 to 2022-07-01
-Freq: QS-OCT
-Data columns (total 2 columns):
- #   Column  Non-Null Count  Dtype  
----  ------  --------------  -----  
- 0   US      91 non-null     float64
- 1   UK      91 non-null     float64
-dtypes: float64(2)
-memory usage: 2.2 KB
+RangeIndex: 48 entries, 0 to 47
+Data columns (total 4 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   country         48 non-null     object 
+ 1   year            48 non-null     object 
+ 2   NY.GDP.MKTP.KD  48 non-null     float64
+ 3   growth, %       46 non-null     float64
+dtypes: float64(2), object(2)
+memory usage: 1.6+ KB
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now, note that i) the index is composed of dates, ii) those dates have datatype “DatetimeIndex”, and iii) they even have a frequency! This is listed as Quarterly.</p>
+<p>We’re going to turn it back into a <em>datetime</em>. This is a special type that helps with dates and times. In the below code snippet, the year we get from running <code class="docutils literal notranslate"><span class="pre">pd.to_datetime()</span></code> defaults to the 1st of January. But really, these dates represent the year that has already passed, so we’ll end on a <em>time offset</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;%Y&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">offsets</span><span class="o">.</span><span class="n">BYearEnd</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>NY.GDP.MKTP.KD</th>
+      <th>growth, %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>United Kingdom</td>
+      <td>1999-12-31</td>
+      <td>2.217116e+12</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>United States</td>
+      <td>1999-12-31</td>
+      <td>1.321548e+13</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>United States</td>
+      <td>2000-12-29</td>
+      <td>1.375430e+13</td>
+      <td>4.077159</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>United Kingdom</td>
+      <td>2000-12-29</td>
+      <td>2.307855e+12</td>
+      <td>4.092653</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>United Kingdom</td>
+      <td>2001-12-31</td>
+      <td>2.357646e+12</td>
+      <td>2.157428</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Okay, we’re now going to do a couple of other things that will help <strong>matplotlib</strong>. Unlike, say, <strong>lets-plot</strong>, <strong>matplotlib</strong> expects each line of interest in your data to appear <em>across</em> columns, ie in wide format. So we’re going to transform our data to be wide, and make the datetime column, <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code>, into the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wide</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;growth, %&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+<span class="n">df_wide</span> <span class="o">=</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>country</th>
+      <th>United Kingdom</th>
+      <th>United States</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1999-12-31</th>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2000-12-29</th>
+      <td>4.092653</td>
+      <td>4.077159</td>
+    </tr>
+    <tr>
+      <th>2001-12-31</th>
+      <td>2.157428</td>
+      <td>0.954339</td>
+    </tr>
+    <tr>
+      <th>2002-12-31</th>
+      <td>1.770765</td>
+      <td>1.695943</td>
+    </tr>
+    <tr>
+      <th>2003-12-31</th>
+      <td>3.123053</td>
+      <td>2.796209</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We also set the index to be the year, beause</p>
+<p>By running <code class="docutils literal notranslate"><span class="pre">df_wide.info()</span></code>, we can learn what data types we now have.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wide</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+DatetimeIndex: 24 entries, 1999-12-31 to 2022-12-30
+Data columns (total 2 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   United Kingdom  23 non-null     float64
+ 1   United States   23 non-null     float64
+dtypes: float64(2)
+memory usage: 576.0 bytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, note that i) the index is composed of dates, and ii) those dates have datatype “DatetimeIndex”.</p>
 <p>Alright, let’s just make a plot here without worrying too much about what might happen. We’ll do a line chart showing the growth rates over time of these two large economies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">gdp_growth</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Real GDP growth, %&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;GDP growth, %&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
@@ -2943,7 +2382,7 @@ memory usage: 2.2 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_91_0.svg" src="_images/vis-matplotlib_91_0.svg" /></div>
+<img alt="_images/945450c554f1f799e4b3f7982cd489a0de021d87baafd1ba204a36bb0f9c43d7.svg" src="_images/945450c554f1f799e4b3f7982cd489a0de021d87baafd1ba204a36bb0f9c43d7.svg" /></div>
 </div>
 <p>You’ll notice straight away that because we <em>began</em> with a datetime index, when we called the convenience function <code class="docutils literal notranslate"><span class="pre">df.plot(ax=...)</span></code>, we automatically got an x-axis that understands and renders datetimes. More than that, the scale is sensible: it’s only showing years on the major tick labels, even though we have quarterly data.</p>
 <p>Also note that the data are in wide format, which <strong>matplotlib</strong> prefers.</p>
@@ -2951,8 +2390,8 @@ memory usage: 2.2 KB
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;UK&quot;</span><span class="p">,</span> <span class="s2">&quot;US&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gdp_growth</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">gdp_growth</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_wide</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_wide</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Real GDP growth, %&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
@@ -2963,13 +2402,13 @@ memory usage: 2.2 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_93_0.svg" src="_images/vis-matplotlib_93_0.svg" /></div>
+<img alt="_images/20d28e4533125c240c843cc33c7d830651849af24ce217d024732700c4cdb086.svg" src="_images/20d28e4533125c240c843cc33c7d830651849af24ce217d024732700c4cdb086.svg" /></div>
 </div>
 <p>Now let’s see what happens if we <em>change the axis limits</em>. Because we’re using datetime data type for the x-axis variable, we’ll need to pass a datetime in to the limits too.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">gdp_growth</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Real GDP growth, %&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
@@ -2980,17 +2419,17 @@ memory usage: 2.2 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_95_0.svg" src="_images/vis-matplotlib_95_0.svg" /></div>
+<img alt="_images/07e01a6127e285601390b096b3cfa69f1e23a2f9db1b8819caff0aec7b426c15.svg" src="_images/07e01a6127e285601390b096b3cfa69f1e23a2f9db1b8819caff0aec7b426c15.svg" /></div>
 </div>
 <p>As you can see, the plot dynamically responded to the shorter time period by putting more details in, here of quarters (as the minor ticks). You can specify exactly what you want with the tick label formatters that cater to datetimes, but the defaults are pretty well-behaved.</p>
 </section>
 <section id="advanced-topics">
-<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">#</a></h2>
+<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this heading">#</a></h2>
 <section id="styles">
-<h3>Styles<a class="headerlink" href="#styles" title="Permalink to this headline">#</a></h3>
+<h3>Styles<a class="headerlink" href="#styles" title="Permalink to this heading">#</a></h3>
 <p>It can feel a bit tedious to apply different styles to every single ax, subplot, and even figure! Fortunately, there are ways to make applying styles more efficient. In this section, we’ll see how to do this concisely.</p>
 <p>There are essentially four ways to apply styles:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>modify each <code class="docutils literal notranslate"><span class="pre">ax</span></code> object one-by-one (works at the axis level)</p></li>
 <li><p>use a dictionary once to pass keyword arguments to all objects of a similar type (works at the axis level)</p></li>
 <li><p>temporarily change the global style (works at the figure level)</p></li>
@@ -2998,7 +2437,7 @@ memory usage: 2.2 KB
 </ol>
 <p>We’ve seen plenty of 1. already, so we won’t do more on that. Let’s home in on 2. first.</p>
 <section id="consistent-styling-across-axes-and-subplots-using-dictionaries">
-<h4>Consistent Styling Across Axes and Subplots using Dictionaries<a class="headerlink" href="#consistent-styling-across-axes-and-subplots-using-dictionaries" title="Permalink to this headline">#</a></h4>
+<h4>Consistent Styling Across Axes and Subplots using Dictionaries<a class="headerlink" href="#consistent-styling-across-axes-and-subplots-using-dictionaries" title="Permalink to this heading">#</a></h4>
 <p>Let’s say we have multiple text annotations that we want to make consistent in <em>most</em> details. We can use the cross-country GDP per capita example from earlier. Essentially, we define a dictionary of all the properties (and here, even a nested dictionary with <em>further</em> keyword arguments), and pass this using the splaty-splat (<code class="docutils literal notranslate"><span class="pre">**</span></code>) operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3019,18 +2458,18 @@ memory usage: 2.2 KB
 <span class="p">)</span>
 
 <span class="c1"># spread out x text annotations for each country</span>
-<span class="n">years_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">end_year</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">years_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">end_year</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1"># get countries in order of lowest to highest end value</span>
 <span class="n">countries</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s2">&quot;country&quot;</span><span class="p">]</span>
+    <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s2">&quot;country&quot;</span><span class="p">]</span>
     <span class="o">.</span><span class="n">values</span>
 <span class="p">)</span>
 
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">countries</span><span class="p">):</span>
-    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
         <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">],</span>
@@ -3053,18 +2492,22 @@ memory usage: 2.2 KB
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">start_year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GDP per capita (indexed to 100 in </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_100_0.svg" src="_images/vis-matplotlib_100_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/aet/mambaforge/envs/codeforecon/lib/python3.10/site-packages/matplotlib/text.py:1477: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  y = float(self.convert_yunits(y))
+</pre></div>
+</div>
+<img alt="_images/ff9bb86894a176bf308b93616d3a9e1589ecc063a4c38039cf86968cdf34a19d.svg" src="_images/ff9bb86894a176bf308b93616d3a9e1589ecc063a4c38039cf86968cdf34a19d.svg" /></div>
 </div>
 </section>
 <section id="temporarily-change-the-global-style">
-<h4>Temporarily Change the Global Style<a class="headerlink" href="#temporarily-change-the-global-style" title="Permalink to this headline">#</a></h4>
+<h4>Temporarily Change the Global Style<a class="headerlink" href="#temporarily-change-the-global-style" title="Permalink to this heading">#</a></h4>
 <p>Python has a powerful notion called <em>contexts</em> that can change the apparent global settings to any code run within them. You can identify them by the <code class="docutils literal notranslate"><span class="pre">with</span></code> command. Now, we’ll show how to use these to completely change the style of a plot.</p>
 <p>The first, simple example is</p>
 <div class="cell docutils container">
@@ -3077,7 +2520,7 @@ memory usage: 2.2 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_102_0.svg" src="_images/vis-matplotlib_102_0.svg" /></div>
+<img alt="_images/e85eeb00c65b2d886ec9198196a2c8df7bbdf5b85228361d39307db9398b36e7.svg" src="_images/e85eeb00c65b2d886ec9198196a2c8df7bbdf5b85228361d39307db9398b36e7.svg" /></div>
 </div>
 <p>Now let’s say, just for this plot, we want to make a change. We can do this by setting the “rc context”. This changes global settings that relate to figures. You can pass keyword arguments to it as dictionary items. In this case, we’ll change the linewidth and the linestyle. The <code class="docutils literal notranslate"><span class="pre">with</span></code> command means any <em>indented</em> code following the <code class="docutils literal notranslate"><span class="pre">with</span></code> gets changed. But, after the indented block is over, everything reverts back to the usual settings.</p>
 <p>You can find a full list of the settings you can pass <a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file">here</a>.</p>
@@ -3093,7 +2536,7 @@ memory usage: 2.2 KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_104_0.svg" src="_images/vis-matplotlib_104_0.svg" /></div>
+<img alt="_images/6b86bb5ddce8f6dfe4cd5cf422161a28733957bfc70a0a3af7cd021b4bc72ccd.svg" src="_images/6b86bb5ddce8f6dfe4cd5cf422161a28733957bfc70a0a3af7cd021b4bc72ccd.svg" /></div>
 </div>
 <p>There are some built-in styles that you can take advantage of for this too. These are called via <code class="docutils literal notranslate"><span class="pre">plt.style.context(&lt;style</span> <span class="pre">name&gt;)</span></code>, and you can find a list <a class="reference external" href="https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html">here</a>.</p>
 <div class="cell docutils container">
@@ -3101,7 +2544,7 @@ memory usage: 2.2 KB
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="s1">&#39;grayscale&#39;</span><span class="p">):</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">country</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">countries</span><span class="p">):</span>
-        <span class="n">country_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">country_df</span> <span class="o">=</span> <span class="n">df_cc_gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">,</span> <span class="p">:]</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
             <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
             <span class="n">country_df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">],</span>
@@ -3121,18 +2564,22 @@ memory usage: 2.2 KB
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">start_year</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_cc_gdp</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">)</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GDP per capita (indexed to 100 in </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vis-matplotlib_106_0.svg" src="_images/vis-matplotlib_106_0.svg" /></div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/aet/mambaforge/envs/codeforecon/lib/python3.10/site-packages/matplotlib/text.py:1477: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  y = float(self.convert_yunits(y))
+</pre></div>
+</div>
+<img alt="_images/bca856a7a5cd6c48d120bfe8411385ccb4069398abeb59eed948ab16ed4162f2.svg" src="_images/bca856a7a5cd6c48d120bfe8411385ccb4069398abeb59eed948ab16ed4162f2.svg" /></div>
 </div>
 </section>
 <section id="setting-the-style-for-an-entire-script-or-notebook">
-<h4>Setting the Style for an Entire Script or Notebook<a class="headerlink" href="#setting-the-style-for-an-entire-script-or-notebook" title="Permalink to this headline">#</a></h4>
+<h4>Setting the Style for an Entire Script or Notebook<a class="headerlink" href="#setting-the-style-for-an-entire-script-or-notebook" title="Permalink to this heading">#</a></h4>
 <p>This book uses a special style file to set its RC params and over-ride the default values found in the <a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file">default rc file</a>. Once loaded, using</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
     <span class="s2">&quot;plot_style.txt&quot;</span>
@@ -3143,7 +2590,7 @@ memory usage: 2.2 KB
 <p>You can see the first few lines of the “plot_style.txt” file used for this book below, or you can browse it yourself <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/main/plot_style.txt">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head -10 plot_style.txt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head<span class="w"> </span>-10<span class="w"> </span>plot_style.txt
 </pre></div>
 </div>
 </div>
@@ -3166,7 +2613,7 @@ axes.titlesize: 19
 </section>
 </section>
 <section id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this heading">#</a></h2>
 <p>That concludes our tour of the basics of <strong>matplotlib</strong>. You should now feel comfortable making basic charts using data and</p>
 <p>You can find much more advanced uses of it over at the <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html"><strong>matplotlib</strong> documentation</a> and in the online book <a class="reference external" href="https://github.com/rougier/scientific-visualization-book"><em>Scientific Visualization in Matplotlib</em></a> <span id="id6">Rougier [<a class="reference internal" href="zreferences.html#id38" title="Nicolas Rougier. Scientific Visualization: Python + Matplotlib. HAL Open Science, 2021.">2021</a>]</span>.</p>
 </section>
@@ -3184,7 +2631,7 @@ axes.titlesize: 19
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -3192,53 +2639,152 @@ axes.titlesize: 19
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="vis-letsplot.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="vis-letsplot.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="vis-common-plots.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="vis-common-plots.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Common Plots</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Arthur Turrell<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      This book is available under an MIT license.
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-matplotlib">Understanding Matplotlib</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-matplotlib-api">The <strong>matplotlib</strong> API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-and-matplotlib"><strong>pandas</strong> and <strong>matplotlib</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-matplotlib-graph">Anatomy of a <strong>matplotlib</strong> graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-charts">Customising Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limits-and-labels">Limits and Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-axes">Customising Axes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ticks-locators-and-formatters">Ticks Locators and Formatters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scales">Scales</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-to-achieve-customisation-effects">Using Loops to Achieve Customisation Effects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-text-annotations">Adding Text Annotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-lines">Special Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-artists">Styling Artists</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-charts-on-one-figure">Multiple Charts on one Figure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutiples-features-on-one-set-of-axes">Mutiples features on one set of axes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#facets">Facets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subplots">Subplots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gridspec">Gridspec</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subplot-mosaic-to-specify-a-layout">Using Subplot Mosaic to Specify a Layout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-advanced-example-zoomed-plots">An Advanced Example: Zoomed Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-times-and-dates">Working with Times and Dates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced Topics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#styles">Styles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-styling-across-axes-and-subplots-using-dictionaries">Consistent Styling Across Axes and Subplots using Dictionaries</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#temporarily-change-the-global-style">Temporarily Change the Global Style</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-style-for-an-entire-script-or-notebook">Setting the Style for an Entire Script or Notebook</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review">Review</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arthur Turrell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This book is available under an MIT license.
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,123 +1,163 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Working with Data &#8212; Coding for Economists</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9FZQCPFXZJ');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data-intro';</script>
     <link rel="canonical" href="https://aeturrell.github.io/coding-for-economists/data-intro.html" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Data Transformation" href="data-transformation.html" />
     <link rel="prev" title="Data Analysis Quickstart" href="data-analysis-quickstart.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9FZQCPFXZJ"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-9FZQCPFXZJ');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/smith_lovelace.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Coding for Economists</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/smith_lovelace.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/smith_lovelace.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -126,1006 +166,413 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-preliminaries.html">
-   Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-basics.html">
-   Coding Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   Workflow Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-where.html">
-   Writing Code
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-preliminaries.html">Preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-basics.html">Coding Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">Workflow Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-where.html">Writing Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-analysis-quickstart.html">
-   Data Analysis Quickstart
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Working with Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transformation.html">
-   Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-read-and-write.html">
-   Reading and Writing Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-numbers.html">
-   Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-categorical.html">
-   Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-boolean.html">
-   Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-joining-data.html">
-   Joins
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis-quickstart.html">Data Analysis Quickstart</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Working with Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transformation.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-read-and-write.html">Reading and Writing Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-spreadsheets.html">Spreadsheets</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-best-practice.html">
-   Code in Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advanced.html">
-   More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-best-practice.html">Code in Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advanced.html">Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-advcd-best-practice.html">Shortcuts to Better Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Econometrics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-probability-random.html">
-   Probability and Random Processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-statistics.html">
-   Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-regression.html">
-   Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-causal-inference.html">
-   Causal Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayesian.html">
-   Bayesian Inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="econmt-bayes-bambi.html">
-   Bayesian Inference Made Easier
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-intro.html">Intro to Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-letsplot.html">Easy Data Visualisation for Tidy Data with <strong>Lets-Plot</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-matplotlib.html">Powerful Data Visualisation with <strong>Matplotlib</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-common-plots.html">Common Plots</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-intro.html">
-   Intro to Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-letsplot.html">
-   Easy Data Visualisation for Tidy Data with
-   <strong>
-    Lets-Plot
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-matplotlib.html">
-   Powerful Data Visualisation with
-   <strong>
-    Matplotlib
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-common-plots.html">
-   Common Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-narrative.html">
-   Narrative Data Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="auto-research-outputs.html">Automating Research Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-markdown.html">Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-quarto.html">Combining Code and Text in Quarto Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-version-control.html">Version Control</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Econometrics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="auto-research-outputs.html">
-   Automating Research Outputs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-quarto.html">
-   Combining Code and Text in Quarto Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-probability-random.html">Probability and Random Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-causal-inference.html">Causal Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayesian.html">Bayesian Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="econmt-bayes-bambi.html">Bayesian Inference Made Easier</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="data-missing-values.html">
-   Missing Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-exploratory-analysis.html">
-   Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-spreadsheets.html">
-   Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-extraction.html">
-   Getting Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-databases.html">
-   Databases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-sharing.html">
-   Sharing Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-advanced.html">
-   Advanced Data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="data-boolean.html">Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-joining-data.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-missing-values.html">Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-exploratory-analysis.html">Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-extraction.html">Getting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-advanced.html">Advanced Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sharing.html">Sharing Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Coding
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="code-advcd-best-practice.html">
-   Essential Tricks for Better Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code-further-advanced.html">
-   Yet More Coding
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="code-further-advanced.html">Advanced Coding</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Workflow
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflow</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-command-line.html">
-   The Command Line
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-version-control.html">
-   Version Control
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-environments.html">
-   Virtual Code Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrkflow-rap.html">
-   Reproducible Analysis
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-command-line.html">The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-environments.html">Virtual Code Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrkflow-rap.html">Reproducible Analysis</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Craft
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Time</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-search.html">
-   Putting the Search in Research
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-writing-papers.html">
-   Writing Papers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-research-blogs.html">
-   Research Blog Posts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-technical-reports.html">
-   Writing Technical Reports
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="craft-extended-abstracts.html">
-   Extended Abstracts
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="time-intro.html">Introduction to Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series.html">Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-fcasts-env.html">Forecasting Exercises</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Time
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Text Analysis</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="time-intro.html">
-   Introduction to Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-series.html">
-   Time Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time-fcasts-env.html">
-   Forecasting Exercises
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="text-intro.html">Introduction to Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-regex.html">Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text-nlp.html">Natural Language Processing</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Text Analysis
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geospatial</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="text-intro.html">
-   Introduction to Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-regex.html">
-   Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="text-nlp.html">
-   Natural Language Processing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="geo-intro.html">Intro to Geo-Spatial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo-vis.html">Geo-Spatial Visualisation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Geospatial
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-intro.html">
-   Intro to Geo-Spatial Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geo-vis.html">
-   Geo-Spatial Visualisation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vis-narrative.html">Narrative Data Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-dashboards.html">Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-animation.html">Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-plotnine.html">Data Visualisation using the Grammar of Graphics with <strong>Plotnine</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-seaborn.html">Data Visualisation with <strong>Seaborn</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-plotnine.html">
-   Data Visualisation using the Grammar of Graphics with
-   <strong>
-    Plotnine
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-dashboards.html">
-   Dashboards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-animation.html">
-   Animation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="maths-abstract.html">Abstract Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maths-numerical.html">Numerical Mathematics</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Mathematics
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Craft</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-abstract.html">
-   Abstract Mathematics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="maths-numerical.html">
-   Numerical Mathematics
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="craft-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-search.html">Putting the Search in Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-writing-papers.html">Writing Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-research-blogs.html">Research Blog Posts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-referee.html">Writing Referee Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-technical-reports.html">Writing Technical Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="craft-extended-abstracts.html">Extended Abstracts</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Even More Data Visualisation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coming from ...</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vis-seaborn.html">
-   Data Visualisation with
-   <strong>
-    Seaborn
-   </strong>
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-stata.html">Coming from Stata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-matlab.html">Coming from Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-r.html">Coming from R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coming-from-excel.html">Coming from Excel</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Coming from ...
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End Matter</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-stata.html">
-   Coming from Stata
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-matlab.html">
-   Coming from Matlab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-r.html">
-   Coming from R
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="coming-from-excel.html">
-   Coming from Excel
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  End Matter
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgements.html">
-   Acknowledgements and Contributing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-intro.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/coding-for-economists/blob/main/data-intro.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-intro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data-intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/aeturrell/coding-for-economists/issues/new?title=Issue%20on%20page%20%2Fdata-intro.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/data-intro.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-tidy-data">
-     Using tidy data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataframes-and-series">
-   Dataframes and Series
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#values-columns-and-the-index">
-     Values, Columns, and the Index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datatypes">
-   Datatypes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">
-   Manipulating Rows in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-rows">
-     Accessing Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-rows-with-query">
-     Filtering rows with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       query
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-arranging-rows">
-     Re-arranging Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises">
-     Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-columns">
-   Manipulating Columns
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-new-columns">
-     Creating New Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-columns">
-     Accessing Columns
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#eval">
-       Eval
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming-columns">
-     Renaming Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-ordering-columns">
-     Re-ordering Columns
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">
-   Review of How to Access Rows, Columns, and Values
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#slicing">
-     Slicing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operations-on-rows-columns-and-dataframes">
-   Operations on Rows, Columns, and DataFrames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-that-can-apply-to-both-rows-and-columns">
-     Operations that can
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       apply
-      </span>
-     </code>
-     to both rows and columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-on-dataframes">
-     Operations on DataFrames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-and-row-exercises">
-     Column and Row Exercises
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Working with Data</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-tidy-data">
-     Using tidy data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataframes-and-series">
-   Dataframes and Series
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#values-columns-and-the-index">
-     Values, Columns, and the Index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datatypes">
-   Datatypes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">
-   Manipulating Rows in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-rows">
-     Accessing Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-rows-with-query">
-     Filtering rows with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       query
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-arranging-rows">
-     Re-arranging Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises">
-     Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-columns">
-   Manipulating Columns
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-new-columns">
-     Creating New Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-columns">
-     Accessing Columns
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#eval">
-       Eval
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming-columns">
-     Renaming Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-ordering-columns">
-     Re-ordering Columns
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">
-   Review of How to Access Rows, Columns, and Values
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#slicing">
-     Slicing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operations-on-rows-columns-and-dataframes">
-   Operations on Rows, Columns, and DataFrames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-that-can-apply-to-both-rows-and-columns">
-     Operations that can
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       apply
-      </span>
-     </code>
-     to both rows and columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-on-dataframes">
-     Operations on DataFrames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-and-row-exercises">
-     Column and Row Exercises
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Working with Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-tidy-data">Using tidy data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes-and-series">Dataframes and Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#values-columns-and-the-index">Values, Columns, and the Index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatypes">Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">Filtering rows with <code class="docutils literal notranslate"><span class="pre">query</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">Creating New Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assign">Assign</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">Accessing Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eval">Eval</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">Re-ordering Columns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-rows-columns-and-dataframes">Operations on Rows, Columns, and DataFrames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-can-apply-to-both-rows-and-columns">Operations that can <code class="docutils literal notranslate"><span class="pre">apply</span></code> to both rows and columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-dataframes">Operations on DataFrames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">Column and Row Exercises</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="working-with-data">
-<span id="id1"></span><h1>Working with Data<a class="headerlink" href="#working-with-data" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1>Working with Data<a class="headerlink" href="#working-with-data" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>The previous chapter was just a quick tour of what can be done with a single tabular dataset (a ‘dataframe’). Dataframes are the most frequently used structure for working with data; they do everything a spreadsheet does and a whole lot more——as you’ll see! In this chapter, we’ll go deeper into working with data and dataframes.</p>
 <p>In this chapter, you’ll get really good overview to the <a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a> package, the core data manipulation library in Python. The name is derived from ‘panel data’ but it’s suited to any tabular data, and can be used to work with more complex data structures too. We <em>won’t</em> cover reading in or writing data here; see the next chapter for that.</p>
 <p>This chapter is hugely indebted to the fantastic <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a> by Jake Vanderplas. Remember, if you get stuck with pandas, there is brilliant <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">documentation</a> and a fantastic set of <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/index.html">introductory tutorials</a> on the <strong>pandas</strong> website. These notes are heavily indebted to those introductory tutorials.</p>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This chapter uses the <strong>pandas</strong>, <strong>seaborn</strong>, and <strong>numpy</strong> packages. If you’re running this code, you may need to install these packages, which you can do using either <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> on your computer’s command line. If you’re running this page in Google Colab, you can install new packages by running <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code> in a new code cell but you will need to restart the Colab notebook for the change to take effect. There’s a brief guide on installing packages in the Chapter on <a class="reference internal" href="code-preliminaries.html#code-preliminaries"><span class="std std-ref">Preliminaries</span></a>.</p>
 </section>
 <section id="using-tidy-data">
-<h3>Using tidy data<a class="headerlink" href="#using-tidy-data" title="Permalink to this headline">#</a></h3>
+<h3>Using tidy data<a class="headerlink" href="#using-tidy-data" title="Permalink to this heading">#</a></h3>
 <p>As an aside, if you’re working with tabular data, it’s good to try and use a so-called ‘tidy data’ format. This is data with one observation per row, and one variable per column, like so:</p>
 <p><img alt="" src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png" /></p>
 <p>Tidy data aren’t going to be appropriate <em>every</em> time and in every case, but they’re a really, really good default for tabular data. Once you use it as your default, it’s easier to think about how to perform subsequent operations. Some plotting libraries, such as <strong>seaborn</strong>, take that your data are in tidy format as a given. And many operations that you can perform on dataframes (the objects that hold tabular data within many programming languages) are easier when you have tidy data. If you’re writing out data to file to share, putting it in tidy format is a really good idea.</p>
@@ -1134,7 +581,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="dataframes-and-series">
-<h2>Dataframes and Series<a class="headerlink" href="#dataframes-and-series" title="Permalink to this headline">#</a></h2>
+<h2>Dataframes and Series<a class="headerlink" href="#dataframes-and-series" title="Permalink to this heading">#</a></h2>
 <p>Let’s start with the absolute basics. The most basic <strong>pandas</strong> object is a dataframe. A DataFrame is a 2-dimensional data structure that can store data of different types (including characters, integers, floating point values, categorical data, even lists) in columns.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/01_table_dataframe.svg" /></p>
 <p>Perhaps the single most important feature of <strong>pandas</strong> dataframes to remember is that the <em>index</em>, the special column on the left hand side that tracks the rows of data, is all important. Keep in mind the question, “what is the index doing in this operation” for every process you apply to a <strong>pandas</strong> dataframe and you won’t go far wrong.</p>
@@ -1288,13 +735,18 @@ memory usage: 18.9+ KB
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/01_table_series.svg" /></p>
 <p>Let’s see a couple of ways of creating some series from raw data:</p>
 <div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From a list:</span>
 <span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
 <span class="n">s1</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1.0
 1     6.0
@@ -1304,6 +756,7 @@ dtype: float64
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1536,10 +989,10 @@ dtype: int64
 <p>Note that <code class="docutils literal notranslate"><span class="pre">reshape</span></code> takes an input and puts it into a given shape (a 6 by 6 matrix in the above example).</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Create a <strong>pandas</strong> dataframe using the <code class="docutils literal notranslate"><span class="pre">data=</span></code>, <code class="docutils literal notranslate"><span class="pre">index=</span></code>, and <code class="docutils literal notranslate"><span class="pre">columns=</span></code> keyword arguments. The data should consist of one column with ascending integers from 0 to 5, the column name should be “series”, and the index should be the first 5 letters of the alphabet. Remember that the <code class="docutils literal notranslate"><span class="pre">index</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> keyword arguments expect an iterable of some kind (not just a string).</p>
+<p>Create a <strong>pandas</strong> dataframe using the <code class="docutils literal notranslate"><span class="pre">data=</span></code>, <code class="docutils literal notranslate"><span class="pre">index=</span></code>, and <code class="docutils literal notranslate"><span class="pre">columns=</span></code> keyword arguments. The data should consist of one column with ascending integers from 0 to 5, the column name should be “series”, and the index should be the first 6 letters of the alphabet. Remember that the <code class="docutils literal notranslate"><span class="pre">index</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> keyword arguments expect an iterable of some kind (not just a string).</p>
 </div>
 <section id="values-columns-and-the-index">
-<h3>Values, Columns, and the Index<a class="headerlink" href="#values-columns-and-the-index" title="Permalink to this headline">#</a></h3>
+<h3>Values, Columns, and the Index<a class="headerlink" href="#values-columns-and-the-index" title="Permalink to this heading">#</a></h3>
 <p>You’ll have seen that there are three different things that make up a dataframe: the values that are in the cells, the column names, and the index. The column and index can take on values that are the same as the values in a dataframe; string, int, float, datetime, and more.</p>
 <p>It’s pretty obvious what role the columns play: they keep track of the name of different sets of values. But for people who may have seen other dataframe-like libraries, the role played by the index may be less familiar. The easiest way to think about a <strong>pandas</strong> index is that it does for row values what the columns do for columnar values: it’s a way of keeping track of what individual roles are and it <em>doesn’t</em> get used for calculations (just as summing a column ignores the name of the row).</p>
 <p>Here’s an example to show this. Let’s first create a simple dataframe:</p>
@@ -1885,7 +1338,7 @@ dtype: int64
 </section>
 </section>
 <section id="datatypes">
-<h2>Datatypes<a class="headerlink" href="#datatypes" title="Permalink to this headline">#</a></h2>
+<h2>Datatypes<a class="headerlink" href="#datatypes" title="Permalink to this heading">#</a></h2>
 <p>Pandas has some built-in datatypes (some are the basic Python datatypes) that will make your life a <em>lot</em> easier if you work with them. Why bother specifying datatypes? Languages like Python let you get away with having pretty much anything in your columns. But this can be a problem: sometimes you’ll end up mixing integers, strings, the generic ‘object’ datatype, and more by mistake. By ensuring that columns conform to a datatype, you can save yourself from some of the trials that come with these mixed datatypes. Some of the most important datatypes for dataframe are string, float, categorical, datetime, int, and boolean.</p>
 <p>Typically, you’ll read in a dataset where the dataypes of the columns are a mess. One of the first things you’ll want to do is sort these out. Here’s an example dataset showing how to set the datatypes:</p>
 <div class="cell docutils container">
@@ -2074,7 +1527,7 @@ memory usage: 320.0 bytes
 </div>
 </section>
 <section id="manipulating-rows-in-data-frames">
-<h2>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this headline">#</a></h2>
+<h2>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this heading">#</a></h2>
 <p>So, you’ve got a dataframe and you’d like to cut it down to only work with some rows or do some operations on specific rows. This section will show you how to do exactly that.</p>
 <p>Let’s create some fake data to show how this works.</p>
 <div class="cell docutils container">
@@ -2186,7 +1639,7 @@ memory usage: 320.0 bytes
 </div></div></div>
 </div>
 <section id="accessing-rows">
-<h3>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this headline">#</a></h3>
+<h3>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this heading">#</a></h3>
 <p><img alt="Depiction of subsetting certain rows" src="https://pandas.pydata.org/docs/_images/03_subset_rows.svg" /></p>
 <p>To access a particular row directly, you can use <code class="docutils literal notranslate"><span class="pre">df.loc['rowname']</span></code> or <code class="docutils literal notranslate"><span class="pre">df.loc[['rowname1',</span> <span class="pre">'rowname1']]</span></code> for two different rows.</p>
 <p>For example,</p>
@@ -2332,7 +1785,7 @@ Name: a, dtype: object
 <p>There are other ways to access multiple rows that make use of <em>slicing</em> but we’ll leave that topic for another time.</p>
 </section>
 <section id="filtering-rows-with-query">
-<h3>Filtering rows with <code class="docutils literal notranslate"><span class="pre">query</span></code><a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this headline">#</a></h3>
+<h3>Filtering rows with <code class="docutils literal notranslate"><span class="pre">query</span></code><a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this heading">#</a></h3>
 <p>As with the flights example, we can also filter rows based on a condition using <code class="docutils literal notranslate"><span class="pre">query</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3185,7 +2638,7 @@ Name: a, dtype: object
 </div>
 </section>
 <section id="re-arranging-rows">
-<h3>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this headline">#</a></h3>
+<h3>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this heading">#</a></h3>
 <p>Again and again, you will want to re-order the rows of your dataframe according to the values in a particular column. <strong>pandas</strong> makes this very easy via the <code class="docutils literal notranslate"><span class="pre">.sort_values</span></code> function. It takes a data frame and a set of column names to sort by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns. For example, the following code sorts by the departure time, which is spread over four columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3902,8 +3355,8 @@ For example, we could look for the top three destinations of the flights that we
 </div>
 </section>
 <section id="exercises">
-<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h3>
-<ol>
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
 <li><p>Find all flights that</p>
 <p>a. Had an arrival delay of two or more hours</p>
 <p>b. Flew to Houston (<code class="docutils literal notranslate"><span class="pre">&quot;IAH&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;HOU&quot;</span></code>)</p>
@@ -3920,7 +3373,7 @@ For example, we could look for the top three destinations of the flights that we
 </section>
 </section>
 <section id="manipulating-columns">
-<h2>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this headline">#</a></h2>
+<h2>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this heading">#</a></h2>
 <p>Now you know how to put data in a dataframe, how do you access the bits of it you need? There are various ways and in this section, we’ll look at ways to access columns and perform operations on them.</p>
 <p><img alt="Depiction of selecting some columns" src="https://pandas.pydata.org/docs/_images/03_subset_columns.svg" /></p>
 <div class="admonition note">
@@ -3928,7 +3381,7 @@ For example, we could look for the top three destinations of the flights that we
 <p>Some <strong>pandas</strong> operations can apply either to columns or rows, depending on the syntax used. For example, accessing values by position can be achieved in the same way for rows and columns via <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> where to access the ith row you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[i]</span></code> and to access the jth column you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">j]</span></code> where <code class="docutils literal notranslate"><span class="pre">:</span></code> stands in for ‘any row’.</p>
 </div>
 <section id="creating-new-columns">
-<h3>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this headline">#</a></h3>
+<h3>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this heading">#</a></h3>
 <p>Columns and rows in dataframes can undergo all the usual arithmetic operations you’d expect of addition, multiplication, division, and so on. If the underlying datatypes of two columns have a group operation, then the dataframe columns will use that.</p>
 <p><img alt="" src="https://github.com/pandas-dev/pandas/raw/059c8bac51e47d6eaaa3e36d6a293a22312925e6/doc/source/_static/schemas/05_newcolumn_1.svg" /></p>
 <p>Let’s now move on to creating new columns, either using new information or from existing columns. Given a dataframe, <code class="docutils literal notranslate"><span class="pre">df</span></code>, creating a new column with the same value repeated is as easy as using square brackets with a string (text enclosed by quotation marks) in.</p>
@@ -4402,7 +3855,8 @@ For example, we could look for the top three destinations of the flights that we
 </table>
 </div></div></div>
 </div>
-<p>#### Assign</p>
+<section id="assign">
+<h4>Assign<a class="headerlink" href="#assign" title="Permalink to this heading">#</a></h4>
 <p>The other way to do this involves an ‘assign’ statement and is used when you wish to chain multiple steps together. These use a special syntax called a ‘lambda’ statement, which (here at least) just provides a way of specifying to <strong>pandas</strong> that we wish to perform the operation on every row. Below is an example using the flights data. You should note though that the word ‘row’ below is a dummy; you could replace it with any variable name (for example, <code class="docutils literal notranslate"><span class="pre">x</span></code>) but <code class="docutils literal notranslate"><span class="pre">row</span></code> makes what is happening a little bit clearer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4751,8 +4205,9 @@ For example, we could look for the top three destinations of the flights that we
 </div>
 <p>The main way that you’ll use them is in <strong>pandas</strong> dataframes.</p>
 </section>
+</section>
 <section id="accessing-columns">
-<h3>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this headline">#</a></h3>
+<h3>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this heading">#</a></h3>
 <p>Just as with selecting rows, there are many options and ways to select the columns to operate on. The one with the simplest syntax is the name of the data frame followed by square brackets and the column name (as a string)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5224,7 +4679,7 @@ The selection from the data frame:
 </div>
 <p>As well as <code class="docutils literal notranslate"><span class="pre">startswith</span></code>, there are other commands like <code class="docutils literal notranslate"><span class="pre">endswith</span></code>, <code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">isnumeric</span></code>, and <code class="docutils literal notranslate"><span class="pre">islower</span></code>.</p>
 <section id="eval">
-<h4>Eval<a class="headerlink" href="#eval" title="Permalink to this headline">#</a></h4>
+<h4>Eval<a class="headerlink" href="#eval" title="Permalink to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">eval</span></code> evaluates a string describing operations on DataFrame columns to create new columns. It operates on columns only, not rows or elements. Let’s see an example of it applied to the <code class="docutils literal notranslate"><span class="pre">penguins</span></code> dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5337,7 +4792,7 @@ dtype: float64
 </section>
 </section>
 <section id="renaming-columns">
-<h3>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this headline">#</a></h3>
+<h3>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this heading">#</a></h3>
 <p>There are three easy ways to rename columns, depending on what the context is. The first is to use the dedicated <code class="docutils literal notranslate"><span class="pre">rename</span></code> function with an object called a dictionary. Dictionaries in Python consist of curly brackets with comma separated pairs of values where the first values maps into the second value. An example of a dictionary would be <code class="docutils literal notranslate"><span class="pre">{'old_col1':</span> <span class="pre">'new_col1',</span> <span class="pre">'old_col2':</span> <span class="pre">'new_col2'}</span></code>. Let’s see this in practice (but note that we are not ‘saving’ the resulting data frame, just showing it—to save it, you’d need to add <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> </code> to the left-hand side of the code below).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5614,7 +5069,7 @@ dtype: float64
 </div>
 </section>
 <section id="re-ordering-columns">
-<h3>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this headline">#</a></h3>
+<h3>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this heading">#</a></h3>
 <p>By default, new columns are added to the right-hand side of the data frame. But you may have reasons to want the columns to appear in a particular order, or perhaps you’d just find it more convenient to have new columns on the left-hand side when there are many columns in a data frame (which happens a lot).</p>
 <p>The simplest way to re-order (all) columns is to create a new list of their names with them in the order that you’d like them: but be careful you don’t forget any columns that you’d like to keep!</p>
 <p>Let’s see an example with a fresh version of the fake data from earlier. We’ll put all of the odd-numbered columns first, in descending order, then the even similarly.</p>
@@ -5905,7 +5360,7 @@ dtype: float64
 </section>
 </section>
 <section id="review-of-how-to-access-rows-columns-and-values">
-<h2>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this headline">#</a></h2>
+<h2>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this heading">#</a></h2>
 <p>With all of these different ways to access values in data frames, it can get confusing. These are the different ways to get the first column of a dataframe (when that first column is called <code class="docutils literal notranslate"><span class="pre">column</span></code> and the dataframe is <code class="docutils literal notranslate"><span class="pre">df</span></code>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df.column</span></code></p></li>
@@ -5934,7 +5389,7 @@ dtype: float64
 <p>If you only want to remember one syntax for accessing rows and columns by position, use the pattern <code class="docutils literal notranslate"><span class="pre">df.iloc[[0,</span> <span class="pre">1,</span> <span class="pre">...],</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">...]]</span></code>. This also works with a single row or a single column (or both).</p>
 </div>
 <section id="slicing">
-<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">#</a></h3>
+<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h3>
 <p>So often, what we really want is a subset of values (as opposed to <em>all</em> values or just <em>one</em> value). This is where <em>slicing</em> comes in. If you’ve looked at the Chapter on <a class="reference internal" href="code-basics.html#code-basics"><span class="std std-ref">Coding Basics</span></a>, you’ll know a bit about slicing and indexing already, but we’ll cover the basics here too.</p>
 <p>The syntax for slicing is similar to what we’ve seen already: there are two methods <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to access items by name, and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> to access them by position. The syntax for the former is <code class="docutils literal notranslate"><span class="pre">df.loc[start:stop:step,</span> <span class="pre">start:stop:step]</span></code>, where the first position is index name and the second is column name (and the same applies for numbers and <code class="docutils literal notranslate"><span class="pre">df.iloc</span></code>). Let’s see some examples.</p>
 <div class="cell docutils container">
@@ -6100,98 +5555,98 @@ dtype: float64
   <tbody>
     <tr>
       <th>2000-03-31</th>
-      <td>3</td>
-      <td>8</td>
+      <td>5</td>
+      <td>7</td>
+      <td>9</td>
+      <td>4</td>
       <td>6</td>
-      <td>0</td>
-      <td>8</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>9</td>
-      <td>9</td>
-      <td>2</td>
-      <td>5</td>
-      <td>5</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>6</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
+      <td>8</td>
+      <td>2</td>
       <td>4</td>
-      <td>4</td>
-      <td>7</td>
-      <td>4</td>
-      <td>1</td>
+      <td>2</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
-      <td>2</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2001-03-31</th>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
       <td>5</td>
-    </tr>
-    <tr>
-      <th>2001-06-30</th>
+      <td>5</td>
+      <td>5</td>
       <td>8</td>
-      <td>2</td>
-      <td>7</td>
-      <td>3</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>2001-09-30</th>
+      <th>2001-03-31</th>
+      <td>7</td>
       <td>8</td>
-      <td>4</td>
-      <td>4</td>
-      <td>6</td>
+      <td>0</td>
       <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2001-06-30</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2001-09-30</th>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>9</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>2001-12-31</th>
-      <td>4</td>
       <td>7</td>
       <td>9</td>
-      <td>1</td>
-      <td>7</td>
+      <td>6</td>
+      <td>9</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>2002-03-31</th>
+      <td>3</td>
       <td>7</td>
+      <td>6</td>
       <td>5</td>
-      <td>9</td>
-      <td>9</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2002-06-30</th>
-      <td>0</td>
-      <td>4</td>
       <td>2</td>
-      <td>0</td>
-      <td>4</td>
+      <td>9</td>
+      <td>6</td>
+      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>2002-09-30</th>
       <td>4</td>
-      <td>3</td>
+      <td>7</td>
+      <td>1</td>
+      <td>6</td>
       <td>4</td>
-      <td>2</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2002-12-31</th>
-      <td>3</td>
-      <td>2</td>
-      <td>5</td>
-      <td>2</td>
+      <td>7</td>
+      <td>0</td>
+      <td>1</td>
+      <td>7</td>
       <td>5</td>
     </tr>
   </tbody>
@@ -6234,67 +5689,67 @@ dtype: float64
   <tbody>
     <tr>
       <th>2000-03-31</th>
-      <td>3</td>
-      <td>8</td>
+      <td>5</td>
+      <td>7</td>
+      <td>9</td>
+      <td>4</td>
       <td>6</td>
-      <td>0</td>
-      <td>8</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>9</td>
-      <td>9</td>
-      <td>2</td>
-      <td>5</td>
-      <td>5</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>6</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
+      <td>8</td>
+      <td>2</td>
       <td>4</td>
-      <td>4</td>
-      <td>7</td>
-      <td>4</td>
-      <td>1</td>
+      <td>2</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>2000-12-31</th>
-      <td>2</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2001-03-31</th>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
       <td>5</td>
-    </tr>
-    <tr>
-      <th>2001-06-30</th>
+      <td>5</td>
+      <td>5</td>
       <td>8</td>
-      <td>2</td>
-      <td>7</td>
-      <td>3</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>2001-09-30</th>
+      <th>2001-03-31</th>
+      <td>7</td>
       <td>8</td>
-      <td>4</td>
-      <td>4</td>
-      <td>6</td>
+      <td>0</td>
       <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2001-06-30</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2001-09-30</th>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>9</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>2001-12-31</th>
-      <td>4</td>
       <td>7</td>
       <td>9</td>
-      <td>1</td>
-      <td>7</td>
+      <td>6</td>
+      <td>9</td>
+      <td>9</td>
     </tr>
   </tbody>
 </table>
@@ -6304,9 +5759,9 @@ dtype: float64
 </section>
 </section>
 <section id="operations-on-rows-columns-and-dataframes">
-<h2>Operations on Rows, Columns, and DataFrames<a class="headerlink" href="#operations-on-rows-columns-and-dataframes" title="Permalink to this headline">#</a></h2>
+<h2>Operations on Rows, Columns, and DataFrames<a class="headerlink" href="#operations-on-rows-columns-and-dataframes" title="Permalink to this heading">#</a></h2>
 <section id="operations-that-can-apply-to-both-rows-and-columns">
-<h3>Operations that can <code class="docutils literal notranslate"><span class="pre">apply</span></code> to both rows and columns<a class="headerlink" href="#operations-that-can-apply-to-both-rows-and-columns" title="Permalink to this headline">#</a></h3>
+<h3>Operations that can <code class="docutils literal notranslate"><span class="pre">apply</span></code> to both rows and columns<a class="headerlink" href="#operations-that-can-apply-to-both-rows-and-columns" title="Permalink to this heading">#</a></h3>
 <p>One of <strong>pandas</strong> features is that it is happy for you to do operations on either <em>rows</em> or <em>columns</em> by changing a single keyword argument via the <code class="docutils literal notranslate"><span class="pre">apply</span></code> method. Both regular functions and lambda functions can be used with the more general apply method, which takes a function and applies it to a given axis (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=&quot;rows&quot;</span></code> for rows, <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=&quot;columns&quot;</span></code> for columns). Let’s generate some data to demonstrate this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6345,26 +5800,26 @@ dtype: float64
     <tr>
       <th>0</th>
       <td>1</td>
+      <td>4</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>2</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>1</td>
-      <td>4</td>
+      <td>0</td>
+      <td>0</td>
       <td>2</td>
+      <td>0</td>
       <td>3</td>
     </tr>
     <tr>
       <th>2</th>
       <td>4</td>
-      <td>0</td>
-      <td>0</td>
       <td>3</td>
-      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
     </tr>
   </tbody>
 </table>
@@ -6408,29 +5863,29 @@ dtype: float64
     <tr>
       <th>0</th>
       <td>1</td>
+      <td>4</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>1</td>
-      <td>4</td>
+      <td>0</td>
+      <td>0</td>
       <td>2</td>
+      <td>0</td>
       <td>3</td>
-      <td>3</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>4</td>
-      <td>0</td>
-      <td>0</td>
       <td>3</td>
-      <td>0</td>
-      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>12</td>
     </tr>
   </tbody>
 </table>
@@ -6485,32 +5940,32 @@ dtype: float64
     <tr>
       <th>0</th>
       <td>1</td>
+      <td>4</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
-      <td>-1</td>
+      <td>4</td>
+      <td>-3</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>1</td>
-      <td>4</td>
+      <td>0</td>
+      <td>0</td>
       <td>2</td>
+      <td>0</td>
       <td>3</td>
-      <td>3</td>
+      <td>0</td>
       <td>-1</td>
     </tr>
     <tr>
       <th>2</th>
       <td>4</td>
-      <td>0</td>
-      <td>0</td>
       <td>3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>12</td>
+      <td>-1</td>
     </tr>
   </tbody>
 </table>
@@ -6518,7 +5973,7 @@ dtype: float64
 </div>
 </section>
 <section id="operations-on-dataframes">
-<h3>Operations on DataFrames<a class="headerlink" href="#operations-on-dataframes" title="Permalink to this headline">#</a></h3>
+<h3>Operations on DataFrames<a class="headerlink" href="#operations-on-dataframes" title="Permalink to this heading">#</a></h3>
 <p>Operations on whole dataframes are also supported, but if you’re doing very heavy lifting you might want to just switch to using numpy arrays (<strong>numpy</strong> provides fast numerical, vector, matrix, and tensor operations in Python; it has some similarities with the functionality of Matlab). As examples though, you can transpose and exponentiate easily:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6535,31 +5990,31 @@ dtype: float64
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Dataframe:
    A  B  C  D  E
-0  4  2  4  3  1
-1  0  3  1  3  2
-2  1  0  3  3  2
+0  2  3  2  2  2
+1  3  1  4  3  1
+2  3  4  1  2  3
 
  Exponentiation:
-           A          B          C          D         E
-0  54.598150   7.389056  54.598150  20.085537  2.718282
-1   1.000000  20.085537   2.718282  20.085537  7.389056
-2   2.718282   1.000000  20.085537  20.085537  7.389056
+           A          B          C          D          E
+0   7.389056  20.085537   7.389056   7.389056   7.389056
+1  20.085537   2.718282  54.598150  20.085537   2.718282
+2  20.085537  54.598150   2.718282   7.389056  20.085537
 
  Transpose:
    0  1  2
-A  4  0  1
-B  2  3  0
-C  4  1  3
-D  3  3  3
-E  1  2  2
+A  2  3  3
+B  3  1  4
+C  2  4  1
+D  2  3  2
+E  2  1  3
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="column-and-row-exercises">
-<h3>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this headline">#</a></h3>
-<ol>
+<h3>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">air_time</span></code> with <code class="docutils literal notranslate"><span class="pre">arr_time</span> <span class="pre">-</span> <span class="pre">dep_time</span></code>. What do you expect to see? What do you see What do you need to do to fix it?</p></li>
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">sched_dep_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>. How would you expect those three numbers to be related?</p></li>
 <li><p>Brainstorm as many ways as possible to select <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>, <code class="docutils literal notranslate"><span class="pre">arr_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">arr_delay</span></code> from <code class="docutils literal notranslate"><span class="pre">flights</span></code>.</p></li>
@@ -6594,7 +6049,7 @@ How can you change that default?</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -6602,53 +6057,147 @@ How can you change that default?</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="data-analysis-quickstart.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Data Analysis Quickstart</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data-analysis-quickstart.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Analysis Quickstart</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="data-transformation.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="data-transformation.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Data Transformation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Arthur Turrell<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      This book is available under an MIT license.
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-tidy-data">Using tidy data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes-and-series">Dataframes and Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#values-columns-and-the-index">Values, Columns, and the Index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatypes">Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">Filtering rows with <code class="docutils literal notranslate"><span class="pre">query</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">Creating New Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assign">Assign</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">Accessing Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eval">Eval</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">Re-ordering Columns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-rows-columns-and-dataframes">Operations on Rows, Columns, and DataFrames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-can-apply-to-both-rows-and-columns">Operations that can <code class="docutils literal notranslate"><span class="pre">apply</span></code> to both rows and columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-dataframes">Operations on DataFrames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">Column and Row Exercises</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arthur Turrell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This book is available under an MIT license.
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
